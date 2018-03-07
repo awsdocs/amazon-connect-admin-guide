@@ -15,22 +15,11 @@ It's important to understand the underlying functions of your Amazon Connect con
 **Note**  
 You can have multiple instances, but information such as user directories cannot be shared across instances\.
 
-### Directories<a name="directories"></a>
+### Directories for Identity Management<a name="directories"></a>
 
-As a first step to setting up an Amazon Connect instance, you can choose either an existing directory in your AWS account/region, or create a new directory\. AWS Microsoft AD \(or optionally AD Connector\) can integrate with your on\-premises AD and users through a trust relationship\. You can import individual users from your directory or do a batch upload\.
+Amazon Connect requires a directory to store user information and permissions for the instance\. As a first step to setting up an Amazon Connect instance, you select the directory you want to use for identity management\. You can choose to manage users in Amazon Connect, or to use an existing directory that is set up in AWS Directory Service\. An existing directory must be associated with your AWS account, and active in the AWS region in which you create your instance\. You can choose to use a [Microsoft Active Directory](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html), [Active Directory Connector](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_ad_connector.html), or [Simple Active Directory](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_simple_ad.html)\. You can associate an AWS Directory Service directory with only one Amazon Connect instance at a time\.
 
-Amazon Connect requires a directory to store user and contact center configuration information\. The directory stores all user information and permissions for the instance\. Each individual Amazon Connect instance that you create can use the same directory or a unique directory\.
-
-**Note**  
-An AWS directory can be used for and associated with a single Amazon Connect instance at a time\. Set up the directory in the same region as the Amazon Connect instance\.
-
-After a directory has been associated with your Amazon Connect instance, it cannot be changed\. You can delete the instance and create a new one\. You will have to re\-create any buckets and telephone numbers that you had claimed\.
-
-+ You can use an existing Microsoft Active Directory\.
-
-+ You can use a proprietary directory\. For more information, see [Active Directory Connector](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_ad_connector.html)\.
-
-+ We can create one for you\.
+You cannot change the directory you select for identity management after you create the instance\. If you decide to change the directory you selected, you can delete the instance and create a new one\. When you delete an instance, you lose all configuration settings and metrics data for it\.
 
 There is no additional charge for using an existing or a proprietary directory\. For information about the costs associated with using AWS Directory Service, see [AWS Service Pricing Overview](http://aws.amazon.com/pricing)\.
 
@@ -96,7 +85,7 @@ The following table provides the default limits for new Amazon Connect instances
 |  Groups per level  |  50  | 
 |  Reports per instance  |  500  | 
 |  Scheduled reports per instance  |  50  | 
-|  Active calls per instance  |  10  | 
+|  Concurrent active calls per instance  |  10  | 
 
 ## Related Services<a name="related-services-amazon-connect"></a>
 
@@ -110,7 +99,9 @@ The following services are used with Amazon Connect:
 
 + **Amazon Lex**—Amazon Connect integrates with Amazon Lex to build conversational interfaces using voice and text\. Amazon Lex provides the advanced deep learning functionalities of automatic speech recognition \(ASR\) for converting speech to text, and natural language understanding \(NLU\) to recognize the intent of the text, to enable you to build applications with highly engaging user experiences and lifelike conversational interactions\. For more information, see the [Amazon Lex Developer Guide](http://docs.aws.amazon.com/lex/latest/dg/)\.
 
-+ **Kinesis**—Amazon Connect integrates with Kinesis as the platform for streaming contact trace records \(CTR\), a raw \(JSON formatted\) output of detailed metadata about a call, in near real time\. You can use this data stream to optionally process and publish them into Amazon Redshift \(an AWS data warehouse service\) or your custom data warehouse systems, enabling detailed analytics and reporting on your contact center data\. You can leverage Amazon QuickSight \(a cloud\-powered business analytics service\) or your own BI tools to build powerful visualizations on top of synthesized data\. Additionally, this data can be streamed to Elasticsearch to query on this data using a convenient visual interface\. For more information, see the [Amazon Kinesis Data Streams Developer Guide](http://docs.aws.amazon.com/streams/latest/dev/)\.
++ **Kinesis**—Amazon Connect integrates with Kinesis as the platform for streaming contact trace records \(CTR\) and agent event streams data\. The data is published to Kinesis in JSON format, and include details about contacts and agent activities in your contact center\. You can use this data stream to optionally process and publish them into Amazon Redshift \(an AWS data warehouse service\) or your custom data warehouse systems, enabling detailed analytics and reporting on your contact center data\. You can leverage Amazon QuickSight \(a cloud\-powered business analytics service\) or your own BI tools to build powerful visualizations on top of synthesized data\. Additionally, this data can be streamed to Elasticsearch to query on this data using a convenient visual interface\. For more information, see the [Amazon Kinesis Data Streams Developer Guide](http://docs.aws.amazon.com/streams/latest/dev/)\.
+**Note**  
+Amazon Connect does not support publishing data to streams for which server\-side encryption is enabled\.
 
 + **Amazon CloudWatch**—Amazon Connect integrates with CloudWatch to provide you with real\-time operational metrics for your contact center, such as total calls per second, calls rejected and throttled, percentage of concurrent calls, failed / missed calls count \(errors, bad number/address, busy/line engaged\), and contact flow errors\. You can set up monitors on these metrics in order to stay on top of the health of your contact center\. For more information, see [Monitoring Amazon Connect Using Amazon CloudWatch Metrics](monitoring-cloudwatch.md)\.
 

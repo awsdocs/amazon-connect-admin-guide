@@ -1,12 +1,34 @@
 # Configuring Your Amazon Connect Instance<a name="amazon-connect-instance"></a>
 
-You can configure your Amazon Connect instance using the AWS Management Console\.
+You can configure your Amazon Connect instance using the AWS Management Console\. To access instance settings, choose the name of the instance in the **Instance Alias** column\.
 
 
++ [Overview](#instance-settings-overview)
++ [Telephony](#telephony-settings)
 + [Data Storage](#datastorage)
 + [Data Streaming](#dataexporting)
 + [Application Integration](#app-integration)
 + [Contact Flows](#contact-flows)
+
+## Overview<a name="instance-settings-overview"></a>
+
+The **Overview** section displays the following information about your Amazon Connect instance\.
+
++ **Instance ARN**—the ARN for the instance\. The instance ID for the instance is included in the ARN, and is the value after the instance/\. For example, the instance ID in the following instance ARN is df9e742b\-310b\-4eb2\-a062\-31bc99177ed4\.
+
+  `arn:aws:connect:us-east-1:361814831152:instance/df9e742b-310b-4eb2-a062-31bc99177ed4`
+
++ **Directory**—The instance alias for the instance\.
+
++ **Login URL**—The URL to use in a browser to log in directly to the contact center for your instance\.
+
+  If your agents \(users that are assigned only the Agent security profile\) try to use this URL to log in to Amazon Connect, "Error 403\! \(Forbidden\) is displayed on the page\. The agent can still open the Contact Control Panel \(CCP\) by selecting the phone icon in the top\-right corner of the page\.
+
+You can use the **Login as administrator** button to log in to the instance using your AWS account with full admin permissions\. This can be helpful if you ever forgot the password for the admin account, or need to update Amazon Connect settings\.
+
+## Telephony<a name="telephony-settings"></a>
+
+Select whether to accept incoming calls to, or allow outbound calls from, your Amazon Connect instance\. You can use security profiles to set permissions to enable or disable outbound calling\.
 
 ## Data Storage<a name="datastorage"></a>
 
@@ -48,7 +70,7 @@ Before updating the data storage settings, ensure that you are familiar with Ama
 
 ## Data Streaming<a name="dataexporting"></a>
 
-You can export contact trace records \(CTRs\) from Amazon Connect and perform real\-time analysis on contacts\. Data streaming uses the Amazon Kinesis platform to support data streaming\.
+You can export contact trace records \(CTRs\) and agent events from Amazon Connect and perform real\-time analysis on contacts\. Data streaming uses the Amazon Kinesis platform to support data streaming\.
 
 **To set up data streaming**
 
@@ -58,9 +80,19 @@ You can export contact trace records \(CTRs\) from Amazon Connect and perform re
 
 1. In the navigation pane, choose **Data streaming**\.
 
-1. Choose **Enable data streaming**
+1. Choose **Enable data streaming**\.
 
-1. Select an existing resource from Amazon Kinesis Data Streams or Amazon Kinesis Data Firehose, or choose **Create a new Kinesis Data Firehose**\.
+1. Select **Kinesis** or **Kinesis Data Firehose**, and then do one of the following:
+
+   + To use an existing Amazon Kinesis stream or Kinesis Data Firehose, select the resource in the drop\-down list\.
+
+   + To create a new resource, choose **Create a new Amazon Kinesis stream** \(or Kinesis Data Firehose\)\.
+
+     This opens the Amazon Kinesis console where you can create the stream or firehose to use with Amazon Connect\. Wait until the stream or firehose is created, then return to the Amazon Connect console\.
+
+      Reload the page so that the stream or firehose you created is displayed in the resource selection, then select the stream or firehose\.
+**Note**  
+Amazon Connect does not support publishing data to Kinesis streams for which server\-side encryption is enabled\.
 
 1. Choose **Save**\.
 

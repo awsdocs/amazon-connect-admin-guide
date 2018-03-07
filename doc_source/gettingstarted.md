@@ -24,31 +24,49 @@ This might be unavailable in your browser if you previously signed into the AWS 
 
 ## Create an Amazon Connect Instance<a name="launch-contact-center"></a>
 
-You can create or add an instance as follows\. These steps are intended to help you get started quickly; some advanced settings are not be included\.
+You can create or add an instance as follows\. These steps are intended to help you get started quickly; some advanced settings are not included\.
 
 **To create an Amazon Connect instance**
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. Choose **Add an instance**\.
+1. Do one of the following:
 
-1. For the **Identity management** step, choose **Store users within Amazon Connect** and type a domain name to complete **Access URL**\. This domain is used in your contact center URL and cannot be changed\. The alias must be globally unique, meaning that an alias can be used only once across all Amazon Connect instances and regions\. Choose **Next step**\.
+   + If you have not previously created an Amazon Connect instance, choose **Get started**\.
 
-1. For the **Administrator** step, you can choose to add an administrator from your directory, create a new administrator, or skip this step for now and add an administrator later on\.
+   + If you have previously created an instance, choose **Add an instance**\.
 
-1. For the **Telephony options** step, indicate whether you'd like your contact center to accept calls, make calls, or both\. You can set the user permissions within the Amazon Connect web application\. The telephone number options are provided after setup\.
+1. For **Step 1: Identity management** step, do one of the following:
 
-1. For the **Data storage** step, you can keep the default settings or choose **Advanced settings** in order to customize settings\. For more information, see [Data Storage](amazon-connect-instance.md#datastorage)\.
+   + If you want to manage your users within Amazon Connect, choose **Store users within Amazon Connect**\.
 
-1. For the **Review and create** step, review your settings and then choose **Create instance**\.
+   + If you want to use an existing directory where you users are managed, choose **Link to an existing directory**\.
+
+1. Enter an instance alias for your instance in the **Access URL** field, and then choose **Next step**\.
+
+   The name you enter is displayed as the instance alias in the AWS console, and is used as the domain in the access URL to access your contact center\. The alias must be globally unique, meaning that an alias can be used only once across all Amazon Connect instances and regions\. You cannot change the alias URL once your instance is created\.
+
+1. For **Step 2: Administrator**, do one of the following:
+
+   + If you chose **Store users with Amazon Connect** for identity management, enter the user details for an admin account, and then choose **Next step**\.
+
+   + If you chose **Link to an existing directory** for identity management, enter the user name for the account you want to use as the admin account for your instance, and then choose **Next step**\.
+
+     If the user name you enter does not exist in your directory, you can add it later\.
+
+   + Choose **Skip this** if you want to create an admin account later\. To create an admin later, you can log in to your instance as an administrator from the Amazon Connect console\.
+
+1. For **Step 3: Telephony options**, indicate whether you'd like your contact center to accept calls, make calls, or both\. You can set the user permissions within the Amazon Connect web application\. The telephone number options are provided after setup\.
+
+1. For **Step 4: Data storage**, you can keep the default settings or choose **Customize settings** in order to modify settings\. For more information, see [Data Storage](amazon-connect-instance.md#datastorage)\.
+
+1. For **Step 5: Review and create**, review your settings and then choose **Create instance**\.
 **Important**  
 This is the only time you can change the directory and domain name settings—you can edit any other setting later on\.
 
-1. After your instance is created, choose **Get started** to select and test a phone number\. Amazon Connect automatically configures your instance to use the phone number that you select\.
+1. After your instance is created, choose **Get started** to claim and test a phone number\. Amazon Connect automatically configures your instance to use the phone number that you select\.
 **Note**  
 For information about how to use your current phone number with Amazon Connect, see [Port Your Current Phone Number](#numberporting)\.
-
-1. Provide your users with their user names and passwords so that they can log in and begin accepting and making calls\. For more information, see the [Amazon Connect User Guide](http://docs.aws.amazon.com/connect/latest/userguide/)\.
 
 1. \(Optional\) Continue to configure your instance\. For more information, see [Configuring Your Amazon Connect Instance](amazon-connect-instance.md)\.
 
