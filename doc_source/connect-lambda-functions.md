@@ -33,13 +33,10 @@ aws lambda add-permission --function-name function:my-lambda-function --statemen
 ```
 
 This command uses the following input:
-
 + The name of the Lambda function \(for example, **my\-lambda\-function**\)
-
 + The ARN of a Amazon Connect instance \(for example, **arn:aws:connect:us\-east\-1:123456789012:instance/def1a4fc\-ac9d\-11e6\-b582\-example**\)
 
   To find the ARN for your instance, open the [Amazon Connect console](https://console.aws.amazon.com/connect), and then choose the **Instance Alias** to open the **Overview** page\.
-
 + The AWS account ID for the Lambda function \(for example, **123456789012**\)
 
 ### Invoke the Lambda Function in Your Contact Flow<a name="funtion-contact-flow"></a>
@@ -88,11 +85,8 @@ The following is an example JSON request to a Lambda function:
 ```
 
 The request is divided into three parts:
-
 + Contact data—This is always passed by Amazon Connect for every contact\. Some parameters are optional\.
-
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
-
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
 The Lambda function response should be a simple Map *String String*\. This map can be up to 32k\. If you fail to reach Lambda, the function throws an exception, the response is not understood, or the Lambda function takes more time than the limit, the contact flow jumps to the `Error` label\. The following code is an example Python Lambda function:

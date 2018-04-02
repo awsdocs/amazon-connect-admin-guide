@@ -16,6 +16,8 @@ Amazon's trademarks and trade dress may not be used in
 ## Contents
 + [What Is Amazon Connect?](what-is-amazon-connect.md)
 + [Getting Started with Amazon Connect](gettingstarted.md)
+   + [Use an Existing Directory for Amazon Connect Identity Management](directory-service.md)
+   + [Configure SAML for Identity Management in Amazon Connect](configure-saml.md)
 + [Configuring Your Amazon Connect Instance](amazon-connect-instance.md)
 + [Monitoring Amazon Connect Using Amazon CloudWatch Metrics](monitoring-cloudwatch.md)
 + [Using AWS Lambda Functions with Amazon Connect](connect-lambda-functions.md)

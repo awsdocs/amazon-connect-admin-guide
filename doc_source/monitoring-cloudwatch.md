@@ -26,9 +26,9 @@ Amazon Connect integrates with CloudWatch so that you can collect, view, and ana
 
 | Metric | Description | 
 | --- | --- | 
-|  `MisconfiguredPhoneNumbers`  |  Represents the number of calls that failed because the phone number is not configured to a **Contact flow**\.  | 
-|  `ContactFlowFatalErrors`  |  Represents **Contact flow** execution failures\.  | 
-|  `ContactFlowErrors`  |  Represents the number of times the **Contact flow** branched to an `ERROR` label in the instruction\.  | 
+|  `MisconfiguredPhoneNumbers`  |  The number of calls that failed because the phone number is not configured to a **Contact flow**\.  | 
+|  `ContactFlowFatalErrors`  |  The number of times a contact flow failed to execute due to a system error\.  | 
+|  `ContactFlowErrors`  |  The number of times the error branch for a contact flow is executed\.  | 
 
 ## Queue Metrics<a name="queue-metrics"></a>
 
@@ -43,7 +43,7 @@ Amazon Connect integrates with CloudWatch so that you can collect, view, and ana
 
 | Metric | Description | 
 | --- | --- | 
-|  `PublicSigningKeyUsage`  |  Usage count of the public sign\-in key for CCIVR contact flows in Amazon Connect\.  | 
+|  `PublicSigningKeyUsage`  |  Count of times a Contact flow security key \(public signing key\) was used to encrypt customer input in a contact flow\.  | 
 
 ## Metric Dimensions<a name="connect-metric-dimensions"></a>
 

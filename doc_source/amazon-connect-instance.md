@@ -2,7 +2,7 @@
 
 You can configure your Amazon Connect instance using the AWS Management Console\. To access instance settings, choose the name of the instance in the **Instance Alias** column\.
 
-
+**Topics**
 + [Overview](#instance-settings-overview)
 + [Telephony](#telephony-settings)
 + [Data Storage](#datastorage)
@@ -13,13 +13,10 @@ You can configure your Amazon Connect instance using the AWS Management Console\
 ## Overview<a name="instance-settings-overview"></a>
 
 The **Overview** section displays the following information about your Amazon Connect instance\.
-
 + **Instance ARN**—the ARN for the instance\. The instance ID for the instance is included in the ARN, and is the value after the instance/\. For example, the instance ID in the following instance ARN is df9e742b\-310b\-4eb2\-a062\-31bc99177ed4\.
 
   `arn:aws:connect:us-east-1:361814831152:instance/df9e742b-310b-4eb2-a062-31bc99177ed4`
-
 + **Directory**—The instance alias for the instance\.
-
 + **Login URL**—The URL to use in a browser to log in directly to the contact center for your instance\.
 
   If your agents \(users that are assigned only the Agent security profile\) try to use this URL to log in to Amazon Connect, "Error 403\! \(Forbidden\) is displayed on the page\. The agent can still open the Contact Control Panel \(CCP\) by selecting the phone icon in the top\-right corner of the page\.
@@ -83,9 +80,7 @@ You can export contact trace records \(CTRs\) and agent events from Amazon Conne
 1. Choose **Enable data streaming**\.
 
 1. Select **Kinesis** or **Kinesis Data Firehose**, and then do one of the following:
-
    + To use an existing Amazon Kinesis stream or Kinesis Data Firehose, select the resource in the drop\-down list\.
-
    + To create a new resource, choose **Create a new Amazon Kinesis stream** \(or Kinesis Data Firehose\)\.
 
      This opens the Amazon Kinesis console where you can create the stream or firehose to use with Amazon Connect\. Wait until the stream or firehose is created, then return to the Amazon Connect console\.
@@ -141,7 +136,7 @@ Data that is encrypted within a contact flow is made available through the store
 
 With Amazon Lex, you can build conversational interactions \(bots\) that feel natural to your customers, giving you access to the same speech recognition and natural language understanding technology that powers Alexa\. After you create a Lex bot, you can integrate it into your contact flows\.
 
-**To integrate an Lex bot**
+**To integrate an Amazon Lex bot**
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
