@@ -153,7 +153,7 @@ The steps necessary to enable SAML federation with AWS include:
 
 When you configure the relay state for your identity provider, you can use the ?destination argument in the URL to navigate users to a specific page in your Amazon Connect instance, such opening the CCP directly when an agent logs in, or displaying the real time metrics page when a call center manager logs in\. The user must be assigned a security profile that grants access to that page in the instance\. For example, if you want to send agents directly to the CCP when they log in, you can use a URL similar to the following for the relay state to go directly to the CCP when an agent logs in\. You must use [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding) for the destination value used in the URL:
 
-`https://us-east-1.console.aws.amazon.com/connect/federate/instance-id/?destination=%2Fconnect%2Fccp`
+`https://us-east-1.console.aws.amazon.com/connect/federate/instance-id?destination=%2Fconnect%2Fccp`
 
 ## Add users to Your Amazon Connect Instance<a name="saml-add-users"></a>
 

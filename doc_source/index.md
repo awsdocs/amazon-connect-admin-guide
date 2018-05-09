@@ -19,7 +19,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Use an Existing Directory for Amazon Connect Identity Management](directory-service.md)
    + [Configure SAML for Identity Management in Amazon Connect](configure-saml.md)
 + [Configuring Your Amazon Connect Instance](amazon-connect-instance.md)
-+ [Monitoring Amazon Connect Using Amazon CloudWatch Metrics](monitoring-cloudwatch.md)
++ [Monitoring Amazon Connect in Amazon CloudWatch Metrics](monitoring-cloudwatch.md)
 + [Using AWS Lambda Functions with Amazon Connect](connect-lambda-functions.md)
 + [Amazon Connect and Salesforce Integration](salesforce-integration.md)
 + [Document History](doc-history.md)

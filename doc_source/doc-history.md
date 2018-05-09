@@ -1,10 +1,11 @@
 # Document History<a name="doc-history"></a>
 
-The following table describes the documentation for this release of Amazon Connect\.
+The following table describes the documentation update history for Amazon Connect\.
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Updated topic about metrics sent to Amazon CloudWatch Logs\. | Updated the topic [Monitoring Amazon Connect in Amazon CloudWatch Metrics](monitoring-cloudwatch.md) to include additional metrics and update the descriptions for all metrics\. | April 19, 2018 | 
 | Added content for using SAML for identity management\. | New content added that describes how to configure your instance to use SAML for identity management to enable single sign\-on\. For more information, see [Configure SAML for Identity Management in Amazon Connect](configure-saml.md)\. | March 30, 2018 | 
 | Updated topic on using AWS Lambda functions with Amazon Connect | Replaced existing content with new information and examples to make the topic current with the technology\. For more information, see [Using AWS Lambda Functions with Amazon Connect](connect-lambda-functions.md)\. | January 05, 2018 | 
 | Added Port Your Current Phone Number | Added information about how to port your current telephone number to Amazon Connect\. For more information, see [Port Your Current Phone Number](gettingstarted.md#numberporting)\. | November 10, 2017 | 

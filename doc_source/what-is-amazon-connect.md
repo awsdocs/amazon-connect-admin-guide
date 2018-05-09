@@ -67,7 +67,7 @@ The following table provides the default limits for new Amazon Connect instances
 |  Groups per level  |  50  | 
 |  Reports per instance  |  500  | 
 |  Scheduled reports per instance  |  50  | 
-|  Concurrent active calls per instance  |  10  | 
+|  Concurrent active calls per instance  |  100  | 
 
 ## Related Services<a name="related-services-amazon-connect"></a>
 
@@ -79,7 +79,7 @@ The following services are used with Amazon Connect:
 + **Kinesis**—Amazon Connect integrates with Kinesis as the platform for streaming contact trace records \(CTR\) and agent event streams data\. The data is published to Kinesis in JSON format, and include details about contacts and agent activities in your contact center\. You can use this data stream to optionally process and publish them into Amazon Redshift \(an AWS data warehouse service\) or your custom data warehouse systems, enabling detailed analytics and reporting on your contact center data\. You can leverage Amazon QuickSight \(a cloud\-powered business analytics service\) or your own BI tools to build powerful visualizations on top of synthesized data\. Additionally, this data can be streamed to Elasticsearch to query on this data using a convenient visual interface\. For more information, see the [Amazon Kinesis Data Streams Developer Guide](http://docs.aws.amazon.com/streams/latest/dev/)\.
 **Note**  
 Amazon Connect does not support publishing data to streams for which server\-side encryption is enabled\.
-+ **Amazon CloudWatch**—Amazon Connect integrates with CloudWatch to provide you with real\-time operational metrics for your contact center, such as total calls per second, calls rejected and throttled, percentage of concurrent calls, failed / missed calls count \(errors, bad number/address, busy/line engaged\), and contact flow errors\. You can set up monitors on these metrics in order to stay on top of the health of your contact center\. For more information, see [Monitoring Amazon Connect Using Amazon CloudWatch Metrics](monitoring-cloudwatch.md)\.
++ **Amazon CloudWatch**—Amazon Connect integrates with CloudWatch to provide you with real\-time operational metrics for your contact center, such as total calls per second, calls rejected and throttled, percentage of concurrent calls, failed / missed calls count \(errors, bad number/address, busy/line engaged\), and contact flow errors\. You can set up monitors on these metrics in order to stay on top of the health of your contact center\. For more information, see [Monitoring Amazon Connect in Amazon CloudWatch Metrics](monitoring-cloudwatch.md)\.
 + **AWS Identity and Access Management**—The AWS Management Console requires your user name and password so that any service you use can determine whether you have permission to access its resources\. We recommend that you avoid using AWS account root user credentials to access AWS because root user credentials cannot be revoked or limited in any way\. Instead, we recommend that you create an IAM user and add the user to an IAM group with administrative permissions\. You can then access the console using the IAM user credentials\. For more information, see the [IAM User Guide](http://docs.aws.amazon.com/IAM/latest/UserGuide/)\.
 
   If you signed up for AWS but have not created an IAM user for yourself, you can create one using the IAM console\. For more information, see [Create Individual IAM Users](http://docs.aws.amazon.com/IAM/latest/UserGuide/IAMBestPractices.html#create-iam-users) in the *IAM User Guide*\.
