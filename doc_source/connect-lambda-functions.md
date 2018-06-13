@@ -141,7 +141,7 @@ The following example shows the JSON output from these Lambda functions:
 There are two ways to use the function response in your contact flow\. You can either directly reference the variables returned from Lambda, or store the values returned from the function as contact attributes and then reference the stored attributes\. When you use an external reference to a response from a Lambda function, the reference will always receive the response form the most recently invoked function\. To use the response from a function before a subsequent function is invoked, the response must be saved as a contact attribute, or passed as a parameter to the next function\.
 
 **Access Lambda attributes directly**  
-If you access the variables directly, you can use them in contact flow blocks, but they are not included in CTRs\. To access these variables directly in a contact flow block, add the block after the **Invoke AWS Lambda function** block, and then reference the attributes as shown in the following example: 
+If you access the variables directly, you can use them in contact flow blocks, but they are not included in contact trace records \(CTR\)\. To access these variables directly in a contact flow block, add the block after the **Invoke AWS Lambda function** block, and then reference the attributes as shown in the following example: 
 
 ```
 Name - $.External.Name

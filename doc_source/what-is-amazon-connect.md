@@ -47,12 +47,14 @@ Before you start working with Amazon Connect, use the following table to verify 
 
 ## Service Limits<a name="amazon-connect-servicelimits"></a>
 
-The following table provides the default limits for new Amazon Connect instances\. You can create two instances per AWS account to start, but if you need more instances it is easy to request an increase\. You can also request an increase for any of the limits using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
+The following table provides the default limits for new Amazon Connect instances\. Because the limits have been adjusted over time, the limits in place for your account may be different than the limits described here\. For example, if you created an instance during the period when the default limit for concurrent active calls was set to 10, your instance is limited to 10 concurrent active calls\. If you create a new instance today, the limit for the instance is 100 concurrent active calls\.
+
+You can create five instances per AWS account to start, but if you need more instances it is easy to request an increase\. You can also request an increase for any of the limits using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 
 
 | Item | Default limit | 
 | --- | --- | 
-|  Amazon Connect instances per account  |  2  | 
+|  Amazon Connect instances per account  |  5  | 
 |  Users per instance  |  500  | 
 |  Phone numbers per instance  |  10  | 
 |  Queues per instance  |  50  | 
