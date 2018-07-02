@@ -143,7 +143,7 @@ The steps necessary to enable SAML federation with AWS include:
 
 1. Configure SAML Assertions for the Authentication Response\. For more information, [Configuring SAML Assertions for the Authentication Response](http://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_providers_create_saml_assertions.html)\.
 
-1. Configure the relay state of your identity provider to point to your Amazon Connect instance\. For the private preview release, the URL to use for the relay state is comprised as follows:
+1. Configure the relay state of your identity provider to point to your Amazon Connect instance\. The URL to use for the relay state is comprised as follows:
 
    `https://region-id.console.aws.amazon.com/connect/federate/instance-id`
 

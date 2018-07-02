@@ -51,6 +51,9 @@ The following table provides the default limits for new Amazon Connect instances
 
 You can create five instances per AWS account to start, but if you need more instances it is easy to request an increase\. You can also request an increase for any of the limits using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 
+**Note**  
+Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
+
 
 | Item | Default limit | 
 | --- | --- | 

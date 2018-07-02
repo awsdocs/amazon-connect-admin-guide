@@ -1,6 +1,6 @@
 # Document History<a name="doc-history"></a>
 
-The following table describes the documentation update history for Amazon Connect\.
+The following table describes the update history for Amazon Connect documentation\.
 
 
 | Change | Description | Date | 

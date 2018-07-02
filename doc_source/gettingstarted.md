@@ -2,6 +2,9 @@
 
 An Amazon Connect instance is the starting point for your contact center\. After you create an instance, you can edit the settings for it, which include telephony, data storage, data streaming, application integration, and contact flows\. You can then launch your instance from the AWS Management Console and start using your contact center\.
 
+**Note**  
+Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
+
 After you create an Amazon Connect instance, you can claim a phone number to use for your contact center\. After you claim a number, you can place a test call in to your contact center to confirm that it is working correctly\. Calls are handled in the contact center using the Contact Control Panel \(CCP\)\. The CCP is built in to the Amazon Connect Contact Center Manager \(CCM\)\. For more information about how agents use the CCP, see [Using the Contact Control Panel](http://docs.aws.amazon.com/connect/latest/userguide/agentconsole.html) in the *Amazon Connect User Guide*\.
 
 You can edit the settings for your instance in the AWS Management Console\. After you create your instance, you can access it by using the URL in the **Access URL** column\. The access URL is the URL your agents, administrators, and managers use to log in to and access the CCM and the CCP\. For more information, see [Amazon Connect Instances](what-is-amazon-connect.md#amazon-connect-fundamentals)\.
