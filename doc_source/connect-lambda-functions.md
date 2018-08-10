@@ -37,7 +37,7 @@ This command uses the following input:
 + The ARN of a Amazon Connect instance \(for example, **arn:aws:connect:us\-east\-1:123456789012:instance/def1a4fc\-ac9d\-11e6\-b582\-example**\)
 
   To find the ARN for your instance, open the [Amazon Connect console](https://console.aws.amazon.com/connect), and then choose the **Instance Alias** to open the **Overview** page\.
-+ The AWS account ID for the Lambda function \(for example, **123456789012**\)
++ The AWS account ID for the Amazon Connect instance \(for example, **123456789012**\)\.
 
 ### Invoke the Lambda Function in Your Contact Flow<a name="funtion-contact-flow"></a>
 

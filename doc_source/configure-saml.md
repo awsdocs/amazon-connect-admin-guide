@@ -2,6 +2,10 @@
 
 Amazon Connect supports identity federation with Security Assertion Markup Language \(SAML\) 2\.0 to enable web\-based single sign\-on \(SSO\) from your organization to your Amazon Connect instance\. This allows your users to sign in to a portal in your organization hosted by a SAML 2\.0–compatible identity provider \(IdP\), select an option to go to Amazon Connect, and be redirected to your Amazon Connect instance without having to provide separate credentials for Amazon Connect\.
 
+**Important**  
+To enable SAML authentication, you need to create an AWS Identity and Access Management \(IAM\) role that is used for federation between the identity provider on your existing network and Amazon Web Services\. AWS Identity and Access Management is a web service that helps you securely control access to AWS resources\. You use IAM to control who is authenticated \(signed in\) and authorized \(has permissions\) to use resources\. In this case, the IAM role is used for federation between your identity provider and AWS\. The permissions for the IAM role grant access to Amazon Connect\.  
+You cannot use the root credentials for your AWS as the account for SAML federation as it is not supported\. Instead, follow the steps in the topic, and the topics linked to in the AWS Identity and Access Management documentation, to create an IAM role for federation\. To learn more about IAM, see [What is IAM?](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
+
 **Topics**
 + [Overview of Using SAML with Amazon Connect](#saml-overview)
 + [Enabling SAML\-based Authentication for Amazon Connect](#enable-saml)

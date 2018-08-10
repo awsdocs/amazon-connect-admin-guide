@@ -91,7 +91,7 @@ We recommend that you select a phone number for Amazon Connect so that you can b
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. Log in with the account used to create the Amazon Connect instance to which to port your current number\.\. 
+1. Log in with the account used to create the Amazon Connect instance to which to port your current number\.
 
 1. Choose **Support**, **Support Center**\.
 

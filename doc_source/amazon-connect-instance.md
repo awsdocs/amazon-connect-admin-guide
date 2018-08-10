@@ -31,6 +31,8 @@ Select whether to accept incoming calls to, or allow outbound calls from, your A
 
 Data, such as call recordings and reports, is stored securely in an Amazon S3 bucket\. During setup, a default Amazon S3 bucket is created and encrypted using AWS Key Management Service\. This bucket and key are used for both calling recordings and reports\. Alternatively, you can use separate buckets and keys for call recordings and reports\.
 
+Call recordings in Amazon Connect are stored as \.wav files, and played back in 8 Khz pulse\-code modulation \(PCM\) format\.
+
 Before updating the data storage settings, ensure that you are familiar with Amazon S3 and AWS KMS\.
 
 **To update data storage settings**
@@ -124,7 +126,7 @@ Data that is encrypted within a contact flow is made available through the store
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. Choose the name of the instance from **Instance Alias**\.
+1. Choose the name of the instance from the **Instance Alias** column\.
 
 1. In the navigation pane, choose **Contact flows**\.
 
@@ -132,22 +134,28 @@ Data that is encrypted within a contact flow is made available through the store
 
 1. Paste the contents of your public key in **Public key contents** and choose **Add**\.
 
-### Amazon Lex<a name="amazon-lex"></a>
+### Add an Amazon Lex bot to Your Instance<a name="amazon-lex"></a>
 
-With Amazon Lex, you can build conversational interactions \(bots\) that feel natural to your customers, giving you access to the same speech recognition and natural language understanding technology that powers Alexa\. After you create a Lex bot, you can integrate it into your contact flows\.
+With Amazon Lex, you can build conversational interactions \(bots\) that feel natural to your customers, giving you access to the same speech recognition and natural language understanding technology that powers Alexa\. After you create an Amazon Lex bot, you can add it to your instance and then integrate it into your contact flows\. You can add bots from the same region as your Amazon Connect instance, or from a different region\.
 
-**To integrate an Amazon Lex bot**
+**To add an Amazon Lex bot**
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. Choose the name of the instance from **Instance Alias**\.
+1. Choose the name of the instance from the **Instance Alias** column\.
 
 1. In the navigation pane, choose **Contact flows**\.
 
-1. Choose **Add Lex Bot**\.
+1. In the **Region** drop\-down list, choose the Region in which you created your Amazon Lex bot\.
 
-1. Choose your Lex bot from **Lex bots** and choose **Save Lex Bots**\.
+   If there are bots associated with your AWS account in the chosen region, the bots are displayed in the **Bot** drop\-down list\. If no bots are found in the Region, or when there are no additional bots to add from that Region, the drop\-down menu is disabled\. A message indicates that there are no bots available to choose in that Region\.
+
+1. In the **Bots** drop\-down menu, choose your bot, then choose **Add bot**\.
+
+To create a new bot, **Create a new Lex bot** to open the Amazon Lex console\. You may need to select a region where Amazon Lex is available\.
+
+To remove a bot from your instance, choose **Remove** next to the bot to remove\.
 
 ### Contact flow logs<a name="enable-contact-flow-logs"></a>
 
-Select the **Enable Contact flow logs** check box to start sending your contact flow logs to Amazon CloudWatch\. To learn more about Contact flow logs, see [Contact flow logs](http://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#contact-flow-logs)\.
+Select the **Enable Contact flow logs** check box to start sending your contact flow logs to Amazon CloudWatch\. To learn more about Contact flow logs, see [Contact Flow Logs](http://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#contact-flow-logs)\.
