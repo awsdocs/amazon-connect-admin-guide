@@ -2,7 +2,7 @@
 
 Amazon Connect sends data about your instance to CloudWatch metrics so that you can collect, view, and analyze CloudWatch metrics for your Amazon Connect virtual contact center\. You can use this data to monitor key operational metrics and set up alarms\. Data about your contact center is sent to CloudWatch every 1 minute\.
 
-When you view the CloudWatch metrics dashboard, you can specify the refresh interval for the data displayed\. The values displayed in the dashboard reflect the values for the refresh interval you define\. For example, if you set the refresh interval to 1 minute, the values displayed are for a minute period\. You can select a refresh interval of 10 seconds, but Amazon Connect does send data more often than every 1 minute\. Metrics that are sent to CloudWatch are available for two weeks, and then discarded\. To learn more about metrics in CloudWatch, see [What is Amazon CloudWatch?](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/)
+When you view the CloudWatch metrics dashboard, you can specify the refresh interval for the data displayed\. The values displayed in the dashboard reflect the values for the refresh interval you define\. For example, if you set the refresh interval to 1 minute, the values displayed are for a minute period\. You can select a refresh interval of 10 seconds, but Amazon Connect does not send data more often than every 1 minute\. Metrics that are sent to CloudWatch are available for two weeks, and then discarded\. To learn more about metrics in CloudWatch, see [What is Amazon CloudWatch?](http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/)
 
 ## Amazon Connect Metrics Sent to CloudWatch<a name="connect-metrics-cloudwatch"></a>
 
@@ -20,7 +20,7 @@ The following Amazon Connect metrics are sent to CloudWatch:
 + **MisconfiguredPhoneNumbers**—The number of calls that failed because the phone number is not associated with a contact flow\.
 + **PublicSigningKeyUsage**—The number of times a contact flow security key \(public signing key\) was used to encrypt customer input in a contact flow\.
 + **QueueCapacityExceededError**—The number of calls that were rejected because the queue was full\.
-+ QueueSize—The number of contacts in the queue\. The value reflects the number of contacts in the queue at the time the dashboard is accessed, not for the duration of the reporting interval\.
++ **QueueSize**—The number of contacts in the queue\. The value reflects the number of contacts in the queue at the time the dashboard is accessed, not for the duration of the reporting interval\.
 + **ThrottledCalls**—The number of voice calls that were throttled by the Amazon Connect service because the rate of calls per second \(Callrate\) exceeded the configured limit for the instance\.
 + **ToInstancePacketLossRate**—The ratio of packet loss for calls in the instance, reported every 10 seconds\. Each data point is between 0 and 1, which represents the ratio of packets lost for the instance\.
 

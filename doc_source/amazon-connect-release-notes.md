@@ -3,8 +3,58 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we're now publishing monthly release notices that describe the changes we've released in the previous month\.
 
 **Topics**
++ [August 2018 Updates](#aug18-release-notes)
++ [July 2018 Updates](#july18-release-notes)
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
+
+## August 2018 Updates<a name="aug18-release-notes"></a>
+
+The following updates were released in August 2018:
+
+**Topics**
++ [General Updates](#aug-general)
++ [](#contact-routing)
++ [Metrics and Reporting](#aug-metrics)
+
+### General Updates<a name="aug-general"></a>
++ Added a restriction of 64 characters for the password length for the administrator account created during instance creation\.
++ Resolved an issue where the **Hours of operation** page would not load when no days were selected for a saved Hours of operation configuration\.
+
+### <a name="contact-routing"></a>
+
+Increased the timeout for whispers to 2 minutes for outbound and queued callbacks so that agents have longer to prepare for the incoming call\.
+
+### Metrics and Reporting<a name="aug-metrics"></a>
++ Modified how the value for the Contacts abandoned metric so that calls that transfer to callbacks are not counted as abandoned contacts\.
+
+## July 2018 Updates<a name="july18-release-notes"></a>
+
+The following updates were released in July 2018:
+
+**Topics**
++ [Feature Releases](#july-features)
++ [General Updates](#july-general)
++ [Metrics and Reporting](#july-metrics)
++ [Contact Flows](#july-contact-flows)
+
+### Feature Releases<a name="july-features"></a>
++ [Dynamic Outbound Caller ID](http://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)
++ [Add an Amazon Lex bot to Your Instance](amazon-connect-instance.md#amazon-lex)
++ [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)
++ [Queue to Queue Transfers](http://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#queue-to-queue-transfer)
+
+### General Updates<a name="july-general"></a>
++ Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.
++ Added support for directory user names that include consecutive dashes\.
++ Added pagination when displaying security profiles in your instance so that more than 25 security profiles can be displayed\.
++ Performance optimizations to reduce latency when using the `StartOutboundVoiceContact` API\.
+
+### Metrics and Reporting<a name="july-metrics"></a>
++ Resolved an issue in Real\-time metrics reports where applied filters were not displayed in the settings page when an additional filter was applied\. The settings page now displays the applied filters correctly\.
+
+### Contact Flows<a name="july-contact-flows"></a>
++ Added drop\-down menus for contact attributes to make it easier to reference attributes in a contact flows\.
 
 ## June 2018 Updates<a name="jun18-release-notes"></a>
 
@@ -14,7 +64,7 @@ The following updates were released in June 2018:
 + [General Updates](#june-general)
 + [Telephony and Voice](#june-telephony)
 + [Contact Flows](#june-contact-flows)
-+ [Metrics](#june-metrics)
++ [Metrics and Reporting](#june-metrics)
 + [Contact Control Panel \(CCP\)](#june-ccp)
 
 ### General Updates<a name="june-general"></a>
@@ -30,7 +80,7 @@ The following updates were released in June 2018:
 + Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Using a Call phone number block in a contact flow](http://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)\.
 + Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Using System Metric Attributes](http://docs.aws.amazon.com/connect/latest/userguide/contact-attributes.html#attrib-system-metrics)\.
 
-### Metrics<a name="june-metrics"></a>
+### Metrics and Reporting<a name="june-metrics"></a>
 + Fixed an issue that caused incorrect rendering of the search field in the filters settings for some historical metrics reports\.
 + Fixed an issue in downloaded reports where the phone number would be blank instead of listing the phone number for calls that were callbacks\.
 + Login/Logout reports now support 20,000 rows per report generation, up from 10,000\.

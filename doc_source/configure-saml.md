@@ -152,6 +152,9 @@ The steps necessary to enable SAML federation with AWS include:
    `https://region-id.console.aws.amazon.com/connect/federate/instance-id`
 
    Replace the *region\-id* with the Region name where you created your Amazon Connect instance, such as us\-east\-1 for US East \(N\. Virginia\)\. Replace the *instance\-id* with the instance ID for your instance\.
+**Note**  
+You can find the instance ID for your instance by choosing the instance alias in the Amazon Connect console\. The instance ID is the set of numbers and letters after '/instance' in the **Instance ARN** displayed on the **Overview** page\. For example, the instance ID in the following Instance ARN is *178c75e4\-b3de\-4839\-a6aa\-e321ab3f3770*\.  
+arn:aws:connect:us\-east\-1:450725743157:instance/*178c75e4\-b3de\-4839\-a6aa\-e321ab3f3770*
 
 ## Use a Destination in Your Relay State URL<a name="destination-relay"></a>
 

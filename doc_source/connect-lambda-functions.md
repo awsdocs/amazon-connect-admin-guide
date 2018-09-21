@@ -27,9 +27,9 @@ To begin, create a Lambda function, and then note down the function name\. For m
 Use the following [add\-permission](http://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) command to create a resource policy using this information:
 
 ```
-aws lambda add-permission --function-name function:my-lambda-function --statement-id 1 \
---principal connect.amazonaws.com  --action lambda:InvokeFunction --source-account 123456789012 \
---source-arn arn:aws:connect:us-east-1:123456789012:instance/def1a4fc-ac9d-11e6-b582-06a0be38cccf \
+aws lambda add-permission --function-name function:my-lambda-function --statement-id 1 \ 
+     --principal connect.amazonaws.com --action lambda:InvokeFunction --source-account 123456789012 \ 
+     --source-arn arn:aws:connect:us-east-1:123456789012:instance/def1a4fc-ac9d-11e6-b582-06a0be38cccf
 ```
 
 This command uses the following input:

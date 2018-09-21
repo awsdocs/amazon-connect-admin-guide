@@ -89,7 +89,7 @@ You can export contact trace records \(CTRs\) and agent events from Amazon Conne
 
       Reload the page so that the stream or firehose you created is displayed in the resource selection, then select the stream or firehose\.
 **Note**  
-Amazon Connect does not support publishing data to Kinesis streams for which server\-side encryption is enabled\.
+If you enable server\-side encryption for the Kinesis stream you select, Amazon Connect cannot publish to the stream because it does not have permission to Kinesis kms:GenerateDataKey\. To work\-around this, enable encryption for call recordings or scheduled reports, create a customer master key \(CMK\) using KMS to use for encryption, and then choose the same CMK for your Kinesis data stream that you use for call recording or scheduled reports encryption so that Amazon Connect has appropriate permissions to encrypt data sent to Kinesis\. To learn more about creating a customer master key \(CMK\) KMS key, see [Creating Keys](http://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html)\.
 
 1. Choose **Save**\.
 
