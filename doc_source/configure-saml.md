@@ -4,7 +4,7 @@ Amazon Connect supports identity federation with Security Assertion Markup Langu
 
 **Important**  
 To enable SAML authentication, you need to create an AWS Identity and Access Management \(IAM\) role that is used for federation between the identity provider on your existing network and Amazon Web Services\. AWS Identity and Access Management is a web service that helps you securely control access to AWS resources\. You use IAM to control who is authenticated \(signed in\) and authorized \(has permissions\) to use resources\. In this case, the IAM role is used for federation between your identity provider and AWS\. The permissions for the IAM role grant access to Amazon Connect\.  
-You cannot use the root credentials for your AWS as the account for SAML federation as it is not supported\. Instead, follow the steps in the topic, and the topics linked to in the AWS Identity and Access Management documentation, to create an IAM role for federation\. To learn more about IAM, see [What is IAM?](http://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
+You cannot use the root credentials for your AWS as the account for SAML federation as it is not supported\. Instead, follow the steps in the topic, and the topics linked to in the AWS Identity and Access Management documentation, to create an IAM role for federation\. To learn more about IAM, see [What is IAM?](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
 
 **Topics**
 + [Overview of Using SAML with Amazon Connect](#saml-overview)
@@ -59,15 +59,15 @@ If you encounter an error and are unable to log in to your instance through your
 
 ## Enable SAML Federation Between Your Identity Provider and AWS<a name="enable-saml-federation"></a>
 
-To enable SAML\-based authentication for Amazon Connect, you must create an identity provider in the IAM console\. For more information, see [Enabling SAML 2\.0 Federated Users to Access the AWS Management Console](http://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_providers_enable-console-saml.html)\.
+To enable SAML\-based authentication for Amazon Connect, you must create an identity provider in the IAM console\. For more information, see [Enabling SAML 2\.0 Federated Users to Access the AWS Management Console](https://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_providers_enable-console-saml.html)\.
 
 The process to create an identity provider for AWS is the same for Amazon Connect, except that for step 7 in the flow diagram in the topic, the client is sent to your Amazon Connect instance instead of landing at the AWS Management Console\.
 
 The steps necessary to enable SAML federation with AWS include:
 
-1. Create a SAML provider in AWS\. For more information, see [Creating SAML Identity Providers](http://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_providers_create_saml.html)\.
+1. Create a SAML provider in AWS\. For more information, see [Creating SAML Identity Providers](https://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_providers_create_saml.html)\.
 
-1. Create an IAM role for SAML 2\.0 Federation with the AWS Management Console\. You only need to create one IAM role for federation\. The IAM role determines which permissions the users that log in through your identity provider have in AWS\. In this case, the permissions are for accessing Amazon Connect\. You can control the permissions to features of Amazon Connect by using security profiles in Amazon Connect\. For more information, see [Creating a Role for SAML 2\.0 Federation \(Console\)](http://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_create_for-idp_saml.html)\.
+1. Create an IAM role for SAML 2\.0 Federation with the AWS Management Console\. You only need to create one IAM role for federation\. The IAM role determines which permissions the users that log in through your identity provider have in AWS\. In this case, the permissions are for accessing Amazon Connect\. You can control the permissions to features of Amazon Connect by using security profiles in Amazon Connect\. For more information, see [Creating a Role for SAML 2\.0 Federation \(Console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_create_for-idp_saml.html)\.
 
    In step 5, choose **Allow programmatic and AWS Management Console access**\. In addition to the trust policy described in the topic in the procedure *To prepare to create a role for SAML 2\.0 federation*, create a policy to assign permissions to your Amazon Connect instance\. Permissions start on step 9 of the *To create a role for SAML\-based federation* procedure \.
 
@@ -141,11 +141,11 @@ The steps necessary to enable SAML federation with AWS include:
       }
       ```
 
-   1. After you create the policy, choose **Next:Review**, and then return to step 10 in the *To create a role for SAML\-based federation* procedure in the [Creating a Role for SAML 2\.0 Federation \(Console\)](http://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_create_for-idp_saml.html) topic\.
+   1. After you create the policy, choose **Next:Review**, and then return to step 10 in the *To create a role for SAML\-based federation* procedure in the [Creating a Role for SAML 2\.0 Federation \(Console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_create_for-idp_saml.html) topic\.
 
-1. Configure your network as a SAML provider for AWS\. For more information, see [Enabling SAML 2\.0 Federated Users to Access the AWS Management Console](http://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_providers_enable-console-saml.html)\.
+1. Configure your network as a SAML provider for AWS\. For more information, see [Enabling SAML 2\.0 Federated Users to Access the AWS Management Console](https://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_providers_enable-console-saml.html)\.
 
-1. Configure SAML Assertions for the Authentication Response\. For more information, [Configuring SAML Assertions for the Authentication Response](http://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_providers_create_saml_assertions.html)\.
+1. Configure SAML Assertions for the Authentication Response\. For more information, [Configuring SAML Assertions for the Authentication Response](https://docs.aws.amazon.com/IAM/latest/UserGuide//id_roles_providers_create_saml_assertions.html)\.
 
 1. Configure the relay state of your identity provider to point to your Amazon Connect instance\. The URL to use for the relay state is comprised as follows:
 

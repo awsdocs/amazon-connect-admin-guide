@@ -2,7 +2,7 @@
 
 Amazon Connect can interact with your own systems and take different paths in contact flows dynamically\. To achieve this, invoke Lambda functions, fetch results in an contact flow, and call your own services or interact with other AWS data stores or services\.
 
-To learn more about AWS Lambda, see the [AWS Lambda Developer Guide](http://docs.aws.amazon.com/lambda/latest/dg/)\.
+To learn more about AWS Lambda, see the [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/)\.
 
 ## Invoking a Lambda Function from a Contact Flow<a name="allow-call-function"></a>
 
@@ -20,11 +20,11 @@ The steps required to invoke a Lambda function from Amazon Connect include the f
 
 ### Create a Lambda Function and Configure a Trigger Policy<a name="lambda-policy"></a>
 
-Amazon Connect can successfully invoke a Lambda function in an AWS account when a resource policy has been set on the Lambda function\. For more information, see [Using Resource\-Based Policies for AWS Lambda](http://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html) in the *AWS Lambda Developer Guide*\.
+Amazon Connect can successfully invoke a Lambda function in an AWS account when a resource policy has been set on the Lambda function\. For more information, see [Using Resource\-Based Policies for AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html) in the *AWS Lambda Developer Guide*\.
 
-To begin, create a Lambda function, and then note down the function name\. For more information about creating a Lambda function, see [Create a Simple Lambda Function](http://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html)\.
+To begin, create a Lambda function, and then note down the function name\. For more information about creating a Lambda function, see [Create a Simple Lambda Function](https://docs.aws.amazon.com/lambda/latest/dg/get-started-create-function.html)\.
 
-Use the following [add\-permission](http://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) command to create a resource policy using this information:
+Use the following [add\-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) command to create a resource policy using this information:
 
 ```
 aws lambda add-permission --function-name function:my-lambda-function --statement-id 1 \ 

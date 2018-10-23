@@ -14,14 +14,14 @@ The following updates were released in August 2018:
 
 **Topics**
 + [General Updates](#aug-general)
-+ [](#contact-routing)
++ [Contact Routing](#contact-routing)
 + [Metrics and Reporting](#aug-metrics)
 
 ### General Updates<a name="aug-general"></a>
 + Added a restriction of 64 characters for the password length for the administrator account created during instance creation\.
 + Resolved an issue where the **Hours of operation** page would not load when no days were selected for a saved Hours of operation configuration\.
 
-### <a name="contact-routing"></a>
+### Contact Routing<a name="contact-routing"></a>
 
 Increased the timeout for whispers to 2 minutes for outbound and queued callbacks so that agents have longer to prepare for the incoming call\.
 
@@ -39,10 +39,10 @@ The following updates were released in July 2018:
 + [Contact Flows](#july-contact-flows)
 
 ### Feature Releases<a name="july-features"></a>
-+ [Dynamic Outbound Caller ID](http://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)
++ [Dynamic Outbound Caller ID](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)
 + [Add an Amazon Lex bot to Your Instance](amazon-connect-instance.md#amazon-lex)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)
-+ [Queue to Queue Transfers](http://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#queue-to-queue-transfer)
++ [Queue to Queue Transfers](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#queue-to-queue-transfer)
 
 ### General Updates<a name="july-general"></a>
 + Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.
@@ -77,8 +77,8 @@ The following updates were released in June 2018:
 ### Contact Flows<a name="june-contact-flows"></a>
 + Renamed the **Set queue** block to **Set working queue**\.
 + Added a **Copy to clipboard** button next to the ARN of a contact flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the contact flow in the designer to display the ARN\.
-+ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Using a Call phone number block in a contact flow](http://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)\.
-+ Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Using System Metric Attributes](http://docs.aws.amazon.com/connect/latest/userguide/contact-attributes.html#attrib-system-metrics)\.
++ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Using a Call phone number block in a contact flow](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)\.
++ Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Using System Metric Attributes](https://docs.aws.amazon.com/connect/latest/userguide/contact-attributes.html#attrib-system-metrics)\.
 
 ### Metrics and Reporting<a name="june-metrics"></a>
 + Fixed an issue that caused incorrect rendering of the search field in the filters settings for some historical metrics reports\.
@@ -100,7 +100,7 @@ The following updates were released in April and May 2018:
 + [Contact Control Panel \(CCP\)](#may-ccp)
 
 ### General Updates<a name="may-general"></a>
-+ New [Amazon Polly voices](http://docs.aws.amazon.com/polly/latest/dg/voicelist.html) are now automatically made available in Amazon Connect as soon as they are launched\. You can use new voices, such as Matthew and Léa, in your contact flows\.
++ New [Amazon Polly voices](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) are now automatically made available in Amazon Connect as soon as they are launched\. You can use new voices, such as Matthew and Léa, in your contact flows\.
 + Updated password enforcement for Amazon Connect user accounts to match requirements for the Amazon Connect admin account created during instance creation\.
 + Resolved an issue that sometimes resulted in the email addresses not being saved when updating an existing user account\.
 
@@ -120,7 +120,7 @@ The following updates were released in April and May 2018:
 + Data for scheduled reports is now delayed by 15 minutes to allow for most recent data to be incorporated in to reports\. Previously, in some cases, report data for the final 15 minute period during the scheduled report interval did not get included in scheduled reports\. This applies to all report types\.
 + In metric calculations, the time that an incoming call rings is attributed to idle time if the agent is in idle state before an incoming call\.
 + The metric **Agent on contact time** now includes time that an agent spent in an auxiliary busy state\.
-+ Published new documentation on [Amazon Connect metrics\.](http://docs.aws.amazon.com/connect/latest/userguide/connect-metrics.html)
++ Published new documentation on [Amazon Connect metrics\.](https://docs.aws.amazon.com/connect/latest/userguide/connect-metrics.html)
 
 ### Contact Control Panel \(CCP\)<a name="may-ccp"></a>
 + Added a **Save** button to the settings menu for the CCP when an agent is using a desk phone\. The **Save** button saves the deskphone configuration between sessions\.

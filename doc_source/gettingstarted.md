@@ -5,7 +5,7 @@ An Amazon Connect instance is the starting point for your contact center\. After
 **Note**  
 Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
 
-After you create an Amazon Connect instance, you can claim a phone number to use for your contact center\. After you claim a number, you can place a test call in to your contact center to confirm that it is working correctly\. Calls are handled in the contact center using the Contact Control Panel \(CCP\)\. The CCP is built in to the Amazon Connect Contact Center Manager \(CCM\)\. For more information about how agents use the CCP, see [Using the Contact Control Panel](http://docs.aws.amazon.com/connect/latest/userguide/agentconsole.html) in the *Amazon Connect User Guide*\.
+After you create an Amazon Connect instance, you can claim a phone number to use for your contact center\. After you claim a number, you can place a test call in to your contact center to confirm that it is working correctly\. Calls are handled in the contact center using the Contact Control Panel \(CCP\)\. The CCP is built in to the Amazon Connect Contact Center Manager \(CCM\)\. For more information about how agents use the CCP, see [Using the Contact Control Panel](https://docs.aws.amazon.com/connect/latest/userguide/agentconsole.html) in the *Amazon Connect User Guide*\.
 
 You can edit the settings for your instance in the AWS Management Console\. After you create your instance, you can access it by using the URL in the **Access URL** column\. The access URL is the URL your agents, administrators, and managers use to log in to and access the CCM and the CCP\. For more information, see [Amazon Connect Instances](what-is-amazon-connect.md#amazon-connect-fundamentals)\.
 
@@ -22,11 +22,11 @@ If you have an AWS account already, skip to the next task\. If you don't have an
 
 1. Open [https://aws\.amazon\.com/](https://aws.amazon.com/), and then choose **Create an AWS Account**\.
 **Note**  
-This might be unavailable in your browser if you previously signed into the AWS Management Console\. In that case, choose **Sign in to a different account**, and then choose **Create a new AWS account**\.
+If you previously signed in to the AWS Management Console using AWS account root user credentials, choose **Sign in to a different account**\. If you previously signed in to the console using IAM credentials, choose **Sign\-in using root account credentials**\. Then choose **Create a new AWS account**\.
 
 1. Follow the online instructions\.
 
-   Part of the sign\-up procedure involves receiving a phone call and entering a PIN using the phone keypad\.
+   Part of the sign\-up procedure involves receiving a phone call and entering a verification code using the phone keypad\.
 
 ## Plan for User and Identity Management<a name="identity-management"></a>
 

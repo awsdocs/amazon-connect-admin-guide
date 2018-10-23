@@ -89,7 +89,7 @@ You can export contact trace records \(CTRs\) and agent events from Amazon Conne
 
       Reload the page so that the stream or firehose you created is displayed in the resource selection, then select the stream or firehose\.
 **Note**  
-If you enable server\-side encryption for the Kinesis stream you select, Amazon Connect cannot publish to the stream because it does not have permission to Kinesis kms:GenerateDataKey\. To work\-around this, enable encryption for call recordings or scheduled reports, create a customer master key \(CMK\) using KMS to use for encryption, and then choose the same CMK for your Kinesis data stream that you use for call recording or scheduled reports encryption so that Amazon Connect has appropriate permissions to encrypt data sent to Kinesis\. To learn more about creating a customer master key \(CMK\) KMS key, see [Creating Keys](http://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html)\.
+If you enable server\-side encryption for the Kinesis stream you select, Amazon Connect cannot publish to the stream because it does not have permission to Kinesis kms:GenerateDataKey\. To work\-around this, enable encryption for call recordings or scheduled reports, create a customer master key \(CMK\) using KMS to use for encryption, and then choose the same CMK for your Kinesis data stream that you use for call recording or scheduled reports encryption so that Amazon Connect has appropriate permissions to encrypt data sent to Kinesis\. To learn more about creating a customer master key \(CMK\) KMS key, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html)\.
 
 1. Choose **Save**\.
 
@@ -120,7 +120,7 @@ Amazon Connect can encrypt sensitive data collected by contact flows using publi
 **Note**  
 You can have up to two signing keys active at one time to facilitate rotation\.
 
-Data that is encrypted within a contact flow is made available through the stored customer input system attribute\. The AWS Encryption SDK can be used to decrypt this data within your system\. For more information, see the [AWS Encryption SDK Developer Guide](http://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)\.
+Data that is encrypted within a contact flow is made available through the stored customer input system attribute\. The AWS Encryption SDK can be used to decrypt this data within your system\. For more information, see the [AWS Encryption SDK Developer Guide](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)\.
 
 **To add a security key**
 
@@ -158,4 +158,4 @@ To remove a bot from your instance, choose **Remove** next to the bot to remove\
 
 ### Contact flow logs<a name="enable-contact-flow-logs"></a>
 
-Select the **Enable Contact flow logs** check box to start sending your contact flow logs to Amazon CloudWatch\. To learn more about Contact flow logs, see [Contact Flow Logs](http://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#contact-flow-logs)\.
+Select the **Enable Contact flow logs** check box to start sending your contact flow logs to Amazon CloudWatch\. To learn more about Contact flow logs, see [Contact Flow Logs](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#contact-flow-logs)\.
