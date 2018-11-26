@@ -185,7 +185,7 @@ The following example disposition keys are listed by symptom, scenario, and seve
 + **V**—Volume too quiet or too loud
 + **C**—Choppy/cuts in and out intermittently
 
-**Senario**
+**Scenario**
 + **O**—Outbound call
 + **I**—Inbound call
 + **T**—Three\-way call
