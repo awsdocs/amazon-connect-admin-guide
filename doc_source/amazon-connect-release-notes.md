@@ -3,10 +3,75 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we're now publishing monthly release notices that describe the changes we've released in the previous month\.
 
 **Topics**
++ [November 2018 Updates](#nov18-release-notes)
++ [October 2018 Updates](#oct18-release-notes)
++ [September 2018 Updates](#sep18-release-notes)
 + [August 2018 Updates](#aug18-release-notes)
 + [July 2018 Updates](#july18-release-notes)
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
+
+## November 2018 Updates<a name="nov18-release-notes"></a>
+
+The following updates were released in September 2018:
+
+**Topics**
++ [General Updates](#nov-general)
++ [Contact Flow Updates](#nov18-flows)
++ [Metrics Updates](#nov18-metrics)
++ [API Updates](#nov18-api)
+
+### General Updates<a name="nov-general"></a>
++ Resolved an issue with auditing\.
++ Resolved an issue that sometimes resulted in agents being placed in a default state when a contact disconnected when attempting to connect to an agent\.
++ Resolved an issue that sometimes resulted in newly created agents not being able to log in correctly if the log in attempt occurred immediately after user account was created\.
+
+### Contact Flow Updates<a name="nov18-flows"></a>
++ Added the new Loop block, which lets you loop through segments of a contact flow, such as requesting customer information additional times if valid data is not entered\.
+
+### Metrics Updates<a name="nov18-metrics"></a>
++ Resolved an issue where callbacks handled were included in the count for incoming contacts in historical reports, but not counted in scheduled reports\. Callbacks handled are no longer included in the count for Incoming contacts handled in historical reports\.
++ Improved performance of report generation for reports with a large number of queues and agents in an instance\.
++ Resolved an issue with how ACW was reported, and backfilled data in customer instances to correct the ACW data for September, October, and November\.
+
+### API Updates<a name="nov18-api"></a>
+
+Released the [https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html) operation for the Amazon Connect API\.
+
+## October 2018 Updates<a name="oct18-release-notes"></a>
+
+The following updates were released in September 2018:
+
+**Topics**
++ [General Updates](#oct-general)
++ [Metrics Updates](#oct18-metrics)
++ [API Updates](#oct18-api)
+
+### General Updates<a name="oct-general"></a>
++ Resolved an issue that sometimes resulted in stuck media sessions\.
+
+### Metrics Updates<a name="oct18-metrics"></a>
++ Resolved an issue that sometimes resulted in agent names not being displayed correctly in historical reports\.
++ Resolved an issue that sometimes resulted in the data related to agent Auxiliary states were incorrectly overwritten\.
+
+### API Updates<a name="oct18-api"></a>
++ Resolved an issue where the `GetCurrentMetrics` operation returned the metric `OLDEST_CONTACT_AGE` was returned in milliseconds instead of seconds\.
+
+## September 2018 Updates<a name="sep18-release-notes"></a>
+
+The following updates were released in September 2018:
+
+**Topics**
++ [General Updates](#sep-general)
++ [API Updates](#sep18-api)
+
+### General Updates<a name="sep-general"></a>
++ Improved page loading times for the **User management** page\.
++ Resolved an issue that sometimes caused issues loading the **Queues** page when there were a large number of quick connects associated with a queue\.
+
+### API Updates<a name="sep18-api"></a>
+
+Released the [https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html) operation for the Amazon Connect API\.
 
 ## August 2018 Updates<a name="aug18-release-notes"></a>
 
@@ -14,14 +79,14 @@ The following updates were released in August 2018:
 
 **Topics**
 + [General Updates](#aug-general)
-+ [Contact Routing](#contact-routing)
++ [Contact Routing](#aug-contact-routing)
 + [Metrics and Reporting](#aug-metrics)
 
 ### General Updates<a name="aug-general"></a>
 + Added a restriction of 64 characters for the password length for the administrator account created during instance creation\.
 + Resolved an issue where the **Hours of operation** page would not load when no days were selected for a saved Hours of operation configuration\.
 
-### Contact Routing<a name="contact-routing"></a>
+### Contact Routing<a name="aug-contact-routing"></a>
 
 Increased the timeout for whispers to 2 minutes for outbound and queued callbacks so that agents have longer to prepare for the incoming call\.
 

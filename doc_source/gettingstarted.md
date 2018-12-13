@@ -28,6 +28,10 @@ If you previously signed in to the AWS Management Console using AWS account root
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code using the phone keypad\.
 
+### Port and Protocol Requirements<a name="connect-ports-protocols"></a>
+
+If you plan to use the Amazon Connect softphone Contact Control Panel \(CCP\) for your agents to handle calls in Amazon Connect, you need allow traffic through the ports for the required protocols used by Amazon Connect to communicate with the softphone and other AWS services used by Amazon Connect\. The softphone client runs in a web browser, and connects to Amazon Connect and other AWS services using a set of public IP addresses and TCP/UDP ports\. To allow for that communication, you must permit traffic in your network to the ports and protocols described in [Softphone CCP IP Address Ranges](https://docs.aws.amazon.com/connect/latest/userguide/agentconsole-guide.html#ccp-ip-ranges)\.
+
 ## Plan for User and Identity Management<a name="identity-management"></a>
 
 Before you set up your Amazon Connect instance, you should decide how you want to manage your Amazon Connect users\. You cannot change the option you select for identity management after you create the instance\. If you decide to change the option or directory you selected, you can delete the instance and create a new one\. When you delete an instance, you lose all configuration settings and metrics data for it\.

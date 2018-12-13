@@ -7,22 +7,70 @@ When you view the CloudWatch metrics dashboard, you can specify the refresh inte
 ## Amazon Connect Metrics Sent to CloudWatch<a name="connect-metrics-cloudwatch"></a>
 
 The following Amazon Connect metrics are sent to CloudWatch:
-+ **CallsBreachingConcurrencyQuota**—The number of voice calls that exceeded the concurrent active calls limit for the instance\. This is a count of the number of calls that exceeded the limit, not the number of concurrent calls in excess of the limit\.
-+ **CallBackNotDialableNumber**—The number of times a queued call back to a customer could not be dialed because the customer's number is in a country for which outbound calls are not allowed for the instance\. The countries allowed for an instance are defined by the service limits\.
-+ **CallRecordingUploadError**—The number of call recordings that failed to upload to the Amazon S3 bucket configured for your instance\. This is the bucket specified in **Data Storage** > **Call Recordings** settings for the instance\.
-+ **CallsPerInterval**—The number of voice calls, both inbound and outbound, received or placed per second in the instance\.
-+ **ConcurrentCalls**—The number of concurrent active voice calls in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active calls at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active voice calls are included, not only active calls that are connected to agents\.
-+ **ConcurrentCallsPercentage**—The percentage of the concurrent active voice calls service limit used in the instance\. This is calculated by `ConcurrentCalls/ConfiguredConcurrentCallsLimit * 100`\.
-+ **ContactFlowErrors**—The number of times the error branch for a contact flow was executed\.
-+ **ContactFlowFatalErrors**—The number of times a contact flow failed to execute due to a system error\.
-+ **LongestQueueWaitTime**—The longest amount of time, in seconds, that a contact waited in a queue\. This is the length of time a contact waited in a queue during the refresh interval selected in the CloudWatch dashboard, such as 1 minute or 5 minutes\.
-+ **MissedCalls**—The number of voice calls that were missed by agents during the refresh interval selected, such as 1 minute or 5 minutes\. A missed call is one that is not answered by an agent within 20 seconds\.
-+ **MisconfiguredPhoneNumbers**—The number of calls that failed because the phone number is not associated with a contact flow\.
-+ **PublicSigningKeyUsage**—The number of times a contact flow security key \(public signing key\) was used to encrypt customer input in a contact flow\.
-+ **QueueCapacityExceededError**—The number of calls that were rejected because the queue was full\.
-+ **QueueSize**—The number of contacts in the queue\. The value reflects the number of contacts in the queue at the time the dashboard is accessed, not for the duration of the reporting interval\.
-+ **ThrottledCalls**—The number of voice calls that were throttled by the Amazon Connect service because the rate of calls per second \(Callrate\) exceeded the configured limit for the instance\.
-+ **ToInstancePacketLossRate**—The ratio of packet loss for calls in the instance, reported every 10 seconds\. Each data point is between 0 and 1, which represents the ratio of packets lost for the instance\.
+
+**CallsBreachingConcurrencyQuota**  
+The number of voice calls that exceeded the concurrent active calls limit for the instance\. This is a count of the number of calls that exceeded the limit, not the number of concurrent calls in excess of the limit\.  
+Unit: Count
+
+**CallBackNotDialableNumber**  
+The number of times a queued callback to a customer could not be dialed because the customer's number is in a country for which outbound calls are not allowed for the instance\. The countries allowed for an instance are defined by the service limits\.  
+Unit: Count
+
+**CallRecordingUploadError**  
+The number of call recordings that failed to upload to the Amazon S3 bucket configured for your instance\. This is the bucket specified in **Data Storage** > **Call Recordings** settings for the instance\.  
+Unit: Count
+
+**CallsPerInterval**  
+The number of voice calls, both inbound and outbound, received or placed per second in the instance\.  
+Unit: Count
+
+**ConcurrentCalls**  
+The number of concurrent active voice calls in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active calls at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active voice calls are included, not only active calls that are connected to agents\.  
+Unit: Count
+
+**ConcurrentCallsPercentage**  
+The percentage of the concurrent active voice calls service limit used in the instance\. This is calculated by `ConcurrentCalls/ConfiguredConcurrentCallsLimit * 100`\.  
+Unit: Percent
+
+**ContactFlowErrors**  
+The number of times the error branch for a contact flow was executed\.  
+Unit: Count
+
+**ContactFlowFatalErrors**  
+The number of times a contact flow failed to execute due to a system error\.  
+Unit: Count
+
+**LongestQueueWaitTime**  
+The longest amount of time, in seconds, that a contact waited in a queue\. This is the length of time a contact waited in a queue during the refresh interval selected in the CloudWatch dashboard, such as 1 minute or 5 minutes\.  
+Unit: Seconds
+
+**MissedCalls**  
+The number of voice calls that were missed by agents during the refresh interval selected, such as 1 minute or 5 minutes\. A missed call is one that is not answered by an agent within 20 seconds\.  
+Unit: Seconds
+
+**MisconfiguredPhoneNumbers**  
+The number of calls that failed because the phone number is not associated with a contact flow\.  
+Unit: Count
+
+**PublicSigningKeyUsage**  
+The number of times a contact flow security key \(public signing key\) was used to encrypt customer input in a contact flow\.  
+Unit: Count
+
+**QueueCapacityExceededError**  
+The number of calls that were rejected because the queue was full\.  
+Unit: Count
+
+**QueueSize**  
+The number of contacts in the queue\. The value reflects the number of contacts in the queue at the time the dashboard is accessed, not for the duration of the reporting interval\.  
+Unit: Count
+
+**ThrottledCalls**  
+The number of voice calls that were throttled by the Amazon Connect service because the rate of calls per second \(Callrate\) exceeded the configured limit for the instance\.  
+Unit: Count
+
+**ToInstancePacketLossRate**  
+The ratio of packet loss for calls in the instance, reported every 10 seconds\. Each data point is between 0 and 1, which represents the ratio of packets lost for the instance\.  
+Unit: Percent
 
 ## Amazon Connect CloudWatch Metrics Dimensions<a name="connect-cloudwatch-dimensions"></a>
 

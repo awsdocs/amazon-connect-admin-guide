@@ -1,6 +1,6 @@
 # Amazon Connect and Salesforce Integration<a name="salesforce-integration"></a>
 
-The core functionality of the Amazon Connect CTI Adapter provides a WebRTC browser\-based Contact Control Panel \(CCP\) within Salesforce\. The Amazon Connect CTI integration consists of two components, a managed Salesforce package and a AWS Serverless application \(need link\) deployed to your AWS environment\.
+The core functionality of the Amazon Connect CTI Adapter provides a WebRTC browser\-based Contact Control Panel \(CCP\) within Salesforce\. The Amazon Connect CTI integration consists of two components, a managed Salesforce package and a AWS Serverless application deployed to your AWS environment\.
 
 With those components, customers can build a deep integration between the Amazon Connect contact center platform and Salesforce, the leading customer relationship management \(CRM\) platform\. The collection of pre\-build utilities enables a rapid integration between these two platforms\. The AWS Serverless application package contains a set of common Lambda functions to be used by Amazon Connect to interact with Salesforce\.
 
@@ -18,7 +18,7 @@ The key benefits of the adapter include:
 
 We recommend that you initially install the package into your Salesforce sandbox\. After the package is installed, you can configure your Salesforce Call Center configuration within Salesforce\.
 
-The next step is to whitelist your Salesforce Visualforce domain within your Amazon Connect Application integration\. This allows cross\-domain access to your Amazon Connect instance\.
+The next step is to whitelist your Salesforce Visualforce domain within Amazon Connect\. This allows cross\-domain access to your Amazon Connect instance\.
 
 This page provides a quick setup guide\. Please review the [Amazon Connect CTI Adapter v2 for Salesforce installation guide](https://s3.amazonaws.com/connect-blogs/Amazon+Connect+Salesforce+CTI+Adapter/Amazon-Connect-CTI-Adapter-for-Salesforce_Setup-and-Installation-Guide_v2.0_September_2018.pdf) for a more detailed walk\-through and setup of the full CTI Adapter capabilities\. We also have a trailhead available at [https://sfdc\.co/Amazon\-Connect](https://sfdc.co/Amazon-Connect)\. Note, it's still in process of being updated to support latest CTI Adapter features\.
 
@@ -40,7 +40,7 @@ Amazon Connect requires WebRTC to enable soft\-phone voice media stream and Webs
 1. Edit one of appropriate call center configuration \(Amazon Connect CCP Adapter Classic, Console, or Lightning\)\.
    + For Amazon Connect CCP URL, type the CCP URL for your instance \(for example, https://instance\.awsapps\.com/connect/ccp\)\.
    + For Phone Number Formatting, Country, specify the appropriate 2\-digit [ISO country code](https://countrycode.org/)\.
-   + To provide Salesforce users with access to the Amazon Connect CCP, on the Setup Call Centers page, choose Manage Call Center Users\. Add the Salesforce users you want to enable for using these call features\. Be sure to add your own Salesforce user account if you plan to these features\.
+   + To provide Salesforce users with access to the Amazon Connect CCP, on the Setup Call Centers page, choose **Manage Call Center Users**\. Add the Salesforce users to enable for using these call features\. Be sure to add your own Salesforce user account if you plan to these features\.
 
 1. Whitelist your Salesforce Visualforce domain URL using the directions in [Application Integration](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instance.html#app-integration)\. To verify the URL, open the Visualforce page in setup\. This URL usually has the following format:
 
@@ -53,7 +53,7 @@ Amazon Connect requires WebRTC to enable soft\-phone voice media stream and Webs
 ## Troubleshooting Common Issues<a name="troubleshooting-crm"></a>
 
 If you encounter errors with your configuration, check the following common issues:
-+ Confirm that Salesforce is not blocking your iFrame\. For more information, see [ Enable Clickjack Protection for Visualforce Pages Even When Headers Are Disabled](https://releasenotes.docs.salesforce.com/en-us/summer15/release-notes/rn_vf_clickjack_with_headers_disabled.htm)\.
++ Confirm that Salesforce is not blocking your iFrame\. For more information, see [Enable Clickjack Protection for Visualforce Pages Even When Headers Are Disabled](https://releasenotes.docs.salesforce.com/en-us/summer15/release-notes/rn_vf_clickjack_with_headers_disabled.htm)\.
 + Confirm that the Amazon Connect user is assigned only the Agent security profile\.
 + Confirm that your Salesforce Call Center **Phone Number Formatting** is configured with the following parameters:
 

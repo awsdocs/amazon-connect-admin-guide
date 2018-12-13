@@ -19,6 +19,7 @@ Amazon's trademarks and trade dress may not be used in
 + [Getting Started with Amazon Connect](gettingstarted.md)
    + [Use an Existing Directory for Amazon Connect Identity Management](directory-service.md)
    + [Configure SAML for Identity Management in Amazon Connect](configure-saml.md)
++ [Amazon Connect in the Asia Pacific (Tokyo) Region](connect-tokyo-region.md)
 + [Configuring Your Amazon Connect Instance](amazon-connect-instance.md)
 + [Using Service-Linked Roles for Amazon Connect](connect-slr.md)
 + [Monitoring Amazon Connect in Amazon CloudWatch Metrics](monitoring-cloudwatch.md)
