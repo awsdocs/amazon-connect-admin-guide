@@ -5,6 +5,7 @@ The following table describes the update history for Amazon Connect documentatio
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Adding steps to enable Live media streaming for customer audio streams\. | Updated the [Data Storage](amazon-connect-instance.md#datastorage) content to include steps to enable Live media streaming for customer audio streams\. | December 21\. 2018 | 
 | Added a topic about using Amazon Connect in the Asia Pacific \(Tokyo\) Region\. | Added the topic, [Amazon Connect in the Asia Pacific \(Tokyo\) Region](connect-tokyo-region.md)\. The topic includes information specific to using Amazon Connect in the Asia Pacific \(Tokyo\) Region\. | December 10, 2018 | 
 | Added a Troubleshooting and Best Practices topic | Added a new topic, [Amazon Connect Troubleshooting and Best Practices](troubleshooting.md)\. The topic covers best practices for agent connectivity using the CCP, and troubleshooting connectivity and call quality issues in Amazon Connect\. | October 18, 2018 | 
 | Added a topic about using service\-linked roles in Amazon Connect\. | Added the [Using Service\-Linked Roles for Amazon Connect](connect-slr.md) topic, which describes using service\-linked roles in Amazon Connect\. | October 17, 2018 | 

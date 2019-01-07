@@ -43,41 +43,91 @@ Before updating the data storage settings, ensure that you are familiar with Ama
 
 1. In the navigation pane, choose **Data storage**\.
 
-1. To update the settings for call recordings, do the following:
+1. The steps in the following procedures describe each data storage setting\.
 
-   1. For **Call recordings**, choose **Edit**\.
+### Update **Call recordings** settings<a name="w3aac13c11c11"></a>
 
-   1. \(Optional\) To disable call recordings, clear **Enable call recording**\.
+1. Under **Call recordings**, choose **Edit**\.
 
-   1. \(Optional\) If call recordings are enabled, you can create a new S3 bucket or select an S3 bucket that you've already created\.
+1. To enable call recordings, choose **Enable call recording**\.
 
-   1. \(Optional\) If call recordings are enabled, you can update the encryption settings as needed\. To disable encryption, clear **Enable encryption**\. To update the KMS key, specify a key from the same region as your S3 bucket\.
+1. Do one of the following:
+   + Choose **Create a new S3 bucket for me \(recommended\)**\.
 
-   1. To save your changes, choose **Save**\.
+     1. Enter a **Name** for the bucket\.
 
-1. To update the settings for exported reports, do the following:
+     1. Optionally, enter a **Path prefix** for the bucket\. A prefix makes it easier to identify the bucket in the S3 console\.
 
-   1. For **Exported reports**, choose **Edit**\.
+     1. Choose whether to enable encryption for call recordings\. If enabled, choose a KMS master key to use for encrypting the call recordings in your instance\.
 
-   1. \(Optional\) To disable exported reports, clear **Enable exported reports**\.
+     1. Choose **Save** under **Call recordings**\.
+   + Choose **Select an existing S3 bucket**\.
 
-   1. \(Optional\) If exported reports are enabled, you can create a new S3 bucket or select an S3 bucket that you've already created\.
+     1. Select the bucket to use for call recordings from the **Name** drop\-down list\.
 
-   1. \(Optional\) If exported reports are enabled, you can update the encryption settings as needed\. To disable encryption, clear **Enable encryption**\. To update the KMS key, specify a key from the same region as your S3 bucket\.
+     1. Optionally, enter a **Path prefix** to use\.
 
-   1. To save your changes, choose **Save**\.
+     1. Choose whether to enable encryption for call recordings\. If enabled, choose a **KMS master key** to use for encrypting the call recordings in your instance\.
+
+     1. Choose **Save** under **Call recordings**\.
+
+1. Choose **Save** to save your changes\.
+
+### Set **Live media streaming** settings<a name="mediastreaming"></a>
+
+1. Choose **Edit** under **Live media streaming**\.
+
+1. Choose **Enable live media streaming**\.
+
+1. Enter a **Prefix** to use for the Kinesis Video Stream created for your instance\. The prefix makes it easier to identify the stream you want after data is sent there\.
+
+1. Choose the KMS Master Key to use to encrypt the data sent to Kinesis\.
+
+1. Specify a number and unit for the **Data retention period**\. If you select **No data retention**, data is not retained and can be used only for immediate consumption\.
+
+1. Choose **Save** under **Live media streaming**\.
+
+1. Choose **Save** \(at the bottom of the page\)\.
+
+### Set **Exported reports** settings<a name="w3aac13c11c15"></a>
+
+1. Under **Exported reports**, choose **Edit**\.
+
+1. To enable exported reports, choose **Enable exported reports**\.
+
+1. Do one of the following:
+   + Choose **Create a new S3 bucket for me \(recommended\)**\.
+
+     1. Enter a **Name** for the bucket\.
+
+     1. Optionally, enter a **Path prefix** for the bucket\. A prefix makes it easier to identify the bucket in the S3 console\.
+
+     1. Choose whether to enable encryption for exported reports\. If enabled, choose a KMS master key to use for encrypting the call recordings in your instance\.
+
+     1. Choose **Save** under **Call recordings**\.
+   + Choose **Select an existing S3 bucket**\.
+
+     1. Select the bucket to use for exported reports from the **Name** drop\-down list\.
+
+     1. Optionally, enter a **Path prefix** to use\.
+
+     1. Choose whether to enable encryption for exported reports\. If enabled, choose a **KMS master key** to use for encrypting the call recordings in your instance\.
+
+     1. Choose **Save** under **Exported reports**\.
+
+1. Choose **Save** \(at the bottom of the page\) to save your changes\.
 
 ## Data Streaming<a name="dataexporting"></a>
 
-You can export contact trace records \(CTRs\) and agent events from Amazon Connect and perform real\-time analysis on contacts\. Data streaming uses the Amazon Kinesis platform to support data streaming\.
+You can export contact trace records \(CTRs\) and agent events from Amazon Connect and perform real\-time analysis on contacts\. Data streaming sends data to Amazon Kinesis\.
 
-**To set up data streaming**
+**Enable data streaming**
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
 1. Choose the name of the instance from **Instance Alias**\.
 
-1. In the navigation pane, choose **Data streaming**\.
+1. Choose **Data streaming**\.
 
 1. Choose **Enable data streaming**\.
 
@@ -138,7 +188,7 @@ Data that is encrypted within a contact flow is made available through the store
 
 With Amazon Lex, you can build conversational interactions \(bots\) that feel natural to your customers, giving you access to the same speech recognition and natural language understanding technology that powers Alexa\. After you create an Amazon Lex bot, you can add it to your instance and then integrate it into your contact flows\. You can add bots from the same region as your Amazon Connect instance, or from a different region\.
 
-**To add an Amazon Lex bot**
+**Add an Amazon Lex bot to your instance**
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
@@ -146,15 +196,35 @@ With Amazon Lex, you can build conversational interactions \(bots\) that feel na
 
 1. In the navigation pane, choose **Contact flows**\.
 
-1. In the **Region** drop\-down list, choose the Region in which you created your Amazon Lex bot\.
+1. Under **Amazon Lex**, in the **Region** drop\-down list, choose the Region in which you created your Amazon Lex bot\.
 
    If there are bots associated with your AWS account in the chosen region, the bots are displayed in the **Bot** drop\-down list\. If no bots are found in the Region, or when there are no additional bots to add from that Region, the drop\-down menu is disabled\. A message indicates that there are no bots available to choose in that Region\.
 
-1. In the **Bots** drop\-down menu, choose your bot, then choose **Add bot**\.
+1. In the **Bots** drop\-down menu, choose your bot, then choose **\+ Add Lex bot**\.
 
-To create a new bot, **Create a new Lex bot** to open the Amazon Lex console\. You may need to select a region where Amazon Lex is available\.
+To create a new bot, choose **Create a new Lex bot** to open the Amazon Lex console\. You may need to select a region where Amazon Lex is available\.
 
 To remove a bot from your instance, choose **Remove** next to the bot to remove\.
+
+### Add an AWS Lambda Function to Your Instance<a name="aws-lambda"></a>
+
+To simplify referencing your Lambda functions when you use them in a contact flow\. Once added to your instance, you can easily use the functions in your contact flow\.
+
+**Add a Lambda function to your instance**
+
+1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
+
+1. Choose the name of the instance from the **Instance Alias** column\.
+
+1. In the navigation pane, choose **Contact flows**\.
+
+1. Under **AWS Lambda**, select the function to add to your instance from the **Function** drop\-down\.
+
+1. Choose **\+ Add Lambda Function**\. The function is added to your instance and listed under **Lambda Functions**\. Choose the icon next to the name to copy the ARN for the function to the clipboard so that you can use the ARN in your contact flow to reference the function\.
+
+The list of functions includes all of the functions in your AWS account\. If there are no functions in your account, the list is empty\. Choose **Create a new Lambda function** to open the AWS Lambda console to create a new function\.
+
+To remove a function from your instance, choose **Remove** next to the function name\.
 
 ### Contact flow logs<a name="enable-contact-flow-logs"></a>
 

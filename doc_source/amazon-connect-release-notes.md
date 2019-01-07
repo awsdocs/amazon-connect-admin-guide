@@ -13,13 +13,12 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 
 ## November 2018 Updates<a name="nov18-release-notes"></a>
 
-The following updates were released in September 2018:
+The following updates were released in November 2018:
 
 **Topics**
 + [General Updates](#nov-general)
 + [Contact Flow Updates](#nov18-flows)
 + [Metrics Updates](#nov18-metrics)
-+ [API Updates](#nov18-api)
 
 ### General Updates<a name="nov-general"></a>
 + Resolved an issue with auditing\.
@@ -34,13 +33,9 @@ The following updates were released in September 2018:
 + Improved performance of report generation for reports with a large number of queues and agents in an instance\.
 + Resolved an issue with how ACW was reported, and backfilled data in customer instances to correct the ACW data for September, October, and November\.
 
-### API Updates<a name="nov18-api"></a>
-
-Released the [https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html) operation for the Amazon Connect API\.
-
 ## October 2018 Updates<a name="oct18-release-notes"></a>
 
-The following updates were released in September 2018:
+The following updates were released in October 2018:
 
 **Topics**
 + [General Updates](#oct-general)

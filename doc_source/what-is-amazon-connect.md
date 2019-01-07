@@ -47,7 +47,7 @@ Before you start working with Amazon Connect, use the following table to verify 
 
 ## Service Limits<a name="amazon-connect-servicelimits"></a>
 
-The following table provides the default limits for new Amazon Connect instances\. Because the limits have been adjusted over time, the limits in place for your account may be different than the limits described here\. There may even be differences between the instances created for your account\. For example, if you created an instance when the default limit for concurrent active calls was 10, the limit is 10 concurrent active calls\. If you create a new instance today, the limit for the instance is 100 concurrent active calls\.
+The following table provides the default limits for new Amazon Connect instances\. Because the limits have been adjusted over time, the limits in place for your account may be different than the limits described here\. There may even be differences between the instances created for your account\. For example, if you created an instance when the default limit for concurrent active calls was 10, the limit is 10 concurrent active calls\. If you create a new instance today, the limit for the instance is 100 concurrent active calls\. For API request limits, see [Amazon Connect API Throttling Limits](#connect-api-limits)
 
 To start, you can create five instances per AWS account in each of AWS Regions where Amazon Connect is available\. If you need more instances, or an change to a service limit, request an change using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 
@@ -70,7 +70,7 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Hours of operation per instance  |  100  | 
 |  Quick connects per instance  |  100  | 
 |  Prompts per instance  |  500  | 
-|  Agent status per instance  |  50  | 
+|  Agent status per instance  |  50 This limit cannot be increased\.  | 
 |  Security profiles per instance  |  100  | 
 |  Contact flows per instance  |  100  | 
 |  Agent hierarchy groups per instance  |  50  | 
@@ -79,6 +79,12 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Concurrent active calls per instance  |  100  | 
 | Phone Number Porting | You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](gettingstarted.md#numberporting)\. | 
 | Country whitelisting for Outbound Calls | You can place calls to the following countries when you create a new instance: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html)  | 
+
+### Amazon Connect API Throttling Limits<a name="connect-api-limits"></a>
+
+When you use the Amazon Connect API, the number of requests per second is limited to the following:
++ For the `GetMetricData` and `GetCurrentMetricData` operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\.
++  For all other operations, a RateLimit of 2 requests per second, and a BurstLimit of 5 requests per second\.
 
 ## Related Services<a name="related-services-amazon-connect"></a>
 
