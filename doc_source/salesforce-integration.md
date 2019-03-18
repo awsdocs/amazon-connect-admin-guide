@@ -20,7 +20,7 @@ We recommend that you initially install the package into your Salesforce sandbox
 
 The next step is to whitelist your Salesforce Visualforce domain within Amazon Connect\. This allows cross\-domain access to your Amazon Connect instance\.
 
-This page provides a quick setup guide\. Please review the [Amazon Connect CTI Adapter v2 for Salesforce installation guide](https://s3.amazonaws.com/connect-blogs/Amazon+Connect+Salesforce+CTI+Adapter/Amazon-Connect-CTI-Adapter-for-Salesforce_Setup-and-Installation-Guide_v2.0_September_2018.pdf) for a more detailed walk\-through and setup of the full CTI Adapter capabilities\. We also have a trailhead available at [https://sfdc\.co/Amazon\-Connect](https://sfdc.co/Amazon-Connect)\. Note, it's still in process of being updated to support latest CTI Adapter features\.
+This page provides a quick setup guide\. Please review the [Amazon Connect CTI Adapter v3 for Salesforce installation guide](https://s3.amazonaws.com/amazonconnect-salesforceintegration/Amazon+Connect+CTI+Adapter+-+Setup+and+Installation+Guide.pdf) for a more detailed walk\-through and setup of the full CTI Adapter capabilities\. We also have a trailhead available at [https://sfdc\.co/Amazon\-Connect](https://sfdc.co/Amazon-Connect)\. Note, it's still in process of being updated to support latest CTI Adapter features\.
 
 ## Prerequisites<a name="v2-prereqs"></a>
 
@@ -42,7 +42,7 @@ Amazon Connect requires WebRTC to enable soft\-phone voice media stream and Webs
    + For Phone Number Formatting, Country, specify the appropriate 2\-digit [ISO country code](https://countrycode.org/)\.
    + To provide Salesforce users with access to the Amazon Connect CCP, on the Setup Call Centers page, choose **Manage Call Center Users**\. Add the Salesforce users to enable for using these call features\. Be sure to add your own Salesforce user account if you plan to these features\.
 
-1. Whitelist your Salesforce Visualforce domain URL using the directions in [Application Integration](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instance.html#app-integration)\. To verify the URL, open the Visualforce page in setup\. This URL usually has the following format:
+1. Whitelist your Salesforce Visualforce domain URL using the directions in [Application Integration](amazon-connect-instance.md#app-integration)\. To verify the URL, open the Visualforce page in setup\. This URL usually has the following format:
 
    https://amazonconnect\.**your\-instance\-name**\.visual\.force\.com
 

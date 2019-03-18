@@ -31,7 +31,7 @@ SAML requests go through the following steps:
 
 1. The identity store authenticates the user and returns the authentication response to the federation service\.
 
-1. When authentication is successful, the federation service posts the SAML assertion to the user’s browser\.
+1. When authentication is successful, the federation service posts the SAML assertion to the user's browser\.
 
 1. The user's browser posts the SAML assertion to the AWS sign in SAML endpoint \(https://signin\.aws\.amazon\.com/saml\)\. AWS sign in receives the SAML request, processes the request, authenticates the user, and forwards the authentication token to Amazon Connect\.
 

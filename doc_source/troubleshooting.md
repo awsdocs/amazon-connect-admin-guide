@@ -93,7 +93,7 @@ When rerouting audio to an existing device, consider the location of the device 
 
 #### Using AWS Direct Connect<a name="using-directconnect"></a>
 
-AWS Direct Connect can help solve for latency and poor call quality between your edge router and AWS resources\. It also allows you to configure your edge router to redirect AWS traffic across dedicated fiber rather than traversing the public WAN\. This allows for a durable, consistent connection rather than relying on your ISP to dynamically route requests to AWS resources\. Keep in mind that this does not solve issues with the private LAN/WAN traversal to your edge router like hub\-and\-spoke network architecture\.
+AWS Direct Connect can help solve for latency and poor call quality between your edge router and AWS resources\. It also allows you to configure your edge router to redirect AWS traffic across dedicated fiber rather than traversing the public WAN\. This allows for a durable, consistent connection rather than relying on your ISP to dynamically route requests to AWS resources\. Keep in mind that this does not solve issues with the private LAN/WAN traversal to your edge router\.
 
 ### Using Amazon Connect in a VDI Environment<a name="using-ccp-vdi"></a>
 
@@ -185,7 +185,7 @@ The following example disposition keys are listed by symptom, scenario, and seve
 + **V**—Volume too quiet or too loud
 + **C**—Choppy/cuts in and out intermittently
 
-**Senario**
+**Scenario**
 + **O**—Outbound call
 + **I**—Inbound call
 + **T**—Three\-way call
@@ -243,7 +243,7 @@ To perform effective testing for latency, the following are required:
 
 #### Testing Inbound Calls Using a Soft Phone<a name="inbound-test-plan"></a>
 
-This process allows you to complete a latency test scenario in \~15 seconds\. Analyzing the results and marking timestamps takes approximately 1\-2 minutes per recording\.
+This process allows you to complete a latency test scenario in about 15 seconds\. Analyzing the results and marking timestamps takes approximately 1\-2 minutes per recording\.
 
 1. Go to a quiet location\.
 

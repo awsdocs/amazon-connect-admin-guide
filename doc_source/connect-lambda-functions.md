@@ -10,7 +10,7 @@ The steps required to invoke a Lambda function from Amazon Connect include the f
 
 1. Create a Lambda function and define its trigger policy to allow Amazon Connect to invoke the function\.
 
-1. Use the ARN of the Lambda function in an **Invoke AWS Lambda function** block in your contact flow\.
+1. Use the ARN of the Lambda function in an **Invoke AWS Lambda function** block in your contact flow\. 
 
 1. Configure the Lambda function code to parse the JSON event sent from the contact flow, and define the business logic to execute\.
 
@@ -93,7 +93,7 @@ The Lambda function response should be a simple Map *String String*\. This map c
 
 ### Configure Your Lambda Function<a name="function-parsing"></a>
 
-To successfully pass attributes between your Lambda function and Amazon Connect, configure your function to correctly parse the JSON request sent from the **Invoke AWS Lambda function** block, and define any business logic that should be applied\. How the JSON is parsed depends on the runtime you use for your function\. For example, the following example shows how to access the sentAttributeKey using sing Node\.JS:
+To successfully pass attributes between your Lambda function and Amazon Connect, configure your function to correctly parse the JSON request sent from the **Invoke AWS Lambda function** block, and define any business logic that should be applied\. How the JSON is parsed depends on the runtime you use for your function\. For example, the following example shows how to access `sentAttributeKey` using Node\.JS:
 
 ```
 var receivedAttribute = event['Details']['Parameters']['sentAttributeKey'];
@@ -156,6 +156,6 @@ If you store the variables as contact attributes, you can use them throughout yo
 
 To store the values returned as contact attributes and then reference them, use a **Set contact attributes** block in your contact flow after the **Invoke AWS Lambda function** block\. Choose **External** for the **Type**\. Following the example we're using, set **Destination key** to `returnedContactName`, and set the **Source attribute** to `Name`
 
-Add Address as a **Source attribute** and use `returnedContactAddress` as the **Destination key**\. Then add callerType as a **Source attribute** and use `returnedContactType` for the **Destination key**\.
+Add Address as a **Source attribute** and use `returnedContactAddress` as the **Destination key**\. Then add `callerType` as a **Source attribute** and use `returnedContactType` for the **Destination key**\.
 
 Make sure that the name specified for the source attribute matches the key name returned from Lambda\.

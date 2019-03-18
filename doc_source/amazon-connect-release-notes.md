@@ -66,7 +66,7 @@ The following updates were released in September 2018:
 
 ### API Updates<a name="sep18-api"></a>
 
-Released the [https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html) operation for the Amazon Connect API\.
+Released the [UpdateContactAttributes](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html) operation for the Amazon Connect API\.
 
 ## August 2018 Updates<a name="aug18-release-notes"></a>
 

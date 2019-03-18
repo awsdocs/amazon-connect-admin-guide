@@ -78,7 +78,9 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Scheduled reports per instance  |  50  | 
 |  Concurrent active calls per instance  |  100  | 
 | Phone Number Porting | You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](gettingstarted.md#numberporting)\. | 
-| Country whitelisting for Outbound Calls | You can place calls to the following countries when you create a new instance: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html)  | 
+| Country code whitelisting for Outbound Calls | You can place calls to the following dialing codes when you create a new instance:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html)  | 
+
+† UK numbers with a 447 prefix are not allowed by default\. Before you can dial these UK mobile numbers, you must submit a service limit increase request\.
 
 ### Amazon Connect API Throttling Limits<a name="connect-api-limits"></a>
 
