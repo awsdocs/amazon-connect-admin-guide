@@ -15,15 +15,16 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [What Is Amazon Connect?](what-is-amazon-connect.md)
-+ [Release Notes](amazon-connect-release-notes.md)
 + [Getting Started with Amazon Connect](gettingstarted.md)
    + [Use an Existing Directory for Amazon Connect Identity Management](directory-service.md)
    + [Configure SAML for Identity Management in Amazon Connect](configure-saml.md)
 + [Amazon Connect in the Asia Pacific (Tokyo) Region](connect-tokyo-region.md)
 + [Configuring Your Amazon Connect Instance](amazon-connect-instance.md)
 + [Using Service-Linked Roles for Amazon Connect](connect-slr.md)
-+ [Monitoring Amazon Connect in Amazon CloudWatch Metrics](monitoring-cloudwatch.md)
++ [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md)
 + [Using AWS Lambda Functions with Amazon Connect](connect-lambda-functions.md)
 + [Amazon Connect and Salesforce Integration](salesforce-integration.md)
 + [Amazon Connect Troubleshooting and Best Practices](troubleshooting.md)
++ [Release Notes](amazon-connect-release-notes.md)
++ [Amazon Connect Service Limits](amazon-connect-service-limits.md)
 + [Document History](doc-history.md)

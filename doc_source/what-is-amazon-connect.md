@@ -45,49 +45,6 @@ Before you start working with Amazon Connect, use the following table to verify 
 |  Mozilla Firefox ESR  |  Latest 3 versions  | Open Firefox\. On the menu, choose the Help icon and then choose About Firefox\. The version number is listed underneath the Firefox name\. | 
 |  Mozilla Firefox  |  Latest 3 versions  | Open Firefox\. On the menu, choose the Help icon and then choose About Firefox\. The version number is listed underneath the Firefox name\. | 
 
-## Service Limits<a name="amazon-connect-servicelimits"></a>
-
-The following table provides the default limits for new Amazon Connect instances\. Because the limits have been adjusted over time, the limits in place for your account may be different than the limits described here\. There may even be differences between the instances created for your account\. For example, if you created an instance when the default limit for concurrent active calls was 10, the limit is 10 concurrent active calls\. If you create a new instance today, the limit for the instance is 100 concurrent active calls\. For API request limits, see [Amazon Connect API Throttling Limits](#connect-api-limits)
-
-To start, you can create five instances per AWS account in each of AWS Regions where Amazon Connect is available\. If you need more instances, or an change to a service limit, request an change using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
-
-Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port Your Current Phone Number](gettingstarted.md#numberporting)\.
-
-There is also a service limit for the countries to which you can place outbound calls from your instance\. If you already have an instance, the countries that you are allowed to call may be different that those listed in the following table because we have changed the service limits over time\. You can submit a service limit increase request to allow calling to additional countries, or to limit the countries that you can call from your instance\.
-
-**Note**  
-Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
-
-
-| Item | Default limit | 
-| --- | --- | 
-|  Amazon Connect instances per account  |  5  | 
-|  Users per instance  |  500  | 
-|  Phone numbers per instance  |  10  | 
-|  Queues per instance  |  50  | 
-|  Queues per routing profile  |  50  | 
-|  Routing profiles per instance  |  100  | 
-|  Hours of operation per instance  |  100  | 
-|  Quick connects per instance  |  100  | 
-|  Prompts per instance  |  500  | 
-|  Agent status per instance  |  50 This limit cannot be increased\.  | 
-|  Security profiles per instance  |  100  | 
-|  Contact flows per instance  |  100  | 
-|  Agent hierarchy groups per instance  |  50  | 
-|  Reports per instance  |  500  | 
-|  Scheduled reports per instance  |  50  | 
-|  Concurrent active calls per instance  |  100  | 
-| Phone Number Porting | You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](gettingstarted.md#numberporting)\. | 
-| Country code whitelisting for Outbound Calls | You can place calls to the following dialing codes when you create a new instance:[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html)  | 
-
-† UK numbers with a 447 prefix are not allowed by default\. Before you can dial these UK mobile numbers, you must submit a service limit increase request\.
-
-### Amazon Connect API Throttling Limits<a name="connect-api-limits"></a>
-
-When you use the Amazon Connect API, the number of requests per second is limited to the following:
-+ For the `GetMetricData` and `GetCurrentMetricData` operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\.
-+  For all other operations, a RateLimit of 2 requests per second, and a BurstLimit of 5 requests per second\.
-
 ## Related Services<a name="related-services-amazon-connect"></a>
 
 The following services are used with Amazon Connect:
@@ -98,7 +55,7 @@ The following services are used with Amazon Connect:
 + **Kinesis**—Amazon Connect integrates with Kinesis as the platform for streaming contact trace records \(CTR\) and agent event streams data\. The data is published to Kinesis in JSON format, and include details about contacts and agent activities in your contact center\. You can use the data stream to publish CTRs to Amazon Redshift \(an AWS data warehouse service\) or your custom data warehouse systems\. You can then enable detailed analysis and reporting on your contact center data\. You can use Amazon QuickSight \(a cloud\-powered business analytics service\) or your own BI tools to build powerful visualizations on top of synthesized data\. Additionally, this data can be streamed to Elasticsearch to query on this data using a convenient visual interface\. For more information, see the [Amazon Kinesis Data Streams Developer Guide](https://docs.aws.amazon.com/streams/latest/dev/)\.
 **Note**  
 Amazon Connect does not support publishing data to streams for which server\-side encryption is enabled\.
-+ **Amazon CloudWatch**—Amazon Connect integrates with CloudWatch to provide you with real\-time operational metrics for your contact center\. Metrics include total calls per second, calls rejected and throttled, percentage of concurrent calls, failed / missed calls count \(errors, bad number/address, busy/line engaged\), and contact flow errors\. You can set up monitors on these metrics in order to stay on top of the health of your contact center\. For more information, see [Monitoring Amazon Connect in Amazon CloudWatch Metrics](monitoring-cloudwatch.md)\.
++ **Amazon CloudWatch**—Amazon Connect integrates with CloudWatch to provide you with real\-time operational metrics for your contact center\. Metrics include total calls per second, calls rejected and throttled, percentage of concurrent calls, failed / missed calls count \(errors, bad number/address, busy/line engaged\), and contact flow errors\. You can set up monitors on these metrics in order to stay on top of the health of your contact center\. For more information, see [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md)\.
 + **AWS Identity and Access Management**—The AWS Management Console requires your user name and password to determine whether you have permission to access its resources\. You should not use root credentials to access AWS because root user credentials cannot be revoked or limited in any way\. Instead, we recommend that you create an IAM user and add the user to an IAM group with administrative permissions\. You can then access the console using the IAM user credentials\. For more information, see the [IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\.
 
   If you signed up for AWS but have not created an IAM user for yourself, you can create one using the IAM console\. For more information, see [Create Individual IAM Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/IAMBestPractices.html#create-iam-users) in the *IAM User Guide*\.

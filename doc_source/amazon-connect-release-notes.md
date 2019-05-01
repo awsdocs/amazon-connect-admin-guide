@@ -1,8 +1,11 @@
 # Release Notes<a name="amazon-connect-release-notes"></a>
 
-To help you keep track of the ongoing updates and improvements to Amazon Connect, we're now publishing monthly release notices that describe the changes we've released in the previous month\.
+To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish monthly release notices that describe the changes we've released in the previous month\.
 
 **Topics**
++ [February 2019 Updates](#feb19-release-notes)
++ [January 2019 Updates](#jan19-release-notes)
++ [December 2018 Updates](#dec18-release-notes)
 + [November 2018 Updates](#nov18-release-notes)
 + [October 2018 Updates](#oct18-release-notes)
 + [September 2018 Updates](#sep18-release-notes)
@@ -11,24 +14,89 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
 
+## February 2019 Updates<a name="feb19-release-notes"></a>
+
+The following updates were released in February 2019:
+
+**Topics**
++ [Contact Routing](#feb19-contact-routing)
++ [Contact Flows](#feb19-flows)
++ [Metrics and Reporting](#feb19-metrics)
++ [Contact Control Panel \(CCP\)](#feb19-ccp)
+
+### Contact Routing<a name="feb19-contact-routing"></a>
++ Resolved an issue where in rare cases some contacts were not routed to the agent that was available for the longest time\.
++ Resolved an issue in the user interface where the value displayed for **No\. of agents staffed** for the **Basic Routing Profile** on the **Routing Profiles** page was incorrect\. The correct number of agents for the routing profile was displayed on the **User Management** page\.
+
+### Contact Flows<a name="feb19-flows"></a>
++ Resolved an issue with the contact flow editor when adding intents in Chrome\.
++ Resolved an issue where routing priority and age for queued callbacks were not saved\.
++ Resolved an issue where contact attributes for an outbound whisper flow were not saved\.
+
+### Metrics and Reporting<a name="feb19-metrics"></a>
++ Added **EnqueueTimestamp**, **Duration**, and **DequeueTimestamp** to the contact trace record \(CTR\) for callback contacts\.
++ Resolved an issue where **InitiationTimestamp** for callback contacts did not match the time that the callback was created\.
++ Resolved an issue where users were given an incorrect message when they did not have permissions to edit a report\.
+
+### Contact Control Panel \(CCP\)<a name="feb19-ccp"></a>
++ Resolved an issue where callbacks were not ringing in the CCP\.
+
+## January 2019 Updates<a name="jan19-release-notes"></a>
+
+The following updates were released in January 2019:
+
+**Topics**
++ [Contact Routing](#jan19-contact-routing)
++ [Contact Flows](#jan19-flows)
++ [Metrics and Reporting](#jan19-metrics)
+
+### Contact Routing<a name="jan19-contact-routing"></a>
++ Resolved an issue where in rare cases agent transfers were failing\.
+
+### Contact Flows<a name="jan19-flows"></a>
++ Resolved an issue where agent transfers were failing\.
++ Resolved an issue that resulted in periodic delays in publishing contact flow logs\.
+
+### Metrics and Reporting<a name="jan19-metrics"></a>
++ Resolved an issue in real\-time metrics reports where the page showed the wrong calculation for **Avg queue answer time**\.
++ Resolved an issue where some events were missing from an agent event stream\.
+
+## December 2018 Updates<a name="dec18-release-notes"></a>
+
+The following updates were released in December 2018:
+
+**Topics**
++ [Metrics and Reporting](#dec18-metrics)
++ [Contact Control Panel \(CCP\)](#dec18-ccp)
+
+### Metrics and Reporting<a name="dec18-metrics"></a>
++ Resolved an issue where agent event streams were missing agent snapshots during login and logout events\.
++ Resolved an issue where the contact trace record detail page displayed timestamps using the timezone selected on the search page\.
++ Resolved an issue where the AfterContactWork status was overridden\.
++ Resolved an issue where the timestamps are incorrect if an agent accidentally disconnects while placing a customer on hold\.
+
+### Contact Control Panel \(CCP\)<a name="dec18-ccp"></a>
++ Resolved an intermittent issue with initialization when an agent configuration is corrupted or null\.
++ Resolved an issue where pressing Enter to transfer a call did not work\.
+
 ## November 2018 Updates<a name="nov18-release-notes"></a>
 
 The following updates were released in November 2018:
 
 **Topics**
-+ [General Updates](#nov-general)
-+ [Contact Flow Updates](#nov18-flows)
-+ [Metrics Updates](#nov18-metrics)
++ [General](#nov18-general)
++ [Contact Flows](#nov18-flows)
++ [Metrics and Reporting](#nov18-metrics)
 
-### General Updates<a name="nov-general"></a>
+### General<a name="nov18-general"></a>
 + Resolved an issue with auditing\.
 + Resolved an issue that sometimes resulted in agents being placed in a default state when a contact disconnected when attempting to connect to an agent\.
 + Resolved an issue that sometimes resulted in newly created agents not being able to log in correctly if the log in attempt occurred immediately after user account was created\.
 
-### Contact Flow Updates<a name="nov18-flows"></a>
+### Contact Flows<a name="nov18-flows"></a>
 + Added the new Loop block, which lets you loop through segments of a contact flow, such as requesting customer information additional times if valid data is not entered\.
 
-### Metrics Updates<a name="nov18-metrics"></a>
+### Metrics and Reporting<a name="nov18-metrics"></a>
 + Resolved an issue where callbacks handled were included in the count for incoming contacts in historical reports, but not counted in scheduled reports\. Callbacks handled are no longer included in the count for Incoming contacts handled in historical reports\.
 + Improved performance of report generation for reports with a large number of queues and agents in an instance\.
 + Resolved an issue with how ACW was reported, and backfilled data in customer instances to correct the ACW data for September, October, and November\.
@@ -38,18 +106,18 @@ The following updates were released in November 2018:
 The following updates were released in October 2018:
 
 **Topics**
-+ [General Updates](#oct-general)
-+ [Metrics Updates](#oct18-metrics)
-+ [API Updates](#oct18-api)
++ [General](#oct18-general)
++ [Metrics and Reporting](#oct18-metrics)
++ [API](#oct18-api)
 
-### General Updates<a name="oct-general"></a>
+### General<a name="oct18-general"></a>
 + Resolved an issue that sometimes resulted in stuck media sessions\.
 
-### Metrics Updates<a name="oct18-metrics"></a>
+### Metrics and Reporting<a name="oct18-metrics"></a>
 + Resolved an issue that sometimes resulted in agent names not being displayed correctly in historical reports\.
 + Resolved an issue that sometimes resulted in the data related to agent Auxiliary states were incorrectly overwritten\.
 
-### API Updates<a name="oct18-api"></a>
+### API<a name="oct18-api"></a>
 + Resolved an issue where the `GetCurrentMetrics` operation returned the metric `OLDEST_CONTACT_AGE` was returned in milliseconds instead of seconds\.
 
 ## September 2018 Updates<a name="sep18-release-notes"></a>
@@ -57,35 +125,33 @@ The following updates were released in October 2018:
 The following updates were released in September 2018:
 
 **Topics**
-+ [General Updates](#sep-general)
-+ [API Updates](#sep18-api)
++ [General](#sep18-general)
++ [API](#sep18-api)
 
-### General Updates<a name="sep-general"></a>
+### General<a name="sep18-general"></a>
 + Improved page loading times for the **User management** page\.
 + Resolved an issue that sometimes caused issues loading the **Queues** page when there were a large number of quick connects associated with a queue\.
 
-### API Updates<a name="sep18-api"></a>
-
-Released the [UpdateContactAttributes](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html) operation for the Amazon Connect API\.
+### API<a name="sep18-api"></a>
++ Released the [UpdateContactAttributes](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html) operation for the Amazon Connect API\.
 
 ## August 2018 Updates<a name="aug18-release-notes"></a>
 
 The following updates were released in August 2018:
 
 **Topics**
-+ [General Updates](#aug-general)
-+ [Contact Routing](#aug-contact-routing)
-+ [Metrics and Reporting](#aug-metrics)
++ [General](#aug18-general)
++ [Contact Routing](#aug18-contact-routing)
++ [Metrics and Reporting](#aug18-metrics)
 
-### General Updates<a name="aug-general"></a>
+### General<a name="aug18-general"></a>
 + Added a restriction of 64 characters for the password length for the administrator account created during instance creation\.
 + Resolved an issue where the **Hours of operation** page would not load when no days were selected for a saved Hours of operation configuration\.
 
-### Contact Routing<a name="aug-contact-routing"></a>
+### Contact Routing<a name="aug18-contact-routing"></a>
++ Increased the timeout for whispers to 2 minutes for outbound and queued callbacks so that agents have longer to prepare for the incoming call\.
 
-Increased the timeout for whispers to 2 minutes for outbound and queued callbacks so that agents have longer to prepare for the incoming call\.
-
-### Metrics and Reporting<a name="aug-metrics"></a>
+### Metrics and Reporting<a name="aug18-metrics"></a>
 + Modified how the value for the Contacts abandoned metric so that calls that transfer to callbacks are not counted as abandoned contacts\.
 
 ## July 2018 Updates<a name="july18-release-notes"></a>
@@ -93,27 +159,27 @@ Increased the timeout for whispers to 2 minutes for outbound and queued callback
 The following updates were released in July 2018:
 
 **Topics**
-+ [Feature Releases](#july-features)
-+ [General Updates](#july-general)
-+ [Metrics and Reporting](#july-metrics)
-+ [Contact Flows](#july-contact-flows)
++ [Feature Releases](#july18-features)
++ [General](#july18-general)
++ [Metrics and Reporting](#july18-metrics)
++ [Contact Flows](#july18-contact-flows)
 
-### Feature Releases<a name="july-features"></a>
+### Feature Releases<a name="july18-features"></a>
 + [Dynamic Outbound Caller ID](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)
 + [Add an Amazon Lex bot to Your Instance](amazon-connect-instance.md#amazon-lex)
-+ [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)
++ [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
 + [Queue to Queue Transfers](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#queue-to-queue-transfer)
 
-### General Updates<a name="july-general"></a>
+### General<a name="july18-general"></a>
 + Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.
 + Added support for directory user names that include consecutive dashes\.
 + Added pagination when displaying security profiles in your instance so that more than 25 security profiles can be displayed\.
 + Performance optimizations to reduce latency when using the `StartOutboundVoiceContact` API\.
 
-### Metrics and Reporting<a name="july-metrics"></a>
-+ Resolved an issue in Real\-time metrics reports where applied filters were not displayed in the settings page when an additional filter was applied\. The settings page now displays the applied filters correctly\.
+### Metrics and Reporting<a name="july18-metrics"></a>
++ Resolved an issue in real\-time metrics reports where applied filters were not displayed in the settings page when an additional filter was applied\. The settings page now displays the applied filters correctly\.
 
-### Contact Flows<a name="july-contact-flows"></a>
+### Contact Flows<a name="july18-contact-flows"></a>
 + Added drop\-down menus for contact attributes to make it easier to reference attributes in a contact flows\.
 
 ## June 2018 Updates<a name="jun18-release-notes"></a>
@@ -121,31 +187,31 @@ The following updates were released in July 2018:
 The following updates were released in June 2018:
 
 **Topics**
-+ [General Updates](#june-general)
-+ [Telephony and Voice](#june-telephony)
-+ [Contact Flows](#june-contact-flows)
-+ [Metrics and Reporting](#june-metrics)
-+ [Contact Control Panel \(CCP\)](#june-ccp)
++ [General](#june18-general)
++ [Telephony and Voice](#june18-telephony)
++ [Contact Flows](#june18-contact-flows)
++ [Metrics and Reporting](#june18-metrics)
++ [Contact Control Panel \(CCP\)](#june18-ccp)
 
-### General Updates<a name="june-general"></a>
+### General<a name="june18-general"></a>
 + Changed the font in the UI to Amazon Ember for better readability\.
 
-### Telephony and Voice<a name="june-telephony"></a>
+### Telephony and Voice<a name="june18-telephony"></a>
 + Introduced support for using Amazon Lex bots with Amazon Connect in the US West \(Oregon\) Region\.
 + Fixed a bug that in some cases caused a call to drop when a Loop prompt occurred at the same as a call connecting to an agent\.
 
-### Contact Flows<a name="june-contact-flows"></a>
+### Contact Flows<a name="june18-contact-flows"></a>
 + Renamed the **Set queue** block to **Set working queue**\.
 + Added a **Copy to clipboard** button next to the ARN of a contact flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the contact flow in the designer to display the ARN\.
 + Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Using a Call phone number block in a contact flow](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)\.
 + Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Using System Metric Attributes](https://docs.aws.amazon.com/connect/latest/userguide/contact-attributes.html#attrib-system-metrics)\.
 
-### Metrics and Reporting<a name="june-metrics"></a>
+### Metrics and Reporting<a name="june18-metrics"></a>
 + Fixed an issue that caused incorrect rendering of the search field in the filters settings for some historical metrics reports\.
 + Fixed an issue in downloaded reports where the phone number would be blank instead of listing the phone number for calls that were callbacks\.
 + Login/Logout reports now support 20,000 rows per report generation, up from 10,000\.
 
-### Contact Control Panel \(CCP\)<a name="june-ccp"></a>
+### Contact Control Panel \(CCP\)<a name="june18-ccp"></a>
 + Added a mute button to the CCP and a mute function to the Streams API so agents can mute and unmute active calls\.
 
 ## April and May 2018 Updates<a name="may18-release-notes"></a>
@@ -153,36 +219,36 @@ The following updates were released in June 2018:
 The following updates were released in April and May 2018:
 
 **Topics**
-+ [General Updates](#may-general)
-+ [Telephony and Voice](#may-telephony)
-+ [Contact Flows](#may-contact-flows)
-+ [Metrics](#may-metrics)
-+ [Contact Control Panel \(CCP\)](#may-ccp)
++ [General](#may18-general)
++ [Telephony and Voice](#may18-telephony)
++ [Contact Flows](#may18-contact-flows)
++ [Metrics and Reporting](#may18-metrics)
++ [Contact Control Panel \(CCP\)](#may18-ccp)
 
-### General Updates<a name="may-general"></a>
+### General<a name="may18-general"></a>
 + New [Amazon Polly voices](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html) are now automatically made available in Amazon Connect as soon as they are launched\. You can use new voices, such as Matthew and Léa, in your contact flows\.
 + Updated password enforcement for Amazon Connect user accounts to match requirements for the Amazon Connect admin account created during instance creation\.
 + Resolved an issue that sometimes resulted in the email addresses not being saved when updating an existing user account\.
 
-### Telephony and Voice<a name="may-telephony"></a>
+### Telephony and Voice<a name="may18-telephony"></a>
 + Service optimizations to reduce latency and improve caller ID for Japanese telephony\.
 + Customers can now place calls to Jersey and Guernsey in the Channel Islands\.
-+ Added support for keypad numeric input to an Amazon Lex bots when used in an Amazon Connect contact flow\. For more information, see [Amazon Connect Now Supports Keypad Input with an Amazon Lex Chatbot](https://aws.amazon.com/about-aws/whats-new/2018/05/amazon-connect-now-supports-keypad-input-with-an-amazon-lex-chat/)\.
++ Added support for keypad numeric input to an Amazon Lex bots when used in an Amazon Connect contact flow\. For more information, see [Amazon Connect Now Supports Keypad Input with an Amazon Lex Chatbot](http://aws.amazon.com/about-aws/whats-new/2018/05/amazon-connect-now-supports-keypad-input-with-an-amazon-lex-chat/)\.
 + Reduced latency for the contact control panel, improving the agent user experience\.
 
-### Contact Flows<a name="may-contact-flows"></a>
+### Contact Flows<a name="may18-contact-flows"></a>
 + Resolved an issue with publishing a contact flow in the case where an **AWS Lambda function block** is used in a contact flow, and the input type for a parameter was changed from **Send attribute** with a **System** attribute is changed to **Send text**\. These contact flows now publish successfully\.
 + Agent and customer whispers are now maintained with queued callbacks\.
 + Attributes now correctly persist with queue callbacks\.
 + Contact attributes are now maintained when using a **Loop prompt** block in a queue flow\.
 
-### Metrics<a name="may-metrics"></a>
+### Metrics and Reporting<a name="may18-metrics"></a>
 + Data for scheduled reports is now delayed by 15 minutes to allow for most recent data to be incorporated in to reports\. Previously, in some cases, report data for the final 15 minute period during the scheduled report interval did not get included in scheduled reports\. This applies to all report types\.
 + In metric calculations, the time that an incoming call rings is attributed to idle time if the agent is in idle state before an incoming call\.
 + The metric **Agent on contact time** now includes time that an agent spent in an auxiliary busy state\.
 + Published new documentation on [Amazon Connect metrics\.](https://docs.aws.amazon.com/connect/latest/userguide/connect-metrics.html)
 
-### Contact Control Panel \(CCP\)<a name="may-ccp"></a>
+### Contact Control Panel \(CCP\)<a name="may18-ccp"></a>
 + Added a **Save** button to the settings menu for the CCP when an agent is using a desk phone\. The **Save** button saves the deskphone configuration between sessions\.
 + Agent username is now available as part of agent configuration data in the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md)\. 
 + Contact attributes are now available when using the streams\.js \(Streams API\) for screenpops after queued callbacks\.

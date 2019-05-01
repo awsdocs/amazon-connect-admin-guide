@@ -45,7 +45,7 @@ Before updating the data storage settings, ensure that you are familiar with Ama
 
 1. The steps in the following procedures describe each data storage setting\.
 
-### Update **Call recordings** settings<a name="w3aac13c11c11"></a>
+### Update **Call recordings** settings<a name="w12aac11c11c11"></a>
 
 1. Under **Call recordings**, choose **Edit**\.
 
@@ -89,7 +89,7 @@ Before updating the data storage settings, ensure that you are familiar with Ama
 
 1. Choose **Save** \(at the bottom of the page\)\.
 
-### Set **Exported reports** settings<a name="w3aac13c11c15"></a>
+### Set **Exported reports** settings<a name="w12aac11c11c15"></a>
 
 1. Under **Exported reports**, choose **Edit**\.
 
