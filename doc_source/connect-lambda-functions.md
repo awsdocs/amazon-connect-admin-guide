@@ -120,8 +120,8 @@ And this example shows an example response using Python:
 
 ```
 def lambda_handler(event, context):
-resultMap = {"Name":"CustomerName","Address":"1234 Main Road","CallerType":"Patient"};
-return resultMap;
+    resultMap = {"Name":"CustomerName","Address":"1234 Main Road","CallerType":"Patient"}
+    return resultMap
 ```
 
 The output returned from the function must be a flat object of key/value pairs, with values that include only alphanumeric, dash, and underscore characters\. Nested and complex objects are not supported\. The size of the returned data must be less than 32 Kb of UTF\-8 data\.
