@@ -1,4 +1,4 @@
-## Amazon Connect Admin Guide
+## Amazon Connect Administrator Guide
 
 Documentation for Amazon Connect.
 
