@@ -159,16 +159,16 @@ The following updates were released in August 2018:
 The following updates were released in July 2018:
 
 **Topics**
-+ [Feature Releases](#july18-features)
++ [New Features](#july18-features)
 + [General](#july18-general)
 + [Metrics and Reporting](#july18-metrics)
 + [Contact Flows](#july18-contact-flows)
 
-### Feature Releases<a name="july18-features"></a>
-+ [Dynamic Outbound Caller ID](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)
-+ [Add an Amazon Lex bot to Your Instance](amazon-connect-instance.md#amazon-lex)
+### New Features<a name="july18-features"></a>
++ [Initiate an Outbound Call](connect-contact-flows.md#using-call-number-block)
++ [Add an Amazon Lex Bot](connect-contact-flows.md#amazon-lex)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
-+ [Queue to Queue Transfers](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#queue-to-queue-transfer)
++ [Manage Calls in a Queue](connect-contact-flows.md#queue-to-queue-transfer)
 
 ### General<a name="july18-general"></a>
 + Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.
@@ -203,8 +203,8 @@ The following updates were released in June 2018:
 ### Contact Flows<a name="june18-contact-flows"></a>
 + Renamed the **Set queue** block to **Set working queue**\.
 + Added a **Copy to clipboard** button next to the ARN of a contact flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the contact flow in the designer to display the ARN\.
-+ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Using a Call phone number block in a contact flow](https://docs.aws.amazon.com/connect/latest/userguide/contactflow.html#using-call-number-block)\.
-+ Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Using System Metric Attributes](https://docs.aws.amazon.com/connect/latest/userguide/contact-attributes.html#attrib-system-metrics)\.
++ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Initiate an Outbound Call](connect-contact-flows.md#using-call-number-block)\.
++ Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Using System Metric Attributes](connect-contact-attributes.md#attrib-system-metrics)\.
 
 ### Metrics and Reporting<a name="june18-metrics"></a>
 + Fixed an issue that caused incorrect rendering of the search field in the filters settings for some historical metrics reports\.
@@ -246,10 +246,10 @@ The following updates were released in April and May 2018:
 + Data for scheduled reports is now delayed by 15 minutes to allow for most recent data to be incorporated in to reports\. Previously, in some cases, report data for the final 15 minute period during the scheduled report interval did not get included in scheduled reports\. This applies to all report types\.
 + In metric calculations, the time that an incoming call rings is attributed to idle time if the agent is in idle state before an incoming call\.
 + The metric **Agent on contact time** now includes time that an agent spent in an auxiliary busy state\.
-+ Published new documentation on [Amazon Connect metrics\.](https://docs.aws.amazon.com/connect/latest/userguide/connect-metrics.html)
++ Published new documentation about metrics\.
 
 ### Contact Control Panel \(CCP\)<a name="may18-ccp"></a>
 + Added a **Save** button to the settings menu for the CCP when an agent is using a desk phone\. The **Save** button saves the deskphone configuration between sessions\.
-+ Agent username is now available as part of agent configuration data in the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md)\. 
++ Agent username is now available as part of agent configuration data in the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md)\.
 + Contact attributes are now available when using the streams\.js \(Streams API\) for screenpops after queued callbacks\.
 + Fixed issue where for some auto\-accept calls, the agent continued to hear ringing after accepting and joining the call\.

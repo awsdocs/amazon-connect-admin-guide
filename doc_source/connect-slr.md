@@ -1,4 +1,4 @@
-# Using Service\-Linked Roles for Amazon Connect<a name="connect-slr"></a>
+# Service\-Linked Roles for Amazon Connect<a name="connect-slr"></a>
 
 Amazon Connect uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to Amazon Connect\. Service\-linked roles are predefined by Amazon Connect and include all the permissions that the service requires to call other AWS services on your behalf\.
 
@@ -27,7 +27,7 @@ You must configure permissions to allow an IAM entity \(such as a user, group, o
 
 ## Creating a Service\-Linked Role for Amazon Connect<a name="create-slr"></a>
 
-You don't need to manually create a service\-linked role\. When you create a new instance in Amazon Connect in the AWS Management Console,  Amazon Connect creates the service\-linked role for you\. 
+You don't need to manually create a service\-linked role\. When you create a new instance in Amazon Connect in the AWS Management Console, Amazon Connect creates the service\-linked role for you\.
 
 If you delete this service\-linked role, and then need to create it again, you can use the same process to recreate the role in your account\. When you create a new instance in Amazon Connect, Amazon Connect creates the service\-linked role for you again\. 
 

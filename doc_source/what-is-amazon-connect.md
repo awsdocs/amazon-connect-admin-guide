@@ -4,35 +4,13 @@ Amazon Connect is a cloud\-based contact center solution\. Amazon Connect makes 
 
 Amazon Connect provides rich metrics and real\-time reporting that allow you to optimize contact routing\. You can also resolve customer issues more efficiently by putting customers in touch with the right agents\. Amazon Connect integrates with your existing systems and business applications to provide visibility and insight into all of your customer interactions\. Amazon Connect requires no long\-term contracts, and you pay only for what you use\.
 
-## Amazon Connect Instances<a name="amazon-connect-fundamentals"></a>
-
-To create an Amazon Connect contact center, you create an Amazon Connect instance\. Each instance contains all of the resources and settings related to your contact center\. You can manage settings for your instance from the Amazon Connect console\. You can manage settings for your contact center from within your contact center\. You can create multiple instances, but each instance functions only within the AWS region in which you create it\. Settings, users, metrics, and reporting are not shared between Amazon Connect instances\.
-
-### Identity Management<a name="directories"></a>
-
-When you create an Amazon Connect instance, you must choose how you want to manage your Amazon Connect users\. Permissions to access Amazon Connect features and resources, such as opening the contact control panel \(CCP\), placing calls, or creating reports, are assigned to user accounts within Amazon Connect\. You can choose from the following three options for identity management:
-+ Store users in Amazon Connect\.
-+ Link to an existing directory using AWS Directory Service\.
-+ Use SAML 2\.0\-based authentication to federate with your Amazon Connect instance and enable single sign\-on\.
-
-To learn more about identity management in Amazon Connect, see [Plan for User and Identity Management](gettingstarted.md#identity-management)\.
-
-### Amazon Connect Administrator<a name="administrators"></a>
-
-Amazon Connect administrators set permissions, manage and generate metrics, add users, and configure all aspects of your contact center\. You can grant or deny different types of permissions by assigning security profiles in Amazon Connect\.
-
-### Secure Storage and Data Integrity<a name="storagedata"></a>
-
-Secure storage and data integrity are an important part of managing recorded calls\. Customer calls are recorded in real time and can contain sensitive information\. 
-
-By default, AWS creates a new Amazon S3 bucket during the configuration process, with built\-in encryption\. You can also use existing S3 buckets\. There are separate buckets for call recordings and exported reports, and they are configured independently\. Amazon Connect has full access and control over recordings, allowing for custom retention policies\. The customizable metrics reports published into Amazon S3 can be processed using the Amazon S3 API or AWS Lambda\. Integrate the reports with external systems such as workforce management and business intelligence tools\.
-
-**Note**  
-We recommend that you keep the default settings for encryption\.
-
-The following security measures are supported:
-+ AWS Key Management Service—AWS KMS is a powerful, managed service that gives you complete control over your encryption keys\. A default AWS KMS key is provided\.
-+ ARN/ID—You can use an ARN/ID instead of an AWS KMS master key\. This is an advanced option and should be attempted only if you are confident of the changes that you're going to make\.
+## Features of Amazon Connect<a name="amazon-connect-features"></a>
++ **Amazon Connect instance**—A virtual contact center based in the AWS cloud\. Instances can scale to support any size of business\.
++ **User administration**—Add users and configure them with permissions that are appropriate to their roles \(for example, agents or managers\. You can authenticate users through Amazon Connect, an existing AWS Directory Service directory service, or a SAML\-based identity provider \(IdP\)\.
++ **Contact Control Panel \(CCP\)**—The client interface used by agents to handle customer contacts\.
++ **Contact flows**—Defines the customer experience with the contact center from start to end\. For example, you can play prompts, get input from the customer, branch based on customer impact, invoke a Lambda function, or integrate an Amazon Lex bot\.
++ **Skills\-based routing**—Contacts can be routed based on the skills required of the agents\.
++ **Metrics and reporting**—Real\-time and historical information about the activity in your contact center\.
 
 ## Supported Browsers<a name="browsers"></a>
 

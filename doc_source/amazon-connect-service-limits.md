@@ -4,7 +4,7 @@ The following table provides the default limits for new Amazon Connect instances
 
 To start, you can create five instances per AWS account in each of AWS Regions where Amazon Connect is available\. If you need more instances, or an change to a service limit, request an change using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 
-Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port Your Current Phone Number](gettingstarted.md#numberporting)\.
+Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port Your Current Phone Number](contact-center-phone-number.md#port-phone-number)\.
 
 There is also a service limit for the countries to which you can place outbound calls from your instance\. If you already have an instance, the countries that you are allowed to call may be different that those listed in the following table because we have changed the service limits over time\. You can submit a service limit increase request to allow calling to additional countries, or to limit the countries that you can call from your instance\.
 
@@ -30,7 +30,7 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Reports per instance  |  500  | 
 |  Scheduled reports per instance  |  50  | 
 |  Concurrent active calls per instance  |  100  | 
-| Phone Number Porting | You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](gettingstarted.md#numberporting)\. | 
+| Phone Number Porting |  You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](contact-center-phone-number.md#port-phone-number)\.  | 
 | Country code whitelisting for Outbound Calls | You can place calls to the following dialing codes when you create a new instance: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
 
 † UK numbers with a 447 prefix are not allowed by default\. Before you can dial these UK mobile numbers, you must submit a service limit increase request\.

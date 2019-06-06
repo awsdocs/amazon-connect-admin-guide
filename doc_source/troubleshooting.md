@@ -3,11 +3,11 @@
 Use this guide to identify best practices for using Amazon Connect\. Also, to troubleshoot information when something isn't working quite how it should\.
 
 **Topics**
-+ [Best Practice for Using the Contact Control Panel](#bp-ccp)
++ [Best Practices for Using the Contact Control Panel](#bp-ccp)
 + [Troubleshooting Issues with the CCP](#trb-ccp)
 + [Validation Testing](#valid-testing)
 
-## Best Practice for Using the Contact Control Panel<a name="bp-ccp"></a>
+## Best Practices for Using the Contact Control Panel<a name="bp-ccp"></a>
 
 This guide provides information about the CCP soft phone, including best practices and troubleshooting\. For workstations unable to meet soft phone connectivity requirements or experiencing soft phone issues, the CCP also features the ability to redirect to an external device\.
 
@@ -108,24 +108,24 @@ Virtual Desktop Infrastructure \(VDI\) environments add another layer of complex
 
 When an agent logs in, the CCP attempts to connect to the Amazon EC2 signaling endpoints listed in the AWS ipranges\.json file, Amazon Connect for media, and CloudFront for web artifacts such as images\. When the agent logs out or the browser is closed, endpoints are reselected when the agent next logs in\. If a connection to Amazon EC2 or Amazon Connect fails, errors display on the CCP\. If a connection to CloudFront fails, web elements such as buttons and icons, or even the page itself fails to load correctly\.
 
-**Outbound calls:**
+**Outbound calls**
 + When an outbound call is placed, the event signal is sent to the Amazon EC2 endpoint, which then communicates with Amazon Connect to place the call\. Upon a successful dial attempt, the agent is bridged in, which anchors the call to the agent's Amazon Connect endpoint\. Any external transfers or conferences also uses the anchor until the call is disconnected\. Anchoring can help reduce PSTN latency\.
 
-**Inbound calls:**
+**Inbound calls**
 + When an inbound call is received, the call is anchored to an Amazon Connect endpoint\. Any external transfers or conferences also use this anchor until the call is disconnected\.
 + When an agent is available, the call is pushed through via a new Amazon EC2 connection to their browser and offered to the agent\.
 + When the agent accepts the call and either the external device has been answered or the CCP determines it can receive a call, a connection to Amazon Connect is established for call media to the agent\.
 
-**Transferred calls:**
+**Transferred calls**
 + When a call is transferred, the transfer event that signals to place an outbound call to the specified transfer destination is sent to Amazon EC2, which then communicates with Amazon Connect to place the call\.
 + When the call is connected, the agent is bridged in, anchoring the call to the agent's existing Amazon Connect endpoint\. Any external transfers or conferences also use this anchor until the call is disconnected\.
 + If the agent hangs up after the call is bridged, the agent's connection to the call is terminated, but Amazon Connect hangs on to the call at the Amazon Connect anchor point until there is a far side disconnect\. When the call is disconnected, CTRs and associated recordings are generated and made available for the call\.
 
-**Missed calls:**
+**Missed calls**
 + If the call is waiting on an agent, customer queue flow logic is used until an agent is available and the call has been successfully routed to that agent\.
 + If the agent does not accept the call, the agent moves into a Missed Call state and is unable to take calls until the agent, or a call center manager, changes their status to Available again\. The caller does not hear ringing while the call is waiting for the agent, and continues to hold until connected with an agent as defined in the customer queue flow logic\. 
 
-**Panic logout:**
+**Panic logout**
 + If the browser window where the CCP is running is closed, the call remains connected, but opening the browser and logging back in will not allow you to re\-establish the media connection\. You are still able to transfer or end the call, but no audio path is established between the agent and caller\.
 
 ## Troubleshooting Issues with the CCP<a name="trb-ccp"></a>
@@ -171,7 +171,7 @@ The following tools and information can be helpful with troubleshooting issues w
 
 For tracking and troubleshooting issues at scale, collecting data surrounding overall call quality is recommended\. Anytime poor call quality is experienced, agents can note the current time and corresponding disposition code by using the disposition key chart, as shown in the following chart\. Alternatively, you can use the Streams API to incorporate your own report and issue feature in the custom CCP to write these dispositions with corresponding call information to a database, like Amazon DynamoDB\. For more information about the Amazon Connect Streams API, see the GitHub repository at [https://github\.com/aws/amazon\-connect\-streams](https://github.com/aws/amazon-connect-streams)\.
 
-### Example Agent Issue Report Disposition<a name="streams-disp-keys."></a>
+#### Example Agent Issue Report Disposition<a name="streams-disp-keys."></a>
 
 The following example disposition keys are listed by symptom, scenario, and severity\.
 
@@ -195,7 +195,7 @@ The following example disposition keys are listed by symptom, scenario, and seve
 + **2**—Medium impact, communication is difficult, but can still service calls
 + **3**—Large impact, cannot use the CCP to take calls
 
-For example:
+**Examples**
 + 5:45PM agentName LT2 \(latency on a three\-way call with medium impact\)\.
 + 6:05PM agentName DO3 \(disconnected three\-way call with large impact\)\.
 + 6:34PM agentName MI3 \(missed inbound call with large impact\)\.

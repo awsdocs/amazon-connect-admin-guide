@@ -1,4 +1,4 @@
-# Amazon Connect in the Asia Pacific \(Tokyo\) Region<a name="connect-tokyo-region"></a>
+# Phone Numbers for Amazon Connect in the Asia Pacific \(Tokyo\) Region<a name="connect-tokyo-region"></a>
 
 The steps necessary to claim a phone number for an Amazon Connect instance you create in the Asia Pacific \(Tokyo\) Region are different than the steps to claim a phone number in other AWS Regions\. Use the information in this section to claim a phone number for your instance\. Amazon Connect does not support porting phone numbers in the Asia Pacific \(Tokyo\) Region at this time\.
 
