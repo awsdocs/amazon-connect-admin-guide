@@ -215,8 +215,8 @@ Outbound contacts do not start in a contact flow, so outbound contacts are not i
 **Contact handle time**  <a name="contact-handle-time-historical"></a>
 Total time that an agent spent on contacts, including hold time and **After contact work time**\. This includes any time spent on contacts while in a custom status\. Note that the time spent in a custom status is not available in the CTR or as a separate metric\.
 
-**Contacts abandoned**  <a name="contacts-abandoned-historical"></a>
-Count of contacts disconnected by the customer while in the queue\. Contacts queued for callback are not counted as abandoned\.
+**Contacts abandoned**  <a name="contacts-abandoned-historical"></a> Contacts abandoned is a metric that works for queue or phone number groupings
+Count of contacts disconnected by the customer while in the queue\. This metric can only be grouped by Queue or Phone Number groupings. Contacts queued for callback are not counted as abandoned\.
 
 **Contacts abandoned in *X* seconds**  <a name="contacts-abandoned-x-historical"></a>
 Count of contacts disconnected by the customer while in the queue for 0 to *X* seconds\. The possible values for *X* are: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\.
