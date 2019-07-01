@@ -1,6 +1,8 @@
 # Amazon Connect Contact Control Panel<a name="amazon-connect-contact-control-panel"></a>
 
-Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with contacts\. The CCP can be used with a softphone or a desk phone\. The phone number and configurations are managed in Amazon Connect\.
+Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with contacts\. They can use the CCP with a softphone or a desk phone\. 
+
+As the admin, you manage the phone numbers at the instance level, not in the CCP\. For more information, see [Phone Numbers for Your Contact Centers](contact-center-phone-number.md)\. 
 
 ## Amazon Connect CCP Concepts<a name="amazon-connect-ccp-concepts"></a>
 
@@ -24,13 +26,28 @@ A state where the agent is no longer on a call but has related work to complete
 **leave**  
 Leave a multi\-party call without disconnecting the other parties or hanging up the call\.
 
-## Launch the Amazon Connect CCP<a name="launch-ccp"></a>
+## Access the Amazon Connect CCP<a name="launch-ccp"></a>
 
-You can log in to the CCP using the link provided by the Amazon Connect administrator\. We recommend that you bookmark the URL for easy access\. After you are logged in, choose the phone icon to open the CCP\.
+As the admin, you can access the CCP by clicking on the phone icon in the upper right corner of Amazon Connect\. 
 
-## Set up Users and Permissions<a name="ccp-permissions"></a>
+Before agents can access to the CCP and handle contacts, however, there are a few things you need to do: 
++ Add them as users to the instance\. For more information, see [Manage Users](amazon-connect-instances.md#user-management)\.
++ Configure their permissions\. By default agents assigned to the Agent security profile can access the CCP and make outbound calls\. But you can create a custom security profile and add additional permissions\. For more information, see [Amazon Connect Security Profiles](connect-security-profiles.md)\.
++ Give them their user name, password, and a link to the CCP so they can log in\. The default link is https://*name of your instance*\.awsapps\.com/connect/ccp\#/\.
 
-Before agents can use the CCP to take calls, you configure permissions\. These permissions are edited in Amazon Connect, and cover a range of activities from generating reports to making calls\. The permissions also ensure that agents only see, and have access to, what's relevant to their job\.
+We recommend telling agents to bookmark the URL to the CCP so they can access it easily\.
+
+## Grant Microphone Access<a name="accessing-microphone"></a>
+
+If agents experience problems with their microphone, they may need to grant microphone access in their browser\.
+
+For Google Chrome steps, see [Use your camera and microphone in Chrome](https://support.google.com/chrome/answer/2693767?hl=en)\.
+
+For Mozilla Firefox steps, see [Firefox Page Info window](https://support.mozilla.org/en-US/kb/firefox-page-info-window)\.
+
+**Important**  
+A change introduced in Google Chrome version 64 may result in issues with receiving calls if you are using an embedded Contact Control Panel \(CCP\) softphone using the Amazon Connect Streams library\. If you are experiencing issues with your microphone when using Chrome version 64, you can resolve the issue by building and deploying the latest version of the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md#downloading-streams), following the steps under *Downloading Streams*\.  
+You can also resolve the issue by using Firefox as your browser\.
 
 ## Use E\.164 Format for Telephone Numbers<a name="international-calls-ccp"></a>
 
@@ -52,8 +69,6 @@ Before agents can use the CCP, check the following configurations:
 + **Dialing**—In **Settings**, you can configure the softphone to dial a DID desk phone if required\. When you choose a desk phone, enter the DID number to which calls go\.
 
 ### Softphone CCP IP Address Ranges<a name="ccp-ip-ranges"></a>
-
-Agents can log in using the URL, user name, and password provided by their Amazon Connect administrator\. Each agent has a unique user name and password\.
 
 If your agents use a softphone for Amazon Connect, you must allow traffic in both directions for the ports and addresses listed below, for the region in which you created your instance\.
 
@@ -91,107 +106,3 @@ All domains that embed the CCP for a particular instance must be explicitly whit
 1. Choose **Add origin**\.
 
 1. Type the URL and choose **Add**\.
-
-## Work with Calls<a name="working-with-calls"></a>
-
-Using the Contact Control Panel \(CCP\), you can perform the following actions on a softphone\. When you opt for a desk phone, you have the same controls as softphone\. The only difference is that there is no **Accept** button on a desk phone\.
-
-**Accepting incoming calls**
-+ To accept an incoming call, choose **Accept call**\.
-+ To edit settings, choose **Settings**\.
-+ To end a call, choose **End call**\.
-+ To put a call on hold, choose **Hold**\.
-
-When a call is connected, a new set of options become available in the CCP\.
-
-**Transfers**
-
-After an agent picks up a call, the agent can transfer the call by choosing the **Transfer** button and then choosing one of the available contacts\. The contacts displayed are the quick connects defined in your Amazon Connect instance, which have been added to a queue in the agent's routing profile and are associated with a contact flow that support call transfers\.
-
-Agents can also manually enter a phone number to transfer calls to by choosing **Dial number** after answering the call\. The agent can enter a phone number using the keypad, and then choose **Transfer** to transfer the call\. If agents regularly transfer calls to a specific phone number, you can create an **External** contact flow and use that phone number for the destination\.
-
-**To enable agent call transfers**
-
-1. Create and publish a contact flow for the type of transfer to enable\.
-   + To enable transfers to another agent, create a Transfer to agent contact flow\.
-   + To enable transfers to a queue, create a Transfer to queue contact flow\.
-   + External transfers do not require a specific type of contact flow\.
-**Note**  
-You must publish your contact flows to make them active in your contact center\.
-
-1. Create a quick connect for the type of transfer to enable: **Agent**, **Queue**, or **External**\.
-
-   When you create the **Agent** or **Queue** quick connect, select a contact flow that matches the type of transfer to enable\. **External** quick connects require only a phone number, and do not allow you to set a queue or contact flow\.
-
-   For more information about quick connects, see [Create Quick Connects](connect-contact-flows.md#quick-connects)\.
-
-1. Add the quick connect that you created to any queue used in a contact flow for which to enable call transfer, such as the queue used in the contact flow for incoming calls\. The queue must be in the routing profile assigned to the agent who should be able to transfer calls\. The quick connects are displayed in the list of contacts when an agent tries to transfer an active call\.
-
-**To transfer calls to an agent or queue**
-
-1. After accepting a call in the CCP, choose **Transfer**\.
-
-1. Select the contact to whom to transfer the call, and then choose **Dial**\.
-
-   The call is placed on hold during the transfer\.
-
-1. After the call is answered by an agent, or sent to a queue, choose **Leave call** to disconnect from the call\.
-
-1. To use conference, swap, or hold:
-+ To begin a conference call, choose **Join** to perform a soft transfer\. To drop out of the call, choose **Leave**\.
-+ Choose **Swap** to switch between talking to a customer and the person to whom you’re transferring the call\.
-+ Choose **Hold all** to put all parties on hold\.
-
-Some settings that are configured in Amazon Connect include setting agents to go into the `After call work` state after they are done with their call\. Agents can also be configured to accept a call automatically, without having to choose **Accept**\.
-
-### Granting Microphone Access<a name="accessing-microphone"></a>
-
-If you're experiencing problems with your microphone, you may need to grant microphone access in your browser\.
-
-For Google Chrome steps, see [Use your camera and microphone in Chrome](https://support.google.com/chrome/answer/2693767?hl=en)\.
-
-For Mozilla Firefox steps, see [Firefox Page Info window](https://support.mozilla.org/en-US/kb/firefox-page-info-window)\.
-
-**Important**  
-A change introduced in Google Chrome version 64 may result in issues with receiving calls if you are using an embedded Contact Control Panel \(CCP\) softphone using the Amazon Connect Streams library\. If you are experiencing issues with your microphone when using Chrome version 64, you can resolve the issue by building and deploying the latest version of the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md#downloading-streams), following the steps under *Downloading Streams*\.  
-You can also resolve the issue by using Firefox as your browser\.
-
-## How to Enable Manager Listen\-in<a name="manager-listen-in"></a>
-
-As a manager, you can listen in on active calls as your agents interact with your customers\. Only users that are assigned the **Enable** permissions for **Manager listen in** can listen in on agent calls\. The **CallCenterManager** security profile includes this permission, but not permission to access the CCP\. You can add the permission for the CCP to the **CallCenterManager** profile, or also assign the **Agent** profile to an account that is already assigned the **CallCenterManager** profile\.
-
-Before you can use the listen\-in feature, you need to enable call recording in your contact flows\. The listen\-in feature works only when call recording is enabled\. To enable Manager listen\-in for outbound calls, the contact flow in which you enable call recording must be in the flow selected as the outbound contact flow for the queue used for outbound calls\.
-
-**To enable manager listen\-in**
-
-1. Log in to your Amazon Connect instance using an account that has permissions to edit contact flows\.
-
-1. Identify a contact flow that handles customer contacts that you want to listen in on\.
-
-1. Choose **Routing**, **Contact flows**, and then choose the name of the contact flow to open it in the editor\.
-
-1. Add a **Set call recording behavior** block to the contact flow, select **Agent and Customer** under **Record**, and then choose **Save**\.
-
-   Call recording must be enabled before the call being connected to an agent\.
-**Important**  
-Make sure that the block has connections to the block before and after it in the contact flow\.
-
-1. Choose **Save and Publish** to publish the updated contact flow\. Choose **Save and Publish** again to confirm that you want to overwrite the published version\.
-
-**To listen in on agent calls**
-
-1. Log in to your Amazon Connect instance with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Manager listen in** permission\.
-
-1. Open the CCP by choosing the phone icon in the top\-right corner of the screen\.
-
-1. Choose **Metrics and quality**, **Real\-time metrics**\.
-
-1. On the **Real\-time metrics** page, choose **Agents**\.
-
-   For any agent that is on a call, there is a headset icon next to the agent's login name\. Choose the icon to start listening to the call\.
-
-   When you are listening to call, the status in your contact control panel changes to **Monitoring**\.
-
-1. To stop listening to the call, choose **End call**\.
-
-   When the agent ends the call, monitoring stops automatically\.

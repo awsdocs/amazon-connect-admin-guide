@@ -12,9 +12,10 @@ Security profiles are organized into the following permission groups:
 
 For each permission group, there is a set of resources and supported set of actions\. For example, users are part of the **Users and permissions** group, which supports the following actions: view, edit, create, remove, enable/disable, and edit permission\. Some actions depend on other actions\. When you choose an action that depends on another action, the dependent action is automatically chosen and must also be granted\. For example, if you add permission to edit users, we also add permission to view users\.
 
-**Considerations**
+## Considerations<a name="considerations"></a>
 + When you grant permission to edit users, you also grant permission to reset user passwords, including that of the administrator\.
 + When you grant permission to create or edit users, you also grant permission to assign users a security profile that grants them full access to the contact center\.
++ In the Metrics and Quality permission group, you can enable a download button for recorded conversations\. This helps members of that group easily discover how to download recordings\. However, this setting isn't a security feature that stops agents from downloading recordings other ways\.
 
 ## Default Security Profiles<a name="default-security-profiles"></a>
 

@@ -4,11 +4,13 @@ You can manage and load\-balance customer contacts using agent hierarchy organiz
 
 ## Agent Hierarchies<a name="agent-hierarchy"></a>
 
-Agents and teams can be organized into groupings based on their location and their skill sets\. Hierarchies can be configured with up to five levels and allow you to segment agents or teams\. You can create large groups, such as all agents who work on a specific continent, or smaller groups such as all agents working in a specific department\. The hierarchies are reflected in reports and historical metrics to allow for granulated reporting\. Removing agents from a level affects historical reporting until a new reporting cycle for that level has been completed\. 
+You can organize agents and teams into groups based on their location and their skill sets\. For example, you might want to create large groups, such as all agents who work on a specific continent, or smaller groups such as all agents working in a specific department\. 
 
-Hierarchies do not determine agent permissions or security settings\. They define the organizational structure of agent groups for effective reporting\.
+You can also configure hierarchies with up to five levels, and segment agents or teams\. The hierarchies are reflected in reports and historical metrics to allow for granulated reporting\. Here are a couple of things to note about using hierarchies:
++ Removing agents from a level affects historical reporting\.
++ Hierarchies do not determine agent permissions or security settings\. They define the organizational structure of agent groups for effective reporting\.
 
-Permissions can be set to restrict the visibility of data and ability to create hierarchies\.
+To manage who can create hierarchies and see the location and skill set data, create a security profile and then grant the appropriate permissions to users assigned to that profile\. For more information, see [Amazon Connect Security Profiles](connect-security-profiles.md)\.
 
 **To configure a new agent hierarchy**
 

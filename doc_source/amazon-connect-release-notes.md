@@ -3,6 +3,7 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish monthly release notices that describe the changes we've released in the previous month\.
 
 **Topics**
++ [June 2019 Update](#w13aac25b7)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -13,6 +14,13 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [July 2018 Updates](#july18-release-notes)
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
+
+## June 2019 Update<a name="w13aac25b7"></a>
+
+The following update was released in June 2019:
+
+### Contact Flows<a name="june19-flows"></a>
++ Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
 ## February 2019 Updates<a name="feb19-release-notes"></a>
 

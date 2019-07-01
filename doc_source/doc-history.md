@@ -15,8 +15,8 @@
 | Added information about contact attributes and the Get queue metrics block | For more information, see [Amazon Connect Contact Attributes](connect-contact-attributes.md)\. | June 18, 2018 | 
 | Added information about new metrics sent to Amazon CloudWatch Logs\. | [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md) includes additional metrics\. | April 19, 2018 | 
 | Added information about using SAML for identity management | You can configure your instance to use SAML for identity management\. You can also use SAML to enable single sign\-on\. For more information, see [Configure SAML for Identity Management in Amazon Connect](configure-saml.md)\. | March 30, 2018 | 
-| Added information about agent call transfers | You can enable call transfers from an agent to another agent, to a queue, or to an external number\. For more information, see [Work with Calls](amazon-connect-contact-control-panel.md#working-with-calls)\. | December 10, 2017 | 
-| Added information about manager listen\-in | You can configure and enable a manager to listen in on agent calls\. For more information, see [How to Enable Manager Listen\-in](amazon-connect-contact-control-panel.md#manager-listen-in)\. | December 10, 2017 | 
+| Added information about agent call transfers | You can enable call transfers from an agent to another agent, to a queue, or to an external number\.  | December 10, 2017 | 
+| Added information about manager listen\-in | You can configure and enable a manager to listen in on agent calls\. For more information, see [Assign Permissions to Listen to Calls](listen-in.md#manager-listen-in)\. | December 10, 2017 | 
 | Added information about contact flow logs | For more information, see [Contact Flow Logs](contact-flow-logs.md)\. | November 16, 2017 | 
 | Added information about contact flow import/export | For more information, see [Contact Flow Import/Export](contact-flow-import-export.md)\. | November 16, 2017 | 
 | Added information about agent event streams | For more information, see [Amazon Connect Agent Event Streams](agent-event-streams.md)\. | November 16, 2017 | 

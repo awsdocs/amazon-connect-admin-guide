@@ -55,7 +55,7 @@ Data that is encrypted within a contact flow is made available through the store
 
 ## Create a Contact Flow<a name="create-contact-flow"></a>
 
-You can create a variety of contact flows in Amazon Connect, such as transfer flows and interruptible flows\. The starting point for all contact flows is the contact flow designer\. You can make your contact flows as simple or complex as needed\.
+You can create a variety of contact flows in Amazon Connect, such as transfer flows\. The starting point for all contact flows is the contact flow designer\. You can make your contact flows as simple or complex as needed\.
 
 **To create a contact flow using the contact flow designer**
 
@@ -86,7 +86,19 @@ You can create a variety of contact flows in Amazon Connect, such as transfer fl
 All connectors must be connected to a block in order to successfully publish your contact flow\.
 
 **To generate logs for your contact flows**  
-For more information about enabling and using contact flow logs, see [Contact Flow Logs](contact-flow-logs.md)\.
+After your contact flow is published live, you can use contact flow logs to help analyze contact flows and quickly find errors your customers encounter\. If needed, you can roll back to a previous version of the contact flow\. 
+
+For more information about enabling and using contact flow logs, see [Contact Flow Logs](contact-flow-logs.md)\. <a name="rollback"></a>
+
+**To roll back a contact flow**
+
+1. In the contact flow designer, open the contact flow you want to roll back\.
+
+1. Use the dropdown to choose the version of the contact flow you want to roll back to\. If you choose **Latest**, it reverts the flow to the most recent published version\. If there isn't a published version, it reverts to the most recent saved version\. 
+**Note**  
+To see a consolidated view of all changes across all flows, click the **View historical changes** link at the bottom of the Contact flows page\. You can filter to a specific flow by date or user name\.
+
+1. Choose **Publish** to push that version into production\. 
 
 ## Create Prompts<a name="prompts"></a>
 
@@ -315,7 +327,7 @@ A queue is created for all users in your Amazon Connect instance, but only users
 
 1. In Amazon Connect, choose **Routing**, **Contact flows**\.
 
-1. In the **Contact flow designer**, open an existing, or create a new contact flow\.
+1. In the contact flow designer, open an existing contact flow, or create a new one\.
 
 1. Add a block in which you can select a queue to transfer a contact to, such as a **Set working queue** block\.
 

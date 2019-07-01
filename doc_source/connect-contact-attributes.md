@@ -363,12 +363,14 @@ The metrics attributes in the following table are returned when you use the **Ge
 
 ## Media Streams Attributes<a name="media-stream-attribs"></a>
 
+The following table lists the attributes you can use to identify the location in the live media stream where the customer audio starts and stops\.
+
 
 | Attribute | Description | Type | JSONPath Reference | 
 | --- | --- | --- | --- | 
 | Customer audio stream ARN | The ARN of the Kinesis Video stream used for Live media streaming that includes the customer data to reference\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StreamARN | 
-| Customer audio start timestamp in the Kinesis video stream used for Live media streaming\. | The time at which the customer audio stream started\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StartTimestamp | 
-| Customer audio stop timestamp | The time at which the customer audio stream stopped Kinesis video stream used for Live media streaming\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StopTimestamp | 
+| Customer audio start timestamp in the Kinesis video stream used for Live media streaming\. | When the customer audio stream started\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StartTimestamp | 
+| Customer audio stop timestamp | When the customer audio stream stopped the Kinesis video stream used for Live media streaming\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StopTimestamp | 
 | Customer audio start fragment number | The number that identifies the Kinesis Video Streams fragment, in the stream used for Live media streaming, in which the customer audio stream started\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StartPosition | 
 
 ## Telephony Call Metadata Attributes<a name="telephony-call-metadata-attributes"></a>
@@ -382,3 +384,6 @@ Telephony metadata provides additional information from telephony carriers that 
 | P\-Charge\-Info | The party responsible for the charges associated with the call\. | System | $\.Media\.Sip\.Headers\.P\-Charge\-Info | 
 | From | The identity of the end user associated with the request\. | System | $\.Media\.Sip\.Headers\.From | 
 | To | Information about the called party or the recipient of the request\.  | System | $\.Media\.Sip\.Headers\.To | 
+
+**Note**  
+Telephony metadata is not consistent across all telephony providers\. In some cases, this may result in empty values\.

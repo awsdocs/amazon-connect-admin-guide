@@ -20,7 +20,7 @@ We recommend that you initially install the package into your Salesforce sandbox
 
 The next step is to whitelist your Salesforce Visualforce domain within Amazon Connect\. This allows cross\-domain access to your Amazon Connect instance\.
 
-This page provides a quick setup guide\. Please review the [Amazon Connect CTI Adapter v3 for Salesforce installation guide](https://s3.amazonaws.com/amazonconnect-salesforceintegration/Amazon+Connect+CTI+Adapter+-+Setup+and+Installation+Guide.pdf) for a more detailed walk\-through and setup of the full CTI Adapter capabilities\. We also have a trailhead available at [https://sfdc\.co/Amazon\-Connect](https://sfdc.co/Amazon-Connect)\. Note, it's still in process of being updated to support latest CTI Adapter features\.
+This page provides a quick setup guide\. Please review the [Amazon Connect CTI Adapter v3 for Salesforce installation guide](https://s3.amazonaws.com/connect-blogs/Amazon+Connect+Salesforce+CTI+Adapter/Amazon+Connect+CTI+Adapter+-+Setup+and+Installation+Guide.pdf) for a more detailed walk\-through and setup of the full CTI Adapter capabilities\. We also have a trailhead available at [https://sfdc\.co/Amazon\-Connect](https://sfdc.co/Amazon-Connect)\. Note, it's still in process of being updated to support latest CTI Adapter features\.
 
 ## Prerequisites<a name="v2-prereqs"></a>
 

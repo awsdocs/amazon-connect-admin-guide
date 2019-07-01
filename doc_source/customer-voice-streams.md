@@ -32,7 +32,7 @@ Live media streaming \(customer audio streams\) is not enabled by default\. You 
 
 In a contact flow, add a **Start media streaming** block in the flow at the point where you want to enable customer audio streaming\. Connect the **Success** branch to the rest of your flow\. When you want to stop customer media streaming, add a **Stop media streaming** block to the flow\. Customer audio is captured until a **Stop media streaming** block is invoked, even if the contact is passed to another contact flow\.
 
-Use the contact attributes for media streaming in your contact flow so that the CTR includes the attributes\. You can then view the CTR to determine the media streaming data associated with a specific contact\. You can also pass the attributes to an AWS Lambda function
+Use the contact attributes for media streaming in your contact flow so that the CTR includes the attributes\. You can then view the CTR to determine the media streaming data associated with a specific contact\. You can also pass the attributes to an AWS Lambda function\.
 
 The following example contact flow demonstrates using media streaming with attributes for testing purposes\.
 
@@ -59,6 +59,10 @@ The time at which the customer audio stream stopped\.
 Customer audio start fragment number  
 The number that identifies the Kinesis Video Streams fragment in which the customer audio stream started\.  
 **JSONPath format: **$\.MediaStreams\.Customer\.Audio\.StartPosition
+
+Customer audio stop fragment number  
+The number that identifies the Kinesis Video Streams fragment in which the customer audio stream stopped\.  
+**JSONPath format: **$\.MediaStreams\.Customer\.Audio\.StopPosition
 
 For more information about Amazon Kinesis Video Streams fragments, see [Fragment](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_Fragment.html) in the * Amazon Kinesis Video Streams Developer Guide*\.
 

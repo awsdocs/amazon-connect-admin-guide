@@ -2,7 +2,7 @@
 
 After you create an Amazon Connect instance, you can claim a phone number to use for your contact center\. After you claim a number, you can place a test call in to your contact center to confirm that it is working correctly\. If you want to keep a phone number you already have, you can port the phone number and use it with Amazon Connect\.
 
-Calls are handled in the contact center using the Contact Control Panel \(CCP\)\. The CCP is built in to the Amazon Connect Contact Center Manager \(CCM\)\. For more information, see [Amazon Connect Contact Control Panel](amazon-connect-contact-control-panel.md)\.
+Agents handle calls using the Contact Control Panel \(CCP\)\. For more information, see [Amazon Connect Contact Control Panel](amazon-connect-contact-control-panel.md)\.
 
 **Topics**
 + [Claim a Phone Number](#claim-phone-number)
