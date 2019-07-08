@@ -1,8 +1,8 @@
-# Amazon Connect Contact Control Panel<a name="amazon-connect-contact-control-panel"></a>
+# Communicate With Contacts<a name="amazon-connect-contact-control-panel"></a>
 
 Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with contacts\. They can use the CCP with a softphone or a desk phone\. 
 
-As the admin, you manage the phone numbers at the instance level, not in the CCP\. For more information, see [Phone Numbers for Your Contact Centers](contact-center-phone-number.md)\. 
+As the admin, you manage the phone numbers at the instance level, not in the CCP\. For more information, see [Set Up Phone Numbers for Your Contact Centers](contact-center-phone-number.md)\. 
 
 ## Amazon Connect CCP Concepts<a name="amazon-connect-ccp-concepts"></a>
 
@@ -31,7 +31,7 @@ Leave a multi\-party call without disconnecting the other parties or hanging up 
 As the admin, you can access the CCP by clicking on the phone icon in the upper right corner of Amazon Connect\. 
 
 Before agents can access to the CCP and handle contacts, however, there are a few things you need to do: 
-+ Add them as users to the instance\. For more information, see [Manage Users](amazon-connect-instances.md#user-management)\.
++ Add them as users to the instance\. For more information, see [Add and Manage Users in Amazon Connect](connect-security.md)\.
 + Configure their permissions\. By default agents assigned to the Agent security profile can access the CCP and make outbound calls\. But you can create a custom security profile and add additional permissions\. For more information, see [Amazon Connect Security Profiles](connect-security-profiles.md)\.
 + Give them their user name, password, and a link to the CCP so they can log in\. The default link is https://*name of your instance*\.awsapps\.com/connect/ccp\#/\.
 

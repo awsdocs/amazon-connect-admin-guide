@@ -1,4 +1,4 @@
-# Amazon Connect Contact Attributes<a name="connect-contact-attributes"></a>
+# Use Amazon Connect Contact Attributes<a name="connect-contact-attributes"></a>
 
 In Amazon Connect, a contact is an interaction with a customer in your contact center\. The interaction can be a voice phone call with a human agent, or an automated interaction using an Amazon Lex bot\. Contact attributes in Amazon Connect refer to key\-value pairs that contain data about a contact\.
 

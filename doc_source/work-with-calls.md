@@ -29,7 +29,7 @@ You must publish your contact flows to make them active in your contact center\.
 
    When you create the **Agent** or **Queue** quick connect, select a contact flow that matches the type of transfer to enable\. **External** quick connects require only a phone number, and do not allow you to set a queue or contact flow\.
 
-   For more information about quick connects, see [Create Quick Connects](connect-contact-flows.md#quick-connects)\.
+   For more information about quick connects, see [Create Quick Connects](transfer.md#quick-connects)\.
 
 1. Add the quick connect that you created to any queue used in a contact flow for which to enable call transfer, such as the queue used in the contact flow for incoming calls\. The queue must be in the routing profile assigned to the agent who should be able to transfer calls\. 
 

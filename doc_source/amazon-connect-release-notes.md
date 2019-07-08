@@ -3,7 +3,7 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish monthly release notices that describe the changes we've released in the previous month\.
 
 **Topics**
-+ [June 2019 Update](#w13aac25b7)
++ [June 2019 Update](#w11aac29b7)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -15,7 +15,7 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
 
-## June 2019 Update<a name="w13aac25b7"></a>
+## June 2019 Update<a name="w11aac29b7"></a>
 
 The following update was released in June 2019:
 
@@ -173,10 +173,10 @@ The following updates were released in July 2018:
 + [Contact Flows](#july18-contact-flows)
 
 ### New Features<a name="july18-features"></a>
-+ [Initiate an Outbound Call](connect-contact-flows.md#using-call-number-block)
-+ [Add an Amazon Lex Bot](connect-contact-flows.md#amazon-lex)
++ [Initiate an Outbound Call](using-call-number-block.md)
++ [Add an Amazon Lex Bot](amazon-lex.md)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
-+ [Manage Calls in a Queue](connect-contact-flows.md#queue-to-queue-transfer)
++ [Manage Calls in a Queue](transfer.md#queue-to-queue-transfer)
 
 ### General<a name="july18-general"></a>
 + Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.
@@ -211,7 +211,7 @@ The following updates were released in June 2018:
 ### Contact Flows<a name="june18-contact-flows"></a>
 + Renamed the **Set queue** block to **Set working queue**\.
 + Added a **Copy to clipboard** button next to the ARN of a contact flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the contact flow in the designer to display the ARN\.
-+ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Initiate an Outbound Call](connect-contact-flows.md#using-call-number-block)\.
++ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Initiate an Outbound Call](using-call-number-block.md)\.
 + Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Using System Metric Attributes](connect-contact-attributes.md#attrib-system-metrics)\.
 
 ### Metrics and Reporting<a name="june18-metrics"></a>

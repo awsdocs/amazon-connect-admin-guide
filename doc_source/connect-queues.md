@@ -1,4 +1,4 @@
-# Amazon Connect Queues<a name="connect-queues"></a>
+# Create Amazon Connect Queues<a name="connect-queues"></a>
 
 A queue is 'waiting area' that holds contacts to be answered by agents\. You can use a single queue to handle all incoming contacts, or you can set up queues mapped to agents with specific skill sets\. 
 

@@ -1,8 +1,8 @@
-# Amazon Connect Agents<a name="connect-agents"></a>
+# Set Up Agent Hierarchies and Customize Status<a name="connect-agents"></a>
 
 You can manage and load\-balance customer contacts using agent hierarchy organization and agent status management\. These tools provide filtering and agent availability management per queue, skill set, and routing profiles\.
 
-## Agent Hierarchies<a name="agent-hierarchy"></a>
+## Set Up Agent Hierarchies<a name="agent-hierarchy"></a>
 
 You can organize agents and teams into groups based on their location and their skill sets\. For example, you might want to create large groups, such as all agents who work on a specific continent, or smaller groups such as all agents working in a specific department\. 
 
@@ -22,7 +22,7 @@ To manage who can create hierarchies and see the location and skill set data, cr
 
 1. Choose **Save** to apply the changes, or **Cancel** to undo them\.
 
-When a hierarchy has been created, you can add groups, teams, and agents from the top down\.
+After you create a hierarchy, you can add groups, teams, and agents from the top down\.
 
 **To add groupings to a hierarchy**
 
@@ -36,7 +36,7 @@ When a hierarchy has been created, you can add groups, teams, and agents from th
 
 Choose **View historical changes** to view the change history\. You can filter changes by date \(between two dates\) or by user name\. If you cannot see the link, ensure that you have the proper permissions to view these changes\.
 
-## Agent Status<a name="agent-status"></a>
+## Create Custom Agent Status Values<a name="agent-status"></a>
 
 Agent status is used for reporting and metrics, as well as resource management\. Amazon Connect provides default editable states, but custom status values can be added\. Customized agent status values are auxiliary by default\.
 

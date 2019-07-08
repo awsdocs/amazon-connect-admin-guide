@@ -1,4 +1,4 @@
-# Phone Numbers for Amazon Connect in the Asia Pacific \(Tokyo\) Region<a name="connect-tokyo-region"></a>
+# Claim Phone Numbers for Amazon Connect in the Asia Pacific \(Tokyo\) Region<a name="connect-tokyo-region"></a>
 
 The steps necessary to claim a phone number for an Amazon Connect instance you create in the Asia Pacific \(Tokyo\) Region are different than the steps to claim a phone number in other AWS Regions\. Use the information in this section to claim a phone number for your instance\. Amazon Connect does not support porting phone numbers in the Asia Pacific \(Tokyo\) Region at this time\.
 
@@ -84,7 +84,7 @@ Use these steps to claim a phone number for an instance you create in the Asia P
 When you submit a request to claim a 03 prefix number from Tokyo to use for your Amazon Connect instance, you must provide the following documentation as proof of address due to Japanese regulations as follows:
 + If the AWS account used to create the Amazon Connect instance is for an individual, the individual must provide a valid, government\-issued identification document, such as a national ID card, passport, or driver's license, with an address visible on the document that matches the city from which the phone number is assigned\.
 + If the AWS account used to create the instance is for an organization, a representative of the organization must provide the both of the following:
-  + A valid, government\-issued identification document, such as a national ID card, passport, or driver's license, with an address visible on the document that matches the city from which the phone number is assigned\.
+  + A valid, government\-issued identification document, such as a national ID card, passport, or driver's license\.
   + One of the following documents, with an address visible on the document that matches the city from which the number is assigned\. This can be a utility bill, a certificate of company registration from the Ministry of Justice, receipts of payments to a government entity, such as a national or local tax return, or a social security payment receipt\.
 
 You can include copies of these documents with your support request for the number, or provide them when requested by AWS Support\. After you submit the request, AWS Support reviews it, and then resolves the ticket when address validation is confirmed or if more information is needed\. AWS Support will contact you with the results of your request when it is completed\. Once AWS Support resolves the ticket, and address validation is confirmed you can then follow step 6 above to claim a Tokyo 03 prefix number\.

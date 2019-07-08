@@ -1,4 +1,4 @@
-# Live Media Streaming in Contact Flows<a name="customer-voice-streams"></a>
+# Capture Customer Audio: Live Media Streaming<a name="customer-voice-streams"></a>
 
 In Amazon Connect, you can capture the customer audio during an interaction with your contact center by sending the audio to a Kinesis Video Stream\. All customer audio is captured in the stream from the customer, starting when the **Start media streaming** block is invoked in a contact flow\. Customer audio is captured for the entire interaction, including when the customer is interacting with an Amazon Lex bot that is used in your contact flow, and when the customer on hold\. 
 
