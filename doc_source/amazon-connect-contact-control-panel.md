@@ -2,7 +2,7 @@
 
 Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with contacts\. They can use the CCP with a softphone or a desk phone\. 
 
-As the admin, you manage the phone numbers at the instance level, not in the CCP\. For more information, see [Set Up Phone Numbers for Your Contact Centers](contact-center-phone-number.md)\. 
+As the admin, you manage the phone numbers at the instance level, not in the CCP\. For more information, see [Set Up Phone Numbers for Your Contact Center](contact-center-phone-number.md)\. 
 
 ## Amazon Connect CCP Concepts<a name="amazon-connect-ccp-concepts"></a>
 
