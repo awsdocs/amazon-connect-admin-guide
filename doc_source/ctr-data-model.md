@@ -187,6 +187,11 @@ Type: [QueueInfo](#ctr-QueueInfo)
 If recording was enabled, this is information about the recording\.  
 Type: [RecordingInfo](#ctr-RecordingInfo)
 
+**Recordings**  
+If recording was enabled, this is information about the recording\.  
+Type: [RecordingInfo](#ctr-RecordingInfo)  
+The first recording for a contact will appear in both the Recording and Recordings sections of the CTR\.
+
 **SystemEndpoint**  
 The system endpoint\. For `INBOUND`, this is the phone number that the customer dialed\. For `OUTBOUND`, this is the caller ID phone number that Amazon Connect used to dial the customer\.  
 Type: [Endpoint](#ctr-endpoint)

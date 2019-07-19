@@ -1,4 +1,4 @@
-# Service\-Linked Roles for Amazon Connect<a name="connect-slr"></a>
+# Use Service\-Linked Roles for Amazon Connect<a name="connect-slr"></a>
 
 Amazon Connect uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to Amazon Connect\. Service\-linked roles are predefined by Amazon Connect and include all the permissions that the service requires to call other AWS services on your behalf\.
 
@@ -15,7 +15,7 @@ The AWSServiceRoleForAmazonConnect\_ service\-linked role trusts the following s
 
 The role permissions policy allows Amazon Connect to complete the following actions on the specified resources\. As you enable additional features in Amazon Connect, additional permissions are added for the service\-link role to access the resources associated with those features:
 + Action: all Amazon Connect actions, `connect:*`, on all Amazon Connect resources\.
-+ Action: Amazon S3 `s3:GetObject`, `s3:GetObjectAcl`, `s3:PutObject`, `s3:PutObjectAcl`, `s3:DeleteObject`, `s3:GetBucketLocation`, and `GetBucketAcl` for the S3 bucket specified for call recordings\.
++ Action: Amazon S3 `s3:GetObject`, `s3:GetObjectAcl`, `s3:PutObject`, `s3:PutObjectAcl`, `s3:DeleteObject`, `s3:GetBucketLocation`, and `GetBucketAcl` for the S3 bucket specified for recorded conversations\.
 
   It also grants `s3:PutObject`, `s3:PutObjectAcl`, and `s3:GetObjectAcl` to the bucket specified for exported reports\.
 + Action: Amazon Kinesis Data Firehose `firehose:DescribeDeliveryStream` and `firehose:PutRecord`, and `firehose:PutRecordBatch` for the delivery stream defined for Agent event streams and CTRs\.

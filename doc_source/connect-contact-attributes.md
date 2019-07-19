@@ -1,6 +1,6 @@
 # Use Amazon Connect Contact Attributes<a name="connect-contact-attributes"></a>
 
-In Amazon Connect, a contact is an interaction with a customer in your contact center\. The interaction can be a voice phone call with a human agent, or an automated interaction using an Amazon Lex bot\. Contact attributes in Amazon Connect refer to key\-value pairs that contain data about a contact\.
+ In Amazon Connect, a contact is an interaction with a customer in your contact center\. The interaction can be a voice phone call with a human agent, or an automated interaction using an Amazon Lex bot\. Contact attributes in Amazon Connect refer to key\-value pairs that contain data about a contact\.
 
 Using contact attributes, you can customize and personalize the experience customers have when they interact with your contact center\. Contact attributes let you store customer input or data about a customer, and then use it later in a contact flow\. You can also check the values of contact attributes and use a condition to determine the branching behavior of the contact flow based on the value\.
 
@@ -44,7 +44,7 @@ The following types of contact attributes are available in Amazon Connect:
 
 ## Using Contact Attributes to Personalize the Customer Experience<a name="use-attributes-cust-exp"></a>
 
-Contact attributes in your contact flows can provide a more personalized customer experience\. For example, specify a custom call flow based on comparing an attribute to a value\. You then route the call based on the value comparison, such as routing customers to different tiers of support based on their account number\. Or retrieve a customer's name and save it as an attribute\. Include the name attribute in a text to speech string so that the customer's name is said during the interaction\.
+Contact attributes in your contact flows can provide a more personalized customer experience\. For example, specify a custom flow based on comparing an attribute to a value\. You then route the contact based on the value comparison, such as routing customers to different tiers of support based on their account number\. Or retrieve a customer's name and save it as an attribute\. Include the name attribute in a text to speech string so that the customer's name is said during the interaction\.
 
 The steps in the following sections describe how to use contact attributes with different blocks in a contact flow\.
 
@@ -160,9 +160,9 @@ JSONPath is a standardized way to query elements of a JSON object\. JSONPath use
 
 ### Checking Attribute Values in a Check Contact Attributes Block<a name="check-contact-attrib-block"></a>
 
-When you include a **Check contact attributes** block in a contact flow, it checks the value of the attribute you specify\. You then add a condition to compare the value of the attribute to, such as "greater than" or "contains\." For each condition you add, an output branch is added to the block\. You can then route the contact based on the conditions by connecting the output branch for the condition to the next block in the contact flow\. For example, you can check the current number of calls in a queue, then route the call to the queue if the active calls are fewer than 5\. You can also route the call to another different queue if the number of active calls is more than 5\. You can use whichever metrics or attributes you want to make routing decisions as appropriate for your needs\. The following procedure describes how to check for the number of contacts in a queue and then route the call to a queue that has fewer than 5 active contacts in it\.
+When you include a **Check contact attributes** block in a contact flow, it checks the value of the attribute you specify\. You then add a condition to compare the value of the attribute to, such as "greater than" or "contains\." For each condition you add, an output branch is added to the block\. You can then route the contact based on the conditions by connecting the output branch for the condition to the next block in the contact flow\. For example, you can check the current number of customers in a queue, then route the contact to the queue if the active contacts are fewer than 5\. You can also route the contact to another different queue if the number of active contacts is more than 5\. You can use whichever metrics or attributes you want to make routing decisions as appropriate for your needs\. The following procedure describes how to check for the number of contacts in a queue and then route the contact to a queue that has fewer than 5 active contacts in it\.
 
-### Using a Check contact attributes block to route a call to a queue
+### Using a Check contact attributes block to route a contact to a queue
 
 1. In Amazon Connect, choose **Routing**, **Contact flows**\.
 
@@ -184,7 +184,7 @@ When you include a **Check contact attributes** block in a contact flow, it chec
 
 1. Under **Attribute**, choose **Contacts in queue**\.
 
-1. To use conditions to route the call, choose **Add another condition**\.
+1. To use conditions to route the contact, choose **Add another condition**\.
 
    By default, the **Check contact attributes** block includes a single condition, **No match**\. The **No match** branch is followed when there are no matches for any of the conditions you define in the block\.
 
@@ -196,7 +196,7 @@ When you include a **Check contact attributes** block in a contact flow, it chec
 
    You now see two new output branches for the **Check contact attributes** block\.
 
-You can now add additional blocks to the contact flow to route the call as desired\. For example, connect the < 5 branch to a **Transfer to queue** block to transfer calls to the queue when there are fewer than five calls currently in the queue\. Connect the > 5 branch to a Set customer callback number block and then transfer the call to a callback queue using a **Transfer to queue** block so the customer doesn't have to stay on hold\.
+You can now add additional blocks to the contact flow to route the contact as desired\. For example, connect the < 5 branch to a **Transfer to queue** block to transfer calls to the queue when there are fewer than five calls currently in the queue\. Connect the > 5 branch to a Set customer callback number block and then transfer the call to a callback queue using a **Transfer to queue** block so the customer doesn't have to stay on hold\.
 
 ### Referencing Attributes from a Play Prompt Block<a name="attribs-play-prompt"></a>
 
@@ -264,7 +264,7 @@ You can reference the metric attributes returned to determine the optimal route 
 
 1. For the **Conditions to check**, choose the conditions to compare the attribute value to, and then enter a value in the **Value** field\.
 
-1. Add additional blocks to the contact flow, connecting the branch of the **Check contact attributes** block to route the call to the next block in the flow\.
+1. Add additional blocks to the contact flow, connecting the branch of the **Check contact attributes** block to route the contact to the next block in the flow\.
 
 1. Save and publish the contact flow to make it available in your contact center\.
 
@@ -358,7 +358,7 @@ The metrics attributes in the following table are returned when you use the **Ge
 | Agents staffed | The number of agents currently staffed, which is agents logged in and in Available, ACW, or Busy states\. | System | $\.Metrics\.Agents\.Staffed\.Count | 
 | Agents in After contact work | The number of agents currently in the ACW state\. | System | $\.Metrics\.Agents\.AfterContactWork\.Count | 
 | Agents busy | The number of agents currently active on a contact\. | System | $\.Metrics\.Agents\.Busy\.Count | 
-| Agents missed count | The number of agents in the Missed state, which is the state an agent enters after a missed call\. | System | $\.Metrics\.Agents\.Missed\.Count | 
+| Agents missed count | The number of agents in the Missed state, which is the state an agent enters after a missed contact\. | System | $\.Metrics\.Agents\.Missed\.Count | 
 | Agents in non\-productive state | The number of agents in a non\-productive \(NPT\) state\. | System | $\.Metrics\.Agents\.NonProductive\.Count | 
 
 ## Media Streams Attributes<a name="media-stream-attribs"></a>

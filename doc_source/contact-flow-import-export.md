@@ -50,7 +50,7 @@ When you attempt to import or export a large or complex contact flow, the export
 
 1. Choose **Save**, **Import flow**\.
 
-1. Select the file to import, and choose **Import**\.
+1. Select the file to import, and choose **Import**\. When the contact flow is imported into an existing contact flow, the name of the existing contact flow is updated, too\.
 
 1. Review and update any resolved or unresolved references as necessary\.
 

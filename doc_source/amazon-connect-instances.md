@@ -43,7 +43,7 @@ To update the instance settings, open the Amazon Connect console, choose the nam
 
 1. In the navigation pane, choose **Data storage**\.
 
-1. \(Optional\) To specify the bucket and KMS key for call recordings, choose **Call recordings**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
+1. \(Optional\) To specify the bucket and KMS key for recordings of conversations, choose **Call recordings**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
 
 1. \(Optional\) To enable live media streaming, choose **Live media streaming**, **Edit**\. For more information, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\.
 
@@ -79,7 +79,7 @@ To update the instance settings, open the Amazon Connect console, choose the nam
 
 You can export contact trace records \(CTRs\) and agent events from Amazon Connect and perform real\-time analysis on contacts\. Data streaming sends data to Amazon Kinesis\.
 
-If you enable server\-side encryption for the Kinesis stream you select, Amazon Connect cannot publish to the stream because it does not have permission to call `kms:GenerateDataKey` so that it can encrypt data sent to Kinesis\. To work\-around this, enable encryption for call recordings or scheduled reports, create a customer master key \(CMK\) to use for encryption, and then choose the same CMK for the Kinesis data stream that you use for call recording or scheduled reports\. For more information, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
+If you enable server\-side encryption for the Kinesis stream you select, Amazon Connect cannot publish to the stream because it does not have permission to call `kms:GenerateDataKey` so that it can encrypt data sent to Kinesis\. To work\-around this, enable encryption for recordings of conversations or scheduled reports, create a customer master key \(CMK\) to use for encryption, and then choose the same CMK for the Kinesis data stream that you use for scheduled reports or recordings of conversations\. For more information, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
 
 ## Log in as Administrator<a name="log-in-as-admin"></a>
 

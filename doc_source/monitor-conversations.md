@@ -31,11 +31,11 @@ These permissions enable managers to monitor live conversations and access recor
 
 1. Choose **Save**\. 
 
-## Monitor Live Conversations with Customers<a name="w11aac19c21b9"></a>
+## Monitor Live Conversations with Customers<a name="w11aac27b8b9"></a>
 
 1. Log in to your Amazon Connect instance with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Manager monitor** permission\.
 
-1. Open the contact control panel \(CCP\) by choosing the phone icon in the top\-right corner of your screen\. You'll need the CCP open to connect to the call\. 
+1. Open the contact control panel \(CCP\) by choosing the phone icon in the top\-right corner of your screen\. You'll need the CCP open to connect to the conversation\. 
 
 1. To choose the agent conversation you want to monitor, in Amazon Connect choose **Metrics and quality**, **Real\-time metrics**, **Agents**\.
 

@@ -4,13 +4,13 @@ The starting point for creating all contact flows is the contact flow designer\.
 
 For descriptions of the available action blocks, see [Contact Block Definitions](contact-blocks.md)\.
 
-## <a name="w11aac11c17b7b7"></a>
+## <a name="w11aac13c21b7b7"></a>
 
-## Use a Template<a name="template"></a>
+## Choose a Contact Flow Template<a name="template"></a>
 
-The easiest way to get started creating contact flows is to use one of the templates we've provided\. Each template includes only those contact blocks that are pertinent to that flow\. For example, the template for transferring to a queue contains only the appropriate contact blocks for that type of flow\. 
+Amazon Connect includes a set of nine contact flow templates\. Each template is for a specific scenario\. For example, the template for transferring to a queue contains only the appropriate contact blocks for that type of flow\. 
 
-The following contact flow templates are available:
+When you create a contact flow, you need to choose the right template for your scenario\. The following contact flow templates are available\. 
 
 
 | Template | When to use | 
@@ -28,17 +28,17 @@ The following contact flow templates are available:
 
 1. In the navigation pane, choose **Routing**, **Contact flows**\.
 
-1. Next to the **Create contact flow** button, choose the dropdown arrow to see the list of templates\.
+1. Next to the **Create contact flow** button, choose the drop\-down arrow to see the list of templates\.
 
 1. Type a name and a description for your contact flow\.
 
 1. Search for a contact block using the **Search** bar, or expand the relevant group to locate the block\. For descriptions of the contact blocks, see [Contact Block Definitions](contact-blocks.md)\.
 
-1. Drag and drop the contact blocks onto the canvas\. You can add blocks in any order or sequence, as connections between elements aren't required to be strictly linear\.
+1. Drag and drop the contact flow blocks onto the canvas\. You can add blocks in any order or sequence, as connections between elements aren't required to be strictly linear\.
 
-1. Double\-click the title of the block\. In the fly\-out pane, configure settings for that block\.
+1. Double\-click the title of the block\. In the configuration pane, configure settings for that block\.
 
-## Create a Contact Flow from Scratch<a name="new"></a>
+## Create a Contact Flow \(Inbound\)<a name="new"></a>
 
 1. In the navigation pane, choose **Routing**, **Contact flows**\.
 
@@ -50,7 +50,7 @@ The following contact flow templates are available:
 
 1. Drag and drop contract blocks onto the canvas\. You can add blocks in any order or sequence, as connections between elements aren't required to be strictly linear\.
 
-1. Double\-click the title of the block\. In the fly\-out pane, configure settings for that block and then choose **Save** to close the pane\.
+1. Double\-click the title of the block\. In the configuration pane, configure settings for that block and then choose **Save** to close the pane\.
 
 1. Back on the canvas, click on the first \(the originating\) block\.
 
@@ -71,11 +71,11 @@ After your contact flow is published live, you can use contact flow logs to help
 
 For more information about enabling and using contact flow logs, see [Contact Flow Logs](contact-flow-logs.md)\. 
 
-## Rollback a Contact Flow<a name="rollback"></a><a name="rollback"></a>
+## Roll back a Contact Flow<a name="rollback"></a><a name="rollback"></a>
 
 1. In the contact flow designer, open the contact flow you want to roll back\.
 
-1. Use the dropdown to choose the version of the contact flow you want to roll back to\. If you choose **Latest**, it reverts the flow to the most recent published version\. If there isn't a published version, it reverts to the most recent saved version\. 
+1. Use the drop\-down to choose the version of the contact flow you want to roll back to\. If you choose **Latest**, it reverts the flow to the most recent published version\. If there isn't a published version, it reverts to the most recent saved version\. 
 **Note**  
 To see a consolidated view of all changes across all flows, click the **View historical changes** link at the bottom of the Contact flows page\. You can filter to a specific flow by date or user name\.
 

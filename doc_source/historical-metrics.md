@@ -40,7 +40,7 @@ When you customize a report, you can add filters to control which data is includ
 You can create historical metrics reports to view data for past activity in your contact center\.
 
 **Requirement**
-+ You must have permission to access metric data\. The following security profiles include this permission: **CallCenterManager** and **QualityAnalyst**\. For more information, see [Amazon Connect Security Profiles](connect-security-profiles.md)\.
++ You must have permission to access metric data\. The following security profiles include this permission: **CallCenterManager** and **QualityAnalyst**\. For more information, see [Assign Permissions: Security Profiles](connect-security-profiles.md)\.
 
 **Limits**
 + You can get data only for active queues\. A queue is inactive if there are no contacts in the queue and no agents available\.

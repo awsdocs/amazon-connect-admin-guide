@@ -3,7 +3,7 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish monthly release notices that describe the changes we've released in the previous month\.
 
 **Topics**
-+ [June 2019 Update](#w11aac29b7)
++ [June 2019 Update](#w11aac33b7)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -15,7 +15,7 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
 
-## June 2019 Update<a name="w11aac29b7"></a>
+## June 2019 Update<a name="w11aac33b7"></a>
 
 The following update was released in June 2019:
 
@@ -176,7 +176,7 @@ The following updates were released in July 2018:
 + [Initiate an Outbound Call](using-call-number-block.md)
 + [Add an Amazon Lex Bot](amazon-lex.md)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
-+ [Manage Calls in a Queue](transfer.md#queue-to-queue-transfer)
++ [Manage Calls in a Queue Using a Transfer to Queue Block](transfer.md#queue-to-queue-transfer)
 
 ### General<a name="july18-general"></a>
 + Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.

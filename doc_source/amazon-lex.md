@@ -8,7 +8,7 @@ To follow along with this walkthrough, you need the following:
 + An active AWS account\. 
 + An Amazon Connect instance created in the US East \(N\. Virginia\) Region\. After you create your instance, claim a phone number for it\.
 
-## Step 1: Create an Amazon Lex Bot<a name="lex-bot-create"></a>
+## Create an Amazon Lex Bot<a name="lex-bot-create"></a>
 
 In this step you'll create a custom bot to demonstrate the Press or Say integration with Amazon Connect\. The bot prompts callers to press or say a number that matches the menu option for the task to complete\. In this case, the input is checking their account balance\.
 
@@ -24,7 +24,7 @@ In this step you'll create a custom bot to demonstrate the Press or Say integrat
 
 1. Choose **Create**\.
 
-## Step 2: Configure the Amazon Lex Bot<a name="lex-bot-configure"></a>
+## Configure the Amazon Lex Bot<a name="lex-bot-configure"></a>
 
 In this step you'll determine how the bot responds to customers by providing intents, sample utterances, slots for input, and error handling\.
 
@@ -85,7 +85,7 @@ Now that you have intents, utterances, and a slot, add the responses that the bo
 
 1. Choose **Save Intent**\.
 
-## Step 3: Build and Test the Amazon Lex Bot<a name="lex-bot-build"></a>
+## Build and Test the Amazon Lex Bot<a name="lex-bot-build"></a>
 
 After you create your bot, make sure it works as intended before you publish it\.
 
@@ -101,7 +101,7 @@ After you create your bot, make sure it works as intended before you publish it\
 
 1. To confirm that the **SpeakToAgent** intent is working, type **2**\.
 
-## Step 4: Publish the Amazon Lex Bot and Create an Alias<a name="lex-bot-publish"></a>
+## Publish the Amazon Lex Bot and Create an Alias<a name="lex-bot-publish"></a>
 
 Next, publish the bot so that you can add it to a contact flow in Amazon Connect\.
 
@@ -111,7 +111,7 @@ Next, publish the bot so that you can add it to a contact flow in Amazon Connect
 
 1. Choose **Publish**\.
 
-## Step 5: Add the Amazon Lex Bot to an Amazon Connect Instance<a name="lex-bot-add-to-connect"></a>
+## Add the Amazon Lex Bot to an Amazon Connect Instance<a name="lex-bot-add-to-connect"></a>
 
 Before you can use a bot in your contact flow you need to add it to your Amazon Connect instance\. You can only add bots created under the same AWS account and in the same Region as your instance\.
 
@@ -125,13 +125,9 @@ Before you can use a bot in your contact flow you need to add it to your Amazon 
 
 1. Select the **AccountBalance** bot and choose **Save Lex Bots**\. If the name of your bot doesn't appear in the list, reload the page to get it to show up\.
 
-## Step 6: Create a Contact Flow and Add Your Amazon Lex Bot<a name="lex-bot-create-flow-add-bot"></a>
+## Create a Contact Flow and Add Your Amazon Lex Bot<a name="lex-bot-create-flow-add-bot"></a>
 
-Next, create a new contact flow that uses your Amazon Lex bot\.
-
-### Create the Contact Flow<a name="lex-bot-create-flow"></a>
-
-When you create the contact flow, you can configure the message played to callers\.
+Next, create a new contact flow that uses your Amazon Lex bot\. When you create the contact flow, you configure the message played to callers\.
 
 1. Log in to your Amazon Connect instance with an account that has permissions for contact flows and Amazon Lex bots\.
 
@@ -188,7 +184,7 @@ Your finished contact flow will look something like the following one:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-contactflow-designer.png)
 
-## Step 7: Assign the Contact Flow to a Phone Number<a name="lex-bot-assign-number"></a>
+## Assign the Contact Flow to a Phone Number<a name="lex-bot-assign-number"></a>
 
 When callers call in to your contact center, the contact flow to which they are sent is the one assigned to the telephone number that they dialed\. To make the new contact flow active, assign it to a phone number for your instance\.
 
@@ -204,6 +200,6 @@ When callers call in to your contact center, the contact flow to which they are 
 
 1. Choose **Save**\.
 
-## Step 8: Try It\!<a name="lex-bot-try-it"></a>
+## Try It\!<a name="lex-bot-try-it"></a>
 
 To try the bot and contact flow, call the number you assigned to the contact flow\. Follow the prompts\. 

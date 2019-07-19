@@ -17,7 +17,7 @@ To get started with Amazon Connect, create an Amazon Connect virtual contact cen
 
 ## Step 1: Identity Management<a name="get-started-identity-management"></a>
 
-Permissions to access Amazon Connect features and resource are assigned to user accounts within Amazon Connect\. When you create an instance, you must decide how you want to manage users\. You can't change the identity management option after you create the instance\. For more information, see [Identity Management in Amazon Connect](connect-identity-management.md)\.
+Permissions to access Amazon Connect features and resource are assigned to user accounts within Amazon Connect\. When you create an instance, you must decide how you want to manage users\. You can't change the identity management option after you create the instance\. For more information, see [Plan Your Identity Management in Amazon Connect](connect-identity-management.md)\.
 
 **To configure identity management for your instance**
 
@@ -63,7 +63,7 @@ Customers can call into your contact center and speak to an agent\. Agents can u
 
 ## Step 4: Data Storage<a name="get-started-data-storage"></a>
 
-Data, such as call recordings and reports, is stored securely in an Amazon S3 bucket\. When you create an instance, by default, we create a bucket and encrypt it using AWS Key Management Service\. This bucket and key are used for both calling recordings and exported reports\. Alternatively, you can specify separate buckets and keys for call recordings and exported reports\.
+Data, such as reports and recordings of conversations, is stored securely in an Amazon S3 bucket\. When you create an instance, by default, we create a bucket and encrypt it using AWS Key Management Service\. This bucket and key are used for both recordings of conversations and exported reports\. Alternatively, you can specify separate buckets and keys for recordings of conversations and exported reports\.
 
 By default, we enable contact flow logs\. For more information, see [Contact Flow Logs](contact-flow-logs.md)\.
 
@@ -73,7 +73,7 @@ You can choose **Next step** to keep the default data storage settings, or you c
 
 1. Choose **Customize settings**\.
 
-1. \(Optional\) To specify the bucket and KMS key for call recordings, choose **Call recordings**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
+1. \(Optional\) To specify the bucket and KMS key for recordings of conversations, choose **Call recordings**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
 
 1. \(Optional\) To specify the bucket and KMS key for exported reports, choose **Exported reports**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
 

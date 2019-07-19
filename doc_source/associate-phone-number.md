@@ -1,6 +1,6 @@
 # Associate a Phone Number with a Contact Flow<a name="associate-phone-number"></a>
 
-You can attach contact flows to phone numbers\. You cannot assign a contact flow to a phone number until the contact flow is published\.
+After you publish a contact flow, you can associate a phone number with it\.
 
 **To associate a phone number with a contact flow**
 

@@ -1,4 +1,4 @@
-# Amazon Connect Security Profiles<a name="connect-security-profiles"></a>
+# Assign Permissions: Security Profiles<a name="connect-security-profiles"></a>
 
 Security profiles consist of permissions that determine which Amazon Connect users can view, update, or create which Amazon Connect resources or perform specific tasks\. Assigning a security profile to a user grants that user the permissions you added to the security profile\. For example, you can grant users read/write access to routing profiles\.
 
@@ -7,7 +7,7 @@ Security profiles are organized into the following permission groups:
 + **Numbers and flows**—Grant access to prompts, contact flows, and phone numbers\.
 + **Users and permissions**—Grant access to users, agent hierarchies, security profiles, and agent status\.
 + **Contact Control Panel \(CCP\)**—Grant access to the CCP and to make outbound calls\.
-+ **Metrics and Quality**—Grant access to metrics, contact search, contact attributes, login/logout reports, manager listen in, call recordings, and saved reports\.
++ **Metrics and Quality**—Grant access to metrics, contact search, contact attributes, login/logout reports, manage conversations, recordings of conversations, and saved reports\.
 + **Historical Changes**—Grant access to view historical changes\.
 
 For each permission group, there is a set of resources and supported set of actions\. For example, users are part of the **Users and permissions** group, which supports the following actions: view, edit, create, remove, enable/disable, and edit permission\. Some actions depend on other actions\. When you choose an action that depends on another action, the dependent action is automatically chosen and must also be granted\. For example, if you add permission to edit users, we also add permission to view users\.
@@ -15,7 +15,7 @@ For each permission group, there is a set of resources and supported set of acti
 ## Considerations<a name="considerations"></a>
 + When you grant permission to edit users, you also grant permission to reset user passwords, including that of the administrator\.
 + When you grant permission to create or edit users, you also grant permission to assign users a security profile that grants them full access to the contact center\.
-+ In the Metrics and Quality permission group, you can enable a download icon for recorded conversations\. When members of this group go to **Metrics and quality**, **Contact search**, and then do a search of calls, they will see an icon to download recordings\. 
++ In the Metrics and Quality permission group, you can enable a download icon for recorded conversations\. When members of this group go to **Metrics and quality**, **Contact search**, and then do a search of contacts, they will see an icon to download recordings\. 
 **Important**  
 This setting isn't a security feature\. Users who don't have this permission can still download recordings using other less\-discoverable ways\.
 

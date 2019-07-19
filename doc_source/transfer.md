@@ -1,13 +1,30 @@
 # Set up Call Transfers<a name="transfer"></a>
 
-To make it easy for you to transfer contacts, Amazon Connect includes three transfer contact blocks:
-+ **Transfer to queue**: Use to end the current contact flow and place the customer in a queue\. 
-+ **Transfer to phone number**: Use to transfer the customer to a phone number, such as an external number\.
-+ **Transfer to flow**: Use to end the current flow and transfer the customer to another contact flow\.
-
-It also includes quick connects, which are like an address book of common destinations for transfers\. 
+To make it easy for you to transfer contacts, Amazon Connect provides you with several tools: 
++ Two contact flow types:
+  + Transfer to agent: Enables transfers to another agent\.
+  + Transfer to queue: Enables transfers to a queue\.
++ Action blocks:
+  + **Transfer to queue**: Use to end the current contact flow and place the customer in a queue\. 
+  + **Transfer to phone number**: Use to transfer the customer to a phone number, such as an external number\.
+  + **Transfer to flow**: Use to end the current flow and transfer the customer to another contact flow\.
++ Quick connects: Use to create common destinations for transfers\. Agents will see them as options in the CCP when they go to do a transfer\.
 
 This topic explains how to create quick connects and use transfer contact blocks in specific scenarios\. 
+
+## Overview of Steps<a name="w11aac13c21c13b9"></a>
+
+**To set up call transfers and quick connects**
+
+1. Choose a contact flow type based on what you want to do: Transfer to agent or Transfer to queue\. External transfers do not require a specific type of contact flow\.
+
+1. Create and publish the contact flow\. 
+
+1. Create a quick connect for the type of transfer to enable: **Agent**, **Queue**, or **External**\.
+
+   When you create the **Agent** or **Queue** quick connect, select a contact flow that matches the type of transfer to enable\. **External** quick connects require only a phone number, and do not allow you to set a queue or contact flow\.
+
+1. Add the quick connect that you created to any queue used in a contact flow for which to enable call transfer, such as the queue used in the contact flow for incoming calls\. Make sure the queue is in a routing profile assigned to the agents who transfers calls\. 
 
 ## Create Quick Connects<a name="quick-connects"></a>
 
@@ -18,7 +35,7 @@ When you create a quick connect, you can specify one of these destinations:
 + **Agent**—Contacts are transferred to a specific agent as part of a contact flow\.
 + **Queue**—Contacts are transferred to a queue as part of a contact flow\.
 **Important**  
-Agent and Queue quick connects only appear in the contact control panel when an agent transfers a call\. 
+Agent and Queue quick connects only appear in the CCP when an agent transfers a call\. 
 
 **To create a quick connect**
 
@@ -76,7 +93,7 @@ When the block executes:
 
 1. If the call is not successfully transferred, one of the other branches is followed: **Call failed**, **Timeout**, or **Error**, depending on the reason the caller did not return to the flow\.
 
-## Manage Calls in a Queue<a name="queue-to-queue-transfer"></a>
+## Manage Calls in a Queue Using a Transfer to Queue Block<a name="queue-to-queue-transfer"></a>
 
 For calls coming into your contact center, you can define advanced routing decisions to minimize queue wait times, or route calls to specific queues, using blocks in your contact flow\. For example, use a **Check queue status** block to check staffing or agent availability for a queue before sending a call to that queue, or use a **Get queue metrics** block to retrieve queue metrics\. Then use a **Check contact attributes** block to check specific queue metric attributes, and define conditions in the block to determine which queue to route the call to based on attribute values\. For more information about using queue metrics, see [Using System Metric Attributes](connect-contact-attributes.md#attrib-system-metrics)\.
 

@@ -8,6 +8,6 @@ If you want to keep a phone number you already have, you can port the phone numb
 
 **Topics**
 + [Claim a Phone Number](claim-phone-number.md)
-+ [Associate a Phone Number with a Contact Flow](associate-phone-number.md)
++ [Release a Phone Number](release-phone-number.md)
 + [Port Your Current Phone Number](port-phone-number.md)
 + [Claim Phone Numbers for Asia Pacific \(Tokyo\)](connect-tokyo-region.md)

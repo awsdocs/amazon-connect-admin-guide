@@ -1,41 +1,13 @@
-# Communicate With Contacts<a name="amazon-connect-contact-control-panel"></a>
+# Provide Access to the Contact Control Panel<a name="amazon-connect-contact-control-panel"></a>
 
-Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with contacts\. They can use the CCP with a softphone or a desk phone\. 
-
-As the admin, you manage the phone numbers at the instance level, not in the CCP\. For more information, see [Set Up Phone Numbers for Your Contact Center](contact-center-phone-number.md)\. 
-
-## Amazon Connect CCP Concepts<a name="amazon-connect-ccp-concepts"></a>
-
-Amazon Connect provides a number of management and configuration options for your contact center\. The terminology and concepts that are central to your understanding and use of Amazon Connect are described below\.
-
-**agent**  
-Users who handle contacts using Amazon Connect\.
-
-**softphone**  
-A browser\-based telephony service that is not linked to a handset\. It can be used remotely, provided that the agent is logged in to Amazon Connect\.
-
-**desk phone/handset**  
-A physical telephone requiring an agent to be in its proximity in order to make or receive calls\.
-
-**status**  
-Metrics are gathered based on changes in agent status \(available, offline, and so on\)\. 
-
-**after contact work**  
-A state where the agent is no longer on a call but has related work to complete before being able to accept or make other calls\.
-
-**leave**  
-Leave a multi\-party call without disconnecting the other parties or hanging up the call\.
-
-## Access the Amazon Connect CCP<a name="launch-ccp"></a>
-
-As the admin, you can access the CCP by clicking on the phone icon in the upper right corner of Amazon Connect\. 
-
-Before agents can access to the CCP and handle contacts, however, there are a few things you need to do: 
-+ Add them as users to the instance\. For more information, see [Add and Manage Users in Amazon Connect](connect-security.md)\.
-+ Configure their permissions\. By default agents assigned to the Agent security profile can access the CCP and make outbound calls\. But you can create a custom security profile and add additional permissions\. For more information, see [Amazon Connect Security Profiles](connect-security-profiles.md)\.
+Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with contacts\. But before agents can access to the CCP and handle contacts, there are a few things you need to do: 
++ Add them as users to the instance\. For more information, see [Manage Users in Amazon Connect](connect-security.md)\.
++ Configure their permissions\. By default agents assigned to the Agent security profile can access the CCP and make outbound calls\. But you can create a custom security profile and add additional permissions\. For more information, see [Assign Permissions: Security Profiles](connect-security-profiles.md)\.
 + Give them their user name, password, and a link to the CCP so they can log in\. The default link is https://*name of your instance*\.awsapps\.com/connect/ccp\#/\.
 
 We recommend telling agents to bookmark the URL to the CCP so they can access it easily\.
+
+As the admin, you can access the CCP by clicking on the phone icon in the upper right corner of Amazon Connect\.
 
 ## Grant Microphone Access<a name="accessing-microphone"></a>
 
@@ -88,10 +60,10 @@ When there are new IP address ranges supported for Amazon Connect, they are adde
 The status settings are used for reporting purposes to ensure that system issues are resolved quickly and to manage resources\.
 
 The following settings are available:
-+ **Available**—Indicates that an agent is available to take calls\.
++ **Available**—Indicates that an agent is available to take contacts\.
 + **Offline**—Logs agents out and removes them from the pool of available agents\.
 
-## Application Integration<a name="app-integration"></a>
+## Whitelist Integrated Applications<a name="app-integration"></a>
 
 All domains that embed the CCP for a particular instance must be explicitly whitelisted for cross\-domain access to the instance\. For example, to integrate with Salesforce, you must whitelist your Salesforce Visualforce domain\.
 

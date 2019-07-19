@@ -13,15 +13,3 @@ For a detailed walkthrough, see [Creating a secure IVR solution with Amazon Conn
 + Configure Amazon Connect to collect a credit card number\.
 + Encrypt the credit card digits\.
 + Send it to our backend AWS Lambda for decryption, using the customer supplied decryption key\.
-
-**To upload a signing key so you can use public\-key cryptography**
-
-1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
-
-1. In the **Instance Alias** column, choose the name of the instance you want to work with\.
-
-1. In the navigation pane, choose **Contact flows**\.
-
-1. Choose **Add key**\.
-
-1. Paste the contents of your public key in **Public key contents** and choose **Add**\.
