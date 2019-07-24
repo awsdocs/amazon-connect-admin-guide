@@ -8,4 +8,4 @@
 
 ## View How Many Customers Are Waiting For A Callback<a name="w11aac29c15c17b5"></a>
 
-To only see a count of the customers waiting for a call back, you need to create a queue that only takes callback contacts\. To learn how to do this, see [Create Amazon Connect Queues](connect-queues.md)\.
+To only see a count of the customers waiting for a call back, you need to create a queue that only takes callback contacts\. To learn how to do this, see [Set Up Routing](connect-queues.md)\.

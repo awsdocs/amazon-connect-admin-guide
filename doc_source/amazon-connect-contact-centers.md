@@ -11,7 +11,7 @@ Finally, you'll need to provide your agents access to the Contact Control Panel 
 **Topics**
 + [Create an Instance](amazon-connect-instances.md)
 + [Set Up Your Phone Numbers](contact-center-phone-number.md)
-+ [Create Queues](connect-queues.md)
++ [Set Up Routing](connect-queues.md)
 + [Set Up Agents](connect-agents.md)
 + [Create Contact Flows](connect-contact-flows.md)
 + [Provide Access to the CCP](amazon-connect-contact-control-panel.md)
