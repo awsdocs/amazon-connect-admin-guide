@@ -12,6 +12,7 @@ Data in real\-time metrics reports is refreshed as follows:
 
 **Topics**
 + [Create a Real\-time Metrics Report](create-real-time-report.md)
++ [No Metrics or Too Few Rows in a Queues Report?](troubleshoot-rtm.md)
 + [Download a Real\-time Metrics Report](download-real-time-metrics-report.md)
 + [View How Many Customers Are Waiting In Queue](call-back.md)
 + [Real\-time Metrics Definitions](real-time-metrics-definitions.md)

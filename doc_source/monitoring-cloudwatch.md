@@ -26,6 +26,7 @@ Unit: Count
 
 **ConcurrentCalls**  
 The number of concurrent active voice calls in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active calls at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active voice calls are included, not only active calls that are connected to agents\.  
+While all statistics are available in CloudWatch for concurrent voice calls you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.   
 Unit: Count
 
 **ConcurrentCallsPercentage**  
@@ -46,6 +47,7 @@ Unit: Seconds
 
 **MissedCalls**  
 The number of voice calls that were missed by agents during the refresh interval selected, such as 1 minute or 5 minutes\. A missed call is one that is not answered by an agent within 20 seconds\.  
+To monitor the total missed calls in a given time period, take a look at the Sum statistic in CloudWatch\.  
 Unit: Seconds
 
 **MisconfiguredPhoneNumbers**  
@@ -66,6 +68,8 @@ Unit: Count
 
 **ThrottledCalls**  
 The number of voice calls that were rejected because the rate of calls per second exceeded the maximum supported limit\. To increase the supported rate of calls, request an increase in the service limit for concurrent active calls per instance\.  
+To monitor the total throttled calls in a given time period, take a look at the Sum statistic in CloudWatch\.  
+Unit: Seconds  
 Unit: Count
 
 **ToInstancePacketLossRate**  
@@ -101,6 +105,9 @@ Filters metric data by connection\. Includes the following metrics:
 + ToInstancePacketLossRate
 
 ### Queue Metrics Dimension<a name="queue-metrics-dimension"></a>
+
+**Note**  
+If a queue has a dimension name in non\-ASCII characters, you won't be able to see it in CloudWatch\. 
 
 Filters metric data by queue\. Includes the following metrics:
 + CallBackNotDialableNumber

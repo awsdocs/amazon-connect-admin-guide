@@ -21,6 +21,8 @@ For Mozilla Firefox steps, see [Firefox Page Info window](https://support.mozill
 A change introduced in Google Chrome version 64 may result in issues with receiving calls if you are using an embedded Contact Control Panel \(CCP\) softphone using the Amazon Connect Streams library\. If you are experiencing issues with your microphone when using Chrome version 64, you can resolve the issue by building and deploying the latest version of the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md#downloading-streams), following the steps under *Downloading Streams*\.  
 You can also resolve the issue by using Firefox as your browser\.
 
+For help solving problems with hearing a conversation, see [Set up Softphones and Desk Phones](#phone-settings)\. 
+
 ## Use E\.164 Format for Telephone Numbers<a name="international-calls-ccp"></a>
 
 Amazon Connect requires phone numbers in [ E\.164](https://www.itu.int/rec/T-REC-E.164/en) format\. E\.164 is an international public telecommunication numbering plan defined by the International Telecommunication Union \(ITU\)\. Using phone numbers in E\.164 format ensures that numbers are interpreted consistently when placing calls between countries, and when phone numbers are passed between software applications and telephony services\.
@@ -33,7 +35,7 @@ To express a US phone number to E\.164 format, add the '\+' prefix and the count
 
 ## Set up Softphones and Desk Phones<a name="phone-settings"></a>
 
-Before agents can use the CCP, check the following configurations:
+Before agents can use the CCP, or if they are having problems hearing a conversation or being heard, check the following:
 + **Headset connectivity**—Check the settings in Device Management to ensure that your computer recognizes the headset and allows proper headset connectivity\.
 + **Set up headset**—You may need to adjust your browser settings to ensure correct peripheral selection\.
 + **Desktop notifications**—Ensure that the browser is not in incognito mode so that desktop notifications can be displayed\.

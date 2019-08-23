@@ -132,6 +132,18 @@ Any attribute returned from an AWS Lambda function is overwritten with the next 
 
 1. Under **Conditions to check**, choose the operator for the condition, then enter a value to compare to the attribute value\. A branch is created for each comparison you enter, letting you route the contact based on the conditions specified\. If no condition is matched, the contact takes the **No Match** branch from the block\.
 
+### "$" is a Special Character<a name="dollar-sign-special"></a>
+
+Amazon Connect treats the "$" character as a special character\. You can't use it in a key when setting an attribute\. 
+
+ For example, let's say you're creating an interact block with text\-to\-speech\. You set an attribute like this: 
+
+ ` {"$one":"please read this text"} ` 
+
+When Amazon Connect reads this text, it will read "dollar sign one" to the contact instead of "please read this text\." Also, if you were to include $ in a key and try to reference the value later using Amazon Connect, it won't retrieve the value\. 
+
+Amazon Connect does log and pass the full key:value pair `({"_$one":"please read this text"})` to integrations such as Lambda\. 
+
 ## Use Amazon Connect Contact Attributes with Other Services<a name="attribs-external-references"></a>
 
 You can reference contact attributes set in your Amazon Connect contact flow in other services, such as in an Amazon Lex bot or AWS Lambda function\. This allows data associated with the customer or the contact to be shared between services\. To use contact attributes to access other resources, set a user\-defined attribute in your contact flow and use the Amazon Resource Name \(ARN\) of the resource you want to access as the value for the attribute\. For example, to use an Amazon Connect prompt in a Lambda function, set a user\-defined attribute to the ARN for the prompt, and then access that attribute from the Lambda function\.
@@ -304,7 +316,7 @@ The following sections describe the contact attributes available in Amazon Conne
 | Queue ARN | The ARN for the queue\. | System | $\.Queue\.ARN | 
 | Text to speech voice | The name of the voice to use for text\-to\-speech\. | System | $\.TextToSpeechVoiceId | 
 | Contact id | The unique identifier of the contact\. | System | $\.ContactId | 
-| Initial contact id | The unique identifier for the first contact a customer had with your contact center\. Use the initial contact ID to track contacts between contact flows\. | System | $\.InitialContactId | 
+| Initial contact id | The unique identifier for the first contact a customer had with your contact center\. Use the initial contact ID to track contacts between contact flows\.  | System | $\.InitialContactId | 
 | Previous contact id | The unique identifier for the contact before it was transferred\. Use the previous contact ID to trace contacts between contact flows\. | System | $\.PreviousContactId | 
 | Channel | The method of contact\. Currently, only VOICE is supported in Amazon Connect\. | System | $\.Channel | 
 | Instance ARN | The ARN for your Amazon Connect instance\. | System | $\.InstanceARN | 

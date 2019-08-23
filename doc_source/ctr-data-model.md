@@ -2,6 +2,9 @@
 
 This document describes the data model for Amazon Connect contact trace records\. Contact trace records capture the events associated with a contact in your contact center\. Real\-time and historical metrics are based on the data captured in contact trace records\.
 
+**Tip**  
+Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for multiple reasons, such as new information arriving after initial delivery\. If you're building a system that consumes CTR export streams, be sure to include logic that checks for duplicate CTRs for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
+
 ## Agent<a name="ctr-Agent"></a>
 
 Information about the agent that handled the contact\.
@@ -266,7 +269,7 @@ Length: 0\-256
 
 **Status**  
 The recording status\.  
-Valid values: `AVAILABLE` \| `DELETED` 
+Valid values: `AVAILABLE` \| `DELETED` \| `NULL` 
 
 **Type**  
 The recording type\.  
@@ -284,3 +287,9 @@ Type: ARN
 The name of the routing profile\.  
 Type: String  
 Length: 1\-100
+
+## How to Identify Abandoned Contacts<a name="abandoned-contact"></a>
+
+Abandoned refers to a contact that was disconnected by the customer while in queue \(they weren't connected to an agent\)\. 
+
+The CTR for an abandoned contact will have a **Queue**, and an **Enqueue Timestamp** since it was enqueued\. It won’t have a **ConnectedToAgentTimestamp**, or any of the other fields that only populate once the contact has been connected to an agent\.

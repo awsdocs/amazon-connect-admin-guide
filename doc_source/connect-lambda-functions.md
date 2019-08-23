@@ -92,6 +92,10 @@ The request is divided into three parts:
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 
+When a synchronous invocation returns an error, Amazon Connect retries up to 3 times, for a maximum of 8 seconds\. At that point, the flow will progress down the Error branch\. 
+
+To learn more about how Lambda retries, see [Error Handling and Automatic Retries in AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/retries-on-errors.html)\. 
+
 ## Configure Your Lambda Function to Parse the Event<a name="function-parsing"></a>
 
 To successfully pass attributes between your Lambda function and Amazon Connect, configure your function to correctly parse the JSON request sent from the **Invoke AWS Lambda function** block, and define any business logic that should be applied\. How the JSON is parsed depends on the runtime you use for your function\. For example, the following example shows how to access `sentAttributeKey` using Node\.JS:

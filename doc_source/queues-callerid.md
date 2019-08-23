@@ -3,14 +3,18 @@
 There are a few times when your outbound caller ID—your company name and number—will appear to contacts:
 + During customer callbacks\.
 + If an agent makes an outbound call\.
++ If an agent transfers a call, for example, to an external number\.
 
 There are a few places where you can specify what your outbound caller ID will be:
 + In a queue\. You can specify both the outbound caller ID name and the phone number\. For instructions, see [Create a Queue](create-queue.md)\.
 + In the **Set callback number** block in a contact flow\. Use this block to set up customer callback\. You can only specify the phone number\. For more information about this block, see [Contact Block Definitions](contact-blocks.md)\. 
 + In the **Call phone number** block in an outbound whisper contact flow\. You can use this block with the **Set contact attributes** block to set the callback number dynamically\. For example, you can display a certain caller ID number based on the customer's account type\. For more information, see [Initiate an Outbound Call](using-call-number-block.md)\. 
++ In the **Transfer to phone number** block\. For more information, see [Set up Call Transfers](transfer.md)\. 
 
 ## Why Your Caller ID Might Not Appear Correctly to Customers<a name="w11aac13c17c23c11"></a>
 
-When Amazon Connect initiates a call, it sends the callback name and number as the origination party\. However, the information displayed to the person called may not always match the callback name or number you set\. This is because in some cases the callback name is provided by the carrier of the person you're calling\.
+Amazon Connect presents Outbound Caller ID Name correctly via the Calling Line/Party Presentation service on outbound calls\. In testing, with all of our telephony providers, the Outbound Caller ID Name value comes back to us intact on all the carriers we use\. This service is not consistent because downstream carriers \(including mobile carriers\) often ignore the value we set in the Outbound Caller ID Name and CNAM is not regulated or enforced\. 
 
-What's more, the information may not be up\-to\-date with that carrier, or the number may get passed differently between systems due to hardware or configuration differences\. If this happens, the person you call may not see the phone number, or may see the name of a previously registered owner of the number, instead of the name of the registered person from your organization\.
+To have this work more consistently, in the US, telephony providers will likely require registering your name with CNAM databases, such as Neustar, \(formerly Targus\), VeriSign, or Syniverse\. Amazon Connect does not support CNAM registration directly\. We are considering adding CNAM registration as a feature of Amazon Connect in the future\. In the interim, you can add CNAM functionality to your existing phone numbers by engaging with companies that focus specifically on accurate CNAM and fraud applications\. 
+
+While we can't speak for a specific provider, Neustar has historically been used by companies such as Verizon, CenturyLink, Fairpoint, Frontier, Windstream, Comcast, Cox, and others\. You can and may want to register with multiple CNAM databases\. Even so, CNAM registration is not a guarantee since not all carriers do a CNAM look up, and some charge you for it\.

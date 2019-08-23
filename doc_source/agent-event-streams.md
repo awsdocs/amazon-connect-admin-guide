@@ -1,6 +1,10 @@
 # Amazon Connect Agent Event Streams<a name="agent-event-streams"></a>
 
-Amazon Connect agent event streams are Amazon Kinesis data streams that provide you with near real\-time reporting of agent activity within your Amazon Connect instance\. The events published to the stream include agent login, agent logout, agent answers a call, and agent status change\.
+Amazon Connect agent event streams are Amazon Kinesis data streams that provide you with near real\-time reporting of agent activity within your Amazon Connect instance\. The events published to the stream include these CCP events: 
++ Agent login
++ Agent logout
++ Agent answers a call
++ Agent status change, such as to Available
 
 You can use the agent event streams to create dashboards that display agent information and events, integrate streams into workforce management \(WFM\) solutions, and configure alerting tools to trigger custom notifications of specific agent activity\. Agent event streams help you manage agent staffing and efficiency\.
 
@@ -29,7 +33,7 @@ You can use agent event stream data to determine the amount of time an agent spe
 
 In agent event streams, you can determine the time at which an agent entered ACW status by viewing the `StateStartTimeStamp` for the event for a contact entering the `ENDED` state in the event stream\.
 
-For example, in the following example agent event stream output, the agent enters ACW at "**StateStartTimestamp**": "2018\-10\-25T18:55:27\.027Z"\.
+For example, in the following example agent event stream output, the agent enters ACW at "**StateStartTimestamp**": "2019\-05\-25T18:55:27\.017Z"\.
 
 ```
 {
@@ -39,7 +43,7 @@ For example, in the following example agent event stream output, the agent enter
         "AgentStatus": {
             "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
             "Name": "Available",
-            "StartTimestamp": "2018-10-25T18:43:59.059Z"
+            "StartTimestamp": "2019-05-25T18:43:59.049Z"
         },
         "Configuration": {
             "AgentHierarchyGroups": null,
@@ -68,7 +72,7 @@ For example, in the following example agent event stream output, the agent enter
         "Contacts": [
             {
                 "Channel": "VOICE",
-                "ConnectedToAgentTimestamp": "2018-10-25T18:55:21.021Z",
+                "ConnectedToAgentTimestamp": "2019-05-25T18:55:21.011Z",
                 "ContactId": "ContactId-1",
                 "InitialContactId": null,
                 "InitiationMethod": "OUTBOUND",
@@ -78,19 +82,19 @@ For example, in the following example agent event stream output, the agent enter
                 },
                 "QueueTimestamp": null,
                 "State": "ENDED",
-                "StateStartTimestamp": "2018-10-25T18:55:27.027Z"  //Agent entered ACW at this time
+                "StateStartTimestamp": "2019-05-25T18:55:27.017Z"  //Agent entered ACW at this time
             }
         ]
     },
     "EventId": "EventId-1",
-    "EventTimestamp": "2018-10-25T18:55:27.027Z",
+    "EventTimestamp": "2019-05-25T18:55:27.017Z",
     "EventType": "STATE_CHANGE",
     "InstanceARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111",
     "PreviousAgentSnapshot": {
         "AgentStatus": {
             "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
             "Name": "Available",
-            "StartTimestamp": "2018-10-25T18:43:59.059Z"
+            "StartTimestamp": "2019-05-25T18:43:59.049Z"
         },
         "Configuration": {
             "AgentHierarchyGroups": null,
@@ -119,7 +123,7 @@ For example, in the following example agent event stream output, the agent enter
         "Contacts": [
             {
                 "Channel": "VOICE",
-                "ConnectedToAgentTimestamp": "2018-10-25T18:55:21.021Z",
+                "ConnectedToAgentTimestamp": "2019-05-25T18:55:21.011Z",
                 "ContactId": "ContactId-1",
                 "InitialContactId": null,
                 "InitiationMethod": "OUTBOUND",
@@ -129,17 +133,17 @@ For example, in the following example agent event stream output, the agent enter
                 },
                 "QueueTimestamp": null,
                 "State": "CONNECTED",
-                "StateStartTimestamp": "2018-10-25T18:55:21.021Z"
+                "StateStartTimestamp": "2019-05-25T18:55:21.011Z"
             }
         ]
     },
-    "Version": "2017-10-01"
+    "Version": "2019-05-25"
 }
 ```
 
 Agent ACW state ends when the agent enters another state, such as when the agent chooses a status in the CCP\. To determine the time at which an agent left ACW status, you can view the `EventTimeStamp` for the `EventType` "STATE\_CHANGE" in the stream output\. Note that a STATE\_CHANGE event also occurs when the agent's configuration is changed, such as the routing profile assigned to the agent\. To confirm that you are using the correct `EventTimeStamp` associated with the agent leaving ACW status, use the `EventTimeStamp` for the event where the associated `CurrentAgentSnapshot` has no contacts listed, and the state for the contact listed in the `PreviousAgentSnapshot` equals ENDED\.
 
-For example, in the following example agent event stream file, the agent left ACW at "**EventTimestamp**": "2018\-10\-25T18:55:32\.032Z"\.
+For example, in the following example agent event stream file, the agent left ACW at "**EventTimestamp**": "2019\-05\-25T18:55:32\.022Z"\.
 
 ```
 {
@@ -149,7 +153,7 @@ For example, in the following example agent event stream file, the agent left AC
         "AgentStatus": {
             "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
             "Name": "Available",
-            "StartTimestamp": "2018-10-25T18:43:59.059Z"
+            "StartTimestamp": "2019-05-25T18:43:59.049Z"
         },
         "Configuration": {
             "AgentHierarchyGroups": null,
@@ -178,14 +182,14 @@ For example, in the following example agent event stream file, the agent left AC
         "Contacts": []
     },
     "EventId": "477f2c4f-cd1a-4785-b1a8-97023dc1229d",
-    "EventTimestamp": "2018-10-25T18:55:32.032Z",
+    "EventTimestamp": "2019-05-25T18:55:32.022Z",
     "EventType": "STATE_CHANGE",
     "InstanceARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111",
     "PreviousAgentSnapshot": {
         "AgentStatus": {
             "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
             "Name": "Available",
-            "StartTimestamp": "2018-10-25T18:43:59.059Z"
+            "StartTimestamp": "2019-05-25T18:43:59.049Z"
         },
         "Configuration": {
             "AgentHierarchyGroups": null,
@@ -214,7 +218,7 @@ For example, in the following example agent event stream file, the agent left AC
         "Contacts": [
             {
                 "Channel": "VOICE",
-                "ConnectedToAgentTimestamp": "2018-10-25T18:55:21.021Z",
+                "ConnectedToAgentTimestamp": "2019-05-25T18:55:21.011Z",
                 "ContactId": "ContactId-1",
                 "InitialContactId": null,
                 "InitiationMethod": "OUTBOUND",
@@ -224,15 +228,15 @@ For example, in the following example agent event stream file, the agent left AC
                 },
                 "QueueTimestamp": null,
                 "State": "ENDED",
-                "StateStartTimestamp": "2018-10-25T18:55:27.027Z"
+                "StateStartTimestamp": "2019-05-25T18:55:27.017Z"
             }
         ]
     },
-    "Version": "2017-10-01"
+    "Version": "2019-05-25"
 }
 ```
 
-To calculate the amount of time an agent spent in ACW, subtract the "**StateStartTimestamp**": "2018\-10\-25T18:55:27\.027Z" from the "**EventTimestamp**": "2018\-10\-25T18:55:32\.032Z"\. In this example, the value is 5\.005 seconds\.
+To calculate the amount of time an agent spent in ACW, subtract the "**StateStartTimestamp**": "2019\-05\-25T18:55:27\.017Z" from the "**EventTimestamp**": "2019\-05\-25T18:55:32\.022Z"\. In this example, the value is 5\.005 seconds\.
 
 ## Agent Event Streams Data Model<a name="agent-event-stream-model"></a>
 
@@ -277,7 +281,7 @@ Type: String
 
 **EventTimestamp**  
 A time stamp for the event, in ISO 8601 standard format\.  
-Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
+Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
 
 **EventType**  
 The type of event\.   
@@ -292,7 +296,7 @@ Contains agent configuration, such as username, first name, last name, routing p
 Type: `AgentSnapshot` object
 
 **Version**  
-The version of the agent event stream in date format, such as 2017\-10\-10\.  
+The version of the agent event stream in date format, such as 2019\-05\-25\.  
 Type: String
 
 ### AgentSnapshot<a name="AgentSnapshot"></a>
@@ -305,7 +309,7 @@ Agent status data, including:
 + Name—the name of the status, such as Available or Offline\.
 + StartTimestamp—The time stamp in ISO 8601 standard format for the time at which the agent entered the status\.
 
-  Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
+  Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
 Type: `AgentStatus` object\.
 
 **Configuration**  
@@ -376,15 +380,15 @@ Valid values: `INCOMING` \| `PENDING` \| `CONNECTING` \| `CONNECTED` \| `CONNECT
 
 **StateStartTimestamp**  
 The time at which the contact entered the current state\.  
-Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
+Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
 
 **ConnectedToAgentTimestamp**  
 The time at which the contact was connected to an agent\.  
-Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
+Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
 
 **QueueTimestamp**  
 The time at which the contact was put into a queue\.  
-Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
+Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
 
 **Queue**  
 The queue the contact was placed in\.  

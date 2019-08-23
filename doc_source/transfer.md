@@ -12,7 +12,7 @@ To make it easy for you to transfer contacts, Amazon Connect provides you with s
 
 This topic explains how to create quick connects and use transfer contact blocks in specific scenarios\. 
 
-## Overview of Steps<a name="w11aac13c21c13b9"></a>
+## Overview of Steps<a name="transfer-overview"></a>
 
 **To set up call transfers and quick connects**
 

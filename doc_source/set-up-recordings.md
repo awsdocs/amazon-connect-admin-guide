@@ -2,6 +2,8 @@
 
 Managers can review and download recordings of past agent conversations\. To set this up, you need to add the **Set call recording behavior** block to your contact flows, assign managers the appropriate permissions, and show them how to access the recordings in Amazon Connect\. 
 
+A conversation is recorded only when the contact is connected to an agent\. The contact is not recorded before then, when they are connected to the IVR\. 
+
 **To set up call recording in your contact flows**
 
 1. Log in to your Amazon Connect instance using an account that has permissions to edit contact flows\.

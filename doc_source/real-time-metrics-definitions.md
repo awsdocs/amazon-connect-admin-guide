@@ -3,7 +3,7 @@
 The following metrics are available to include in real\-time metrics reports in Amazon Connect\. The metrics available to include in a report depend on the report type\.
 
 **Abandoned**  <a name="abandoned-real-time"></a>
-Count of contacts disconnected by the customer while in the queue during the specified time range\. Contacts queued for callback are not counted as abandoned\.
+Count of contacts disconnected by the customer while in the queue during the specified time range\. Contacts queued for callback are not counted as abandoned\. When you create a customized real\-time metrics report, to include this metric, choose a **Queues** report for the type\. On the **Filters** tab choose **Queues**, then on the **Metrics** tab you'll have the option to include **Abandoned**\. 
 
 **Active**  <a name="active-real-time"></a>
 Indicates whether the agent is currently active on a contact\. The value is 1 \(true\) or 0 \(false\)\.

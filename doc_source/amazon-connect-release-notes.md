@@ -4,6 +4,9 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 
 **Topics**
 + [June 2019 Update](#w11aac33b7)
++ [May 2019 Updates](#w11aac33b9)
++ [April 2019 Updates](#w11aac33c11)
++ [March 2019 Update](#w11aac33c13)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -21,6 +24,43 @@ The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
+
+## May 2019 Updates<a name="w11aac33b9"></a>
+
+The following updates were released in May 2019:
+
+### Metrics and Reporting<a name="may19-flows"></a>
++ Improved the error messages you might encounter when creating, editing, or deleting a scheduled report\. 
++ In the Historical metrics report UI, changed **Contacts missed** to **Agent non\-response**\. This metric appears as **Contacts missed** in scheduled reports and exported CSV files\.
++ In the agent event stream, fixed the formatting of the timestamp millisecond so you can better order and analyze the data\. To learn more, see [Amazon Connect Agent Event Streams](agent-event-streams.md)\. 
+
+### Contact Control Panel<a name="may19-ccp"></a>
++ Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
+
+## April 2019 Updates<a name="w11aac33c11"></a>
+
+The following updates were released in April 2019:
+
+### Contact Control Panel<a name="april19-ccp"></a>
++ Resolved an issue where the hold flow didn't run in this case: 
+  + The agent missed a call and then set themselves back to Available\.
+  + Then they were re\-routed the same call\.
+  + The agent put that customer on hold while handling the call\.
+
+  However, taking the customer off hold worked as expected and no other impact occurred\.
++ Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
+
+## March 2019 Update<a name="w11aac33c13"></a>
+
+The following updates were released in March 2019:
+
+### Metrics and Reporting<a name="march19-flows"></a>
++ Improved the error messages you might encounter when running real\-time metrics reports\. For example, if you manually configure a real\-time metrics report to contain more than 100 queues, we'll display this message: "You've hit the maximum limit of 100 queues\. Please reconfigure your report to contain no more than 100 queues\." To learn more, see [No Metrics or Too Few Rows in a Queues Report?](troubleshoot-rtm.md)
+
+### Contact Control Panel<a name="march19-ccp"></a>
++ Resolved an issue where, in rare cases, an agent already handling an outbound call could have been incorrectly presented with an additional queued callback, even though they are only allowed to handle one contact at a time\. Since that agent would have been on contact and not idle, the agent wouldn't have been able to accept the queued callback\.
+
+  In these cases, the outbound call was not impacted; the agent wouldn't have noticed any differences in the CCP\. The callback was presented to another agent instead of being dropped\.
 
 ## February 2019 Updates<a name="feb19-release-notes"></a>
 
