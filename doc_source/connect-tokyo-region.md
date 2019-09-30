@@ -11,7 +11,7 @@ If your agents use a softphone for Amazon Connect, you must allow traffic in bot
 | --- | --- | --- | --- | 
 | HTTP | 80 | TCP | AWS EC2 and CLOUDFRONT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
 | HTTPS | 443 | TCP | AWS EC2 and CLOUDFRONT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
-| TURN/STUN | 3478 and 49152\-65535 | UDP | AMAZON\_CONNECT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
+| TURN/STUN | 3478 | UDP | AMAZON\_CONNECT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
 | TURN relay media | 80 and 443 | UDP and TCP | AMAZON\_CONNECT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
 
 ## Using Amazon Connect in the Asia Pacific \(Tokyo\) Region<a name="using-connect-tokyo"></a>

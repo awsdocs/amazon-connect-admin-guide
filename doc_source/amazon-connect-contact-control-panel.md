@@ -1,7 +1,7 @@
 # Provide Access to the Contact Control Panel<a name="amazon-connect-contact-control-panel"></a>
 
 Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with contacts\. But before agents can access to the CCP and handle contacts, there are a few things you need to do: 
-+ Add them as users to the instance\. For more information, see [Manage Users in Amazon Connect](connect-security.md)\.
++ Add them as users to the instance\. For more information, see [Manage Users in Amazon Connect](manage-users.md)\.
 + Configure their permissions\. By default agents assigned to the Agent security profile can access the CCP and make outbound calls\. But you can create a custom security profile and add additional permissions\. For more information, see [Assign Permissions: Security Profiles](connect-security-profiles.md)\.
 + Give them their user name, password, and a link to the CCP so they can log in\. The default link is https://*name of your instance*\.awsapps\.com/connect/ccp\#/\.
 
@@ -53,7 +53,6 @@ When there are new IP address ranges supported for Amazon Connect, they are adde
 
 | Protocol | Port | Transport Layer | IP Range | 
 | --- | --- | --- | --- | 
-| HTTP | 80 | TCP | AWS EC2 and CLOUDFRONT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
 | HTTPS | 443 | TCP | AWS EC2 and CLOUDFRONT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
 | TURN | 3478 | UDP | AMAZON\_CONNECT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
 

@@ -3,8 +3,8 @@
 Amazon Connect agent event streams are Amazon Kinesis data streams that provide you with near real\-time reporting of agent activity within your Amazon Connect instance\. The events published to the stream include these CCP events: 
 + Agent login
 + Agent logout
-+ Agent answers a call
-+ Agent status change, such as to Available
++ Agent connects with a contact
++ Agent status change, such as to Available to handle contacts, or on Break or at Training\. 
 
 You can use the agent event streams to create dashboards that display agent information and events, integrate streams into workforce management \(WFM\) solutions, and configure alerting tools to trigger custom notifications of specific agent activity\. Agent event streams help you manage agent staffing and efficiency\.
 
@@ -27,13 +27,20 @@ If you enable server\-side encryption for the Kinesis stream you select for agen
 
 1. Under **Agent Events**, select the Kinesis stream to use, and then choose **Save**\.
 
-## Use Agent Event Streams to Determine Agent ACW Time<a name="determine-acw-time"></a>
+## Determine How Long an Agent Spends Doing ACW<a name="determine-acw-time"></a>
 
-You can use agent event stream data to determine the amount of time an agent spent in ACW\. Though there is no event in the event stream for the agent entering ACW status, you can use the other agent event data to calculate the time\.
+There's no event in the agent event stream that tells you how long a contact is in the ACW state, and by extension how long an agent spends doing ACW\. However, there's other data in the agent event stream that you can use to figure this out\. 
 
-In agent event streams, you can determine the time at which an agent entered ACW status by viewing the `StateStartTimeStamp` for the event for a contact entering the `ENDED` state in the event stream\.
+First, identify when the contact entered ACW\. Here's how to do that: 
 
-For example, in the following example agent event stream output, the agent enters ACW at "**StateStartTimestamp**": "2019\-05\-25T18:55:27\.017Z"\.
+1. Identify when the conversation between the contact and agent `ENDED`\.
+
+1. View the `StateStartTimeStamp` for the event\.
+
+For example, in the following agent event stream output, the contact enters ACW state at "**StateStartTimestamp**": "2019\-05\-25T18:55:27\.017Z"\.
+
+**Tip**  
+In the agent event stream, events are listed in reverse chronological order\. We recommend reading through following examples by starting at the bottom of each example\.
 
 ```
 {
@@ -42,7 +49,8 @@ For example, in the following example agent event stream output, the agent enter
     "CurrentAgentSnapshot": {
         "AgentStatus": {
             "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
-            "Name": "Available",
+            "Name": "Available",  //This just refers to the status that the agent sets manually in the CCP. 
+                It means they are ready to handle contacts, not say, on Break.  
             "StartTimestamp": "2019-05-25T18:43:59.049Z"
         },
         "Configuration": {
@@ -73,27 +81,31 @@ For example, in the following example agent event stream output, the agent enter
             {
                 "Channel": "VOICE",
                 "ConnectedToAgentTimestamp": "2019-05-25T18:55:21.011Z",
-                "ContactId": "ContactId-1",
+                "ContactId": "ContactId-1",  //This is the same contact the agent was working on when their state was CONNECTED (below). 
+                    Since it's still the same contact but they aren't connected, we know the contact is now in ACW state.
                 "InitialContactId": null,
-                "InitiationMethod": "OUTBOUND",
+                "InitiationMethod": "OUTBOUND",  //This indicates how the contact was initiated. OUTBOUND means the agent initiated contact with the customer. 
+                    INBOUND means the customer initiated contact with your center.
                 "Queue": {
                     "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/queue/queue-ARN-for-BasicQueue",
                     "Name": "BasicQueue"
                 },
                 "QueueTimestamp": null,
-                "State": "ENDED",
-                "StateStartTimestamp": "2019-05-25T18:55:27.017Z"  //Agent entered ACW at this time
+                "State": "ENDED",  //This shows the conversation has ended. 
+                "StateStartTimestamp": "2019-05-25T18:55:27.017Z"  //This is the timestamp for the ENDED event (above), 
+                    which is when the contact entered ACW state.
             }
         ]
     },
     "EventId": "EventId-1",
     "EventTimestamp": "2019-05-25T18:55:27.017Z",
-    "EventType": "STATE_CHANGE",
+    "EventType": "STATE_CHANGE",  //This shows that the state of the contact has changed; above we can see the conversation ENDED. 
     "InstanceARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111",
     "PreviousAgentSnapshot": {
         "AgentStatus": {
             "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
-            "Name": "Available",
+            "Name": "Available", //This just refers to the status that the agent sets manually in the CCP. 
+                It means they were ready to handle contacts, not say, on Break.  
             "StartTimestamp": "2019-05-25T18:43:59.049Z"
         },
         "Configuration": {
@@ -122,9 +134,9 @@ For example, in the following example agent event stream output, the agent enter
         },
         "Contacts": [
             {
-                "Channel": "VOICE",
+                "Channel": "VOICE",  //This shows the agent and contact were talking on the phone. 
                 "ConnectedToAgentTimestamp": "2019-05-25T18:55:21.011Z",
-                "ContactId": "ContactId-1",
+                "ContactId": "ContactId-1",  //This shows the agent was working with a contact identified as "ContactId-1".
                 "InitialContactId": null,
                 "InitiationMethod": "OUTBOUND",
                 "Queue": {
@@ -132,8 +144,8 @@ For example, in the following example agent event stream output, the agent enter
                     "Name": "BasicQueue"
                 },
                 "QueueTimestamp": null,
-                "State": "CONNECTED",
-                "StateStartTimestamp": "2019-05-25T18:55:21.011Z"
+                "State": "CONNECTED",  //This shows the contact was CONNECTED to the agent, instead of say, MISSED. 
+                "StateStartTimestamp": "2019-05-25T18:55:21.011Z"  //This shows when the contact was connected to the agent.
             }
         ]
     },
@@ -141,9 +153,17 @@ For example, in the following example agent event stream output, the agent enter
 }
 ```
 
-Agent ACW state ends when the agent enters another state, such as when the agent chooses a status in the CCP\. To determine the time at which an agent left ACW status, you can view the `EventTimeStamp` for the `EventType` "STATE\_CHANGE" in the stream output\. Note that a STATE\_CHANGE event also occurs when the agent's configuration is changed, such as the routing profile assigned to the agent\. To confirm that you are using the correct `EventTimeStamp` associated with the agent leaving ACW status, use the `EventTimeStamp` for the event where the associated `CurrentAgentSnapshot` has no contacts listed, and the state for the contact listed in the `PreviousAgentSnapshot` equals ENDED\.
+Next, determine when a contact left ACW\. Here's how to do that: 
 
-For example, in the following example agent event stream file, the agent left ACW at "**EventTimestamp**": "2019\-05\-25T18:55:32\.022Z"\.
+1. Find where the `CurrentAgentSnapshot` has no contacts, and the state for the contact listed in the `PreviousAgentSnapshot` equals ENDED\.
+
+   Because a STATE\_CHANGE event also occurs when the agent's configuration is changed, such as when they are assigned a different routing profile, this step confirms you have the right event\.
+
+1. Find where the `EventType` = "STATE\_CHANGE"\.
+
+1. View the `EventTimeStamp` for it\.
+
+For example, in the following agent event stream file, the contact left ACW at "**EventTimestamp**": "2019\-05\-25T18:55:32\.022Z"\.
 
 ```
 {
@@ -152,7 +172,8 @@ For example, in the following example agent event stream file, the agent left AC
     "CurrentAgentSnapshot": {
         "AgentStatus": {
             "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
-            "Name": "Available",
+            "Name": "Available",  //This just refers to the status that the agent sets manually in the CCP. It means they 
+                are ready to handle contacts, not say, on Break. 
             "StartTimestamp": "2019-05-25T18:43:59.049Z"
         },
         "Configuration": {
@@ -179,16 +200,19 @@ For example, in the following example agent event stream file, the agent left AC
             },
             "Username": "(Removed)"
         },
-        "Contacts": []
+        "Contacts": []  //Since a contact isn't listed here, it means ACW for ContactId-1 (below)
+            is finished, and the agent is ready for a new contact to be routed to them. 
     },
     "EventId": "477f2c4f-cd1a-4785-b1a8-97023dc1229d",
-    "EventTimestamp": "2019-05-25T18:55:32.022Z",
-    "EventType": "STATE_CHANGE",
+    "EventTimestamp": "2019-05-25T18:55:32.022Z",  //Here's the EventTimestamp for the STATE_CHANGE event. This is when
+        the contact left ACW.
+    "EventType": "STATE_CHANGE",  //Here's the STATE_CHANGE
     "InstanceARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111",
     "PreviousAgentSnapshot": {
         "AgentStatus": {
             "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
-            "Name": "Available",
+            "Name": "Available",  //This just refers to the status that the agent sets manually in the CCP. 
+                It means they were at work, not say, on Break. 
             "StartTimestamp": "2019-05-25T18:43:59.049Z"
         },
         "Configuration": {
@@ -219,7 +243,7 @@ For example, in the following example agent event stream file, the agent left AC
             {
                 "Channel": "VOICE",
                 "ConnectedToAgentTimestamp": "2019-05-25T18:55:21.011Z",
-                "ContactId": "ContactId-1",
+                "ContactId": "ContactId-1",  //This is the ContactId of the customer the agent was working on previously. 
                 "InitialContactId": null,
                 "InitiationMethod": "OUTBOUND",
                 "Queue": {
@@ -227,7 +251,7 @@ For example, in the following example agent event stream file, the agent left AC
                     "Name": "BasicQueue"
                 },
                 "QueueTimestamp": null,
-                "State": "ENDED",
+                "State": "ENDED", //The ACW for ContactId-1 has ended.  
                 "StateStartTimestamp": "2019-05-25T18:55:27.017Z"
             }
         ]
@@ -236,7 +260,10 @@ For example, in the following example agent event stream file, the agent left AC
 }
 ```
 
-To calculate the amount of time an agent spent in ACW, subtract the "**StateStartTimestamp**": "2019\-05\-25T18:55:27\.017Z" from the "**EventTimestamp**": "2019\-05\-25T18:55:32\.022Z"\. In this example, the value is 5\.005 seconds\.
+Finally, to calculate the amount of time the contact was in the ACW state, and thus how long the agent spent working on it:
++ Subtract the "**StateStartTimestamp**": "2019\-05\-25T18:55:27\.017Z" from the "**EventTimestamp**": "2019\-05\-25T18:55:32\.022Z"\. 
+
+In this example, the agent spent 5\.005 seconds doing ACW for ContactId\-1\. 
 
 ## Agent Event Streams Data Model<a name="agent-event-stream-model"></a>
 
@@ -244,9 +271,9 @@ Agent event streams are created in JavaScript Object Notation \(JSON\) format\. 
 + LOGIN—An agent login to the contact center\.
 + LOGOUT—An agent logout from the contact center\.
 + STATE\_CHANGE—One of the following changed:
-  + Agent configuration, such as profile or the assigned hierarchy group\.
-  + Agent state in the contact control panel, such as Available\.
-  + Agent conversation state, such as on hold\.
+  + Something in the agent's configuration changed, such as their routing profile\.
+  + The agent changed their status in the CCP\. For example, they changed it from Available to on Break\.
+  + The state of the conversation between then agent and contact changed\. For example, they were connected and then on hold\. 
 + HEART\_BEAT—This event is published every 120 seconds if there are no other events published during that interval\.
 
 **Topics**
@@ -306,7 +333,7 @@ The `AgentSnapshot` object includes the following properties:
 **AgentStatus**  
 Agent status data, including:  
 + AgentARN—the ARN for the agent\.
-+ Name—the name of the status, such as Available or Offline\.
++ Name—this is the status of the agent that they manually set in the CCP\. For example, their status might be **Available**, which means that they are ready for inbound contacts to be routed to them\. Or it might be a custom status, such as Break or Training, which means that inbound contacts can't be routed to them BUT they can still make outbound calls\.
 + StartTimestamp—The time stamp in ISO 8601 standard format for the time at which the agent entered the status\.
 
   Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)

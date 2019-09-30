@@ -60,7 +60,7 @@ Amazon's trademarks and trade dress may not be used in
    + [How to Access Kinesis Video Stream Data](access-media-stream-data.md)
 + [Integrate With Your CRM](crm.md)
    + [Amazon Connect and Salesforce Integration](salesforce-integration.md)
-+ [Manage Users in Amazon Connect](connect-security.md)
++ [Manage Users in Amazon Connect](manage-users.md)
    + [Add Users](user-management.md)
    + [Reset a User's Password](password-reset.md)
    + [Assign Permissions: Security Profiles](connect-security-profiles.md)

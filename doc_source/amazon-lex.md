@@ -113,7 +113,9 @@ Next, publish the bot so that you can add it to a contact flow in Amazon Connect
 
 ## Add the Amazon Lex Bot to an Amazon Connect Instance<a name="lex-bot-add-to-connect"></a>
 
-Before you can use a bot in your contact flow you need to add it to your Amazon Connect instance\. You can only add bots created under the same AWS account and in the same Region as your instance\.
+Before you can use a bot in your contact flow you need to add it to your Amazon Connect instance\. You can only add bots created under the same AWS account\. 
+
+If you add Amazon Lex bots created in a different Region from your instance, performance may be affected\.
 
 1. Open the [Amazon Connect console\.](https://console.aws.amazon.com/connect/)
 

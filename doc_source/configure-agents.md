@@ -25,6 +25,6 @@ You can't configure how long an available agent has to connect with a contact be
    + If you select desk phone, enter their phone number\.
    + If you select soft phone, choose **Auto\-Accept Call** if you want them to be connected to contacts automatically\. 
 
-1. In **After call work \(ACW\) timeout**, type how long in seconds agents have for after call work\.
+1. In **After call work \(ACW\) timeout**, type how long in seconds agents have for after call work\. At the end of this time, it's expected the agent will be finished with ACW for the contact, and will be eligible for inbound contacts again\.
 
 1. Under **Agent Hierarchy** select any groups the agent should be part of\.

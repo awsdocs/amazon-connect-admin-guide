@@ -3,11 +3,18 @@
 Troubleshooting CCP issues requires support from your network operations, system administrator, and VDI solution teams to collect the appropriate level of information to identify root cause and drive resolution\. To help determine the appropriate resources to engage, it's important to break issues down into those with similar symptoms\. The following guidance has been helpful in assisting Amazon Connect customers in resolving CCP issues with their operations support teams\.
 
 **Topics**
++ [Use the Check Connectivity Tool](#check-connectivity-tool)
 + [Common CCP Issues](#common-ccp-issues)
 + [Useful Troubleshooting Tools and Information](#tools-and-info)
 + [Gathering Helpful Information using the Streams API](#info-gathering)
 + [Analyzing the Data](#analyze-data)
 + [Validation Testing](#valid-testing)
+
+## Use the Check Connectivity Tool<a name="check-connectivity-tool"></a>
+
+When your agents are experiencing problems with CCP, we recommend you go to their workstation and run the [Amazon Connect Check Connectivity Tool](https://s3.amazonaws.com/connectivitytest/checkConnectivity.html)\. 
+
+This tool will check which web browser the agent is running, and whether the microphone has required permissions\. Click the **Test** buttons to check the ports and latency\. 
 
 ## Common CCP Issues<a name="common-ccp-issues"></a>
 
