@@ -1,6 +1,6 @@
 # Set Up Routing<a name="connect-queues"></a>
 
-In Amazon Connect routing consists of three parts: queues, routing profiles, and contact flows\. This section covers the first two; for information about contact flows, see [Create Amazon Connect Contact Flows](connect-contact-flows.md)\.
+In Amazon Connect routing consists of three parts: queues, routing profiles, and contact flows\. This section covers the first two; for information about contact flows, see [Create Amazon Connect Contact FlowsCreate Contact Flows](connect-contact-flows.md)\.
 
 A queue is 'waiting area' that holds contacts to be answered by agents\. You can use a single queue to handle all incoming contacts, or you can set up multiple queues\.
 

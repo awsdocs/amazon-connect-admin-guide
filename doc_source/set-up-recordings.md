@@ -1,4 +1,4 @@
-# Set up Call Recording<a name="set-up-recordings"></a>
+# Set Up Call Recording<a name="set-up-recordings"></a>
 
 Managers can review and download recordings of past agent conversations\. To set this up, you need to add the **Set call recording behavior** block to your contact flows, assign managers the appropriate permissions, and show them how to access the recordings in Amazon Connect\. 
 

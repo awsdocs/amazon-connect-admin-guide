@@ -1,4 +1,4 @@
-# Set up Call Transfers<a name="transfer"></a>
+# Set Up Call Transfers<a name="transfer"></a>
 
 To make it easy for you to transfer contacts, Amazon Connect provides you with several tools: 
 + Two contact flow types:
@@ -95,7 +95,7 @@ When the block executes:
 
 ## Manage Calls in a Queue Using a Transfer to Queue Block<a name="queue-to-queue-transfer"></a>
 
-For calls coming into your contact center, you can define advanced routing decisions to minimize queue wait times, or route calls to specific queues, using blocks in your contact flow\. For example, use a **Check queue status** block to check staffing or agent availability for a queue before sending a call to that queue, or use a **Get queue metrics** block to retrieve queue metrics\. Then use a **Check contact attributes** block to check specific queue metric attributes, and define conditions in the block to determine which queue to route the call to based on attribute values\. For more information about using queue metrics, see [Using System Metric Attributes](connect-contact-attributes.md#attrib-system-metrics)\.
+For calls coming into your contact center, you can define advanced routing decisions to minimize queue wait times, or route calls to specific queues, using blocks in your contact flow\. For example, use a **Check queue status** block to check staffing or agent availability for a queue before sending a call to that queue, or use a **Get queue metrics** block to retrieve queue metrics\. Then use a **Check contact attributes** block to check specific queue metric attributes, and define conditions in the block to determine which queue to route the call to based on attribute values\. For more information about using queue metrics, see [How to Use System Metric Attributes](attrib-system-metrics.md)\.
 
 After determining which queue to transfer the call to, use a **Transfer to queue** block in a contact flow to transfer the call to that queue\. When the **Transfer to queue** block runs, it checks the queue capacity to determine whether or not the queue is at capacity \(full\)\. This check for queue capacity compares the current number of calls in the queue to the **Maximum contacts in queue** limit, if one is set for the queue\. If no limit is set, the queue is limited to the number of concurrent active calls set in the service limit for the instance\.
 

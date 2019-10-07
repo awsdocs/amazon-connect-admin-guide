@@ -46,7 +46,7 @@ Amazon Connect requires WebRTC to enable soft\-phone voice media stream and Webs
    + For Phone Number Formatting, Country, specify the appropriate 2\-digit [ISO country code](https://countrycode.org/)\.
    + To provide Salesforce users with access to the Amazon Connect CCP, on the Setup Call Centers page, choose **Manage Call Center Users**\. Add the Salesforce users to enable for using these call features\. Be sure to add your own Salesforce user account if you plan to these features\.
 
-1. Whitelist your Salesforce Visualforce domain URL using the directions in [Whitelist Integrated Applications](amazon-connect-contact-control-panel.md#app-integration)\. To verify the URL, open the Visualforce page in setup\. This URL usually has the following format:
+1. Whitelist your Salesforce Visualforce domain URL using the directions in [Use an Allow List for Integrated Applications](app-integration.md)\. To verify the URL, open the Visualforce page in setup\. This URL usually has the following format:
 
    https://amazonconnect\.**your\-instance\-name**\.visual\.force\.com
 

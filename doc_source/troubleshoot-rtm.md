@@ -4,6 +4,8 @@ It's possible to run a manually configured queues report and have no metrics ret
 
 This is because a queues report only includes data for a maximum of 100 queues, using one row per queue\. If a queue doesn't have any activity\* during the time range for the report, it's excluded from the report rather than included with null values\. This means that if you create a report, and there is no activity for any of the queues included in the report, your report will not include any data\.
 
+This applies to the `GetCurrentMetricsData` API as well\. This means that if a queue is not considered active, if you query for its metrics using the API you won't get any data\.
+
 **Tip**  
 \*Here's how we define whether a queue is active: there's at least one contact in queue or there's at least one online agent for that queue\. Otherwise, it’s considered inactive\.
 
