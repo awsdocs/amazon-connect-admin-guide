@@ -1,9 +1,9 @@
 # Import/Export Contact Flows<a name="contact-flow-import-export"></a>
 
-You can export contact flows from and import contact flows into your Amazon Connect instance\. This lets you easily copy contact flows from one Amazon Connect instance to another, for example from a test environment to a production environment, or from one Region to another as you expand your customer service organization\.
+You can export contact flows from and import contact flows into your Amazon Connect instance\. This lets you can easily copy contact flows from one Amazon Connect instance to another, for example from a test environment to a production environment, or from one Region to another as you expand your customer service organization\.
 
 **Note**  
-The Contact Flow Import/Export feature is currently in Beta status\. Updates and improvements that we make could result in issues in future releases when importing contact flows exported during the beta phase\.
+The Contact Flow Import/Export feature is currently in Beta status\. Updates and improvements that we make could result in issues in future releases importing contact flows that are exported during the beta phase\.
 
 Because Amazon Connect contact flows are not tied to a specific instance or account, exported flows could also be imported into instances created by other customers, allowing Amazon Connect partners to create custom contact flow solutions that can be used by Amazon Connect customers\.
 

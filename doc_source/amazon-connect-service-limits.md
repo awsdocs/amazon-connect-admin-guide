@@ -33,7 +33,7 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Amazon Lex bots  |  50 Amazon Lex bots per Amazon Connect instance  | 
 |  Concurrent active calls per instance  |  100\. If this is exceeded, contacts will get a reorder tone \(aka fast busy tone\), which indicates no transmission path to the called number is available\.   | 
 | Phone Number Porting |  You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](port-phone-number.md)\.  | 
-| Country code whitelisting for Outbound Calls | You can place calls to the following dialing codes when you create a new instance: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
+| Country code allow list for Outbound Calls | You can place calls to the following dialing codes when you create a new instance: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
 
 † UK numbers with a 447 prefix are not allowed by default\. Before you can dial these UK mobile numbers, you must submit a service limit increase request\.
 

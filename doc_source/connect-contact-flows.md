@@ -3,6 +3,8 @@
 A *contact flow* defines the customer experience with your contact center from start to finish\. You design your contact flows using the AWS Management Console\. 
 
 **Topics**
++ [Default Contact Flows](contact-flow-default.md)
++ [Sample Contact Flows](contact-flow-samples.md)
 + [Create a New Contact Flow](create-contact-flow.md)
 + [Associate a Phone Number with a Contact Flow](associate-phone-number.md)
 + [Create Prompts](prompts.md)

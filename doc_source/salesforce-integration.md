@@ -20,7 +20,7 @@ The key benefits of the adapter include:
 
 We recommend that you initially install the package into your Salesforce sandbox\. After the package is installed, you can configure your Salesforce Call Center configuration within Salesforce\.
 
-The next step is to whitelist your Salesforce Visualforce domain within Amazon Connect\. This allows cross\-domain access to your Amazon Connect instance\.
+The next step is to put your Salesforce Visualforce domain on an allow list \(also known as whitelist\) in Amazon Connect\. This allows cross\-domain access to your Amazon Connect instance\.
 
 ## Amazon Connect CTI Adapter v3 for Salesforce Installation Guide<a name="sf-installation-guide"></a>
 
@@ -46,7 +46,7 @@ Amazon Connect requires WebRTC to enable soft\-phone voice media stream and Webs
    + For Phone Number Formatting, Country, specify the appropriate 2\-digit [ISO country code](https://countrycode.org/)\.
    + To provide Salesforce users with access to the Amazon Connect CCP, on the Setup Call Centers page, choose **Manage Call Center Users**\. Add the Salesforce users to enable for using these call features\. Be sure to add your own Salesforce user account if you plan to these features\.
 
-1. Whitelist your Salesforce Visualforce domain URL using the directions in [Use an Allow List for Integrated Applications](app-integration.md)\. To verify the URL, open the Visualforce page in setup\. This URL usually has the following format:
+1. Put your Salesforce Visualforce domain URL on an allow list using the directions in [Use an Allow List for Integrated Applications](app-integration.md)\. To verify the URL, open the Visualforce page in setup\. This URL usually has the following format:
 
    https://amazonconnect\.**your\-instance\-name**\.visual\.force\.com
 

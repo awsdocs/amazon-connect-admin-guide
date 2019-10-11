@@ -19,8 +19,8 @@ This tool will check which web browser the agent is running, and whether the mic
 ## Common CCP Issues<a name="common-ccp-issues"></a>
 
 The following are common issues encountered when using the Amazon Connect CCP\.
-+ **CCP does not initialize/connect**—The most common causes are missing port/IP whitelist entries, not allowing browser microphone access, or not answering your external device\. Be sure that you have whitelisted all IPs covered in the [Set Up Your Network](ccp-networking.md) section of this guide, and that you have allowed microphone access to your browser when prompted\.
-+ **Periodic connection errors**—The most common cause is network contention, or there may have been an ipranges\.json update and the new entries have not been whitelisted\. For more information, see the [Set Up Your Network](ccp-networking.md) section of this guide\.
++ **CCP does not initialize/connect**—The most common causes are missing port/IP allow list entries, not allowing browser microphone access, or not answering your external device\. Be sure that you have added to the allow list all IPs covered in the [Set Up Your Network](ccp-networking.md) section of this guide, and that you have allowed microphone access to your browser when prompted\.
++ **Periodic connection errors**—The most common cause is network contention, or there may have been an ipranges\.json update and the new entries have not been added to the allow list\. For more information, see the [Set Up Your Network](ccp-networking.md) section of this guide\.
 + **Missed calls, state change delays, and CCP unresponsive**—In most cases, this is intermittent and directly correlated with resource contention in the agent's workstation, network, or both\. This can be made worse, or caused directly, by a poor, unstable, or strained connection to AWS resources at the private WAN/LAN, public WAN levels, or local workstation resource contention\.
 
 The following are common issues with call quality when using the CCP\. Call quality encompasses a large range of potential causes and is best approached by first identifying the types of issues that you're having\.
@@ -41,7 +41,7 @@ The following tools and information can be helpful with troubleshooting issues w
 + **Contact Control Panel logs**—to track agent actions and timing\. To download CCP logs, choose the settings cogwheel in the CCP, and then choose **Download logs**\. The logs are saved to your browser's default download directory\.
 + **Network utilization logging/monitoring**—specifically for latency and dropped packets on the same network segment as your agents\.
 + **Private WAN/LAN network diagram**—outlining connection paths to the edge router to AWS to explain network traversal\.
-+ **Firewall whitelist access**—to verify that IP/port ranges are whitelisted as described in [Set Up Your Network](ccp-networking.md)\.
++ **Firewall allow list access**—to verify that IP/port ranges are added to the allow list \(also known as whitelist\) as described in [Set Up Your Network](ccp-networking.md)\.
 + **Audio capturing and analytic tools**—for latency calculations from the agent's workstation\.
 + **AWS region latency test tools**—such as the [Amazon Connect Call Control Panel Connectivity Tool](https://s3.amazonaws.com/connectivitytest/checkConnectivity.html)\.
 
