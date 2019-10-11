@@ -49,10 +49,12 @@ These are the steps that a manager does to review or download past recordings of
 
 To find a recording of a specific contact, you only need the contact ID\. You don't need to know the date range, agent, or any other information about the contact\. 
 
-1. Log in to Amazon Connect with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Manager monitor** permission\.
+1. Log in to Amazon Connect with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Contact search** and **Manager monitor** permissions\.
 
 1. In Amazon Connect choose **Metrics and quality**, **Contact search**\. 
 
 1. In the **Contact ID**, enter the contact ID, and then choose **Search**\.
 
-1. Conversations that were recorded will have icons in the Recording column\. 
+1. Conversations that were recorded will have icons in the Recording column\. If you don't have **Manager monitor** permissions, you won't see this icon \(or be able to review the recordings\)\. 
+
+To learn more about searching, see [Contact Search](contact-search.md) 

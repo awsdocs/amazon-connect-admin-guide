@@ -96,6 +96,10 @@ When a synchronous invocation returns an error, Amazon Connect retries up to 3 t
 
 To learn more about how Lambda retries, see [Error Handling and Automatic Retries in AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/retries-on-errors.html)\. 
 
+### Invoke Multiple Lambda Functions<a name="invoke-multiple-functions"></a>
+
+Anytime you invoke a Lambda function the caller will not hear any audio\. If you invoke multiple Lambda functions in your contact flow, we recommend playing audio in between to ensure your customers are aware of progress and don’t hangup\.
+
 ## Configure Your Lambda Function to Parse the Event<a name="function-parsing"></a>
 
 To successfully pass attributes between your Lambda function and Amazon Connect, configure your function to correctly parse the JSON request sent from the **Invoke AWS Lambda function** block, and define any business logic that should be applied\. How the JSON is parsed depends on the runtime you use for your function\. For example, the following example shows how to access `sentAttributeKey` using Node\.JS:

@@ -96,6 +96,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Update a Historical Metrics Report](update-historical-metrics-report.md)
       + [Download a Historical Metrics Report](download-historical-metrics-report.md)
       + [Historical Metrics Definitions](historical-metrics-definitions.md)
+   + [Contact Search](contact-search.md)
    + [Contact Trace Records Data Model](ctr-data-model.md)
 + [Troubleshooting Issues with the CCP](troubleshooting.md)
 + [Amazon Connect Service Limits](amazon-connect-service-limits.md)
