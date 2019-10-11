@@ -1,6 +1,6 @@
 # Create a Historical Metrics Report<a name="create-historical-metrics-report"></a>
 
-You can create historical metrics reports to view data for past activity in your contact center\.
+Although Amazon Connect includes built\-in historical reports, you can create your own custom reports so you look at only the data that's of interest to your organization\. 
 
 **Requirement**
 + You must have permission to access metric data\. The following security profiles include this permission: **CallCenterManager** and **QualityAnalyst**\. For more information, see [Assign Permissions: Security Profiles](connect-security-profiles.md)\.

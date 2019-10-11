@@ -5,7 +5,7 @@ Managers can review past conversations between agents and customers\. To set thi
 A conversation is recorded only when the contact is connected to an agent\. The contact is not recorded before then, when they are connected to the IVR\. 
 
 **Important**  
-The monitor feature works only when call recording is enabled on a contact flow\. For instructions on adding the **Set call recording** block to your contact flow, see [Set up Call Recording](set-up-recordings.md)\. 
+The monitor feature works only when call recording is enabled on a contact flow\. For instructions on adding the **Set call recording** block to your contact flow, see [Set Up Call Recording](set-up-recordings.md)\. 
 
 ## Assign Permissions to Review Recordings of Past Conversations<a name="manager-recording"></a>
 
@@ -33,7 +33,7 @@ These permissions enable managers to access recordings of past conversations\.
 
 1. Choose **Save**\. 
 
-## Review or Download Recordings of Past Conversations<a name="w11aac27c11c11"></a>
+## Review or Download Recordings of Past Conversations<a name="w11aac32c11c11"></a>
 
 These are the steps that a manager does to review or download past recordings of conversations\.
 
@@ -45,14 +45,16 @@ These are the steps that a manager does to review or download past recordings of
 
 1. Conversations that were recorded will have icons in the Recording column\. Click to review the recording, download, or delete it\. If you choose to download the recording, it will be saved automatically to your Downloads folder\. 
 
-## Search for Recordings by Contact ID<a name="w11aac27c11c13"></a>
+## Search for Recordings by Contact ID<a name="w11aac32c11c13"></a>
 
 To find a recording of a specific contact, you only need the contact ID\. You don't need to know the date range, agent, or any other information about the contact\. 
 
-1. Log in to Amazon Connect with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Manager monitor** permission\.
+1. Log in to Amazon Connect with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Contact search** and **Manager monitor** permissions\.
 
 1. In Amazon Connect choose **Metrics and quality**, **Contact search**\. 
 
 1. In the **Contact ID**, enter the contact ID, and then choose **Search**\.
 
-1. Conversations that were recorded will have icons in the Recording column\. 
+1. Conversations that were recorded will have icons in the Recording column\. If you don't have **Manager monitor** permissions, you won't see this icon \(or be able to review the recordings\)\. 
+
+To learn more about searching, see [Contact Search](contact-search.md) 

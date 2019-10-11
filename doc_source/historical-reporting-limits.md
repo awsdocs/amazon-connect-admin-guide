@@ -4,11 +4,6 @@ Historical metrics reports have the following limits:
 
 **Data only for active queues**
 + You can get data only for active queues\. A queue is inactive if there are no contacts in the queue and no agents available\.
-+ This applies to the `GetMetricsData` and `GetCurrentMetricsData` API as well\. This means that if a queue is not considered active, if you query for its metrics using the API you won't get any data\.
-+ The user interface shows up to 100 queues\. If you have more than 100 active queues, add a filter to scope the report to the queues of interest\.
-
-**UI Displays Up to 100 Queues**
-+ The user interface shows up to 100 queues\. If you have more than 100 active queues, add a filter to scope the report to the queues of interest\.
 
 **80k Cell Limit**
 

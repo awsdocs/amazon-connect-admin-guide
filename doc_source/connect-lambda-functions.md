@@ -88,13 +88,17 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w11aac17c13c17"></a>
+### Invocation retry policy<a name="w11aac22c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 
 When a synchronous invocation returns an error, Amazon Connect retries up to 3 times, for a maximum of 8 seconds\. At that point, the flow will progress down the Error branch\. 
 
 To learn more about how Lambda retries, see [Error Handling and Automatic Retries in AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/retries-on-errors.html)\. 
+
+### Invoke Multiple Lambda Functions<a name="invoke-multiple-functions"></a>
+
+Anytime you invoke a Lambda function the caller will not hear any audio\. If you invoke multiple Lambda functions in your contact flow, we recommend playing audio in between to ensure your customers are aware of progress and don’t hangup\.
 
 ## Configure Your Lambda Function to Parse the Event<a name="function-parsing"></a>
 

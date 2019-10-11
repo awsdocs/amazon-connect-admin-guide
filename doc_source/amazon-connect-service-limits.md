@@ -27,8 +27,10 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Security profiles per instance  |  100  | 
 |  Contact flows per instance  |  100  | 
 |  Agent hierarchy groups per instance  |  50  | 
-|  Reports per instance  |  500  | 
+|  Reports per instance  |  500 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies that support good hygiene so reports don't pile up\.   | 
 |  Scheduled reports per instance  |  50  | 
+|  Lambda functions  |  35 functions per Amazon Connect instance  | 
+|  Amazon Lex bots  |  50 Amazon Lex bots per Amazon Connect instance  | 
 |  Concurrent active calls per instance  |  100\. If this is exceeded, contacts will get a reorder tone \(aka fast busy tone\), which indicates no transmission path to the called number is available\.   | 
 | Phone Number Porting |  You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](port-phone-number.md)\.  | 
 | Country code whitelisting for Outbound Calls | You can place calls to the following dialing codes when you create a new instance: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
@@ -36,6 +38,10 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 † UK numbers with a 447 prefix are not allowed by default\. Before you can dial these UK mobile numbers, you must submit a service limit increase request\.
 
 ## Amazon Connect API Throttling Limits<a name="connect-api-limits"></a>
+
+Amazon Connect throttling limits are by account, not by user and not by instance\. For example:
++ If different IAM users from the same account make requests, they are sharing a throttle bucket\.
++ If multiple requests are sent from different instances from the same account, they are also sharing a throttle bucket\.
 
 When you use the Amazon Connect API, the number of requests per second is limited to the following:
 + For the `GetMetricData` and `GetCurrentMetricData` operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\.

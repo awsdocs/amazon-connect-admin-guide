@@ -5,7 +5,7 @@ Managers can monitor live conversations between agents and customers, and review
 A conversation is recorded only when the contact is connected to an agent\. The contact is not recorded before then, when they are connected to the IVR\. 
 
 **Important**  
-The monitor feature works only when call recording is enabled on a contact flow\. For instructions on adding the **Set call recording** block to your contact flow, see [Set up Call Recording](set-up-recordings.md)\. 
+The monitor feature works only when call recording is enabled on a contact flow\. For instructions on adding the **Set call recording** block to your contact flow, see [Set Up Call Recording](set-up-recordings.md)\. 
 
 ## Assign Permissions to Monitor Live Conversations<a name="monitor-conversations-permissions"></a>
 
@@ -33,7 +33,7 @@ These permissions enable managers to monitor live conversations and access recor
 
 1. Choose **Save**\. 
 
-## Monitor Live Conversations with Customers<a name="w11aac27b8c11"></a>
+## Monitor Live Conversations with Customers<a name="w11aac32b8c11"></a>
 
 1. Log in to your Amazon Connect instance with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Manager monitor** permission\.
 

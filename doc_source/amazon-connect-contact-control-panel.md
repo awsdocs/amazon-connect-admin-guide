@@ -1,7 +1,7 @@
 # Provide Access to the Contact Control Panel<a name="amazon-connect-contact-control-panel"></a>
 
 Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with contacts\. But before agents can access to the CCP and handle contacts, there are a few things you need to do: 
-+ Add them as users to the instance\. For more information, see [Manage Users in Amazon Connect](connect-security.md)\.
++ Add them as users to the instance\. For more information, see [Manage Users in Amazon Connect](manage-users.md)\.
 + Configure their permissions\. By default agents assigned to the Agent security profile can access the CCP and make outbound calls\. But you can create a custom security profile and add additional permissions\. For more information, see [Assign Permissions: Security Profiles](connect-security-profiles.md)\.
 + Give them their user name, password, and a link to the CCP so they can log in\. The default link is https://*name of your instance*\.awsapps\.com/connect/ccp\#/\.
 
@@ -41,42 +41,3 @@ Before agents can use the CCP, or if they are having problems hearing a conversa
 + **Desktop notifications**—Ensure that the browser is not in incognito mode so that desktop notifications can be displayed\.
 + **Microphone**—Ensure that the microphone settings are always enabled\.
 + **Dialing**—In **Settings**, you can configure the softphone to dial a DID desk phone if required\. When you choose a desk phone, enter the DID number to which calls go\.
-
-### Softphone CCP IP Address Ranges<a name="ccp-ip-ranges"></a>
-
-If your agents use a softphone for Amazon Connect, you must allow traffic in both directions for the ports and addresses listed below, for the region in which you created your instance\.
-
-The IP addresses used by Amazon Connect for each region are listed, along with the addresses for all AWS services, in the [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file under the service name AMAZON\_CONNECT\. For agents to use the CCP, you also need to allow access for the softphone signaling endpoints, which are hosted in Amazon EC2\. For more information about IP address ranges in AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\.
-
-When there are new IP address ranges supported for Amazon Connect, they are added to the publicly available [ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) for a minimum of 30 days before they are used by the service\. After 30 days, softphone traffic through the new IP address ranges increases over the subsequent two weeks\. After two weeks, traffic is routed through the new ranges equivalent to all available ranges\.
-
-
-| Protocol | Port | Transport Layer | IP Range | 
-| --- | --- | --- | --- | 
-| HTTP | 80 | TCP | AWS EC2 and CLOUDFRONT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
-| HTTPS | 443 | TCP | AWS EC2 and CLOUDFRONT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
-| TURN | 3478 | UDP | AMAZON\_CONNECT ranges in [https://ip\-ranges\.amazonaws\.com/ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json)\. | 
-
-### Status Settings<a name="status"></a>
-
-The status settings are used for reporting purposes to ensure that system issues are resolved quickly and to manage resources\.
-
-The following settings are available:
-+ **Available**—Indicates that an agent is available to take contacts\.
-+ **Offline**—Logs agents out and removes them from the pool of available agents\.
-
-## Whitelist Integrated Applications<a name="app-integration"></a>
-
-All domains that embed the CCP for a particular instance must be explicitly whitelisted for cross\-domain access to the instance\. For example, to integrate with Salesforce, you must whitelist your Salesforce Visualforce domain\.
-
-**To whitelist a domain URL**
-
-1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
-
-1. Choose the name of the instance from **Instance Alias**\.
-
-1. In the navigation pane, choose **Application integration**\.
-
-1. Choose **Add origin**\.
-
-1. Type the URL and choose **Add**\.

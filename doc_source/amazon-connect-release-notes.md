@@ -3,10 +3,10 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish monthly release notices that describe the changes we've released in the previous month\.
 
 **Topics**
-+ [June 2019 Update](#w11aac33b7)
-+ [May 2019 Updates](#w11aac33b9)
-+ [April 2019 Updates](#w11aac33c11)
-+ [March 2019 Update](#w11aac33c13)
++ [June 2019 Update](#w11aac40b7)
++ [May 2019 Updates](#w11aac40b9)
++ [April 2019 Updates](#w11aac40c11)
++ [March 2019 Update](#w11aac40c13)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -18,14 +18,14 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
 
-## June 2019 Update<a name="w11aac33b7"></a>
+## June 2019 Update<a name="w11aac40b7"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w11aac33b9"></a>
+## May 2019 Updates<a name="w11aac40b9"></a>
 
 The following updates were released in May 2019:
 
@@ -37,7 +37,7 @@ The following updates were released in May 2019:
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w11aac33c11"></a>
+## April 2019 Updates<a name="w11aac40c11"></a>
 
 The following updates were released in April 2019:
 
@@ -50,7 +50,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w11aac33c13"></a>
+## March 2019 Update<a name="w11aac40c13"></a>
 
 The following updates were released in March 2019:
 
@@ -252,7 +252,7 @@ The following updates were released in June 2018:
 + Renamed the **Set queue** block to **Set working queue**\.
 + Added a **Copy to clipboard** button next to the ARN of a contact flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the contact flow in the designer to display the ARN\.
 + Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Initiate an Outbound Call](using-call-number-block.md)\.
-+ Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Using System Metric Attributes](connect-contact-attributes.md#attrib-system-metrics)\.
++ Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [How to Use System Metric Attributes](attrib-system-metrics.md)\.
 
 ### Metrics and Reporting<a name="june18-metrics"></a>
 + Fixed an issue that caused incorrect rendering of the search field in the filters settings for some historical metrics reports\.

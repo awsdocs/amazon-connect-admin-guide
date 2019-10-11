@@ -11,4 +11,5 @@ To get detailed information on the activity of agents in your contact center, yo
 **Topics**
 + [Real\-time Metrics Reports](real-time-metrics-reports.md)
 + [Historical Metrics Reports](historical-metrics.md)
++ [Contact Search](contact-search.md)
 + [Contact Trace Records Data Model](ctr-data-model.md)

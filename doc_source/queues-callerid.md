@@ -9,7 +9,7 @@ There are a few places where you can specify what your outbound caller ID will b
 + In a queue\. You can specify both the outbound caller ID name and the phone number\. For instructions, see [Create a Queue](create-queue.md)\.
 + In the **Set callback number** block in a contact flow\. Use this block to set up customer callback\. You can only specify the phone number\. For more information about this block, see [Contact Block Definitions](contact-blocks.md)\. 
 + In the **Call phone number** block in an outbound whisper contact flow\. You can use this block with the **Set contact attributes** block to set the callback number dynamically\. For example, you can display a certain caller ID number based on the customer's account type\. For more information, see [Initiate an Outbound Call](using-call-number-block.md)\. 
-+ In the **Transfer to phone number** block\. For more information, see [Set up Call Transfers](transfer.md)\. 
++ In the **Transfer to phone number** block\. For more information, see [Set Up Call Transfers](transfer.md)\. 
 
 ## Why Your Caller ID Might Not Appear Correctly to Customers<a name="w11aac13c17c23c11"></a>
 

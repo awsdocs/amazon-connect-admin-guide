@@ -1,8 +1,8 @@
 # How to Access Kinesis Video Stream Data<a name="access-media-stream-data"></a>
 
-You must have developer skills to access Kinesis video stream data\. Use the steps and code samples in this section to interact with the customer audio data sent to Kinesis Video Streams\.
+To access Kinesis video stream data so you can analysis it, you must be a developer\. Use the steps and code samples in this section to interact with the customer audio data sent to Kinesis Video Streams\.
 
-First, download the [Kinesis Video parser library](https://github.com/aws/amazon-kinesis-video-streams-parser-library/archive/v1.0.3.zip)\. This library includes an easy\-to\-use set of tools can use in Java applications to consume the MKV data in a Kinesis video stream\. To learn more, see [Kinesis Video Stream Parser Library](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/parser-library.html)\.
+First, download the [Kinesis Video parser library](https://github.com/aws/amazon-kinesis-video-streams-parser-library/archive/v1.0.3.zip)\. This library includes an easy\-to\-use set of tools you can use in Java applications to consume the MKV data in a Kinesis video stream\. To learn more, see [Kinesis Video Stream parser library](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/parser-library.html)\.
 
 Next, use the following example Java classes, which are built on top of the Kinesis video parser library using the AWS SDK for Java\.
 + **LMSDemo**—is a class with a main method that invokes LMSExample\.
