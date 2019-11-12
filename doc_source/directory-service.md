@@ -1,6 +1,6 @@
 # Use an Existing Directory for Identity Management<a name="directory-service"></a>
 
-If you are already using a in AWS Directory Service directory to manage users, you can use the same directory to manage user accounts in Amazon Connect\. You can also create a new directory in AWS Directory Service to use for Amazon Connect\. The directory you choose must be associated with your AWS account, and must be active in the AWS Region in which you create your instance\. You can associate an AWS Directory Service directory with only one Amazon Connect instance at a time\. To use the directory with a different instance, you must delete the instance with which it is already associated\.
+If you are already using a AWS Directory Service directory to manage users, you can use the same directory to manage user accounts in Amazon Connect\. You can also create a new directory in AWS Directory Service to use for Amazon Connect\. The directory you choose must be associated with your AWS account, and must be active in the AWS Region in which you create your instance\. You can associate an AWS Directory Service directory with only one Amazon Connect instance at a time\. To use the directory with a different instance, you must delete the instance with which it is already associated\.
 
 The following AWS Directory Service directories are supported in Amazon Connect:
 + [Microsoft Active Directory](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html)—AWS Directory Service lets you run Microsoft Active Directory as a managed service\.

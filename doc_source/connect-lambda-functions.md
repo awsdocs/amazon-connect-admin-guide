@@ -98,7 +98,9 @@ To learn more about how Lambda retries, see [Error Handling and Automatic Retrie
 
 ### Invoke Multiple Lambda Functions<a name="invoke-multiple-functions"></a>
 
-Anytime you invoke a Lambda function the caller will not hear any audio\. If you invoke multiple Lambda functions in your contact flow, we recommend playing audio in between to ensure your customers are aware of progress and don’t hangup\.
+Amazon Connect limits the duration of a sequence of Lambda functions to 20 seconds\. It will error out when the total execution time exceeds this threshold\. Since customers hear silence while a Lambda function executes, we recommend adding a **Play prompt** block between functions to keep them engaged and aware of the long interaction\. 
+
+By breaking up a chain of Lambda functions with the **Play prompt** block, you will be able invoke multiple functions that last longer than the 20 second threshold\.
 
 ## Configure Your Lambda Function to Parse the Event<a name="function-parsing"></a>
 

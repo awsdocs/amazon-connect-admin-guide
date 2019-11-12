@@ -1,24 +1,26 @@
 # Customize Agent Status Values<a name="agent-status"></a>
 
-Agent states appear to the agents in the contact control panel \(CCP\)\. These states are also used for reporting, metrics, and resource management\.
+The agent's status is set manually in the Contact Control Panel \(CCP\)\. The status is used for reporting, metrics, and resource management\.
 
- Amazon Connect provides two default states: 
+Amazon Connect provides two default statuses: 
 + Available
 + Offline
 
-You can change the name of these states, and you can add new states\. For example, you might add states for Break, and another for Training\.
+You can change the name of these statuses, and you can add new statuses\. For example, you might add a status for Break, and another for Training\.
 
-You can't delete a status but you can disable it so it doesn't appear on the agent's contact control panel \(CCP\)\.
+When you add a new status, it will always be **Custom**, not routable\. 
+
+You can't delete a status but you can disable it so it doesn't appear on the agent's CCP\.
 
 **To add a new agent status**
 
 1. Choose **Users, Agent status**, **Add new agent status**\.
 
-1. Enter a status name, description, and type, and select whether the status should appear in the CCP to the agent\.
+1. Enter a status name and description, and select whether the status should appear in the CCP to the agent\.
 
 1. Choose **Save**\.
 
-To change the order that the states appear in the CCP, click the waffle next to the state and drag it to the order you want\. 
+To change the order that the statuses appear in the CCP, click the waffle next to the state and drag it to the order you want\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/agent-status.png)
 

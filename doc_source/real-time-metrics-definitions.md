@@ -105,8 +105,8 @@ Percentage of time the agent was active on contacts during the specified time ra
 **Oldest**  <a name="oldest-real-time"></a>
 Length of time in the queue for the contact that has been in the queue the longest\.
 
-**On call**  <a name="on-call-real-time"></a>
-Count of agents currently on a contact\.
+**On call**  <a name="on-call-time"></a>
+Count of agents currently on a contact\. An agent is "on a contact" when they are handling a contact who is either connected, on hold, or in After contact work, or the agent is dialing out to a customer\.
 
 **Online**  <a name="online-real-time"></a>
 Count of agents who have set their status in the CCP to something other than **Offline**\. For example, they may have set their status to Available, or to a custom value such as Break or Training\.  

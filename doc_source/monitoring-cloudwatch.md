@@ -10,71 +10,126 @@ The `AWS/Connect` namespace includes the following metrics\.
 
 **CallsBreachingConcurrencyQuota**  
 The number of voice calls that exceeded the concurrent active calls limit for the instance\. This is a count of the number of calls that exceeded the limit, not the number of concurrent calls in excess of the limit\.  
-Unit: Count
+Unit: Count  
+Dimension:  
++ **InstanceId**: The ID of your instance
 
 **CallBackNotDialableNumber**  
 The number of times a queued callback to a customer could not be dialed because the customer's number is in a country for which outbound calls are not allowed for the instance\. The countries allowed for an instance are defined by the service limits\.  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId** The ID of your instance
++ **MetricGroup**: **ContactFlow**
++ **ContactFlowName**: The name of your contact flow
 
 **CallRecordingUploadError**  
 The number of call recordings that failed to upload to the Amazon S3 bucket configured for your instance\. This is the bucket specified in **Data Storage** > **Call Recordings** settings for the instance\.  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **CallRecordings**
 
 **CallsPerInterval**  
 The number of voice calls, both inbound and outbound, received or placed per second in the instance\.  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **VoiceCalls**
 
 **ConcurrentCalls**  
 The number of concurrent active voice calls in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active calls at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active voice calls are included, not only active calls that are connected to agents\.  
 While all statistics are available in CloudWatch for concurrent voice calls you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.   
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **VoiceCalls**
 
 **ConcurrentCallsPercentage**  
 The percentage of the concurrent active voice calls service limit used in the instance\. This is calculated by `ConcurrentCalls/ConfiguredConcurrentCallsLimit * 100`\.  
-Unit: Percent
+Unit: Percent  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **VoiceCalls**
 
 **ContactFlowErrors**  
 The number of times the error branch for a contact flow was executed\.  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **ContactFlow**
++ **ContactFlowName**: The name of your contact flow
 
 **ContactFlowFatalErrors**  
 The number of times a contact flow failed to execute due to a system error\.  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **ContactFlow**
++ **ContactFlowName**: The name of your contact flow
 
 **LongestQueueWaitTime**  
 The longest amount of time, in seconds, that a contact waited in a queue\. This is the length of time a contact waited in a queue during the refresh interval selected in the CloudWatch dashboard, such as 1 minute or 5 minutes\.  
-Unit: Seconds
+Unit: Seconds  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Queue**
++ **QueueName**: The name of your queue
 
 **MissedCalls**  
 The number of voice calls that were missed by agents during the refresh interval selected, such as 1 minute or 5 minutes\. A missed call is one that is not answered by an agent within 20 seconds\.  
 To monitor the total missed calls in a given time period, take a look at the Sum statistic in CloudWatch\.  
-Unit: Seconds
+Unit: Seconds  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **VoiceCalls**
 
 **MisconfiguredPhoneNumbers**  
 The number of calls that failed because the phone number is not associated with a contact flow\.  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **VoiceCalls**
 
 **PublicSigningKeyUsage**  
 The number of times a contact flow security key \(public signing key\) was used to encrypt customer input in a contact flow\.  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **SigningKeyId**: The ID of yoru signing key
 
 **QueueCapacityExceededError**  
 The number of calls that were rejected because the queue was full\.  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Queue**
++ **QueueName**: The name of your queue
 
 **QueueSize**  
 The number of contacts in the queue\. The value reflects the number of contacts in the queue at the time the dashboard is accessed, not for the duration of the reporting interval\.  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Queue**
++ **QueueName**: The name of your queue
 
 **ThrottledCalls**  
 The number of voice calls that were rejected because the rate of calls per second exceeded the maximum supported limit\. To increase the supported rate of calls, request an increase in the service limit for concurrent active calls per instance\.  
 To monitor the total throttled calls in a given time period, take a look at the Sum statistic in CloudWatch\.  
 Unit: Seconds  
-Unit: Count
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **VoiceCalls**
 
 **ToInstancePacketLossRate**  
 The ratio of packet loss for calls in the instance, reported every 10 seconds\. Each data point is between 0 and 1, which represents the ratio of packets lost for the instance\.  
-Unit: Percent
+Unit: Percent  
+Dimensions:  
++ **Participant**: **Agent**
++ **Type of Connection**: **WebRTC**
++ **Instance ID**: The ID of your instance
++ **Stream Type**: **Voice**
 
 ## Amazon Connect CloudWatch Metrics Dimensions<a name="connect-cloudwatch-dimensions"></a>
 

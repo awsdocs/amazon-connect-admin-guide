@@ -4,7 +4,7 @@ To continue to use your current United States phone number with Amazon Connect, 
 
 Porting phone numbers typically takes between two to four weeks after you submit the required information\. The amount of time depends on the complexity of the request and your current carrier\. Porting toll\-free numbers, or requests to port a large quantity of numbers at one time, usually take longer than porting local, direct dial numbers\.
 
-We recommend that you select a phone number for Amazon Connect so that you can become familiar with the service while waiting for your number to be ported\.
+We recommend that you select a phone number from Amazon Connect so you can become familiar with the service while waiting for your number to be ported\.
 
 **To port your current phone number to Amazon Connect**
 
@@ -12,19 +12,29 @@ We recommend that you select a phone number for Amazon Connect so that you can b
 
 1. Log in with the account used to create the Amazon Connect instance to which to port your current number\.
 
-1. Choose **Support**, **Support Center**\.
+1. Choose **Create case**\.
 
-1. On the **Support Center** page, choose **Create Case**\.
+1. Under **Create case**, **Case classification**, do the following:
+   + For **Limit type**, choose **Amazon Connect**\.
+   + For **Contact Center Instance ARN \- optional**, enter the instance ARN\.
 
-1. Fill in values for the following fields:
-   + For **Regarding**, choose **Service Limit Increase**\.
-   + For **Limit Type**, choose **Connect**\.
+     To find the ARN for your instance, log in to Amazon Connect\. On the instances page, click the instance alias\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+
+     This will take you to a page that displays the instance ARN\.
+
+1. Under **Requests**, **Request 1** do the following:
    + For **Region**, select the Region in which you created your Amazon Connect instance\.
    + For **Limit**, choose **Phone Number Porting**\.
    + For **New limit value**, enter the number of phone numbers to port\.
-   + For **Use Case Description**, include as much information as possible about your request, including whether the numbers are Direct Inward Dial or toll\-free, your current carrier, and the contact information for the person authorized to make changes to your current phone service\. If you do not know all of these details, you may leave information out\.
 
-1. Fill in the rest of the form, and choose **Submit**\.
+1. \(Optional\) If you want to port more phone numbers, choose **Add another request**, and then repeat step 5 for each additional request\.
+
+1. Under **Case description**, **Use case description**, include as much information as possible about your request, including whether the numbers are Direct Inward Dial or toll\-free, your current carrier, and the contact information for the person authorized to make changes to your current phone service\. If you don't know all of these details, you may leave information out\.
+
+1. Expand **Contact options**, and then choose your **Preferred contact language** and **Contact methods**\.
+
+1. Choose **Submit**\.
 
 ## About Porting Phone Numbers<a name="about-porting"></a>
 

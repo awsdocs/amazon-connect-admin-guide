@@ -9,6 +9,7 @@ Within Amazon Connect, you can generate a number of real\-time and historical me
 To get detailed information on the activity of agents in your contact center, you can use [Amazon Connect Agent Event Streams](agent-event-streams.md)\.
 
 **Topics**
++ [Preview: Upcoming Changes to Metrics](upcoming-changes.md)
 + [Real\-time Metrics Reports](real-time-metrics-reports.md)
 + [Historical Metrics Reports](historical-metrics.md)
 + [Contact Search](contact-search.md)

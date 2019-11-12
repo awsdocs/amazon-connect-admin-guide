@@ -1,6 +1,10 @@
 # Set Up Your Network<a name="ccp-networking"></a>
 
-Traditional VoiP solutions require you to allow both inbound and outbound for specific UDP port ranges and IPs, such as 80 and 443\. These solutions also apply to TCP\. In comparison, the network requirements for using the Contact Control Panel \(CCP\) with a softphone are less intrusive\. You can establish persistent outbound send/receive connections through your web browser\. As a result, you don't need to open a client\-side port to listen for inbound traffic\. 
+Traditional VoIP solutions require you to allow both inbound and outbound for specific UDP port ranges and IPs, such as 80 and 443\. These solutions also apply to TCP\. In comparison, the network requirements for using the Contact Control Panel \(CCP\) with a softphone are less intrusive\. You can establish persistent outbound send/receive connections through your web browser\. As a result, you don't need to open a client\-side port to listen for inbound traffic\. 
+
+The following diagram shows you what each port is used for\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/networking.png)
 
 The following sections describe the two primary connectivity options for using the CCP\. 
 

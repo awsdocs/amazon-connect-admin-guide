@@ -26,12 +26,14 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Agent status per instance  |  50 This limit cannot be increased\.  | 
 |  Security profiles per instance  |  100  | 
 |  Contact flows per instance  |  100  | 
-|  Agent hierarchy groups per instance  |  50  | 
-|  Reports per instance  |  500 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies that support good hygiene so reports don't pile up\.   | 
+|  Agent hierarchy groups per instance  |  250  | 
+|  Reports per instance  |  500 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies so reports don't pile up\.   | 
+| Managers who can listen in on an agent call at the same time  |  5 This limit cannot be increased\.  | 
 |  Scheduled reports per instance  |  50  | 
+|  Contact Trace Record retention  |  24 months from the time the associated contact was initiated\. This limit cannot be increased\.  You can choose to stream CTRs to Kinesis so you can manage retention and perform advanced analysis\.  | 
 |  Lambda functions  |  35 functions per Amazon Connect instance  | 
 |  Amazon Lex bots  |  50 Amazon Lex bots per Amazon Connect instance  | 
-|  Concurrent active calls per instance  |  100\. If this is exceeded, contacts will get a reorder tone \(aka fast busy tone\), which indicates no transmission path to the called number is available\.   | 
+|  Concurrent active calls per instance  |  100\. If this is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   | 
 | Phone Number Porting |  You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](port-phone-number.md)\.  | 
 | Country code allow list for Outbound Calls | You can place calls to the following dialing codes when you create a new instance: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
 

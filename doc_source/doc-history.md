@@ -3,6 +3,7 @@
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Added dimensions\. |  Added dimensions to the Amazon Connect metrics sent to CloudWatch\. See [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md)\.  | October 22, 2019 | 
 | Added a networking topic\. | Consolidated networking content into [Set Up Your Network](ccp-networking.md)\. Updated the guidance\. | September 30, 2019 | 
 | Updated metrics topics | Improved the descriptions of the real\-time metrics definitions\. Added categories to the historical metrics definitions\. | August 30, 2019 | 
 | Re\-organized the content | Re\-organized the content so it's task\-based\. | July 19, 2019 | 
