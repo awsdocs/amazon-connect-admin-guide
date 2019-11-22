@@ -8,28 +8,18 @@ Each agent is assigned to one routing profile\.
 
 1. Choose **Users**, **Routing profiles**, **Add new profile**\.
 
-1. Enter or choose the following information:
-   + **Name**—A searchable display name\. 
-   + **Description**—The routing profile's function\.
-   + **Routing profile queues**—A queue to associate with the routing profile\. You can add multiple queues\.
-   + **Priority**—The order in which contacts are handled by the queue they are in\. Set values in order of importance, with the lowest number equaling the highest priority\. For example, a contact in a queue with a priority of 2 would be a lower priority than a contact in a queue with a priority of 1\.
-   + **Delay \(in seconds\)**—The minimum queue time before the contact is routed to an agent with a matching queue/threshold combination\. 
-   + **Default outbound queue**—Outbound calls must be associated with one of the associated queues\. 
+1. Enter or choose the following information:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/routing-profiles.html)
+
+1. Under **Routing profile queues**, enter the following information:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/routing-profiles.html)
 
 1. Choose **Add new profile**\.
 
-## Example Routing Profile<a name="example-routing-profile"></a>
+## Tips for Setting Up Channels and Concurrency<a name="routing-profile-concurrency"></a>
++ Use **Set channels and concurrency** to toggle on and off whether agents assigned to a profile get voice and chat contacts\. 
 
-The following is an example routing profile\.
-
-
-| Queue | Priority | Delay \(in seconds\) | 
-| --- | --- | --- | 
-|  Premium Support 1  |  1  |  0  | 
-|  Premium Support 2  |  1  |  0  | 
-|  Premium Support 3  |  2  |  20  | 
-|  Premium Support 4  |  3  |  80  | 
-
-This profile prioritizes Premium Support 1 and Premium Support 2 equally \(because each has a priority 1\)\.
-+ Agents with this profile may take contacts for Premium Support 3 when customers for Premium Support 3 are waiting for 20 seconds or longer \(and no Premium Support 1 or Premium Support 2 contacts are in queue\)\.
-+ Agents with this profile may take contacts for Premium Support 4 when customers for Premium Support 4 are waiting 80 seconds or longer \(and no contacts for Premium Support 1, Premium Support 2 or Premium Support 3 are in queue\)\.
+  For example, there are 20 queues assigned to a profile\. All of the queues are enabled for both voice and chat\. By removing the **Voice** option at the routing profile level, you can stop all voice calls to these agents, across all queues in the profile\. When you want to restart voice contacts for these agents again, select **Voice**\. 
++ For each queue in the profile, choose whether it's for voice or chat contacts, or both\. 
++ If you want a queue to handle both voice and chat contacts, but want to assign a different priority to each channel, add the queue twice, like this:   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/routing-profile-queue.png)

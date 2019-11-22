@@ -1,6 +1,6 @@
 # Sample Contact Flows<a name="contact-flow-samples"></a>
 
-Amazon Connect includes a set of sample contact flows that show you how to perform common functions\. They are designed to help you learn how to create your own contact flows that work in a similar way\. For example, if you want to add a queued callback flow to your call center, take a look at the **Sample queued callback** flow\.
+Amazon Connect includes a set of sample contact flows that show you how to perform common functions\. They are designed to help you learn how to create your own contact flows that work in a similar way\. For example, if you want to add a queued callback flow to your call center, take a look at the [Sample Queued Callback](sample-queued-callback.md) flow\.
 
 **To explore how the sample flows work**
 
@@ -28,8 +28,10 @@ The topics in this section describe how each of the sample contact flows work\.
 + [Sample Inbound Flow](sample-inbound-flow.md)
 + [Sample AB Test](sample-ab-test.md)
 + [Sample Customer Queue Priority](sample-customer-queue-priority.md)
++ [Sample Disconnect Flow](sample-disconnect.md)
 + [Sample Queue Customer](sample-queue-customer.md)
 + [Sample Queued Callback](sample-queued-callback.md)
++ [Sample Queue Configurations](sample-queue-configurations.md)
 + [Sample Interruptible Queue Flow with Callback](sample-interruptible-queue.md)
 + [Sample Lambda Integration](sample-lambda-integration.md)
 + [Sample Recording Behavior](sample-recording-behavior.md)

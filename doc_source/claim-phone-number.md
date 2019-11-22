@@ -10,7 +10,10 @@ To place or receive calls in your instance, you need to claim a phone number\. I
 
 1. Choose **Claim a number**\. You can choose a toll free number or a Direct Inward Dialing \(DID\) number\.
 **Note**  
-If you select a country, but there are no numbers displayed for that country, you can request additional numbers for the country using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\.
+Use the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) for these situations:   
+If you select a country, but there are no numbers displayed for that country, you can request additional numbers for the country\.
+If you want to request a specific area code or prefix that you don't see listed\.
+We'll try to accommodate your request\. 
 
 1. Enter a description for the number and, if required, attach it to a contact flow in **Contact flow / IVR**\.
 

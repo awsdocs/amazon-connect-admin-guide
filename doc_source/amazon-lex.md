@@ -47,6 +47,8 @@ After defining the intents, add some sample utterances\.
 1. Add a sample utterance, such as *Check my account balance*, and choose the **\+** icon\.
 
 1. Add a second utterance, such as *One* and choose the **\+** icon\. This assigns the utterance of “one” or key press of “1” to the **AccountLookup** intent\.
+**Tip**  
+You must add an utterance of "one" in the bot, and not the number "1"\. This is because Amazon Lex doesn't support numeric input directly\. To get around this, later in this walkthrough you'll use numeric input to interact with a Lex bot invoked from a contact flow\. 
 
 1. Select **SpeakToAgent**\.
 

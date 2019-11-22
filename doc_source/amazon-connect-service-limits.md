@@ -1,6 +1,6 @@
 # Amazon Connect Service Limits<a name="amazon-connect-service-limits"></a>
 
-The following table provides the default limits for new Amazon Connect instances\. Because the limits have been adjusted over time, the limits in place for your account may be different than the limits described here\. There may even be differences between the instances created for your account\. For example, if you created an instance when the default limit for concurrent active calls was 10, the limit is 10 concurrent active calls\. If you create a new instance today, the limit for the instance is 100 concurrent active calls\. For API request limits, see [Amazon Connect API Throttling Limits](#connect-api-limits)
+The following table provides the default limits for new Amazon Connect instances\. Because the limits have been adjusted over time, the limits in place for your account may be different than the limits described here\. There may even be differences between the instances created for your account\. For example, if you created an instance when the default limit for concurrent active calls was 10, the limit is 10 concurrent active calls\. If you create a new instance today, the limit for the instance is 100 concurrent active calls\. For API request limits, see [Amazon Connect API Throttling Limits](#connect-api-limits)\.
 
 To start, you can create five instances per AWS account in each of AWS Regions where Amazon Connect is available\. If you need more instances, or a change to a service limit, request a change using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 
@@ -33,7 +33,11 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Contact Trace Record retention  |  24 months from the time the associated contact was initiated\. This limit cannot be increased\.  You can choose to stream CTRs to Kinesis so you can manage retention and perform advanced analysis\.  | 
 |  Lambda functions  |  35 functions per Amazon Connect instance  | 
 |  Amazon Lex bots  |  50 Amazon Lex bots per Amazon Connect instance  | 
-|  Concurrent active calls per instance  |  100\. If this is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   | 
+|  Concurrent chats per instance  |  100\. This includes chats that are waiting\. If this is exceeded, the API call fails with a limit exceeded error\.  | 
+|  Active chats per agent  |  5 This limit cannot be increased\.  | 
+|  Total duration per chat  |  25 hours, including wait time This limit cannot be increased\.  | 
+|  Characters per chat message  |  1024 This limit cannot be increased\.  | 
+|  Concurrent calls per instance  |  100\. If this is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   | 
 | Phone Number Porting |  You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](port-phone-number.md)\.  | 
 | Country code allow list for Outbound Calls | You can place calls to the following dialing codes when you create a new instance: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
 
@@ -41,10 +45,14 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 
 ## Amazon Connect API Throttling Limits<a name="connect-api-limits"></a>
 
-Amazon Connect throttling limits are by account, not by user and not by instance\. For example:
-+ If different IAM users from the same account make requests, they are sharing a throttle bucket\.
-+ If multiple requests are sent from different instances from the same account, they are also sharing a throttle bucket\.
+Amazon Connect throttling limits are by account, not by user and not by instance\. For example: 
++ If different IAM users from the same account make requests, they are sharing a throttle bucket\. 
++ If multiple requests are sent from different instances from the same account, they are also sharing a throttle bucket\. 
 
-When you use the Amazon Connect API, the number of requests per second is limited to the following:
-+ For the `GetMetricData` and `GetCurrentMetricData` operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\.
+ When you use the [Amazon Connect Service API ](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html), the number of requests per second is limited to the following:
++ For the [GetMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) and [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\. These limits cannot be increased\. 
 + For all other operations, a RateLimit of 2 requests per second, and a BurstLimit of 5 requests per second\.
+
+ When you use the [Amazon Connect Participant Service API](https://docs.aws.amazon.com/connect-participant/latest/APIReference/Welcome.html), the number of requests per second is limited to the following:
++  [CreateParticipantConnection](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateParticipantConnection.html), [DisconnectParticipant](https://docs.aws.amazon.com/connect/latest/APIReference/API_DisconnectParticipant.html), and [GetTranscript](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetTranscript.html): a RateLimit of 2 requests per second, and a BurstLimit of 5 requests per second\.
++  [SendEvent](https://docs.aws.amazon.com/connect/latest/APIReference/API_SendEvent.html) and [SendMessage](https://docs.aws.amazon.com/connect/latest/APIReference/API_SendMessage.html): a RateLimit of 10 requests per second, and a BurstLimit of 15 requests per second\.

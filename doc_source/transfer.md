@@ -1,13 +1,13 @@
-# Set Up Call Transfers<a name="transfer"></a>
+# Set Up Contact Transfers<a name="transfer"></a>
 
-To make it easy for you to transfer contacts, Amazon Connect provides you with several tools: 
+To make it easy for you to set up contact transfers, Amazon Connect provides you with several tools: 
 + Two contact flow types:
-  + Transfer to agent: Enables transfers to another agent\.
-  + Transfer to queue: Enables transfers to a queue\.
+  + Transfer to agent: Enables transfers to another agent\. This works with voice contacts\. 
+  + Transfer to queue: Enables transfers to a queue\. This works with both voice and chat contacts\.
 + Action blocks:
-  + **Transfer to queue**: Use to end the current contact flow and place the customer in a queue\. 
-  + **Transfer to phone number**: Use to transfer the customer to a phone number, such as an external number\.
-  + **Transfer to flow**: Use to end the current flow and transfer the customer to another contact flow\.
+  + **Transfer to queue**: Use to end the current contact flow and place the customer in a queue\. This block works for both voice and chat transfers\. 
+  + **Transfer to phone number**: Use to transfer the customer to a phone number, such as an external number\. This block works for voice transfers\.
+  + **Transfer to flow**: Use to end the current flow and transfer the customer to another contact flow\. This block works for voice transfers\.
 + Quick connects: Use to create common destinations for transfers\. Agents will see them as options in the CCP when they go to do a transfer\.
 
 This topic explains how to create quick connects and use transfer contact blocks in specific scenarios\. 
@@ -24,7 +24,7 @@ This topic explains how to create quick connects and use transfer contact blocks
 
    When you create the **Agent** or **Queue** quick connect, select a contact flow that matches the type of transfer to enable\. **External** quick connects require only a phone number, and do not allow you to set a queue or contact flow\.
 
-1. Add the quick connect that you created to any queue used in a contact flow for which to enable call transfer, such as the queue used in the contact flow for incoming calls\. Make sure the queue is in a routing profile assigned to the agents who transfers calls\. 
+1. Add the quick connect that you created to any queue used in a contact flow for which to enable contact transfer, such as the queue used in the contact flow for incoming contacts\. Make sure the queue is in a routing profile assigned to the agents who transfers contacts\. 
 
 ## Create Quick Connects<a name="quick-connects"></a>
 
@@ -35,7 +35,7 @@ When you create a quick connect, you can specify one of these destinations:
 + **Agent**—Contacts are transferred to a specific agent as part of a contact flow\.
 + **Queue**—Contacts are transferred to a queue as part of a contact flow\.
 **Important**  
-Agent and Queue quick connects only appear in the CCP when an agent transfers a call\. 
+Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
 
 **To create a quick connect**
 
@@ -93,17 +93,17 @@ When the block executes:
 
 1. If the call is not successfully transferred, one of the other branches is followed: **Call failed**, **Timeout**, or **Error**, depending on the reason the caller did not return to the flow\.
 
-## Manage Calls in a Queue Using a Transfer to Queue Block<a name="queue-to-queue-transfer"></a>
+## Manage Contact in a Queue Using a Transfer to Queue Block<a name="queue-to-queue-transfer"></a>
 
-For calls coming into your contact center, you can define advanced routing decisions to minimize queue wait times, or route calls to specific queues, using blocks in your contact flow\. For example, use a **Check queue status** block to check staffing or agent availability for a queue before sending a call to that queue, or use a **Get queue metrics** block to retrieve queue metrics\. Then use a **Check contact attributes** block to check specific queue metric attributes, and define conditions in the block to determine which queue to route the call to based on attribute values\. For more information about using queue metrics, see [How to Use System Metric Attributes](attrib-system-metrics.md)\.
+For inbound contacts, you can define advanced routing decisions to minimize queue wait times, or route contacts to specific queues, using blocks in your contact flow\. For example, use a **Check queue status** block to check staffing or agent availability for a queue before sending a contact to that queue, or use a **Get queue metrics** block to retrieve queue metrics\. Then use a **Check contact attributes** block to check specific queue metric attributes, and define conditions in the block to determine which queue to route the contact to based on attribute values\. For more information about using queue metrics, see [How to Use System Metric Attributes](attrib-system-metrics.md)\.
 
-After determining which queue to transfer the call to, use a **Transfer to queue** block in a contact flow to transfer the call to that queue\. When the **Transfer to queue** block runs, it checks the queue capacity to determine whether or not the queue is at capacity \(full\)\. This check for queue capacity compares the current number of calls in the queue to the **Maximum contacts in queue** limit, if one is set for the queue\. If no limit is set, the queue is limited to the number of concurrent active calls set in the service limit for the instance\.
+After determining which queue to transfer the contact to, use a **Transfer to queue** block in a contact flow to transfer the contact to that queue\. When the **Transfer to queue** block runs, it checks the queue capacity to determine whether or not the queue is at capacity \(full\)\. This check for queue capacity compares the current number of contacts in the queue to the **Maximum contacts in queue** limit, if one is set for the queue\. If no limit is set, the queue is limited to the number of concurrent active contacts set in the service limit for the instance\.
 
-After the call is placed in a queue, the call remains there until an agent takes the call, or until the call is handled based on the routing decisions in your customer queue flow\. To change the queue associated with the call after it is already placed in a queue, use a **Loop prompts** block with a **Transfer to queue** block in a customer queue flow\. In the block choose which queue to transfer the call to, or use an attribute to set the queue\.
+After the contact is placed in a queue, the contact remains there until an agent takes the contact, or until the contact is handled based on the routing decisions in your customer queue flow\. To change the queue associated with the call after it is already placed in a queue, use a **Loop prompts** block with a **Transfer to queue** block in a customer queue flow\. In the block choose which queue to transfer the call to, or use an attribute to set the queue\.
 
 In the **Transfer to queue** block, there are two outputs to route calls through: the **Success** branch or the **At capacity** branch\. When a call is successfully transferred to a queue and follows the **Success** branch, the call remains associated with the current customer queue flow after being transferred\. When the call is not successfully transferred to a queue and follows the **At capacity** branch because the queue is at capacity, the call remains in the current working queue\.
 
-**To manage calls in a queue using a Transfer to queue block**
+**To manage contacts in a queue using a Transfer to queue block**
 
 1. In Amazon Connect, choose **Routing**, **Contact flows**\.
 
@@ -144,16 +144,18 @@ In the **Transfer to queue** block, there are two outputs to route calls through
 **Important**  
 To successfully complete the call transfer to another queue, you must include a block after the **Transfer to queue** block and connect the **Success** branch to it\. For example, use an **End flow / Resume** block to end the contact flow\. The flow does not end until the call is picked up by an agent\.
 
-## Transfer Calls Directly to a Specific Agent<a name="transfer-to-agent"></a>
+## Transfer Contacts Directly to a Specific Agent<a name="transfer-to-agent"></a>
 
-With agent queues, you can route calls directly to a specific agent\. This can allow you to provide a consistent customer experience for your customers by letting you route calls directly to the agent the customer last interacted with if that agent is available\. In each block that supports transferring the contact to a queue, such as the **Transfer to queue** block, there is a **By agent** radio button under **Queue** \(or **Queue to check \(optional\)** or **By queue** depending on the block\)\. When you select **By agent**, a drop\-down list that includes all of the users in your instance is displayed\. When you select a user name, the contact is transferred to the queue for that user\.
+With agent queues, you can route contacts directly to a specific agent\. This allows you to provide a consistent customer experience for your customers by letting you route contacts directly to the agent the customer last interacted with if that agent is available\. 
+
+In each block that supports transferring the contact to a queue, such as the **Transfer to queue** block, there is a **By agent** radio button under **Queue** \(or **Queue to check \(optional\)** or **By queue** depending on the block\)\. When you select **By agent**, a drop\-down list that includes all of the users in your instance is displayed\. When you select a user name, the contact is transferred to the queue for that user\.
 
 Contact flow blocks in which you can specify a queue include: **Set working queue**, **Get queue metrics**, **Check queue status**, **Check staffing**, and **Transfer to queue** when used in a customer queue flow\.
 
 **Note**  
-A queue is created for all users in your Amazon Connect instance, but only users assigned permissions to use the Contact Control Panel \(CCP\) can use the CCP to receive calls\. The Agent and Admin security profiles are the only default security profiles that include permissions to use the CCP\. If you route a call to a user that cannot access the CCP, the contact can never be answered\.
+A queue is created for all users in your Amazon Connect instance, but only users who are assigned permissions to use the Contact Control Panel \(CCP\) can use the CCP to receive contacts\. The Agent and Admin security profiles are the only default security profiles that include permissions to use the CCP\. If you route a contact to someone who doesn't have these permissions, the contact can never be handled\.
 
-**To route a call directly to a specific agent**
+**To route a contact directly to a specific agent**
 
 1. In Amazon Connect, choose **Routing**, **Contact flows**\.
 
@@ -173,13 +175,15 @@ A queue is created for all users in your Amazon Connect instance, but only users
 
 You can also choose to use an attribute to select the queue created for the agent user account\. To do so, after you choose **By agent**, choose **Use attribute**\.
 
-### Using Contact Attributes to Route Contacts to a Specific Agent<a name="use-attribs-agent-queue"></a>
+## Using Contact Attributes to Route Contacts to a Specific Agent<a name="use-attribs-agent-queue"></a>
 
 When you use contact attributes in a contact flow to route calls to an agent, the attribute value must be either the agent's user name, or the agent's user ID\.
 
 To determine the user ID for an agent so that you can use the value as an attribute, use the [ListUsers](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListUsers.html) operation to retrieve the users from your instance\. The agent's user ID is returned with the results from the operation as the value of the `Id` in the [UserSummary](https://docs.aws.amazon.com/connect/latest/APIReference/API_UserSummary.html) object\.
 
-You can also find the user ID for an agent by using [Amazon Connect Agent Event Streams](agent-event-streams.md)\. The agent events, which are included in the agent event data stream, include the agent ARN\. The user ID is included in the agent ARN after `agent/`\. In the following example, agent event data, the agent ID is **87654321\-4321\-4321\-4321\-123456789012**\.
+You can also find the user ID for an agent by using [Amazon Connect Agent Event Streams](agent-event-streams.md)\. The agent events, which are included in the agent event data stream, include the agent ARN\. The user ID is included in the agent ARN after **`agent/`**\. 
+
+In the following agent event data, the agent ID is **87654321\-4321\-4321\-4321\-123456789012**\.
 
 ```
 {

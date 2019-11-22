@@ -17,7 +17,7 @@ The following sections describe the contact attributes available in Amazon Conne
 | Contact id | The unique identifier of the contact\. | System | $\.ContactId | 
 | Initial contact id | The unique identifier for the first contact a customer had with your contact center\. Use the initial contact ID to track contacts between contact flows\.  | System | $\.InitialContactId | 
 | Previous contact id | The unique identifier for the contact before it was transferred\. Use the previous contact ID to trace contacts between contact flows\. | System | $\.PreviousContactId | 
-| Channel | The method of contact\. Currently, only VOICE is supported in Amazon Connect\. | System | $\.Channel | 
+| Channel | The method of contact, either VOICE or CHAT\.  | System | $\.Channel | 
 | Instance ARN | The ARN for your Amazon Connect instance\. | System | $\.InstanceARN | 
 | Initiation method | How the contact was initiated\. Valid values include: INBOUND, OUTBOUND, TRANSFER, CALLBACK, and API\. | System | $\.InitiationMethod | 
 | System Endpoint Type | The type of the system endpoint\. Valid value is TELEPHONE\_NUMBER\. | System | $\.SystemEndpoint\.Type | 
@@ -47,7 +47,7 @@ The following table lists the attributes available from Amazon Lex bots\.
 | Dialog state | The last dialog state returned from an Amazon Lex bot\. The value is 'Fulfilled' if an intent was returned to the contact flow\. | External | $\.Lex\.dialogState | 
 | Intent name | The user intent returned by Amazon Lex\. | External | $\.Lex\.IntentName | 
 | Slots | Map of intent slots \(key/value pairs\) Amazon Lex detected from the user input during the interaction\. | External | $\.Lex\.Slots\.slotName | 
-| Session attributes | Map of key\-value pairs representing the session\-specific context information\. | External | $\.Lex\.sessionAttributes\.attributeKey | 
+| Session attributes | Map of key\-value pairs representing the session\-specific context information\. | External | $\.Lex\.SessionAttributes\.attributeKey | 
 
 ### External Contact Attributes<a name="attribs-lambda-table"></a>
 

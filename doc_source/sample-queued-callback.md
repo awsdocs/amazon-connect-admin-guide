@@ -2,6 +2,8 @@
 
 Type: Contact flow \(inbound\)
 
+This sample flow is available in legacy Amazon Connect instances\. In new instances, you can see this functionality in [Sample Queue Configurations](sample-queue-configurations.md)\.
+
 This contact flow provides callback queue logic\. Here's how it works: 
 
 1. After a voice prompt, a working queue is selected and its queue status is checked\.

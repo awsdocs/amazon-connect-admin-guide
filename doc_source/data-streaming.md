@@ -1,0 +1,5 @@
+# Enable Data Streaming<a name="data-streaming"></a>
+
+You can export contact trace records \(CTRs\) and agent events from Amazon Connect and perform real\-time analysis on contacts\. Data streaming sends data to Amazon Kinesis\.
+
+If you enable server\-side encryption for the Kinesis stream you select, Amazon Connect cannot publish to the stream because it does not have permission to call `kms:GenerateDataKey` so that it can encrypt data sent to Kinesis\. To work\-around this, enable encryption for recordings of conversations or scheduled reports, create a customer master key \(CMK\) to use for encryption, and then choose the same CMK for the Kinesis data stream that you use for scheduled reports or recordings of conversations\. For more information, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.

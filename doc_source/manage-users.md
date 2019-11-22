@@ -7,3 +7,4 @@ As the admin one of your key responsibilities will be to manager users: add user
 + [Reset a User's Password](password-reset.md)
 + [Assign Security Profiles](connect-security-profiles.md)
 + [Use Service\-Linked Roles](connect-slr.md)
++ [Controlling Access with IAM](connect-access-control.md)

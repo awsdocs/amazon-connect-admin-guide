@@ -1,8 +1,8 @@
 # Set Up Agent Hierarchies<a name="agent-hierarchy"></a>
 
-You can organize agents and teams into groups based on their location and their skill sets\. For example, you might want to create large groups, such as all agents who work on a specific continent, or smaller groups such as all agents working in a specific department\. 
+ Agent hierarchies are a way for you to organize agents into teams and groups for reporting purposes\. It's useful to organize them based on their location and their skill sets\. For example, you might want to create large groups, such as all agents who work on a specific continent, or smaller groups such as all agents working in a specific department\. 
 
-You can also configure hierarchies with up to five levels, and segment agents or teams\. The hierarchies are reflected in reports and historical metrics to allow for granulated reporting\. Here are a couple of things to note about using hierarchies:
+You can also configure hierarchies with up to five levels, and segment agents or teams\. Here are a couple of things to note about using hierarchies:
 + Removing agents from a level affects historical reporting\.
 + Hierarchies do not determine agent permissions or security settings\. They define the organizational structure of agent groups for effective reporting\.
 

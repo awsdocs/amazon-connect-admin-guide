@@ -9,7 +9,8 @@ A key part of setting up your contact center is to define how your customers exp
 Finally, you'll need to provide your agents access to the Contact Control Panel \(CCP\), which they will use to interact with contacts\.
 
 **Topics**
-+ [Create an Instance](amazon-connect-instances.md)
++ [Create an Amazon Connect Instance](amazon-connect-instances.md)
++ [Test a Voice or Chat Experience](chat-testing.md)
 + [Set Up Your Phone Numbers](contact-center-phone-number.md)
 + [Set Up Routing](connect-queues.md)
 + [Set Up Agents](connect-agents.md)

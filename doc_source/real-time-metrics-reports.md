@@ -4,15 +4,12 @@ Real\-time metrics reports show real\-time or near\-real time metrics informatio
 
 You can customize the reports, specify a time range for each report, select metrics for each report, and select filters for data to include or exclude from each report\.
 
-Data in real\-time metrics reports is refreshed as follows:
-+ The **Real\-time metrics** page refreshes every 15 seconds, as long as the page is active\. For example, if you have multiple tabs open in your browser and navigate to a different tab, the real\-time metric page won't be updated until you return to it\.
-+ Metrics such as **Active** and **Availability** refresh as activity occurs, with a small system delay for processing the activity\.
-+ Agent near real\-time metrics, such as **Missed** and **Occupancy**, refresh every 5 minutes\.
-+ Contact near real\-time metrics refresh about a minute after a contact ends\.
-
 **Topics**
++ [How Often Real\-Time Metrics Refresh](rtm-refresh.md)
 + [Create a Real\-time Metrics Report](create-real-time-report.md)
 + [No Metrics or Too Few Rows in a Queues Report?](troubleshoot-rtm.md)
++ [List Queues Grouped By Routing Profile](queues-by-routing-profile.md)
++ [List Agents Grouped By Routing Profile](agents-grouped-by-routing-profile.md)
++ [View How Many Customers Are Waiting In Queue](view-customers-in-queue.md)
 + [Download a Real\-time Metrics Report](download-real-time-metrics-report.md)
-+ [View How Many Customers Are Waiting In Queue](call-back.md)
 + [Real\-time Metrics Definitions](real-time-metrics-definitions.md)

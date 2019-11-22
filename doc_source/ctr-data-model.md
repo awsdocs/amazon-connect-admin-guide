@@ -1,6 +1,6 @@
 # Contact Trace Records Data Model<a name="ctr-data-model"></a>
 
-This document describes the data model for Amazon Connect contact trace records\. Contact trace records capture the events associated with a contact in your contact center\. Real\-time and historical metrics are based on the data captured in contact trace records\.
+This article describes the data model for Amazon Connect contact trace records \(CTRs\)\. CTRs capture the events associated with a contact in your contact center\. Real\-time and historical metrics are based on the data captured in the CTRs\.
 
 **Tip**  
 Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for multiple reasons, such as new information arriving after initial delivery\. If you're building a system that consumes CTR export streams, be sure to include logic that checks for duplicate CTRs for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
@@ -9,22 +9,22 @@ Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for mul
 
 Information about the agent that handled the contact\.
 
-**AgentInteractionDuration**  
+**AgentInteractionDuration**  <a name="AgentInteractionDuration-CTR"></a>
 The time, in whole seconds, that an agent interacted with a customer\.  
 Type: Integer  
 Min value: 0
 
-**AfterContactWorkDuration**  
+**AfterContactWorkDuration**  <a name="AfterContactWorkDuration-CTR"></a>
 The difference in time, in whole seconds, between `AfterContactWorkStartTimestamp` and `AfterContactWorkEndTimestamp`\.  
 Type: Integer  
 Min value: 0
 
 **AfterContactWorkEndTimestamp**  
-The date and time the agent left the After Contact Work status\.  
+The date and time when the agent stopped doing After Contact Work for the contact\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **AfterContactWorkStartTimestamp**  
-The date and time the agent entered the After Contact Work status\.  
+The date and time when the agent started doing After Contact Work for the contact\. status\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **ARN**  
@@ -35,7 +35,7 @@ Type: ARN
 The date and time the contact was connected to the agent\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
-**CustomerHoldDuration**  
+**CustomerHoldDuration**  <a name="CustomerHoldDuration-CTR"></a>
 The time, in whole seconds, that the customer spent on hold while connected to the agent\.  
 Type: Integer  
 Min value: 0
@@ -127,8 +127,8 @@ The record format version\.
 Type: String
 
 **Channel**  
-The contact channel\.  
-Valid values: VOICE
+How the customer reached your contact center\.  
+Valid values: Voice, Chat
 
 **ConnectedToSystemTimestamp**  
 The date and time the customer endpoint connected to Amazon Connect\. For `INBOUND`, this matches `InitiationTimestamp`\. For `OUTBOUND`, `CALLBACK`, and `API`, this is when the customer endpoint answers\.  
@@ -236,16 +236,16 @@ Information about a queue\.
 The Amazon Resource Name of the queue\.  
 Type: ARN
 
-**DequeueTimestamp**  
+**DequeueTimestamp**  <a name="DequeueTimestamp-CTR"></a>
 The date and time the contact was removed from the queue\. Either the customer disconnected or the contact was connected to an agent\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
-**Duration**  
+**Duration**  <a name="Duration-CTR"></a>
 The difference in time, in whole seconds, between `EnqueueTimestamp` and `DequeueTimestamp`\.  
 Type: Integer  
 Min value: 0
 
-**EnqueueTimestamp**  
+**EnqueueTimestamp**  <a name="EnqueueTimestamp-CTR"></a>
 The date and time the contact was added to the queue\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
@@ -290,6 +290,6 @@ Length: 1\-100
 
 ## How to Identify Abandoned Contacts<a name="abandoned-contact"></a>
 
-Abandoned refers to a contact that was disconnected by the customer while in queue \(they weren't connected to an agent\)\. 
+An abandoned contact refers to a contact that was disconnected by the customer while in queue\. This means that they weren't connected to an agent\. 
 
-The CTR for an abandoned contact will have a **Queue**, and an **Enqueue Timestamp** since it was enqueued\. It won’t have a **ConnectedToAgentTimestamp**, or any of the other fields that only populate once the contact has been connected to an agent\.
+The CTR for an abandoned contact has a **Queue**, and an **Enqueue Timestamp** because it was enqueued\. It won’t have a **ConnectedToAgentTimestamp**, or any of the other fields that populate only after the contact has been connected to an agent\.

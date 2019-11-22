@@ -1,9 +1,9 @@
-# Sample Inbound Flow \(First Call Experience\)<a name="sample-inbound-flow"></a>
+# Sample Inbound Flow \(First Contact Experience\)<a name="sample-inbound-flow"></a>
 
 Type: Contact flow \(inbound\)
 
-This sample flow is automatically assigned to the phone number that you claimed when you first set up contact flows\. For more information, see [Get Started](amazon-connect-get-started.md)\. 
+This sample flow is automatically assigned to the phone number that you claimed when you first set up contact flows\. For more information, see [Get started](amazon-connect-get-started.md)\. 
 
-The customer is transferred to the other sample contact flows, based on their input\.
-
-For instructions on how to view this sample, see [Sample Contact Flows](contact-flow-samples.md)\. 
+It uses **Check contact attributes** to determine if the customer is contacting you by phone or chat, and to route them accordingly\.
++ If the channel is chat, the customer is transferred to the **Set disconnect flow**\.
++ If the channel is voice, the customer is transferred to the other sample contact flows, based on their input\.

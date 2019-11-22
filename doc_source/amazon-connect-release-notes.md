@@ -3,11 +3,12 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
-+ [October 2019 Update](#w11aac40b7)
-+ [June 2019 Update](#w11aac40b9)
-+ [May 2019 Updates](#w11aac40c11)
-+ [April 2019 Updates](#w11aac40c13)
-+ [March 2019 Update](#w11aac40c15)
++ [November 2019 Update](#w16aac53b7)
++ [October 2019 Update](#w16aac53b9)
++ [June 2019 Update](#w16aac53c11)
++ [May 2019 Updates](#w16aac53c13)
++ [April 2019 Updates](#w16aac53c15)
++ [March 2019 Update](#w16aac53c17)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -19,7 +20,39 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
 
-## October 2019 Update<a name="w11aac40b7"></a>
+## November 2019 Update<a name="w16aac53b7"></a>
+
+The following updates were released in November 2019:
+
+### Omnichannel Support<a name="nov19-channel"></a>
++ Added support for chat communications\. For more information, see [Concepts](connect-concepts.md)\. 
+
+### Metrics<a name="nov19-metrics"></a>
++ For a description of changes, see [What's New in Metrics](upcoming-changes.md)\.
+
+### Contact Flows<a name="nov19-contact-flows"></a>
+
+Added the following contact flow blocks:
++ [Wait](contact-blocks.md#wait)
++ [Set disconnect flow](contact-blocks.md#set-disconnect-flow) 
+
+Updated the following contact flow blocks for chat:
++ [Play prompt](contact-blocks.md#play)
++ [Get customer input](contact-blocks.md#get-customer-input)
++ [Store customer input](contact-blocks.md#store-customer-input)
++ [Set recording behavior](contact-blocks.md#set-recording-behavior)
+
+### User Management<a name="nov19-users"></a>
++ Added that you can use AWS Identity and Access Management \(IAM\) with Amazon Connect\. For more information, see [Controlling Access with AWS Identity and Access ManagementControlling Access with IAM](connect-access-control.md)\.
+
+### API<a name="nov19-api"></a>
++ Added [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/APIReference/API_StartChatContact.html), [ListTagsForResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListTagsForResource.html), [TagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_TagResource.html), [UntagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_UntagResource.html) to the Amazon Connect Service API\.
++ Added the [Amazon Connect Participant Service](https://docs.aws.amazon.com/connect-participant/latest/APIReference/Welcome.html) API\. These APIs are used chat participants, such as agents and customers\.
+
+### Contact Control Panel \(CCP\)<a name="nov19-CCP"></a>
++ Updated the CCP so it supports chat\. For more information, see [Using the CCP \(the Agent UI\)](agent-user-guide.md)\. 
+
+## October 2019 Update<a name="w16aac53b9"></a>
 
 The following update was released in October 2019:
 
@@ -28,14 +61,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-## June 2019 Update<a name="w11aac40b9"></a>
+## June 2019 Update<a name="w16aac53c11"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w11aac40c11"></a>
+## May 2019 Updates<a name="w16aac53c13"></a>
 
 The following updates were released in May 2019:
 
@@ -47,7 +80,7 @@ The following updates were released in May 2019:
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w11aac40c13"></a>
+## April 2019 Updates<a name="w16aac53c15"></a>
 
 The following updates were released in April 2019:
 
@@ -60,7 +93,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w11aac40c15"></a>
+## March 2019 Update<a name="w16aac53c17"></a>
 
 The following updates were released in March 2019:
 
@@ -226,7 +259,7 @@ The following updates were released in July 2018:
 + [Initiate an Outbound Call](using-call-number-block.md)
 + [Add an Amazon Lex Bot](amazon-lex.md)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
-+ [Manage Calls in a Queue Using a Transfer to Queue Block](transfer.md#queue-to-queue-transfer)
++ [Manage Contact in a Queue Using a Transfer to Queue Block](transfer.md#queue-to-queue-transfer)
 
 ### General<a name="july18-general"></a>
 + Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.

@@ -2,6 +2,9 @@
 
 Contact attributes in your contact flows can provide a more personalized customer experience\. For example, specify a custom flow based on comparing an attribute to a value\. You then route the contact based on the value comparison, such as routing customers to different tiers of support based on their account number\. Or retrieve a customer's name and save it as an attribute\. Include the name attribute in a text to speech string so that the customer's name is said during the interaction\.
 
+**Tip**  
+Contact attributes are shared across all contacts with the same InitialContactId\. This means that while carrying out transfers, for example, a contact attribute updated in the transfer flow updates the attribute's value in both CTR's contact attributes \(that is, the Inbound and Transfer contact attributes\)\. 
+
 The steps in the following sections describe how to use contact attributes with different blocks in a contact flow\.
 
 ## Using a Set Contact Attributes Block<a name="use-set-contact-attrib-block"></a>

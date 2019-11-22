@@ -5,7 +5,7 @@ If you want a different phone number, or have extra you aren't using you can rel
 You cannot claim the same phone number after releasing it\.
 
 **Tip**  
-If you want to "close" your Amazon Connect account, do these steps for all of your phone numbers\. This will ensure you aren't billed if people erroneously call numbers that you've claimed, and trigger your contact flows\. You may also want to [delete your instances\.](amazon-connect-instances.md#delete-connect-instance) 
+If you want to "close" your Amazon Connect account, do these steps for all of your phone numbers\. This will ensure you aren't billed if people erroneously call numbers that you've claimed, and trigger your contact flows\. You may also want to [delete your instances\.](delete-connect-instance.md) 
 
 **To release a phone number**
 

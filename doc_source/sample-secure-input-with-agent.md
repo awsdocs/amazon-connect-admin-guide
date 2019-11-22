@@ -6,7 +6,9 @@ This contact flow shows you how to allow customers to input sensitive data while
 
 Here's how it works: 
 
-1. This flow begins with putting the agent and customer in a conference call\.
+1. This flow begins with checking the customer's channel\. If they are using chat, they are put in a queue\.
+
+1. If they are using voice, the agent and customer are put in a conference call\.
 
 1. A **Play prompt** tells the customer that the agent will be put on hold while customer enters their credit card information\. 
 

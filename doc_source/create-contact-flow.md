@@ -4,7 +4,11 @@ The starting point for creating all contact flows is the contact flow designer\.
 
 For descriptions of the available action blocks, see [Contact Block Definitions](contact-blocks.md)\.
 
-## <a name="w11aac15c12b7"></a>
+## Before You Begin: Develop a Naming Convention<a name="before-create-contact-flow"></a>
+
+Chances are you're going to create tens or hundreds of contact flows\. To help you stay organized, it's important to develop a naming convention\. Once you start creating contact flows, we strongly recommend against renaming them\.
+
+**You can't delete a contact flow**\. To get obsolete contact flows out of your way, we recommend appending **zzTrash\_** to their name\. This will also make them easy to find should you want to reuse them in the future\.
 
 ## Choose a Contact Flow Template<a name="template"></a>
 
@@ -15,14 +19,14 @@ When you create a contact flow, you need to choose the right template for your s
 
 | Template | When to use | 
 | --- | --- | 
-|  **Customer queue flow**  |  Use to manage what the customer experiences while in queue, before being joined to an agent\. Customer queue flows are interruptible and can include actions such as an audio clip apologizing for a delay and offering an option to receive a callback, leveraging the **Transfer to queue** block\.  | 
-|  **Customer hold flow**  |  Use to manage what the customer experiences while the customer is on hold\. With this flow, one or more audio prompts can be played to a customer using the **Loop prompts** block while waiting on hold\.  | 
-|  **Customer whisper flow**  |  Use to manage what the customer experiences as part of an inbound call immediately before being joined with an agent\. The agent and customer whispers are played to completion, then the two are joined\.  | 
-|  **Outbound whisper flow**  |  Use to manage what the customer experiences as part of an outbound call before being connected with an agent\. In this flow, the customer whisper is played to completion, then the two are joined\. For example, this flow can be used to enable call recordings for outbound calls with the **Set call recording behavior** block\.  | 
-|  **Agent hold flow**  |  Use to manage what the agent experiences when on hold with a customer\. With this flow, one or more audio prompts can be played to an agent using the **Loop prompts** block while the customer is on hold\.  | 
-| **Agent whisper flow** | Use to manage what the agent experiences as part of an inbound call immediately before being joined with a customer\. The agent and customer whispers are played to completion, then the two are joined\. | 
-| **Transfer to agent flow** | Use to manage what the agent experiences when transferring to another agent\. This type of flow is associated with transfer to agent quick connects, and often plays messaging, then completes the transfer using the **Transfer to agent** block\. | 
-| **Transfer to queue flow** | Use to manage what the agent experiences when transferring to another queue\. This type of flow is associated with transfer to queue quick connects, and often plays messaging, then completes the transfer using the **Transfer to queue** block\. | 
+|  **Customer queue flow**  |  Use to manage what the customer experiences while in queue, before being joined to an agent\. Customer queue flows are interruptible and can include actions such as an audio clip apologizing for a delay and offering an option to receive a callback, leveraging the **Transfer to queue** block\. This contact follow works with voice and chat\.   | 
+|  **Customer hold flow**  |  Use to manage what the customer experiences while the customer is on hold\. With this flow, one or more audio prompts can be played to a customer using the **Loop prompts** block while waiting on hold\. This contact follow works with voice\.   | 
+|  **Customer whisper flow**  |  Use to manage what the customer experiences as part of an inbound call immediately before being joined with an agent\. The agent and customer whispers are played to completion, then the two are joined\. This contact follow works with voice\.   | 
+|  **Outbound whisper flow**  |  Use to manage what the customer experiences as part of an outbound call before being connected with an agent\. In this flow, the customer whisper is played to completion, then the two are joined\. For example, this flow can be used to enable call recordings for outbound calls with the **Set recording behavior** block\. This contact follow works with voice\.   | 
+|  **Agent hold flow**  |  Use to manage what the agent experiences when on hold with a customer\. With this flow, one or more audio prompts can be played to an agent using the **Loop prompts** block while the customer is on hold\. This contact follow works with voice\.   | 
+| **Agent whisper flow** | Use to manage what the agent experiences as part of an inbound call immediately before being joined with a customer\. The agent and customer whispers are played to completion, then the two are joined\. This contact follow works with voice\.   | 
+| **Transfer to agent flow** | Use to manage what the agent experiences when transferring to another agent\. This type of flow is associated with transfer to agent quick connects, and often plays messaging, then completes the transfer using the **Transfer to agent** block\. This contact follow works with voice\.   | 
+| **Transfer to queue flow** | Use to manage what the agent experiences when transferring to another queue\. This type of flow is associated with transfer to queue quick connects, and often plays messaging, then completes the transfer using the **Transfer to queue** block\. This contact follow works with voice and chat\.  | 
 
 **To create a contact flow from a template**
 

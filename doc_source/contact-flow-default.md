@@ -19,6 +19,9 @@ The default agent hold flow is the experience the agent receives when placed on 
 
 This default transfer flow is the customer's experience when the customer is transferred to an agent by using [Create Quick Connects](transfer.md#quick-connects)\. A **Play prompt** plays the message “Transferring now\.” Then the **Transfer to agent** block is used to transfer the contact to the agent\. 
 
+**Tip**  
+The **Transfer to Agent** block is a beta feature and only works for voice interactions\. To transfer a chat contact to another agent, follow these instructions: [Using Contact Attributes to Route Contacts to a Specific Agent](transfer.md#use-attribs-agent-queue)\.
+
 ## Default Customer Queue<a name="default-customer-queue"></a>
 
 This default contact flow is played when a customer is placed in a queue\. The loop has a one\-time voice prompt and queue music in \.wav format that's been uploaded to the Amazon Connect instance\. 

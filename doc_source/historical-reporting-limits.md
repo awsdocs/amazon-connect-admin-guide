@@ -18,4 +18,4 @@ For example, let's say you create a historical metrics report with this criteria
 
 If only 10 agents handled contacts in BasicQueue during this time, then you would expect to see \(24\*2\)\*5\*10 = 2400 cells that count towards the 80k limit\.
 
-If you reach the limit, a message will appear in the UI letting you know\. 
+A message informs you if you reach the limit\. 

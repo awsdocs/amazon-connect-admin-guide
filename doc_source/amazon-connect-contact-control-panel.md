@@ -9,7 +9,7 @@ We recommend telling agents to bookmark the URL to the CCP so they can access it
 
 As the admin, you can access the CCP by clicking on the phone icon in the upper right corner of Amazon Connect\.
 
-## Grant Microphone Access<a name="accessing-microphone"></a>
+## Grant Microphone Access in Chrome or Firefox<a name="accessing-microphone"></a>
 
 If agents experience problems with their microphone, they may need to grant microphone access in their browser\.
 

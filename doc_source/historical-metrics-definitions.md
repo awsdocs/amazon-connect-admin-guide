@@ -4,7 +4,7 @@ The following metrics are available to include in historical metrics reports in 
 
 **After contact work time**  <a name="acw-historical"></a>
 The total time that an agent spent doing ACW for a contact\.   
-You specify the amount of time an agent has to do ACW in their [ agent configuration settings](configure-agents.md)\. When a conversation with a contact ends, the agent is automatically allocated to do ACW for the contact\.  
+You specify the amount of time an agent has to do ACW in their [ agent configuration settings](configure-agents.md)\. When a conversation with a contact ends, the agent is automatically allocated to do ACW for the contact\. They stop doing ACW for a contact when they indicate they are ready for another contact in the CCP\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
@@ -22,17 +22,17 @@ Length: 1\-255
 
 **Agent idle time**  <a name="agent-idle-time-historical"></a>
 After the agent sets their status in the CCP to **Available**, this is the amount of time they weren't handling contacts \+ any time their contacts were in an Error state\.   
-Agent idle time doesn’t include the amount of time when Amazon Connect starts routing the contact to the agent to when agent picks up or declines the contact\.  
+Agent idle time doesn’t include the amount of time from when Amazon Connect starts routing the contact to the agent, to when agent picks up or declines the contact\.  
 Type: String \(*hh:mm:ss*\)  
 Category: Agent activity\-driven metric
 
 **Agent interaction and hold time**  <a name="agent-interaction-hold-time-historical"></a>
-Sum of the **Agent interaction time** and **Customer hold time** metrics\.  
+Sum of [Agent interaction time](#agent-interaction-time-historical) and [Customer hold time](#customer-hold-time-historical)\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
 **Agent interaction time**  <a name="agent-interaction-time-historical"></a>
-Total time that agents spent interacting with customers on a contact\. This does not include hold time or after contact work\.  
+Total time that agents spent interacting with customers on a contact\. This does not include [Customer Hold Time](#customer-hold-time-historical) or [After Contact Work Time](#acw-historical)\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
@@ -45,13 +45,15 @@ Length: 1\-255
 The name of the agent, displayed as follows: **Agent last name**, **Agent first name**\. This metric is available only when grouping by agent\.
 
 **Agent non\-response**  <a name="agent-non-response"></a>
-Count of contacts routed to an agent but not answered by the agent, including contacts abandoned by the customer\. A contact can be counted as missed multiple times, once for each time it is routed to an agent but not answered\.  
+Count of contacts routed to an agent but not answered by that agent, including contacts abandoned by the customer\.   
+If a contact is not answered by a given agent, we attempt to route it to another agent to handle; the contact is not dropped\. Because a single contact can be missed multiple times \(including by the same agent\), it can be counted multiple times: once for each time it is routed to an agent but not answered\.  
 This metric appears as **Contacts missed** in scheduled reports and exported CSV files\.  
 Type: Integer   
 Category: Agent activity\-driven metric
 
 **Agent on contact time**  <a name="agent-on-contact-time-historical"></a>
-Total time that an agent spent on a contact, including hold time and after contact work\. This does not include time spent on a contact while in a custom status\.  
+Total time that an agent spent on a contact, including [Customer Hold Time](#customer-hold-time-historical) and [After Contact Work Time](#acw-historical)\. This does **not** include time spent on a contact while in a custom status\.  
+If you want to include the time spent in a custom status, see [Contact handle time](#contact-handle-time-historical)\.
 Type: String \(*hh:mm:ss*\)  
 Category: Agent activity\-driven metric
 
@@ -66,12 +68,12 @@ Type: Integer
 Category: CTR\-driven metric
 
 **Average after contact work time**  <a name="average-acw-time-historical"></a>
-Average time that an agent spent doing After Contact Work \(ACW\) for their contacts\. This is calculated by averaging `AfterContactWorkDuration` \(from the CTR\) for all contacts included in the report, based on the selected filters\.  
+Average amount of time that an agent spent doing After Contact Work \(ACW\) for contacts\. This is calculated by averaging [AfterContactWorkDuration](ctr-data-model.md#AfterContactWorkDuration-CTR) \(from the CTR\) for all contacts included in the report, based on the selected filters\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
 **Average agent interaction and customer hold time**  <a name="average-agent-interaction-customer-hold-time-historical"></a>
-Average of the sum of the agent interaction and customer hold time\. This is calculated by averaging the sum of the following values from the CTR: `AgentInteractionDuration` and `CustomerHoldDuration`\.  
+Average of the sum of the agent interaction and customer hold time\. This is calculated by averaging the sum of the following values from the CTR: [AgentInteractionDuration](ctr-data-model.md#AgentInteractionDuration-CTR) and [CustomerHoldDuration](ctr-data-model.md#CustomerHoldDuration-CTR)\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
@@ -81,7 +83,7 @@ Type: String \(*hh:mm:ss*\)
 Category: CTR\-driven metric
 
 **Average customer hold time**  <a name="average-customer-hold-time-historical"></a>
-Average time that customers spent on hold while connected to an agent\. This is calculated by averaging `CustomerHoldDuration` \(from the CTR\)\.  
+Average time that customers spent on hold while connected to an agent\. This is calculated by averaging [CustomerHoldDuration](ctr-data-model.md#CustomerHoldDuration-CTR) \(from the CTR\)\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
@@ -91,7 +93,7 @@ Type: String \(*hh:mm:ss*\)
 Category: CTR\-driven metric
 
 **Average outbound after contact work time**  <a name="average-outbound-acw-time-historical"></a>
-Average time that agents spent doing After Contact Work \(ACW\) after handling an outbound contact\.  
+Average time that agents spent doing After Contact Work \(ACW\) for an outbound contact\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
@@ -101,12 +103,13 @@ Type: String \(*hh:mm:ss*\)
 Category: CTR\-driven metric
 
 **Average queue abandon time**  <a name="average-queue-abandon-time-historical"></a>
-Average time that contacts waited in the queue before being abandoned\. This is calculated by averaging the difference between `EnqueueTimestamp` and `DequeueTimestamp` \(from the CTR\) for abandoned contacts\. An contact is considered abandoned if it was removed from a queue but not answered by an agent or queued for callback\.  
+Average time that contacts waited in the queue before being abandoned\. This is calculated by averaging the difference between [EnqueueTimestamp](ctr-data-model.md#EnqueueTimestamp-CTR) and [DequeueTimestamp](ctr-data-model.md#DequeueTimestamp-CTR) \(from the CTR\) for abandoned contacts\.   
+A contact is considered abandoned if it was removed from a queue but not answered by an agent or queued for callback\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
 **Average queue answer time**  <a name="average-queue-answer-time-historical"></a>
-Average time that contacts waited in the queue before being answered by an agent\. This is the average of `Duration` \(from the CTR\)\.  
+Average time that contacts waited in the queue before being answered by an agent\. This is the average of [Duration](ctr-data-model.md#Duration-CTR) \(from the CTR\)\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
@@ -127,7 +130,8 @@ Type: String \(*hh:mm:ss*\)
 Category: CTR\-driven metric
 
 **Contact handle time**  <a name="contact-handle-time-historical"></a>
-Total time that an agent spent on contacts, including hold time and **After contact work time**\. This includes any time spent on contacts while in a custom status\.   
+Total time that an agent spent on contacts, including [Customer Hold Time](#customer-hold-time-historical) and [After contact work time](#acw-historical)\. This includes any time spent on contacts while in a custom status\.   
+If you want to exclude the amount of time spent in a custom status, see [Agent on contact time](#agent-on-contact-time-historical)\. 
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 
@@ -147,7 +151,7 @@ Type: Integer
 Category: CTR\-driven metric
 
 **Contacts answered in *X* seconds**  <a name="contacts-answered-x-historical"></a>
-Count of contacts that were answered by an agent between 0 and *X* seconds of being placed in the queue, based on the value of `EnqueueTimestamp`\. The possible values for *X* are: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\.  
+Count of contacts that were answered by an agent between 0 and *X* seconds of being placed in the queue, based on the value of [EnqueueTimestamp](ctr-data-model.md#EnqueueTimestamp-CTR)\. The possible values for *X* are: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\.  
 Type: Integer   
 Category: CTR\-driven metric
 
@@ -163,7 +167,7 @@ Type: Integer
 Category: CTR\-driven metric
 
 **Contacts handled incoming**  <a name="contacts-handled-incoming-historical"></a>
-Count of incoming contacts that were handled by an agent, including inbound contacts, transferred contacts, and scheduled callbacks\.  
+Count of incoming contacts that were handled by an agent, including inbound contacts and transferred contacts\.  
 Type: Integer   
 Category: CTR\-driven metric
 
@@ -194,7 +198,7 @@ Category: CTR\-driven metric
 
 **Contacts missed**  <a name="contacts-missed-historical"></a>
 Count of contacts routed to an agent but not answered by the agent, including contacts abandoned by the customer\. A contact can be counted as missed multiple times, once for each time it is routed to an agent but not answered\.  
-This metric appears as **Agent non\-response** on the **Historical metrics** page in the user interface\.  
+When you add this to a historical metrics report, it appears under the column named **Agent non\-response**\.  
 Type: Integer   
 Category: Agent activity\-driven metric
 
@@ -244,7 +248,7 @@ Type: String \(*hh:mm:ss*\)
 Category: CTR\-driven metric
 
 **Error status time**  <a name="error-status-time-historical"></a>
-For a specific agent, the total time contacts were in an error status\.  
+For a specific agent, the total time contacts were in an error status\. This metric can't be grouped or filtered by queue\.  
 Type: String \(*hh:mm:ss*\)  
 Category: Agent activity\-driven metric
 
@@ -254,20 +258,23 @@ Type: String \(*hh:mm:ss*\)
 Category: CTR\-driven metric
 
 **Non\-Productive Time**  <a name="npt-historical"></a>
-Total time that agents spent in a custom status \(any status other than **Available**, **Error**, or **Offline**\), including any time they spent handling contacts while in a custom status\. This metric can't be grouped or filtered by queue\.  
+Total time that agents spent in a [custom status](agent-custom.md)\. That is, their CCP status is other than **Available** or **Offline**\.   
+This metric doesn't mean that the agent was spending their time unproductively\.   
+Agents can handle contacts while their CCP status is set to a custom status\. For example, agents can be **On contact** or doing **ACW** while their CCP is set to a custom status\. This means it's possible for agents to be counted as **On contact** and **NPT** at the same time\. 
+This metric can't be grouped or filtered by queue\.  
 Type: String \(*hh:mm:ss*\)  
 Category: Agent activity\-driven metric
 
 **Occupancy**  <a name="occupancy-historical"></a>
 Percentage of time that agents were active on contacts\. This percentage is calculated as follows:  
-\(Agent Handle Time / \(Agent Handle Time \+ Agent Idle Time\)\) \* 100  
+\([Agent Handle Time](#average-handle-time-historical) / \([Agent Handle Time](#average-handle-time-historical) \+ [Agent Idle Time](#agent-idle-time-historical)\)\) \* 100  
 Type: String   
 Min value: 0\.00%  
 Max value: 100\.00%  
 Category: Agent activity\-driven metric
 
 **Online time**  <a name="online-time-historical"></a>
-Total time that an agent spent in a status other than **Offline**\. This includes any time spent in a custom status\. This metric can't be grouped or filtered by queue\.  
+Total time that an agent spent with their CCP set to a status other than **Offline**\. This includes any time spent in a custom status\. This metric can't be grouped or filtered by queue\.  
 Type: String \(*hh:mm:ss*\)  
 Category: Agent activity\-driven metric
 

@@ -2,6 +2,8 @@
 
 Type: Contact flow \(inbound\)
 
+This sample flow is available in legacy Amazon Connect instances\. In new instances, you can see this functionality in [Sample Queue Configurations](sample-queue-configurations.md)\.
+
 This contact flow shows you two options for using the **Change routing priority/age ** block to adjust the priority of a customer in the queue\. You can change a customer's priority in the queue using priority or routing age\.
 
 ## Option 1: Raise the Priority<a name="option1-sample-customer-queue-priority"></a>

@@ -46,7 +46,6 @@ When creating a contact flow, you can use the following system attributes in Ama
 + **Contact id**—The unique identifier for the contact\.
 + **Initial contact id**—The unique identifier for the contact associated with the first interaction between the customer and your contact center\.
 + **Previous contact id**—The unique identifier for the leg of the contact that occurred before the current contact\.
-+ **Channel**—The method used to contact your contact center\. Currently only VOICE is supported\.
++ **Channel**—The method used to contact your contact center, either VOICE or CHAT\. 
 + **Instance ARN**—The ARN for your Amazon Connect instance\.
 + **Initiation method**—Indicates how the contact was initiated\. Valid values include: INBOUND, OUTBOUND, TRANSFER, CALLBACK, API, and QUEUE\_TRANSFER\.
-+ **Lex intent**—The name of the intent as defined in your Amazon Lex bot\.
