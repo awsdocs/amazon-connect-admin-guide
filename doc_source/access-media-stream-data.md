@@ -1,19 +1,36 @@
-# How to Access Kinesis Video Stream Data<a name="access-media-stream-data"></a>
+# How to Access Kinesis Video Streams Data<a name="access-media-stream-data"></a>
 
-To access Kinesis video stream data so you can analysis it, you must be a developer\. Use the steps and code samples in this section to interact with the customer audio data sent to Kinesis Video Streams\.
+You must have developer skills to work with Kinesis Video Streams data\. Use the steps and code samples in this section to interact with the customer audio data sent to Kinesis Video Streams\.
 
-First, download the [Kinesis Video parser library](https://github.com/aws/amazon-kinesis-video-streams-parser-library/archive/v1.0.3.zip)\. This library includes an easy\-to\-use set of tools you can use in Java applications to consume the MKV data in a Kinesis video stream\. To learn more, see [Kinesis Video Stream parser library](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/parser-library.html)\.
+## Get Started with a Sample<a name="get-started-media-stream"></a>
 
-Next, use the following example Java classes, which are built on top of the Kinesis video parser library using the AWS SDK for Java\.
-+ **LMSDemo**—is a class with a main method that invokes LMSExample\.
-+ **LMSExample**—is similar to the examples provided in the KVS Parser library that gets media from the specified Kinesis Video Stream with the specified fragment number\.
-+ **LMSFrameProcessor**—is invoked by LMSExample to save data from Kinesis Video Streams to the specified output stream\. Use a file output stream to save the output to a file\.
+There's an example project on GitHub to help you to get started using Amazon Connect live audio streaming and real\-time transcription using Amazon Transcribe\. See [Amazon Connect Real\-time Transcription Lambda](https://github.com/amazon-connect/amazon-connect-realtime-transcription)\.
 
-Then, use Audacity \(https://www\.audacityteam\.org/\), or other audio tool, to import the \.raw audio file, which is a 16\-bit signed PCM Mono format\.
+This project provides a code example and a fully functional Lambda function\. They help you get started capturing and transcribing Amazon Connect phone calls using Kinesis Video Streams and Amazon Transcribe\. 
 
-## Code Samples to Access Kinesis Video Stream Data<a name="media-streaming-code-samples"></a>
+You can use the Lambda function in this project to create other solutions, such as: 
++ Capturing audio in the IVR\.
++ Providing real\-time transcription to agents\.
++ Creating a voicemail solution for Amazon Connect\.
 
-### LMSDemo\.java<a name="lasdemo-java"></a>
+## Build Your Own Implementation<a name="get-started-media-stream-scratch"></a>
+
+You may want to implement a solution other than the one provided by the previously\-described sample\. If so, this section describes how to make the proper API calls against the Kinesis Video Streams so you can build your own solution from scratch\. 
+
+1. Go to [this GitHub page](https://github.com/amazon-connect/amazon-connect-realtime-transcription), and read about the Amazon Connect Real\-time Transcription Lambda project\.
+
+1. Choose the **deployment** folder, and download the **cloudformation\.template**\.
+
+1. Use the following example Java classes, which are built on top of the Kinesis video parser library using the AWS SDK for Java\.
+   + **LMSDemo**— is a class with a main method that invokes LMSExample\.
+   + **LMSExample**— is similar to the examples provided in the Kinesis Video Streams Parser library\. It gets media from the specified Kinesis Video Streams with the specified fragment number\. This code sample includes frame processing to separate the tracks\.
+   + **LMSFrameProcessor**— is invoked by LMSExample to save data from Kinesis Video Streams to the specified output stream\. Use a file output stream to save the output to a file\. This code sample also includes frame processing to separate the tracks\.
+
+1. Use [Audacity](https://www.audacityteam.org), or other audio tool, to import the \.raw audio file, which is in a 16\-bit signed PCM Mono format\.
+
+### Code Samples to Access Kinesis Video Streams Data<a name="media-streaming-code-samples"></a>
+
+#### LMSDemo\.java<a name="lasdemo-java"></a>
 
 ```
 package com.amazonaws.kinesisvideo.parser.demo;
@@ -67,7 +84,7 @@ public class LMSDemo {
 }
 ```
 
-### LMSExample\.java<a name="lasexample-java"></a>
+#### LMSExample\.java<a name="lasexample-java"></a>
 
 ```
 package com.amazonaws.kinesisvideo.parser.examples;
@@ -102,23 +119,26 @@ public class LMSExample extends KinesisVideoCommon {
     private final ExecutorService executorService;
     private GetMediaProcessingArguments getMediaProcessingArguments;
     private final StreamOps streamOps;
-    private final OutputStream outputStream;
+    private final OutputStream outputStreamFromCustomer;
+    private final OutputStream outputStreamToCustomer;
     private final String fragmentNumber;
 
     public LMSExample(Regions region,
                       String streamName,
                       String fragmentNumber,
                       AWSCredentialsProvider credentialsProvider,
-                      OutputStream outputStream) throws IOException {
+                      OutputStream outputStreamFromCustomer,
+                      OutputStream outputStreamToCustomer) throws IOException {
         super(region, credentialsProvider, streamName);
         this.streamOps = new StreamOps(region,  streamName, credentialsProvider);
         this.executorService = Executors.newFixedThreadPool(2);
-        this.outputStream = outputStream;
+        this.outputStreamFromCustomer = outputStreamFromCustomer;
+        this.outputStreamToCustomer = outputStreamToCustomer;
         this.fragmentNumber = fragmentNumber;
     }
 
     public void execute () throws InterruptedException, IOException {
-        getMediaProcessingArguments = GetMediaProcessingArguments.create(outputStream);
+        getMediaProcessingArguments = GetMediaProcessingArguments.create(outputStreamFromCustomer, outputStreamToCustomer);
         try (GetMediaProcessingArguments getMediaProcessingArgumentsLocal = getMediaProcessingArguments) {
             //Start a GetMedia worker to read and process data from the Kinesis Video Stream.
             GetMediaWorker getMediaWorker = GetMediaWorker.create(getRegion(),
@@ -169,7 +189,7 @@ public class LMSExample extends KinesisVideoCommon {
         public void visit(MkvEndMasterElement endMasterElement) throws MkvElementVisitException {
             if (MkvTypeInfos.SEGMENT.equals(endMasterElement.getElementMetaData().getTypeInfo())) {
                 System.out.println("End of segment");
-                                      
+
             }
         }
 
@@ -190,7 +210,7 @@ public class LMSExample extends KinesisVideoCommon {
             this.frameVisitor = frameVisitor;
         }
 
-        public static GetMediaProcessingArguments create(OutputStream outPutStream) throws IOException {
+        public static GetMediaProcessingArguments create(OutputStream outputStreamFromCustomer, OutputStream outputStreamToCustomer) throws IOException {
             //Fragment metadata visitor to extract Kinesis Video fragment metadata from the GetMedia stream.
             FragmentMetadataVisitor fragmentMetadataVisitor = FragmentMetadataVisitor.create();
 
@@ -199,7 +219,7 @@ public class LMSExample extends KinesisVideoCommon {
 
             //A composite visitor to encapsulate the three visitors.
             FrameVisitor frameVisitor =
-                    FrameVisitor.create(LMSFrameProcessor.create(outPutStream));
+                    FrameVisitor.create(LMSFrameProcessor.create(outputStreamFromCustomer, outputStreamToCustomer, fragmentMetadataVisitor));
 
             return new GetMediaProcessingArguments(frameVisitor);
         }
@@ -213,12 +233,14 @@ public class LMSExample extends KinesisVideoCommon {
 }
 ```
 
-### LMSFrameProcessor\.java<a name="lasframeprocessor-java"></a>
+#### LMSFrameProcessor\.java<a name="lasframeprocessor-java"></a>
 
 ```
 package com.amazonaws.kinesisvideo.parser.utilities;
 
 import com.amazonaws.kinesisvideo.parser.mkv.Frame;
+import com.amazonaws.kinesisvideo.parser.utilities.FragmentMetadataVisitor;
+import com.amazonaws.kinesisvideo.parser.utilities.MkvTrackMetadata;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -226,15 +248,17 @@ import java.nio.ByteBuffer;
 
 public class LMSFrameProcessor implements FrameVisitor.FrameProcessor {
 
-    private OutputStream outputStream;
+    private OutputStream outputStreamFromCustomer;
+    private OutputStream outputStreamToCustomer;
+    private FragmentMetadataVisitor fragmentMetadataVisitor;
 
-
-    protected LMSFrameProcessor(OutputStream outputStream) {
-        this.outputStream = outputStream;
+    protected LMSFrameProcessor(OutputStream outputStreamFromCustomer, OutputStream outputStreamToCustomer, FragmentMetadataVisitor fragmentMetadataVisitor) {
+        this.outputStreamFromCustomer = outputStreamFromCustomer;
+        this.outputStreamToCustomer = outputStreamToCustomer;
     }
 
-    public static LMSFrameProcessor create(OutputStream outputStream) {
-        return new LMSFrameProcessor(outputStream);
+    public static LMSFrameProcessor create(OutputStream outputStreamFromCustomer, OutputStream outputStreamToCustomer, FragmentMetadataVisitor fragmentMetadataVisitor) {
+        return new LMSFrameProcessor(outputStreamFromCustomer, outputStreamToCustomer, fragmentMetadataVisitor);
     }
 
     @Override
@@ -244,10 +268,20 @@ public class LMSFrameProcessor implements FrameVisitor.FrameProcessor {
 
     private void saveToOutPutStream(final Frame frame) {
         ByteBuffer frameBuffer = frame.getFrameData();
+        long trackNumber = frame.getTrackNumber();
+        MkvTrackMetadata metadata = fragmentMetadataVisitor.getMkvTrackMetadata(trackNumber);
+        String trackName = metadata.getTrackName();
+
         try {
             byte[] frameBytes = new byte[frameBuffer.remaining()];
             frameBuffer.get(frameBytes);
-            outputStream.write(frameBytes);
+            if (Strings.isNullOrEmpty(trackName) || "AUDIO_FROM_CUSTOMER".equals(trackName)) {
+              outputStreamFromCustomer.write(frameBytes);
+            } else if ("AUDIO_FROM_CUSTOMER".equals(trackName)) {
+              outputStreamToCustomer.write(frameBytes);
+            } else {
+              // Unknown track name. Not writing to output stream.
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

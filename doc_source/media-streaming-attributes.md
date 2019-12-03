@@ -1,9 +1,9 @@
-# Live Media Streaming Contact Attributes<a name="media-streaming-attributes"></a>
+# Contact Attributes for Live Media Streaming<a name="media-streaming-attributes"></a>
 
 The attributes, displayed when you select **Media streams** for the **Type** in a contact flow block that supports attributes include the following:
 
 Customer audio stream ARN  
-The ARN of the Kinesis Video stream that includes the customer data to reference\.  
+The ARN of the Kinesis video stream that includes the customer data to reference\.  
 **JSONPath format: **$\.MediaStreams\.Customer\.Audio\.StreamARN
 
 Customer audio start timestamp  

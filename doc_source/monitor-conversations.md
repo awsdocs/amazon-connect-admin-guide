@@ -34,7 +34,7 @@ These permissions enable managers to monitor live conversations and access recor
 
 1. Choose **Save**\. 
 
-## Monitor Live Conversations with Contacts<a name="w16aac39b8c11"></a>
+## Monitor Live Conversations with Contacts<a name="w16aac40b8c11"></a>
 
 1. Log in to your Amazon Connect instance with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Manager monitor** permission\.
 

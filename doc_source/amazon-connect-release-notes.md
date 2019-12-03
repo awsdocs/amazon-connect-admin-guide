@@ -3,12 +3,13 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
-+ [November 2019 Update](#w16aac53b7)
-+ [October 2019 Update](#w16aac53b9)
-+ [June 2019 Update](#w16aac53c11)
-+ [May 2019 Updates](#w16aac53c13)
-+ [April 2019 Updates](#w16aac53c15)
-+ [March 2019 Update](#w16aac53c17)
++ [December 2019 Update](#w16aac54b7)
++ [November 2019 Update](#w16aac54b9)
++ [October 2019 Update](#w16aac54c11)
++ [June 2019 Update](#w16aac54c13)
++ [May 2019 Updates](#w16aac54c15)
++ [April 2019 Updates](#w16aac54c17)
++ [March 2019 Update](#w16aac54c19)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -20,7 +21,14 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
 
-## November 2019 Update<a name="w16aac53b7"></a>
+## December 2019 Update<a name="w16aac54b7"></a>
+
+The following update was released in December 2019:
+
+### Monitoring<a name="dec19-monitoring"></a>
++ Added Contact Lens for Amazon Connect\. This feature enables you search conversations for keywords, sentiment scores, and non\-talk time\. For more information, see [Analyze Conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.
+
+## November 2019 Update<a name="w16aac54b9"></a>
 
 The following updates were released in November 2019:
 
@@ -40,10 +48,13 @@ Updated the following contact flow blocks for chat:
 + [Play prompt](contact-blocks.md#play)
 + [Get customer input](contact-blocks.md#get-customer-input)
 + [Store customer input](contact-blocks.md#store-customer-input)
-+ [Set recording behavior](contact-blocks.md#set-recording-behavior)
++ [Set recording and analytics behavior](contact-blocks.md#set-recording-behavior)
 
 ### User Management<a name="nov19-users"></a>
 + Added that you can use AWS Identity and Access Management \(IAM\) with Amazon Connect\. For more information, see [Controlling Access with AWS Identity and Access ManagementControlling Access with IAM](connect-access-control.md)\.
+
+### Live Media Streaming<a name="nov19-lms"></a>
++ Added that you can capture customer audio for the entire interaction with your contact center\. For more information, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\.
 
 ### API<a name="nov19-api"></a>
 + Added [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/APIReference/API_StartChatContact.html), [ListTagsForResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListTagsForResource.html), [TagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_TagResource.html), [UntagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_UntagResource.html) to the Amazon Connect Service API\.
@@ -52,7 +63,7 @@ Updated the following contact flow blocks for chat:
 ### Contact Control Panel \(CCP\)<a name="nov19-CCP"></a>
 + Updated the CCP so it supports chat\. For more information, see [Using the CCP \(the Agent UI\)](agent-user-guide.md)\. 
 
-## October 2019 Update<a name="w16aac53b9"></a>
+## October 2019 Update<a name="w16aac54c11"></a>
 
 The following update was released in October 2019:
 
@@ -61,14 +72,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-## June 2019 Update<a name="w16aac53c11"></a>
+## June 2019 Update<a name="w16aac54c13"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w16aac53c13"></a>
+## May 2019 Updates<a name="w16aac54c15"></a>
 
 The following updates were released in May 2019:
 
@@ -80,7 +91,7 @@ The following updates were released in May 2019:
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w16aac53c15"></a>
+## April 2019 Updates<a name="w16aac54c17"></a>
 
 The following updates were released in April 2019:
 
@@ -93,7 +104,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w16aac53c17"></a>
+## March 2019 Update<a name="w16aac54c19"></a>
 
 The following updates were released in March 2019:
 
