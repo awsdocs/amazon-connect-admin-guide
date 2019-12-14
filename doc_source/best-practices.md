@@ -19,7 +19,7 @@ This list of best practices can help you get the maximum benefit from Amazon Con
   + In the **Set callback number** block, choose the number to be used to call the customer back in the CCP\. Use **System** and **Customer Number** or a new number, collected by a **Store Customer Input** block, using **System** and **Stored customer input**\.
   + Finally, add a **Transfer to queue** block\. Configure it to **Transfer to callback queue** and configure the callback options to fit your specific use case\.
 + Use a **Loop prompts** block in your Customer queue flow to interrupt with a queued callback and external transfer option at regular intervals\. 
-+ Ensure that all countries referenced in external transfers or used for outbound dialing are added to the service limit for your account/instance\.
++ Ensure that all countries referenced in external transfers or used for outbound dialing are added to the service quota for your account/instance\.
 + Ensure that all numbers referenced in external transfers are in E\.164 format\. Drop the national trunk prefix that you use when calling locally\. This prefix would be the leading 0 for most of Europe, 1 for the US\. The prefix is replaced by the country code\. For example, the UK mobile number **07911 123456** in E\.164 format is **\+44 7911 123456 \(tel:\+447911123456\)**\.
 + Ensure that there are no infinite loops in the contact flow logic\. Also ensure that for each call, the contact flow connects the caller to an agent, bot, or transferred externally for further assistance\.
 

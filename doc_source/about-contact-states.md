@@ -7,8 +7,8 @@ Contact states appear in two places: the real\-time metrics reports and the agen
 There are different events that can appear in the lifecycle of a contact\. Each of these events appear in the agent event stream as a **State**\. A contact can have the following states that appear in the agent event stream:
 + INCOMING \- This is specific to queued callbacks\. The agent is presented with a callback\.
 + PENDING \- This is specific to queued callbacks\.
-+ CONNECTING \- The agent has accepted the contact\. Now the contact object is being connected to the customer\.
-+ CONNECTED \- They are in a conversation with the agent\.
++ CONNECTING \- An inbound contact is being offered to the agent \(it's ringing\)\. The agent has not yet taken any action to accept or reject the contact, and they haven't missed it\.
++ CONNECTED \- The agent has accepted the contact\. Now the customer is in a conversation with the agent\.
 + CONNECTED\_ONHOLD \- They are in a conversation with the agent, and the agent has put the customer on hold\.
 + MISSED \- The contact was missed by the agent\.
 + ERROR \- This appears when, for example, the customer abandons the call during outbound whisper\.  

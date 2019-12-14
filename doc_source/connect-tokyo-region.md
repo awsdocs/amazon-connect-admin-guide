@@ -31,9 +31,9 @@ When you claim a toll free phone number for Amazon Connect, there is no correspo
 
 ## How to Claim a Phone Number for Amazon Connect Instances in the Asia Pacific \(Tokyo\) Region<a name="claim-number-tokyo"></a>
 
-You can claim a 050 prefix number directly within Amazon Connect\. If you plan to use a number with a 03 prefix from Tokyo, pursuant to Japanese regulatory requirements, you must submit an [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) to request an number with a 03 prefix for your instance\. As part of the approval process, you must provide proof of address documentation to confirm that you have an address in Tokyo\. The documents required for address verification are described later in this topic\.
+You can claim a 050 prefix number directly within Amazon Connect\. If you plan to use a number with a 03 prefix from Tokyo, pursuant to Japanese regulatory requirements, you must submit an [Amazon Connect service quota increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) to request an number with a 03 prefix for your instance\. As part of the approval process, you must provide proof of address documentation to confirm that you have an address in Tokyo\. The documents required for address verification are described later in this topic\.
 
-While you wait for the request to be processed, you can claim a number with a 050 prefix for your instance\. This helps you become familiar with how to configure and use Amazon Connect\. When your service limit increase for a 03 prefix number is approved, you can then follow step 6 to search for a “3” prefix number and claim it\. After the service limit increase is approved, you will be able to claim additional 03 prefix numbers in the **Claim phone number **page for that specific account moving forward without opening another support case\. 
+While you wait for the request to be processed, you can claim a number with a 050 prefix for your instance\. This helps you become familiar with how to configure and use Amazon Connect\. When your service quota increase for a 03 prefix number is approved, you can then follow step 6 to search for a “3” prefix number and claim it\. After the service quota increase is approved, you will be able to claim additional 03 prefix numbers in the **Claim phone number **page for that specific account moving forward without opening another support case\. 
 
 Use these steps to claim a phone number for an instance you create in the Asia Pacific \(Tokyo\) Region\.
 
@@ -51,7 +51,7 @@ Use these steps to claim a phone number for an instance you create in the Asia P
 
    1. On the **Claim phone number** page, choose the country from which to claim a phone number\.
 
-      Note that only 050 prefix number are available to claim for instances in the Asia Pacific \(Tokyo\) Region\. To claim a 03 prefix number for Tokyo, you must submit a [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\.
+      Note that only 050 prefix number are available to claim for instances in the Asia Pacific \(Tokyo\) Region\. To claim a 03 prefix number for Tokyo, you must submit a [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\.
 
    1. Choose the type of number to claim, **Direct Dial** or **Toll Free**\.
 

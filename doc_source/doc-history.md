@@ -3,6 +3,7 @@
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Add a topic on logging Amazon Connect API calls with AWS CloudTrail |  For more information, see [Logging Amazon Connect API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\.   | December 13, 2019 | 
 | Added a section on analyzing conversations |  For more information, see [Analyze Conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.   | December 02, 2019 | 
 | Added information about live media streaming |  For more information, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\.   | November 21, 2019 | 
 | Added information about chat |  For more information, see [Chat](chat.md)\.  Also added these topics: [Best Practices for Amazon Connect](best-practices.md), [About Agent Status](metrics-agent-status.md), [About Contact States](about-contact-states.md), and [Additional Resources for Amazon ConnectAdditional Resources](additional-resources.md)\.  | November 21, 2019 | 

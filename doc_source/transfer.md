@@ -24,7 +24,9 @@ This topic explains how to create quick connects and use transfer contact blocks
 
    When you create the **Agent** or **Queue** quick connect, select a contact flow that matches the type of transfer to enable\. **External** quick connects require only a phone number, and do not allow you to set a queue or contact flow\.
 
-1. Add the quick connect that you created to any queue used in a contact flow for which to enable contact transfer, such as the queue used in the contact flow for incoming contacts\. Make sure the queue is in a routing profile assigned to the agents who transfers contacts\. 
+1. Add the quick connect that you created to any queue used in a contact flow for which to enable contact transfer, such as the queue used in the contact flow for incoming contacts\.
+
+1. Make sure the queue is in a routing profile assigned to the agents who transfers contacts\. 
 
 ## Create Quick Connects<a name="quick-connects"></a>
 
@@ -45,7 +47,7 @@ Agent and Queue quick connects only appear in the CCP when an agent goes to tran
 **Important**  
 A description is required when you create a quick connect\. If you don't add one, you'll get an error when you try to save the quick connect\. 
 
-1. To add more quick connects, choose **Add new **\.
+1. To add more quick connects, choose **Add new**\.
 
 1. Choose **Save**\.
 
@@ -56,6 +58,9 @@ A description is required when you create a quick connect\. If you don't add one
 1. On the Edit queue page, in the Quick connect box, search for the quick connect you created\.
 
 1. Select the quick connect and then choose **Save**\.
+
+**Tip**  
+Agents see all of the quick connects for the queues in their routing profile\.
 
 ## Resume a Contact Flow After Transfer<a name="contact-flow-resume"></a>
 
@@ -97,7 +102,7 @@ When the block executes:
 
 For inbound contacts, you can define advanced routing decisions to minimize queue wait times, or route contacts to specific queues, using blocks in your contact flow\. For example, use a **Check queue status** block to check staffing or agent availability for a queue before sending a contact to that queue, or use a **Get queue metrics** block to retrieve queue metrics\. Then use a **Check contact attributes** block to check specific queue metric attributes, and define conditions in the block to determine which queue to route the contact to based on attribute values\. For more information about using queue metrics, see [How to Use System Metric Attributes](attrib-system-metrics.md)\.
 
-After determining which queue to transfer the contact to, use a **Transfer to queue** block in a contact flow to transfer the contact to that queue\. When the **Transfer to queue** block runs, it checks the queue capacity to determine whether or not the queue is at capacity \(full\)\. This check for queue capacity compares the current number of contacts in the queue to the **Maximum contacts in queue** limit, if one is set for the queue\. If no limit is set, the queue is limited to the number of concurrent active contacts set in the service limit for the instance\.
+After determining which queue to transfer the contact to, use a **Transfer to queue** block in a contact flow to transfer the contact to that queue\. When the **Transfer to queue** block runs, it checks the queue capacity to determine whether or not the queue is at capacity \(full\)\. This check for queue capacity compares the current number of contacts in the queue to the **Maximum contacts in queue** limit, if one is set for the queue\. If no limit is set, the queue is limited to the number of concurrent active contacts set in the service quota for the instance\.
 
 After the contact is placed in a queue, the contact remains there until an agent takes the contact, or until the contact is handled based on the routing decisions in your customer queue flow\. To change the queue associated with the call after it is already placed in a queue, use a **Loop prompts** block with a **Transfer to queue** block in a customer queue flow\. In the block choose which queue to transfer the call to, or use an attribute to set the queue\.
 

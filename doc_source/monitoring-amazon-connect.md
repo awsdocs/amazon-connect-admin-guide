@@ -13,3 +13,6 @@ You can use contact flow logs to capture detailed information about the events i
 
 **CloudWatch metrics**  
 You can use Amazon CloudWatch to retrieve statistics about data points for your contact centers as an ordered set of time\-series data, known as *metrics*\. You can use these metrics to verify that your contact center is performing as expected\. For more information, see [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md)\.
+
+**Logging Amazon Connect API calls with AWS CloudTrail**  
+Amazon Connect is integrated with AWS CloudTrail, a service that provides a record of the Amazon Connect API calls that a user, role, or AWS service makes\. CloudTrail captures Amazon Connect API calls as events\. For more information, see [Logging Amazon Connect API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\.

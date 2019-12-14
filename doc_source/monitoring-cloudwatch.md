@@ -9,13 +9,13 @@ When you view the CloudWatch metrics dashboard, you can specify the refresh inte
 The `AWS/Connect` namespace includes the following metrics\.
 
 **CallsBreachingConcurrencyQuota**  
-The number of voice calls that exceeded the concurrent active calls limit for the instance\. This is a count of the number of calls that exceeded the limit, not the number of concurrent calls in excess of the limit\.  
+The number of voice calls that exceeded the concurrent active calls quota for the instance\. This is a count of the number of calls that exceeded the quota, not the number of concurrent calls in excess of the quota\.  
 Unit: Count  
 Dimension:  
 + **InstanceId**: The ID of your instance
 
 **CallBackNotDialableNumber**  
-The number of times a queued callback to a customer could not be dialed because the customer's number is in a country for which outbound calls are not allowed for the instance\. The countries allowed for an instance are defined by the service limits\.  
+The number of times a queued callback to a customer could not be dialed because the customer's number is in a country for which outbound calls are not allowed for the instance\. The countries allowed for an instance are defined by the service quotas\.  
 Unit: Count  
 Dimensions:  
 + **InstanceId** The ID of your instance
@@ -45,7 +45,7 @@ Dimensions:
 + **MetricGroup**: **VoiceCalls**
 
 **ConcurrentCallsPercentage**  
-The percentage of the concurrent active voice calls service limit used in the instance\. This is calculated by `ConcurrentCalls/ConfiguredConcurrentCallsLimit * 100`\.  
+The percentage of the concurrent active voice calls service quota used in the instance\. This is calculated by `ConcurrentCalls/ConfiguredConcurrentCallsLimit * 100`\.  
 Unit: Percent  
 Dimensions:  
 + **InstanceId**: The ID of your instance
@@ -114,7 +114,7 @@ Dimensions:
 + **QueueName**: The name of your queue
 
 **ThrottledCalls**  
-The number of voice calls that were rejected because the rate of calls per second exceeded the maximum supported limit\. To increase the supported rate of calls, request an increase in the service limit for concurrent active calls per instance\.  
+The number of voice calls that were rejected because the rate of calls per second exceeded the maximum supported quota\. To increase the supported rate of calls, request an increase in the service quota for concurrent active calls per instance\.  
 To monitor the total throttled calls in a given time period, take a look at the Sum statistic in CloudWatch\.  
 Unit: Seconds  
 Unit: Count  

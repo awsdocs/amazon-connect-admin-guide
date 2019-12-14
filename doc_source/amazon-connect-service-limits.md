@@ -1,18 +1,11 @@
-# Amazon Connect Service Limits<a name="amazon-connect-service-limits"></a>
+# Amazon Connect Service Quotas<a name="amazon-connect-service-limits"></a>
 
-The following table provides the default limits for new Amazon Connect instances\. Because the limits have been adjusted over time, the limits in place for your account may be different than the limits described here\. There may even be differences between the instances created for your account\. For example, if you created an instance when the default limit for concurrent active calls was 10, the limit is 10 concurrent active calls\. If you create a new instance today, the limit for the instance is 100 concurrent active calls\. For API request limits, see [Amazon Connect API Throttling Limits](#connect-api-limits)\.
-
-To start, you can create five instances per AWS account in each of AWS Regions where Amazon Connect is available\. If you need more instances, or a change to a service limit, request a change using the [Amazon Connect service limits increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
-
-Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port Your Current Phone Number](port-phone-number.md)\.
-
-There is also a service limit for the countries to which you can place outbound calls from your instance\. If you already have an instance, the countries that you are allowed to call may be different that those listed in the following table because we have changed the service limits over time\. You can submit a service limit increase request to allow calling to additional countries, or to limit the countries that you can call from your instance\.
-
-**Note**  
-Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
+The following table provides the default quotas for new Amazon Connect instances\. Because the quotas have been adjusted over time, the quotas in place for your account may be different than the quotas described here\. 
++ To submit a service quota increase, use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
++ Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port Your Current Phone Number](port-phone-number.md)\.
 
 
-| Item | Default limit | 
+| Item | Default quota | 
 | --- | --- | 
 |  Amazon Connect instances per account  |  5  | 
 |  Users per instance  |  500  | 
@@ -23,34 +16,47 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Hours of operation per instance  |  100  | 
 |  Quick connects per instance  |  100  | 
 |  Prompts per instance  |  500  | 
-|  Agent status per instance  |  50 This limit cannot be increased\.  | 
+|  Agent status per instance  |  50 This quota cannot be increased\.  | 
 |  Security profiles per instance  |  100  | 
 |  Contact flows per instance  |  100  | 
 |  Agent hierarchy groups per instance  |  250  | 
 |  Reports per instance  |  500 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies so reports don't pile up\.   | 
-| Managers who can listen in on an agent call at the same time  |  5 This limit cannot be increased\.  | 
+| Managers who can listen in on an agent call at the same time  |  5 This quota cannot be increased\.  | 
 |  Scheduled reports per instance  |  50  | 
-|  Contact Trace Record retention  |  24 months from the time the associated contact was initiated\. This limit cannot be increased\.  You can choose to stream CTRs to Kinesis so you can manage retention and perform advanced analysis\.  | 
+|  Contact Trace Record retention  |  24 months from the time the associated contact was initiated\. This quota cannot be increased\.  You can choose to stream CTRs to Kinesis so you can manage retention and perform advanced analysis\.  | 
 |  Lambda functions  |  35 functions per Amazon Connect instance  | 
 |  Amazon Lex bots  |  50 Amazon Lex bots per Amazon Connect instance  | 
-|  Concurrent chats per instance  |  100\. This includes chats that are waiting\. If this is exceeded, the API call fails with a limit exceeded error\.  | 
-|  Active chats per agent  |  5 This limit cannot be increased\.  | 
-|  Total duration per chat  |  25 hours, including wait time This limit cannot be increased\.  | 
-|  Characters per chat message  |  1024 This limit cannot be increased\.  | 
+|  Concurrent chats per instance  |  100\. This includes chats that are waiting\. If this is exceeded, the API call fails with a quota exceeded error\.  | 
+|  Active chats per agent  |  5 This quota cannot be increased\.  | 
+|  Total duration per chat  |  25 hours, including wait time This quota cannot be increased\.  | 
+|  Characters per chat message  |  1024 This quota cannot be increased\.  | 
 |  Concurrent calls per instance  |  100\. If this is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   | 
 | Phone Number Porting |  You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](port-phone-number.md)\.  | 
-| Country code allow list for Outbound Calls | You can place calls to the following dialing codes when you create a new instance: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
 
-† UK numbers with a 447 prefix are not allowed by default\. Before you can dial these UK mobile numbers, you must submit a service limit increase request\.
+**Note**  
+Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
 
-## Amazon Connect API Throttling Limits<a name="connect-api-limits"></a>
+## Countries You Can Call<a name="country-code-allow-list"></a>
 
-Amazon Connect throttling limits are by account, not by user and not by instance\. For example: 
+You can place calls to the following countries when you create a new instance\.
+
+If you already have an instance, the countries that you are allowed to call may be different that those listed in the following table because we have changed the service quotas over time\.
+
+
+| Item | Default quota | 
+| --- | --- | 
+| Country code allow list for Outbound Calls |  [Submit a service quota increase request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) to allow calling to additional countries, or to limit the countries that you can call from\. You must be signed in to your AWS account to access the form\. For a list of all the countries available for outbound calling, see [Amazon Connect pricing](http://aws.amazon.com/connect/pricing/)\.  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
+
+† UK numbers with a 447 prefix are not allowed by default\. Before you can dial these UK mobile numbers, you must submit a service quota increase request\.
+
+## Amazon Connect API Throttling Quotas<a name="connect-api-limits"></a>
+
+Amazon Connect throttling quotas are by account, not by user and not by instance\. For example: 
 + If different IAM users from the same account make requests, they are sharing a throttle bucket\. 
 + If multiple requests are sent from different instances from the same account, they are also sharing a throttle bucket\. 
 
  When you use the [Amazon Connect Service API ](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html), the number of requests per second is limited to the following:
-+ For the [GetMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) and [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\. These limits cannot be increased\. 
++ For the [GetMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) and [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\. These quotas cannot be increased\. 
 + For all other operations, a RateLimit of 2 requests per second, and a BurstLimit of 5 requests per second\.
 
  When you use the [Amazon Connect Participant Service API](https://docs.aws.amazon.com/connect-participant/latest/APIReference/Welcome.html), the number of requests per second is limited to the following:

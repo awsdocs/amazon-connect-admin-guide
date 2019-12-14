@@ -34,7 +34,7 @@ These permissions enable managers to access recordings of past conversations\.
 
 1. Choose **Save**\. 
 
-## Review or Download Recordings/Transcripts of Past Conversations<a name="w16aac40c11c11"></a>
+## Review or Download Recordings/Transcripts of Past Conversations<a name="w17aac40c11c11"></a>
 
 These are the steps that a manager does to review or download past recordings/transcripts of conversations\.
 
