@@ -11,7 +11,7 @@ To place or receive calls in your instance, you need to claim a phone number\. I
 1. Choose **Claim a number**\. You can choose a toll free number or a Direct Inward Dialing \(DID\) number\.
 **Note**  
 Use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) for these situations:   
-If you select a country, but there are no numbers displayed for that country, you can request additional numbers for the country\.
+If you select a country, but there are no numbers displayed for that country, you can request additional numbers for the country\. 
 If you want to request a specific area code or prefix that you don't see listed\.
 We'll try to accommodate your request\. 
 
@@ -22,3 +22,39 @@ We'll try to accommodate your request\.
 1. Repeat this process until you have claimed all your required phone numbers\.
 
 There is a service quota of 10 phone numbers per Amazon Connect instance\. If you reach your quota, but want a different phone number, you can release one of previously claimed numbers\. You cannot claim the same phone number after releasing it\. If you need more than 10 phone numbers, you can request a service quota increase using the [Amazon Connect service quota increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\.
+
+## Claim a Phone Number in Another Country<a name="another-country"></a>
+
+Let's say your business is located in Germany\. You also have agents in Japan to serve customers who live there, and you need a Japanese phone number for that contact center\. To claim a phone number in another country, use the following steps to create a support case\.
+
+1. Go to [Create case](https://console.aws.amazon.com/support/cases#/create)\.
+
+1. Choose **Service limit increase**\.
+
+1. In **Limit type** select **Amazon Connect**\.
+
+1. In **Use case description**, provide the address of your business that's located in the other country\. 
+
+1. In **Contact options**, choose whether we should contact you by email or phone\. 
+
+1. Choose **Submit**\. 
+
+We'll contact you to help with your request\. 
+
+## Request a Special Phone Number<a name="special-request"></a>
+
+To request a special phone number that you don't already own, create a support case\. It can take 2\-6 weeks for us to fulfill your request\.
+
+1. Go to [Create case](https://console.aws.amazon.com/support/cases#/create)\.
+
+1. Choose **Service limit increase**\.
+
+1. In **Limit type** select **Amazon Connect**\.
+
+1. In **Use case description**, enter the number you want to request\. 
+
+1. In **Contact options**, choose whether we should contact you by email or phone\. 
+
+1. Choose **Submit**\. 
+
+We'll contact you to help with your request\. 

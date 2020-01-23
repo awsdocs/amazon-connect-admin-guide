@@ -2,10 +2,6 @@
 
 The first step in setting up your Amazon Connect contact center is to create a virtual contact center instance\. Each instance contains all the resources and settings related to your contact center\. 
 
-You might want to create multiple contact center instances, for example, one as a Sandbox for development, another for QA, and a third for Production\. Settings, users, metrics, and reporting aren't shared among instances\.
-
-Each instance functions only within the AWS Region in which you create it\.
-
 ## Prerequisites<a name="get-started-prerequisites"></a>
 + When you sign up for Amazon Web Services \(AWS\), your AWS account is automatically signed up for all services in AWS, including Amazon Connect\. You are charged only for the services that you use\. To create an AWS account, see [How do I create and activate an AWS account?](http://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 + To allow an IAM user to create an instance, ensure that they have the permissions granted by the **AmazonConnectFullAccess** policy\.
@@ -58,7 +54,9 @@ Customers can call into your contact center and speak to an agent\. Agents can u
 
 ## Step 4: Data Storage<a name="get-started-data-storage"></a>
 
-Data, such as reports and recordings of conversations, is stored securely in an Amazon S3 bucket\. When you create an instance, by default, we create a bucket and encrypt it using AWS Key Management Service\. This bucket and key are used for both recordings of conversations and exported reports\. Alternatively, you can specify separate buckets and keys for recordings of conversations and exported reports\.
+When you create an instance, by default we create an Amazon S3 bucket\. Data, such as reports and recordings of conversations, is encrypted using AWS Key Management Service, and then stored in the Amazon S3 bucket\.
+
+This bucket and key are used for both recordings of conversations and exported reports\. Alternatively, you can specify separate buckets and keys for recordings of conversations and exported reports\.
 
 By default, we enable call recording, chat transcripts, exported reports, and contact flow logs\. Live media streaming is not enabled by default\.
 

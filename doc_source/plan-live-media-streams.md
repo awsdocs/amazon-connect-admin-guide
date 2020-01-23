@@ -6,7 +6,7 @@ Audio sent to Kinesis uses a sampling rate of 8 Khz\.
 
 ## Do You Need to Increase Your Service Quotas?<a name="create-streams-service-limit"></a>
 
-When you enable media streaming in Amazon Connect, one Kinesis video stream is used per active call\. By default we allocate 50 streams to your account\. We automatically create additional streams as needed to keep pace with active calls, unless your account reaches the Kinesis Video Streams service quota\.
+When you enable media streaming in Amazon Connect, one Kinesis video stream is used per active call\. By default we allocate 50 streams per instance to your account\. We automatically create additional streams as needed to keep pace with active calls, unless your account reaches the Kinesis Video Streams service quota\.
 
 Check out the [default Kinesis service quota](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html) for number of streams per account for your region \(see the quota for the **CreateStream** API\)\.
 
@@ -22,6 +22,13 @@ We make sure that **PutMedia** requests always stay within the 5 TPS quota\. You
 ## How Long Do You Need to Store Audio?<a name="storing-audio-streams"></a>
 
 Customer audio is stored in Kinesis for the time defined by your retention settings in an Amazon Connect instance\. For instructions for setting this value, see [Enable Live Media Streaming in Your Instance](enable-live-media-streams.md)\.
+
+**Tip**  
+If you want to use the audio streaming feature, you need to retain the streams that are created by Amazon Connect\. Don't delete them, unless you're going to stop using the streaming feature\.
+
+## Do You Need to Change the Audio Streams?<a name="changing-audio-streams"></a>
+
+We recommend that you refrain from modifying the streams\. Doing so can cause unexpected behavior\.
 
 ## Who Requires IAM Permissions to Retrieve Data?<a name="perms-audio-streams"></a>
 

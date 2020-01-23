@@ -20,11 +20,11 @@ Type: Integer
 Min value: 0
 
 **AfterContactWorkEndTimestamp**  
-The date and time when the agent stopped doing After Contact Work for the contact\.  
+The date and time when the agent stopped doing After Contact Work for the contact, in UTC time\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **AfterContactWorkStartTimestamp**  
-The date and time when the agent started doing After Contact Work for the contact\. status\.  
+The date and time when the agent started doing After Contact Work for the contact, in UTC time\.   
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **ARN**  
@@ -32,7 +32,7 @@ The Amazon Resource Name of the agent\.
 Type: ARN
 
 **ConnectedToAgentTimestamp**  
-The date and time the contact was connected to the agent\.  
+The date and time the contact was connected to the agent, in UTC time\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **CustomerHoldDuration**  <a name="CustomerHoldDuration-CTR"></a>
@@ -131,7 +131,7 @@ How the customer reached your contact center\.
 Valid values: Voice, Chat
 
 **ConnectedToSystemTimestamp**  
-The date and time the customer endpoint connected to Amazon Connect\. For `INBOUND`, this matches `InitiationTimestamp`\. For `OUTBOUND`, `CALLBACK`, and `API`, this is when the customer endpoint answers\.  
+The date and time the customer endpoint connected to Amazon Connect, in UTC time\. For `INBOUND`, this matches `InitiationTimestamp`\. For `OUTBOUND`, `CALLBACK`, and `API`, this is when the customer endpoint answers\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **ContactId**  
@@ -144,7 +144,7 @@ The customer endpoint\.
 Type: [Endpoint](#ctr-endpoint)
 
 **DisconnectTimestamp**  
-The date and time that the customer endpoint disconnected from Amazon Connect\.  
+The date and time that the customer endpoint disconnected from Amazon Connect, in UTC time\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **InitialContactId**  
@@ -157,7 +157,7 @@ Indicates how the contact was initiated\.
 Valid values: `INBOUND` \| `OUTBOUND` \| `TRANSFER` \| `CALLBACK` \| `API` \| `QUEUE_TRANSFER` 
 
 **InitiationTimestamp**  
-The date and time this contact was initiated\. For `INBOUND`, this is when the contact arrived\. For `OUTBOUND`, this is when the agent began dialing\. For `CALLBACK`, this is when the callback contact was created\. For `TRANSFER` and `QUEUE_TRANSFER`, this is when the transfer was initiated\. For `API`, this is when the request arrived\.  
+The date and time this contact was initiated, in UTC time\. For `INBOUND`, this is when the contact arrived\. For `OUTBOUND`, this is when the agent began dialing\. For `CALLBACK`, this is when the callback contact was created\. For `TRANSFER` and `QUEUE_TRANSFER`, this is when the transfer was initiated\. For `API`, this is when the request arrived\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **InstanceARN**  
@@ -165,7 +165,7 @@ The Amazon Resource Name of the Amazon Connect instance\.
 Type: ARN
 
 **LastUpdateTimestamp**  
-The date and time this contact was last updated\.  
+The date and time this contact was last updated, in UTC time\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **MediaStreams**  
@@ -200,7 +200,7 @@ The system endpoint\. For `INBOUND`, this is the phone number that the customer 
 Type: [Endpoint](#ctr-endpoint)
 
 **TransferCompletedTimestamp**  
-If this contact was transferred out of Amazon Connect, the date and time the transfer endpoint was connected\.  
+If this contact was transferred out of Amazon Connect, the date and time the transfer endpoint was connected, in UTC time\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **TransferredToEndpoint**  
@@ -237,7 +237,7 @@ The Amazon Resource Name of the queue\.
 Type: ARN
 
 **DequeueTimestamp**  <a name="DequeueTimestamp-CTR"></a>
-The date and time the contact was removed from the queue\. Either the customer disconnected or the contact was connected to an agent\.  
+The date and time the contact was removed from the queue, in UTC time\. Either the customer disconnected or the contact was connected to an agent\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **Duration**  <a name="Duration-CTR"></a>
@@ -246,7 +246,7 @@ Type: Integer
 Min value: 0
 
 **EnqueueTimestamp**  <a name="EnqueueTimestamp-CTR"></a>
-The date and time the contact was added to the queue\.  
+The date and time the contact was added to the queue, in UTC time\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **Name**  

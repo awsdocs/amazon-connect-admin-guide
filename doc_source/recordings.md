@@ -4,10 +4,6 @@ Managers can review past conversations between agents and customers\. To set thi
 
 A conversation is recorded only when the contact is connected to an agent\. The contact is not recorded before then, when they are connected to the IVR\. 
 
-**Important**  
-For voice conversations, the monitor feature works only when recording is enabled on a contact flow\. For instructions, see [Set Up Recording Behavior](set-up-recordings.md)\.   
-For chat conversations, you enable recording at the instance level\. If there's an S3 bucket for storing chat transcripts, then all chats are recorded\. If no bucket exists, then no chats are recorded\.
-
 ## Assign Permissions to Review Recordings of Past Conversations<a name="manager-recording"></a>
 
 These permissions enable managers to access recordings of past conversations\. 
@@ -34,7 +30,7 @@ These permissions enable managers to access recordings of past conversations\.
 
 1. Choose **Save**\. 
 
-## Review or Download Recordings/Transcripts of Past Conversations<a name="w17aac40c11c11"></a>
+## Review or Download Recordings/Transcripts of Past Conversations<a name="w21aac40c10b9"></a>
 
 These are the steps that a manager does to review or download past recordings/transcripts of conversations\.
 

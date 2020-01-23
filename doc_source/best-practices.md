@@ -6,6 +6,7 @@ This list of best practices can help you get the maximum benefit from Amazon Con
 + Use consistent attribute naming conventions across all AWS services\. Use camel case for yourAttributeNames to avoid confusion when passing and referencing variables\. 
 + Use standard naming conventions for attribute names\. Don't use spaces or special characters that could impact downstream reporting processes such as AWS Glue crawlers\. 
 + Create modular contact flows\. Make the flows as small as possible, and then combine modular flows into an end\-to\-end contact experience\. This helps to keep your flows manageable, and you won't require numerous regression testing cycles\.
++ When you set **User Defined** or **External** values in dynamic attribute fields, use only alphanumeric characters \(A\-Z, 0–9\) and periods\. No other characters are allowed\.
 + Ensure all error branches are routed to a block that effectively handles the error or terminates the contact\.
 + Use a **Set logging behavior** block to enable or disable logging for segments of the contact flow where sensitive information is collected and can't be stored in CloudWatch\.
 + Use **Set recording behavior** block in your contact flow to disable and enable recordings according to your use case\. Keep in mind that Amazon Connect records conversations with agents only\. It doesn't record IVR interactions\.

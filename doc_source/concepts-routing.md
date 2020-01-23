@@ -17,6 +17,14 @@ When you create a routing profile, you specify:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/routing-profile-3.png)
 
+## Queues<a name="concepts-routing-profiles-queues"></a>
+
+There are two types of queues:
++ Standard queues: where the contact waits before they are routed to an agent\.
++ Agent queues: where the contact waits after they’ve been routed to an agent\. Agent queues are created automatically when you add an agent to your contact center\. 
+
+Contacts waiting in agent queues are higher priority than contacts waiting in standard queues\.
+
 ## Queues: Priority and Delay<a name="concepts-routing-profiles-priority"></a>
 
 Priority and delay are powerful features that allow you to load balance contacts among groups of agents\. 

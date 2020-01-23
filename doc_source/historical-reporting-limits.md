@@ -13,7 +13,7 @@ For example, let's say you create a historical metrics report with this criteria
 + Grouped by agents
 + With an interval of 30 minutes
 + For the last 24 hours
-+ Limited to include only 5 metrics
++ Configured to include only 5 metrics
 + Filtered to show only contacts handled in BasicQueue
 
 If only 10 agents handled contacts in BasicQueue during this time, then you would expect to see \(24\*2\)\*5\*10 = 2400 cells that count towards the 80k limit\.

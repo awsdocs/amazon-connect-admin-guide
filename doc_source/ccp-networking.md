@@ -8,42 +8,59 @@ The following diagram shows you what each port is used for\.
 
 The following sections describe the two primary connectivity options for using the CCP\. 
 
-## Option 1: Allow IP Address Ranges<a name="option1"></a>
+## Option 1 \(Recommended\): Replace Amazon EC2 and CloudFront IP Range Requirements with a Domain Allow List<a name="option1"></a>
 
-The first option relies on using an allow list, also known as whitelisting, the IP addresses used by Amazon Connect\. You create this allow list using the IP addresses in the [AWS ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file\. For more information about this file and IP address ranges in AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\.
+This first option lets you significantly reduce your blast radius\. 
 
-When there are new IP address ranges supported for Amazon Connect, they are added to the publicly available ip\-ranges\.json file\. They are kept for a minimum of 30 days before they are used by the service\. After 30 days, softphone traffic through the new IP address ranges increases over the subsequent two weeks\. After two weeks, traffic is routed through the new ranges equivalent to all available ranges\.
-
-
-| IP\-Ranges entry | AWS Region | Ports/Protocols | Direction | Traffic | 
-| --- | --- | --- | --- | --- | 
-| AMAZON\_CONNECT | Region where your Amazon Connect instance is located | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
-| EC2 | Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| CLOUDFRONT | Global\* | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-
-\*CloudFront serves static content from an edge location that has the lowest latency in relation to where your agents are located\. IP range allow lists for CloudFront are global and require all IP ranges associated with **"service": "CLOUDFRONT"** in the ip\-ranges\.json file\. 
-
-## Option 2: Replace Amazon EC2 and CloudFront IP Range Requirements with a Domain Allow List<a name="option2"></a>
-
-This second option lets you significantly reduce your blast radius\. 
-
-We recommend trying Option 2 and testing it with more than 200 calls\. Test for softphone errors, dropped calls, and conference/transfer functionality\. If your error rate is greater than 2 percent, there might be an issue with proxy resolution\. If that is the case, consider using Option 1\. 
+We recommend trying Option 1 and testing it with more than 200 calls\. Test for softphone errors, dropped calls, and conference/transfer functionality\. If your error rate is greater than 2 percent, there might be an issue with proxy resolution\. If that's the case, consider using Option 2\. 
 
 
 | IP\-Ranges entry | AWS Region | Ports/Protocols | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
-| AMAZON\_CONNECT | Region where the Amazon Connect instance is located | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+| AMAZON\_CONNECT | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
 
 To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as shown in the first row of the following table\. Do this instead of allowing all of the IP address ranges listed in the ip\-ranges\.json file\. You get the same benefit using a domain for CloudFront, as shown in the second row of the following table\.
 
 
 | Domain/URL allow list | AWS Region | Ports | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
-| rtc\.connect\-telecom\.\{region\}\.amazonaws\.com | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \{myInstanceName\}\.awsapps\.com | Replace \{myInstanceName\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| rtc\.connect\-telecom\.\{region\}\.amazonaws\.com Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \{myInstanceName\}\.awsapps\.com/connect/ccp \{myInstanceName\}\.awsapps\.com/connect/api\*\.cloudfront\.net  | Replace \{myInstanceName\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \*\.execute\-api\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| participant\.connect\.\{region\}\. amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \*\.transport\.connect\.\{region\}\. amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+
+**Note**  
+The new region telecom endpoints follow a different format\. Here's a complete list of telecom endpoints:  
+
+
+| Region | Domain/URL | 
+| --- | --- | 
+| us\-west\-2  | rtc\.connect\-telecom\.us\-west\-2\.amazonaws\.com | 
+| us\-east\-1  | rtc\.connect\-telecom\.us\-east\-1\.amazonaws\.com | 
+| eu\-central\-1  | rtc\.connect\-telecom\.us\-central\-1\.amazonaws\.com | 
+| ap\-southeast\-2  | rtc\.connect\-telecom\.ap\-southeast\-2\.amazonaws\.com | 
+| ap\-northeast\-1  | rtc\.connect\-telecom\.ap\-northeast\-1\.amazonaws\.com | 
+| eu\-west\-2  | rtc\.cell\-1\.prod\.eu\-west\-2\.prod\.connect\.aws\.a2z\.com | 
+| ap\-southeast\-1  | rtc\.cell\-1\.prod\.ap\-southeast\-1\.prod\.connect\.aws\.a2z\.com | 
 
 **Tip**  
 When using `rtc.connect-telecom.{region}.amazonaws.com` and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
+
+## Option 2 \(Not Recommended\): Allow IP Address Ranges<a name="option2"></a>
+
+The second option relies on using an allow list, also known as whitelisting, the IP addresses used by Amazon Connect\. You create this allow list using the IP addresses in the [AWS ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file\. For more information about this file and IP address ranges in AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\.
+
+When there are new IP address ranges supported for Amazon Connect, they are added to the publicly available ip\-ranges\.json file\. They are kept for a minimum of 30 days before they are used by the service\. After 30 days, softphone traffic through the new IP address ranges increases over the subsequent two weeks\. After two weeks, traffic is routed through the new ranges equivalent to all available ranges\.
+
+
+| IP\-Ranges entry | AWS Region | Ports/Protocols | Direction | Traffic | 
+| --- | --- | --- | --- | --- | 
+| AMAZON\_CONNECT | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+| EC2 | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| CLOUDFRONT | Global\* | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+
+\*CloudFront serves static content from an edge location that has the lowest latency in relation to where your agents are located\. IP range allow lists for CloudFront are global and require all IP ranges associated with **"service": "CLOUDFRONT"** in the ip\-ranges\.json file\. 
 
 ## Stateless Firewalls<a name="stateless-firewalls"></a>
 

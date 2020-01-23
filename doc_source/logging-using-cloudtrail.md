@@ -18,6 +18,7 @@ Amazon Connect supports logging both the request parameters and the responses fo
 + [CreateUser](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateUser.html)
 + [DeleteUser](https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteUser.html)
 + [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html)
++ [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html)
 + [StopContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContact.html)
 + [TagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_TagResource.html)
 + [UntagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_UntagResource.html)

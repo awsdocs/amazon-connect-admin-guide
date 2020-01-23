@@ -13,3 +13,9 @@ The first thing you need to do when you set up a queue is to specify the hours o
 1. For **Add new**, set new hours\.
 
 1. Choose **Save**\.
+
+## How to Specify Midnight<a name="set-hours-operation-midnight"></a>
+
+To specify midnight, you can enter 12:00AM or 11:59PM\.
+
+For example, if you want to set your hours to 10:00AM to midnight, you can enter: 10:00AM to 12:00AM\. Your call center would be open for 22 hours\.

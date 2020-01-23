@@ -17,7 +17,7 @@ The default agent hold flow is the experience the agent receives when placed on 
 
 ## Default Agent Transfer<a name="default-agent-transfer"></a>
 
-This default transfer flow is the customer's experience when the customer is transferred to an agent by using [Create Quick Connects](transfer.md#quick-connects)\. A **Play prompt** plays the message “Transferring now\.” Then the **Transfer to agent** block is used to transfer the contact to the agent\. 
+This default transfer flow is the what the agent experiences when transferring a contact to another agent by using [Create Quick Connects](transfer.md#quick-connects)\. A **Play prompt** plays the message “Transferring now\.” Then the **Transfer to agent** block is used to transfer the contact to the agent\. 
 
 **Tip**  
 The **Transfer to Agent** block is a beta feature and only works for voice interactions\. To transfer a chat contact to another agent, follow these instructions: [Using Contact Attributes to Route Contacts to a Specific Agent](transfer.md#use-attribs-agent-queue)\.
@@ -54,7 +54,7 @@ The customer remains in the system \(on the call\) after the flows ends\.
 
 ## Default Queue Transfer<a name="default-queue-transfer"></a>
 
-This contact flow is manages what the customer experiences when they are transferred to another queue\.
+This contact flow manages what the agent experiences when they transfer a customer to another queue\.
 
 It starts with a **Check hours of operation** block to check the hours of operation for the current queue\. The **In hours** option branches to the **Check staffing** block to determine whether agents are available, staffed, or online\. 
 

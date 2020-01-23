@@ -180,7 +180,7 @@ Type: `HierarchyGroup` object
 
 **Level3**  
 Includes details for Level3 of the hierarchy assigned to the agent\.  
-Type: `HierarchyGroup` ob4ject
+Type: `HierarchyGroup` object
 
 **Level4**  
 Includes details for Level4 of the hierarchy assigned to the agent\.  

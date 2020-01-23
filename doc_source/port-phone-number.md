@@ -62,3 +62,15 @@ The steps in the porting process are as follows:
    If your current carrier rejects the request to port your number due to the LOA not having correct or complete information, the Amazon Connect team contacts you and requests a new LOA to submit to the carrier\.
 
 When we receive a date from your current carrier, we start adding the numbers to your Amazon Connect instance about a day before the scheduled date\.
+
+## Port Phone Numbers Away from Amazon Connect<a name="port-away"></a>
+
+To port your number\(s\) to a different carrier, please open a support case telling us that's what you're going to do\. Then make arrangements with your new carrier\. By letting us know, it will reduce the amount of back and forth between us and your new carrier, and it will make the process go faster\. 
+
+1. Create a [Create case](https://console.aws.amazon.com/support/cases#/create)\.
+
+1. Choose **Service limit increase**\.
+
+1. In **Limit type** select **Amazon Connect**\.
+
+1. In **Use case description**, let us know that you're porting your number away and the name of your new carrier\. 

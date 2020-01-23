@@ -25,30 +25,6 @@ Use a **Set contact attributes** block to set a value that is later referenced i
 
    You can also choose to use an existing attribute as the basis for creating the new attribute\.
 
-## Capture Customer Input and Store it as an Attribute<a name="capture-cust-input"></a>
-
-You can use an attribute to request a callback number from a customer, store the value of the attribute, and then reference the attribute in a **Set callback number** block to set the number to dial the customer\. You could also use a **Store customer input** block to capture any numeric input from a customer, such as an account or order number\.
-
-**To create an attribute from customer input with a Store customer input block**
-
-1. In Amazon Connect, choose **Routing**, **Contact flows**\.
-
-1. Select an existing contact flow, or create a new one\.
-
-1. Add a **Store customer input** block\.
-
-1. Edit the block, and select **Text to speech \(Ad hoc\)**\.
-
-1. In the **Enter text** box, type a message that is said to customers when they call, such as “Please enter your phone number\.”
-
-1. In the **Customer input** section, select **Phone number**, and then choose the format\. **Local format** is for a number in the same country as the region in which you created your Amazon Connect instance\. **International format/Enforce E\.164** is for numbers to a country other than the country in which you created your instance\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input.png)
-
-1. Add a **Set callback number** block to your contact flow, and connect it to the **Get customer input** block\.
-
-1. Under **Use attributes**, for **Type**, choose **System**\. For **Attribute**, choose **Stored customer input**\. The callback number is set to the number the customer entered when asked to enter their phone number\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callback-number.png)
-
 ## Using Attributes with a Lambda Function<a name="attribs-with-lambda"></a>
 
 Retrieve data from a system your organization uses internally, such as an ordering system or other database with a Lambda function, and store the values as attributes that can then be referenced in a contact flow\.

@@ -2,7 +2,9 @@
 
 When you create a queue, it is automatically active and can be assigned to a routing profile\. Users with the proper permissions can deactivate the queue, which puts it in an offline mode and makes it unavailable to assign to a routing profile\.
 
-**To create a queue**
+To learn how queues work, see [Routing Profiles](concepts-routing.md) and [Queue\-Based Routing](concepts-queue-based-routing.md)\.
+
+**To create a standard queue**
 
 1. Choose **Routing**, **Queues**, **Add new queue**\.
 

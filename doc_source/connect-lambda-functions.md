@@ -7,7 +7,7 @@ To invoke a Lambda function from a contact flow, complete the following tasks\.
 **Topics**
 + [Create a Lambda Function](#create-lambda-function)
 + [Add a Lambda Function](#add-lambda-function)
-+ [Invoke the Lambda Function](#funtion-contact-flow)
++ [Invoke the Lambda Function](#function-contact-flow)
 + [Configure Your Lambda Function to Parse the Event](#function-parsing)
 + [Verify the Function Response](#verify-function)
 + [Consume the Lambda Function Response](#process-function-response)
@@ -34,7 +34,7 @@ After you add a Lambda function to your instance, you can easily use it in your 
 
 1. Choose **Add Lambda Function**\. Confirm that the ARN of the function is added under **Lambda Functions**\.
 
-## Invoke the Lambda Function<a name="funtion-contact-flow"></a>
+## Invoke the Lambda Function<a name="function-contact-flow"></a>
 
 Use the following procedure to invoke a Lambda function from your contact flow\.
 
@@ -88,7 +88,7 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w17aac29c13c17"></a>
+### Invocation retry policy<a name="w21aac29c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 
@@ -151,7 +151,7 @@ The following example shows the JSON output from these Lambda functions:
 
 ## Consume the Lambda Function Response<a name="process-function-response"></a>
 
-There are two ways to use the function response in your contact flow\. You can either directly reference the variables returned from Lambda, or store the values returned from the function as contact attributes and then reference the stored attributes\. When you use an external reference to a response from a Lambda function, the reference will always receive the response form the most recently invoked function\. To use the response from a function before a subsequent function is invoked, the response must be saved as a contact attribute, or passed as a parameter to the next function\.
+There are two ways to use the function response in your contact flow\. You can either directly reference the variables returned from Lambda, or store the values returned from the function as contact attributes and then reference the stored attributes\. When you use an external reference to a response from a Lambda function, the reference will always receive the response from the most recently invoked function\. To use the response from a function before a subsequent function is invoked, the response must be saved as a contact attribute, or passed as a parameter to the next function\.
 
 ### Access Variables Directly<a name="access-variables"></a>
 

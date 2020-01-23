@@ -16,7 +16,7 @@ The value of the attribute must be a phone number from your instance in E\.164 f
 
  For more information about E\.164, see [Use E\.164 Format for Telephone Numbers](amazon-connect-contact-control-panel.md#international-calls-ccp)\.
 
-## How Caller ID Works in Call phone number Block<a name="call-number-block-how-it-works"></a>
+## How Caller ID Works in **Call phone number** Block<a name="call-number-block-how-it-works"></a>
 
 Outbound whisper flows execute in Amazon Connect immediately after an agent accepts the call during direct dial and callback scenarios\. When the contact flow executes: 
 + The caller ID number is set if one is specified in the **Call phone number** block\.

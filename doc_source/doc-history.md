@@ -3,6 +3,10 @@
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Added topics on saving, sharing, and publishing reports |  For more information, see [Save Custom Reports](save-reports.md), [Share Custom Reports](share-reports.md), [View a Shared Report](view-a-shared-report.md), and [Publish Reports](publish-reports.md)\.   | January 22, 2020 | 
+| Updated contact block definitions |  For more information, see [Contact Block Definitions](contact-blocks.md)\.   | January 17, 2020 | 
+| Added a section about queued callbacks in metrics reporting\. |  For more information, see [About Queued Callbacks in Metrics](about-queued-callbacks.md)\.   | January 17, 2020 | 
+| Updated networking guidance for the updated CCP \(ccp\-v2\) |  For more information, see [Set Up Your Network](ccp-networking.md)\.   | January 15, 2020 | 
 | Add a topic on logging Amazon Connect API calls with AWS CloudTrail |  For more information, see [Logging Amazon Connect API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\.   | December 13, 2019 | 
 | Added a section on analyzing conversations |  For more information, see [Analyze Conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.   | December 02, 2019 | 
 | Added information about live media streaming |  For more information, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\.   | November 21, 2019 | 

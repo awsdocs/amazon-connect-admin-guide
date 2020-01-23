@@ -8,9 +8,9 @@ For information about other services that support service\-linked roles, see [AW
 
 ## Service\-Linked Role Permissions for Amazon Connect<a name="slr-permissions"></a>
 
-Amazon Connect uses the service\-linked role named **AWSServiceRoleForAmazonConnect\_** – Grants Amazon Connect permission to access AWS resources on your behalf\.
+Amazon Connect uses the service\-linked role named **AWSServiceRoleForAmazonConnect** – Grants Amazon Connect permission to access AWS resources on your behalf\.
 
-The AWSServiceRoleForAmazonConnect\_ service\-linked role trusts the following services to assume the role:
+The AWSServiceRoleForAmazonConnect service\-linked role trusts the following services to assume the role:
 + `connect.amazonaws.com`
 
 The role permissions policy allows Amazon Connect to complete the following actions on the specified resources\. As you enable additional features in Amazon Connect, additional permissions are added for the service\-link role to access the resources associated with those features:
@@ -35,7 +35,7 @@ You can also use the IAM console to create a service\-linked role with the **Ama
 
 ## Editing a Service\-Linked Role for Amazon Connect<a name="edit-slr"></a>
 
-Amazon Connect does not allow you to edit the AWSServiceRoleForAmazonConnect\_ service\-linked role\. After you create a service\-linked role, you cannot change the name of the role because various entities might reference the role\. However, you can edit the description of the role using IAM\. For more information, see [Editing a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#edit-service-linked-role) in the *IAM User Guide*\.
+Amazon Connect does not allow you to edit the AWSServiceRoleForAmazonConnect service\-linked role\. After you create a service\-linked role, you cannot change the name of the role because various entities might reference the role\. However, you can edit the description of the role using IAM\. For more information, see [Editing a Service\-Linked Role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#edit-service-linked-role) in the *IAM User Guide*\.
 
 ## Checking a Service\-Linked Role Has Permissions for Amazon Lex<a name="check-slr"></a>
 
@@ -45,7 +45,7 @@ Amazon Connect does not allow you to edit the AWSServiceRoleForAmazonConnect\_ s
 
 ## Deleting a Service\-Linked Role for Amazon Connect<a name="delete-slr"></a>
 
-You don't need to manually delete the AWSServiceRoleForAmazonConnect\_ role\. When you delete your Amazon Connect instance in the AWS Management Console,  Amazon Connect cleans up the resources and deletes the service\-linked role for you\.
+You don't need to manually delete the AWSServiceRoleForAmazonConnect role\. When you delete your Amazon Connect instance in the AWS Management Console,  Amazon Connect cleans up the resources and deletes the service\-linked role for you\.
 
 ## Supported Regions for Amazon Connect Service\-Linked Roles<a name="slr-regions"></a>
 

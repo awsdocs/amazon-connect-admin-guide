@@ -4,7 +4,7 @@ You can add users and configure them with permissions that are appropriate to th
 
 **To add a user**
 
-1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+1. Log in to the Amazon Connect console with an **Admin** account, or an account assigned to a security profile that has permissions to create users\.
 
 1. Choose **Users**, **User management**\.
 
@@ -16,11 +16,11 @@ You can add users and configure them with permissions that are appropriate to th
 
 1. Choose a routing profile and a security profile\.
 
-1. Choose **Save**\.
+1. Choose **Save**\. If the Save button isn't active, it means you don't have permissions to add or edit a user\. 
 
 **To add several users from an Excel spreadsheet \(\.csv\)**
 
-1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+1. Log in to the Amazon Connect console with an **Admin** account, or an account assigned to a security profile that has permissions to create users\.
 
 1. Choose **Users**, **User management**\.
 

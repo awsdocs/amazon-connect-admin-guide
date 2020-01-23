@@ -2,7 +2,7 @@
 
 Amazon Connect allows your customers to start a chat with an agent or Amazon Lex bot, step away from it, and then resume the conversation again\. They can even switch devices and continue the chat\. It's an asynchronous interaction\. [Learn more](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md)\.
 
-## Example Chat Scenario<a name="persistent-chat"></a>
+## Example Chat Scenario<a name="example-chat-scenario"></a>
 
 Suppose a customer and agent are chatting, but then the customer stops responding to the agent\. The agent asks "Are you there?" and doesn't get a reply\. The agent leaves the chat\. Now the chat is no longer associated with an agent; your contact flow determines what happens next\. 
 
@@ -13,13 +13,13 @@ Here's how you build this scenario:
 1. Create a disconnect flow\. The following image shows the [Sample Disconnect Flow](sample-disconnect.md)\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-disconnect-flow.png)
 
-1. In the disconnect flow, add a [Wait](contact-blocks.md#wait) block\. The Wait block has two branches:
+1. In the disconnect flow, add a [Wait](wait.md) block\. The Wait block has two branches:
    + **Timeout**: Run this branch if the customer hasn't sent a message after a specified amount of time\. The total duration of the chat, including multiple **Wait** blocks, cannot exceed 25 hours\.
 
      For example, for this branch you might just want to run a **Disconnect** block and end the chat\. 
    + **Customer return**: Run this branch when the customer returns and sends a message\. With this branch you can route the customer to the previous agent, previous queue, or set a new working queue/agent\.
 
-1. In your inbound contact flow, add the [Set Disconnect Flow](contact-blocks.md#set-disconnect-flow) block\. Use it to specify that when the agent or Amazon Lex bot has disconnected from the chat and only the customer remains, the set disconnect flow should run\.
+1. In your inbound contact flow, add the [Set Disconnect Flow](set-disconnect-flow.md) block\. Use it to specify that when the agent or Amazon Lex bot has disconnected from the chat and only the customer remains, the set disconnect flow should run\.
 
    In the following block, for example, we specified that the **Sample disconnect flow** should run\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-disconnect-flow.png)
@@ -32,7 +32,7 @@ The total duration for a chat conversation, including the time spent waiting whe
 
 During the 25 hours, there's no limit to the number of times a customer can stop and resume chat\.
 
-To specify wait time a shorter than 25 hours, use the [Wait](contact-blocks.md#wait) block\. For example, you might wait 12 hours for the customer to resume the chat\. If the customer tries to resume the chat after 12 hours, in the flow you can have an Amazon Lex bot ask if they're contacting you about the same issue or a different one\.
+To specify wait time a shorter than 25 hours, use the [Wait](wait.md) block\. For example, you might wait 12 hours for the customer to resume the chat\. If the customer tries to resume the chat after 12 hours, in the flow you can have an Amazon Lex bot ask if they're contacting you about the same issue or a different one\.
 
 By specifying a shorter wait time, you'll ensure customers have a good experience\. Otherwise, it's possible for the customer to resume a chat after 24 hours and 58 minutes, and then be cut off after two minutes because the conversation ends automatically at the 25 hour limit\.
 

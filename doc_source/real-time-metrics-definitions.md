@@ -121,7 +121,8 @@ Count of contacts handled by an agent during the specified time range that were 
 Count of contacts that disconnected while the customer was on hold\. A disconnect could be because the customer hung up while on hold, or that there was a technical issue with the contact while on hold\.
 
 **In queue**  <a name="in-queue-real-time"></a>
-Count of contacts currently in the queue\.
+Count of contacts currently in the queue\.  
+To learn how this is different from Scheduled contacts in a callback scenario, see [How Initial Delay Affects Scheduled and In Queue Metrics](scheduled-vs-inqueue.md)\. 
 
 **Max Queued**  <a name="max-queued-real-time"></a>
 The longest time that a contact spent waiting in the queue\. This includes all contacts added to the queue, even if they were not connected with an agent, such as abandoned contacts\.
@@ -131,7 +132,7 @@ Count of agents who have set their status in the CCP to a custom status\. That i
 Agents can handle contacts while their CCP status is set to a custom status\. For example, agents can be **On call** or doing **ACW** for a contact while their CCP is set to a custom status\. This means it's possible for agents to be counted as **On call** and **NPT** at the same time\.
 
 **Occupancy**  <a name="occupancy-real-time"></a>
-Percentage of time that agents was active on contacts\. This percentage is calculated as follows:  
+Percentage of time that an agent was active on contacts\. This percentage is calculated as follows:  
 \(Agent Handle Time / \(Agent Handle Time \+ Agent Idle Time\)\) \* 100  
 **Occupancy** doesn't account for concurrency\. That is, an agent is considered 100% occupied for a given interval if they are handling at least one contact for that entire duration\. 
 
@@ -163,7 +164,8 @@ Count of contacts added to the queue during the specified time range\.
 The routing profile for the agent\.
 
 **Scheduled**  <a name="scheduled-real-time"></a>
-Count of customers in the queue for which there is a callback scheduled\.
+Count of customers in the queue for which there is a callback scheduled\.  
+To learn how this is different from In queue contacts in a callback scenario, see [How Initial Delay Affects Scheduled and In Queue Metrics](scheduled-vs-inqueue.md)\. 
 
 **SL *X***  <a name="service-level-real-time"></a>
 Percentage of contacts removed from the queue between 0 and *X* seconds after being added to it \(Service Level\)\. A contact is removed from the queue when one of the following occurs: an agent answers the call, the customer abandons the call, or the customer requests a call back\. The possible values for *X* are: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\.
@@ -176,9 +178,6 @@ Another way of thinking about this is, there are two scenarios in which **Staffe
 For example, let's say an agent sets their status in the CCP to a custom status such as Break and they make an outbound call\. Now the agent is **On call**, but **Staffed** is 0\.   
 If the agent sets their status in the CCP to **Available** and makes an outbound call, the agent is **On call** and **Staffed **is 1\.   
  This metric is available on the Queues report\. 
-
-**Status ******  <a name="status-real-time"></a>
-The current status of the agent\. Possible values include **Available** and **AfterContactWork**\.
 
 **Transferred in**  <a name="transferred-in-real-time"></a>
 Count of contacts transferred into the queue during the specified time range\.

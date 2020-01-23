@@ -18,11 +18,11 @@ Because we're tracking the contact state, if you want to identify how long an ag
 + In the historical metrics report, **After contact work time** captures the amount of time each contact spent in ACW\.
 + In the agent event stream, you have to do some calculations\. For more information, see [Determine How Long an Agent Spends Doing ACW](determine-acw-time.md)\.
 
-## How Do You Know When an Agent Can Handle Another Contact?<a name="w17aac42c15c15"></a>
+## How Do You Know When an Agent Can Handle Another Contact?<a name="w21aac42c15c15"></a>
 
 The **Availability** metric tells you when agents are finished with a contact and ready to have another one routed to them\.
 
-## What Appears in the Real\-Time Metrics Report?<a name="w17aac42c15c17"></a>
+## What Appears in the Real\-Time Metrics Report?<a name="w21aac42c15c17"></a>
 
 To find out what the agent status is in the real\-time metrics report, look at the **Status** metric\.
 

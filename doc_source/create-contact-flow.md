@@ -10,14 +10,14 @@ Chances are you're going to create tens or hundreds of contact flows\. To help y
 
 **You can't delete a contact flow**\. To get obsolete contact flows out of your way, we recommend appending **zzTrash\_** to their name\. This will also make them easy to find should you want to reuse them in the future\.
 
-## Choose a Contact Flow Template<a name="template"></a>
+## Choose a Contact Flow Type<a name="contact-flow-types"></a>
 
-Amazon Connect includes a set of nine contact flow templates\. Each template is for a specific scenario\. For example, the template for transferring to a queue contains only the appropriate contact blocks for that type of flow\. 
+Amazon Connect includes a set of nine contact flow types\. Each type has only those blocks for a specific scenario\. For example, the contact flow type for transferring to a queue contains only the appropriate contact blocks for that type of flow\. 
 
-When you create a contact flow, you need to choose the right template for your scenario\. The following contact flow templates are available\. 
+When you create a contact flow, you need to choose the right type for your scenario\. The following contact flow types are available\. 
 
 
-| Template | When to use | 
+| Type | When to use | 
 | --- | --- | 
 |  **Customer queue flow**  |  Use to manage what the customer experiences while in queue, before being joined to an agent\. Customer queue flows are interruptible and can include actions such as an audio clip apologizing for a delay and offering an option to receive a callback, leveraging the **Transfer to queue** block\. This contact follow works with voice and chat\.   | 
 |  **Customer hold flow**  |  Use to manage what the customer experiences while the customer is on hold\. With this flow, one or more audio prompts can be played to a customer using the **Loop prompts** block while waiting on hold\. This contact follow works with voice\.   | 
@@ -28,11 +28,11 @@ When you create a contact flow, you need to choose the right template for your s
 | **Transfer to agent flow** | Use to manage what the agent experiences when transferring to another agent\. This type of flow is associated with transfer to agent quick connects, and often plays messaging, then completes the transfer using the **Transfer to agent** block\. This contact follow works with voice\.   | 
 | **Transfer to queue flow** | Use to manage what the agent experiences when transferring to another queue\. This type of flow is associated with transfer to queue quick connects, and often plays messaging, then completes the transfer using the **Transfer to queue** block\. This contact follow works with voice and chat\.  | 
 
-**To create a contact flow from a template**
+**To create a contact flow**
 
 1. In the navigation pane, choose **Routing**, **Contact flows**\.
 
-1. Next to the **Create contact flow** button, choose the drop\-down arrow to see the list of templates\.
+1. Next to the **Create contact flow** button, choose the drop\-down arrow to select from the list of available of contact flow types\.
 
 1. Type a name and a description for your contact flow\.
 

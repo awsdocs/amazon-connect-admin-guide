@@ -22,7 +22,7 @@ In the following agent event stream, the agent is assigned to a routing profile 
                 "Concurrency": [
                     {
                         "AvailableSlots": 3, //This shows the agent has 3 slots available. 
-                                            They aren't on any chats right now.
+                                            //They aren't on any chats right now.
                         "Channel": "CHAT",
                         "MaximumSlots": 3  //The agent's routing profile allows them to take up to 3 chats.
                     {
@@ -45,7 +45,8 @@ In the following agent event stream, the agent is assigned to a routing profile 
                             "VOICE",
                             "CHAT"
                         ],
-                        "Name": null  //This queue has a name of "null" because it's an agent queue, and agent queues don't have names.
+                        "Name": null  //This queue has a name of "null" because it's an agent queue, 
+                                      //and agent queues don't have names.
                     },
                     {
                         "ARN": "arn:aws:connect:us-west-2:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/queue/queue-ARN",
