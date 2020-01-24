@@ -75,7 +75,7 @@ After your contact flow is published live, you can use contact flow logs to help
 
 For more information about enabling and using contact flow logs, see [Contact Flow Logs](contact-flow-logs.md)\. 
 
-## Roll back a Contact Flow<a name="rollback"></a><a name="rollback"></a>
+## Roll back a Contact Flow<a name="rollback"></a>
 
 1. In the contact flow designer, open the contact flow you want to roll back\.
 

@@ -1,6 +1,6 @@
 # Add Users<a name="user-management"></a>
 
-You can add users and configure them with permissions that are appropriate to their roles \(for example, agents or managers\)\. For more information, see [Assign Permissions: Security Profiles](connect-security-profiles.md)\. Contacts can be routed based on the skills required of the agents\. For more information, see [Create a Routing Profile](routing-profiles.md)\.
+You can add users and configure them with permissions that are appropriate to their roles \(for example, agents or managers\)\. For more information, see [Security Profiles](connect-security-profiles.md)\. Contacts can be routed based on the skills required of the agents\. For more information, see [Create a Routing Profile](routing-profiles.md)\.
 
 **To add a user**
 

@@ -6,7 +6,7 @@ You can also configure hierarchies with up to five levels, and segment agents or
 + Removing agents from a level affects historical reporting\.
 + Hierarchies do not determine agent permissions or security settings\. They define the organizational structure of agent groups for effective reporting\.
 
-To manage who can create hierarchies and see location and skill set data, create a security profile and then grant the appropriate permissions to users assigned to that profile\. For more information, see [Assign Permissions: Security Profiles](connect-security-profiles.md)\.
+To manage who can create hierarchies and see location and skill set data, create a security profile and then grant the appropriate permissions to users assigned to that profile\. For more information, see [Security Profiles](connect-security-profiles.md)\.
 
 **To configure a new agent hierarchy**
 

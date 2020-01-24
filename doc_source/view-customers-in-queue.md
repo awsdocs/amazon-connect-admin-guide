@@ -6,7 +6,7 @@
 
 1. By default, customers who are waiting for a call back are counted in the **In queue** column\. This column counts all customers who are in a queue for an agent, not just the callback customers\.
 
-## View How Many Customers Are Waiting For A Callback<a name="w21aac42c31c19b5"></a>
+## View How Many Customers Are Waiting For A Callback<a name="w37aac42c31c19b5"></a>
 
 To only see a count of the customers waiting for a call back, you need to create a queue that only takes callback contacts\. To learn how to do this, see [Set Up Routing](connect-queues.md)\.
 

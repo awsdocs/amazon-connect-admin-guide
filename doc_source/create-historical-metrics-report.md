@@ -3,7 +3,7 @@
 Although Amazon Connect includes built\-in historical reports, you can create your own custom reports so you look at only the data that's of interest to your organization\. 
 
 **Requirement**
-+ You must have permission to access metric data\. The following security profiles include this permission: **CallCenterManager** and **QualityAnalyst**\. For more information, see [Assign Permissions: Security Profiles](connect-security-profiles.md)\.
++ You must have permission to access metric data\. The following security profiles include this permission: **CallCenterManager** and **QualityAnalyst**\. For more information, see [Security Profiles](connect-security-profiles.md)\.
 
 ## Grouping Options<a name="historical-metrics-groupings"></a>
 

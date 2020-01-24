@@ -1,6 +1,8 @@
-# Assign Permissions: Security Profiles<a name="connect-security-profiles"></a>
+# Security Profiles<a name="connect-security-profiles"></a>
 
-Security profiles consist of permissions that determine which Amazon Connect users can view, update, or create which Amazon Connect resources or perform specific tasks\. Assigning a security profile to a user grants that user the permissions you added to the security profile\. For example, you can grant users read/write access to routing profiles\.
+Security profiles help you manage who can access the Amazon Connect dashboard and Contact Control Panel, and who can perform specific tasks\. 
+
+[Assigning a security profile](#assign-security-profile) to supervisors, agents, and admins grants them the permissions you added to the security profile\. For example, you can grant users read/write access to routing profiles\.
 
 Security profiles are organized into the following permission groups:
 + **Routing**—Grant access to routing profiles, quick connects, hours of operation, and queues\.
@@ -23,7 +25,7 @@ This setting isn't a security feature\. Users who don't have this permission can
 
 We provide default security profiles for general roles\. You can review the permissions granted by these profiles and use them if they align with the permissions that your users need\. Otherwise, create a security profile that grants your users only the permissions they need\.
 
-The following are the default security profiles:
+Following are the default security profiles:
 + **Admin**—Grants administrators permission to perform all actions\.
 + **Agent**—Grants agents permission to access the CCP\.
 + **CallCenterManager**—Grants managers permission to perform actions related to user management, metrics, and routing\.

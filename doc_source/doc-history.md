@@ -11,7 +11,7 @@
 | Added a section on analyzing conversations |  For more information, see [Analyze Conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.   | December 02, 2019 | 
 | Added information about live media streaming |  For more information, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\.   | November 21, 2019 | 
 | Added information about chat |  For more information, see [Chat](chat.md)\.  Also added these topics: [Best Practices for Amazon Connect](best-practices.md), [About Agent Status](metrics-agent-status.md), [About Contact States](about-contact-states.md), and [Additional Resources for Amazon ConnectAdditional Resources](additional-resources.md)\.  | November 21, 2019 | 
-| Added topic on using IAM |  For more information, see [Controlling Access with AWS Identity and Access ManagementControlling Access with IAM](connect-access-control.md)\.  | November 14, 2019 | 
+| Added topic on using IAM |  For more information, see [Identity and Access Management for Amazon Connect](security-iam.md)\.  | November 14, 2019 | 
 | Added dimensions |  Added dimensions to the Amazon Connect metrics sent to CloudWatch\. See [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md)\.  | October 22, 2019 | 
 | Added a networking topic | Consolidated networking content into [Set Up Your Network](ccp-networking.md)\. Updated the guidance\. | September 30, 2019 | 
 | Updated metrics topics | Improved the descriptions of the real\-time metrics definitions\. Added categories to the historical metrics definitions\. | August 30, 2019 | 

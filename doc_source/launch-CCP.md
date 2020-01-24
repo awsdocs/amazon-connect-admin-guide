@@ -10,7 +10,7 @@ As the administrator, you can also launch the CCP directly from the Amazon Conne
 
 To provide agents the ability to launch the CCP from their desktop and start handling contacts, there are a few things you need to do: 
 + Add agents as users to the instance\. For more information, see [Manage Users in Amazon Connect](manage-users.md)\.
-+ Configure permissions for the agents\. By default, agents assigned to the Agent security profile can access the CCP and make outbound calls\. But you can create a custom security profile and add additional permissions\. For more information, see [Assign Permissions: Security Profiles](connect-security-profiles.md)\.
++ Configure permissions for the agents\. By default, agents assigned to the Agent security profile can access the CCP and make outbound calls\. But you can create a custom security profile and add additional permissions\. For more information, see [Security Profiles](connect-security-profiles.md)\.
 + Give agents the URL the CCP\.
 + Provide agents with their user name and password so that they can log in to the CCP\.
 
