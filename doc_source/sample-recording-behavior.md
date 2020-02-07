@@ -13,4 +13,4 @@ It ends with the customer being transferred by to the [Sample Inbound Flow](samp
 For more information, see the following topics:
 + [Set Up Recording Behavior](set-up-recordings.md)
 + [Monitor Live Conversations](monitor-conversations.md)
-+ [Review Recorded Conversations](recordings.md)
++ [Review Recorded Conversations](review-recorded-conversations.md)

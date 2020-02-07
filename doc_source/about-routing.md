@@ -13,8 +13,6 @@ Here's the logic Amazon Connect uses to route contacts:
 + If multiple agents are available, the contact is routed to the agent who has been in the **Available** status for the longest time\.
 + A routing profile may assign a priority to one queue over another, but the priority within the queue is always set by the order the contact was added to the queue\.
 
-To learn more about routing in Amazon Connect, see [Routing Profiles](concepts-routing.md)\.
-
 ## How Routing Works with Multiple Channels<a name="routing-profile-channels-works"></a>
 
 When you set up a routing profile to handle both voice and chat channels, agents must complete the interactions with inbound contacts on one channel before they can receive a contact on the other\. 
@@ -27,3 +25,10 @@ When you set up a routing profile to handle both voice and chat channels, agents
 This routing model allows agents to handle both voice and chat channels\. It routes contacts to the agent based on the type of contact the agent is already on\. This way, if an agent is already chatting with a customer, it's more efficient for the agent to respond to more chats instead of multitasking on two different channels\.
 
 To learn how to set up multiple channels, see [Create a Routing Profile](routing-profiles.md)\.
+
+## Learn More About Routing<a name="learn-more-about-routing"></a>
+
+See the following topics to learn more about routing:
++ [Routing Profiles](concepts-routing.md)\. 
++ [Queue\-Based Routing](concepts-queue-based-routing.md)
++ [Set Up Queue\-Based Routing](set-up-queue-based-routing.md) 

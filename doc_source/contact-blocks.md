@@ -19,7 +19,7 @@ The following table lists all available contact blocks that you can use\. Choose
 |   [Get Customer Input](get-customer-input.md)   |  Branches based on customer intent\.  | 
 | [Get Queue Metrics](get-queue-metrics.md) | Retrieves real\-time metrics about queues and agents in your contact center and returns them as attributes\. | 
 |  [Hold Customer or Agent](hold-customer-agent.md)  |  Places a customer or agent on or off hold\.  | 
-|  [Invoke AWS Lambda Function](invoke-lambda-function-block.md)  |  Calls AWS Lambda, and optionally returns key\-value pairs\.  | 
+|  [Invoke AWS Lambda Function](invoke-lambda-function-block.md)  |  Calls AWS Lambda, optionally returns key\-value pairs\.  | 
 |  [Loop](loop.md)  |  Loops through, or repeats, the **Looping** branch for the number of loops specified\.  | 
 |  [Loop Prompts](loop-prompts.md)  |  Loops a sequence of prompts while a customer or agent is on hold or in queue\.   | 
 |   [Play Prompt](play.md)  |  Plays an interruptible audio prompt, delivers a text\-to\-speech message, or delivers a chat response\.  | 

@@ -11,3 +11,5 @@ You can download the data included in a report as a comma\-separated value \(CSV
 1. Choose the down arrow next to **Save** in the top\-right corner of the page and choose **Download CSV**\.
 
 1. When prompted, confirm whether to open or save the file\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/downloaded-hmr-interval-format.png)

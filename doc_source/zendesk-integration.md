@@ -6,4 +6,4 @@ To integrate Amazon Connect and Zendesk, you need:
 
 Install and configure the [Amazon Connect for Zendesk app](https://www.zendesk.com/apps/support/amazon-connect/) in your Zendesk Support account, then integrate the app with Amazon Connect\. After integration, you can create contact flows to use Amazon Connect with Zendesk ticketing\.
 
-For more information, see the [Amazon Connect Zendesk Integration User Guide](https://zen-marketing-documentation.s3.amazonaws.com/docs/en/marketplace_amazon_connect_integration.pdf) and [How do I integrate Amazon Connect with Zendesk?](https://aws.amazon.com/premiumsupport/knowledge-center/connect-integrate-zendesk/) 
+For more information, see [How do I integrate Amazon Connect with Zendesk?](https://aws.amazon.com/premiumsupport/knowledge-center/connect-integrate-zendesk/) 

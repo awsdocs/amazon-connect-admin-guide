@@ -17,7 +17,10 @@ We recommend trying Option 1 and testing it with more than 200 calls\. Test for 
 
 | IP\-Ranges entry | AWS Region | Ports/Protocols | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
-| AMAZON\_CONNECT | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+| AMAZON\_CONNECT | GLOBAL and Region where your Amazon Connect instance is located  \(GLOBAL only if a region\-specific entry doesn't exist\)  | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+
+**Tip**  
+If you don't see an entry for your region, use GLOBAL\. For example, there isn't an entry for ap\-southeast\-1, so you would use GLOBAL\.
 
 To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as shown in the first row of the following table\. Do this instead of allowing all of the IP address ranges listed in the ip\-ranges\.json file\. You get the same benefit using a domain for CloudFront, as shown in the second row of the following table\.
 
@@ -38,7 +41,7 @@ The new region telecom endpoints follow a different format\. Here's a complete l
 | --- | --- | 
 | us\-west\-2  | rtc\.connect\-telecom\.us\-west\-2\.amazonaws\.com | 
 | us\-east\-1  | rtc\.connect\-telecom\.us\-east\-1\.amazonaws\.com | 
-| eu\-central\-1  | rtc\.connect\-telecom\.us\-central\-1\.amazonaws\.com | 
+| eu\-central\-1  | rtc\.connect\-telecom\.eu\-central\-1\.amazonaws\.com | 
 | ap\-southeast\-2  | rtc\.connect\-telecom\.ap\-southeast\-2\.amazonaws\.com | 
 | ap\-northeast\-1  | rtc\.connect\-telecom\.ap\-northeast\-1\.amazonaws\.com | 
 | eu\-west\-2  | rtc\.cell\-1\.prod\.eu\-west\-2\.prod\.connect\.aws\.a2z\.com | 
@@ -59,6 +62,9 @@ When there are new IP address ranges supported for Amazon Connect, they are adde
 | AMAZON\_CONNECT | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
 | EC2 | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | CLOUDFRONT | Global\* | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+
+**Tip**  
+If you don't see an entry for your region, use GLOBAL\. For example, there isn't an entry for ap\-southeast\-1, so you would use GLOBAL\.
 
 \*CloudFront serves static content from an edge location that has the lowest latency in relation to where your agents are located\. IP range allow lists for CloudFront are global and require all IP ranges associated with **"service": "CLOUDFRONT"** in the ip\-ranges\.json file\. 
 

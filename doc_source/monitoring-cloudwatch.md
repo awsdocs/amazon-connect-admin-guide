@@ -9,7 +9,12 @@ When you view the CloudWatch metrics dashboard, you can specify the refresh inte
 The `AWS/Connect` namespace includes the following metrics\.
 
 **CallsBreachingConcurrencyQuota**  
-The number of voice calls that exceeded the concurrent active calls quota for the instance\. This is a count of the number of calls that exceeded the quota, not the number of concurrent calls in excess of the quota\.  
+The total number of voice calls that exceeded the concurrent calls quota for the instance\.  
+For example, assume your contact center experiences the following volumes, and your service quota is 100 concurrent calls:  
++ 0:00 : 125 concurrent calls\. This is 25 over the quota\. 
++ 0:04 : 135 concurrent calls\. This is 35 over the quota\. 
++ 0:10 : 150 concurrent calls\. This is 50 over the quota\. 
+CallsBreachingConcurrencyQuota = 110: the total number of voice calls that exceeded the quota between 0:00 and 0:10\.  
 Unit: Count  
 Dimension:  
 + **InstanceId**: The ID of your instance

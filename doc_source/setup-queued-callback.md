@@ -1,6 +1,10 @@
 # Set Up Queued Callback<a name="setup-queued-callback"></a>
 
-You can create contact flows that provide the ability for customers to leave their phone number and get a callback from an agent\. When a customer leaves their number it's put in a queue and then routed to the next available agent\.
+You can create contact flows that provide the ability for customers to leave their phone number and get a callback from an agent\. Here's how queued callback works: 
+
+1. When a customer leaves their number it's put in a queue and then routed to the next available agent\.
+
+1. After an agent accepts the callback in the CCP, Amazon Connect calls the customer\.
 
 ## Steps to Set Up Queued Callback<a name="setup-queued-callback-overview"></a>
 

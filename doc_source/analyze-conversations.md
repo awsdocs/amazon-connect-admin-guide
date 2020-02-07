@@ -14,5 +14,6 @@ The results of the sentiment analysis appear in the customer's Contact Trace Rec
 **Topics**
 + [About Sentiment Scores and Non\-Talk Time](sentiment-scores.md)
 + [Enable Contact Lens](enable-analytics.md)
++ [Assign Permissions](permissions-for-contact-lens.md)
 + [Search Conversations](search-conversations.md)
 + [Review Transcripts](review-transcripts.md)

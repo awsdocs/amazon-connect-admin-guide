@@ -10,6 +10,9 @@ After you publish a contact flow, you can associate a phone number with it\.
 
 1. You can search for a specific number, filter your search by queue, or select a number from the list provided \(if applicable\)\.
 
-1. Select the number to edit, expand **Contact flow / IVR**, and select the contact flow\.
+1. Click on the number to edit it\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/click-on-phone-number.png)
+
+1. Expand **Contact flow / IVR**, and select the contact flow to associate with the phone number\. When a contact calls the number, they will be connected to that contact flow\.
 
 1. Choose **Save**\.

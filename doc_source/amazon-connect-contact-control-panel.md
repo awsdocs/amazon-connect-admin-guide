@@ -1,13 +1,16 @@
 # Provide Access to the Contact Control Panel<a name="amazon-connect-contact-control-panel"></a>
 
 Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with contacts\. But before agents can access to the CCP and handle contacts, there are a few things you need to do: 
-+ Add them as users to the instance\. For more information, see [Manage Users in Amazon Connect](manage-users.md)\.
-+ Configure their permissions\. By default agents assigned to the Agent security profile can access the CCP and make outbound calls\. But you can create a custom security profile and add additional permissions\. For more information, see [Security Profiles](connect-security-profiles.md)\.
-+ Give them their user name, password, and a link to the CCP so they can log in\. The default link is https://*name of your instance*\.awsapps\.com/connect/ccp\#/\.
++ [Add agents](user-management.md) to your instance\. This creates a user name and password for them to log into the CCP\. 
++ [Assign them the "Agent" security profile](connect-security-profiles.md#assign-security-profile)\. This grants them permissions to access the CCP\.
++ Give them their user name, password, and a link to the CCP so they can log in\. The CCP is a website\. The URL to your CCP is:
+  + **https://*name of your instance*\.awsapps\.com/connect/ccp\-v2/**
 
 We recommend telling agents to bookmark the URL to the CCP so they can access it easily\.
 
 As the admin, you can access the CCP by clicking on the phone icon in the upper right corner of Amazon Connect\.
+
+For information about using the CCP, see [Using the CCP \(the Agent UI\)](agent-user-guide.md)\. 
 
 ## Grant Microphone Access in Chrome or Firefox<a name="accessing-microphone"></a>
 

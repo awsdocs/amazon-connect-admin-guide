@@ -4,6 +4,9 @@ Agents have a status\. It's manually set in the Contact Control Panel \(CCP\)\.
 + When they're ready to handle contacts, they set their status in the CCP to **Available**\. This means inbound contacts can be routed to them\.
 + When agents want to stop taking inbound contacts, they set their status to a custom status that you create, such as **Break** or **Training**\. They can also change their status to **Offline**\.
 
+**Tip**  
+Supervisors can manually [change the agent's status in the real\-time metrics report](rtm-change-agent-activity-state.md)\. 
+
 It's possible for agents to make outbound calls when their status in the CCP is set to a custom status\. Technically, agents can make an outbound call when their CCP is set to **Offline**\. 
 
 For example, an agent wants to make an outbound call to a contact\. Because they don't want contacts to be routed to them during this time, they set their status to a custom status\. So when you look at your metrics, you'll see the agent is simultaneously on **NPT** \(the metric that indicates a custom status\) and **On Call**, for example\.
@@ -18,13 +21,13 @@ Because we're tracking the contact state, if you want to identify how long an ag
 + In the historical metrics report, **After contact work time** captures the amount of time each contact spent in ACW\.
 + In the agent event stream, you have to do some calculations\. For more information, see [Determine How Long an Agent Spends Doing ACW](determine-acw-time.md)\.
 
-## How Do You Know When an Agent Can Handle Another Contact?<a name="w37aac42c15c15"></a>
+## How Do You Know When an Agent Can Handle Another Contact?<a name="agent-availability"></a>
 
 The **Availability** metric tells you when agents are finished with a contact and ready to have another one routed to them\.
 
-## What Appears in the Real\-Time Metrics Report?<a name="w37aac42c15c17"></a>
+## What Appears in the Real\-Time Metrics Report?<a name="agent-status-rtm.title"></a>
 
-To find out what the agent status is in the real\-time metrics report, look at the **Status** metric\.
+To find out what the agent status is in the real\-time metrics report, look at the **Agent Activity** metric\.
 
 ## What Appears in the Agent Event Stream?<a name="agent-status-in-agent-event-stream"></a>
 

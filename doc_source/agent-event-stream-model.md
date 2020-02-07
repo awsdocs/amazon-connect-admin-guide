@@ -65,9 +65,11 @@ The `AgentSnapshot` object includes the following properties:
 
 **AgentStatus**  
 Agent status data, including:  
-+ AgentARN—the ARN for the agent\.
-+ Name—this is the status of the agent that they manually set in the CCP\. For example, their status might be **Available**, which means that they are ready for inbound contacts to be routed to them\. Or it might be a custom status, such as Break or Training, which means that inbound contacts can't be routed to them BUT they can still make outbound calls\.
-+ StartTimestamp—The time stamp in ISO 8601 standard format for the time at which the agent entered the status\.
++ AgentARN—The ARN for the agent\.
++ Name—This is the [status of the agent that they manually set in the CCP](metrics-agent-status.md), or that the supervisor manually [changes in the real\-time metrics report](rtm-change-agent-activity-state.md)\. 
+
+  For example, their status might be **Available**, which means that they are ready for inbound contacts to be routed to them\. Or it might be a custom status, such as Break or Training, which means that inbound contacts can't be routed to them BUT they can still make outbound calls\.
++ StartTimestamp—The timestamp in ISO 8601 standard format for the time at which the agent entered the status\.
 
   Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
 Type: `AgentStatus` object\.

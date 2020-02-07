@@ -8,7 +8,7 @@ To learn what the voice and chat experiences are like for your agents and custom
 
 1. Go to the Amazon Connect Dashboard, and choose **Test chat**\.
 
-   If you don't see the option to test chat, click [here](https://github.com/amazon-connect/)\.
+   If you don't see the option to test chat, click [here](https://github.com/amazon-connect/amazon-connect-chat-ui-examples#enabling-chat-in-an-existing-amazon-connect-contact-center)\.
 
 1. On the **Test Chat** page, choose **Test Settings**\.
 

@@ -9,7 +9,7 @@ The following AWS Directory Service directories are supported in Amazon Connect:
 
 You cannot change the identity option you select after you create the instance\. If you decide to change the directory you selected, you can delete the instance and create a new one\. When you delete an instance, you lose all configuration settings and metrics data for it\.
 
-There is no additional charge for using an existing or a proprietary directory in Amazon Connect\. For information about the costs associated with using AWS Directory Service, see [AWS Service Pricing Overview](http://aws.amazon.com/pricing)\.
+There is no additional charge for using an existing or a proprietary directory in Amazon Connect\. For information about the costs associated with using AWS Directory Service, see [AWS Service Pricing Overview](http://aws.amazon.compricing)\.
 
 The following limitations apply to all new directories created using AWS Directory Service:
 + Directories can only have alphanumeric names\. Only the '\.' character can be used\.

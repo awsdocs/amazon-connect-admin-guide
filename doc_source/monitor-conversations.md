@@ -58,3 +58,6 @@ These permissions enable managers to monitor live conversations and access recor
 1. To stop monitoring the conversation, in the CCP choose **End call** or **End chat**\.
 
    When the agent ends the conversation, monitoring stops automatically\.
+
+**Tip**  
+Call barge in is not currently supported\.

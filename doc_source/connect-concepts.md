@@ -15,6 +15,8 @@ This section explains concepts that will help you set up your Amazon Connect con
 + [Telephony](concepts-telephony.md)
 + [Chat](chat.md)
 + [Routing Profiles](concepts-routing.md)
++ [Queues: Standard and Agent](concepts-queues-standard-and-agent.md)
++ [Queues: Priority and Delay](concepts-routing-profiles-priority.md)
 + [Queue\-Based Routing](concepts-queue-based-routing.md)
 + [Channels and Concurrency](channels-and-concurrency.md)
 + [Contact Flows](concepts-contact-flows.md)

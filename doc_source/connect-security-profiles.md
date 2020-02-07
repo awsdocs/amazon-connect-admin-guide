@@ -31,6 +31,20 @@ Following are the default security profiles:
 + **CallCenterManager**—Grants managers permission to perform actions related to user management, metrics, and routing\.
 + **QualityAnalyst**—Grants analysts permission to perform actions related to metrics\.
 
+## Assign a Security Profile to a User<a name="assign-security-profile"></a>
+
+**To assign a security profile to a user**
+
+1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+
+1. Choose **Users**, **User management**\.
+
+1. Select one or more users and choose **Edit**\.
+
+1. For **Security Profiles**, add or remove security profiles as needed\. To add a security profile, put your cursor in the field and select the security profile from the list\. To remove a security profile, click the **x** next to its name\. 
+
+1. Choose **Save**\.
+
 ## Create a Security Profile<a name="create-security-profile"></a>
 
 Creating a security profile enables you to grant your users only the permissions that they need\.
@@ -62,19 +76,5 @@ You can update a security profile at any time\.
 1. Select the name of the profile\.
 
 1. Update the name, description, and permissions as needed\.
-
-1. Choose **Save**\.
-
-## Assign a Security Profile to a User<a name="assign-security-profile"></a>
-
-**To assign a security profile to a user**
-
-1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
-
-1. Choose **Users**, **User management**\.
-
-1. Select one or more users and choose **Edit**\.
-
-1. For **Security Profiles**, add or remove security profiles as needed\. To add a security profile, put your cursor in the field and select the security profile from the list\. To remove a security profile, click the **x** next to its name\. 
 
 1. Choose **Save**\.

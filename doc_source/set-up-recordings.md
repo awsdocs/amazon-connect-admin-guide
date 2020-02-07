@@ -31,7 +31,7 @@ To view a sample contact flow with the **Set recording behavior** block configur
 
    If you're configuring the block for voice conversations only, you can choose **Agent and Customer**, **Agent only**, or **Customer only**\.
 
-1. Choose **Save** and then **Publish**to publish the updated contact flow\.
+1. Choose **Save** and then **Publish** to publish the updated contact flow\.
 
 **To set up recording behavior for outbound calls**
 
@@ -41,4 +41,11 @@ To view a sample contact flow with the **Set recording behavior** block configur
 
 1. Set up a queue that will be used for making outbound calls\. In the **Outbound whisper flow** box, choose the contact flow that has **Set recording behavior** in it\. 
 
-To learn what permissions managers need, and how they can monitor live conversations and review recordings of past conversations, see [Monitor Live Conversations](monitor-conversations.md) and [Review Recorded Conversations](recordings.md)\.
+To learn what permissions managers need, and how they can monitor live conversations and review recordings of past conversations, see [Monitor Live Conversations](monitor-conversations.md) and [Review Recorded Conversations](review-recorded-conversations.md)\.
+
+## When Are Recordings Available?<a name="when-are-recordings-available"></a>
+
+When call recording is enabled, the recording is placed in your S3 bucket shortly after the contact is disconnected\. Then you can [review the recording](review-recorded-conversations.md)\.
+
+**Important**  
+The recording is available in the contact trace record \(CTR\), however, only after the customer leaves the After Contact Work state\. 

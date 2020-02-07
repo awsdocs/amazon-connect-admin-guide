@@ -11,11 +11,4 @@ The following illustration shows you can:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/routing-profile-example2.png)
 
-To set up queue\-based routing:
-+ [Create the queues](create-queue.md), for example, one for each skill you want to use for routing\.
-+ [Create the routing profiles](routing-profiles.md):
-  + Specify the channels supported by this routing profile\.
-  + Specify the queues: the channel, priority, and delay\.
-+ [Configure agent settings](configure-agents.md) to assign the routing profiles to them\.
-
-When you build your contact flows, you'll add the queues to them\. If a contact chooses to speak to an agent in Spanish, for example, they will get routed to the Spanish Reservations queue\. 
+For an overview of the steps to set up queue\-based routing, see [Set Up Queue\-Based Routing](set-up-queue-based-routing.md)\. 

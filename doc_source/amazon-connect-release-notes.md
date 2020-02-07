@@ -279,7 +279,7 @@ The following updates were released in July 2018:
 + [Initiate an Outbound Call](using-call-number-block.md)
 + [Add an Amazon Lex Bot](amazon-lex.md)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
-+ [Manage Contact in a Queue Using a Transfer to Queue Block](transfer.md#queue-to-queue-transfer)
++ [Manage Contacts in a Queue](queue-to-queue-transfer.md)
 
 ### General<a name="july18-general"></a>
 + Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.
