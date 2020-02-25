@@ -15,7 +15,7 @@ The following image shows the CCP\.
 + [Log In and Log Out of the CCP](ccp-login.md)
 + [Set Your Status to Available](set-status-available.md)
 + [Chat with Contacts](work-with-chats.md)
-+ [Transfer Chats to Another Queue or Agent](transfer-chats.md)
++ [Transfer Chats to Another Queue](transfer-chats.md)
 + [Call Another Agent While on a Chat](call-and-chat.md)
 + [Accept Incoming Calls](work-with-calls.md)
 + [Transfer Calls](transfers.md)

@@ -88,7 +88,8 @@ Type: String \(*hh:mm:ss*\)
 Category: CTR\-driven metric
 
 **Average handle time**  <a name="average-handle-time-historical"></a>
-Average time that agents spent on contacts, including hold time and after contact work\.  
+The average time, from start to finish, that a contact was connected with an agent \(average handled time\)\. It includes talk time, hold time, and After Contact Work \(ACW\) time\.  
+AHT is calculated by averaging the amount of time between the contact being answered by an agent and the conversation ending\.  
 Type: String \(*hh:mm:ss*\)  
 Category: CTR\-driven metric
 

@@ -1,6 +1,6 @@
-# Invoke Lambda Functions<a name="connect-lambda-functions"></a>
+# Invoke AWS Lambda Functions<a name="connect-lambda-functions"></a>
 
-Amazon Connect can interact with your own systems and take different paths in contact flows dynamically\. To achieve this, invoke Lambda functions in a contact flow, fetch the results, and call your own services or interact with other AWS data stores or services\. For more information, see the [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/)\.
+Amazon Connect can interact with your own systems and take different paths in contact flows dynamically\. To achieve this, invoke AWS Lambda functions in a contact flow, fetch the results, and call your own services or interact with other AWS data stores or services\. For more information, see the [AWS Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/)\.
 
 To invoke a Lambda function from a contact flow, complete the following tasks\.
 
@@ -88,7 +88,7 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w37aac29c13c17"></a>
+### Invocation retry policy<a name="w49aac29c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 

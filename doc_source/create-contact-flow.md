@@ -12,13 +12,18 @@ Chances are you're going to create tens or hundreds of contact flows\. To help y
 
 ## Choose a Contact Flow Type<a name="contact-flow-types"></a>
 
-Amazon Connect includes a set of nine contact flow types\. Each type has only those blocks for a specific scenario\. For example, the contact flow type for transferring to a queue contains only the appropriate contact blocks for that type of flow\. 
+Amazon Connect includes a set of nine contact flow types\. **Each type has only those blocks for a specific scenario\.** For example, the contact flow type for transferring to a queue contains only the appropriate contact blocks for that type of flow\. 
 
-When you create a contact flow, you need to choose the right type for your scenario\. The following contact flow types are available\. 
+**Important**  
+When you create a contact flow, you need to choose the right type for your scenario\. Otherwise, the blocks you need may not be available\. 
+You can't import flows of different types\. This means if you start with one type and need to switch to another to get the right blocks, you have to start over\.
+
+The following contact flow types are available\. 
 
 
 | Type | When to use | 
 | --- | --- | 
+|  **Contact flow**  |  This is the generic contact flow type that's created when you choose the **Create contact flow** button, and don't select a type using the drop\-down arrow\. It creates an inbound contact flow\.  This contact follow works with voice and chat\.   | 
 |  **Customer queue flow**  |  Use to manage what the customer experiences while in queue, before being joined to an agent\. Customer queue flows are interruptible and can include actions such as an audio clip apologizing for a delay and offering an option to receive a callback, leveraging the **Transfer to queue** block\. This contact follow works with voice and chat\.   | 
 |  **Customer hold flow**  |  Use to manage what the customer experiences while the customer is on hold\. With this flow, one or more audio prompts can be played to a customer using the **Loop prompts** block while waiting on hold\. This contact follow works with voice\.   | 
 |  **Customer whisper flow**  |  Use to manage what the customer experiences as part of an inbound call immediately before being joined with an agent\. The agent and customer whispers are played to completion, then the two are joined\. This contact follow works with voice\.   | 
@@ -28,25 +33,13 @@ When you create a contact flow, you need to choose the right type for your scena
 | **Transfer to agent flow** | Use to manage what the agent experiences when transferring to another agent\. This type of flow is associated with transfer to agent quick connects, and often plays messaging, then completes the transfer using the **Transfer to agent** block\. This contact follow works with voice\.   | 
 | **Transfer to queue flow** | Use to manage what the agent experiences when transferring to another queue\. This type of flow is associated with transfer to queue quick connects, and often plays messaging, then completes the transfer using the **Transfer to queue** block\. This contact follow works with voice and chat\.  | 
 
-**To create a contact flow**
+## Create an Inbound Contact Flow<a name="create-inbound-contact-flow"></a>
+
+Use these steps to create an inbound contact flow\. 
 
 1. In the navigation pane, choose **Routing**, **Contact flows**\.
 
-1. Next to the **Create contact flow** button, choose the drop\-down arrow to select from the list of available of contact flow types\.
-
-1. Type a name and a description for your contact flow\.
-
-1. Search for a contact block using the **Search** bar, or expand the relevant group to locate the block\. For descriptions of the contact blocks, see [Contact Block Definitions](contact-blocks.md)\.
-
-1. Drag and drop the contact flow blocks onto the canvas\. You can add blocks in any order or sequence, as connections between elements aren't required to be strictly linear\.
-
-1. Double\-click the title of the block\. In the configuration pane, configure settings for that block\.
-
-## Create a Contact Flow \(Inbound\)<a name="new"></a>
-
-1. In the navigation pane, choose **Routing**, **Contact flows**\.
-
-1. Choose **Create contact flow**\. This opens the contact flow designer\. 
+1. Choose **Create contact flow**\. This opens the contact flow designer and creates an inbound contact flow \(Type = Contact flow\)\. 
 
 1. Type a name and a description for your contact flow\.
 

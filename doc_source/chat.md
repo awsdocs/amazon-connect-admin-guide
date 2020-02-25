@@ -44,7 +44,7 @@ If you're using Amazon Lex with chat, note that the default session timeout for 
 With only a few steps, you can enable your app to engage with Amazon Connect chat\. Use the [sample implementation](https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/asyncCustomerChatUX) on GitHub to help you get started\. Here's how it works:
 + It spins up an Amazon API Gateway endpoint that triggers a Lambda function\.
 + The Lambda function invokes the Amazon Connect Service [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API and returns the result from that call\. 
-+ After you spin up the CloudFormation stack you can call this API from your app, import the pre\-built chat widget, pass the response to the widget, and start chatting\. 
++ After you spin up the AWS CloudFormation stack you can call this API from your app, import the pre\-built chat widget, pass the response to the widget, and start chatting\. 
 
 In addition, see these resources to customize the chat experience: 
 + [Amazon Connect Service API Documentation](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html), especially the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\. 

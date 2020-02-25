@@ -46,6 +46,6 @@ To update the instance settings, open the Amazon Connect console, choose the nam
 
 1. \(Optional\) To integrate with Amazon Lex, select a Lex bot\. For more information, see [Add an Amazon Lex Bot](amazon-lex.md)\.
 
-1. \(Optional\) To integrate with AWS Lambda, select a Lambda function\. For more information, see [Invoke Lambda Functions](connect-lambda-functions.md)\.
+1. \(Optional\) To integrate with AWS Lambda, select a Lambda function\. For more information, see [Invoke AWS Lambda Functions](connect-lambda-functions.md)\.
 
 1. \(Optional\) To enable contact flow logs, choose **Enable contact flow logs**\. For more information, see [Contact Flow Logs](contact-flow-logs.md)\.

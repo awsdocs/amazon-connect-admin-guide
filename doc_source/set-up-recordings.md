@@ -48,4 +48,4 @@ To learn what permissions managers need, and how they can monitor live conversat
 When call recording is enabled, the recording is placed in your S3 bucket shortly after the contact is disconnected\. Then you can [review the recording](review-recorded-conversations.md)\.
 
 **Important**  
-The recording is available in the contact trace record \(CTR\), however, only after the customer leaves the After Contact Work state\. 
+You can also access the recording from the customer's [contact trace record \(CTR\)](sample-ctr.md)\. The recording is available in the CTR, however, only after the contact has left the [After Contact Work \(ACW\) state](metrics-agent-status.md#agent-status-acw)\. 

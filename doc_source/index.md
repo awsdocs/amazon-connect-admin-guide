@@ -15,6 +15,8 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [What Is Amazon Connect?](what-is-amazon-connect.md)
+   + [The Power of AWS with Amazon Connect](related-services-amazon-connect.md)
+   + [Browsers Supported by Amazon Connect](browsers.md)
 + [Get Started with Amazon Connect](amazon-connect-get-started.md)
 + [Concepts](connect-concepts.md)
    + [Telephony](concepts-telephony.md)
@@ -151,7 +153,7 @@ Amazon's trademarks and trade dress may not be used in
    + [CCP Connectivity](ccp-connectivity.md)
    + [Use an Allow List for Integrated Applications](app-integration.md)
 + [Add an Amazon Lex Bot](amazon-lex.md)
-+ [Invoke Lambda Functions](connect-lambda-functions.md)
++ [Invoke AWS Lambda Functions](connect-lambda-functions.md)
 + [Encrypt Customer Input](contact-flow-keys.md)
 + [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)
    + [Plan for Live Media Streaming](plan-live-media-streams.md)
@@ -247,7 +249,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Log In and Log Out of the Amazon Connect CCP](ccp-login.md)
    + [Set Your Status to Available](set-status-available.md)
    + [Chat with Contacts](work-with-chats.md)
-   + [Transfer Chats to Another Queue or Agent](transfer-chats.md)
+   + [Transfer Chats to Another Queue](transfer-chats.md)
    + [Call Another Agent While on a Chat](call-and-chat.md)
    + [Accept Incoming Calls](work-with-calls.md)
    + [Transfer Calls](transfers.md)

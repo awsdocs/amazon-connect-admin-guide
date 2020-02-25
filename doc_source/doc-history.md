@@ -15,6 +15,7 @@
 | Added dimensions |  Added dimensions to the Amazon Connect metrics sent to CloudWatch\. See [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md)\.  | October 22, 2019 | 
 | Added a networking topic | Consolidated networking content into [Set Up Your Network](ccp-networking.md)\. Updated the guidance\. | September 30, 2019 | 
 | Updated metrics topics | Improved the descriptions of the real\-time metrics definitions\. Added categories to the historical metrics definitions\. | August 30, 2019 | 
+| Updated historical metrics report section | Added categories to the historical metrics definitions\.  | August 27, 2019 | 
 | Re\-organized the content | Re\-organized the content so it's task\-based\. | July 19, 2019 | 
 | Added information about the updated **Transfer to phone number** block | You can use the updated **Transfer to phone number** block to transfer callers to a phone number external to your Amazon Connect instance, and then optionally resume the contact flow after the call with the external party ends\. For more information, see [Resume a Contact Flow After Transfer](contact-flow-resume.md)\. | February 18, 2019 | 
 | Adding information about live media streaming for customer audio streams | You can capture customer audio during interactions with your contact center and send it to a Kinesis video stream\. For more information, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\. | December 21, 2018 | 

@@ -45,7 +45,8 @@ If a contact is not answered by a given agent, we attempt to route it to another
 This metric was previously named **Missed**\.
 
 **AHT \(Average Handled Time\)**  <a name="average-handled-time-real-time"></a>
-Average time, from start to finish, that a contact was connected with an agent \(average handled time\)\. This is calculated by averaging the amount of time between the contact being answered by an agent and the conversation ending\.
+The average time, from start to finish, that a contact was connected with an agent \(average handled time\)\. It includes talk time, hold time, and After Contact Work \(ACW\) time\.  
+AHT is calculated by averaging the amount of time between the contact being answered by an agent and the conversation ending\.
 
 **API contacts handled**  <a name="api-contacts-handled-real-time"></a>
 Count of contacts that were initiated by an API operation, such as `StartOutboundVoiceContact`, and handled by an agent\.

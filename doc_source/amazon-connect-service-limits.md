@@ -1,15 +1,17 @@
 # Amazon Connect Service Quotas<a name="amazon-connect-service-limits"></a>
 
-The following table provides the default quotas for new Amazon Connect instances\. Because the quotas have been adjusted over time, the quotas in place for your account may be different than the quotas described here\. 
+The following table provides the default quotas for new Amazon Connect accounts as of February 2020\. Because the quotas have been adjusted over time, the quotas in place for your account may be different than the quotas described here\. 
+
+**All service quotas can be adjusted/increased unless otherwise noted\.**
 + To submit a service quota increase, use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 + Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port Your Current Phone Number](port-phone-number.md)\.
 
 
 | Item | Default quota | 
 | --- | --- | 
-|  Amazon Connect instances per account  |  5  | 
+|  Amazon Connect instances per account  |  2  | 
 |  Users per instance  |  500  | 
-|  Phone numbers per instance  |  10  | 
+|  Phone numbers per instance  |  5  | 
 |  Queues per instance  |  50  | 
 |  Queues per routing profile  |  50  | 
 |  Routing profiles per instance  |  100  | 
@@ -30,7 +32,8 @@ The following table provides the default quotas for new Amazon Connect instances
 |  Active chats per agent  |  5 This quota cannot be increased\.  | 
 |  Total duration per chat  |  25 hours, including wait time This quota cannot be increased\.  | 
 |  Characters per chat message  |  1024 This quota cannot be increased\.  | 
-|  Concurrent calls per instance  |  100\. If this is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   | 
+|  Concurrent calls per instance  |  5\. If this is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   | 
+|  Call per second  |  1   | 
 | Phone Number Porting |  You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](port-phone-number.md)\.  | 
 
 **Note**  
