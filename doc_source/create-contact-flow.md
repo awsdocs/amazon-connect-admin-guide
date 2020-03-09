@@ -2,7 +2,7 @@
 
 The starting point for creating all contact flows is the contact flow designer\. It's a drag\-and\-drop work surface that enables you to link together blocks of actions\. For example, when a customer first enters your contact center, you can ask for some input and then play a prompt such as "Thank you\."
 
-For descriptions of the available action blocks, see [Contact Block Definitions](contact-blocks.md)\.
+For descriptions of the available action blocks, see [Contact Block Definitions](contact-block-definitions.md)\.
 
 ## Before You Begin: Develop a Naming Convention<a name="before-create-contact-flow"></a>
 
@@ -43,7 +43,7 @@ Use these steps to create an inbound contact flow\.
 
 1. Type a name and a description for your contact flow\.
 
-1. Search for a contact block using the **Search** bar, or expand the relevant group to locate the block\. For descriptions of the contact blocks, see [Contact Block Definitions](contact-blocks.md)\.
+1. Search for a contact block using the **Search** bar, or expand the relevant group to locate the block\. For descriptions of the contact blocks, see [Contact Block Definitions](contact-block-definitions.md)\.
 
 1. Drag and drop contract blocks onto the canvas\. You can add blocks in any order or sequence, as connections between elements aren't required to be strictly linear\.
 

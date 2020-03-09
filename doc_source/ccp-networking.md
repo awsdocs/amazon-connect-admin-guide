@@ -52,9 +52,9 @@ When using `rtc.connect-telecom.{region}.amazonaws.com` and `https://myInstanceN
 
 ## Option 2 \(Not Recommended\): Allow IP Address Ranges<a name="option2"></a>
 
-The second option relies on using an allow list, also known as whitelisting, the IP addresses used by Amazon Connect\. You create this allow list using the IP addresses in the [AWS ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file\. For more information about this file and IP address ranges in AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\.
+The second option relies on using an allow list, also known as whitelisting, the IP addresses used by Amazon Connect\. You create this allow list using the IP addresses in the [AWS ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file\. 
 
-When there are new IP address ranges supported for Amazon Connect, they are added to the publicly available ip\-ranges\.json file\. They are kept for a minimum of 30 days before they are used by the service\. After 30 days, softphone traffic through the new IP address ranges increases over the subsequent two weeks\. After two weeks, traffic is routed through the new ranges equivalent to all available ranges\.
+For more information about this file, see [About Amazon Connect IP Address Ranges](#about-connect-ip-address-range)\.
 
 
 | IP\-Ranges entry | AWS Region | Ports/Protocols | Direction | Traffic | 
@@ -67,6 +67,33 @@ When there are new IP address ranges supported for Amazon Connect, they are adde
 If you don't see an entry for your region, use GLOBAL\. For example, there isn't an entry for ap\-southeast\-1, so you would use GLOBAL\.
 
 \*CloudFront serves static content from an edge location that has the lowest latency in relation to where your agents are located\. IP range allow lists for CloudFront are global and require all IP ranges associated with **"service": "CLOUDFRONT"** in the ip\-ranges\.json file\. 
+
+## About Amazon Connect IP Address Ranges<a name="about-connect-ip-address-range"></a>
+
+In the [AWS ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file, the whole /19 IP address range is owned by Amazon Connect\. All traffic to and from the /19 range comes to and from Amazon Connect\.
+
+The /19 IP address range isn't shared with other services\. It's for the exclusive use to Amazon Connect globally\.
+
+In the AWS ip\-ranges\.json file, you can see the same range listed twice\. For example: 
+
+```
+            
+                { "ip_prefix": "15.193.0.0/19", 
+                "region": "GLOBAL", 
+                "service": "AMAZON" 
+                }, 
+                {
+                "ip_prefix": "15.193.0.0/19", 
+                "region": "GLOBAL", 
+                "service": "AMAZON_CONNECT" 
+                },
+```
+
+AWS always publishes any IP range twice: one for the specific service, and one for “AMAZON” service\. There could even be a third listing for a more specific use case within a service\. 
+
+When there are new IP address ranges supported for Amazon Connect, they are added to the publicly available ip\-ranges\.json file\. They are kept for a minimum of 30 days before they are used by the service\. After 30 days, softphone traffic through the new IP address ranges increases over the subsequent two weeks\. After two weeks, traffic is routed through the new ranges equivalent to all available ranges\.
+
+For more information about this file and IP address ranges in AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\.
 
 ## Stateless Firewalls<a name="stateless-firewalls"></a>
 

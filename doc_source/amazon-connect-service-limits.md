@@ -9,35 +9,42 @@ The following table provides the default quotas for new Amazon Connect accounts 
 
 | Item | Default quota | 
 | --- | --- | 
-|  Amazon Connect instances per account  |  2  | 
-|  Users per instance  |  500  | 
-|  Phone numbers per instance  |  5  | 
-|  Queues per instance  |  50  | 
-|  Queues per routing profile  |  50  | 
-|  Routing profiles per instance  |  100  | 
-|  Hours of operation per instance  |  100  | 
-|  Quick connects per instance  |  100  | 
-|  Prompts per instance  |  500  | 
+|  AWS Lambda functions per instance  |  35  | 
 |  Agent status per instance  |  50 This quota cannot be increased\.  | 
-|  Security profiles per instance  |  100  | 
+|  Amazon Connect instances per account  |  2  | 
+|  Amazon Lex bots per instance  |  50  | 
+|  Concurrent calls per instance  |  5 If this quota is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   | 
+|  Concurrent chats per instance  |  100 This includes chats that are waiting\. If this quota is exceeded, the API call fails with a quota exceeded error\.  | 
 |  Contact flows per instance  |  100  | 
-|  Agent hierarchy groups per instance  |  250  | 
+|  Hours of operation per instance  |  100  | 
+|  Phone numbers per instance  |  5  | 
+|  Prompts per instance  |  500  | 
+|  Queues per instance  |  50  | 
+|  Queues per routing profile per instance  |  50  | 
+|  Quick connects per instance  |  100  | 
+|  Rate of API requests  |  See [Amazon Connect API Throttling Quotas](#connect-api-quotas)\.  | 
 |  Reports per instance  |  500 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies so reports don't pile up\.   | 
-| Managers who can listen in on an agent call at the same time  |  5 This quota cannot be increased\.  | 
+|  Routing profiles per instance  |  100  | 
 |  Scheduled reports per instance  |  50  | 
-|  Contact Trace Record retention  |  24 months from the time the associated contact was initiated\. This quota cannot be increased\.  You can choose to stream CTRs to Kinesis so you can manage retention and perform advanced analysis\.  | 
-|  Lambda functions  |  35 functions per Amazon Connect instance  | 
-|  Amazon Lex bots  |  50 Amazon Lex bots per Amazon Connect instance  | 
-|  Concurrent chats per instance  |  100\. This includes chats that are waiting\. If this is exceeded, the API call fails with a quota exceeded error\.  | 
-|  Active chats per agent  |  5 This quota cannot be increased\.  | 
-|  Total duration per chat  |  25 hours, including wait time This quota cannot be increased\.  | 
-|  Characters per chat message  |  1024 This quota cannot be increased\.  | 
-|  Concurrent calls per instance  |  5\. If this is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   | 
-|  Call per second  |  1   | 
-| Phone Number Porting |  You can port your US phone numbers from your current carrier to Amazon Connect\. For information about how to port your phone number, see [Port Your Current Phone Number](port-phone-number.md)\.  | 
+|  Security profiles per instance  |  100  | 
+|  User hierarchy groups per instance  |  250  | 
+|  Users per instance  |  500  | 
 
 **Note**  
 Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
+
+## Feature Specifications<a name="feature-limits"></a>
+
+The following table lists feature specifications\. They cannot be increased\.
+
+
+| Item | Feature Specification | 
+| --- | --- | 
+| Managers who can listen in on an agent call at the same time  |  5  | 
+|  Contact Trace Record retention  |  24 months from the time the associated contact was initiated\.  You can choose to stream CTRs to Kinesis so you can manage retention and perform advanced analysis\.  | 
+|  Active chats per agent  |  5  | 
+|  Total duration per chat  |  25 hours, including wait time  | 
+|  Characters per chat message  |  1024  | 
 
 ## Countries You Can Call<a name="country-code-allow-list"></a>
 
@@ -52,14 +59,14 @@ If you already have an instance, the countries that you are allowed to call may 
 
 † UK numbers with a 447 prefix are not allowed by default\. Before you can dial these UK mobile numbers, you must submit a service quota increase request\.
 
-## Amazon Connect API Throttling Quotas<a name="connect-api-limits"></a>
+## Amazon Connect API Throttling Quotas<a name="connect-api-quotas"></a>
 
 Amazon Connect throttling quotas are by account, not by user and not by instance\. For example: 
 + If different IAM users from the same account make requests, they are sharing a throttle bucket\. 
 + If multiple requests are sent from different instances from the same account, they are also sharing a throttle bucket\. 
 
  When you use the [Amazon Connect Service API ](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html), the number of requests per second is limited to the following:
-+ For the [GetMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) and [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\. These quotas cannot be increased\. 
++ For the [GetMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) and [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\.
 + For all other operations, a RateLimit of 2 requests per second, and a BurstLimit of 5 requests per second\.
 
  When you use the [Amazon Connect Participant Service API](https://docs.aws.amazon.com/connect-participant/latest/APIReference/Welcome.html), the number of requests per second is limited to the following:

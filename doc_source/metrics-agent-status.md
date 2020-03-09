@@ -7,17 +7,25 @@ Agents have a status\. It's manually set in the Contact Control Panel \(CCP\)\.
 **Tip**  
 Supervisors can manually [change the agent's status in the real\-time metrics report](rtm-change-agent-activity-state.md)\. 
 
+The following diagram illustrates how the agent's status in the CCP stays constant while they are handling contacts, but in the real\-time metrics report, the **Agent activity state** and the **Contact state** change\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-acw-contactstate.png)
+
+For example, when the **Agent activity state** = **Incoming**, the **Contact state** = **Incoming contact**\.
+
+## About Custom Agent Statuses<a name="custom-agent-status"></a>
+
 It's possible for agents to make outbound calls when their status in the CCP is set to a custom status\. Technically, agents can make an outbound call when their CCP is set to **Offline**\. 
 
-For example, an agent wants to make an outbound call to a contact\. Because they don't want contacts to be routed to them during this time, they set their status to a custom status\. So when you look at your metrics, you'll see the agent is simultaneously on **NPT** \(the metric that indicates a custom status\) and **On Call**, for example\.
+For example, an agent wants to make an outbound call to a contact\. Because they don't want contacts to be routed to them during this time, they set their status to a custom status\. So when you look at your real\-time metrics report, you'll see the agent is simultaneously on **NPT** \(the metric that indicates a custom status\) and **On contact**, for example\.
 
 ## About ACW \(After Contact Work\)<a name="agent-status-acw"></a>
 
-After a conversation between an agent and customer ends, the contact is moved into the ACW state, not the agent\. The agent's status in the CCP is still set to **Available**\. 
+After a conversation between an agent and customer ends, the contact is moved into the ACW state\.
 
 When the agent finishes doing ACW for the contact, they click **Clear** to clear that slot so another contact can be routed to them\.
 
-Because we're tracking the contact state, if you want to identify how long an agent spent on ACW for a contact:
+To identify how long an agent spent on ACW for a contact:
 + In the historical metrics report, **After contact work time** captures the amount of time each contact spent in ACW\.
 + In the agent event stream, you have to do some calculations\. For more information, see [Determine How Long an Agent Spends Doing ACW](determine-acw-time.md)\.
 

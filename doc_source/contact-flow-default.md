@@ -10,6 +10,7 @@ If you want to change the behavior of a default contact flow, we recommend you i
 To see the list of default flows in the Amazon Connect console, go to **Routing**, **Contact Flows**\. They all start with **Default** in their name\. 
 
 **Topics**
++ [Change a Default Contact Flow](change-default-contact-flow.md)
 + [Default Agent Hold](default-agent-hold.md)
 + [Default Agent Transfer](default-agent-transfer.md)
 + [Default Customer Queue](default-customer-queue.md)
@@ -18,3 +19,4 @@ To see the list of default flows in the Amazon Connect console, go to **Routing*
 + [Default Customer Hold](default-customer-hold.md)
 + [Default Outbound](default-outbound.md)
 + [Default Queue Transfer](default-queue-transfer.md)
++ [Default Prompts from Amazon Lex](default-prompts-from-lex.md)

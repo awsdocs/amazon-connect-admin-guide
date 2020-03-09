@@ -13,5 +13,5 @@ A *contact flow* defines the customer experience with your contact center from s
 + [Set Up Queued Callback](setup-queued-callback.md)
 + [Initiate an Outbound Call](using-call-number-block.md)
 + [Import/Export Contact Flows](contact-flow-import-export.md)
-+ [Contact Block Definitions](contact-blocks.md)
++ [Contact Block Definitions](contact-block-definitions.md)
 + [Use Contact Attributes](connect-contact-attributes.md)

@@ -16,11 +16,11 @@ In this step you'll create a custom bot to demonstrate the Press or Say integrat
 
 1. If you are creating your first bot, choose **Get Started**\. Otherwise, choose **Bots, Create**\.
 
-1. On the **Create your Lex bot** page, choose **Custom bot** and provide the following information:
-   + **Bot name **– For this walkthrough, name the bot **AccountBalance**\.
-   + **Output voice**– Select the voice for your bot to use when speaking to callers\. The default voice for Amazon Connect is Joana\.
-   + **Session timeout**– Choose how long the bot should wait to get input from a caller before ending the session\.
-   + **COPPA**– Choose whether the bot is subject to the Child Online Privacy Protection Act\.
+1. On the **Create your bot** page, choose **Custom bot** and provide the following information:
+   + **Bot name **— For this walkthrough, name the bot **AccountBalance**\.
+   + **Output voice**— Select the voice for your bot to use when speaking to callers\. The default voice for Amazon Connect is Joanna\.
+   + **Session timeout**— Choose how long the bot should wait to get input from a caller before ending the session\.
+   + **COPPA**— Choose whether the bot is subject to the Child Online Privacy Protection Act\.
 
 1. Choose **Create**\.
 

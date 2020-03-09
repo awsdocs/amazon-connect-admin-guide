@@ -5,3 +5,5 @@ This contact flow plays for the agent immediately before the call is connected w
 The name of the queue is played to the agent\. It identifies for the agent the queue that the customer was in\. The name of the queue is retrieved from the system variable `$.Queue.Name`\. 
 
 For more information about system variables, see [Contact Flow System Attributes](connect-attrib-list.md#attribs-system-table)\.
+
+For instructions about how to override and change a default contact flow, see [Change a Default Contact Flow](change-default-contact-flow.md)\.

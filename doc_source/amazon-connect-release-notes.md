@@ -8,10 +8,10 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [December 2019 Update](#dec19-release-notes)
 + [November 2019 Update](#nov19-release-notes)
 + [October 2019 Update](#oct19-release-notes)
-+ [June 2019 Update](#w49aac57c17)
-+ [May 2019 Updates](#w49aac57c19)
-+ [April 2019 Updates](#w49aac57c21)
-+ [March 2019 Update](#w49aac57c23)
++ [June 2019 Update](#w50aac60c17)
++ [May 2019 Updates](#w50aac60c19)
++ [April 2019 Updates](#w50aac60c21)
++ [March 2019 Update](#w50aac60c23)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -28,13 +28,22 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 The following update was released in February 2020:
 
 ### Service Quotas<a name="feb20-networking"></a>
-+ Adjusted [](amazon-connect-service-limits.md) for new accounts\.
++ Adjusted [Amazon Connect Service Quotas](amazon-connect-service-limits.md) for new accounts\.
+
+### Contact Flows<a name="feb20-contact-flows"></a>
+
+Updated the following blocks so you can set contact attributes:
++ [Set Customer Queue Flow](set-customer-queue-flow.md)
++ [Set Hold Flow](set-hold-flow.md) 
++ [Set Whisper Flow](set-whisper-flow.md) 
 
 ## January 2020 Update<a name="jan20-release-notes"></a>
 
 The following updates were released in January 2020:
 
 ### Contact Control Panel \(CCP\)<a name="jan20-ccp"></a>
+
+The following updates were made to the updated Contact Control Panel \(ccp\-v2\):
 + Agents can now transfer a contact by double\-clicking a quick connect\. For more information, see [Initiate a Quick Connect Transfer](transfers.md#transfers-quick)\.
 + The number pad now retains the previously selected country flag so agents don't need to select it every time\.
 + All strings in the CCP user interface are now localized in available languages\.
@@ -96,14 +105,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-## June 2019 Update<a name="w49aac57c17"></a>
+## June 2019 Update<a name="w50aac60c17"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w49aac57c19"></a>
+## May 2019 Updates<a name="w50aac60c19"></a>
 
 The following updates were released in May 2019:
 
@@ -115,7 +124,7 @@ The following updates were released in May 2019:
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w49aac57c21"></a>
+## April 2019 Updates<a name="w50aac60c21"></a>
 
 The following updates were released in April 2019:
 
@@ -128,7 +137,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w49aac57c23"></a>
+## March 2019 Update<a name="w50aac60c23"></a>
 
 The following updates were released in March 2019:
 

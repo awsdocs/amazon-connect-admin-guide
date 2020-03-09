@@ -42,7 +42,7 @@ To update the instance settings, open the Amazon Connect console, choose the nam
 
 1. In the navigation pane, choose **Contact flows**\.
 
-1. \(Optional\) To add a signing key for use in contact flows, choose **Add key**\. For more information, see [Encrypt Customer Input](contact-flow-keys.md)\.
+1. \(Optional\) To add a signing key for use in contact flows, choose **Add key**\. For more information, see [Encrypt Customer Input](encrypt-data.md)\.
 
 1. \(Optional\) To integrate with Amazon Lex, select a Lex bot\. For more information, see [Add an Amazon Lex Bot](amazon-lex.md)\.
 

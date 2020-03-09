@@ -9,3 +9,5 @@ This contact flow is an outbound whisper that manages what the customer experien
 1. The flow ends\.
 
 1. The customer remains in the system \(on the call\) after the flows ends\. 
+
+For instructions about how to override and change a default contact flow, see [Change a Default Contact Flow](change-default-contact-flow.md)\.

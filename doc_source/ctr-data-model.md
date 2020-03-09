@@ -192,7 +192,7 @@ Type: [RecordingInfo](#ctr-RecordingInfo)
 
 **Recordings**  
 If recording was enabled, this is information about the recording\.  
-Type: [RecordingInfo](#ctr-RecordingInfo)  
+Type: [RecordingsInfo](#ctr-RecordingsInfo)  
 The first recording for a contact will appear in both the Recording and Recordings sections of the CTR\.
 
 **SystemEndpoint**  
@@ -222,11 +222,11 @@ Valid values: `TELEPHONE_NUMBER`
 
 ## MediaStream<a name="MediaStream"></a>
 
-Information about the media stream used on the contact\.
+Information about the media stream used during the contact\.
 
 **Type**  
 Type: MediaStreamType  
-Valid value: AUDIO
+Valid value: AUDIO, VIDEO, CHAT
 
 ## QueueInfo<a name="ctr-QueueInfo"></a>
 
@@ -256,7 +256,7 @@ Length: 1\-256
 
 ## RecordingInfo<a name="ctr-RecordingInfo"></a>
 
-Information about a recording\.
+Information about a voice recording\.
 
 **DeletionReason**  
 If the recording was deleted, this is the reason entered for the deletion\.  
@@ -274,6 +274,53 @@ Valid values: `AVAILABLE` \| `DELETED` \| `NULL`
 **Type**  
 The recording type\.  
 Valid values: `AUDIO` 
+
+## RecordingsInfo<a name="ctr-RecordingsInfo"></a>
+
+Information about a voice recording or chat transcript\.
+
+**DeletionReason**  
+If the recording/transcript was deleted, this is the reason entered for the deletion\.  
+Type: String
+
+**FragmentStartNumber**  
+The number that identifies the Kinesis Video Streams fragment where the customer audio stream started\.  
+Type: String
+
+**FragmentStopNumber**  
+The number that identifies the Kinesis Video Streams fragment where the customer audio stream stopped\.  
+Type: String
+
+**Location**  
+The location, in Amazon S3, for the recording/transcript\.  
+Type: String  
+Length: 0\-256
+
+**MediaStreamType**  
+Information about the media stream used during the conversation\.   
+Type: String  
+Valid values: AUDIO
+
+**ParticipantType**  
+Information about the conversation participant: whether they are an agent or contact\.  
+Type: String
+
+**StartTimestamp**  
+When the conversation started\.  
+Type: String *\(yyyy\-mm\-ddThh:mm:ssZ\)*
+
+**Status**  
+The status of the recording/transcript\.  
+Valid values: `AVAILABLE` \| `DELETED` \| `NULL` 
+
+**StopTimestamp**  
+When the conversation stopped\.  
+Type: String *\(yyyy\-mm\-ddThh:mm:ssZ\)*
+
+**StorageType**  
+Where the recording/transcript is stored\.  
+Type: String  
+Valid values: Amazon S3`` 
 
 ## RoutingProfile<a name="ctr-RoutingProfile"></a>
 

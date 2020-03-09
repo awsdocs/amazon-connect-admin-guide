@@ -4,3 +4,5 @@ This default transfer flow is the what the agent experiences when transferring a
 
 **Tip**  
 The **Transfer to Agent** block is a beta feature and only works for voice interactions\. To transfer a chat contact to another agent, follow these instructions: [Use Contact Attributes to Route Contacts to a Specific Agent](transfer-to-agent.md#use-attribs-agent-queue)\.
+
+For instructions about how to override and change a default contact flow, see [Change a Default Contact Flow](change-default-contact-flow.md)\.

@@ -2,7 +2,7 @@
 
 Type: Queue transfer
 
-This contact flow shows you how to allow customers to input sensitive data while putting the agent on hold\. In a production environment, we recommend [using encryption](contact-flow-keys.md) instead of this solution\. 
+This contact flow shows you how to allow customers to input sensitive data while putting the agent on hold\. In a production environment, we recommend [using encryption](encrypt-data.md) instead of this solution\. 
 
 Here's how it works: 
 

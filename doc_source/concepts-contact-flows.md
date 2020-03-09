@@ -16,6 +16,8 @@ For example, say you create a contact flow that includes putting the customer on
 
 To see the list of default flows in the Amazon Connect console, go to **Routing**, **Contact Flows**\. They all start with **Default** in their name\. 
 
+For a list of all the default contact flows and what they do, see [Default Contact Flows](contact-flow-default.md)\.
+
 ## Contact Flow Designer<a name="concepts-visual-editor"></a>
 
 To customize your contact center, you use the contact flow designer\. It's a drag\-and\-drop interface that allows you to customize your contact center without any coding\.
@@ -35,7 +37,7 @@ The above contact flow uses five blocks:
 
 In the above example, what happens when the customer is transferred to queue, but no agents are available to take their call? The **Default customer queue** flow is triggered\. It plays music while the contact is waiting in queue\. 
 
-For a list of the available contact blocks and descriptions about what they do, see [Contact Block Definitions](contact-blocks.md)\. 
+For a list of the available contact blocks and descriptions about what they do, see [Contact Block Definitions](contact-block-definitions.md)\. 
 
 ### Sample Contact Flows<a name="concepts-sample-flows"></a>
 
