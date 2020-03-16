@@ -11,3 +11,4 @@ If you want to keep a phone number you already have, you can port the phone numb
 + [Release a Phone Number](release-phone-number.md)
 + [Port Your Current Phone Number](port-phone-number.md)
 + [Claim Phone Numbers for Asia Pacific \(Tokyo\)](connect-tokyo-region.md)
++ [Region Requirements for Phone Numbers](phone-number-requirements.md)

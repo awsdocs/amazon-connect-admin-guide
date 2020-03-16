@@ -35,7 +35,7 @@ For more information, see:
 
 ## Analytics<a name="analytics-services"></a>
 
-Amazon Connect tracks all interactions using [contact trace records \(CTRs\)](about-contact-states.md#ctr-events)\. CRTs are used for real\-time and historical metrics reports\. You can also use Amazon Kinesis to stream them to an AWS database like Amazon Redshift or Amazon Athena for BI analysis \(Amazon QuickSight, or a third party such as Tableau\)\. There are AWS CloudFormation templates available to set up this functionality for Amazon Redshift and Athena\. 
+Amazon Connect tracks all interactions using [contact trace records \(CTRs\)](about-contact-states.md#ctr-events)\. CTRs are used for real\-time and historical metrics reports\. You can also use Amazon Kinesis to stream them to an AWS database like Amazon Redshift or Amazon Athena for BI analysis \(Amazon QuickSight, or a third party such as Tableau\)\. There are AWS CloudFormation templates available to set up this functionality for Amazon Redshift and Athena\. 
 
 For more information, see:
 + [How to Access Kinesis Video Streams Data](access-media-stream-data.md)
@@ -71,4 +71,6 @@ Amazon Connect uses the following services for added security:
 Amazon Connect uses the following services for monitoring usage: 
 + Amazon CloudWatch—Collects logs, service metrics, performance metrics for Amazon Connect\. For more information, see [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md)\. 
 + AWS CloudFormation—Amazon Connect does not support this directly for creating instances\. However, it does support AWS CloudFormation templates for associated services, like integrations, database export, and so on\.
-+ AWS CloudTrail—Provides a record of Amazon Connect API calls\. This is especially useful for tracking who accessed recorded conversations\. For more information, see [Logging Amazon Connect API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
++ AWS CloudTrail—Provides a record of Amazon Connect API calls\. This is especially useful for [tracking who accessed recorded conversations](track-who-deleted-recordings.md)\.
+
+  For more information about Amazon Connect and AWS CloudTrail, see [Logging Amazon Connect API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\.

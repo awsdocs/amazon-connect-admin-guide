@@ -25,7 +25,7 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 
 ## February 2020 Update<a name="feb20-release-notes"></a>
 
-The following update was released in February 2020:
+The following updates were released in February 2020:
 
 ### Service Quotas<a name="feb20-networking"></a>
 + Adjusted [Amazon Connect Service Quotas](amazon-connect-service-limits.md) for new accounts\.

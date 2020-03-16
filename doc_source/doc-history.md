@@ -2,6 +2,7 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added topic on region requirements for phone numbers](#doc-history) | For more information, see [Region Requirements for Phone Numbers](phone-number-requirements.md)\.  | March 11, 2020 | 
 | [Added tutorials](#doc-history) | For more information, see [Tutorials: An Introduction to Amazon Connect](tutorials.md)\.  | March 6, 2020 | 
 | [Added topic tracking who deleted recordings](#doc-history) | For more information, see [Track Who Deleted or Listened to Recordings](track-who-deleted-recordings.md)\.  | March 5, 2020 | 
 | [Added topic on emergency admin access](#doc-history) | For more information, see [Emergency Admin Login](emergency-admin-login.md)\.  | March 2, 2020 | 
@@ -28,6 +29,7 @@
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Added topic on region requirements for phone numbers |  For more information, see [Region Requirements for Phone Numbers](phone-number-requirements.md)\.   | March 11, 2020 | 
 | Added tutorials |  For more information, see [Tutorials: An Introduction to Amazon Connect](tutorials.md)\.   | March 6, 2020 | 
 | Added topic on tracking who deleted recordings |  For more information, see [Track Who Deleted or Listened to Recordings](track-who-deleted-recordings.md)\.   | March 5, 2020 | 
 | Added topic on emergency admin access |  For more information, see [Emergency Admin Login](emergency-admin-login.md)\.   | March 3, 2020 | 

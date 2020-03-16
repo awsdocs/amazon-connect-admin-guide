@@ -64,6 +64,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Release a Phone Number](release-phone-number.md)
       + [Port Your Current Phone Number](port-phone-number.md)
       + [Claim Phone Numbers for Amazon Connect in the Asia Pacific (Tokyo) Region](connect-tokyo-region.md)
+      + [Region Requirements for Phone Numbers](phone-number-requirements.md)
    + [Set Up Routing](connect-queues.md)
       + [How Routing Works](about-routing.md)
       + [Create a Queue](create-queue.md)

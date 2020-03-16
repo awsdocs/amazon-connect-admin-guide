@@ -2,7 +2,9 @@
 
 You can encrypt sensitive data that is collected by contact flows\. To do this, you need to use public\-key cryptography\. Here's how this works: 
 
-In a contact flow that collects data, you provide an X\.509 certificate to encrypt data that's captured using the **Stored customer input** system attribute\. You must upload a signing key in `.pem` format to use this feature\. The signing key is used to verify the signature of the certificate used within the contact flow\. 
+Amazon Connect requires an X\.509 certificate that is signed using the same private key that will decrypt data\.
+
+In a contact flow that collects data, you provide an X\.509 certificate to encrypt data that's captured using the **Stored customer input** system attribute\. You must upload the key in `.pem` format to use this feature\. The encryption key is used to verify the signature of the certificate used within the contact flow\. 
 
 **Note**  
 You can have up to two signing keys active at one time to facilitate rotation\.
