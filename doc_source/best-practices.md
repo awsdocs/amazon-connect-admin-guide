@@ -28,7 +28,7 @@ This list of best practices can help you get the maximum benefit from Amazon Con
 + Ensure that all profile permissions are as restrictive as possible\. Allow access to only those resources absolutely required for the user's role\. For example, don't give agents permissions to create, read, or update users in Amazon Connect\.
 + Ensure that multi\-factor authentication \(MFA\) is set up through your SAML 2\.0 identity provider, or Radius server, if that's more applicable for your use case\. After MFA is set up, a third text box becomes visible on the Amazon Connect login page to provide the second factor\.
 + If you use an existing directory through AWS Directory Service or SAML\-based authentication for identity management, ensure that you follow all security requirements appropriate for your use case\. 
-+ Use the **Login as administrator** button on the instance page of the AWS console only in emergency scenarios\. For example, use this option if you can't otherwise access the system because no administrator credentials or accounts with administrator permissions are available\. Do not use the administrator login to manage your contact center\.
++ Use the **Log in for emergency access** URL on the instance page of the AWS console only in emergency situations, not for daily use\. For more information, see [Emergency Admin Login](emergency-admin-login.md)\.
 
 ## Lambda<a name="bp-lambda"></a>
 + Amazon Connect limits the duration of a sequence of Lambda functions to 20 seconds\. It times out with an error message when the total execution time exceeds this threshold\. Because customers hear silence while a Lambda function runs, we recommend adding a **Play prompt** block between functions to keep them engaged during the long interaction\. 

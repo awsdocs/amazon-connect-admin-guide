@@ -13,7 +13,7 @@ The following table provides the default quotas for new Amazon Connect accounts 
 |  Agent status per instance  |  50 This quota cannot be increased\.  | 
 |  Amazon Connect instances per account  |  2  | 
 |  Amazon Lex bots per instance  |  50  | 
-|  Concurrent calls per instance  |  10 If this quota is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   | 
+|  Concurrent calls per instance  |  10 If this quota is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   You can calculate your configured quota using CloudWatch metrics\. For instructions, see [Use CloudWatch Metrics to Calculate Concurrent Call Quota](monitoring-cloudwatch.md#connect-cloudwatch-concurrent-call-quota)\.  Or, edit a queue and enter an exceptionally large number for the contact limit\. The resulting error message will display your quota\.  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/concurrent-call-quota.png)   | 
 |  Concurrent chats per instance  |  100 This includes chats that are waiting\. If this quota is exceeded, the API call fails with a quota exceeded error\.  | 
 |  Contact flows per instance  |  100  | 
 |  Hours of operation per instance  |  100  | 

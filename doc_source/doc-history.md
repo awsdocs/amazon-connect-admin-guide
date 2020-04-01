@@ -2,6 +2,9 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Add NLB endpoints and required domain for softphones](#doc-history) | For more information, see [Set Up Your Network](ccp-networking.md)\.  | March 27, 2020 | 
+| [Announced upcoming changes for metrics](#doc-history) | For more information, see [Upcoming Changes for Omnichannel Support](upcoming-changes.md#upcoming-changes-march-2020)\.  | March 23, 2020 | 
+| [Added terminating keypress functionality](#doc-history) | For more information, see [Store Customer Input](store-customer-input.md)\.  | March 21, 2020 | 
 | [Added topic on region requirements for phone numbers](#doc-history) | For more information, see [Region Requirements for Phone Numbers](phone-number-requirements.md)\.  | March 11, 2020 | 
 | [Added tutorials](#doc-history) | For more information, see [Tutorials: An Introduction to Amazon Connect](tutorials.md)\.  | March 6, 2020 | 
 | [Added topic tracking who deleted recordings](#doc-history) | For more information, see [Track Who Deleted or Listened to Recordings](track-who-deleted-recordings.md)\.  | March 5, 2020 | 
@@ -29,6 +32,9 @@
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Added terminating keypress |  For more information, see [Store Customer Input](store-customer-input.md)\.   | March 31, 2020 | 
+| Added NLB endpoints and required domain for softphones |  For more information, see [Set Up Your Network](ccp-networking.md)\.   | March 23, 2020 | 
+| Announced upcoming changes for metrics |  For more information, see [Upcoming Changes for Omnichannel Support](upcoming-changes.md#upcoming-changes-march-2020)\.   | March 23, 2020 | 
 | Added topic on region requirements for phone numbers |  For more information, see [Region Requirements for Phone Numbers](phone-number-requirements.md)\.   | March 11, 2020 | 
 | Added tutorials |  For more information, see [Tutorials: An Introduction to Amazon Connect](tutorials.md)\.   | March 6, 2020 | 
 | Added topic on tracking who deleted recordings |  For more information, see [Track Who Deleted or Listened to Recordings](track-who-deleted-recordings.md)\.   | March 5, 2020 | 

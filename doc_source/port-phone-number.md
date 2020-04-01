@@ -1,6 +1,6 @@
 # Port Your Current Phone Number<a name="port-phone-number"></a>
 
-To continue to use your current United States phone number with Amazon Connect, you can submit a support ticket to port the number to Amazon Connect\. The Amazon Connect team processes your request and assists you with the number porting process\. 
+To continue to use your current United States phone number with Amazon Connect, you can submit a support ticket to port the number to Amazon Connect\. The Amazon Connect team processes your request and assists you with the number porting process\. After a number is ported to Amazon Connect, it automatically appears in the list of available numbers to be assigned to contact flows\.
 
 Porting phone numbers typically takes between two to four weeks after you submit the required information\. The amount of time depends on the complexity of the request and your current carrier\. Porting toll\-free numbers, or requests to port a large quantity of numbers at one time, usually take longer than porting local, direct dial numbers\.
 
@@ -35,6 +35,13 @@ We recommend that you select a phone number from Amazon Connect so you can becom
 1. Expand **Contact options**, and then choose your **Preferred contact language** and **Contact methods**\.
 
 1. Choose **Submit**\.
+
+**Tip**  
+After a phone number is ported to Amazon Connect, it appears in the list of available phone numbers for you to assign to contact flows\. 
+
+## Porting Phone Numbers in Other Countries<a name="porting-numbers-outside-of-usa"></a>
+
+If you are trying to port a number outside of the United States, follow the same steps for porting numbers, however, the timeline to complete may vary\. If porting is not possible at all, AWS support will let you know that it's not available\. 
 
 ## About Porting Phone Numbers<a name="about-porting"></a>
 

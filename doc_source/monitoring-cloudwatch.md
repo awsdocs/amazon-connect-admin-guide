@@ -174,3 +174,12 @@ Filters metric data by queue\. Includes the following metrics:
 + LongestQueueWaitTime
 + QueueCapacityExceededError
 + QueueSize
+
+## Use CloudWatch Metrics to Calculate Concurrent Call Quota<a name="connect-cloudwatch-concurrent-call-quota"></a>
+
+Here's how to calculate your quota for concurrent calls\. 
+
+With calls active in the system, look at **ConcurrentCalls** and **ConcurrentCallsPercentage**\. Calculate the quota: 
++ \(ConcurrentCalls / ConcurrentCallsPercentage\) \* 100
+
+For example, if **ConcurrentCalls** is 20 and **ConcurrentCallsPercentage** is 50, your quota is calculated as \(20/50\)\*100 = 40\.

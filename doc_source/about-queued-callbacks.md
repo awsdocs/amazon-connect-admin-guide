@@ -2,6 +2,9 @@
 
 This topic explains how queued callbacks appear in your real\-time metrics reports and the Contact Trace Record\.
 
+**Tip**  
+To see only the number of customers who are waiting for a call back, you need to create a queue that only takes callback contacts\. To learn how to do this, see [Set Up Routing](connect-queues.md)\. Currently there isn't a way to see the phone numbers of the contacts waiting for callbacks\.
+
 1. Callbacks are initiated when the [Transfer to queue](transfer-to-queue.md) block transfers the initial contact to a callback queue\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/queued-callback-flow-callback-initiation.png)
 
@@ -19,4 +22,4 @@ This topic explains how queued callbacks appear in your real\-time metrics repor
 The [Transfer to queue](transfer-to-queue.md) block has the following properties, which affect how Amazon Connect handles the callback:
 + **Initial delay**: This property affects when a callback is put in queue\. Specify how much time has to pass between a callback contact being initiated in the contact flow, and the customer being put in queue for the next available agent\. For more information, see [How Initial Delay Affects Scheduled and In Queue Metrics](scheduled-vs-inqueue.md)\. 
 + **Maximum amount of attempts**: Think of this as the maximum number of retries\. If this is set to 2, then Amazon Connect tries to call the customer at most three times: the initial callback, and two retries\. 
-+ **Minimum time between attempts**: If the customer doesn't answer the phone, this is how long to wait until trying again\. 
++ **Minimum time between attempts**: If the customer doesn't answer the phone, this is how long to wait before trying again\. 

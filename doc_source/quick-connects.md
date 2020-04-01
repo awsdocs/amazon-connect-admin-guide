@@ -5,6 +5,8 @@ Quick connects are a way for you to create a list of destinations for common tra
 When you create a quick connect, you can specify one of these destinations: 
 + **External**—Contacts are transferred to an external number \(such as an on\-call pager\)\. 
 + **Agent**—Contacts are transferred to a specific agent as part of a contact flow\.
+
+  If you want all of your agents to appear individually in the list of quick connects in the Contact Control Panel \(CCP\), you need to add each one manually\. There's no way to automate this process\.
 + **Queue**—Contacts are transferred to a queue as part of a contact flow\.
 **Important**  
 Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 

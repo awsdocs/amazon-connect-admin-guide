@@ -3,7 +3,8 @@
 When Auto\-Accept Call is enabled for an available agent, the agent connects to contacts automatically\. 
 
 **Tip**  
-When a call arrives to an agent who has Auto\-Accept Call enabled, the Contact Control Panel \(CCP\) briefly shows the options **Accept** or **Reject**\. This is expected behavior\. After a moment, the call is automatically accepted and these options disappear\.
+When a call arrives to an agent who has Auto\-Accept Call enabled, the Contact Control Panel \(CCP\) briefly shows the options **Accept** or **Reject**\. This is expected behavior\. After a moment, the call is automatically accepted and these options disappear\.  
+Auto\-Accept Call doesn't work for callbacks\.
 
 You can't enable Auto\-Accept Call while editing multiple existing users in your Amazon Connect instance\. You must edit existing users individually to enable it\. You can also configure the setting for multiple new users when you bulk upload new users with the CSV template\. 
 

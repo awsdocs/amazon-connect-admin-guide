@@ -12,7 +12,7 @@ The following table lists all available contact blocks that you can use\. Choose
 |  [Check Contact Attributes](check-contact-attributes.md)   |  Checks the values of contact attributes\.  | 
 |   [Check Hours of Operation](check-hours-of-operation.md)  |  Checks whether the contact is occurring within or outside of the hours of operation defined for the queue\.  | 
 |   [Check Queue Status](check-queue-status.md)   |  Checks the status of the queue based on specified conditions\.  | 
-|   [Check Staffing](check-staffing.md)   |  Checks the current working queue, or queue you specify in the block, for whether agents are available, staffed, or online\. Staffed availabillity could be on call, or after contact work status\.  | 
+|   [Check Staffing](check-staffing.md)   |  Checks the current working queue, or queue you specify in the block, for whether agents are available, staffed, or online\. Staffed availability could be on call, or after contact work status\.  | 
 |  [Disconnect / Hang Up](disconnect-hang-up.md)  |  Terminates a customer contact\.  | 
 |   [Distribute by Percentage](distribute-by-percentage.md)   |  Routes customers randomly based on a percentage\.  | 
 |   [End Flow / Resume](end-flow-resume.md)   |  Ends the current flow without disconnecting the contact\.  | 

@@ -2,6 +2,8 @@
 
 If an agent doesn't accept an offered callback, it doesn't count as an failed callback attempt\. Rather, the routing engine offers the callback to the next available agent, until an agent accepts\. 
 
+A failed callback attempt would be along the lines of: an agent accepts a callback but then something goes wrong between then and the agent being joined to the customer\.
+
 The contact is considered to be in the callback queue until an agent accepts the offered callback contact\.
 
 Amazon Connect removes the callback from the queue when it's connected to the agent\. At that time, Amazon Connect starts dialing the customer\. The following image shows what this looks like in a CTR:

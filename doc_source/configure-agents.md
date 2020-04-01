@@ -5,11 +5,11 @@ Before you configure your agent settings, here is some info to have on hand\. Of
 + Will they have the **Agent** security profile or a custom profile you created? 
 + Are they going to use a soft phone? If so, will they be connected to contacts automatically, or will they need to press the **Accept** button in their contact control panel \(CCP\)?
 + Or, are they going to use a desk phone? If so, what is their number?
-+  How long do they have for After contact work \(ACW\)?
++ How many seconds do they have for After contact work \(ACW\)?
 + Are they going to be assigned to an agent hierarchy?
 
 **Note**  
-You can't configure how long an available agent has to connect with a contact before it's missed\. 
+You can't configure how long an available agent has to connect with a contact before it's missed\. Agents have 20 seconds to accept or reject a contact\. If no action is taken, the contact is routed to the next available agent and the current agent's status will be **Missed**\.
 
 **To configure agent settings**
 
@@ -25,6 +25,7 @@ You can't configure how long an available agent has to connect with a contact be
    + If you select desk phone, enter their phone number\.
    + If you select soft phone, choose **Auto\-Accept Contact** if you want agents to be connected to calls automatically\. This doesn't apply to chats\. 
 
-1. In **After contact work \(ACW\) timeout**, type how long in seconds agents have for after contact work, such as entering notes about the contact\.
+1. In **After contact work \(ACW\) timeout**, type how many seconds agents have for after contact work, such as entering notes about the contact\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/acw-timeout.png)
 
 1. Under **Agent Hierarchy** select any groups the agent should be part of\.

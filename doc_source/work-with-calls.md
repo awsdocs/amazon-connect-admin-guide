@@ -9,5 +9,5 @@
 
 1. You're now talking to the contact\. 
 
-1. If you miss a call, it will look similar to the following image\. Choose **Clear contact** so you can accept another call\.   
+1. You have 20 seconds to accept or reject a contact\. If you miss a call, it will look similar to the following image\. Choose **Clear contact** so you can accept another call\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/missed-call-banner.png)

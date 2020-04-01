@@ -14,11 +14,6 @@ This first option lets you significantly reduce your blast radius\.
 
 We recommend trying Option 1 and testing it with more than 200 calls\. Test for softphone errors, dropped calls, and conference/transfer functionality\. If your error rate is greater than 2 percent, there might be an issue with proxy resolution\. If that's the case, consider using Option 2\. 
 
-
-| IP\-Ranges entry | AWS Region | Ports/Protocols | Direction | Traffic | 
-| --- | --- | --- | --- | --- | 
-| AMAZON\_CONNECT | GLOBAL and Region where your Amazon Connect instance is located  \(GLOBAL only if a region\-specific entry doesn't exist\)  | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
-
 **Tip**  
 If you don't see an entry for your region, use GLOBAL\. For example, there isn't an entry for ap\-southeast\-1, so you would use GLOBAL\.
 
@@ -30,8 +25,9 @@ To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as
 | rtc\.connect\-telecom\.\{region\}\.amazonaws\.com Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \{myInstanceName\}\.awsapps\.com/connect/ccp \{myInstanceName\}\.awsapps\.com/connect/api\*\.cloudfront\.net  | Replace \{myInstanceName\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \*\.execute\-api\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| participant\.connect\.\{region\}\. amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \*\.transport\.connect\.\{region\}\. amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| participant\.connect\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \*\.transport\.connect\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com To instead add specific endpoints to your allow list based on Region, see [NLB Endpoints](#nlb-endpoints)\.   | Replace \{region\} with the location of your Amazon Connect instance | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
 
 **Note**  
 The new region telecom endpoints follow a different format\. Here's a complete list of telecom endpoints:  
@@ -50,6 +46,35 @@ The new region telecom endpoints follow a different format\. Here's a complete l
 **Tip**  
 When using `rtc.connect-telecom.{region}.amazonaws.com` and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
 
+The following table lists the CloudFront domains used for static assets if you want to add domains to your allow list instead of IP ranges:
+
+
+| Region | CloudFront Domain | 
+| --- | --- | 
+| us\-west\-2  | https://d38fzyjx9jg8fj\.cloudfront\.net/  https://d366s8lxuwna4d\.cloudfront\.net/  | 
+| us\-east\-1  | https://dd401jc05x2yk\.cloudfront\.net/  https://d1f0uslncy85vb\.cloudfront\.net/  | 
+| eu\-central\-1  | https://d1n9s7btyr4f0n\.cloudfront\.net/  https://d3tqoc05lsydd3\.cloudfront\.net/  | 
+| ap\-southeast\-2  | https://d2190hliw27bb8\.cloudfront\.net/  https://d3mgrlqzmisce5\.cloudfront\.net/  | 
+| ap\-northeast\-1  | https://d3h58onr8hrozw\.cloudfront\.net/  https://d13ljas036gz6c\.cloudfront\.net/  | 
+| ap\-south\-1  | https://d30zes7xe5707g\.cloudfront\.net/  https://dhpg19j09qxx0\.cloudfront\.net/  | 
+| eu\-west\-2  | https://dl32tyuy2mmv6\.cloudfront\.net/  https://d2p8ibh10q5exz\.cloudfront\.net/  | 
+| ap\-southeast\-1  | https://d2g7up6vqvaq2o\.cloudfront\.net/  https://d12o1dl1h4w0xc\.cloudfront\.net/  | 
+
+### NLB Endpoints<a name="nlb-endpoints"></a>
+
+The following table lists the specific endpoints for the Region the Amazon Connect instance is in\. If you don't want to use the TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com wildcard, you can use add these endpoints to your allow list instead\.
+
+
+| Region | Turn Domain/URL | 
+| --- | --- | 
+| us\-west\-2  | TurnNlb\-8d79b4466d82ad0e\.elb\.us\-west\-2\.amazonaws\.com | 
+| us\-east\-1  | TurnNlb\-d76454ac48d20c1e\.elb\.us\-east\-1\.amazonaws\.com | 
+| eu\-central\-1  | TurnNlb\-ea5316ebe2759cbc\.elb\.eu\-central\-1\.amazonaws\.com | 
+| ap\-southeast\-2  | TurnNlb\-93f2de0c97c4316b\.elb\.ap\-southeast\-2\.amazonaws\.com | 
+| ap\-northeast\-1  | TurnNlb\-3c6ddabcbeb821d8\.elb\.ap\-northeast\-1\.amazonaws\.com | 
+| eu\-west\-2  | TurnNlb\-1dc64a459ead57ea\.elb\.eu\-west\-2\.amazonaws\.com | 
+| ap\-southeast\-1  | TurnNlb\-261982506d86d300\.elb\.ap\-southeast\-1\.amazonaws\.com | 
+
 ## Option 2 \(Not Recommended\): Allow IP Address Ranges<a name="option2"></a>
 
 The second option relies on using an allow list, also known as whitelisting, the IP addresses used by Amazon Connect\. You create this allow list using the IP addresses in the [AWS ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file\. 
@@ -66,7 +91,7 @@ For more information about this file, see [About Amazon Connect IP Address Range
 **Tip**  
 If you don't see an entry for your region, use GLOBAL\. For example, there isn't an entry for ap\-southeast\-1, so you would use GLOBAL\.
 
-\*CloudFront serves static content from an edge location that has the lowest latency in relation to where your agents are located\. IP range allow lists for CloudFront are global and require all IP ranges associated with **"service": "CLOUDFRONT"** in the ip\-ranges\.json file\. 
+\*CloudFront serves static content such as images or javascript from an edge location that has the lowest latency in relation to where your agents are located\. IP range allow lists for CloudFront are global and require all IP ranges associated with **"service": "CLOUDFRONT"** in the ip\-ranges\.json file\. 
 
 ## About Amazon Connect IP Address Ranges<a name="about-connect-ip-address-range"></a>
 
@@ -103,6 +128,13 @@ If you're using a stateless firewall for both options, use the requirements desc
 | IP\-Range entry | Port | Direction | Traffic | 
 | --- | --- | --- | --- | 
 | AMAZON\_CONNECT | 49152\-65535 \(UDP\) | INBOUND | SEND/RECEIVE | 
+
+## Allow DNS Resolution for Softphones<a name="allow-dns-resolution"></a>
+
+If your agents are using softphones, you must also allow **TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com**\. 
+
+If you don't allow this domain, your agents will get the following error in their Contact Control Panel \(CCP\) when they try to answer a call: 
++ Failed to establish softphone connection\. Try again or contact your administrator with the following: Browser unable to establish media channel with turn:TurnNlb\-xxxxxxxxxxxxx\.elb\.\{region\}\.amazonaws\.com:3478?transport=udp
 
 ## Port and Protocol Considerations<a name="port-considerations"></a>
 

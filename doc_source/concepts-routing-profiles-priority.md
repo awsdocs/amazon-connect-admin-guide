@@ -20,7 +20,7 @@ Say you set Support to Priority 1 and Delay of 30 seconds, as shown in the follo
 |  Sales  |  1  |  0  | 
 |  Support  |  1  |  30  | 
 
-These agents will always get sales contacts first, but if a support contact ages past 30 seconds, they will also be presented with the support contact because they are the same priority\. 
+These agents will always get sales contacts first, but if a sales contact ages past 30 seconds, they will also be presented with the support contact because they are the same priority\. 
 
 Here's a more complicated example for a Support routing profile:
 

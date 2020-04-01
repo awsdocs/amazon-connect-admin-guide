@@ -20,7 +20,7 @@ When a chat contact arrives, here's how you are notified:
 1. If you're on the voice tab, a banner displays the name of the contact and a button for you to connect to the chat\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chat-incoming-banner.png)
 
-1. If you're on a chat, and another comes in but you don't accept it, a tab appears indicating the chat was missed\.   
+1. You have 20 seconds to accept or reject a contact\. If you're on a chat, and another comes in but you don't accept it, a tab appears indicating the chat was missed\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/missed-chat-tab.png)
 
 1. Choose **Accept chat** to connect to the contact\. 

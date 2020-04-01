@@ -41,6 +41,9 @@ These permissions enable managers to monitor live conversations and access recor
 
 ## Monitor Live Conversations with Contacts<a name="w50aac43b7c11"></a>
 
+**Tip**  
+Call barge\-in is not currently supported\. That is, if you're listening to a conversation, your microphone stays muted\.
+
 1. Log in to your Amazon Connect instance with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Manager monitor** permission\.
 
 1. Open the Contact Control Panel \(CCP\) by choosing the phone icon in the top\-right corner of your screen\. You'll need the CCP open to connect to the conversation\. 
@@ -58,6 +61,3 @@ These permissions enable managers to monitor live conversations and access recor
 1. To stop monitoring the conversation, in the CCP choose **End call** or **End chat**\.
 
    When the agent ends the conversation, monitoring stops automatically\.
-
-**Tip**  
-Call barge in is not currently supported\.

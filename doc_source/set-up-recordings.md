@@ -1,6 +1,6 @@
 # Set Up Recording Behavior<a name="set-up-recordings"></a>
 
-Managers can monitor live conversations, and review and download recordings of past agent conversations\. To set this up, you need to add the [](set-recording-behavior.md) block to your contact flows, assign managers the appropriate permissions, and show them how to monitor live conversations and access past recordings in Amazon Connect\.
+Managers can monitor live conversations, and review and download recordings of past agent conversations\. To set this up, you need to add the [Set Recording Behavior](set-recording-behavior.md) block to your contact flows, assign managers the appropriate permissions, and show them how to monitor live conversations and access past recordings in Amazon Connect\.
 
 A conversation is recorded only when the contact is connected to an agent\. The contact is not recorded before then, when they are connected to the flow\. 
 
@@ -11,7 +11,9 @@ Agents and contacts are stored on separate, stereo audio channels\.
 + The agent audio is stored in the right channel\. 
 + All incoming audio, including the customer and anyone conferenced in, is stored in the left channel\. 
 
-Recordings are stored in the Amazon S3 bucket that you [specify for your instance](update-instance-settings.md)\. This allows access by any user or application with the appropriate permissions\. Encryption is enabled by default for all call recordings using Amazon S3 server\-side encryption with KMS\. You shouldn't disable encryption\.
+Recordings are stored in the Amazon S3 bucket that you [specify for your instance](update-instance-settings.md)\. This allows access by any user or application with the appropriate permissions\. Encryption is enabled by default for all call recordings using Amazon S3 server\-side encryption with KMS\. The encryption is at the object level\. The reports and recording objects are encrypted; there's no encryption at the bucket level\.
+
+You shouldn't disable encryption\.
 
 **Important**  
 For voice conversations to be stored in an Amazon S3 bucket, you need to enable recording in the contact flow block using the **Set recording behavior** block\.

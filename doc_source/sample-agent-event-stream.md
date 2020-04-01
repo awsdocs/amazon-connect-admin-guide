@@ -1,6 +1,6 @@
 # Sample Agent Event Stream<a name="sample-agent-event-stream"></a>
 
-In the following agent event stream, the agent is assigned to a routing profile that requires them to take both chats and calls\. They can take one call, and up to three chat at a time\. 
+In the following agent event stream, the agent is assigned to a routing profile that requires them to take both chats and calls\. They can take one call, and up to three chats at a time\. 
 
 ```
             
@@ -25,6 +25,7 @@ In the following agent event stream, the agent is assigned to a routing profile 
                                             //They aren't on any chats right now.
                         "Channel": "CHAT",
                         "MaximumSlots": 3  //The agent's routing profile allows them to take up to 3 chats.
+                    },
                     {
                         "AvailableSlots": 1, //The agent has 1 slot available to take a call.
                         "Channel": "VOICE",

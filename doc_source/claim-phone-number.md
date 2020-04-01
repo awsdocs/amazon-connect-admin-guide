@@ -21,7 +21,9 @@ We'll try to accommodate your request\.
 
 1. Repeat this process until you have claimed all your required phone numbers\.
 
-There is a service quota of 10 phone numbers per Amazon Connect instance\. If you reach your quota, but want a different phone number, you can release one of previously claimed numbers\. You cannot claim the same phone number after releasing it\. If you need more than 10 phone numbers, you can request a service quota increase using the [Amazon Connect service quota increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\.
+There is a service quota for how many phone numbers you can have in each instance\. For the default service quota, see [Amazon Connect Service Quotas](amazon-connect-service-limits.md)\. If you reach your quota, but want a different phone number, you can release one of previously claimed numbers\. You cannot claim the same phone number after releasing it\. 
+
+If you need more phone numbers, you can request a service quota increase using the [Amazon Connect service quota increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\.
 
 ## Claim a Phone Number in Another Country<a name="another-country"></a>
 

@@ -2,9 +2,78 @@
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you a overview of the improvements\. 
 
-## Real\-Time Metrics: Name Changes for "Missed" and "Agent Status" and "On Call"<a name="upcoming-changes-names"></a>
+## Upcoming Changes for Omnichannel Support<a name="upcoming-changes-march-2020"></a>
 
-The following metrics were renamed:
+### Group by Channel<a name="upcoming-changes-march-2020-channel"></a>
+
+**To group queues or routing profiles by channel on real\-time metrics reports**
+
+1. On the navigation menu, choose **Metrics and quality**, **Real\-time metrics**, and then select either **Queues** or **Routing profiles**\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-queues-or-routing-profiles.png)
+
+1. Choose **Settings**\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-settings.png)
+
+1. On the **Table Settings** page, choose the **Groupings** tab and then select **Queues grouped by channels**\. Or, if you're setting up a **Routing profiles** report, choose **Routing profiles grouped by channels**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-group-by-channel.png)
+
+1. Choose **Apply**\.
+
+1. The table will show a column for **Channel**\.
+
+**To group by channel on historical metrics reports**
+
+1. On the navigation menu, choose **Metrics and quality**, **Historical metrics**, and then choose a report\. 
+
+1. Choose **Settings**\. 
+
+1. On the **Table Settings** page, choose the **Groupings** tab\. Add **Channel**, and choose **Apply**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-grouping-channel.png)
+
+1. The table will show a column for **Channel**, as shown in the following image\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-channel-label.png)
+
+### Group by Queue in Historical Metrics Reports<a name="upcoming-changes-march-2020-queue-grouping"></a>
+
+In the historical metrics report, when you group or filter metrics by **Queue**, the results for the following metrics aren't accurate: 
++ Agent idle time
++ Agent on contact time
++ Occupancy
+
+Because of this, on the **Table Settings** page, **Metrics** tab, these metrics will be inactive, as shown in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-inactive-metrics.png)
+
+In addition, in the historical metrics report, Amazon Connect will display a hyphen \(\-\) in place of results for these metrics, and the cells are inactive \(gray\)\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-null-metrics.png)
+
+### Effect of Queue Grouping on Saved and Scheduled Reports<a name="upcoming-changes-march-2020-saved-scheduled-reports"></a>
+
+If the **Queue** grouping or filter is used on the following reports, note these effects: 
++ **Saved reports**\. The columns for these metrics won't appear in the saved reports\.
++ **Scheduled reports**\. These reports will continue to run successfully, but no results will be returned for these metrics\. 
+
+### Agent On Contact Time<a name="upcoming-changes-march-2020-agent-on-contact-time"></a>
+
+On historical metrics reports when an agent handles multiple chats concurrently, **Agent on contact time** will show wall clock time: the amount of time spent chatting\. However, there isn't a metric that shows the time an agent spends chatting with each contact\.
+
+In addition, no results will be returned when you use the **Queue** grouping or filter with **Agent On Contact Time**\.
+
+### Agent Idle Time<a name="upcoming-changes-march-2020-agent-idle-time"></a>
+
+The **Agent idle time** metric divides the idle time into each queue associated with the agent\. When contacts are grouped or filtered by **Queue**, however, Amazon Connect won't provide an accurate view into the how the agent is working\. Because of this, Amazon Connect won't show **Agent idle time** when you apply the **Queue** grouping or filter to your report\. 
+
+### Occupancy<a name="upcoming-changes-march-2020-occupancy"></a>
+
+With the addition of chat, the **Occupancy** metric is now defined as the percentage of time that an agent was active on contacts\. This percentage is calculated as follows:
++ \(Agent on contact \(wall clock time\) / \(Agent on contact \(wall clock time\) \+ Agent idle time\)\) 
+
+Because **Agent idle time** is now inaccurate when contacts are grouped or filtered by **Queues**, the **Occupancy** metric is also inaccurate\. As a result, when contacts are grouped or filtered by Queues, **Occupancy** won't appear on the report\.
+
+## November 2019: Name Changes for "Missed" and "Agent Status" and "On Call"<a name="upcoming-changes-names"></a>
+
+The following real\-time metrics were renamed:
 
 
 | Old Name | New Name | 
