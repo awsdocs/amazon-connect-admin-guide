@@ -23,7 +23,7 @@ The following contact flow types are available\.
 
 | Type | When to use | 
 | --- | --- | 
-|  **Contact flow**  |  This is the generic contact flow type that's created when you choose the **Create contact flow** button, and don't select a type using the drop\-down arrow\. It creates an inbound contact flow\.  This contact follow works with voice and chat\.   | 
+|  **Contact flow**  |  This is the generic contact flow type that's created when you choose the **Create contact flow** button, and don't select a type using the drop\-down arrow\. It creates an inbound contact flow\.  This contact flow works with voice and chat\.   | 
 |  **Customer queue flow**  |  Use to manage what the customer experiences while in queue, before being joined to an agent\. Customer queue flows are interruptible and can include actions such as an audio clip apologizing for a delay and offering an option to receive a callback, leveraging the **Transfer to queue** block\. This contact follow works with voice and chat\.   | 
 |  **Customer hold flow**  |  Use to manage what the customer experiences while the customer is on hold\. With this flow, one or more audio prompts can be played to a customer using the **Loop prompts** block while waiting on hold\. This contact follow works with voice\.   | 
 |  **Customer whisper flow**  |  Use to manage what the customer experiences as part of an inbound call immediately before being joined with an agent\. The agent and customer whispers are played to completion, then the two are joined\. This contact follow works with voice\.   | 
@@ -66,7 +66,7 @@ All connectors must be connected to a block in order to successfully publish you
 
 After your contact flow is published live, you can use contact flow logs to help analyze contact flows and quickly find errors your customers encounter\. If needed, you can roll back to a previous version of the contact flow\. 
 
-For more information about enabling and using contact flow logs, see [Contact Flow Logs](contact-flow-logs.md)\. 
+For more information about enabling and using contact flow logs, see [Enable Contact Flow Logs](contact-flow-logs.md)\. 
 
 ## Roll back a Contact Flow<a name="rollback"></a>
 

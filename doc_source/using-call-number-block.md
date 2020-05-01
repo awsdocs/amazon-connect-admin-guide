@@ -14,7 +14,18 @@ The value of the attribute must be a phone number from your instance in E\.164 f
 + If the number is not in E\.164 format, the number from the queue associated with the outbound whisper flow is used for the caller ID number\.
 + If no number is set for the outbound caller ID number for the queue, the call attempt will fail\.
 
- For more information about E\.164, see [Use E\.164 Format for Telephone Numbers](amazon-connect-contact-control-panel.md#international-calls-ccp)\.
+## Use E\.164 Format for International Phone Numbers<a name="international-calls-ccp"></a>
+
+Amazon Connect requires phone numbers in [ E\.164](https://www.itu.int/rec/T-REC-E.164/en) format\. 
+
+To express a US phone number in E\.164 format, add the '\+' prefix and the country code in front of the number\. For example, for a US number: 
++  \+1\-800\-555\-1212
+
+In the UK and many other countries internationally, local dialing requires the addition of a 0 in front of the subscriber number\. However, to use E\.164 formatting, this 0 must be removed\. A number such as 020 718 xxxxx in the UK would be formatted as \+44 20 718 xxxxx\.
+
+Phone numbers that are not formatted in E\.164 may work, but it depends on the phone or handset that is being used as well as the carrier from which the call is originated\.
+
+When you place calls from the CCP using Amazon Connect the CCP provides the correct formatting for numbers automatically\.
 
 ## How Caller ID Works in **Call phone number** Block<a name="call-number-block-how-it-works"></a>
 

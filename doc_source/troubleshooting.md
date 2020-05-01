@@ -103,6 +103,8 @@ For troubleshooting cross\-talk issues, you need to differentiate and measure ag
 + \[forward\_latency\] is the latency resulting in forward calls to or from Amazon Connect\. This latency can be calculated by measuring \[overall\_latency\], once with forward and once without, and take the difference between the two\.
 
 #### Measuring Latency<a name="measure-latency"></a>
+
+In addition to the steps below, see [Measure latency for validation testing and troubleshooting in Amazon Connect\)](https://aws.amazon.com/blogs/contact-center/measure-latency-for-validation-testing-and-troubleshooting-in-amazon-connect/)\.
 + Reproduce your use case\. Any deviations need to be measured and accounted for, because they skew test results\.
 + Match production controls and environment as much as possible\. Use the same flows, phone numbers, and endpoint locations\.
 + Note the geographical locations of your callers, agents, and external transfer destinations, where applicable\. If you are servicing multiple countries, each country should be tested individually to provide the same test coverage that your agents experience in production\.

@@ -131,7 +131,12 @@ If you're using a stateless firewall for both options, use the requirements desc
 
 ## Allow DNS Resolution for Softphones<a name="allow-dns-resolution"></a>
 
-If your agents are using softphones, you must also allow **TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com**\. 
+If you already added Amazon Connect IP ranges to your allow list, and you don’t have any restriction on DNS name resolution, then you don't need to add **TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com** to your allow list\.
++ To check whether there are restrictions on DNS name resolution, while on your network, use the `nslookup` command\. For example: 
+
+   `nslookup TurnNlb-d76454ac48d20c1e.elb.us-east-1.amazonaws.com`
+
+If you can't resolve the DNS, you must add **TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com** to your allow list\. 
 
 If you don't allow this domain, your agents will get the following error in their Contact Control Panel \(CCP\) when they try to answer a call: 
 + Failed to establish softphone connection\. Try again or contact your administrator with the following: Browser unable to establish media channel with turn:TurnNlb\-xxxxxxxxxxxxx\.elb\.\{region\}\.amazonaws\.com:3478?transport=udp

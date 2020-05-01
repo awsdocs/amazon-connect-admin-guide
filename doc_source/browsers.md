@@ -10,3 +10,7 @@ Before you work with Amazon Connect, verify that your browser is supported using
 |  Google Chrome  |  Latest three versions  | Open Chrome and type chrome://version in your address bar\. The version is in the Google Chrome field at the top of the results\. | 
 |  Mozilla Firefox ESR  |  Latest three versions  | Open Firefox\. On the menu, choose the Help icon and then choose About Firefox\. The version number is listed underneath the Firefox name\. | 
 |  Mozilla Firefox  |  Latest three versions  | Open Firefox\. On the menu, choose the Help icon and then choose About Firefox\. The version number is listed underneath the Firefox name\. | 
+
+## Browsers on Mobile Devices<a name="browsers-mobile"></a>
+
+The Amazon Connect console and Contact Control Panel \(CCP\) do not work on mobile browsers\.

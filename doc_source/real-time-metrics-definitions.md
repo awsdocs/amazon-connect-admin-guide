@@ -107,7 +107,7 @@ If a supervisor is using the Manager Monitor feature to monitor a particular age
 Amount of time that the agent has been in the current Agent Activity State\.
 
 **Error**  <a name="error-real-time"></a>
-When this term appears in the Agent Status column, it means there's a contact in an error state\.
+A count of agents in Error state\.
 
 **Handled**  <a name="handled-real-time"></a>
 Count of contacts in the queue that were answered by an agent\.

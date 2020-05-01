@@ -1,4 +1,4 @@
-# Reset a User's Password<a name="password-reset"></a>
+# Reset a User's Password for Amazon Connect<a name="password-reset"></a>
 
 **To reset a password for a user**
 

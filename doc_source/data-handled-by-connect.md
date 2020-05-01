@@ -44,6 +44,8 @@ You can search and listen to call recordings in Amazon Connect\. To determine wh
 
 The capabilities of Amazon S3, AWS KMS, and IAM put you in full control of who has access to call recording data\.
 
+In addition, you can track who listens to or deletes recordings; see [Track Who Deleted or Listened to Recordings](track-who-deleted-recordings.md)\. 
+
 ## Contact MetaData<a name="contact-metadata"></a>
 
 Amazon Connect stores metadata related to contacts that flow through the system and allows authorized users to access this information\. The Contact Search feature allows you to search and view contact data, such as ANI or other attributes set by the contact flow, that are associated with a contact for diagnostics or reporting purposes\. 

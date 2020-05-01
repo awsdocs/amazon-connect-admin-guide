@@ -61,7 +61,7 @@ The steps necessary to enable SAML federation with AWS include:
 
 1. Create an IAM role for SAML 2\.0 federation with the AWS Management Console\. Create only one role for federation \(only one role is needed and used for federation\)\. The IAM role determines which permissions the users that log in through your identity provider have in AWS\. In this case, the permissions are for accessing Amazon Connect\. You can control the permissions to features of Amazon Connect by using security profiles in Amazon Connect\. For more information, see [Creating a Role for SAML 2\.0 Federation \(Console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html)\.
 **Important**  
-Replacing this role can cause previously federated users to fail at federation\.
+Replacing this role causes previously federated users to fail at federation because it breaks existing user logins\.
 
    In step 5, choose **Allow programmatic and AWS Management Console access**\. Create the trust policy described in the topic in the procedure *To prepare to create a role for SAML 2\.0 federation*\. Then create a policy to assign permissions to your Amazon Connect instance\. Permissions start on step 9 of the *To create a role for SAML\-based federation* procedure\.
 

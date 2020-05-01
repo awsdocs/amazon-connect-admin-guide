@@ -1,12 +1,47 @@
 # Contact Block: Invoke AWS Lambda Function<a name="invoke-lambda-function-block"></a>
 
+## In contact flow types<a name="invoke-lambda-function-block-types"></a>
 
-| Item | Description | 
-| --- | --- | 
-|  [In contact flow type](create-contact-flow.md#contact-flow-types):  | Generic flow, Customer Queue flow, Customer Hold flow, Customer Whisper flow, Agent Hold flow, Agent Whisper flow, Transfer to Agent flow, Transfer to Queue flow  | 
-|  Description:  |  Calls AWS Lambda, and optionally returns key\-value pairs\. The returned key\-value pairs can be used to set contact attributes\.  | 
-|  Properties:  |  ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-lambda-properties.png) Note the following properties:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/invoke-lambda-function-block.html)  | 
-|  Configuration tips:  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/invoke-lambda-function-block.html)  | 
-|  Configured block:  |  When this block is configured, it looks similar to the following image: ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-lambda-configured.png)  | 
-|  Example flows:  |  [Sample Lambda Integration](sample-lambda-integration.md)  | 
-|  Scenarios:  |  See these topics for scenarios that use this block: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/invoke-lambda-function-block.html)  | 
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ Generic flow
++ Customer Queue flow
++ Customer Hold flow
++ Customer Whisper flow
++ Agent Hold flow
++ Agent Whisper flow
++ Transfer to Agent flow 
++ Transfer to Queue flow
+
+## Description<a name="invoke-lambda-function-block-description"></a>
++ Calls AWS Lambda, and optionally returns key\-value pairs\.
++ The returned key\-value pairs can be used to set contact attributes\.
+
+## Properties<a name="invoke-lambda-function-block-properties"></a>
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-lambda-properties.png)
+
+Note the following properties: 
++ **Timeout**: Enter how long to wait for Lambda to time out\. This creates a branch for you to specify what to do if it times out\. 
+
+  If your Lambda invocation gets throttled, the request is retried\. It is also retried if a general service failure \(500 error\) happens\. 
+
+  When a synchronous invocation returns an error, Amazon Connect retries up to three times, for a maximum of 8 seconds\. At that point, the contact is routed down the **Error** branch\.
+
+## Configuration tips<a name="invoke-lambda-function-block-tips"></a>
++ To use an AWS Lambda function in a contact flow, first add the function to your instance\. For more information, see [Add an AWS Lambda function to your instance](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instance.html#aws-lambda)\. 
++ After you add the function to your instance, you can select the function from the **Select a function** drop\-down list in the block to use it in the contact flow\.
+
+## Configured block<a name="invoke-lambda-function-block-configured"></a>
+
+When this block is configured, it looks similar to the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-lambda-configured.png)
+
+## Sample flows<a name="invoke-lambda-function-block-samples"></a>
+
+[Sample Lambda Integration](sample-lambda-integration.md)
+
+## Scenarios<a name="invoke-lambda-function-block-scenarios"></a>
+
+See these topics for scenarios that use this block:
++ [Invoke AWS Lambda Functions](connect-lambda-functions.md)

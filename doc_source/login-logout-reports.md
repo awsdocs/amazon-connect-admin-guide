@@ -105,6 +105,9 @@ To generate a report with the same settings on a regular basis, you can schedule
 
 When you schedule your report, keep in mind that the report always runs at 12AM on the day you select, in the time zone that you choose\. If you select Wednesday, the report runs at midnight Wednesday and does not include any data for Wednesday\. Scheduled reports are saved as CSV files in your Amazon S3 bucket\. The default time zone is UTC\. To have your report run at 12AM in your local time, choose your time zone instead\. 
 
+**Tip**  
+To email a scheduled report to a list of co\-workers, you need to generate the email manually using your messaging system\. Amazon Connect doesn’t provide an option to email the scheduled report automatically\. 
+
 **To schedule a Login/Logout report**
 
 1. If you already have a saved report to schedule open, skip to step 4\. Otherwise, in the dashboard, choose **Metrics and quality**, **Saved reports**\.

@@ -2,6 +2,11 @@
 
 To update the instance settings, open the Amazon Connect console, choose the name of the instance from **Instance Alias**, and complete the following procedures\.
 
+Amazon Connect enables agents to hear early media, that is, pre\-connection audio such as busy signals, failure to connect errors, or other informational messages, when making outbound calls\.
+
+**Tip**  
+Early media is enabled by default for new instances of Amazon Connect\. If you have an existing instance and want to enable this feature, please open a support ticket\. For instructions, see [Get Administrative Support for Amazon Connect](get-admin-support.md)\.
+
 **To update the telephony options**
 
 1. In the navigation pane, choose **Telephony**\.
@@ -48,4 +53,4 @@ To update the instance settings, open the Amazon Connect console, choose the nam
 
 1. \(Optional\) To integrate with AWS Lambda, select a Lambda function\. For more information, see [Invoke AWS Lambda Functions](connect-lambda-functions.md)\.
 
-1. \(Optional\) To enable contact flow logs, choose **Enable contact flow logs**\. For more information, see [Contact Flow Logs](contact-flow-logs.md)\.
+1. \(Optional\) To enable contact flow logs, choose **Enable contact flow logs**\. For more information, see [Enable Contact Flow Logs](contact-flow-logs.md)\.

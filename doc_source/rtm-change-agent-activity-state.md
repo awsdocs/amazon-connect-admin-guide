@@ -15,3 +15,9 @@ You can't select or change any of the contact states that appear in the **Agent 
 You'll get an error message, as shown in the following image\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-change-agent-activity-state-error-message.png)
+
+## Required Permissions in the Supervisors Security Profile<a name="rtm-change-agent-activity-state-permissions"></a>
+
+For supervisors to be able to change the agent's activity status, they need to be assigned a security profile that has permissions to Access metrics and view Login/Logout reports, as shown in the following image\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/security-profile-change-agent-status.png)

@@ -217,7 +217,7 @@ The name of the routing profile\.
 Type: String
 
 **InboundQueues**  
-Thef `Queue` objects associated with the agent's routing profile\.  
+The `Queue` objects associated with the agent's routing profile\.  
 Type: List of `Queue` object
 
 **DefaultOutboundQueue**  

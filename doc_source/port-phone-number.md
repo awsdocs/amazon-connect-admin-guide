@@ -8,20 +8,24 @@ We recommend that you select a phone number from Amazon Connect so you can becom
 
 **To port your current phone number to Amazon Connect**
 
-1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
+1. Log in to the [AWS Management Console](https://console.aws.amazon.com/console) \(https://console\.aws\.amazon\.com/console\) using your AWS account\. 
 
-1. Log in with the account used to create the Amazon Connect instance to which to port your current number\.
+1. In the upper right corner of the page, choose **Support**, **Support Center**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/support-dropdown.png)
 
-1. Choose **Create case**\.
+1. On the **AWS Support Center** page, choose **Create case**\.
 
-1. Under **Create case**, **Case classification**, do the following:
+1. Choose **Service limit increase**\.
+
+1. Under **Case classification**, do the following:
    + For **Limit type**, choose **Amazon Connect**\.
-   + For **Contact Center Instance ARN \- optional**, enter the instance ARN\.
+   + For **Contact Center Instance ARN \- optional**, enter the instance ARN \(also called the instance ID\)\.
 
      To find the ARN for your instance, log in to Amazon Connect\. On the instances page, click the instance alias\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
-     This will take you to a page that displays the instance ARN\.
+     This will take you to a page that displays the instance ARN\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/find-instance-id.png)
 
 1. Under **Requests**, **Request 1** do the following:
    + For **Region**, select the Region in which you created your Amazon Connect instance\.

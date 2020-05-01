@@ -1,9 +1,17 @@
-# Report Limits<a name="historical-reporting-limits"></a>
+# Historical Report Limits<a name="historical-reporting-limits"></a>
 
 Historical metrics reports have the following limits:
 
 **Data only for active queues**
 + You can get data only for active queues\. A queue is inactive if there are no contacts in the queue and no agents available\.
+
+**Download data limited to current page max \(100 results\)**
++ When you want to download historical metrics data into a \.csv file from the user interface, you can only download the data displayed on the page at any one time\. For example, if you have 256 records you want to download, and the maximum displayed in the user interface is 100, you would have to download the data three batches:
+  + 1\-100
+  + 101\-200
+  + 201\-256
+
+  For a workaround so you can download hundreds or thousands of results, see [Download All Historical Metric Results](download-historical-metrics-report.md#download-all-historical-metrics)\.
 
 **80k Cell Limit**
 

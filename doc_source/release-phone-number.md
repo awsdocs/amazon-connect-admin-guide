@@ -9,7 +9,7 @@ If you want to "close" your Amazon Connect account, do these steps for all of yo
 
 **To release a phone number**
 
-1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+1. Log in to your contact center using your access URL \(https://*instance name*\.awsapps\.com/connect/login\)\. To find the name of your instance, see [Find Your Amazon Connect Instance ID/ARN](find-instance-arn.md)\.
 
 1. Choose **Routing**, **Phone numbers**\.
 

@@ -42,6 +42,7 @@ The following table lists feature specifications\. They cannot be increased\.
 | --- | --- | 
 | Managers who can listen in on an agent call at the same time  |  5  | 
 |  Contact Trace Record retention  |  24 months from the time the associated contact was initiated\.  You can choose to stream CTRs to Kinesis so you can manage retention and perform advanced analysis\.  | 
+|  Max size of the CTR attributes section  |  32KB   | 
 |  Active chats per agent  |  5  | 
 |  Total duration per chat  |  25 hours, including wait time  | 
 |  Characters per chat message  |  1024  | 

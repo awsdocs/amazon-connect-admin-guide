@@ -3,16 +3,17 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
++ [April 2020 Update](#april20-release-notes)
 + [March 2020 Update](#mar20-release-notes)
 + [February 2020 Update](#feb20-release-notes)
 + [January 2020 Update](#jan20-release-notes)
 + [December 2019 Update](#dec19-release-notes)
 + [November 2019 Update](#nov19-release-notes)
 + [October 2019 Update](#oct19-release-notes)
-+ [June 2019 Update](#w50aac60c19)
-+ [May 2019 Updates](#w50aac60c21)
-+ [April 2019 Updates](#w50aac60c23)
-+ [March 2019 Update](#w50aac60c25)
++ [June 2019 Update](#w53aac60c21)
++ [May 2019 Updates](#w53aac60c23)
++ [April 2019 Updates](#w53aac60c25)
++ [March 2019 Update](#w53aac60c27)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -24,12 +25,20 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
 
+## April 2020 Update<a name="april20-release-notes"></a>
+
+The following updates were released in April 2020:
+
+### Telephony<a name="april20-telephony"></a>
++ Added early media support for outbound phone calls\. Enabled by default, an agent hears tones and audio messages played by phone companies—such as busy signals, failure to connect errors, or other informational messages—through their headset or audio device\. For more information, see [Step 3: Telephony Options](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect Instance](amazon-connect-instances.md) topic\. 
++ Added the `barge-in-enabled` session attribute to the [Get Customer Input](get-customer-input.md) block so customers can interrupt Amazon Lex chatbots with their voice\. 
+
 ## March 2020 Update<a name="mar20-release-notes"></a>
 
 The following updates were released in March 2020:
 
 ### Contact flows<a name="mar20-contact-flows"></a>
-+ Updated the [Store Customer Input](store-customer-input.md) block to enable you to configure the terminating keypress\.
++ Updated the [Store Customer Input](store-customer-input.md) block to allow you to specify a custom terminating keypress\.
 
 ### Metrics<a name="mar20-metrics"></a>
 + Announced [Upcoming Changes for Omnichannel Support](upcoming-changes.md#upcoming-changes-march-2020)\.
@@ -119,14 +128,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-## June 2019 Update<a name="w50aac60c19"></a>
+## June 2019 Update<a name="w53aac60c21"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w50aac60c21"></a>
+## May 2019 Updates<a name="w53aac60c23"></a>
 
 The following updates were released in May 2019:
 
@@ -138,7 +147,7 @@ The following updates were released in May 2019:
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w50aac60c23"></a>
+## April 2019 Updates<a name="w53aac60c25"></a>
 
 The following updates were released in April 2019:
 
@@ -151,7 +160,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w50aac60c25"></a>
+## March 2019 Update<a name="w53aac60c27"></a>
 
 The following updates were released in March 2019:
 

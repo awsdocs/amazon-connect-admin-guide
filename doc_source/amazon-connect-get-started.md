@@ -10,11 +10,11 @@ Use these steps to set up your contact center\.
 
 1. [Create Amazon Connect Contact FlowsCreate Contact Flows](connect-contact-flows.md)\. Establish a contact flow to define the customer experience with your contact center from start to finish\. A single contact flow works for both voice and chat, which makes your design more efficient\. When you build contact flows and configure the blocks, indicate how the flow should work for voice, chat, or both\. 
 
-1. Add users, which are your managers and agents, and configure their settings\. Assign a routing profile to each agent, specify whether they are using a softphone or desk phone, and set how long they have for **After contact work**\. For instructions, see [Add Users](user-management.md) and [Set Up Agents](connect-agents.md)\. 
+1. Add users, which are your managers and agents, and configure their settings\. Assign a routing profile to each agent, specify whether they are using a softphone or desk phone, and set how long they have for **After contact work**\. For instructions, see [Add Users to Amazon Connect](user-management.md) and [Set Up Agents](connect-agents.md)\. 
 
 1. If you're using chat, enable your customer\-facing app to engage with Amazon Connect chat\. For an example on GitHub, click [here](https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/asyncCustomerChatUX)\. 
 
-## Next Steps<a name="w50aac10b7"></a>
+## Next Steps<a name="w53aac10b7"></a>
 
 There's a lot you can do to optimize your contact center\. Here are a couple of additional steps that you may find useful: 
 

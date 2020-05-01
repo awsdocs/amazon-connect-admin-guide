@@ -19,7 +19,10 @@ Before you schedule a historical metrics report, here are a few things you need 
 **No Message if a Scheduled Report Doesn't Run**
 + If a scheduled report fails to run, you won't get any message in the Amazon Connect UI\. You just won't see the report in the Amazon S3 location\. 
 
-## How to Schedule a Historical Metrics Report<a name="w50aac45c35c17c15"></a>
+**Use Your Messaging System to Email Scheduled Reports**
++ To email a scheduled report to a list of co\-workers, you need to generate the email manually using your messaging system\. Amazon Connect doesn’t provide an option to email the scheduled report automatically\. 
+
+## How to Schedule a Historical Metrics Report<a name="w53aac45c35c17c17"></a>
 
 1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
 

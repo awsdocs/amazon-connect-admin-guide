@@ -41,6 +41,23 @@ The final schedule looks like this:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-hours-of-operation-closed-weekends.png)
 
+## Add Lunch and Other Breaks<a name="add-lunch-breaks"></a>
+
+If your entire contact center were to close for lunch from 12\-1, for example, then you'd enter hours to specify that, as in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hours-of-operation-lunch.png)
+
+In most contact centers breaks are staggered\. While some agents are at lunch, for example, others are still available to handle contacts\. Instead of specifying this in the hours of operation, you [add custom agent statuses](agent-custom.md) that appear in the agent's Contact Control Panel \(CCP\)\. 
+
+For example, you might create a custom status named **Lunch**\. When the agent goes to lunch, they change their status in the CCP from **Available** to **Lunch**\. During this time, no contacts are routed to them\. When they return from lunch and are ready to take contacts again, they change their status back to **Available**\. 
+
+Supervisors can change an agent's status using the real\-time metrics report\.
+
+For more information, see these topics: 
++ [Add Custom Agent Status](agent-custom.md)
++ [About Agent Status](metrics-agent-status.md)
++ [Change the "Agent Activity" Status in a Real\-Time Metrics Report ](rtm-change-agent-activity-state.md)
+
 ## Use the Check Hours of Operation Block<a name="use-check-hours-of-operation-block"></a>
 
 At the start of your contact flows, use the [Check Hours of Operation](check-hours-of-operation.md) block to determine whether your contact center is open, and to branch accordingly\. 

@@ -75,6 +75,6 @@ Amazon Connect treats the "$" character as a special character\. You can't use i
 
  ` {"$one":"please read this text"} ` 
 
-When Amazon Connect reads this text, it will read "dollar sign one" to the contact instead of "please read this text\." Also, if you were to include $ in a key and try to reference the value later using Amazon Connect, it won't retrieve the value\. 
+When Amazon Connect reads this text, it reads "dollar sign one" to the contact instead of "please read this text\." Also, if you were to include $ in a key and try to reference the value later using Amazon Connect, it wouldn't retrieve the value\. 
 
 Amazon Connect does log and pass the full key:value pair `({"_$one":"please read this text"})` to integrations such as Lambda\. 

@@ -1,6 +1,8 @@
-# Contact Trace Records Data Model<a name="ctr-data-model"></a>
+# Contact Trace Records \(CTR\) Data Model<a name="ctr-data-model"></a>
 
 This article describes the data model for Amazon Connect contact trace records \(CTRs\)\. CTRs capture the events associated with a contact in your contact center\. Real\-time and historical metrics are based on the data captured in the CTRs\.
+
+For the CTR retention period and maximum size of the CTR attributes section, see [Feature Specifications](amazon-connect-service-limits.md#feature-limits)\.
 
 **Tip**  
 Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for multiple reasons, such as new information arriving after initial delivery\. If you're building a system that consumes CTR export streams, be sure to include logic that checks for duplicate CTRs for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 

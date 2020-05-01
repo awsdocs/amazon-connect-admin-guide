@@ -1,4 +1,4 @@
-# CloudWatch Metrics for Your Amazon Connect Instance<a name="monitoring-cloudwatch"></a>
+# Monitoring Your Instance Using CloudWatch<a name="monitoring-cloudwatch"></a>
 
 Amazon Connect sends data about your instance to CloudWatch metrics so that you can collect, view, and analyze CloudWatch metrics for your Amazon Connect virtual contact center\. You can use this data to monitor key operational metrics and set up alarms\. Data about your contact center is sent to CloudWatch every 1 minute\.
 

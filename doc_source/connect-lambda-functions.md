@@ -94,7 +94,7 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w50aac32c13c17"></a>
+### Invocation retry policy<a name="w53aac32c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 
@@ -177,6 +177,6 @@ If you store the variables as contact attributes, you can use them throughout yo
 
 To store the values returned as contact attributes and then reference them, use a **Set contact attributes** block in your contact flow after the **Invoke AWS Lambda function** block\. Choose **External** for the **Type**\. Following the example we're using, set **Destination key** to `returnedContactName`, and set the **Source attribute** to `Name`
 
-Add Address as a **Source attribute** and use `returnedContactAddress` as the **Destination key**\. Then add `callerType` as a **Source attribute** and use `returnedContactType` for the **Destination key**\.
+Add Address as a **Source attribute** and use `returnedContactAddress` as the **Destination key**\. Then add `CallerType` as a **Source attribute** and use `returnedContactType` for the **Destination key**\.
 
 Make sure that the name specified for the source attribute matches the key name returned from Lambda\.

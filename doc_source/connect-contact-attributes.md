@@ -14,5 +14,6 @@ Contact attributes let you pass data between Amazon Connect and other services, 
 + [How to Reference Contact Attributes](how-to-reference-attributes.md)
 + [How to Use System Metric Attributes](attrib-system-metrics.md)
 + [How to Use the Channel Contact Attribute](use-channel-contact-attribute.md)
++ [How to Use Lex Session Attributes](how-to-use-session-attributes.md)
 + [How to Use the Same Bot for Voice and Chat](one-bot-voice-chat.md)
 + [Contact Attributes Available in Amazon Connect](connect-attrib-list.md)

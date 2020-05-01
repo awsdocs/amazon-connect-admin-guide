@@ -42,7 +42,12 @@ After you specify the user name of the administrator for the Amazon Connect inst
 
 ## Step 3: Telephony Options<a name="get-started-telephony"></a>
 
-Customers can call into your contact center and speak to an agent\. Agents can use the web\-based softphone provided by Amazon Connect for incoming and outgoing telephony, or agents can use a desk phone through the public switched telephone network \(PSTN\)\.
+Use the options in this section to choose whether you want your agents to receive calls from customers, and make outbound calls, using Amazon Connect\.
+
+Amazon Connect enables agents to hear early media, that is, pre\-connection audio such as busy signals, failure to connect errors, or other informational messages, when making outbound calls\.
+
+**Tip**  
+Early media is enabled by default for new instances of Amazon Connect\. If you have an existing instance and want to enable this feature, please open a support ticket\. For instructions, see [Get Administrative Support for Amazon Connect](get-admin-support.md)\.
 
 **To configure telephony options for your instance**
 

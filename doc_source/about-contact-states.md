@@ -38,7 +38,7 @@ Here's what the contact state looks like in the agent event stream:
 
 ## Events in the Contact Trace Record \(CTR\)<a name="ctr-events"></a>
 
-A contact trace record \(CTR\) captures events associated with the contact in your contact center\. For example, how long the contact lasted, when it started and stopped\. For a list of all data that's captured in the CTR, see [Contact Trace Records Data Model](ctr-data-model.md)\. 
+A contact trace record \(CTR\) captures events associated with the contact in your contact center\. For example, how long the contact lasted, when it started and stopped\. For a list of all data that's captured in the CTR, see [Contact Trace Records \(CTR\) Data Model](ctr-data-model.md)\. 
 
 A CTR is opened for a customer when they are connected to your contact center\. The CTR is completed when the interaction with the contact flow or agent ends\. This means it's possible for a customer to have multiple CTRs\.
 

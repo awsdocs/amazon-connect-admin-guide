@@ -2,6 +2,9 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added how to get administrative support, and added a topic on inherited permissions](#doc-history) | For more information, see [Get Administrative Support for Amazon Connect](get-admin-support.md) and [About Inherited Permissions](inherited-permissions.md)\.  | April 17, 2020 | 
+| [Added how to log out agents automatically](#doc-history) | For more information, see [Log Out Agents Automatically When They Close Their CCP](automatic-logout.md)\.  | April 16, 2020 | 
+| [Updated the Get customer input block to support timeout values for voice input](#doc-history) | For more information, see [Get Customer Input](get-customer-input.md)\.  | April 8, 2020 | 
 | [Add NLB endpoints and required domain for softphones](#doc-history) | For more information, see [Set Up Your Network](ccp-networking.md)\.  | March 27, 2020 | 
 | [Announced upcoming changes for metrics](#doc-history) | For more information, see [Upcoming Changes for Omnichannel Support](upcoming-changes.md#upcoming-changes-march-2020)\.  | March 23, 2020 | 
 | [Added terminating keypress functionality](#doc-history) | For more information, see [Store Customer Input](store-customer-input.md)\.  | March 21, 2020 | 
@@ -18,7 +21,7 @@
 | [Updated the topics for live media streaming](#doc-history) | For more information, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\.  | November 22, 2019 | 
 | [Added information about chat](#doc-history) | For more information, see [Chat](chat.md)\.  | November 21, 2019 | 
 | [Added IAM topic](#doc-history) | Added [Identity and Access Management for Amazon Connect](security-iam.md)\.  | November 14, 2019 | 
-| [Added dimensions](#doc-history) | Added dimensions to [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md)\.  | October 21, 2019 | 
+| [Added dimensions](#doc-history) | Added dimensions to [Monitoring Your Instance Using CloudWatch](monitoring-cloudwatch.md)\.  | October 21, 2019 | 
 | [Added a Networking topic](#doc-history) | Consolidated networking content into [Set Up Your Network](ccp-networking.md)\. Updated the guidance\.  | September 30, 2019 | 
 | [Updated metrics topics](#doc-history) | Improved the descriptions of the real\-time metrics definitions\. Added categories to the historical metrics definitions\. | August 30, 2019 | 
 | [Re\-organized content\.](#doc-history) | Re\-organized content to be task\-based\. | July 19, 2019 | 
@@ -32,6 +35,9 @@
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Added how to get administrative support, and added a topic on inherited permissions |  For more information, see [Get Administrative Support for Amazon Connect](get-admin-support.md) and [About Inherited Permissions](inherited-permissions.md)\.   | April 16, 2020 | 
+| Added how to customize your CCP to log out agents automatically when they close the CCP window |  For more information, see [Log Out Agents Automatically When They Close Their CCP](automatic-logout.md)\.   | April 16, 2020 | 
+| Updated the **Get customer input **block to support timeout values for voice input |  For more information, see [Get Customer Input](get-customer-input.md)\.   | April 8, 2020 | 
 | Added terminating keypress |  For more information, see [Store Customer Input](store-customer-input.md)\.   | March 31, 2020 | 
 | Added NLB endpoints and required domain for softphones |  For more information, see [Set Up Your Network](ccp-networking.md)\.   | March 23, 2020 | 
 | Announced upcoming changes for metrics |  For more information, see [Upcoming Changes for Omnichannel Support](upcoming-changes.md#upcoming-changes-march-2020)\.   | March 23, 2020 | 
@@ -48,7 +54,7 @@
 | Added information about live media streaming |  For more information, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\.   | November 21, 2019 | 
 | Added information about chat |  For more information, see [Chat](chat.md)\.  Also added these topics: [Best Practices for Amazon Connect](best-practices.md), [About Agent Status](metrics-agent-status.md), [About Contact States](about-contact-states.md), and [Additional Resources for Amazon ConnectAdditional Resources](additional-resources.md)\.  | November 21, 2019 | 
 | Added topic on using IAM |  For more information, see [Identity and Access Management for Amazon Connect](security-iam.md)\.  | November 14, 2019 | 
-| Added dimensions |  Added dimensions to the Amazon Connect metrics sent to CloudWatch\. See [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md)\.  | October 22, 2019 | 
+| Added dimensions |  Added dimensions to the Amazon Connect metrics sent to CloudWatch\. See [Monitoring Your Instance Using CloudWatch](monitoring-cloudwatch.md)\.  | October 22, 2019 | 
 | Added a networking topic | Consolidated networking content into [Set Up Your Network](ccp-networking.md)\. Updated the guidance\. | September 30, 2019 | 
 | Updated metrics topics | Improved the descriptions of the real\-time metrics definitions\. Added categories to the historical metrics definitions\. | August 30, 2019 | 
 | Updated historical metrics report section | Added categories to the historical metrics definitions\.  | August 27, 2019 | 
@@ -63,11 +69,11 @@
 | Added information about queue to queue transfers | You can use the new options of the Transfer to queue block to enable transferring calls that are already in a queue to another queue\. For more information, see [Manage Contacts in a Queue](queue-to-queue-transfer.md)\. | July 31, 2018 | 
 | Added information about the Call phone number block | Updated the content about contact flows to include the new Call phone number block, including how to use the block in a contact flow\. For more information, see [Initiate an Outbound Call](using-call-number-block.md)\. | July 2, 1018 | 
 | Added information about contact attributes and the Get queue metrics block | For more information, see [Use Amazon Connect Contact Attributes](connect-contact-attributes.md)\. | June 18, 2018 | 
-| Added information about new metrics sent to Amazon CloudWatch Logs\. | [CloudWatch Metrics for Your Amazon Connect Instance](monitoring-cloudwatch.md) includes additional metrics\. | April 19, 2018 | 
+| Added information about new metrics sent to Amazon CloudWatch Logs\. | [Monitoring Your Instance Using CloudWatch](monitoring-cloudwatch.md) includes additional metrics\. | April 19, 2018 | 
 | Added information about using SAML for identity management | You can configure your instance to use SAML for identity management\. You can also use SAML to enable single sign\-on\. For more information, see [Configure SAML for Identity Management in Amazon Connect](configure-saml.md)\. | March 30, 2018 | 
 | Added information about agent call transfers | You can enable call transfers from an agent to another agent, to a queue, or to an external number\.  | December 10, 2017 | 
 | Added information about manager listen\-in | You can configure and enable a manager to listen in on agent calls\. For more information, see [Monitor Live Conversations](monitor-conversations.md)\. | December 10, 2017 | 
-| Added information about contact flow logs | For more information, see [Contact Flow Logs](contact-flow-logs.md)\. | November 16, 2017 | 
+| Added information about contact flow logs | For more information, see [Enable Contact Flow Logs](contact-flow-logs.md)\. | November 16, 2017 | 
 | Added information about contact flow import/export | For more information, see [Import/Export Contact Flows](contact-flow-import-export.md)\. | November 16, 2017 | 
 | Added information about agent event streams | For more information, see [Amazon Connect Agent Event Streams](agent-event-streams.md)\. | November 16, 2017 | 
 | Added information about porting your current phone number to Amazon Connect | For more information, see [Port Your Current Phone Number](port-phone-number.md)\. | November 10, 2017 | 

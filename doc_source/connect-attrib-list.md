@@ -74,7 +74,7 @@ The metrics attributes in the following table are returned when you use the **Ge
 
 ## Media Streams Attributes<a name="media-stream-attribs"></a>
 
-The following table lists the attributes you can use to identify the location in the live media stream where the customer audio starts and stops\.
+The following table lists the attributes that you can use to identify the location in the live media stream where the customer audio starts and stops\.
 
 
 | Attribute | Description | Type | JSONPath Reference | 

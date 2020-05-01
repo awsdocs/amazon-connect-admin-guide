@@ -1,19 +1,11 @@
 # Create a Queue<a name="create-queue"></a>
 
-When you create a queue, it is automatically active and can be assigned to a routing profile\. Users with the proper permissions can deactivate the queue, which puts it in an offline mode and makes it unavailable to assign to a routing profile\.
-
-To learn how queues work, see [Routing Profiles](concepts-routing.md) and [Queue\-Based Routing](concepts-queue-based-routing.md)\.
-
-**To create a standard queue**
-
 1. Choose **Routing**, **Queues**, **Add new queue**\.
 
 1. Add the appropriate information about your queue and choose **Add new queue**\.
 
-**To disable an active queue**
+   The queue is automatically active\.
 
-1. Choose **Routing**, **Queues**\.
+1. Assign the queue to a routing profile; for information, see [Create a Routing Profile](routing-profiles.md)\. The routing profile links the queue and agents together\.
 
-1. Hover over the name of the queue to edit and choose the power icon\.
-
-1. Choose **Disable**\.
+To learn how queues work, see [Routing Profiles](concepts-routing.md) and [Queue\-Based Routing](concepts-queue-based-routing.md)\.
