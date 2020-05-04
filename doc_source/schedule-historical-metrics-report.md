@@ -22,7 +22,7 @@ Before you schedule a historical metrics report, here are a few things you need 
 **Use Your Messaging System to Email Scheduled Reports**
 + To email a scheduled report to a list of co\-workers, you need to generate the email manually using your messaging system\. Amazon Connect doesn’t provide an option to email the scheduled report automatically\. 
 
-## How to Schedule a Historical Metrics Report<a name="w53aac45c35c17c17"></a>
+## How to Schedule a Historical Metrics Report<a name="w54aac45c35c17c17"></a>
 
 1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
 

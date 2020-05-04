@@ -1,4 +1,4 @@
-# Configure SAML for Identity Management in Amazon Connect<a name="configure-saml"></a>
+# Configure SAML with IAM for Amazon Connect<a name="configure-saml"></a>
 
 Amazon Connect supports identity federation with Security Assertion Markup Language \(SAML\) 2\.0 to enable web\-based single sign\-on \(SSO\) from your organization to your Amazon Connect instance\. This allows your users to sign in to a portal in your organization hosted by a SAML 2\.0 compatible identity provider \(IdP\)\. The IdP includes an option to log in to Amazon Connect, which redirects the user to your Amazon Connect instance without having to provide separate credentials for Amazon Connect\.
 
@@ -11,7 +11,7 @@ Before you begin, note the following:
 
 ## Overview of Using SAML with Amazon Connect<a name="saml-overview"></a>
 
-The following diagram describes the flow for SAML requests to authenticate users and federate with Amazon Connect\.
+The following diagram shows the flow for SAML requests to authenticate users and federate with Amazon Connect\.
 
 ![\[Overview of the request flow for SAML authentication requests with Amazon Connect.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-overview.png)
 

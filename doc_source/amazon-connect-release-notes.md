@@ -10,10 +10,10 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [December 2019 Update](#dec19-release-notes)
 + [November 2019 Update](#nov19-release-notes)
 + [October 2019 Update](#oct19-release-notes)
-+ [June 2019 Update](#w53aac60c21)
-+ [May 2019 Updates](#w53aac60c23)
-+ [April 2019 Updates](#w53aac60c25)
-+ [March 2019 Update](#w53aac60c27)
++ [June 2019 Update](#w54aac60c21)
++ [May 2019 Updates](#w54aac60c23)
++ [April 2019 Updates](#w54aac60c25)
++ [March 2019 Update](#w54aac60c27)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -128,14 +128,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-## June 2019 Update<a name="w53aac60c21"></a>
+## June 2019 Update<a name="w54aac60c21"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w53aac60c23"></a>
+## May 2019 Updates<a name="w54aac60c23"></a>
 
 The following updates were released in May 2019:
 
@@ -147,7 +147,7 @@ The following updates were released in May 2019:
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w53aac60c25"></a>
+## April 2019 Updates<a name="w54aac60c25"></a>
 
 The following updates were released in April 2019:
 
@@ -160,7 +160,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w53aac60c27"></a>
+## March 2019 Update<a name="w54aac60c27"></a>
 
 The following updates were released in March 2019:
 
