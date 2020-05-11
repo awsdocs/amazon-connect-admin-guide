@@ -82,7 +82,7 @@ The following table lists the attributes that you can use to identify the locati
 | Customer audio stream ARN | The ARN of the Kinesis Video stream used for Live media streaming that includes the customer data to reference\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StreamARN | 
 | Customer audio start timestamp in the Kinesis video stream used for Live media streaming\. | When the customer audio stream started\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StartTimestamp | 
 | Customer audio stop timestamp | When the customer audio stream stopped the Kinesis video stream used for Live media streaming\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StopTimestamp | 
-| Customer audio start fragment number | The number that identifies the Kinesis Video Streams fragment, in the stream used for Live media streaming, in which the customer audio stream started\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StartPosition | 
+| Customer audio start fragment number | The number that identifies the Kinesis Video Streams fragment, in the stream used for Live media streaming, in which the customer audio stream started\. | Media streams | $\.MediaStreams\.Customer\.Audio\.StartFragmentNumber | 
 
 ## Telephony Call Metadata Attributes<a name="telephony-call-metadata-attributes"></a>
 

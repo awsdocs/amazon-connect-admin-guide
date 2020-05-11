@@ -56,4 +56,4 @@ In this example a routing profile has only two queues, and they have the same pr
 |  Sales  |  1  |  0  | 
 |  Support  |  1  |  0  | 
 
-For this routing profile, the oldest contact is routed to an agent first, regardless of queue\. 
+For this routing profile, the oldest contact is routed first\. It goes to the agent who has been idle for the longest time\.

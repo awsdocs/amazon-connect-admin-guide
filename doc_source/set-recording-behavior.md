@@ -32,6 +32,7 @@ Also choose **Enable analytics**\. If you don't see this option, Contact Lens fo
 
   For example, you might have a contact flow with **Set recording behavior to record Agent and Customer**\. But if the next **Set recording behavior** block is set to **Agent only**, that block overrides the behavior of the previous block\. 
 + If an agent puts a customer on hold, the agent is still recorded, but the customer is not\.
++ If you want to transfer a contact to another agent or queue, and you want to continue using Contact Lens to collect data, you need to add to the flow another **Set recording behavior** block with **Enable analytics** turn on\. This is because a transfer generates a second contact ID and CTR\. Contact Lens needs to run on that CTR as well\.
 
 ## Configured block<a name="set-recording-behavior-configured"></a>
 

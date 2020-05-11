@@ -50,8 +50,8 @@ Dimensions:
 + **MetricGroup**: **VoiceCalls**
 
 **ConcurrentCallsPercentage**  
-The percentage of the concurrent active voice calls service quota used in the instance\. This is calculated by `ConcurrentCalls/ConfiguredConcurrentCallsLimit * 100`\.  
-Unit: Percent  
+The percentage of the concurrent active voice calls service quota used in the instance\. This is calculated by `ConcurrentCalls/ConfiguredConcurrentCallsLimit`\.   
+Unit: Percent \(output displays as a decimal\)  
 Dimensions:  
 + **InstanceId**: The ID of your instance
 + **MetricGroup**: **VoiceCalls**

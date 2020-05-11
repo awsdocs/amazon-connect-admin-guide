@@ -199,7 +199,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Delete Users from Your Amazon Connect Instance](delete-users.md)
    + [Reset a User's Password for Amazon Connect](password-reset.md)
    + [Security Profiles](connect-security-profiles.md)
-      + [Best Practices for Security Profiles](considerations.md)
+      + [Best Practices for Security Profiles](security-profile-best-practices.md)
       + [About Inherited Permissions](inherited-permissions.md)
       + [Default Security Profiles](default-security-profiles.md)
       + [Assign a Security Profile to a User](assign-security-profile.md)

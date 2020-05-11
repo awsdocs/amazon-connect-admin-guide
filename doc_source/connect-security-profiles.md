@@ -5,7 +5,7 @@ A security profile is a group of permissions that map to a common role in a cont
 Security profiles help you manage who can access the Amazon Connect dashboard and Contact Control Panel \(CCP\), and who can perform specific tasks\. 
 
 **Topics**
-+ [Best Practices for Security Profiles](considerations.md)
++ [Best Practices for Security Profiles](security-profile-best-practices.md)
 + [About Inherited Permissions](inherited-permissions.md)
 + [Default Security Profiles](default-security-profiles.md)
 + [Assign a Security Profile to a User](assign-security-profile.md)

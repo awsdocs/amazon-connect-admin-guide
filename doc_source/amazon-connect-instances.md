@@ -2,9 +2,10 @@
 
 The first step in setting up your Amazon Connect contact center is to create a virtual contact center instance\. Each instance contains all the resources and settings related to your contact center\. 
 
-## Prerequisites<a name="get-started-prerequisites"></a>
+## Things to Know Before You Begin<a name="get-started-prerequisites"></a>
 + When you sign up for Amazon Web Services \(AWS\), your AWS account is automatically signed up for all services in AWS, including Amazon Connect\. You are charged only for the services that you use\. To create an AWS account, see [How do I create and activate an AWS account?](http://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 + To allow an IAM user to create an instance, ensure that they have the permissions granted by the **AmazonConnectFullAccess** policy\.
++ Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
 
 ## Step 1: Identity Management<a name="get-started-identity-management"></a>
 

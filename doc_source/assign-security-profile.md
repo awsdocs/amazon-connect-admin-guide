@@ -2,7 +2,7 @@
 
 **To assign a security profile to a user**
 
-1. Review [Best Practices for Security Profiles](considerations.md)\.
+1. Review [Best Practices for Security Profiles](security-profile-best-practices.md)\.
 
 1. Log in to your contact center using your access URL \(https://*instance name*\.awsapps\.com/connect/login\)\.
 
