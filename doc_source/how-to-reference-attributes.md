@@ -56,9 +56,13 @@ Use a **Play prompt** block to use an audio file to play as a greeting or messag
 
 Hello $\.External\.FirstName $\.External\.LastName, thank you for calling\.
 
-Alternatively, you could store the attributes returned from the Lambda function using a **Set contact attributes** block, and then reference the user\-defined attribute created in the text to speech string\.
+Alternatively, you could store the attributes returned from the Lambda function using a **Set contact attributes** block, and then reference the user\-defined attribute created in the text to speech string\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-attribute.png)
+
+**NOTE:** If you are referencing a user-defined attribute that was previously set as a contact attribute in the contact flow / via the API, you can reference the attribute using the $\.Attributes\.nameOfAttribute syntax. For example, if the contact in question has attributes "FirstName" and "LastName" set previously, reference them as follows:
+
+Hello $\.Attributes\.FirstName $\.Attributes\.LastName, thank you for calling\.
 
 ## Getting Customer Input Using an Amazon Lex Bot<a name="attribs-cust-input-lex-bot"></a>
 
