@@ -156,7 +156,15 @@ Length: 1\-256
 
 **InitiationMethod**  
 Indicates how the contact was initiated\.  
-Valid values: `INBOUND` \| `OUTBOUND` \| `TRANSFER` \| `CALLBACK` \| `API` \| `QUEUE_TRANSFER` 
+Valid values:  
++  `INBOUND`: The customer initiates voice \(phone\) contact with your contact center\. 
++  `OUTBOUND`: An agent initiates voice \(phone\) contact with the customer, by using the CCP to call their number\. This initiation method calls the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API\.
++  `TRANSFER`: The customer is transferred by an agent to another agent or to a queue, using quick connects in the CCP\. This results in a new CTR being created\.
++  `CALLBACK`: The customer is contacted as part of a callback flow\. 
+
+  For more information about the InitiationMethod in this scenario, see [About Queued Callbacks in Metrics](about-queued-callbacks.md)\. 
++  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
++  `QUEUE_TRANSFER`: While the customer is in one queue \(listening to Customer queue flow\), they are transferred into another queue using a contact flow block\.
 
 **InitiationTimestamp**  
 The date and time this contact was initiated, in UTC time\. For `INBOUND`, this is when the contact arrived\. For `OUTBOUND`, this is when the agent began dialing\. For `CALLBACK`, this is when the callback contact was created\. For `TRANSFER` and `QUEUE_TRANSFER`, this is when the transfer was initiated\. For `API`, this is when the request arrived\.  

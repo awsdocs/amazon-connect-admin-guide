@@ -123,6 +123,8 @@ Amazon's trademarks and trade dress may not be used in
       + [SSML Tags Supported by Amazon Connect](supported-ssml-tags.md)
    + [Set Up Contact Transfers](transfer.md)
       + [Create Quick Connects](quick-connects.md)
+      + [Delete Quick Connects](quick-connects-delete.md)
+      + [How Quick Connects Work](how-quick-connects-work.md)
       + [Resume a Contact Flow After Transfer](contact-flow-resume.md)
       + [Manage Contacts in a Queue](queue-to-queue-transfer.md)
       + [Transfer Contacts to a Specific Agent](transfer-to-agent.md)

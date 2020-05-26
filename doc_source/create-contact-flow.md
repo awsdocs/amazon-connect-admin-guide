@@ -46,6 +46,8 @@ Use these steps to create an inbound contact flow\.
 1. Search for a contact block using the **Search** bar, or expand the relevant group to locate the block\. For descriptions of the contact blocks, see [Contact Block Definitions](contact-block-definitions.md)\.
 
 1. Drag and drop contract blocks onto the canvas\. You can add blocks in any order or sequence, as connections between elements aren't required to be strictly linear\.
+**Tip**  
+You can move blocks around the canvas so the layout aligns to your preferences\. You can select multiple blocks at the same time and rearrange them as a group within a contact flow\.
 
 1. Double\-click the title of the block\. In the configuration pane, configure settings for that block and then choose **Save** to close the pane\.
 

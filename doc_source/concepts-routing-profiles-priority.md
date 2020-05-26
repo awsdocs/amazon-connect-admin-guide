@@ -46,6 +46,8 @@ This routing profile prioritizes the Tier 1 Support and Tier 2 Support queues eq
   + Customers in the Tier 4 Support queue have been waiting 80 seconds or longer\.
   + And no contacts are in the Tier 1 Support, Tier 2 Support or Tier 3 Support queues\.
 
+  **Priority takes precedence**\. \(You might think that agents take contacts from Tier 4 Support when contacts are in Tier 1 Support, Tier 2 Support, or Tier 3 Support and waiting 20 seconds or longer, but that's not right\.\) 
+
 ## Example 4: Same Priority and Delay<a name="concepts-routing-profiles-priority-example4"></a>
 
 In this example a routing profile has only two queues, and they have the same priority and delay:

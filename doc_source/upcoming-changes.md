@@ -91,7 +91,7 @@ For **Missed**, only the name of the metric changed; the underlying calculation 
 
   For example, the agent could have intentionally let the timer run out, or the agent could have forgotten to grant microphone access in the Contact Control Panel and never heard the ring\. In these situations, Amazon Connect doesn't drop the contact\. Instead, the routing engine will offer it to another available agent, while the customer continues to wait in queue\. This means a single contact could result in multiple **Agent non\-responses** before an agent responds and handles the contact\.
 
-For **On Call**, the name change to **On Contact** applies to the Real\-time metrics UI only\. You can continue using `AGENTS_ON_CALL` with the ` GetCurrentMetricData` API to retrieve data for this metric\.
+For **On Call**, the name change to **On Contact** applies to the Real\-time metrics UI only\. You can continue using `AGENTS_ON_CALL` with the `GetCurrentMetricData` API to retrieve data for this metric\.
 
 ## Label Updates for "Agent Activity" and "Contact State"<a name="upcoming-changes-labels"></a>
 

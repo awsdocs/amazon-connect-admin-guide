@@ -2,6 +2,7 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Added topic on quick connects](#doc-history) | For more information, see [How Quick Connects Work](how-quick-connects-work.md)\.  | May 21, 2020 | 
 | [Added how to get administrative support, and added a topic on inherited permissions](#doc-history) | For more information, see [Get Administrative Support for Amazon Connect](get-admin-support.md) and [About Inherited Permissions](inherited-permissions.md)\.  | April 17, 2020 | 
 | [Added how to log out agents automatically](#doc-history) | For more information, see [Log Out Agents Automatically When They Close Their CCP](automatic-logout.md)\.  | April 16, 2020 | 
 | [Updated the Get customer input block to support timeout values for voice input](#doc-history) | For more information, see [Get Customer Input](get-customer-input.md)\.  | April 8, 2020 | 
@@ -35,6 +36,7 @@
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Added topic on quick connects work |  For more information, see [How Quick Connects Work](how-quick-connects-work.md)\.   | May 21, 2020 | 
 | Added how to get administrative support, and added a topic on inherited permissions |  For more information, see [Get Administrative Support for Amazon Connect](get-admin-support.md) and [About Inherited Permissions](inherited-permissions.md)\.   | April 16, 2020 | 
 | Added how to customize your CCP to log out agents automatically when they close the CCP window |  For more information, see [Log Out Agents Automatically When They Close Their CCP](automatic-logout.md)\.   | April 16, 2020 | 
 | Updated the **Get customer input **block to support timeout values for voice input |  For more information, see [Get Customer Input](get-customer-input.md)\.   | April 8, 2020 | 

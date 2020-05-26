@@ -21,17 +21,17 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 You can configure this block to accept DTMF input, a chat response, or an Amazon Lex intent\.
 
-**DTMF tab properties**
+### DTMF tab properties<a name="get-customer-input-dtmf"></a>
 + **Audio prompt**: Select from a list of default audio prompts, or upload your own audio prompt\. 
 + **Set timeout**: Specify how long to wait while the user decides how they want to respond to the prompt\.
 
-**Amazon Lex tab properties**
+### Amazon Lex tab properties<a name="get-customer-input-lex-tab-properties"></a>
 + **Lex bot properties**: After you create your Lex bot, enter the name and alias of the bot here\. Only published bots appear in the drop\-down list\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties2.png)
 + **Session attributes**: Specify attributes that apply to the current contact's session only\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties3.png)
 
-**Configurable time\-outs for voice input**
+### Configurable time\-outs for voice input<a name="get-customer-input-configurable-timeouts"></a>
 
 To configure time\-out values for voice contacts, use the following session attributes in the **Get customer input** block that calls your Lex bot\. These attributes allow you to specify how long to wait for the customer to finish speaking before Amazon Lex collects speech input from callers, such as answering a yes/no question, or providing a date or credit card number\. 
 + **Max Speech Duration**
@@ -58,7 +58,7 @@ If you set **Max Speech Duration** to more than 15000 milliseconds, the contact 
 
   Default = 600 milliseconds \(0\.6 seconds\)
 
- **Barge\-in configuration and usage for Amazon Lex**
+### Barge\-in configuration and usage for Amazon Lex<a name="get-customer-input-bargein"></a>
 
 You can allow customers to interrupt the Amazon Lex bot mid\-sentence using their voice, without waiting for it to finishing speaking\. Customers familiar with choosing from a menu of options, for example, can now do so, without having to listen to the entire prompt\.
 
@@ -70,14 +70,14 @@ To set up this functionality, set the `barge-in-enabled` session attribute in th
   Barge\-in is disabled globally by default\. You must set the session attribute to enable it at the global, bot, or slot levels\. For more information, see [How to Use Lex Session Attributes](how-to-use-session-attributes.md)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/barge-in-session-attribute.png)
 
-**Intents**
+### Intents<a name="get-customer-input-intents"></a>
 + Enter the intents you created in Amazon Lex\. They are case sensitive\!  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-configure-get-customer-input3.png)
 
 ## Configuration tips<a name="get-customer-input-tips"></a>
 + When you use text, either for text\-to\-speech or chat, you can use a maximum of 3,000 billed characters \(6,000 total characters\)\.
 + Amazon Lex bots support both spoken utterances and keypad input when used in a contact flow\.
-+ You can prompt contacts to end their input with a pound key \# and to cancel it using the star key \*\. 
++ You can prompt contacts to end their input with a pound key \# and to cancel it using the star key \*\. When you use a Lex bot, if you don't prompt customers to end their input with \#, they will end up waiting five seconds for Lex to stop waiting for additional key presses\. It's not possible to configure Lex to wait a shorter length of time\. 
 + To control time\-out  functionality, you can use Lex session attributes in this block, or in set them in your Lex Lambda function\. If you choose to set the attributes in a Lex Lambda function, the default values are used until the Lex bot is invoked\. For more information, see [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html) in the *Amazon Lex Developer Guide*\. 
 + When you specify one of the session attributes described in this article, you can use wildcards\. They let you set multiple slots for an intent or bots\.
 

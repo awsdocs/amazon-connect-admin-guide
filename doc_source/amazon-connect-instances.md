@@ -6,6 +6,7 @@ The first step in setting up your Amazon Connect contact center is to create a v
 + When you sign up for Amazon Web Services \(AWS\), your AWS account is automatically signed up for all services in AWS, including Amazon Connect\. You are charged only for the services that you use\. To create an AWS account, see [How do I create and activate an AWS account?](http://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 + To allow an IAM user to create an instance, ensure that they have the permissions granted by the **AmazonConnectFullAccess** policy\.
 + Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
++ When you create an instance, you must decide how you want to manage users\. **You can't change the identity management option after you create the instance**\. For more information, see [Plan Your Identity Management in Amazon Connect](connect-identity-management.md)\.
 
 ## Step 1: Identity Management<a name="get-started-identity-management"></a>
 
@@ -64,17 +65,18 @@ When you create an instance, by default we create an Amazon S3 bucket\. Data, su
 
 This bucket and key are used for both recordings of conversations and exported reports\. Alternatively, you can specify separate buckets and keys for recordings of conversations and exported reports\.
 
-By default, we enable call recording, chat transcripts, exported reports, and contact flow logs\. Live media streaming is not enabled by default\.
-
-You can choose **Next step** to keep the default data storage settings, or you can customize them as follows\.
+**By default, Amazon Connect creates buckets for storing call recordings, chat transcripts, exported reports, and contact flow logs\. **
++ When a bucket is created to store call recordings, call recording is enabled at the instance level\. The next step for setting up this functionality is to [set up recording behavior in a contact flow](set-up-recordings.md)\.
++ When a bucket is created to store chat transcripts, chat transcription is enabled at the instance level\. Now all chat transcripts will be stored\. Only if you want to monitor chat conversations do you need to [set up recording behavior in a contact flow](set-up-recordings.md)\.
++ Live media streaming is not enabled by default\.
 
 **To customize the data storage settings for your instance or enable/disable certain functionality:**
 
 1. Choose **Customize settings**\.
 
-1. \(Optional\) To specify the bucket and KMS key for recordings of voice conversations, choose **Call recordings**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
+1. \(Optional\) To specify the bucket and KMS key for recordings of voice conversations, choose **Call recordings**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\. 
 
-1. \(Optional\) To specify the bucket and KMS key for recordings \(transcripts\) of chat conversations, choose **Chat transcripts**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
+1. \(Optional\) To specify the bucket and KMS key for recordings \(transcripts\) of chat conversations, choose **Chat transcripts**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\. 
 
 1. \(Optional\) To specify the bucket and KMS key for exported reports, choose **Exported reports**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
 

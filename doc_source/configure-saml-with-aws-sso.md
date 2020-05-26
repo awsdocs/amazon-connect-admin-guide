@@ -90,7 +90,7 @@ SAML requests go through the following steps:
                "Sid": "Statement1",
                "Effect": "Allow",
                "Action": "connect:GetFederationToken",
-               "Resource": "*"
+               "Resource": "*",
                "Condition": {
                    "StringEquals": {
                        "connect:InstanceID": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeeee"
@@ -123,8 +123,14 @@ After a user name \(email\) is mapped to an IAM role on an Amazon Connect instan
 ## User Provisioning Types<a name="user-provisioning-types"></a>
 
 There are two user provisioning types you need to be aware of:
-+ **Preprovisioned users**: These users must already exist in the downstream SaaS application\. For instance, you may need to create SaaS users with the same subject as the AD users\.
-+ **JIT users \(Just\-In\-Time\)**: These users do not necessarily exist in the downstream SaaS application, and will be provisioned/created/registered the first time the user federates\. You may need to enable JIT option in your SaaS application for the AD domain\.
++ **Pre\-provisioned users**: These users must already exist in the downstream SaaS application\. For example, you may need to create SaaS users with the same subject as the AD users\.
++ **JIT users \(Just\-In\-Time\)**: These users do not necessarily exist in the downstream SaaS application, They are provisioned/created/registered the first time the user federates\. You may need to enable the JIT option in your SaaS application for the AD domain\.
+
+Amazon Connect implements pre\-provisioned users when SAML authentication is used\. You need to add the users to the Amazon Connect instance before they try to sign\-on\. AWS SSO provisioning depends on the IdP you're using: 
++ If SSO or an external provider is your IdP, the pre\-provisioned users \(or manual entry\) model is used\.
++ If AD is your IdP, SSO JIT provisioning is used\.
+
+The system for cross\-domain identity management \(SCIM\) provisioning protocol is another option for supported external IdPs\. For more information, see [Manage Identities in AWS SSO](https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-identity-source-sso.html)\.
 
 ## Troubleshoot SSO Configuration<a name="troubleshooting-sso-configuration"></a>
 

@@ -2,6 +2,9 @@
 
 The following metrics are available to include in historical metrics reports in Amazon Connect\.
 
+**Tip**  
+Developers can use the [GetMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API to get a subset of the following historical metrics from the specified Amazon Connect instance\.
+
 **After contact work time**  <a name="acw-historical"></a>
 The total time that an agent spent doing ACW for a contact\.   
 You specify the amount of time an agent has to do ACW in their [ agent configuration settings](configure-agents.md)\. When a conversation with a contact ends, the agent is automatically allocated to do ACW for the contact\. They stop doing ACW for a contact when they indicate they are ready for another contact in the CCP\.  

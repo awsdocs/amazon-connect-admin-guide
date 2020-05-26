@@ -11,7 +11,7 @@ Agents and contacts are stored on separate, stereo audio channels\.
 + The agent audio is stored in the right channel\. 
 + All incoming audio, including the customer and anyone conferenced in, is stored in the left channel\. 
 
-Recordings are stored in the Amazon S3 bucket that you [specify for your instance](update-instance-settings.md)\. This allows access by any user or application with the appropriate permissions\. Encryption is enabled by default for all call recordings using Amazon S3 server\-side encryption with KMS\. The encryption is at the object level\. The reports and recording objects are encrypted; there's no encryption at the bucket level\.
+Recordings are stored in the Amazon S3 bucket that are [created for your instance](amazon-connect-instances.md#get-started-data-storage)\. Any user or application with the appropriate permissions can access the recordings in the Amazon S3 bucket\. Encryption is enabled by default for all call recordings using Amazon S3 server\-side encryption with KMS\. The encryption is at the object level\. The reports and recording objects are encrypted; there's no encryption at the bucket level\.
 
 You shouldn't disable encryption\.
 

@@ -27,7 +27,7 @@ If you need more phone numbers, you can request a service quota increase using t
 
 ## Claim a Phone Number in Another Country<a name="another-country"></a>
 
-Let's say your business is located in Germany\. You also have agents in Japan to serve customers who live there, and you need a Japanese phone number for that contact center\. To claim a phone number in another country, use the following steps to create a support case\.
+Let's say your business is located in Germany\. You also have agents in Japan to serve customers who live there, and you need a Japanese phone number for that contact center\. To claim a phone number that you already own in another country, use the following steps to create a support case\. To claim a number that you don’t already own in another country, see [Request a Special Phone Number](#special-request)\.
 
 1. Go to [Create case](https://console.aws.amazon.com/support/cases#/create)\.
 
@@ -45,7 +45,7 @@ We'll contact you to help with your request\.
 
 ## Request a Special Phone Number<a name="special-request"></a>
 
-To request a special phone number that you don't already own, create a support case\. It can take 2\-6 weeks for us to fulfill your request\.
+To request a special phone number that you don't already own, or a phone number that you don’t already own in another country, create a support case\. It can take 2\-6 weeks for us to fulfill your request\.
 
 1. Go to [Create case](https://console.aws.amazon.com/support/cases#/create)\.
 

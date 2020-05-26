@@ -6,6 +6,7 @@ A conversation is recorded only when the contact is connected to an agent\. The 
 
 **Important**  
 The monitor feature works only when recording is enabled on a contact flow\. For instructions, see [Set Up Recording Behavior](set-up-recordings.md)\. 
+You do not need [call recording enabled at the instance level](amazon-connect-instances.md#get-started-data-storage) in order to monitor live conversations\. This way, businesses have the option of monitoring agents but not recording their calls\. 
 
 ## Assign Permissions to Monitor Live Conversations<a name="monitor-conversations-permissions"></a>
 

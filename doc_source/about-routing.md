@@ -29,6 +29,6 @@ To learn how to set up multiple channels, see [Create a Routing Profile](routing
 ## Learn More About Routing<a name="learn-more-about-routing"></a>
 
 See the following topics to learn more about routing:
-+ [Routing Profiles](concepts-routing.md)\. 
++ [Routing Profiles](concepts-routing.md) 
 + [Queue\-Based Routing](concepts-queue-based-routing.md)
 + [Set Up Queue\-Based Routing](set-up-queue-based-routing.md) 
