@@ -74,7 +74,7 @@ For more information about enabling and using contact flow logs, see [Enable Con
 
 1. In the contact flow designer, open the contact flow you want to roll back\.
 
-1. Use the drop\-down to choose the version of the contact flow you want to roll back to\. If you choose **Latest**, it reverts the flow to the most recent published version\. If there isn't a published version, it reverts to the most recent saved version\. 
+1. Use the drop\-down to choose the version of the contact flow you want to roll back to\. If you have the option to choose **Latest**, it reverts the flow to the most recent published version\. If there isn't a published version, it reverts to the most recent saved version\. If you have the option to Revert to last saved it will revert the contact flow designer layout to the last saved version or if you have the option to Revert to last published it will revert the contact flow designer layout to the last published version of that flow\.
 **Note**  
 To see a consolidated view of all changes across all flows, click the **View historical changes** link at the bottom of the Contact flows page\. You can filter to a specific flow by date or user name\.
 
