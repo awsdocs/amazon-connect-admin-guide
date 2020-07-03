@@ -1,4 +1,4 @@
-# Set Up Your Network<a name="ccp-networking"></a>
+# Set up your network<a name="ccp-networking"></a>
 
 Traditional VoIP solutions require you to allow both inbound and outbound for specific UDP port ranges and IPs, such as 80 and 443\. These solutions also apply to TCP\. In comparison, the network requirements for using the Contact Control Panel \(CCP\) with a softphone are less intrusive\. You can establish persistent outbound send/receive connections through your web browser\. As a result, you don't need to open a client\-side port to listen for inbound traffic\. 
 
@@ -8,7 +8,7 @@ The following diagram shows you what each port is used for\.
 
 The following sections describe the two primary connectivity options for using the CCP\. 
 
-## Option 1 \(Recommended\): Replace Amazon EC2 and CloudFront IP Range Requirements with a Domain Allow List<a name="option1"></a>
+## Option 1 \(recommended\): Replace Amazon EC2 and CloudFront IP range requirements with a domain allow list<a name="option1"></a>
 
 This first option lets you significantly reduce your blast radius\. 
 
@@ -27,7 +27,7 @@ To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as
 | \*\.execute\-api\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | participant\.connect\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \*\.transport\.connect\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com To instead add specific endpoints to your allow list based on Region, see [NLB Endpoints](#nlb-endpoints)\.   | Replace \{region\} with the location of your Amazon Connect instance | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+| TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com To instead add specific endpoints to your allow list based on Region, see [NLB endpoints](#nlb-endpoints)\.   | Replace \{region\} with the location of your Amazon Connect instance | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
 
 **Note**  
 The new region telecom endpoints follow a different format\. Here's a complete list of telecom endpoints:  
@@ -60,7 +60,7 @@ The following table lists the CloudFront domains used for static assets if you w
 | eu\-west\-2  | https://dl32tyuy2mmv6\.cloudfront\.net/  https://d2p8ibh10q5exz\.cloudfront\.net/  | 
 | ap\-southeast\-1  | https://d2g7up6vqvaq2o\.cloudfront\.net/  https://d12o1dl1h4w0xc\.cloudfront\.net/  | 
 
-### NLB Endpoints<a name="nlb-endpoints"></a>
+### NLB endpoints<a name="nlb-endpoints"></a>
 
 The following table lists the specific endpoints for the Region the Amazon Connect instance is in\. If you don't want to use the TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com wildcard, you can use add these endpoints to your allow list instead\.
 
@@ -75,11 +75,11 @@ The following table lists the specific endpoints for the Region the Amazon Conne
 | eu\-west\-2  | TurnNlb\-1dc64a459ead57ea\.elb\.eu\-west\-2\.amazonaws\.com | 
 | ap\-southeast\-1  | TurnNlb\-261982506d86d300\.elb\.ap\-southeast\-1\.amazonaws\.com | 
 
-## Option 2 \(Not Recommended\): Allow IP Address Ranges<a name="option2"></a>
+## Option 2 \(not recommended\): Allow IP address ranges<a name="option2"></a>
 
 The second option relies on using an allow list, also known as whitelisting, the IP addresses used by Amazon Connect\. You create this allow list using the IP addresses in the [AWS ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file\. 
 
-For more information about this file, see [About Amazon Connect IP Address Ranges](#about-connect-ip-address-range)\.
+For more information about this file, see [About Amazon Connect IP address ranges](#about-connect-ip-address-range)\.
 
 
 | IP\-Ranges entry | AWS Region | Ports/Protocols | Direction | Traffic | 
@@ -93,7 +93,7 @@ If you don't see an entry for your region, use GLOBAL\. For example, there isn't
 
 \*CloudFront serves static content such as images or javascript from an edge location that has the lowest latency in relation to where your agents are located\. IP range allow lists for CloudFront are global and require all IP ranges associated with **"service": "CLOUDFRONT"** in the ip\-ranges\.json file\. 
 
-## About Amazon Connect IP Address Ranges<a name="about-connect-ip-address-range"></a>
+## About Amazon Connect IP address ranges<a name="about-connect-ip-address-range"></a>
 
 In the [AWS ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file, the whole /19 IP address range is owned by Amazon Connect\. All traffic to and from the /19 range comes to and from Amazon Connect\.
 
@@ -120,7 +120,7 @@ When there are new IP address ranges supported for Amazon Connect, they are adde
 
 For more information about this file and IP address ranges in AWS, see [AWS IP Address Ranges](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html)\.
 
-## Stateless Firewalls<a name="stateless-firewalls"></a>
+## Stateless firewalls<a name="stateless-firewalls"></a>
 
 If you're using a stateless firewall for both options, use the requirements described in the previous sections\. Then you must add to your allow list the ephemeral port range used by your browser, as shown in the following table\. 
 
@@ -129,7 +129,7 @@ If you're using a stateless firewall for both options, use the requirements desc
 | --- | --- | --- | --- | 
 | AMAZON\_CONNECT | 49152\-65535 \(UDP\) | INBOUND | SEND/RECEIVE | 
 
-## Allow DNS Resolution for Softphones<a name="allow-dns-resolution"></a>
+## Allow DNS resolution for softphones<a name="allow-dns-resolution"></a>
 
 If you already added Amazon Connect IP ranges to your allow list, and you don’t have any restriction on DNS name resolution, then you don't need to add **TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com** to your allow list\.
 + To check whether there are restrictions on DNS name resolution, while on your network, use the `nslookup` command\. For example: 
@@ -141,7 +141,7 @@ If you can't resolve the DNS, you must add **TurnNlb\-\*\.elb\.\{region\}\.amazo
 If you don't allow this domain, your agents will get the following error in their Contact Control Panel \(CCP\) when they try to answer a call: 
 + Failed to establish softphone connection\. Try again or contact your administrator with the following: Browser unable to establish media channel with turn:TurnNlb\-xxxxxxxxxxxxx\.elb\.\{region\}\.amazonaws\.com:3478?transport=udp
 
-## Port and Protocol Considerations<a name="port-considerations"></a>
+## Port and protocol considerations<a name="port-considerations"></a>
 
 Consider the following when implementing your network configuration changes for Amazon Connect:
 + You need to allow traffic for all addresses and ranges for the Region in which you created your Amazon Connect instance\.
@@ -150,7 +150,7 @@ Consider the following when implementing your network configuration changes for 
 + Once ip\-ranges\.json is updated, the associated AWS service will begin using the updated IP ranges after 30 days\. To avoid intermittent connectivity issues when the service begins routing traffic to the new IP ranges, be sure to add the new IP ranges to your allow list, within 30 days from the time they were added to ip\-ranges\.json\.
 + If you are using a custom CCP with the Amazon Connect Streams API, you can create a media\-less CCP that does not require opening ports for communication with Amazon Connect, but still requires ports opened for communication with Amazon EC2 and CloudFront\.
 
-## Region Selection Considerations<a name="ccp-region-selection"></a>
+## Region selection considerations<a name="ccp-region-selection"></a>
 
 Amazon Connect Region selection is contingent upon data governance requirements, use case, services available in each Region, and latency in relation to your agents, contacts, and external transfer endpoint geography\.
 + **Agent location/network**—CCP connectivity traverses the public WAN, so it is important that the workstation has the lowest latency and fewest hops possible, specifically to the AWS Region where your resources and Amazon Connect instance are hosted\. For example, hub and spoke networks that need to make several hops to reach an edge router can add latency and reduce the quality of experience\.
@@ -161,11 +161,11 @@ Amazon Connect Region selection is contingent upon data governance requirements,
   For optimal performance, and to limit the latency for your customers when they call in to your contact center, create your Amazon Connect instance in the Region that is geographically closest to where your customers call from\. You might consider creating multiple Amazon Connect instances, and providing contact information to customers for the number that is closest to where they call from\.
 + **External transfers**—from Amazon Connect remain anchored to your Amazon Connect Region endpoint for the duration of the call\. Per\-minute usage continues to accrue until the call is disconnected by the recipient of the transferred call\. The call is not recorded after the agent drops or the transfer completes\. The CTR data and associated call recording of a transferred call are generated after the call is terminated\. Whenever possible, don't transfer calls that could be transferred back into Amazon Connect, known as circular transfers, to avoid compounding PSTN latency\.
 
-## Agents Using Amazon Connect Remotely<a name="remote-agents"></a>
+## Agents using Amazon Connect remotely<a name="remote-agents"></a>
 
 Remote agents, those that use Amazon Connect from a location other than those connected to your organization's main network, may experience issues relating to their local network if they have an unstable connection, packet loss, or high latency\. This is compounded if a VPN is required to access resources\. Ideally, the agents are located close to the AWS Region where your AWS resources and Amazon Connect instance are hosted, and have a stable connection to the public WAN\.
 
-## Rerouting Audio<a name="reroute-audio"></a>
+## Rerouting audio<a name="reroute-audio"></a>
 
 When rerouting audio to an existing device, consider the location of the device in relation to your Amazon Connect Region\. This is so you can account for potential additional latency\. If you reroute your audio, whenever there is a call intended for the agent, an outbound call is placed to the configured device\. When the agent answers the device, that agent is connected with the caller\. If the agent does not answer their device, they are moved into a missed contact state until they or a supervisor changes their state back to available\.
 

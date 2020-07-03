@@ -1,8 +1,8 @@
-# Contact Trace Records \(CTR\) Data Model<a name="ctr-data-model"></a>
+# Contact trace records \(CTR\) data model<a name="ctr-data-model"></a>
 
 This article describes the data model for Amazon Connect contact trace records \(CTRs\)\. CTRs capture the events associated with a contact in your contact center\. Real\-time and historical metrics are based on the data captured in the CTRs\.
 
-For the CTR retention period and maximum size of the CTR attributes section, see [Feature Specifications](amazon-connect-service-limits.md#feature-limits)\.
+For the CTR retention period and maximum size of the CTR attributes section, see [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.
 
 **Tip**  
 Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for multiple reasons, such as new information arriving after initial delivery\. If you're building a system that consumes CTR export streams, be sure to include logic that checks for duplicate CTRs for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
@@ -162,7 +162,7 @@ Valid values:
 +  `TRANSFER`: The customer is transferred by an agent to another agent or to a queue, using quick connects in the CCP\. This results in a new CTR being created\.
 +  `CALLBACK`: The customer is contacted as part of a callback flow\. 
 
-  For more information about the InitiationMethod in this scenario, see [About Queued Callbacks in Metrics](about-queued-callbacks.md)\. 
+  For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 +  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
 +  `QUEUE_TRANSFER`: While the customer is in one queue \(listening to Customer queue flow\), they are transferred into another queue using a contact flow block\.
 
@@ -345,7 +345,7 @@ The name of the routing profile\.
 Type: String  
 Length: 1\-100
 
-## How to Identify Abandoned Contacts<a name="abandoned-contact"></a>
+## How to identify abandoned contacts<a name="abandoned-contact"></a>
 
 An abandoned contact refers to a contact that was disconnected by the customer while in queue\. This means that they weren't connected to an agent\. 
 

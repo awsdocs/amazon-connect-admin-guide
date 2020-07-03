@@ -1,4 +1,4 @@
-# Security Profile Permissions for Content Lens<a name="permissions-for-contact-lens"></a>
+# Security profile permissions for Contact Lens<a name="permissions-for-contact-lens"></a>
 
 To use Contact Lens for Amazon Connect, a user needs **View** permissions for **Contact search**\. These are the same permissions that allow a user to access a customer's Contact Trace Record \(CTR\)\.
 

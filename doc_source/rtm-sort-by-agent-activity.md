@@ -1,4 +1,4 @@
-# Sort Agents By Activity in a Real\-Time Metrics Report<a name="rtm-sort-by-agent-activity"></a>
+# Sort agents by activity in a real\-time metrics report<a name="rtm-sort-by-agent-activity"></a>
 
 On the real\-time metrics **Agents** report, you can sort agents by **Activity** when agents are enabled to use the same channel\.
 

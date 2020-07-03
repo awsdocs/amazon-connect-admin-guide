@@ -1,4 +1,4 @@
-# View How Many Contacts Are Waiting In Queue<a name="view-contacts-in-queue"></a>
+# View how many contacts are waiting in queue<a name="view-contacts-in-queue"></a>
 
 **To see the number of customers waiting in queue**
 

@@ -1,4 +1,4 @@
-# Best Practices for HIPAA Compliance in Amazon Connect<a name="compliance-validation-best-practices-HIPAA"></a>
+# Best practices for HIPAA compliance in Amazon Connect<a name="compliance-validation-best-practices-HIPAA"></a>
 
 Following this list of best practices can help you ensure your Amazon Connect contact center is HIPAA compliant\. 
 + Conduct compliance eligibility audits for all services used in your contact center, as well as any third party integration points\.

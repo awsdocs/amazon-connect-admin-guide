@@ -1,4 +1,4 @@
-# Add Text\-to\-Speech to Prompts<a name="text-to-speech"></a>
+# Add text\-to\-speech to prompts<a name="text-to-speech"></a>
 
 You can enter text\-to\-speech prompts in the following contact flow blocks: 
 + [Get Customer Input](get-customer-input.md) 

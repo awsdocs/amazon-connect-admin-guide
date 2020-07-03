@@ -1,4 +1,4 @@
-# Create a Security Profile<a name="create-security-profile"></a>
+# Create a security profile<a name="create-security-profile"></a>
 
 Creating a security profile enables you to grant your users only the permissions that they need\.
 

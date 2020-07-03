@@ -1,4 +1,4 @@
-# Queues: Standard and Agent<a name="concepts-queues-standard-and-agent"></a>
+# Queues: standard and agent<a name="concepts-queues-standard-and-agent"></a>
 
 There are two types of queues:
 + **Standard queues**: This is where contacts wait before they are routed to and accepted by agents\.
@@ -18,3 +18,7 @@ When an agent gets a contact from a standard queue, the contact never appears in
 
 **Tip**  
 The metrics APIs don't support agent queues\.
+
+## Default queue: BasicQueue<a name="concepts-default-queue"></a>
+
+Amazon Connect includes a default queue named **BasicQueue**\. Along with the [default contact flows](contact-flow-default.md) and default routing profile \(named **Basic routing profile**\), it powers your contact center so you don't need to do any customization\. This is what enables you to get started quickly\. 

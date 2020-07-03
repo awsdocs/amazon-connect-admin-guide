@@ -1,10 +1,9 @@
-# Using the CCP \(the Agent UI\)<a name="agent-user-guide"></a>
+# Agent training guide for the CCP<a name="agent-user-guide"></a>
 
 Agents use the Amazon Connect Contact Control Panel \(CCP\) to interact with customer contacts\. It's how they receive calls, chat with contacts, transfer them to other agents, put them on hold, and perform other key tasks\.
 
 The URL to launch the CCP is:
-
-**https://*name of your instance*\.awsapps\.com/connect/ccp\-v2/**
++ **https://*name of your instance*\.awsapps\.com/connect/ccp\-v2/**
 
 Large businesses often choose to customize their CCP\. For example, they might want to integrate it with a CRM\. However, this section describes how CCP works before it is customized\.
 
@@ -15,11 +14,13 @@ The following image shows the CCP\.
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-intro.png)
 
 **Topics**
++ [Training video](ccp-video-training.md)
++ [Agent training cheat sheet](ccp-cheat-sheet.md)
 + [Launch the CCP](launch-CCP.md)
-+ [Log In and Log Out of the CCP](ccp-login.md)
-+ [Set Your Status to Available](set-status-available.md)
-+ [Chat with Contacts](work-with-chats.md)
-+ [Transfer Chats to Another Queue](transfer-chats.md)
-+ [Call Another Agent While on a Chat](call-and-chat.md)
-+ [Accept Incoming Calls](work-with-calls.md)
-+ [Transfer Calls](transfers.md)
++ [Log in and log out of the CCP](ccp-login.md)
++ [Set your status to available](set-status-available.md)
++ [Chat with contacts](work-with-chats.md)
++ [Transfer chats to another queue](transfer-chats.md)
++ [Make a call while on a chat](call-and-chat.md)
++ [Accept incoming calls](work-with-calls.md)
++ [Transfer calls](transfers.md)

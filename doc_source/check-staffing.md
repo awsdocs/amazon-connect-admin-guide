@@ -1,9 +1,9 @@
 # Contact Block: Check Staffing<a name="check-staffing"></a>
 
-## In contact flow types<a name="check-staffing-types"></a>
+## Contact flow types<a name="check-staffing-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic contact flow
++ Inbound contact flow
 + Customer queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
@@ -15,6 +15,11 @@ You can use this block in the following [contact flow types](create-contact-flow
 ## Properties<a name="check-staffing-properties"></a>
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-staffing-properties.png)
+
+In the **Status to check** dropdown box, choose one of the following options:
++ **Available** = Check whether the agent has **Available** slots to be routed a contact\.
++ **Staffed** = Check whether agents have **Available** slots, or are **On call**, or are in **After Contact Work**\.
++ **Online** = Check whether agents are in the **Available** or **Staffed** state, or if they are **Offline**\.
 
 ## Configuration tips<a name="check-staffing-tips"></a>
 + You must set a queue before using a **Check staffing** block in your contact flow\. You can use a [Set Working Queue](set-working-queue.md) block to set the queue\.
@@ -30,4 +35,4 @@ When this block is configured, it looks similar to the following image:
 ## Scenarios<a name="check-staffing-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Transfer Contacts to a Specific Agent](transfer-to-agent.md)
++ [Transfer contacts to a specific agent](transfer-to-agent.md)

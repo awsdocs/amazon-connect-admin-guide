@@ -1,4 +1,4 @@
-# Real\-time Metrics Definitions<a name="real-time-metrics-definitions"></a>
+# Real\-time metrics definitions<a name="real-time-metrics-definitions"></a>
 
 The following metrics are available to include in real\-time metrics reports in Amazon Connect\. The metrics available to include in a report depend on the report type\.
 
@@ -17,9 +17,11 @@ In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIRef
 
 ## ACW<a name="aftercallwork-real-time"></a>
 
-Count of contacts who are in an **AfterContactWork** state\.
+Count of contacts who are in an **AfterContactWork** state\. After a conversation between an agent and customer ends, the contact is moved into the ACW state\.
 
-In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `AGENTS_AFTER_CONTACT_WORK`\.
+In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `AGENTS_AFTER_CONTACT_WORK`\. The name of this metric is confusing because in the Amazon Connect console, ACW counts the number of *contacts* who are in an ACW state, not the number of agents\. 
+
+To learn more about agent status and contact states, see [About agent status](metrics-agent-status.md) and [About contact states](about-contact-states.md)\.
 
 ## Agent Activity<a name="agent-activity-state-real-time"></a>
 
@@ -112,6 +114,10 @@ Average time, in seconds, that abandoned contacts were in the queue before being
 
 Average time, in seconds, that contacts spent in the **After contact work** state, during the specified time range\.
 
+This is not the average amount of time agents spent on contacts\. 
+
+To learn more about agent status and contact states, see [About agent status](metrics-agent-status.md) and [About contact states](about-contact-states.md)\.
+
 ## Avg hold time<a name="average-hold-time-real-time"></a>
 
 Average time, in seconds, that a contact in the queue was on hold\.
@@ -182,7 +188,7 @@ Count of contacts that disconnected while the customer was on hold\. A disconnec
 
 Count of contacts currently in the queue\.
 
-To learn how this is different from Scheduled contacts in a callback scenario, see [How Initial Delay Affects Scheduled and In Queue Metrics](scheduled-vs-inqueue.md)\. 
+To learn how this is different from Scheduled contacts in a callback scenario, see [How Initial delay affects Scheduled and In queue metrics](scheduled-vs-inqueue.md)\. 
 
 In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `CONTACTS_IN_QUEUE`\.
 
@@ -195,11 +201,12 @@ The longest time that a contact spent waiting in the queue\. This includes all c
 Count of agents who have set their status in the CCP to a custom status\. That is, their CCP status is other than **Available** or **Offline**\.
 
 **Tip**  
-Agents can handle contacts while their CCP status is set to a custom status\. For example, agents can be **On call** or doing **ACW** for a contact while their CCP is set to a custom status\. This means it's possible for agents to be counted as **On call** and **NPT** at the same time\.
+Although agents aren't routed any *new inbound* contacts while their CCP status is set to a custom status, it's possible for them to change their CCP status to a custom status while still handling a contact\. For example, let's say an agent is being routed contacts very quickly\. To go on break, they set their status to **Break** proactively, while still finishing up the last contact\. This allows them to go on break and avoid accidentally missing a contact that's routed to them in the sliver of time between the last contact ending and setting their status to Break\.   
+Because agents can be **On call** or doing **ACW**, for example, while their CCP is set to a custom status, this means it's possible for agents to be counted as **On call** and **NPT** at the same time\.
 
 In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `AGENTS_NON_PRODUCTIVE`\.
 
-## Occupancy<a name="occupancy-real-time"></a>
+## Occupancy \(deprecated June, 2020\)<a name="occupancy-real-time"></a>
 
 Percentage of time that an agent was active on contacts\. This percentage is calculated as follows:
 
@@ -254,7 +261,7 @@ The routing profile for the agent\.
 
 Count of customers in the queue for which there is a callback scheduled\.
 
-To learn how this is different from In queue contacts in a callback scenario, see [How Initial Delay Affects Scheduled and In Queue Metrics](scheduled-vs-inqueue.md)\. 
+To learn how this is different from In queue contacts in a callback scenario, see [How Initial delay affects Scheduled and In queue metrics](scheduled-vs-inqueue.md)\. 
 
 In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `CONTACTS_SCHEDULED`\.
 

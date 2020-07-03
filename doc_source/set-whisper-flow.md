@@ -1,9 +1,9 @@
 # Contact Block: Set Whisper Flow<a name="set-whisper-flow"></a>
 
-## In contact flow types<a name="set-voice-types"></a>
+## Contact flow types<a name="set-voice-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic Contact flow
++ Inbound contact flow
 + Customer Queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
@@ -19,7 +19,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 If you choose to **Select a flow**, you can only select from flows that are type **Agent Whisper** or **Customer Whisper**\.
 
-For information about using attributes, see [Use Amazon Connect Contact Attributes](connect-contact-attributes.md)\.
+For information about using attributes, see [Use Amazon Connect contact attributes](connect-contact-attributes.md)\.
 
 ## Configured block<a name="set-voice-configured"></a>
 

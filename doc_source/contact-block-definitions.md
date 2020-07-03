@@ -7,7 +7,7 @@ The following table lists all available contact blocks that you can use\. Choose
 
 | Block | Description | 
 | --- | --- | 
-| [Call Phone Number](call-phone-number.md)  | Initiates an outbound call from an outbound whisper flow\. | 
+| [Track events in contact flowsStorage for contact flow logsCall Phone Number](call-phone-number.md)  | Initiates an outbound call from an outbound whisper flow\. | 
 |  [Change Routing Priority / Age](change-routing-priority.md)   |  Changes the priority of the contact in queue\. You may want to do this, for example, based on the contact's issue or other variable\.  | 
 |  [Check Contact Attributes](check-contact-attributes.md)   |  Checks the values of contact attributes\.  | 
 |   [Check Hours of Operation](check-hours-of-operation.md)  |  Checks whether the contact is occurring within or outside of the hours of operation defined for the queue\.  | 

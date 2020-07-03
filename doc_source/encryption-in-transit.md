@@ -1,4 +1,4 @@
-# Encryption in Transit<a name="encryption-in-transit"></a>
+# Encryption in transit<a name="encryption-in-transit"></a>
 
 All data exchanged with Amazon Connect is protected in transit between the user’s web browser and Amazon Connect using industry\-standard TLS encryption\. 
 

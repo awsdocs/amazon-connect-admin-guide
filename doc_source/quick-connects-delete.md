@@ -1,4 +1,4 @@
-# Delete Quick Connects<a name="quick-connects-delete"></a>
+# Delete quick connects<a name="quick-connects-delete"></a>
 
 At this time you can't delete quick connects\. You can reuse them by changing the type, destination, and contact flow on the **Quick connects** page\.
 

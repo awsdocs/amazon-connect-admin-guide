@@ -1,8 +1,8 @@
-# How to Use System Metric Attributes<a name="attrib-system-metrics"></a>
+# How to use system metric attributes<a name="attrib-system-metrics"></a>
 
 Amazon Connect includes system metric attributes that can help you define routing conditions in your contact flows based on real\-time metrics about the queues and agents in your contact center\. When you include a **Get queue metrics** block in your contact flow, metrics are retrieved for the current working queue, or other queue that you specify, and returned as attributes that you can reference in blocks that occur after that block in the flow\.
 
-You can reference the metric attributes returned to determine the optimal route for a contact\. Check the current queue metrics, such as the number of contacts or available agents in a queue, and how long the oldest contact has been in a queue\. You could even get metrics for multiple queues and use a **Set contact attributes** block to store the metric attributes for each queue\. You could then compare queue metric attributes using a **Check contact attributes** block, and route the contact to the queue with the fewest calls in it, or to a callback if all queues are busy\. To learn more about the metric attributes available, see [System Metrics Attributes](connect-attrib-list.md#attribs-system-metrics-table)\.
+You can reference the metric attributes returned to determine the optimal route for a contact\. Check the current queue metrics, such as the number of contacts or available agents in a queue, and how long the oldest contact has been in a queue\. You could even get metrics for multiple queues and use a **Set contact attributes** block to store the metric attributes for each queue\. You could then compare queue metric attributes using a **Check contact attributes** block, and route the contact to the queue with the fewest calls in it, or to a callback if all queues are busy\. To learn more about the metric attributes available, see [System metrics attributes](connect-attrib-list.md#attribs-system-metrics-table)\.
 
 **To use system metrics attributes in a contact flow**
 
@@ -32,7 +32,7 @@ You can reference the metric attributes returned to determine the optimal route 
 
 1. Save and publish the contact flow to make it available in your contact center\.
 
-## System Attributes for Contact Flows<a name="system-attributes"></a>
+## System attributes for contact flows<a name="system-attributes"></a>
 
 When creating a contact flow, use the following system attributes in Amazon Connect:
 + **Customer number**—The phone number of the customer\. When used in an outbound whisper flow, this is the number that the agents dialed to reach the customer\. When used in inbound flows, this is the number from which the customer placed the call\. This attribute is included in the CTRs and Lambda input object under CustomerEndpoint\.

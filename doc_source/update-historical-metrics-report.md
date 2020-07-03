@@ -1,4 +1,4 @@
-# Update a Historical Metrics Report<a name="update-historical-metrics-report"></a>
+# Update a historical metrics report<a name="update-historical-metrics-report"></a>
 
 After you save a report, you can update it at any time\.
 

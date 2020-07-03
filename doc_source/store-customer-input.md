@@ -1,9 +1,9 @@
 # Contact Block: Store Customer Input<a name="store-customer-input"></a>
 
-## In contact flow types<a name="store-customer-input-types"></a>
+## Contact flow types<a name="store-customer-input-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic flow
++ Inbound contact flow
 + Customer Queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
@@ -52,10 +52,10 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="store-customer-input-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Secure Input with Agent](sample-secure-input-with-agent.md)
-+ [Sample Secure Input with No Agent](sample-secure-input-with-noagent.md) 
-+ [Sample Queue Configurations](sample-queue-configurations.md) 
-+ [Sample Queued Callback](sample-queued-callback.md) 
++ [Sample secure input with agent](sample-secure-input-with-agent.md)
++ [Sample secure input with no agent](sample-secure-input-with-noagent.md) 
++ [Sample queue configurations](sample-queue-configurations.md) 
++ [Sample queued callback](sample-queued-callback.md) 
 
 ## Scenarios<a name="store-customer-input-scenarios"></a>
 

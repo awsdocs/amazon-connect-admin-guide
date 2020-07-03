@@ -1,4 +1,4 @@
-# About Sentiment Scores and Non\-Talk Time<a name="sentiment-scores"></a>
+# About sentiment scores and non\-talk time<a name="sentiment-scores"></a>
 
 
 |  | 
@@ -11,7 +11,7 @@ To determine the sentiment score, Contact Lens for Amazon Connect analyzes the s
 
 The final sentiment score for the entire conversation is an average of the scores assigned during the call\.
 
-## Non\-Talk Time<a name="non-talk-time"></a>
+## Non\-talk time<a name="non-talk-time"></a>
 
 Contact Lens for Amazon Connect also identifies the amount of *non\-talk time******* in a call\. Non\-talk time = hold time \+ any silence where both participants aren't talking for more than 3 seconds\. This duration can't be customized\.
 

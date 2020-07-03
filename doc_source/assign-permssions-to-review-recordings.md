@@ -1,4 +1,4 @@
-# Assign Permissions to Review Recordings of Past Conversations<a name="assign-permssions-to-review-recordings"></a>
+# Assign permissions to review recordings of past conversations<a name="assign-permssions-to-review-recordings"></a>
 
 These permissions enable managers to access recordings of past conversations\. 
 

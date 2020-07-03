@@ -1,4 +1,4 @@
-# Use Contact Attributes in the CCP<a name="use-attribs-ccp"></a>
+# Use contact attributes in the CCP<a name="use-attribs-ccp"></a>
 
 Contact attributes also let you capture information and then present that information in a screenpop to an agent in the Contact Control Panel \(CCP\)\. Use contact attributes to customize the agent experience when using the CCP integrated with a customer relationship management \(CRM\) application\. Also use them when integrating Amazon Connect with a custom application using the Amazon Connect Streams API or Amazon Connect API\. You can use all user\-defined attributes, in addition to the customer number and the dialed number, in the CCP using the Amazon Connect Streams JavaScript library\. For more information, see [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams) or Amazon Connect API\.
 

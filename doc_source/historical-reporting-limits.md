@@ -1,4 +1,4 @@
-# Historical Report Limits<a name="historical-reporting-limits"></a>
+# Historical report limits<a name="historical-reporting-limits"></a>
 
 Historical metrics reports have the following limits:
 
@@ -11,9 +11,9 @@ Historical metrics reports have the following limits:
   + 101\-200
   + 201\-256
 
-  For a workaround so you can download hundreds or thousands of results, see [Download All Historical Metric Results](download-historical-metrics-report.md#download-all-historical-metrics)\.
+  For a workaround so you can download hundreds or thousands of results, see [Download all historical metric results](download-historical-metrics-report.md#download-all-historical-metrics)\.
 
-**80k Cell Limit**
+**80k cell limit**
 
 There is currently an 80k cell limitation on historical metrics reports and scheduled reports\. This applies to the total number of cells \(columns \* rows\), accounting for grouping and filtering\. 
 

@@ -1,4 +1,4 @@
-# Best Practices for PII Compliance in Amazon Connect<a name="compliance-validation-best-practices-PII"></a>
+# Best practices for PII compliance in Amazon Connect<a name="compliance-validation-best-practices-PII"></a>
 
 Following this list of best practices can help you ensure your Amazon Connect contact center is PII \(Personally Identifiable Information\) compliant\. 
 + Conduct compliance eligibility audits for all services used in your contact center, as well as any third party integration points\.

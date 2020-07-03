@@ -1,4 +1,4 @@
-# Update Security Profiles<a name="update-security-profiles"></a>
+# Update security profiles<a name="update-security-profiles"></a>
 
 You can update a security profile at any time\.
 

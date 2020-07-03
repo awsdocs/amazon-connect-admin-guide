@@ -1,9 +1,9 @@
 # Contact Block: Stop Media Streaming<a name="stop-media-streaming"></a>
 
-## In contact flow types<a name="stop-media-streaming-types"></a>
+## Contact flow types<a name="stop-media-streaming-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic Contact flow
++ Inbound contact flow
 + Customer Queue flow
 + Customer Whisper flow
 + Outbound Whisper flow
@@ -20,7 +20,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 This block doesn't have any properties\.
 
 ## Configuration tips<a name="stop-media-streaming-tips"></a>
-+ You must enable live media streaming in your instance to successfully capture customer audio\. For instructions, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\.
++ You must enable live media streaming in your instance to successfully capture customer audio\. For instructions, see [Capture customer audio: live media streaming](customer-voice-streams.md)\.
 + Customer audio is captured until a **Stop media streaming** block is invoked, even if the contact is passed to another contact flow\.
 + If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.
 
@@ -32,4 +32,4 @@ When this block is configured, it looks similar to the following image:
 
 ## Sample flows<a name="stop-media-streaming-samples"></a>
 
-[Example Contact Flow for Testing Live Media Streaming](use-media-streams-blocks.md) 
+[Example contact flow for testing live media streaming](use-media-streams-blocks.md) 

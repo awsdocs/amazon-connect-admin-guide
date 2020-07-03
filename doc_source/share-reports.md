@@ -1,4 +1,4 @@
-# Share Custom Reports<a name="share-reports"></a>
+# Share custom reports<a name="share-reports"></a>
 
 You can only share reports that you create and save\. This means you need the following permissions in your security profile to share reports: **Access metrics** and **Create** saved reports\. 
 

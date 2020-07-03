@@ -1,4 +1,4 @@
-# Region Requirements for Phone Numbers<a name="phone-number-requirements"></a>
+# Region requirements for phone numbers<a name="phone-number-requirements"></a>
 
 Country regulations often require a local office address and specific identification documents to purchase and own a phone number\. The address that you provide can be the business or personal address where the phone numbers are used\. 
 

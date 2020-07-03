@@ -1,9 +1,9 @@
 # Contact Block: Invoke AWS Lambda Function<a name="invoke-lambda-function-block"></a>
 
-## In contact flow types<a name="invoke-lambda-function-block-types"></a>
+## Contact flow types<a name="invoke-lambda-function-block-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic flow
++ Inbound contact flow
 + Customer Queue flow
 + Customer Hold flow
 + Customer Whisper flow
@@ -28,7 +28,7 @@ Note the following properties:
   When a synchronous invocation returns an error, Amazon Connect retries up to three times, for a maximum of 8 seconds\. At that point, the contact is routed down the **Error** branch\.
 
 ## Configuration tips<a name="invoke-lambda-function-block-tips"></a>
-+ To use an AWS Lambda function in a contact flow, first add the function to your instance\. For more information, see [Add an AWS Lambda function to your instance](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instance.html#aws-lambda)\. 
++ To use an AWS Lambda function in a contact flow, first add the function to your instance\. For more information, see [Add a Lambda function to your Amazon Connect instance](connect-lambda-functions.md#add-lambda-function), 
 + After you add the function to your instance, you can select the function from the **Select a function** drop\-down list in the block to use it in the contact flow\.
 
 ## Configured block<a name="invoke-lambda-function-block-configured"></a>
@@ -39,9 +39,9 @@ When this block is configured, it looks similar to the following image:
 
 ## Sample flows<a name="invoke-lambda-function-block-samples"></a>
 
-[Sample Lambda Integration](sample-lambda-integration.md)
+[Sample Lambda integration](sample-lambda-integration.md)
 
 ## Scenarios<a name="invoke-lambda-function-block-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Invoke AWS Lambda Functions](connect-lambda-functions.md)
++ [Invoke AWS Lambda functions](connect-lambda-functions.md)

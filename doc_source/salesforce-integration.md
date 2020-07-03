@@ -1,4 +1,4 @@
-# Amazon Connect and Salesforce Integration<a name="salesforce-integration"></a>
+# Amazon Connect and Salesforce integration<a name="salesforce-integration"></a>
 
 The core functionality of the Amazon Connect CTI Adapter provides a WebRTC browser\-based Contact Control Panel \(CCP\) within Salesforce\. The Amazon Connect CTI integration consists of two components: 
 + A managed Salesforce package\.

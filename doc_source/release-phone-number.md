@@ -1,4 +1,4 @@
-# Release a Phone Number<a name="release-phone-number"></a>
+# Release a phone number<a name="release-phone-number"></a>
 
 If you want a different phone number, or have extra you aren't using you can release them back to inventory\. 
 
@@ -9,7 +9,7 @@ If you want to "close" your Amazon Connect account, do these steps for all of yo
 
 **To release a phone number**
 
-1. Log in to your contact center using your access URL \(https://*instance name*\.awsapps\.com/connect/login\)\. To find the name of your instance, see [Find Your Amazon Connect Instance ID/ARN](find-instance-arn.md)\.
+1. Log in to your contact center using your access URL \(https://*instance name*\.awsapps\.com/connect/login\)\. To find the name of your instance, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.
 
 1. Choose **Routing**, **Phone numbers**\.
 

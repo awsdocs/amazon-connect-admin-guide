@@ -1,4 +1,4 @@
-# Example: Metrics for a Queued Callback<a name="queued-callback-example"></a>
+# Example: Metrics for a queued callback<a name="queued-callback-example"></a>
 
 This topic shows an example queued callback flow and reviews how the CTRs and times are set for it\. 
 

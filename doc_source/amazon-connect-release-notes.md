@@ -1,8 +1,9 @@
-# Release Notes<a name="amazon-connect-release-notes"></a>
+# Release notes<a name="amazon-connect-release-notes"></a>
 
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
++ [June 2020 Updates](#june20-release-notes)
 + [May 2020 Update](#may20-release-notes)
 + [April 2020 Update](#april20-release-notes)
 + [March 2020 Update](#mar20-release-notes)
@@ -11,10 +12,10 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [December 2019 Update](#dec19-release-notes)
 + [November 2019 Update](#nov19-release-notes)
 + [October 2019 Update](#oct19-release-notes)
-+ [June 2019 Update](#w54aac60c23)
-+ [May 2019 Updates](#w54aac60c25)
-+ [April 2019 Updates](#w54aac60c27)
-+ [March 2019 Update](#w54aac60c29)
++ [June 2019 Update](#w54aac60c25)
++ [May 2019 Updates](#w54aac60c27)
++ [April 2019 Updates](#w54aac60c29)
++ [March 2019 Update](#w54aac60c31)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -26,19 +27,44 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
 
+## June 2020 Updates<a name="june20-release-notes"></a>
+
+The following updates were released in June 2020:
+
+### Metrics<a name="june20-metrics"></a>
++ Deprecated the following historical metrics:
+  + Agent idle time
+  + Agent on contact time
+  + Occupancy
++ Added upcoming metric changes: new real\-time and historical metrics for inbound and outbound contact time\. For more information, see [What's new in metrics](upcoming-changes.md)\.
+
+### Contact Control Panel \(CCP\)<a name="june20-ccp"></a>
++ Released the following improvements:
+  + DTMF input is passed to all lines in a three\-way call\. Any party can enter DTMF input\. 
+  + Resolved an issue where the DTMF tone degraded when agents interacted with Quick connect and/or Number pad during a session\. 
+  + Resolved an issue where quick connects sometimes did not appear on a page, even after an agent refreshed it\.
+  + Improved the experience when a manager "listens in" to multiple chat conversations\. Updated the unread message count on the CCP to include messages sent by the customer and those sent by the agent\. Previously, the unread message count only included messages sent by the customer\.
++ Published instructions for upgrading to the latest CCP\. For more information, see [Upgrade to the latest CCP](upgrade-to-latest-ccp.md)\.
++ Published a training video that explains how to use the CCP\. For more information, see [Training video: How to use the CCPTraining video](ccp-video-training.md)\.
+
+### Contact flows<a name="june20-contact-flows"></a>
++ The **Set disconnect flow** block supports voice conversations\. For more information, see [Contact Block: Set Disconnect Flow](set-disconnect-flow.md)\.
++ The **Set Voice** block supports Amazon Polly Neural Text\-to\-Speech \(NTTS\) voices\. For more information, see [Contact Block: Set Voice](set-voice.md)\.
++ The **Get queue metrics** block can return metrics by channel, for example, by voice or chat\. For more information, see [Contact Block: Get Queue Metrics](get-queue-metrics.md)\.
+
 ## May 2020 Update<a name="may20-release-notes"></a>
 
 The following updates were released in May 2020:
 
 ### Contact flows<a name="may20-contact-flows"></a>
-+ Added the ability to select multiple blocks at the same time and rearrange them as a group within a contact flow\. For more information, see [Create an Inbound Contact Flow](create-contact-flow.md#create-inbound-contact-flow)\.
++ Added the ability to select multiple blocks at the same time and rearrange them as a group within a contact flow\. For more information, see [Create an inbound contact flow](create-contact-flow.md#create-inbound-contact-flow)\.
 
 ## April 2020 Update<a name="april20-release-notes"></a>
 
 The following updates were released in April 2020:
 
 ### Telephony<a name="april20-telephony"></a>
-+ Added early media support for outbound phone calls\. Enabled by default, an agent hears tones and audio messages played by phone companies—such as busy signals, failure to connect errors, or other informational messages—through their headset or audio device\. For more information, see [Step 3: Telephony Options](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect Instance](amazon-connect-instances.md) topic\. 
++ Added early media support for outbound phone calls\. Enabled by default, an agent hears tones and audio messages played by phone companies—such as busy signals, failure to connect errors, or other informational messages—through their headset or audio device\. For more information, see [Step 3: Telephony options](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect instance](amazon-connect-instances.md) topic\. 
 + Added the `barge-in-enabled` session attribute to the [Get Customer Input](get-customer-input.md) block so customers can interrupt Amazon Lex bots with their voice\. 
 
 ## March 2020 Update<a name="mar20-release-notes"></a>
@@ -49,17 +75,17 @@ The following updates were released in March 2020:
 + Updated the [Store Customer Input](store-customer-input.md) block to allow you to specify a custom terminating keypress\.
 
 ### Metrics<a name="mar20-metrics"></a>
-+ Announced [Upcoming Changes for Omnichannel Support](upcoming-changes.md#upcoming-changes-march-2020)\.
++ Announced [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.
 
 ### Networking<a name="mar20-networking"></a>
-+ Updated softphone requirements in [Set Up Your Network](ccp-networking.md)\.
++ Updated softphone requirements in [Set up your network](ccp-networking.md)\.
 
 ## February 2020 Update<a name="feb20-release-notes"></a>
 
 The following updates were released in February 2020:
 
 ### Service Quotas<a name="feb20-networking"></a>
-+ Adjusted [Amazon Connect Service Quotas](amazon-connect-service-limits.md) for new accounts\.
++ Adjusted [Amazon Connect service quotas](amazon-connect-service-limits.md) for new accounts\.
 
 ### Contact Flows<a name="feb20-contact-flows"></a>
 
@@ -75,22 +101,22 @@ The following updates were released in January 2020:
 ### Contact Control Panel \(CCP\)<a name="jan20-ccp"></a>
 
 The following updates were made to the updated Contact Control Panel \(ccp\-v2\):
-+ Agents can now transfer a contact by double\-clicking a quick connect\. For more information, see [Initiate a Quick Connect Transfer](transfers.md#transfers-quick)\.
++ Agents can now transfer a contact by double\-clicking a quick connect\. For more information, see [Initiate a quick connect transfer](transfers.md#transfers-quick)\.
 + The number pad now retains the previously selected country flag so agents don't need to select it every time\.
 + All strings in the CCP user interface are now localized in available languages\.
 + Resolved an issue where the color of the call status bar incorrectly displayed as green during a conference call when the call was in the Joined state\. It is now blue\.
 + Resolved an issue where the agent’s name was displayed in error messages for missed chats, rather than the customer’s name\.
 
 ### Networking<a name="jan20-networking"></a>
-+ Updated [Set Up Your Network](ccp-networking.md) to include requirements for the updated Contact Control Panel \(ccp\-v2\)\.
++ Updated [Set up your network](ccp-networking.md) to include requirements for the updated Contact Control Panel \(ccp\-v2\)\.
 
 ## December 2019 Update<a name="dec19-release-notes"></a>
 
 The following update was released in December 2019:
 
 ### Monitoring<a name="dec19-monitoring"></a>
-+ Added Contact Lens for Amazon Connect\. This feature enables you search conversations for keywords, sentiment scores, and non\-talk time\. For more information, see [Analyze Conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.
-+ Added logging of Amazon Connect API calls with AWS CloudTrail\. For more information, see [Logging Amazon Connect API Calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
++ Added Contact Lens for Amazon Connect\. This feature enables you search conversations for keywords, sentiment scores, and non\-talk time\. For more information, see [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.
++ Added logging of Amazon Connect API calls with AWS CloudTrail\. For more information, see [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
 
 ## November 2019 Update<a name="nov19-release-notes"></a>
 
@@ -100,7 +126,7 @@ The following updates were released in November 2019:
 + Added support for chat communications\. For more information, see [Concepts](connect-concepts.md)\. 
 
 ### Metrics<a name="nov19-metrics"></a>
-+ For a description of changes, see [What's New in Metrics](upcoming-changes.md)\.
++ For a description of changes, see [What's new in metrics](upcoming-changes.md)\.
 
 ### Contact Flows<a name="nov19-contact-flows"></a>
 
@@ -115,17 +141,17 @@ Updated the following contact flow blocks for chat:
 + [Contact Block: Set Recording Behavior](set-recording-behavior.md)
 
 ### User Management<a name="nov19-users"></a>
-+ Added that you can use AWS Identity and Access Management \(IAM\) with Amazon Connect\. For more information, see [Identity and Access Management for Amazon Connect](security-iam.md)\.
++ Added that you can use AWS Identity and Access Management \(IAM\) with Amazon Connect\. For more information, see [Identity and access management for Amazon Connect](security-iam.md)\.
 
 ### Live Media Streaming<a name="nov19-lms"></a>
-+ Added that you can capture customer audio for the entire interaction with your contact center\. For more information, see [Capture Customer Audio: Live Media Streaming](customer-voice-streams.md)\.
++ Added that you can capture customer audio for the entire interaction with your contact center\. For more information, see [Capture customer audio: live media streaming](customer-voice-streams.md)\.
 
 ### API<a name="nov19-api"></a>
 + Added [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html), [ListTagsForResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListTagsForResource.html), [TagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_TagResource.html), [UntagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_UntagResource.html) to the Amazon Connect Service API\.
 + Added the [Amazon Connect Participant Service](https://docs.aws.amazon.com/connect-participant/latest/APIReference/Welcome.html) API\. These APIs are used chat participants, such as agents and customers\.
 
 ### Contact Control Panel \(CCP\)<a name="nov19-CCP"></a>
-+ Updated the CCP so it supports chat\. For more information, see [Using the CCP \(the Agent UI\)](agent-user-guide.md)\. 
++ Updated the CCP so it supports chat\. For more information, see [Agent training guide for the CCP](agent-user-guide.md)\. 
 
 ## October 2019 Update<a name="oct19-release-notes"></a>
 
@@ -136,26 +162,26 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-## June 2019 Update<a name="w54aac60c23"></a>
+## June 2019 Update<a name="w54aac60c25"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w54aac60c25"></a>
+## May 2019 Updates<a name="w54aac60c27"></a>
 
 The following updates were released in May 2019:
 
 ### Metrics and Reporting<a name="may19-flows"></a>
 + Improved the error messages you might encounter when creating, editing, or deleting a scheduled report\. 
 + In the Historical metrics report UI, changed **Contacts missed** to **Agent non\-response**\. This metric appears as **Contacts missed** in scheduled reports and exported CSV files\.
-+ In the agent event stream, fixed the formatting of the timestamp millisecond so you can better order and analyze the data\. To learn more, see [Amazon Connect Agent Event Streams](agent-event-streams.md)\. 
++ In the agent event stream, fixed the formatting of the timestamp millisecond so you can better order and analyze the data\. To learn more, see [Amazon Connect agent event streams](agent-event-streams.md)\. 
 
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w54aac60c27"></a>
+## April 2019 Updates<a name="w54aac60c29"></a>
 
 The following updates were released in April 2019:
 
@@ -168,12 +194,12 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w54aac60c29"></a>
+## March 2019 Update<a name="w54aac60c31"></a>
 
 The following updates were released in March 2019:
 
 ### Metrics and Reporting<a name="march19-flows"></a>
-+ Improved the error messages you might encounter when running real\-time metrics reports\. For example, if you manually configure a real\-time metrics report to contain more than 100 queues, we'll display this message: "You've hit the maximum limit of 100 queues\. Please reconfigure your report to contain no more than 100 queues\." To learn more, see [No Metrics or Too Few Rows in a Queues Report?](troubleshoot-rtm.md)
++ Improved the error messages you might encounter when running real\-time metrics reports\. For example, if you manually configure a real\-time metrics report to contain more than 100 queues, we'll display this message: "You've hit the maximum limit of 100 queues\. Please reconfigure your report to contain no more than 100 queues\." To learn more, see [No metrics or too few rows in a queues report?](troubleshoot-rtm.md)
 
 ### Contact Control Panel<a name="march19-ccp"></a>
 + Resolved an issue where, in rare cases, an agent already handling an outbound call could have been incorrectly presented with an additional queued callback, even though they are only allowed to handle one contact at a time\. Since that agent would have been on contact and not idle, the agent wouldn't have been able to accept the queued callback\.
@@ -284,7 +310,7 @@ The following updates were released in October 2018:
 + Resolved an issue that sometimes resulted in the data related to agent Auxiliary states were incorrectly overwritten\.
 
 ### API<a name="oct18-api"></a>
-+ Resolved an issue where the `GetCurrentMetrics` operation returned the metric `OLDEST_CONTACT_AGE` was returned in milliseconds instead of seconds\.
++ Resolved an issue where the `GetCurrentMetrics` operation returned the metric `OLDEST_CONTACT_AGE` in milliseconds instead of seconds\.
 
 ## September 2018 Updates<a name="sep18-release-notes"></a>
 
@@ -331,10 +357,10 @@ The following updates were released in July 2018:
 + [Contact Flows](#july18-contact-flows)
 
 ### New Features<a name="july18-features"></a>
-+ [Initiate an Outbound Call](using-call-number-block.md)
-+ [Add an Amazon Lex Bot](amazon-lex.md)
++ [Initiate an outbound call](using-call-number-block.md)
++ [Add an Amazon Lex bot](amazon-lex.md)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
-+ [Manage Contacts in a Queue](queue-to-queue-transfer.md)
++ [Manage contacts in a queue](queue-to-queue-transfer.md)
 
 ### General<a name="july18-general"></a>
 + Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.
@@ -369,8 +395,8 @@ The following updates were released in June 2018:
 ### Contact Flows<a name="june18-contact-flows"></a>
 + Renamed the **Set queue** block to **Set working queue**\.
 + Added a **Copy to clipboard** button next to the ARN of a contact flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the contact flow in the designer to display the ARN\.
-+ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Initiate an Outbound Call](using-call-number-block.md)\.
-+ Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [How to Use System Metric Attributes](attrib-system-metrics.md)\.
++ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Initiate an outbound call](using-call-number-block.md)\.
++ Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [How to use system metric attributes](attrib-system-metrics.md)\.
 
 ### Metrics and Reporting<a name="june18-metrics"></a>
 + Fixed an issue that caused incorrect rendering of the search field in the filters settings for some historical metrics reports\.

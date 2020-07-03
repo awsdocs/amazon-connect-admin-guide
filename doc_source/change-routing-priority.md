@@ -1,10 +1,10 @@
 # Contact Block: Change Routing Priority / Age<a name="change-routing-priority"></a>
 
-## In contact flow types<a name="change-routing-priority-types"></a>
+## Contact flow types<a name="change-routing-priority-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Outbound Whisper flow
-+ Generic flow
++ Inbound contact flow
 + Customer queue flow
 + Create Outbound Whisper flow
 + Transfer to Agent flow
@@ -38,11 +38,11 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="change-routing-priority-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Customer Queue Priority](sample-customer-queue-priority.md)
-+  [Sample Queue Configurations](sample-queue-configurations.md)
++ [Sample customer queue priority](sample-customer-queue-priority.md)
++  [Sample queue configurations](sample-queue-configurations.md)
 
 ## Scenarios<a name="change-routing-priority-scenarios"></a>
 
 See these topics for more information about how routing priority works:
-+ [Routing Profiles](concepts-routing.md)
-+ [How Routing WorksLearn More About Routing](about-routing.md)
++ [Routing profiles](concepts-routing.md)
++ [How routing works](about-routing.md)

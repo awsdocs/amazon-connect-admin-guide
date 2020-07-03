@@ -1,4 +1,4 @@
-# Can't Hear Indicator for Incoming Chat?<a name="cant-hear-chat-indicator"></a>
+# Can't hear indicator for incoming chat?<a name="cant-hear-chat-indicator"></a>
 
 If an agent can't hear the audio indicator for an incoming chat, the problem is likely because Google added an audio policy flag to Chrome\. This flag exists in Chrome versions 71 \- 75\. 
 

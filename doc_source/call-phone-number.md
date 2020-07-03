@@ -1,6 +1,6 @@
 # Contact Block: Call Phone Number<a name="call-phone-number"></a>
 
-## In contact flow types<a name="call-phone-number-types"></a>
+## Contact flow types<a name="call-phone-number-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Outbound Whisper flow
@@ -23,11 +23,11 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="call-phone-number-sample-flows"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Customer Queue Priority](sample-customer-queue-priority.md)
-+  [Sample Queue Configurations](sample-queue-configurations.md)
++ [Sample customer queue priority](sample-customer-queue-priority.md)
++  [Sample queue configurations](sample-queue-configurations.md)
 
 ## Scenarios<a name="call-phone-number-scenarios"></a>
 
 See these topics for more information about how routing priority works:
-+ [How Caller ID Works in **Call phone number** Block](using-call-number-block.md#call-number-block-how-it-works)
-+ [Set Up Outbound Caller ID](queues-callerid.md)
++ [How caller ID works in **Call phone number** block](using-call-number-block.md#call-number-block-how-it-works)
++ [Set up outbound caller ID](queues-callerid.md)

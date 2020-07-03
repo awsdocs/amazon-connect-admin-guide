@@ -1,9 +1,9 @@
 # Contact Block: Transfer to Queue<a name="transfer-to-queue"></a>
 
-## In contact flow types<a name="transfer-to-queue-types"></a>
+## Contact flow types<a name="transfer-to-queue-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic contact flow
++ Inbound contact flow
 + Customer Queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
@@ -61,13 +61,13 @@ When this block is configured to **transfer to callback queue**, it looks simila
 ## Scenarios<a name="transfer-to-queue-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Manage Contacts in a Queue](queue-to-queue-transfer.md)
-+ [Set Up Queued Callback](setup-queued-callback.md)
-+ [About Queued Callbacks in Metrics](about-queued-callbacks.md)
++ [Manage contacts in a queue](queue-to-queue-transfer.md)
++ [Set up queued callback](setup-queued-callback.md)
++ [About queued callbacks in metrics](about-queued-callbacks.md)
 
 ## Sample flows<a name="transfer-to-queue-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Queue Configurations](sample-queue-configurations.md)
-+ [Sample Customer Queue Priority](sample-customer-queue-priority.md)
-+ [Sample Queued Callback](sample-queued-callback.md)
++ [Sample queue configurations](sample-queue-configurations.md)
++ [Sample customer queue priority](sample-customer-queue-priority.md)
++ [Sample queued callback](sample-queued-callback.md)

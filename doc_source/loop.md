@@ -1,6 +1,6 @@
 # Contact Block: Loop<a name="loop"></a>
 
-## In contact flow types<a name="loop-types"></a>
+## Contact flow types<a name="loop-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows

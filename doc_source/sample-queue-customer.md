@@ -1,4 +1,4 @@
-# Sample Queue Customer<a name="sample-queue-customer"></a>
+# Sample queue customer<a name="sample-queue-customer"></a>
 
 Type: Contact flow \(inbound\)
 

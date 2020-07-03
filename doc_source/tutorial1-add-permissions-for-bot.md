@@ -1,4 +1,4 @@
-# Step 2: Add Permissions to Amazon Lex Bot<a name="tutorial1-add-permissions-for-bot"></a>
+# Step 2: Add permissions to Amazon Lex bot<a name="tutorial1-add-permissions-for-bot"></a>
 
 To use a bot in your contact flow, add it to your Amazon Connect instance\. 
 

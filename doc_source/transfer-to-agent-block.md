@@ -1,6 +1,6 @@
 # Contact Block: Transfer to Agent<a name="transfer-to-agent-block"></a>
 
-## In contact flow types<a name="transfer-to-agent-block-types"></a>
+## Contact flow types<a name="transfer-to-agent-block-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Transfer to Agent flow
@@ -23,4 +23,4 @@ When this block is configured, it looks similar to the following image:
 ## Scenarios<a name="transfer-to-agent-block-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Set Up Contact Transfers](transfer.md)
++ [Set up contact transfers](transfer.md)

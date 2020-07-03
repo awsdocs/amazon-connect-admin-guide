@@ -1,4 +1,4 @@
-# Create a Queue<a name="create-queue"></a>
+# Create a queue<a name="create-queue"></a>
 
 1. Choose **Routing**, **Queues**, **Add new queue**\.
 
@@ -6,6 +6,6 @@
 
    The queue is automatically active\.
 
-1. Assign the queue to a routing profile; for information, see [Create a Routing Profile](routing-profiles.md)\. The routing profile links the queue and agents together\.
+1. Assign the queue to a routing profile; for information, see [Create a routing profile](routing-profiles.md)\. The routing profile links the queue and agents together\.
 
-To learn how queues work, see [Routing Profiles](concepts-routing.md) and [Queue\-Based Routing](concepts-queue-based-routing.md)\.
+To learn how queues work, see [Routing profiles](concepts-routing.md) and [Queue\-based routing](concepts-queue-based-routing.md)\.

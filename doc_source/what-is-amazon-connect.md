@@ -1,4 +1,4 @@
-# What Is Amazon Connect?<a name="what-is-amazon-connect"></a>
+# What is Amazon Connect?<a name="what-is-amazon-connect"></a>
 
 Amazon Connect is an omnichannel cloud contact center\. You can [set up a contact center](amazon-connect-get-started.md) in a few steps, add agents who are located anywhere, and start engaging with your customers\.
 
@@ -11,5 +11,5 @@ The following diagram shows these key characteristics of Amazon Connect\.
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/connect-overview1.png)
 
 **Topics**
-+ [Services to Use with Amazon Connect](related-services-amazon-connect.md)
-+ [Supported Browsers](browsers.md)
++ [Services to use with Amazon Connect](related-services-amazon-connect.md)
++ [Supported browsers](browsers.md)

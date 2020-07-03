@@ -1,4 +1,4 @@
-# Set the Maximum Contacts in Queue Limit<a name="set-maximum-queue-limit"></a>
+# Set the Maximum contacts in queue limit<a name="set-maximum-queue-limit"></a>
 
 You can define routing decisions based on queue capacity\. For example, use a **Transfer to queue** block to check whether a queue is full, and then route the contact accordingly\.
 

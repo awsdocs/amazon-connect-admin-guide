@@ -1,4 +1,4 @@
-# Step 4: Create a Contact Flow<a name="tutorial1-create-contact-flow"></a>
+# Step 4: Create a contact flow<a name="tutorial1-create-contact-flow"></a>
 
 Although Amazon Connect comes with a set of [built\-in contact flows](contact-flow-default.md), you can create your own contact flows to determine how a customer experiences your contact center\. The contact flows contain the prompts that customers hear or see, and they transfer them to the right queue or agent, among other things\.
 

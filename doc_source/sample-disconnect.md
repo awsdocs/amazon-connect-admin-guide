@@ -1,4 +1,4 @@
-# Sample Disconnect Flow<a name="sample-disconnect"></a>
+# Sample disconnect flow<a name="sample-disconnect"></a>
 
 Type: Contact flow \(inbound\)
 

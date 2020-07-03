@@ -1,3 +1,7 @@
-# Use Amazon Connect Contact Attributes with Other Services<a name="attribs-external-references"></a>
+# Use Amazon Connect contact attributes with other services<a name="attribs-external-references"></a>
 
-You can reference contact attributes set in your Amazon Connect contact flow in other services, such as in an Amazon Lex bot or AWS Lambda function\. This allows data associated with the customer or the contact to be shared between services\. To use contact attributes to access other resources, set a user\-defined attribute in your contact flow and use the Amazon Resource Name \(ARN\) of the resource you want to access as the value for the attribute\. For example, to use an Amazon Connect prompt in a Lambda function, set a user\-defined attribute to the ARN for the prompt, and then access that attribute from the Lambda function\.
+You can reference contact attributes set in your Amazon Connect contact flow in other services, such as in an Amazon Lex bot or AWS Lambda function\. This allows data associated with the customer or the contact to be shared between services\.
+
+To use contact attributes to access other resources, set a user\-defined attribute in your contact flow and use the Amazon Resource Name \(ARN\) of the resource you want to access as the value for the attribute\. 
+
+For example, to use an Amazon Connect prompt in a Lambda function, set a user\-defined attribute to the ARN for the prompt, and then access that attribute from the Lambda function\.

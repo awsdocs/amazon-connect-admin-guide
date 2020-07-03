@@ -1,12 +1,14 @@
-# Initiate an Outbound Call<a name="using-call-number-block"></a>
+# Initiate an outbound call<a name="using-call-number-block"></a>
 
-Use the **Call phone number** block in an outbound whisper flow to initiate an outbound call to a customer and, optionally, specify a custom caller ID number that is displayed to call recipients\. This is useful when you have multiple telephone numbers used to make outbound calls, but want to consistently display the same company phone number for the caller ID for calls made from your contact center\. You can also use the block to display a phone number for a specific line of business, or for displaying different numbers to customers based on their account type\.
+Use the [Track events in contact flowsStorage for contact flow logsCall Phone Number](call-phone-number.md) block in an outbound whisper flow to initiate an outbound call to a customer and, optionally, specify a custom caller ID number that is displayed to call recipients\. This is useful when you have multiple telephone numbers used to make outbound calls, but want to consistently display the same company phone number for the caller ID for calls made from your contact center\. You can also use the block to display a phone number for a specific line of business, or for displaying different numbers to customers based on their account type\.
 
 There are two ways you can set up how caller ID works for outbound calls: 
 + Select any phone number from your instance\.
 + Or, use an attribute to set the number dynamically during the contact flow\. 
 
-## About Using Dynamic Caller ID<a name="using-dynamic-caller-id"></a>
+Only phone numbers that you've [claimed](claim-phone-number.md) or [ported to Amazon Connect](port-phone-number.md) can be used as your caller ID number\.
+
+## About using dynamic caller ID<a name="using-dynamic-caller-id"></a>
 
 If you use an attribute to set the caller ID number dynamically, the attribute can be one you define in the **Set contact attributes** block in the contact flow\. Or, it can be an external attribute returned from an AWS Lambda function\.
 
@@ -14,7 +16,7 @@ The value of the attribute must be a phone number from your instance in E\.164 f
 + If the number is not in E\.164 format, the number from the queue associated with the outbound whisper flow is used for the caller ID number\.
 + If no number is set for the outbound caller ID number for the queue, the call attempt will fail\.
 
-## Use E\.164 Format for International Phone Numbers<a name="international-calls-ccp"></a>
+## Use E\.164 format for international phone numbers<a name="international-calls-ccp"></a>
 
 Amazon Connect requires phone numbers in [ E\.164](https://www.itu.int/rec/T-REC-E.164/en) format\. 
 
@@ -27,7 +29,7 @@ Phone numbers that are not formatted in E\.164 may work, but it depends on the p
 
 When you place calls from the CCP using Amazon Connect the CCP provides the correct formatting for numbers automatically\.
 
-## How Caller ID Works in **Call phone number** Block<a name="call-number-block-how-it-works"></a>
+## How caller ID works in **Call phone number** block<a name="call-number-block-how-it-works"></a>
 
 Outbound whisper flows execute in Amazon Connect immediately after an agent accepts the call during direct dial and callback scenarios\. When the contact flow executes: 
 + The caller ID number is set if one is specified in the **Call phone number** block\.
@@ -36,7 +38,7 @@ Outbound whisper flows execute in Amazon Connect immediately after an agent acce
 
 The **Call phone number** block is supported only in outbound whisper flow contact flows\. Only published contact flows can be selected as the outbound whisper flow for a queue\.
 
-## Specify a Custom Caller ID Number Using a **Call phone number** Block
+## Specify a custom caller ID number using a **Call phone number** block
 
 1. In Amazon Connect choose **Routing**, **Contact flows**\.
 

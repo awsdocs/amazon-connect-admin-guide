@@ -1,4 +1,4 @@
-# No Metrics or Too Few Rows in a Queues Report?<a name="troubleshoot-rtm"></a>
+# No metrics or too few rows in a queues report?<a name="troubleshoot-rtm"></a>
 
 It's possible to run a manually configured queues report and have no metrics returned, or fewer rows than expected\. 
 

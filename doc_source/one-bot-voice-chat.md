@@ -1,4 +1,4 @@
-# How to Use the Same Bot for Voice and Chat<a name="one-bot-voice-chat"></a>
+# How to use the same bot for voice and chat<a name="one-bot-voice-chat"></a>
 
 You can use the same bot for both voice and chat\. However, you may want the bot to respond differently based on the channel\. For example, you want to return SSML for voice so a number is read as a phone number but you want to return normal text to chat\. You can do this by passing the Channel attribute\.
 

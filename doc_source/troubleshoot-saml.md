@@ -22,7 +22,7 @@ Use the following steps to check the RoleSessionName SAML attribute specified in
 
 1. Use a text editor to find the SAMLResponse in the HAR file\. Or, run the following commands:
 
-   `$ grep -o "SAMLResponse=.&" azuresaml.har | sed -E 's/SAMLResponse=(.)&/\1/' > samlresponse.txt`
+   `$ grep -o "SAMLResponse=.*&" azuresaml.har | sed -E 's/SAMLResponse=(.*)&/\1/' > samlresponse.txt`
    + This searches for the SAMLresponse in the HAR file and saves it to a **samlresponse\.txt** file\.
    + The response is URL encoded and the contents are Base64 encoded\.
 
@@ -62,7 +62,7 @@ Then the same user tried to login but with a different `Role` SAML Attribute, fo
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-new-attribute-name-login.png)
 
 ### Resolution<a name="troubleshoot-saml-bad-request-resolution"></a>
-+ If you need to change the Amazon Connect user to the new role then you need to delete and recreate the user in the Amazon Connect instance\. For instructions for doing this in Amazon Connect console, see [Manage Users in Amazon Connect](manage-users.md)\. Or, use these commands: 
++ If you need to change the Amazon Connect user to the new role then you need to delete and recreate the user in the Amazon Connect instance\. For instructions for doing this in Amazon Connect console, see [Manage users in Amazon Connect](manage-users.md)\. Or, use these commands: 
 
   1. Get the user ID:
 
@@ -70,7 +70,7 @@ Then the same user tried to login but with a different `Role` SAML Attribute, fo
 
   1. Delete the user:
 
-     `aws connect delete-user --instance-d [INSTANCE_ID] --user-id` 
+     `aws connect delete-user --instance-id [INSTANCE_ID] --user-id [USER_ID]` 
 
   1. Use the Amazon Connect console or the CLI to create the user account\.
 + If you don't need to change the user to the new role, double\-check the IdP settings to make sure that the user logs in using the old role instead\.

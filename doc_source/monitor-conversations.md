@@ -1,49 +1,60 @@
-# Monitor Live Conversations<a name="monitor-conversations"></a>
+# Monitor live conversations<a name="monitor-conversations"></a>
 
-Managers can monitor live conversations between agents and customers, and review past conversations\. To set this up, you need to add the **Set recording behavior** block to your contact flow, assign managers the appropriate permissions, and then show them how to monitor the conversations\.
+Managers and agents in training can monitor live conversations between agents and customers\. To set this up, you need to add the **Set recording behavior** block to your voice/chat contact flow, assign managers and trainees the appropriate permissions, and then show them how to monitor the conversations\.
 
-A conversation is recorded only when the contact is connected to an agent\. The contact is not recorded before then, when they are connected to the IVR\. If a customer is put on hold, the agent is still recorded\.
+**Looking for how many people can monitor the same conversation at one time?** See [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.
 
-**Important**  
-The monitor feature works only when recording is enabled on a contact flow\. For instructions, see [Set Up Recording Behavior](set-up-recordings.md)\. 
-You do not need [call recording enabled at the instance level](amazon-connect-instances.md#get-started-data-storage) in order to monitor live conversations\. This way, businesses have the option of monitoring agents but not recording their calls\. 
+## Set up live monitoring for voice and/or chat<a name="monitor-conversations-set-up"></a>
 
-## Assign Permissions to Monitor Live Conversations<a name="monitor-conversations-permissions"></a>
+1. Add the [Set Recording Behavior](set-recording-behavior.md) block to your contact flow\. Do this to monitor calls, chats, or both\. 
 
-These permissions enable managers to monitor live conversations and access recordings of past conversations\. 
+   To enable monitoring of voice and/or chat conversations, in the block's properties choose **Agent and Customer**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior.png)
+
+   For more information, see [Set up recording behavior](set-up-recordings.md)\. 
+
+1. Choose whether to record the conversations you monitor\. 
+
+   Although you need to add the **Set recording behavior** block to your contact flow, you don't need to record voice and/or chat conversations for monitoring to work\. By default when you set up your instance, [Amazon S3 buckets are created](amazon-connect-instances.md#get-started-data-storage) to store call recordings and chat transcripts\. The existence of these buckets enables call recording and chat transcripts at the instance level\. To not record the calls or chats you're monitoring, remove the Amazon S3 buckets\. For instructions, see [Update instance settings](update-instance-settings.md)\.
+
+## Assign permissions to monitor live conversations<a name="monitor-conversations-permissions"></a>
+
+For managers to monitor live conversations, you assign them the **CallCenterManager** and **Agent** security profiles\. To allow agent trainees to monitor live conversations, you may want to create a security profile specific for this purpose\.
 
 **To assign a manager permissions to monitor a live conversation**
 
 1. Go to **Users**, **User management**, choose the manager, and then choose **Edit**\.
 
-1. In the Security Profiles box, assign the manager to the **CallCenterManager** security profile\. This security profile also includes a setting that makes the icon to download recordings appear in the results of the Contact search page\. 
+1. In the Security Profiles box, assign the manager to the **CallCenterManager** security profile\. This security profile also includes a setting that makes the icon to download recordings appear in the results of the **Contact search** page\. 
 
-1. Assign the manager to the **Agent** security profile so they can access the Contact Control Panel \(CCP\)\. This is so they can monitor the conversation through the CCP\.
+1. Assign the manager to the **Agent** security profile so they can access the Contact Control Panel \(CCP\), and use it to monitor the conversation\.
 
 1. Choose **Save**\. 
 
-**Or, to create a new security profile specific for this purpose**
+**To create a new security profile for monitoring live conversations**
 
 1. Choose **Users**, **User management**, **Security profiles**\. 
 
 1. Choose **Add new security profile**\. 
 
-1. Expand **Metrics and Quality**, then choose **Manager monitor** and **Recorded conversations** \(choose both **Access** and **Enable download button**\)\.
+1. Expand **Metrics and Quality**, then choose **Access metrics** and **Manager monitor**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/monitor-conversations-agent-permissions.png)
 
-1. Expand **Contact Control Panel**, then choose **Access Contact Control Panel** and **Make outbound calls**\. 
+   **Access metrics** is needed so they can access the real\-time metrics report, which is where they choose which conversations to monitor\.
 
-   This permission is needed so they can monitor the conversation through the Contact Control Panel\.
+1. Expand **Contact Control Panel**, then choose **Access Contact Control Panel** and **Make outbound calls**\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/monitor-conversations-agent-permissions2.png)
 
-1. Expand **Metrics and Quality**, then choose **Access metrics**\. 
-
-   This permission is needed so they can access the real\-time metrics report, which is where they choose which conversations to monitor\.
+   These permissions are needed so they can monitor the conversation through the Contact Control Panel\.
 
 1. Choose **Save**\. 
 
-## Monitor Live Conversations with Contacts<a name="w54aac43b7c11"></a>
+## Monitor live conversations with contacts<a name="w54aac43b7c11"></a>
 
 **Tip**  
 Call barge\-in is not currently supported\. That is, if you're listening to a conversation, your microphone stays muted\.
+
+1. Check that the [Set Recording Behavior](set-recording-behavior.md) block is in the contact flow you want to monitor\. It has to be there whether you're monitoring calls or chats\. In the block's Properties, choose **Agent and Customer**\.
 
 1. Log in to your Amazon Connect instance with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Manager monitor** permission\.
 

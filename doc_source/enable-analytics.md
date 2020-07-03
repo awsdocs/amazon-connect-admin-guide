@@ -17,7 +17,7 @@ Contact Lens must be enabled in two places:
 
 ## How to enable Contact Lens in an instance<a name="enable-analytics-instance"></a>
 
-For an existing instance, to enable Contact Lens, you need to make sure an Amazon S3 bucket is specified for call recordings\. This is where the transcripts will be stored as well\. For instructions, see [Update Instance Settings](update-instance-settings.md)\. 
+For an existing instance, to enable Contact Lens, you need to make sure an Amazon S3 bucket is specified for call recordings\. This is where the transcripts will be stored as well\. For instructions, see [Update instance settings](update-instance-settings.md)\. 
 
 ## How to enable Contact Lens in a contact flow<a name="enable-analytics-contact-flow"></a>
 
@@ -35,7 +35,7 @@ If you want to transfer a contact to another agent or queue, and you want to con
    You need both agent and customer call recordings to use Content Lens\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior.png)
 
-1. Select **Enable analytics**\. If you don't see this option, Contact Lens for Amazon Connect hasn't been enabled for your instance\. To enable it, see [Update Instance Settings](update-instance-settings.md)\.  
+1. Select **Enable analytics**\. If you don't see this option, Contact Lens for Amazon Connect hasn't been enabled for your instance\. To enable it, see [Update instance settings](update-instance-settings.md)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior2.png)
 
 1. Choose the language\.

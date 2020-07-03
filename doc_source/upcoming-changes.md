@@ -1,10 +1,110 @@
-# What's New in Metrics<a name="upcoming-changes"></a>
+# What's new in metrics<a name="upcoming-changes"></a>
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you a overview of the improvements\. 
 
-## Upcoming Changes for Omnichannel Support<a name="upcoming-changes-march-2020"></a>
+## Upcoming changes: New real\-time metrics for inbound and outbound contact time<a name="metrics-changes-inbound-outbound-contact-time-rtm"></a>
 
-### Group by Channel<a name="upcoming-changes-march-2020-channel"></a>
+The following new real\-time metrics are upcoming in a future release\. 
+
+### Avg incoming connecting time<a name="rtm-avg-incoming-connecting-time"></a>
+
+The average time between when contacts are initiated Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+In the agent event stream, this time is calculated by averaging the duration between the contact state of STATE\_CHANGE event changes from CONNECTING to CONNECTED/MISSED/ERROR\. 
+
+The following image shows the three parts that go into calculating **Avg incoming connecting time**\. It also shows what is in the agent event stream\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-inbound-connection-time.png)
+
+### Avg outbound connecting time<a name="rtm-avg-outbound-connecting-time"></a>
+
+The average time between when outbound contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+The following image shows the four parts that go into calculating **Avg outbound connecting time**\. It also shows what is in the agent event stream\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-outbound-connection-time.png)
+
+### Avg callback connecting time<a name="rtm-avg-callback-connecting-time"></a>
+
+Then average time between when callback contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+The following image shows the five parts that go into calculating **Avg callback connecting time**\. It also shows what is in the agent event stream\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-callback-connection-time.png)
+
+## Upcoming changes: New historical metrics for inbound and outbound contact time<a name="metrics-changes-inbound-outbound-contact-time-htm"></a>
+
+The following new historical metrics are upcoming in a future release\. 
+
+### Agent incoming connecting time<a name="htm-agent-incoming-connecting-time"></a>
+
+The total time between when a contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\.
+
+In the agent event stream, this is the duration between the contact state of STATE\_CHANGE event changes from CONNECTING to CONNECTED/MISSED/ERROR\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+### Agent outbound connecting time<a name="htm-agent-outbound-connecting-time"></a>
+
+The total time between when an outbound contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\.
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+### Agent callback connecting time<a name="htm-agent-callback-connecting-time"></a>
+
+The total time between when a callback contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\.
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+### Agent API connecting time<a name="htm-agent-api-connecting-time"></a>
+
+The total time between when a contact is initiated using an Amazon Connect API, and the agent is connected\.
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+### Average agent incoming connecting time<a name="htm-avg-agent-incoming-connecting-time"></a>
+
+The average time between when contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+### Average agent outbound connecting time<a name="htm-avg-agent-outbound-connecting-time"></a>
+
+The average time between when an outbound contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+### Average agent callback connecting time<a name="htm-avg-agent-callback-connecting-time"></a>
+
+The average time between when a callback contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+### Average agent API connecting time<a name="htm-avg-agent-api-connecting-time"></a>
+
+The average time between when a contact is initiated using an Amazon Connect API, and the agent is connected\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+## June 2020: Changes for omnichannel spport<a name="metrics-changes-june-2020"></a>
+
+### Group by channel<a name="metrics-changes-june-2020-channel"></a>
 
 **To group queues or routing profiles by channel on real\-time metrics reports**
 
@@ -19,7 +119,7 @@ Thanks to your feedback, we've made changes to Amazon Connect metrics\. This top
 
 1. Choose **Apply**\.
 
-1. The table will show a column for **Channel**\.
+1. The table shows a column for **Channel**\.
 
 **To group by channel on historical metrics reports**
 
@@ -30,70 +130,74 @@ Thanks to your feedback, we've made changes to Amazon Connect metrics\. This top
 1. On the **Table Settings** page, choose the **Groupings** tab\. Add **Channel**, and choose **Apply**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-grouping-channel.png)
 
-1. The table will show a column for **Channel**, as shown in the following image\.  
+1. The table shows a column for **Channel**, as shown in the following image\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-channel-label.png)
 
-### Group by Queue in Historical Metrics Reports<a name="upcoming-changes-march-2020-queue-grouping"></a>
+### Group by queue in historical metrics reports<a name="metrics-changes-june-2020-queue-grouping"></a>
 
 In the historical metrics report, when you group or filter metrics by **Queue**, the results for the following metrics aren't accurate: 
-+ Agent idle time
-+ Agent on contact time
-+ Occupancy
++ Agent idle time \(deprecated June, 2020\)
++ Agent on contact time \(deprecated June, 2020\)
++ Occupancy \(deprecated June, 2020\)
 
-Because of this, on the **Table Settings** page, **Metrics** tab, these metrics will be inactive, as shown in the following image:
+Because of this, on the **Table Settings** page, **Metrics** tab, these metrics are inactive, as shown in the following image:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-inactive-metrics.png)
 
-In addition, in the historical metrics report, Amazon Connect will display a hyphen \(\-\) in place of results for these metrics, and the cells are inactive \(gray\)\.
+In addition, in the historical metrics report, Amazon Connect displays a hyphen \(\-\) in place of results for these metrics, and the cells are inactive \(gray\)\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-null-metrics.png)
 
-### Effect of Queue Grouping on Saved and Scheduled Reports<a name="upcoming-changes-march-2020-saved-scheduled-reports"></a>
+### Effect of queue grouping on saved and scheduled reports<a name="metrics-changes-june-2020-saved-scheduled-reports"></a>
 
 If the **Queue** grouping or filter is used on the following reports, note these effects: 
-+ **Saved reports**\. The columns for these metrics won't appear in the saved reports\.
-+ **Scheduled reports**\. These reports will continue to run successfully, but no results will be returned for these metrics\. 
++ **Saved reports**\. The columns for these metrics don't appear in the saved reports when *grouped* by Queue\. When the saved report is *filtered* by Queue, however, it shows "\-"\.
++ **Scheduled reports**\. These reports continue to run successfully, but no results are returned for these metrics\. 
 
-### Agent On Contact Time<a name="upcoming-changes-march-2020-agent-on-contact-time"></a>
+### Agent on contact time \(deprecated June, 2020\)<a name="metrics-changes-june-2020-agent-on-contact-time"></a>
 
-On historical metrics reports when an agent handles multiple chats concurrently, **Agent on contact time** will show wall clock time: the amount of time spent chatting\. However, there isn't a metric that shows the time an agent spends chatting with each contact\.
+On historical metrics reports when an agent handles multiple chats concurrently, **Agent on contact time** shows wall clock time: the amount of time spent chatting\. However, there isn't a metric that shows the time an agent spends chatting with each contact\.
 
-In addition, no results will be returned when you use the **Queue** grouping or filter with **Agent On Contact Time**\.
+In addition, no results are returned when you use the **Queue** grouping or filter with **Agent on contact time**\.
 
-### Agent Idle Time<a name="upcoming-changes-march-2020-agent-idle-time"></a>
+### Agent idle time \(deprecated June, 2020\)<a name="metrics-changes-june-2020-agent-idle-time"></a>
 
-The **Agent idle time** metric divides the idle time into each queue associated with the agent\. When contacts are grouped or filtered by **Queue**, however, Amazon Connect won't provide an accurate view into the how the agent is working\. Because of this, Amazon Connect won't show **Agent idle time** when you apply the **Queue** grouping or filter to your report\. 
+The **Agent idle time** metric divides the idle time into each queue associated with the agent\. When contacts are grouped or filtered by **Queue**, however, Amazon Connect doesn't provide an accurate view into the how the agent is working\. Because of this, Amazon Connect doesn't show **Agent idle time** when you apply the **Queue** grouping or filter to your report\. 
 
-### Occupancy<a name="upcoming-changes-march-2020-occupancy"></a>
+### Occupancy \(deprecated June, 2020\)<a name="metrics-changes-june-2020-occupancy"></a>
 
 With the addition of chat, the **Occupancy** metric is now defined as the percentage of time that an agent was active on contacts\. This percentage is calculated as follows:
 + \(Agent on contact \(wall clock time\) / \(Agent on contact \(wall clock time\) \+ Agent idle time\)\) 
 
-Because **Agent idle time** is now inaccurate when contacts are grouped or filtered by **Queues**, the **Occupancy** metric is also inaccurate\. As a result, when contacts are grouped or filtered by Queues, **Occupancy** won't appear on the report\.
+Because **Agent idle time** is now inaccurate when contacts are grouped or filtered by **Queues**, the **Occupancy** metric is also inaccurate\. As a result, when contacts are grouped or filtered by Queues, **Occupancy** doesn't appear on the report\.
 
-## November 2019: Name Changes for "Missed" and "Agent Status" and "On Call"<a name="upcoming-changes-names"></a>
+Occupancy no longer appears on the **Dashboard** page\.
+
+## November 2019<a name="metrics-changes-november-2019"></a>
+
+### Name changes for "Missed" and "Agent status" and "On call"<a name="metrics-changes-november-2019-names"></a>
 
 The following real\-time metrics were renamed:
 
 
-| Old Name | New Name | 
+| Old name | New name | 
 | --- | --- | 
 |  Missed  | Agent non\-response  | 
-|  Agent Status  | Agent Activity  | 
-|  On Call  | On Contact  | 
+|  Agent status  | Agent activity  | 
+|  On call  | On contact  | 
 
 For each metric, existing saved reports automatically start displaying the new name; you don't need to do anything for the new name to appear in your reports\. 
 
-The column order for a saved report containing one of these metrics stays the same\. For example, if you previously saved a report where **Agent Status** was the third metric, now when you open that saved report, **Agent Activity** is the name for the third metric\.
+The column order for a saved report containing one of these metrics stays the same\. For example, if you previously saved a report where **Agent status** was the third metric, now when you open that saved report, **Agent activity** is the name for the third metric\.
 
 For **Missed**, only the name of the metric changed; the underlying calculation stayed the same\. We've changing the name of this metric to **Agent non\-response** so it better reflects its definition: 
 + **Agent non\-response** increments whenever a contact is offered to an agent, and the agent doesn't respond to the contact for whatever reason\. 
 
   For example, the agent could have intentionally let the timer run out, or the agent could have forgotten to grant microphone access in the Contact Control Panel and never heard the ring\. In these situations, Amazon Connect doesn't drop the contact\. Instead, the routing engine will offer it to another available agent, while the customer continues to wait in queue\. This means a single contact could result in multiple **Agent non\-responses** before an agent responds and handles the contact\.
 
-For **On Call**, the name change to **On Contact** applies to the Real\-time metrics UI only\. You can continue using `AGENTS_ON_CALL` with the `GetCurrentMetricData` API to retrieve data for this metric\.
+For **On call**, the name change to **On Contact** applies to the Real\-time metrics UI only\. You can continue using `AGENTS_ON_CALL` with the `GetCurrentMetricData` API to retrieve data for this metric\.
 
-## Label Updates for "Agent Activity" and "Contact State"<a name="upcoming-changes-labels"></a>
+### Label updates for "Agent activity" and "Contact state"<a name="metrics-changes-november-2019-labels"></a>
 
 Labels are the values returned in a report\. For example, in the following image **Available** and **Basic Routing Profile** are labels\. 
 

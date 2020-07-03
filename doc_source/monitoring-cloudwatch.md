@@ -1,10 +1,10 @@
-# Monitoring Your Instance Using CloudWatch<a name="monitoring-cloudwatch"></a>
+# Monitoring your instance using CloudWatch<a name="monitoring-cloudwatch"></a>
 
 Amazon Connect sends data about your instance to CloudWatch metrics so that you can collect, view, and analyze CloudWatch metrics for your Amazon Connect virtual contact center\. You can use this data to monitor key operational metrics and set up alarms\. Data about your contact center is sent to CloudWatch every 1 minute\.
 
 When you view the CloudWatch metrics dashboard, you can specify the refresh interval for the data displayed\. The values displayed in the dashboard reflect the values for the refresh interval you define\. For example, if you set the refresh interval to 1 minute, the values displayed are for a minute period\. You can select a refresh interval of 10 seconds, but Amazon Connect does not send data more often than every 1 minute\. Metrics that are sent to CloudWatch are available for two weeks, and then discarded\. To learn more about metrics in CloudWatch, see the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/)\.
 
-## Amazon Connect Metrics Sent to CloudWatch<a name="connect-metrics-cloudwatch"></a>
+## Amazon Connect metrics sent to CloudWatch<a name="connect-metrics-cloudwatch"></a>
 
 The `AWS/Connect` namespace includes the following metrics\.
 
@@ -136,11 +136,11 @@ Dimensions:
 + **Instance ID**: The ID of your instance
 + **Stream Type**: **Voice**
 
-## Amazon Connect CloudWatch Metrics Dimensions<a name="connect-cloudwatch-dimensions"></a>
+## Amazon Connect CloudWatch metrics dimensions<a name="connect-cloudwatch-dimensions"></a>
 
 In CloudWatch, a dimension is a name/value pair that uniquely identifies a metric\. In the dashboard, metrics are grouped by dimension\. The following dimensions are used in the CloudWatch dashboard for Amazon Connect metrics\. When you view metrics in the dashboard, only metrics with data are displayed\. If there is no activity during the refresh interval for which there is a metric, then no data from your instance is displayed in the dashboard\. The following dimensions are used for Amazon Connect metrics in CloudWatch\.
 
-### Contact Flow Metrics Dimension<a name="contact-flow-dimension"></a>
+### Contact flow metrics dimension<a name="contact-flow-dimension"></a>
 
 Filters metric data by contact flow\. Includes the following metrics:
 + CallRecordingUploadError
@@ -149,7 +149,7 @@ Filters metric data by contact flow\. Includes the following metrics:
 + MisconfiguredPhoneNumbers
 + PublicSigningKeyUsage
 
-### Instance Metrics Dimension<a name="instance-metrics-dimension"></a>
+### Instance metrics dimension<a name="instance-metrics-dimension"></a>
 
 Filters meta data by instance\. Includes the following metrics:
 + CallsBreachingConcurrencyQuota
@@ -164,7 +164,7 @@ Filters meta data by instance\. Includes the following metrics:
 Filters metric data by connection\. Includes the following metrics:
 + ToInstancePacketLossRate
 
-### Queue Metrics Dimension<a name="queue-metrics-dimension"></a>
+### Queue metrics dimension<a name="queue-metrics-dimension"></a>
 
 **Note**  
 If a queue has a dimension name in non\-ASCII characters, you won't be able to see it in CloudWatch\. 
@@ -175,7 +175,7 @@ Filters metric data by queue\. Includes the following metrics:
 + QueueCapacityExceededError
 + QueueSize
 
-## Use CloudWatch Metrics to Calculate Concurrent Call Quota<a name="connect-cloudwatch-concurrent-call-quota"></a>
+## Use CloudWatch metrics to calculate concurrent call quota<a name="connect-cloudwatch-concurrent-call-quota"></a>
 
 Here's how to calculate your quota for concurrent calls\. 
 

@@ -1,4 +1,4 @@
-# View How Many Contacts are in an Agent's Queue<a name="view-contacts-in-agents-queue"></a>
+# View how many contacts are in an agent's aueue<a name="view-contacts-in-agents-queue"></a>
 
 To see how many contacts are in an agent's personal queue, add an **Agent queues** table to your **Real\-time metrics**, **Queues** report\. Then view these two metrics: 
 + **In Queue**—how many contacts are in an agent's personal queue\.
@@ -17,7 +17,7 @@ Use the following procedure\.
 **Tip**  
 An agent is included in the **Agent queues** table only if they are online or there is at least one contact in the their queue\.
 
-## Add In Queue and Queue to the Agent Table<a name="add-in-queue-to-agent-table"></a>
+## Add In Queue and Queue to the Agent queue table<a name="add-in-queue-to-agent-table"></a>
 
 If **In queue** or **Queue** don't appear in your **Agent queue** table, use the following steps to add them\.
 

@@ -1,9 +1,9 @@
 # Contact Block: Get Customer Input<a name="get-customer-input"></a>
 
-## In contact flow types<a name="get-customer-input-types"></a>
+## Contact flow types<a name="get-customer-input-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic contact flow
++ Inbound contact flow
 + Customer queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
@@ -67,7 +67,7 @@ To set up this functionality, set the `barge-in-enabled` session attribute in th
 
   `x-amz-lex:barge-in-enabled:[intentName]:[slotToElicit]`
 
-  Barge\-in is disabled globally by default\. You must set the session attribute to enable it at the global, bot, or slot levels\. For more information, see [How to Use Lex Session Attributes](how-to-use-session-attributes.md)\.  
+  Barge\-in is disabled globally by default\. You must set the session attribute to enable it at the global, bot, or slot levels\. For more information, see [How to use Lex session attributes](how-to-use-session-attributes.md)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/barge-in-session-attribute.png)
 
 ### Intents<a name="get-customer-input-intents"></a>
@@ -107,14 +107,14 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="get-customer-input-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Inbound Flow \(First Contact Experience\)](sample-inbound-flow.md)
-+ [Sample Interruptible Queue Flow with Callback](sample-interruptible-queue.md) 
-+ [Sample Queue Configurations](sample-queue-configurations.md) 
-+ [Sample Recording Behavior](sample-recording-behavior.md) 
++ [Sample inbound flow \(first contact experience\)](sample-inbound-flow.md)
++ [Sample interruptible queue flow with callback](sample-interruptible-queue.md) 
++ [Sample queue configurations](sample-queue-configurations.md) 
++ [Sample recording behavior](sample-recording-behavior.md) 
 
 ## Scenarios<a name="get-customer-input-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Add an Amazon Lex Bot](amazon-lex.md)
-+ [How to Use the Same Bot for Voice and Chat](one-bot-voice-chat.md)
-+ [Add Text\-to\-Speech to Prompts](text-to-speech.md)
++ [Add an Amazon Lex bot](amazon-lex.md)
++ [How to use the same bot for voice and chat](one-bot-voice-chat.md)
++ [Add text\-to\-speech to prompts](text-to-speech.md)

@@ -1,4 +1,4 @@
-# Set the Hours of Operation for a Queue<a name="set-hours-operation"></a>
+# Set the hours of operation for a queue<a name="set-hours-operation"></a>
 
 The first thing you need to do when you set up a queue is to specify the hours of operation\. The hours may be referenced in contact flows\. For example, when routing contacts to agents, you might use the [Check Hours of Operation](check-hours-of-operation.md) block first, and then route the contact to the appropriate queue\. 
 
@@ -16,7 +16,7 @@ The first thing you need to do when you set up a queue is to specify the hours o
 
 1. Now you can specify these the hours of operation when you [create a queue](create-queue.md), and check them in the [Check Hours of Operation](check-hours-of-operation.md) block\.
 
-## How to Specify Midnight<a name="set-hours-operation-midnight"></a>
+## How to specify midnight<a name="set-hours-operation-midnight"></a>
 
 To specify midnight, enter 12:00AM\.
 
@@ -41,7 +41,7 @@ The final schedule looks like this:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-hours-of-operation-closed-weekends.png)
 
-## Add Lunch and Other Breaks<a name="add-lunch-breaks"></a>
+## Add lunch and other breaks<a name="add-lunch-breaks"></a>
 
 If your entire contact center were to close for lunch from 12\-1, for example, then you'd enter hours to specify that, as in the following image:
 
@@ -54,10 +54,10 @@ For example, you might create a custom status named **Lunch**\. When the agent g
 Supervisors can change an agent's status using the real\-time metrics report\.
 
 For more information, see these topics: 
-+ [Add Custom Agent Status](agent-custom.md)
-+ [About Agent Status](metrics-agent-status.md)
-+ [Change the "Agent Activity" Status in a Real\-Time Metrics Report ](rtm-change-agent-activity-state.md)
++ [Add custom agent status](agent-custom.md)
++ [About agent status](metrics-agent-status.md)
++ [Change the "Agent activity" status in a real\-time metrics report ](rtm-change-agent-activity-state.md)
 
-## Use the Check Hours of Operation Block<a name="use-check-hours-of-operation-block"></a>
+## Use the Check Hours of Operation block<a name="use-check-hours-of-operation-block"></a>
 
 At the start of your contact flows, use the [Check Hours of Operation](check-hours-of-operation.md) block to determine whether your contact center is open, and to branch accordingly\. 

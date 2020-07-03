@@ -1,4 +1,4 @@
-# Choose the Voice for Audio Prompts<a name="voice-for-audio-prompts"></a>
+# Choose the voice for audio prompts<a name="voice-for-audio-prompts"></a>
 
 You select the text\-to\-speech voice and language in the **Set voice** block\. 
 

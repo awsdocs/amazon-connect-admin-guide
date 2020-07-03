@@ -1,9 +1,9 @@
 # Contact Block: Wait<a name="wait"></a>
 
-## In contact flow types<a name="wait-types"></a>
+## Contact flow types<a name="wait-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic contact flow
++ Inbound contact flow
 + Customer Queue flow
 
 ## Description<a name="wait-description"></a>
@@ -34,9 +34,9 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="wait-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Disconnect Flow](sample-disconnect.md)
++ [Sample disconnect flow](sample-disconnect.md)
 
 ## Scenarios<a name="wait-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Example Chat Scenario](chat.md#example-chat-scenario)
++ [Example chat scenario](chat.md#example-chat-scenario)

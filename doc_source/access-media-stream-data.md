@@ -1,8 +1,8 @@
-# How to Access Kinesis Video Streams Data<a name="access-media-stream-data"></a>
+# How to access Kinesis Video Streams data<a name="access-media-stream-data"></a>
 
 You must have developer skills to work with Kinesis Video Streams data\. Use the steps and code samples in this section to interact with the customer audio data sent to Kinesis Video Streams\.
 
-## Get Started with a Sample<a name="get-started-media-stream"></a>
+## Get started with a sample<a name="get-started-media-stream"></a>
 
 There's an example project on GitHub to help you to get started using Amazon Connect live audio streaming and real\-time transcription using Amazon Transcribe\. See [Amazon Connect Real\-time Transcription Lambda](https://github.com/amazon-connect/amazon-connect-realtime-transcription)\.
 
@@ -13,7 +13,7 @@ You can use the Lambda function in this project to create other solutions, such 
 + Providing real\-time transcription to agents\.
 + Creating a voicemail solution for Amazon Connect\.
 
-## Build Your Own Implementation<a name="get-started-media-stream-scratch"></a>
+## Build your own implementation<a name="get-started-media-stream-scratch"></a>
 
 You may want to implement a solution other than the one provided by the previously\-described sample\. If so, this section describes how to make the proper API calls against the Kinesis Video Streams so you can build your own solution from scratch\. 
 
@@ -28,7 +28,7 @@ You may want to implement a solution other than the one provided by the previous
 
 1. Use [Audacity](https://www.audacityteam.org), or other audio tool, to import the \.raw audio file, which is in a 16\-bit signed PCM Mono format\.
 
-### Code Samples to Access Kinesis Video Streams Data<a name="media-streaming-code-samples"></a>
+### Code samples to access Kinesis Video Streams data<a name="media-streaming-code-samples"></a>
 
 #### LMSDemo\.java<a name="lasdemo-java"></a>
 

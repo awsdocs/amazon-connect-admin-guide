@@ -1,4 +1,4 @@
-# Contact Attributes for Live Media Streaming<a name="media-streaming-attributes"></a>
+# Contact attributes for live media streaming<a name="media-streaming-attributes"></a>
 
 The attributes are displayed when you select **Media streams** for the **Type** in a contact flow block that supports attributes, such as the **Start media streaming** block\. They include the following:
 

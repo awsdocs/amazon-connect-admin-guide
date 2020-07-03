@@ -1,4 +1,4 @@
-# Analyze Conversations using Contact Lens for Amazon Connect<a name="analyze-conversations"></a>
+# Analyze conversations using Contact Lens for Amazon Connect<a name="analyze-conversations"></a>
 
 
 |  | 
@@ -12,8 +12,8 @@ The results of the sentiment analysis appear in the customer's Contact Trace Rec
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-sentiment-graph.png)
 
 **Topics**
-+ [About Sentiment Scores and Non\-Talk Time](sentiment-scores.md)
++ [About sentiment scores and non\-talk time](sentiment-scores.md)
 + [Enable Contact Lens](enable-analytics.md)
-+ [Assign Permissions](permissions-for-contact-lens.md)
-+ [Search Conversations](search-conversations.md)
-+ [Review Transcripts](review-transcripts.md)
++ [Assign permissions](permissions-for-contact-lens.md)
++ [Search conversations](search-conversations.md)
++ [Review transcripts](review-transcripts.md)

@@ -1,8 +1,8 @@
-# Assign a Security Profile to a User<a name="assign-security-profile"></a>
+# Assign a security profile to a user<a name="assign-security-profile"></a>
 
 **To assign a security profile to a user**
 
-1. Review [Best Practices for Security Profiles](security-profile-best-practices.md)\.
+1. Review [Best practices for security profiles](security-profile-best-practices.md)\.
 
 1. Log in to your contact center using your access URL \(https://*instance name*\.awsapps\.com/connect/login\)\.
 

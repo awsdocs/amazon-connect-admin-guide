@@ -1,4 +1,4 @@
-# Find Your Amazon Connect Instance ID/ARN<a name="find-instance-arn"></a>
+# Find your Amazon Connect instance ID/ARN<a name="find-instance-arn"></a>
 
 When you open a support ticket, you may be asked to provide your Amazon Connect instance ID \(also called the ARN\)\. Use the following steps to find it\. 
 

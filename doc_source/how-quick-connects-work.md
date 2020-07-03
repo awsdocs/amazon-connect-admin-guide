@@ -1,11 +1,11 @@
-# How Quick Connects Work<a name="how-quick-connects-work"></a>
+# How quick connects work<a name="how-quick-connects-work"></a>
 
 This article explains how each type of quick connect works: agent, queue, and external quick connects\. It explains which contact flows are used, and what appears on the agent's Contact Control Panel \(CCP\)\.
 
 **Tip**  
 For all three types of quick connects, when the quick connect is invoked, the contact that the agent is working on hears the [Default customer hold](default-customer-hold.md) flow unless you specify a different customer hold flow\. 
 
-## Agent Quick Connects<a name="agent-quick-connects"></a>
+## Agent quick connects<a name="agent-quick-connects"></a>
 
 Let's say an agent named John is talking to a customer\. During the conversation he needs to transfer the call to an agent named Maria\. This is an agent quick connect\.
 
@@ -42,7 +42,7 @@ If you don't create and then select a custom customer whisper flow, Amazon Conne
    + Put Maria on hold, so he only talks to the customer\.
    + Choose **End call**\. He leaves the call but Maria and the customer are directly connected and continue talking\.
 
-## Queue Quick Connects<a name="queue-quick-connects"></a>
+## Queue quick connects<a name="queue-quick-connects"></a>
 
 Let’s say John is talking to a customer\. The customer needs help resetting his password, so John needs to transfer him to the PasswordReset queue\. This is a queue quick connect\.
 
@@ -73,7 +73,7 @@ Even though the status of the transferred call \(internal\-transfer\) shows on J
    + Put Maria on hold, so he only talks to the customer\.
    + Choose **End call**\. He leaves the call but Maria and the customer are directly connected and continue talking\.
 
-## External Quick Connects<a name="external-quick-connects"></a>
+## External quick connects<a name="external-quick-connects"></a>
 
 There are no contact flows involved in external quick connect\. When an agent invokes an external quick connect, the call is directly connected the destination without invoking any flows\.
 

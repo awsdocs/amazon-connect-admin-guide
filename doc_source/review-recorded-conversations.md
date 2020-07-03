@@ -1,4 +1,4 @@
-# Review Recorded Conversations<a name="review-recorded-conversations"></a>
+# Review recorded conversations<a name="review-recorded-conversations"></a>
 
 Managers can review past conversations between agents and customers\. To set this up, you need to [set up recording behavior](set-up-recordings.md), assign managers the appropriate permissions, and then show them how to access the recorded conversations\. 
 
@@ -8,7 +8,7 @@ Managers can review past conversations between agents and customers\. To set thi
 When call recording is enabled, the recording is placed in your S3 bucket shortly after the contact is disconnected\. Then the recording is available for you to review it using the steps in this article\.   
 You can also access the recording from the customer's [contact trace record \(CTR\)](sample-ctr.md)\. The recording is available in the CTR, however, only after the contact has left the [After Contact Work \(ACW\) state](metrics-agent-status.md#agent-status-acw)\.
 
-## Review Recordings/Transcripts of Past Conversations<a name="review-recordings-and-transcripts"></a>
+## Review recordings/transcripts of past conversations<a name="review-recordings-and-transcripts"></a>
 
 These are the steps that a manager does to review past recordings/transcripts of conversations\.
 

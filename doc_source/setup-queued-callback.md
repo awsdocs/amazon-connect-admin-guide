@@ -1,4 +1,4 @@
-# Set Up Queued Callback<a name="setup-queued-callback"></a>
+# Set up queued callback<a name="setup-queued-callback"></a>
 
 You can create contact flows that provide the ability for customers to leave their phone number and get a callback from an agent\. Here's how queued callback works: 
 
@@ -6,7 +6,7 @@ You can create contact flows that provide the ability for customers to leave the
 
 1. After an agent accepts the callback in the CCP, Amazon Connect calls the customer\.
 
-## Steps to Set Up Queued Callback<a name="setup-queued-callback-overview"></a>
+## Steps to set up queued callback<a name="setup-queued-callback-overview"></a>
 
 Use the steps provided in the following overview to set up queued callback\. 
 + [Set up a contact queue ](create-queue.md) specifically for callbacks\. In your real\-time metrics reports, you can look at that queue and see how many customers are waiting for callbacks\.
@@ -17,9 +17,9 @@ Use the steps provided in the following overview to set up queued callback\.
 + \(Optional\) Create an outbound whisper flow\. When a queued call is placed, the customer hears this message after they pick up and before they connect to the agent\. For example, "Hello, this is your scheduled callback\.\.\."
 + \(Optional\) Create an agent whisper flow\. This is what the agent hears right after they accept the contact, before they are joined to the customer\. For example, "You're about to be connected to Customer John, who requested a refund for\.\.\."
 
-## Create a Contact Flow for Queued Callbacks<a name="queued-callback-contact-flow"></a>
+## Create a contact flow for queued callbacks<a name="queued-callback-contact-flow"></a>
 
-To see what a flow looks like with queued callback, in new Amazon Connect instances see [Sample Queue Configurations](sample-queue-configurations.md)\. In previous instances, see [Sample Queued Callback](sample-queued-callback.md)\.
+To see what a flow looks like with queued callback, in new Amazon Connect instances see [Sample queue configurations](sample-queue-configurations.md)\. In previous instances, see [Sample queued callback](sample-queued-callback.md)\.
 
 The following procedure shows how to:
 + Request a callback number from a customer\.
@@ -82,6 +82,14 @@ We strongly recommend that you double\-check the number entered in **Maximum amo
 
    If you don't set a working queue, Amazon Connect uses the queue that was set previously in the flow\.
 
-1. To save and test this flow, configure the other branches and add error handling\. To see an example of how this is done, see [Sample Queue Configurations](sample-queue-configurations.md)\. For previous instances, see [Sample Queued Callback](sample-queued-callback.md)\. 
+1. To save and test this flow, configure the other branches and add error handling\. To see an example of how this is done, see [Sample queue configurations](sample-queue-configurations.md)\. For previous instances, see [Sample queued callback](sample-queued-callback.md)\. 
 
-1. For information about how callbacks appear in real\-time metrics reports and CTRs, see [About Queued Callbacks in Metrics](about-queued-callbacks.md)\. 
+1. For information about how callbacks appear in real\-time metrics reports and CTRs, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
+
+## What happens to queued callbacks when no agents are online?<a name="queued-callback-no-agents-available"></a>
+
+If no agents are available to work on callbacks, the callbacks stay in queue for 7 days until the contacts are automatically removed from the queue\.
+
+To see how many callbacks are waiting in a queue in the real\-time metrics reports, you have to set up a queue specifically for callbacks\.
+
+There's no way to see details for the callbacks, such as the customer's phone number\. 

@@ -1,4 +1,4 @@
-# Create a Dev \(Sandbox\) or Test \(QA\) Instance<a name="create-connect-instance"></a>
+# Create a dev \(Sandbox\) or test \(QA\) instance<a name="create-connect-instance"></a>
 
 You might want to create multiple contact center instances, for example, one as a Sandbox for development, another for QA, and a third for Production\. 
 
@@ -14,4 +14,4 @@ For more information, see [Can I migrate my Amazon Connect instance from a test 
 
 1. Choose **Add an instance**\.
 
-1. Complete the steps on the Amazon Connect resource configuration page\. For instructions see [Create an Amazon Connect Instance](amazon-connect-instances.md)\.
+1. Complete the steps on the Amazon Connect resource configuration page\. For instructions see [Create an Amazon Connect instance](amazon-connect-instances.md)\.

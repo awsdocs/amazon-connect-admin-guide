@@ -1,4 +1,4 @@
-# Transfer Chats to Another Queue<a name="transfer-chats"></a>
+# Transfer chats to another queue<a name="transfer-chats"></a>
 
 When a chat is transferred from a bot to an agent, or from an agent to another queue, all context is preserved\. This context lets the next agent read all previous messages in that contact\.
 

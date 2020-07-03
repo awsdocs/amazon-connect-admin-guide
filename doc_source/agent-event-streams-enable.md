@@ -1,4 +1,4 @@
-# Enable Agent Event Streams<a name="agent-event-streams-enable"></a>
+# Enable agent event streams<a name="agent-event-streams-enable"></a>
 
 Agent event streams are not enabled by default\. Before you can enable agent event streams in Amazon Connect, create a data stream in Amazon Kinesis Data Streams\. Then, choose the Kinesis stream as the stream to use for agent event streams\. Though you can use the same stream for both agent event streams and contact trace records, managing and getting data from the stream is much easier when you use a separate stream for each\. For more information, see the [Amazon Kinesis Data Streams Developer Guide](https://docs.aws.amazon.com/streams/latest/dev/)\.
 

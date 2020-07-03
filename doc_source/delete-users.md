@@ -1,4 +1,4 @@
-# Delete Users from Your Amazon Connect Instance<a name="delete-users"></a>
+# Delete users from your Amazon Connect instance<a name="delete-users"></a>
 
 When a user is deleted from Amazon Connect, you won't be able to configure their agent settings any more\. For example, you won't be able to assign a routing profile to them\.
 

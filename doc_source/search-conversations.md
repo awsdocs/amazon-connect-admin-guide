@@ -1,4 +1,4 @@
-# Search Conversations<a name="search-conversations"></a>
+# Search conversations<a name="search-conversations"></a>
 
 
 |  | 
@@ -15,7 +15,7 @@ You can search the analyzed and transcribed recordings based on:
 
 Each of these criteria is described in the following sections\.
 
-## Search for Keywords<a name="keyword-search"></a>
+## Search for keywords<a name="keyword-search"></a>
 
 For search, Contact Lens uses the `standard` analyzer in Amazon Elasticsearch Service\. This analyzer is case\-insensitive\. For example, if you enter *thank you for your business 2 CANCELLED Flights*, the search looks for:
 
@@ -29,7 +29,7 @@ If you enter *"thank you for your business", two, "CANCELLED Flights"*, the sear
 
 1. In Amazon Connect, choose **Metrics and quality**, **Contact search**\.
 
-1. In the **Filter** section, specify the time period that you want to search\. Include other information to narrow your search\. For instructions, see [Contact Search](contact-search.md)\.
+1. In the **Filter** section, specify the time period that you want to search\. Include other information to narrow your search\. For instructions, see [Contact search](contact-search.md)\.
 **Tip**  
 When searching by date, you can search up to 14 days at a time\. 
 
@@ -45,7 +45,7 @@ When searching by date, you can search up to 14 days at a time\.
      For example, the following query means match \("thank you for your business" AND cancellation AND "example airline"\)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/match-all.png)
 
-## Search for Sentiment Score<a name="sentiment-search"></a>
+## Search for sentiment score<a name="sentiment-search"></a>
 
 With Contact Lens, you can search conversations for sentiment scores on a scale of \-5 \(most negative\) to \+5 \(most positive\)\. This enables you to identify patterns and factors for why calls go well or poorly\.
 
@@ -61,7 +61,7 @@ For example, suppose you want to identify and investigate all the calls where th
 
    \.\.\.the specified sentiment score\.
 
-## Search for Non\-Talk Time<a name="nontalk-time-search"></a>
+## Search for non\-talk time<a name="nontalk-time-search"></a>
 
 To help you identify which calls to investigate, you can search for non\-talk time\. For example, you might want to find all calls where the non\-talk time is greater than 20%, and then investigate them\.
 

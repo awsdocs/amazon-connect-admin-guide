@@ -1,8 +1,8 @@
-# Best Practices for Amazon Connect<a name="best-practices"></a>
+# Best practices for Amazon Connect<a name="best-practices"></a>
 
 This list of best practices can help you get the maximum benefit from Amazon Connect\. These best practices are for contact flows, user access and security, Lambda, chat, Amazon Lex, and the Contact Control Panel \(CCP\)\.
 
-## Contact Flows<a name="bp-contact-flows"></a>
+## Contact flows<a name="bp-contact-flows"></a>
 + Use consistent attribute naming conventions across all AWS services\. Use camel case for yourAttributeNames to avoid confusion when passing and referencing variables\. 
 + Use standard naming conventions for attribute names\. Don't use spaces or special characters that could impact downstream reporting processes such as AWS Glue crawlers\. 
 + Create modular contact flows\. Make the flows as small as possible, and then combine modular flows into an end\-to\-end contact experience\. This helps to keep your flows manageable, and you won't require numerous regression testing cycles\.
@@ -24,11 +24,11 @@ This list of best practices can help you get the maximum benefit from Amazon Con
 + Ensure that all numbers referenced in external transfers are in E\.164 format\. Drop the national trunk prefix that you use when calling locally\. This prefix would be the leading 0 for most of Europe, 1 for the US\. The prefix is replaced by the country code\. For example, the UK mobile number **07911 123456** in E\.164 format is **\+44 7911 123456 \(tel:\+447911123456\)**\.
 + Ensure that there are no infinite loops in the contact flow logic\. Also ensure that for each call, the contact flow connects the caller to an agent, bot, or transferred externally for further assistance\.
 
-## User Access and Security Profiles<a name="bp-security-profiles"></a>
+## User access and security profiles<a name="bp-security-profiles"></a>
 + Ensure that all profile permissions are as restrictive as possible\. Allow access to only those resources absolutely required for the user's role\. For example, don't give agents permissions to create, read, or update users in Amazon Connect\.
 + Ensure that multi\-factor authentication \(MFA\) is set up through your SAML 2\.0 identity provider, or Radius server, if that's more applicable for your use case\. After MFA is set up, a third text box becomes visible on the Amazon Connect login page to provide the second factor\.
 + If you use an existing directory through AWS Directory Service or SAML\-based authentication for identity management, ensure that you follow all security requirements appropriate for your use case\. 
-+ Use the **Log in for emergency access** URL on the instance page of the AWS console only in emergency situations, not for daily use\. For more information, see [Emergency Admin Login](emergency-admin-login.md)\.
++ Use the **Log in for emergency access** URL on the instance page of the AWS console only in emergency situations, not for daily use\. For more information, see [Emergency admin login](emergency-admin-login.md)\.
 
 ## Lambda<a name="bp-lambda"></a>
 + Amazon Connect limits the duration of a sequence of Lambda functions to 20 seconds\. It times out with an error message when the total execution time exceeds this threshold\. Because customers hear silence while a Lambda function runs, we recommend adding a **Play prompt** block between functions to keep them engaged during the long interaction\. 
@@ -36,7 +36,7 @@ This list of best practices can help you get the maximum benefit from Amazon Con
   By breaking up a chain of Lambda functions with the **Play prompt** block, you can invoke multiple functions that last longer than the 20 second threshold\.
 
 ## Chat and Amazon Lex<a name="bp-lex-bot-chat"></a>
-+ You can use the same bot for both the voice and chat channels\. However, you may want the bot to respond differently based on the channel\. For example, you want to return SSML for voice so a number is read as a phone number, but you want to return normal text to chat\. You can do this by passing the **Channel** attribute\. For instructions, see [How to Use the Same Bot for Voice and Chat](one-bot-voice-chat.md)\. 
++ You can use the same bot for both the voice and chat channels\. However, you may want the bot to respond differently based on the channel\. For example, you want to return SSML for voice so a number is read as a phone number, but you want to return normal text to chat\. You can do this by passing the **Channel** attribute\. For instructions, see [How to use the same bot for voice and chat](one-bot-voice-chat.md)\. 
 + For voice, some words are best spelled phonetically to get the correct pronunciation, such as last names\. If this is the case with your scenario, include it in the design of your bot\. Or, you can keep the voice and chat bots separate\. 
 + Tell agents about the bot\. When a contact is connected to the agent, the agent sees the entire transcript in their window\. The transcript includes text from both the customer and the bot\.
 

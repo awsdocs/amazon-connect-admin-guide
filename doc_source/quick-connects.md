@@ -1,15 +1,32 @@
-# Create Quick Connects<a name="quick-connects"></a>
+# Create quick connects<a name="quick-connects"></a>
 
 Quick connects are a way for you to create a list of destinations for common transfers\. For example, you might create a quick connect for Tier 2 support\. If agents in Tier 1 support can't solve the issue, they will transfer the contact to Tier 2\. 
 
-When you create a quick connect, you can specify one of these destinations: 
-+ **External**—Contacts are transferred to an external number \(such as an on\-call pager\)\. 
-+ **Agent**—Contacts are transferred to a specific agent as part of a contact flow\.
+## Types of quick connects<a name="quick-connect-types"></a>
 
-  If you want all of your agents to appear individually in the list of quick connects in the Contact Control Panel \(CCP\), you need to add each one manually\. There's no way to automate this process\.
-+ **Queue**—Contacts are transferred to a queue as part of a contact flow\.
+The type of a quick connect specifies the destination\. You can specify one of the following destinations\.
+
+### External quick connect<a name="external-quick-connect-type"></a>
+
+Contacts are transferred to an external number \(such as an on\-call pager\)\. 
+
+### Agent quick connect<a name="agent-quick-connect-type"></a>
+
+Contacts are transferred to a specific agent as part of a contact flow\.
+
+If you want all of your agents to appear individually in the list of quick connects in the Contact Control Panel \(CCP\), you need to add each one manually\. There's no way to automate this process\.
+
 **Important**  
 Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
+
+### Queue quick connect<a name="queue-quick-connect-type"></a>
+
+Contacts are transferred to a queue as part of a contact flow\.
+
+**Important**  
+Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
+
+## Step 1: create quick connects<a name="step1-create-quick-connects"></a>
 
 **To create a quick connect**
 
@@ -22,6 +39,8 @@ A description is required when you create a quick connect\. If you don't add one
 1. To add more quick connects, choose **Add new**\.
 
 1. Choose **Save**\.
+
+## Step 2: enable agents to see quick connects<a name="step2-enable-agents-to-see-quick-connects"></a>
 
 **To enable your agents to see the quick connects in the CCP when they transfer a contact**
 

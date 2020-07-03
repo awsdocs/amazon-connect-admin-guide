@@ -1,4 +1,4 @@
-# Key Management<a name="key-management"></a>
+# Key management<a name="key-management"></a>
 
 You can specify AWS KMS keys, including bring your own keys \(BYOK\), to use for envelope encryption with Amazon S3 input/output buckets\.
 

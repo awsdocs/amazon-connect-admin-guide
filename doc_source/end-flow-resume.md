@@ -1,6 +1,6 @@
 # Contact Block: End Flow / Resume<a name="end-flow-resume"></a>
 
-## In contact flow types<a name="end-flow-resume-types"></a>
+## Contact flow types<a name="end-flow-resume-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Customer queue flow

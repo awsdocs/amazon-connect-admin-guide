@@ -1,4 +1,4 @@
-# Part 3: Add Sample Utterances<a name="tutorial1-add-sample-utterances"></a>
+# Part 3: Add sample utterances<a name="tutorial1-add-sample-utterances"></a>
 
 After defining the intents, add some sample utterances\. Utterances are what a customer might say or chat to the bot\.
 
@@ -22,4 +22,4 @@ After defining the intents, add some sample utterances\. Utterances are what a c
    The sample utterances look like what's shown in the following image\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-networkissue-utterances.png)
 
-Go to [Part 4: Build and Test the Amazon Lex Bot](tutorial-lex-bot-build.md)\.
+Go to [Part 4: Build and test the Amazon Lex bot](tutorial-lex-bot-build.md)\.

@@ -1,9 +1,9 @@
 # Contact Block: Hold Customer or Agent<a name="hold-customer-agent"></a>
 
-## In contact flow types<a name="get-queue-metrics-types"></a>
+## Contact flow types<a name="get-queue-metrics-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic flow
++ Inbound contact flow
 + Outbound Whisper flow
 + Transfer to Agent flow 
 + Transfer to Queue flow
@@ -29,4 +29,4 @@ When this block is configured, it looks similar to the following image:
 
 ## Samples flows<a name="get-queue-metrics-samples"></a>
 
-[Sample Secure Input with Agent](sample-secure-input-with-agent.md) 
+[Sample secure input with agent](sample-secure-input-with-agent.md) 

@@ -1,9 +1,9 @@
 # Contact Block: Check Queue Status<a name="check-queue-status"></a>
 
-## In contact flow types<a name="check-queue-status-types"></a>
+## Contact flow types<a name="check-queue-status-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic flow
++ Inbound contact flow
 + Customer queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
@@ -28,4 +28,4 @@ When this block is configured, it looks similar to the following image:
 ## Scenarios<a name="check-queue-status-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Manage Contacts in a Queue](queue-to-queue-transfer.md)
++ [Manage contacts in a queue](queue-to-queue-transfer.md)

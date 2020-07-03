@@ -1,8 +1,8 @@
-# Set Up Recording Behavior<a name="set-up-recordings"></a>
+# Set up recording behavior<a name="set-up-recordings"></a>
 
 Managers can monitor live conversations, and review and download recordings of past agent conversations\. To set this up, you need to add the [Set Recording Behavior](set-recording-behavior.md) block to your contact flows, assign managers the appropriate permissions, and show them how to monitor live conversations and access past recordings in Amazon Connect\.
 
-A conversation is recorded only when the contact is connected to an agent\. The contact is not recorded before then, when they are connected to the flow\. 
+A conversation is recorded only when the contact is connected to an agent\. The contact is not recorded before then, when they are connected to the flow\. If a customer is put on hold, the agent is still recorded\.
 
 **Tip**  
 When a customer is on hold, the agent is still recorded\.
@@ -19,7 +19,7 @@ You shouldn't disable encryption\.
 For voice conversations to be stored in an Amazon S3 bucket, you need to enable recording in the contact flow block using the **Set recording behavior** block\.
 For chat conversations, if there's an S3 bucket for storing chat transcripts, then all chats are recorded and stored there\. If no bucket exists, then no chats are recorded\. However, if you want to monitor chat conversations, you still need to add the **Set recording behavior** block to the flow\.
 
-To view a sample contact flow with the **Set recording behavior** block configured, see [Sample Recording Behavior](sample-recording-behavior.md)\.
+To view a sample contact flow with the **Set recording behavior** block configured, see [Sample recording behavior](sample-recording-behavior.md)\.
 
 **To set up recording behavior in your contact flows**
 
@@ -44,9 +44,9 @@ To view a sample contact flow with the **Set recording behavior** block configur
 
 1. Set up a queue that will be used for making outbound calls\. In the **Outbound whisper flow** box, choose the contact flow that has **Set recording behavior** in it\. 
 
-To learn what permissions managers need, and how they can monitor live conversations and review recordings of past conversations, see [Monitor Live Conversations](monitor-conversations.md) and [Review Recorded Conversations](review-recorded-conversations.md)\.
+To learn what permissions managers need, and how they can monitor live conversations and review recordings of past conversations, see [Monitor live conversations](monitor-conversations.md) and [Review recorded conversations](review-recorded-conversations.md)\.
 
-## When Are Recordings Available?<a name="when-are-recordings-available"></a>
+## When are recordings available?<a name="when-are-recordings-available"></a>
 
 When call recording is enabled, the recording is placed in your S3 bucket shortly after the contact is disconnected\. Then you can [review the recording](review-recorded-conversations.md)\.
 

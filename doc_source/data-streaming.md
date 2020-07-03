@@ -1,4 +1,4 @@
-# Enable Data Streaming<a name="data-streaming"></a>
+# Enable data streaming<a name="data-streaming"></a>
 
 You can export contact trace records \(CTRs\) and agent events from Amazon Connect and perform real\-time analysis on contacts\. Data streaming sends data to Amazon Kinesis\.
 

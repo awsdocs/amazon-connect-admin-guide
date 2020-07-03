@@ -1,4 +1,4 @@
-# Configure SAML with an AWS SSO Application for Amazon Connect<a name="configure-saml-with-aws-sso"></a>
+# Configure SAML with an AWS SSO application for Amazon Connect<a name="configure-saml-with-aws-sso"></a>
 
 AWS SSO provides support for integration with other services through built\-in applications\. These applications use AWS SSO for authentication and provide end\-users with an easy sign\-in experience\. To learn more about AWS SSO applications, see [What is AWS Single Sign\-On?](https://docs.aws.amazon.com/singlesignon/latest/userguide/) in the *AWS SSO User Guide*\.
 
@@ -8,7 +8,7 @@ When you set up an Amazon Connect AWS SSO\-integrated application, your users ar
 + Set up AWS SSO\. For instructions, see [Getting Started](https://docs.aws.amazon.com/singlesignon/latest/userguide/getting-started.html) in the [AWS Single Sign\-On User Guide](https://docs.aws.amazon.com/singlesignon/latest/userguide/)\.
 + Set up your Amazon Connect instance for SAML federation\. For instructions and important notes, see [Configure SAML with IAM for Amazon Connect](configure-saml.md)\. 
 
-## Overview of SAML Federation with AWS SSO\-integrated Application<a name="configure-saml-with-aws-sso-overview"></a>
+## Overview of SAML federation with AWS SSO\-integrated application<a name="configure-saml-with-aws-sso-overview"></a>
 
 Depending on your AWS SSO IdP configuration, the flow between AWS SSO and your IdP will vary\. The following diagram shows the basic SAML authentication flow from an initial AWS SSO sign\-on through authentication into your Amazon Connect instance\.
 
@@ -32,7 +32,7 @@ SAML requests go through the following steps:
 
 1. The user is automatically redirected to the Amazon Connect instance based on the application’s relay state\.
 
-## Step 1: Configure Your Amazon Connect AWS SSO Application<a name="how-to-configure-saml-with-aws-sso"></a>
+## Step 1: Configure your Amazon Connect AWS SSO application<a name="how-to-configure-saml-with-aws-sso"></a>
 
 1. Log in to the [AWS Management Console](https://console.aws.amazon.com/console) \(https://console\.aws\.amazon\.com/console\) using your AWS account\. 
 
@@ -52,7 +52,7 @@ SAML requests go through the following steps:
    1. Next to **AWS SSO certificate**, choose **Download certificate**, **Save File** to download and save the identity provider certificate\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sso-certificate.png)
 
-      You will need these files later when you do [Step 2: Configure Your IAM Resources](#how-to-configure-your-iam-resources)\.
+      You will need these files later when you do [Step 2: Configure your IAM resources](#how-to-configure-your-iam-resources)\.
 
 1. Under **Application properties**, set the **Relay State** and **Session Duration** for your Amazon Connect instance:
 
@@ -62,18 +62,18 @@ SAML requests go through the following steps:
 
       For example, `https://us-west-2.console.aws.amazon.com/connect/federate/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee`
 
-      You can locate your region ID on the upper righter corner of the console\. To find your Amazon Connect instance id, see [Find Your Amazon Connect Instance ID/ARN](find-instance-arn.md)\.
+      You can locate your region ID on the upper righter corner of the console\. To find your Amazon Connect instance id, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.
 
-   1. The default session duration for an Amazon Connect instance is 10 hours\. We recommend you set the session duration to match or exceed your instance’s duration\. For more information, see [SAML User Logging in and Session Duration](configure-saml.md#user-sessions)\.
+   1. The default session duration for an Amazon Connect instance is 10 hours\. We recommend you set the session duration to match or exceed your instance’s duration\. For more information, see [SAML user logging in and session duration](configure-saml.md#user-sessions)\.
 
 1. Under **Application metadata**, leave the default values\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sso-application-metadata.png)
 
 1. Choose **Save changes**\.
 
-## Step 2: Configure Your IAM Resources<a name="how-to-configure-your-iam-resources"></a>
+## Step 2: Configure your IAM resources<a name="how-to-configure-your-iam-resources"></a>
 
-1. Follow the steps in [Creating and Managing an IAM Identity Provider \(Console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml.html#idp-manage-identityprovider-console.html)\. In this step, you will upload the AWS SSO SAML metadata file that you created in [Step 1: Configure Your Amazon Connect AWS SSO Application](#how-to-configure-saml-with-aws-sso)\.
+1. Follow the steps in [Creating and Managing an IAM Identity Provider \(Console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml.html#idp-manage-identityprovider-console.html)\. In this step, you will upload the AWS SSO SAML metadata file that you created in [Step 1: Configure your Amazon Connect AWS SSO application](#how-to-configure-saml-with-aws-sso)\.
 
 1. Follow the steps in [Creating a Role for SAML 2\.0 Federation \(Console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html) to create a role that establishes a trust relationship between IAM and the AWS SSO Amazon Connect SAML Provider created in the previous step\.
    + Choose **Allow programmatic and AWS Management Console access**\.
@@ -112,7 +112,7 @@ SAML requests go through the following steps:
 **Note**  
 After a user name \(email\) is mapped to an IAM role on an Amazon Connect instance, that user cannot login via another SAML role \(for instance a separate SSO application or another IdP’s role\)\. To change a user’s role\-mapping, you must delete and re\-provision user on that instance\.
 
-## Step 3: Verify Access<a name="verifying-sso-from-aws-sso"></a>
+## Step 3: Verify access<a name="verifying-sso-from-aws-sso"></a>
 
 1. Access the AWS SSO user portal using the credentials of a user assigned to Amazon Connect\.
 
@@ -120,7 +120,7 @@ After a user name \(email\) is mapped to an IAM role on an Amazon Connect instan
 
 1. If login was successful you will be signed\-in to the Amazon Connect instance\.
 
-## User Provisioning Types<a name="user-provisioning-types"></a>
+## User provisioning types<a name="user-provisioning-types"></a>
 
 There are two user provisioning types you need to be aware of:
 + **Pre\-provisioned users**: These users must already exist in the downstream SaaS application\. For example, you may need to create SaaS users with the same subject as the AD users\.
@@ -132,7 +132,7 @@ Amazon Connect implements pre\-provisioned users when SAML authentication is use
 
 The system for cross\-domain identity management \(SCIM\) provisioning protocol is another option for supported external IdPs\. For more information, see [Manage Identities in AWS SSO](https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-identity-source-sso.html)\.
 
-## Troubleshoot SSO Configuration<a name="troubleshooting-sso-configuration"></a>
+## Troubleshoot SSO configuration<a name="troubleshooting-sso-configuration"></a>
 
 The following table lists a couple of tips for troubleshooting your SSO configuration\. For more information, see [Troubleshooting AWS SSO Issues](https://docs.aws.amazon.com/singlesignon/latest/userguide/troubleshooting.html)\.
 

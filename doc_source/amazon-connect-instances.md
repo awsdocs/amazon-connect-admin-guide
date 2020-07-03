@@ -1,16 +1,16 @@
-# Create an Amazon Connect Instance<a name="amazon-connect-instances"></a>
+# Create an Amazon Connect instance<a name="amazon-connect-instances"></a>
 
 The first step in setting up your Amazon Connect contact center is to create a virtual contact center instance\. Each instance contains all the resources and settings related to your contact center\. 
 
-## Things to Know Before You Begin<a name="get-started-prerequisites"></a>
+## Things to know before you begin<a name="get-started-prerequisites"></a>
 + When you sign up for Amazon Web Services \(AWS\), your AWS account is automatically signed up for all services in AWS, including Amazon Connect\. You are charged only for the services that you use\. To create an AWS account, see [How do I create and activate an AWS account?](http://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 + To allow an IAM user to create an instance, ensure that they have the permissions granted by the **AmazonConnectFullAccess** policy\.
 + Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
-+ When you create an instance, you must decide how you want to manage users\. **You can't change the identity management option after you create the instance**\. For more information, see [Plan Your Identity Management in Amazon Connect](connect-identity-management.md)\.
++ When you create an instance, you must decide how you want to manage users\. **You can't change the identity management option after you create the instance**\. For more information, see [Plan your identity management in Amazon Connect](connect-identity-management.md)\.
 
-## Step 1: Identity Management<a name="get-started-identity-management"></a>
+## Step 1: Identity management<a name="get-started-identity-management"></a>
 
-Permissions to access Amazon Connect features and resource are assigned to user accounts within Amazon Connect\. When you create an instance, you must decide how you want to manage users\. You can't change the identity management option after you create the instance\. For more information, see [Plan Your Identity Management in Amazon Connect](connect-identity-management.md)\.
+Permissions to access Amazon Connect features and resource are assigned to user accounts within Amazon Connect\. When you create an instance, you must decide how you want to manage users\. You can't change the identity management option after you create the instance\. For more information, see [Plan your identity management in Amazon Connect](connect-identity-management.md)\.
 
 **To configure identity management for your instance**
 
@@ -42,14 +42,14 @@ After you specify the user name of the administrator for the Amazon Connect inst
 
 1. Choose **Next step**\.
 
-## Step 3: Telephony Options<a name="get-started-telephony"></a>
+## Step 3: Telephony options<a name="get-started-telephony"></a>
 
 Use the options in this section to choose whether you want your agents to receive calls from customers, and make outbound calls, using Amazon Connect\.
 
-Amazon Connect enables agents to hear early media, that is, pre\-connection audio such as busy signals, failure to connect errors, or other informational messages, when making outbound calls\.
+Amazon Connect enables agents to hear early media, that is, pre\-connection audio such as busy signals, failure to connect errors, or other informational messages, when making outbound calls\. Telephony providers determine the audio agents hear\.
 
 **Tip**  
-Early media is enabled by default for new instances of Amazon Connect\. If you have an existing instance and want to enable this feature, please open a support ticket\. For instructions, see [Get Administrative Support for Amazon Connect](get-admin-support.md)\.
+Early media is enabled by default for new instances of Amazon Connect\. If you have an existing instance and want to enable this feature, please open a support ticket\. For instructions, see [Get administrative support for Amazon Connect](get-admin-support.md)\.
 
 **To configure telephony options for your instance**
 
@@ -59,7 +59,7 @@ Early media is enabled by default for new instances of Amazon Connect\. If you h
 
 1. Choose **Next step**\.
 
-## Step 4: Data Storage<a name="get-started-data-storage"></a>
+## Step 4: Data storage<a name="get-started-data-storage"></a>
 
 When you create an instance, by default we create an Amazon S3 bucket\. Data, such as reports and recordings of conversations, is encrypted using AWS Key Management Service, and then stored in the Amazon S3 bucket\.
 
@@ -84,7 +84,7 @@ This bucket and key are used for both recordings of conversations and exported r
 
 1. Choose **Next step**\.
 
-## Step 5: Review and Create<a name="get-started-review"></a>
+## Step 5: Review and create<a name="get-started-review"></a>
 
 When you are finished configuring your instance, you can create it\.
 
@@ -96,10 +96,10 @@ When you are finished configuring your instance, you can create it\.
 
 1. Choose **Create instance**\.
 
-1. \(Optional\) To continue configuring your instance, choose **Get started** and then choose **Let's go**\. If you prefer, you can access your instance and configure it later on\. For more information, see [Next Steps](#get-started-next-steps)\.
+1. \(Optional\) To continue configuring your instance, choose **Get started** and then choose **Let's go**\. If you prefer, you can access your instance and configure it later on\. For more information, see [Next steps](#get-started-next-steps)\.
 
    If you chose to manage your users directly within Amazon Connect or through an AWS Directory Service directory, you can access the instance using its access URL\. If you chose to manage your users through SAML\-based authentication, you can access the instance using the IdP\.
 
-## Next Steps<a name="get-started-next-steps"></a>
+## Next steps<a name="get-started-next-steps"></a>
 
-After you create an instance, you can assign your contact center a phone number or import your own phone number\. For more information, see [Set Up Phone Numbers for Your Contact Center](contact-center-phone-number.md)\.
+After you create an instance, you can assign your contact center a phone number or import your own phone number\. For more information, see [Set up phone numbers for your contact center](contact-center-phone-number.md)\.

@@ -1,4 +1,4 @@
-# Part 4: Build and Test the Amazon Lex Bot<a name="tutorial-lex-bot-build"></a>
+# Part 4: Build and test the Amazon Lex bot<a name="tutorial-lex-bot-build"></a>
 
 Build and test your bot to make sure that it works as intended before you publish it\.
 
@@ -17,4 +17,4 @@ Build and test your bot to make sure that it works as intended before you publis
 1. To confirm that the **NetworkIssue** intent is working, type **my email is down**\. The verification looks like what's shown in the following image\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-lex-custom-bot14.png)
 
-Go to [Part 5: Publish the Amazon Lex Bot and Create an Alias](tutorial1-lex-bot-publish.md)\.
+Go to [Part 5: Publish the Amazon Lex bot and create an alias](tutorial1-lex-bot-publish.md)\.

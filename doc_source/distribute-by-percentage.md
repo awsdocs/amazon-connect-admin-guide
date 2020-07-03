@@ -1,9 +1,9 @@
 # Contact Block: Distribute by Percentage<a name="distribute-by-percentage"></a>
 
-## In contact flow types<a name="disconnect-hang-up-types"></a>
+## Contact flow types<a name="disconnect-hang-up-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic contact flow
++ Inbound contact flow
 + Customer queue flow
 + Outbound Whisper flow
 + Transfer to Agent flow
@@ -19,7 +19,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## How it works<a name="disconnect-hang-up-works"></a>
 
-This block creates static allocation rules based on how you configure it\. Internal logic generates a random number between 1\-100, which identifies which branch to take\. It doesn't use current or historical volume as part of it's logic\.
+This block creates static allocation rules based on how you configure it\. Internal logic generates a random number between 1\-100\. This number identifies which branch to take\. It doesn't use current or historical volume as part of it's logic\.
 
 For example, say a block is configure like this:
 + 20% = A
@@ -40,4 +40,4 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="disconnect-hang-up-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample AB Test](sample-ab-test.md)
++ [Sample AB test](sample-ab-test.md)

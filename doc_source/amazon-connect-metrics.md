@@ -7,21 +7,21 @@ The basis for most historical and real\-time metrics in Amazon Connect is the da
 CTRs are available within your instance for 24 months from the time when the associated contact was initiated\. You can also stream CTRs to Amazon Kinesis to retain the data longer, and perform advanced analysis on it\.
 
 **Tip**  
-For detailed information about the activity of agents in your contact center, use [Amazon Connect Agent Event Streams](agent-event-streams.md)\.
+For detailed information about the activity of agents in your contact center, use [Amazon Connect agent event streams](agent-event-streams.md)\.
 
 **Topics**
-+ [What's New in Metrics](upcoming-changes.md)
-+ [About Agent Status](metrics-agent-status.md)
-+ [About Contact States](about-contact-states.md)
-+ [About Queued Callbacks in Metrics](about-queued-callbacks.md)
-+ [Save Custom Reports](save-reports.md)
-+ [Share Custom Reports](share-reports.md)
-+ [View a Shared Report](view-a-shared-report.md)
-+ [Publish Reports](publish-reports.md)
-+ [Real\-time Metrics Reports](real-time-metrics-reports.md)
-+ [Historical Metrics Reports](historical-metrics.md)
-+ [Contact Search](contact-search.md)
++ [What's new in metrics](upcoming-changes.md)
++ [About agent status](metrics-agent-status.md)
++ [About contact states](about-contact-states.md)
++ [About queued callbacks in metrics](about-queued-callbacks.md)
++ [Save custom reports](save-reports.md)
++ [Share custom reports](share-reports.md)
++ [View a shared report](view-a-shared-report.md)
++ [Publish reports](publish-reports.md)
++ [Real\-time metrics reports](real-time-metrics-reports.md)
++ [Historical metrics reports](historical-metrics.md)
++ [Contact search](contact-search.md)
 + [View a CTR in the UI](sample-ctr.md)
 + [Login/Logout Reports](login-logout-reports.md)
-+ [Amazon Connect Agent Event Streams](agent-event-streams.md)
-+ [Contact Trace Records \(CTR\) Data Model](ctr-data-model.md)
++ [Amazon Connect agent event streams](agent-event-streams.md)
++ [Contact trace records \(CTR\) data model](ctr-data-model.md)

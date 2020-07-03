@@ -1,4 +1,4 @@
-# Review Transcripts of Voice Conversations<a name="review-transcripts"></a>
+# Review transcripts of voice conversations<a name="review-transcripts"></a>
 
 
 |  | 
@@ -15,7 +15,7 @@ For example, you might see that 25 seconds into the call the customer moved from
 
 1. In Amazon Connect choose **Metrics and quality**, **Contact search**\.
 
-1. Use the filters on the page to narrow your search for a contact\. For date, you can search up to 14 days at a time\. For more information about searching for contacts, see [Contact Search](contact-search.md)\. 
+1. Use the filters on the page to narrow your search for a contact\. For date, you can search up to 14 days at a time\. For more information about searching for contacts, see [Contact search](contact-search.md)\. 
 
 1. Click the contact ID to view the Contact Trace Record \(CTR\) for the contact\.
 

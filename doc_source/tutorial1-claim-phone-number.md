@@ -1,4 +1,4 @@
-# Step 3: Claim a Phone Number<a name="tutorial1-claim-phone-number"></a>
+# Step 3: Claim a phone number<a name="tutorial1-claim-phone-number"></a>
 
 In this step, you set up a phone number so that you can experiment with Amazon Connect\.
 
@@ -20,4 +20,4 @@ In this step, you set up a phone number so that you can experiment with Amazon C
 
 1. Choose **Save**\.
 
-**Congratulations\!** You set up your instance and claimed a phone number\. Now you're ready to experience how chat and voice work in Amazon Connect\. Go to [Tutorial 2: Test the Sample Voice and Chat Experience](tutorial1-explore-voice-and-chat.md)\.
+**Congratulations\!** You set up your instance and claimed a phone number\. Now you're ready to experience how chat and voice work in Amazon Connect\. Go to [Tutorial 2: Test the sample voice and chat experience](tutorial1-explore-voice-and-chat.md)\.

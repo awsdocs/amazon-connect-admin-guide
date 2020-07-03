@@ -1,6 +1,6 @@
-# Set Up Routing<a name="connect-queues"></a>
+# Set up routing<a name="connect-queues"></a>
 
-In Amazon Connect, routing consists of three parts: queues, routing profiles, and contact flows\. This topic discusses queues and routing profiles\. For information about contact flows, see [Create Amazon Connect Contact FlowsCreate Contact Flows](connect-contact-flows.md)\.
+In Amazon Connect, routing consists of three parts: queues, routing profiles, and contact flows\. This topic discusses queues and routing profiles\. For information about contact flows, see [Create Amazon Connect contact flowsCreate contact flows](connect-contact-flows.md)\.
 
 A queue holds contacts waiting to be answered by agents\. You can use a single queue to handle all incoming contacts, or you can set up multiple queues\.
 
@@ -14,11 +14,11 @@ Queues are linked to agents through a routing profile\. When you create a routin
 Each agent is assigned to one routing profile\.
 
 **Topics**
-+ [How Routing Works](about-routing.md)
-+ [Create a Queue](create-queue.md)
-+ [Disable a Queue](disable-a-queue.md)
-+ [Set Queue Capacity](set-maximum-queue-limit.md)
-+ [Set the Hours of Operation](set-hours-operation.md)
-+ [Set Up Outbound Caller ID](queues-callerid.md)
-+ [Create a Routing Profile](routing-profiles.md)
-+ [Set Up Queue\-Based Routing](set-up-queue-based-routing.md)
++ [How routing works](about-routing.md)
++ [Create a queue](create-queue.md)
++ [Disable a queue](disable-a-queue.md)
++ [Set queue capacity](set-maximum-queue-limit.md)
++ [Set the hours of operation](set-hours-operation.md)
++ [Set up outbound caller ID](queues-callerid.md)
++ [Create a routing profile](routing-profiles.md)
++ [Set up queue\-based routing](set-up-queue-based-routing.md)

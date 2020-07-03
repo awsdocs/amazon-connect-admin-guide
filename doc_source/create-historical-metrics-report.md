@@ -1,11 +1,11 @@
-# Create a Historical Metrics Report<a name="create-historical-metrics-report"></a>
+# Create a historical metrics report<a name="create-historical-metrics-report"></a>
 
 Although Amazon Connect includes built\-in historical reports, you can create your own custom reports so you look at only the data that's of interest to your organization\. 
 
 **Requirement**
-+ You must have permission to access metric data\. The following security profiles include this permission: **CallCenterManager** and **QualityAnalyst**\. For more information, see [Security Profiles](connect-security-profiles.md)\.
++ You must have permission to access metric data\. The following security profiles include this permission: **CallCenterManager** and **QualityAnalyst**\. For more information, see [Security profiles](connect-security-profiles.md)\.
 
-## Grouping Options<a name="historical-metrics-groupings"></a>
+## Grouping options<a name="historical-metrics-groupings"></a>
 
 You can group the metrics included in your reports in different ways to provide greater insight into how your contact center is performing\.
 
@@ -29,7 +29,7 @@ When you customize a report, you can add filters to control which data is includ
 + **Agent hierarchy**—Includes data only for the contacts handled by agents in the specified hierarchies\. If you don't specify a hierarchy, data for all contacts handled by agents in all hierarchies is included\. When only one hierarchy is specified, you can specify a more granular filter within the hierarchy\.
 + **Phone number**—Includes data only for the contacts associated with the specified phone numbers\. If you don't specify a phone number, data for all contacts associated with all phone numbers is included\.
 
-## How to Create a Historical Metrics Report<a name="historical-reports-howto-create"></a>
+## How to create a historical metrics report<a name="historical-reports-howto-create"></a>
 
 1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
 
@@ -58,11 +58,11 @@ When you customize a report, you can add filters to control which data is includ
 
       For **Last *x* days** and **Month to date**, the current day is not included in the report\. **Yesterday** specifies the previous calendar day while **Last 24 hours** specifies the 24 hours prior to the current time\.
 
-1. \(Optional\) On the **Groupings** tab, choose up to five groupings\. If you choose one grouping option, the data is grouped by that option\. If you choose multiple grouping options, the data is group by the first grouping option and then by the subsequent grouping options\. For more information, see [Grouping Options](#historical-metrics-groupings)\.
+1. \(Optional\) On the **Groupings** tab, choose up to five groupings\. If you choose one grouping option, the data is grouped by that option\. If you choose multiple grouping options, the data is group by the first grouping option and then by the subsequent grouping options\. For more information, see [Grouping options](#historical-metrics-groupings)\.
 
 1. \(Optional\) On the **Filters** tab, specify filters to scope the data to be included in the report\. The available filters depend on the groupings that you select\. For more information, see [Filters](#historical-metrics-filters)\.
 
-1. On the **Metrics** tab, choose the metrics and fields to include in the report\. An exclamation point \(\!\) is displayed next to any metrics that are not available based on the groupings that you selected\. For more information, see [Historical Metrics Definitions](historical-metrics-definitions.md)\.
+1. On the **Metrics** tab, choose the metrics and fields to include in the report\. An exclamation point \(\!\) is displayed next to any metrics that are not available based on the groupings that you selected\. For more information, see [Historical metrics definitions](historical-metrics-definitions.md)\.
 
 1. When you are finished customizing your report, choose **Apply**\.
 

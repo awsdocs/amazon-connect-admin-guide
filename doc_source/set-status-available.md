@@ -1,4 +1,4 @@
-# Set Your Status to Available<a name="set-status-available"></a>
+# Set your status to available<a name="set-status-available"></a>
 
 When an agent is ready to handle calls or chats, they need to set their status in the CCP to **Available**\. This tells Amazon Connect they are ready to handle contacts\.
 

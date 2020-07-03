@@ -1,4 +1,4 @@
-# Historical Metrics Definitions<a name="historical-metrics-definitions"></a>
+# Historical metrics definitions<a name="historical-metrics-definitions"></a>
 
 The following metrics are available to include in historical metrics reports in Amazon Connect\.
 
@@ -23,7 +23,7 @@ The first name of the agent, as entered in their Amazon Connect user account\. T
 Type: String   
 Length: 1\-255
 
-**Agent idle time**  <a name="agent-idle-time-historical"></a>
+**Agent idle time \(deprecated June, 2020\)**  <a name="agent-idle-time-historical"></a>
 After the agent sets their status in the CCP to **Available**, this is the amount of time they weren't handling contacts \+ any time their contacts were in an Error state\.   
 Agent idle time doesn’t include the amount of time from when Amazon Connect starts routing the contact to the agent, to when agent picks up or declines the contact\.  
 Type: String \(*hh:mm:ss*\)  
@@ -54,7 +54,7 @@ This metric appears as **Contacts missed** in scheduled reports and exported CSV
 Type: Integer   
 Category: Agent activity\-driven metric
 
-**Agent on contact time**  <a name="agent-on-contact-time-historical"></a>
+**Agent on contact time \(deprecated June, 2020\)**  <a name="agent-on-contact-time-historical"></a>
 Total time that an agent spent on a contact, including [Customer Hold Time](#customer-hold-time-historical) and [After Contact Work Time](#acw-historical)\. This does **not** include time spent on a contact while in a custom status\.  
 If you want to include the time spent in a custom status, see [Contact handle time](#contact-handle-time-historical)\.
 Type: String \(*hh:mm:ss*\)  
@@ -269,7 +269,7 @@ This metric can't be grouped or filtered by queue\.
 Type: String \(*hh:mm:ss*\)  
 Category: Agent activity\-driven metric
 
-**Occupancy**  <a name="occupancy-historical"></a>
+**Occupancy \(deprecated June, 2020\)**  <a name="occupancy-historical"></a>
 Percentage of time that agents were active on contacts\. This percentage is calculated as follows:  
 \([Agent Handle Time](#average-handle-time-historical) / \([Agent Handle Time](#average-handle-time-historical) \+ [Agent Idle Time](#agent-idle-time-historical)\)\) \* 100  
 Type: String   

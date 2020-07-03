@@ -1,4 +1,4 @@
-# Part 5: Publish the Amazon Lex Bot and Create an Alias<a name="tutorial1-lex-bot-publish"></a>
+# Part 5: Publish the Amazon Lex bot and create an alias<a name="tutorial1-lex-bot-publish"></a>
 
 Next, publish the bot so you can add it to a contact flow in Amazon Connect\.
 
@@ -13,4 +13,4 @@ Next, publish the bot so you can add it to a contact flow in Amazon Connect\.
 1. When Amazon Lex finishes publishing, choose **Close**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-lex-custom-bot17.png)
 
-Well done\! You created an Amazon Lex bot that has intents and utterances\. Now you can add the bot to Amazon Connect\. Go to [Step 2: Add Permissions to Amazon Lex Bot](tutorial1-add-permissions-for-bot.md)\.
+Well done\! You created an Amazon Lex bot that has intents and utterances\. Now you can add the bot to Amazon Connect\. Go to [Step 2: Add permissions to Amazon Lex bot](tutorial1-add-permissions-for-bot.md)\.

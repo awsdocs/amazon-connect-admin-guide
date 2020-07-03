@@ -1,4 +1,4 @@
-# View a Shared Report<a name="view-a-shared-report"></a>
+# View a shared report<a name="view-a-shared-report"></a>
 
 To view a report that someone has shared with you, you need the following: 
 + A link to the report\. 
@@ -8,7 +8,7 @@ To view a report that someone has shared with you, you need the following:
   +  **View** Saved reports  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-view-saved-metrics-reports.png)
 
-## Tips for Viewing a Shared Report<a name="tips-view-a-shared-report"></a>
+## Tips for viewing a shared report<a name="tips-view-a-shared-report"></a>
 + Every time you want to view the shared report, you need to access it through the link that was shared with you\.
 + If you get a 505 error when you choose the link that was shared with you, it means you don't have permissions to view the report\.
 + There's no way to save the exact same report to your list of Saved reports\. You can give the report a new name and save it to your list, but then it's a different report from the one that was shared with you\. If the owner of original report makes changes, you won't see them in your renamed report\.

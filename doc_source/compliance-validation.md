@@ -1,4 +1,4 @@
-# Compliance Validation Amazon Connect<a name="compliance-validation"></a>
+# Compliance validation in Amazon Connect<a name="compliance-validation"></a>
 
 Third\-party auditors assess the security and compliance of Amazon Connect as part of multiple AWS compliance programs\. These include SOC, PCI, HIPAA, C5 \(Frankfurt\), and HITRUST CSF\.
 

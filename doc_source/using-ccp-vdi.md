@@ -1,4 +1,4 @@
-# Using Amazon Connect in a VDI Environment<a name="using-ccp-vdi"></a>
+# Using Amazon Connect in a VDI environment<a name="using-ccp-vdi"></a>
 
 Virtual Desktop Infrastructure \(VDI\) environments add another layer of complexity to your solution that warrants separate POC efforts and performance testing to optimize\. The Amazon Connect Contact Control Panel \(CCP\) can operate in thick, thin, and zero client VDI environments as any other WebRTC based browser application does, and the configuration/support/optimization is best handled by your VDI support team\. That being said, the following is a collection of considerations and best practices that have been helpful for our VDI\-based customers\.
 + **Location of your agents**—Ideally, there are as few hops as possible with the lowest round trip time between the location from which your agents use the CCP and the VDI host location\.

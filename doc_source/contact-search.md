@@ -1,4 +1,4 @@
-# Contact Search<a name="contact-search"></a>
+# Contact search<a name="contact-search"></a>
 
 You can search for contacts as far back as two years ago, 14 days at a time\.
 

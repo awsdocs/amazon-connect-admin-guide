@@ -1,4 +1,4 @@
-# Set Up Contact Transfers<a name="transfer"></a>
+# Set up contact transfers<a name="transfer"></a>
 
 To make it easy for you to set up contact transfers, Amazon Connect provides you with several tools: 
 + Two contact flow types:
@@ -12,7 +12,7 @@ To make it easy for you to set up contact transfers, Amazon Connect provides you
 
 This topic explains how to create quick connects and use transfer contact blocks in specific scenarios\. 
 
-## Overview of Steps<a name="transfer-overview"></a>
+## Overview of steps<a name="transfer-overview"></a>
 
 **To set up call transfers and quick connects**
 

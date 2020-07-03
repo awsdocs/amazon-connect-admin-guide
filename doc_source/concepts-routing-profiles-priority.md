@@ -1,4 +1,4 @@
-# Queues: Priority and Delay<a name="concepts-routing-profiles-priority"></a>
+# Queues: priority and delay<a name="concepts-routing-profiles-priority"></a>
 
 Priority and delay are powerful features that allow you to load balance contacts among groups of agents\. 
 

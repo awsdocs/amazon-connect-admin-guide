@@ -1,4 +1,4 @@
-# Amazon Connect and Zendesk Integration<a name="zendesk-integration"></a>
+# Amazon Connect and Zendesk integration<a name="zendesk-integration"></a>
 
 To integrate Amazon Connect and Zendesk, you need:
 + An Amazon Connect instance\.

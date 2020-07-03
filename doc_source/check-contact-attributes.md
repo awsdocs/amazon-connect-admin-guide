@@ -1,6 +1,6 @@
 # Contact Block: Check Contact Attributes<a name="check-contact-attributes"></a>
 
-## In contact flow types<a name="check-contact-attributes-types"></a>
+## Contact flow types<a name="check-contact-attributes-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows
@@ -22,12 +22,12 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="check-contact-attributes-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Inbound Flow \(First Contact Experience\)](sample-inbound-flow.md)
-+  [Sample Interruptible Queue Flow with Callback](sample-interruptible-queue.md)
++ [Sample inbound flow \(first contact experience\)](sample-inbound-flow.md)
++  [Sample interruptible queue flow with callback](sample-interruptible-queue.md)
 
 ## Scenarios<a name="check-contact-attributes-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [How to Reference Contact Attributes](how-to-reference-attributes.md)
-+ [How to Use the Channel Contact Attribute](use-channel-contact-attribute.md)
-+ [How to Use Contact Attributes to Personalize the Customer Experience](use-attributes-cust-exp.md)
++ [How to reference contact attributes](how-to-reference-attributes.md)
++ [How to use the Channel contact attribute](use-channel-contact-attribute.md)
++ [How to use contact attributes to personalize the customer experience](use-attributes-cust-exp.md)

@@ -1,4 +1,4 @@
-# Publish Reports<a name="publish-reports"></a>
+# Publish reports<a name="publish-reports"></a>
 
 After you create and save a custom report with the metrics you're interested in, you can publish it so everyone in your organization with the [appropriate permissions](#view-published-reports) can access the report\.
 
@@ -22,7 +22,7 @@ Only people who have permissions in their security profile to **Create** saved r
 
    The report is removed from everyone's list of Saved reports\.
 
-## View Published Reports<a name="view-published-reports"></a>
+## View published reports<a name="view-published-reports"></a>
 
 To view published reports, at minimum you need the following permissions in your security profile:
 +  **Access metrics**, if the report is a real\-time or historical metrics report

@@ -1,4 +1,4 @@
-# How to Reference Contact Attributes<a name="how-to-reference-attributes"></a>
+# How to reference contact attributes<a name="how-to-reference-attributes"></a>
 
 The way you reference contact attributes depends on how they were created and how you are accessing them\. To reference attributes in the same namespace, such as a system attribute, you use the attribute name, or the name you specified as the **Destination key**\. To reference values in a different namespace, such as referencing an external attribute, you specify the JSONPath syntax to the attribute\.
 
@@ -10,7 +10,7 @@ To reference user\-defined attributes, such as those set with the **Set contact 
 
 JSONPath is a standardized way to query elements of a JSON object\. JSONPath uses path expressions to navigate elements, nested elements, and arrays in a JSON document\. For more information about JSON, see [Introducing JSON](http://www.json.org/)\.
 
-## Checking Attribute Values in a Check Contact Attributes Block<a name="check-contact-attrib-block"></a>
+## Checking attribute values in a Check contact attributes block<a name="check-contact-attrib-block"></a>
 
 When you include a **Check contact attributes** block in a contact flow, it checks the value of the attribute you specify\. You then add a condition to compare the value of the attribute to, such as "greater than" or "contains\." For each condition you add, an output branch is added to the block\. You can then route the contact based on the conditions by connecting the output branch for the condition to the next block in the contact flow\. For example, you can check the current number of customers in a queue, then route the contact to the queue if the active contacts are fewer than 5\. You can also route the contact to another different queue if the number of active contacts is more than 5\. You can use whichever metrics or attributes you want to make routing decisions as appropriate for your needs\. The following procedure describes how to check for the number of contacts in a queue and then route the contact to a queue that has fewer than 5 active contacts in it\.
 
@@ -50,7 +50,7 @@ When you include a **Check contact attributes** block in a contact flow, it chec
 
 You can now add additional blocks to the contact flow to route the contact as desired\. For example, connect the < 5 branch to a **Transfer to queue** block to transfer calls to the queue when there are fewer than five calls currently in the queue\. Connect the > 5 branch to a Set customer callback number block and then transfer the call to a callback queue using a **Transfer to queue** block so the customer doesn't have to stay on hold\.
 
-## Referencing Attributes from a Play Prompt Block<a name="attribs-play-prompt"></a>
+## Referencing attributes from a Play prompt block<a name="attribs-play-prompt"></a>
 
 Use a **Play prompt** block to use an audio file to play as a greeting or message to callers\. You can also use contact attributes to specify the greeting or message delivered to callers\. To use the values of a contact attribute to personalize a message for a customer, include references to stored or external contact attributes in the text\-to\-speech message\. For example, if you retrieved the customer’s name from a Lambda function, and it returns values from your customer database for FirstName and LastName, you could use these attributes to say the customer’s name in the text\-to\-speech block by including text similar to the following:
 
@@ -60,7 +60,7 @@ Alternatively, you could store the attributes returned from the Lambda function 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-attribute.png)
 
-## Getting Customer Input Using an Amazon Lex Bot<a name="attribs-cust-input-lex-bot"></a>
+## Getting customer input using an Amazon Lex bot<a name="attribs-cust-input-lex-bot"></a>
 
 When you reference attributes in a **Get customer input** block, and choose Amazon Lex as the method of collecting the input, the attribute values are retrieved and stored from the output from the customer interaction with the Amazon Lex bot\. You can use an attribute for each intent or slot used in the Amazon Lex bot, as well as the sessions attributes associated with the bot\. An output branch is added to the block for each intent you include\. When a customer chooses an intent when interacting with the bot, the branch associated with that intent is followed in the contact flow\.
 

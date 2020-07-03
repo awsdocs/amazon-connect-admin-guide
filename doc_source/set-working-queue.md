@@ -1,9 +1,9 @@
 # Contact Block: Set Working Queue<a name="set-working-queue"></a>
 
-## In contact flow types<a name="set-voice-types"></a>
+## Contact flow types<a name="set-voice-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic Contact flow
++ Inbound contact flow
 + Transfer to Agent flow
 + Transfer to Queue flow
 
@@ -27,10 +27,10 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="set-voice-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Queue Customer](sample-queue-customer.md)
-+ [Sample Queue Configurations](sample-queue-configurations.md)
++ [Sample queue customer](sample-queue-customer.md)
++ [Sample queue configurations](sample-queue-configurations.md)
 
 ## Scenarios<a name="set-voice-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Transfer Contacts to a Specific Agent](transfer-to-agent.md)
++ [Transfer contacts to a specific agent](transfer-to-agent.md)

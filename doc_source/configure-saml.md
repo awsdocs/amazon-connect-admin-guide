@@ -2,14 +2,14 @@
 
 Amazon Connect supports identity federation with Security Assertion Markup Language \(SAML\) 2\.0 to enable web\-based single sign\-on \(SSO\) from your organization to your Amazon Connect instance\. This allows your users to sign in to a portal in your organization hosted by a SAML 2\.0 compatible identity provider \(IdP\)\. The IdP includes an option to log in to Amazon Connect, which redirects the user to your Amazon Connect instance without having to provide separate credentials for Amazon Connect\.
 
-## Important Notes<a name="saml-important-notes"></a>
+## Important notes<a name="saml-important-notes"></a>
 
 Before you begin, note the following:
 + Amazon Connect instance allow only a 1:1 mapping of user roles to SAML authentication\. 
 + To enable SAML authentication, create an AWS Identity and Access Management \(IAM\) role for federation\. The role is used for federation between the your IdP and Amazon Web Services\. AWS Identity and Access Management is a web service that helps you securely control access to AWS resources\. You use IAM to control who is authenticated \(signed in\) and authorized \(has permissions\) to use resources\. In this case, the IAM role is used for federation between your identity provider and AWS\. The permissions for the IAM role grant access to Amazon Connect 
 +  You cannot use your root AWS account as the account for SAML federation\. Instead, follow the steps in the topic, and the topics linked to in the AWS Identity and Access Management documentation, to create an IAM role for federation\. To learn more about IAM, see [What is IAM?](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
 
-## Overview of Using SAML with Amazon Connect<a name="saml-overview"></a>
+## Overview of using SAML with Amazon Connect<a name="saml-overview"></a>
 
 The following diagram shows the flow for SAML requests to authenticate users and federate with Amazon Connect\.
 
@@ -31,7 +31,7 @@ SAML requests go through the following steps:
 
 1. Using the authentication token from AWS, Amazon Connect authorizes the user and opens Amazon Connect in their browser\.
 
-## Enabling SAML\-based Authentication for Amazon Connect<a name="enable-saml"></a>
+## Enabling SAML\-based authentication for Amazon Connect<a name="enable-saml"></a>
 
 The following steps are required to enable and configure SAML authentication for use with your Amazon Connect instance:
 
@@ -43,13 +43,13 @@ The following steps are required to enable and configure SAML authentication for
 
 1. Configure your identity provider for the SAML assertions, authentication response, and relay state\. Users log in to your identity provider\. When successful, they are redirected to your Amazon Connect instance\. The IAM role is used to federate with AWS, which allows access to Amazon Connect\.
 
-## Select SAML 2\.0\-based Authentication During Instance Creation<a name="create-saml-instance"></a>
+## Select SAML 2\.0\-based authentication during instance creation<a name="create-saml-instance"></a>
 
 When you are creating your Amazon Connect instance, select the SAML 2\.0\-based authentication option for identity management\. On the second step, when you create the administrator for the instance, the user name that you specify must exactly match a user name in your existing network directory\. There is no option to specify a password for the administrator because passwords are managed through your existing directory\. The administrator is created in Amazon Connect and assigned the **Admin** security profile\.
 
 You can log in to your Amazon Connect instance, through your IdP, using the administrator account to add additional users\.
 
-## Enable SAML Federation Between Your Identity Provider and AWS<a name="enable-saml-federation"></a>
+## Enable SAML federation between your identity provider and AWS<a name="enable-saml-federation"></a>
 
 To enable SAML\-based authentication for Amazon Connect, you must create an identity provider in the IAM console\. For more information, see [Enabling SAML 2\.0 Federated Users to Access the AWS Management Console](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-saml.html)\.
 
@@ -150,13 +150,13 @@ Replacing this role causes previously federated users to fail at federation beca
 You can find the instance ID for your instance by choosing the instance alias in the Amazon Connect console\. The instance ID is the set of numbers and letters after '/instance' in the **Instance ARN** displayed on the **Overview** page\. For example, the instance ID in the following Instance ARN is *178c75e4\-b3de\-4839\-a6aa\-e321ab3f3770*\.  
 arn:aws:connect:us\-east\-1:450725743157:instance/*178c75e4\-b3de\-4839\-a6aa\-e321ab3f3770*
 
-## Use a Destination in Your Relay State URL<a name="destination-relay"></a>
+## Use a destination in your relay state URL<a name="destination-relay"></a>
 
 When you configure the relay state for your identity provider, you can use the destination argument in the URL to navigate users to a specific page in your Amazon Connect instance\. For example, use a link to open the CCP directly when an agent logs in\. The user must be assigned a security profile that grants access to that page in the instance\. For example, to send agents to the CCP, use a URL similar to the following for the relay state\. You must use [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding) for the destination value used in the URL:
 
 `https://us-east-1.console.aws.amazon.com/connect/federate/instance-id?destination=%2Fconnect%2Fccp`
 
-## Add users to Your Amazon Connect Instance<a name="saml-add-users"></a>
+## Add users to your Amazon Connect istance<a name="saml-add-users"></a>
 
 Add users to your connect instance, making sure that the user names exactly match the users names in your existing directory\. If the names do not match, users can log in to the identity provider, but not to Amazon Connect because no user account with that user name exists in Amazon Connect\. You can add users manually on the **User management** page, or you can bulk upload users with the CSV template\. After you add the users to Amazon Connect, you can assign security profiles and other user settings\.
 
@@ -167,7 +167,7 @@ When a user logs in to the identity provider, but no account with the same user 
 **Bulk upload users with the template**  
 You can import your users by adding them to a CSV file\. You can then import the CSV file to your instance, which adds all users in the file\. If you add users by uploading a CSV file, make sure that you use the template for SAML users\. You can find on the **User management** page in Amazon Connect\. A different template is used for SAML\-based authentication\. If you previously downloaded the template, you should download the version available on the **User management** page after you set up your instance with SAML\-based authentication\. The template should not include a column for email or password\.
 
-## SAML User Logging in and Session Duration<a name="user-sessions"></a>
+## SAML user logging in and session duration<a name="user-sessions"></a>
 
 When you use SAML in Amazon Connect, users must log in to Amazon Connect through your identity provider \(IdP\)\. Your IdP is configured to integrate with AWS\. After authentication, a token for their session is created\. The user is then redirected to your Amazon Connect instance and automatically logged in to Amazon Connect using single sign\-on\.
 

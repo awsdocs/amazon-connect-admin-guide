@@ -1,9 +1,9 @@
 # Contact Block: Set Callback Number<a name="set-callback-number"></a>
 
-## In contact flow types<a name="set-callback-number-types"></a>
+## Contact flow types<a name="set-callback-number-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic Contact flow
++ Inbound contact flow
 + Customer Queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
@@ -27,11 +27,11 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="set-callback-number-samples"></a>
 
  See these sample flows for scenarios that use this block:
-+ [Sample Queue Configurations](sample-queue-configurations.md)
-+ [Sample Queued Callback](sample-queued-callback.md): this sample only applies to previous instances of Amazon Connect\.
++ [Sample queue configurations](sample-queue-configurations.md)
++ [Sample queued callback](sample-queued-callback.md): this sample only applies to previous instances of Amazon Connect\.
 
 ## Scenarios<a name="set-callback-number-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Set Up Queued Callback](setup-queued-callback.md)
-+ [About Queued Callbacks in Metrics](about-queued-callbacks.md)
++ [Set up queued callback](setup-queued-callback.md)
++ [About queued callbacks in metrics](about-queued-callbacks.md)

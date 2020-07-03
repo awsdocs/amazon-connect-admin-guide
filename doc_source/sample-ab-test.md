@@ -1,4 +1,4 @@
-# Sample AB Test<a name="sample-ab-test"></a>
+# Sample AB test<a name="sample-ab-test"></a>
 
 Type: Contact flow \(inbound\)
 
@@ -12,4 +12,4 @@ This contact flow shows how to perform an A/B call distribution based on a perce
 
 1. After the contact gets routed, the **Play prompt** tells the customer which number the dice rolled\.
 
-1. At the end of the sample, the **Transfer to flow** block transfers the customer back to the [Sample Inbound Flow](sample-inbound-flow.md)\.
+1. At the end of the sample, the **Transfer to flow** block transfers the customer back to the [Sample inbound flow](sample-inbound-flow.md)\.

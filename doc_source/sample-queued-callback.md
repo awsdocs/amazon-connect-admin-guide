@@ -1,8 +1,8 @@
-# Sample Queued Callback<a name="sample-queued-callback"></a>
+# Sample queued callback<a name="sample-queued-callback"></a>
 
 Type: Contact flow \(inbound\)
 
-This sample flow is available in previous Amazon Connect instances\. In new instances, you can see this functionality in [Sample Queue Configurations](sample-queue-configurations.md)\.
+This sample flow is available in previous Amazon Connect instances\. In new instances, you can see this functionality in [Sample queue configurations](sample-queue-configurations.md)\.
 
 This contact flow provides callback queue logic\. Here's how it works: 
 
@@ -15,6 +15,6 @@ This contact flow provides callback queue logic\. Here's how it works:
 1. If the customer chooses to be placed into a callback queue, their number is stored in the **Store customer input** block\. Then their callback number is set, and they are transferred to the callback queue\.
 
 For information about queued callbacks, see the following topics:
-+ [Set Up Queued Callback](setup-queued-callback.md) 
++ [Set up queued callback](setup-queued-callback.md) 
 + [Contact Block: Transfer to Queue](transfer-to-queue.md) 
-+ [About Queued Callbacks in Metrics](about-queued-callbacks.md) 
++ [About queued callbacks in metrics](about-queued-callbacks.md) 

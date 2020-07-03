@@ -1,4 +1,4 @@
-# Tutorial 2: Test the Sample Voice and Chat Experience<a name="tutorial1-explore-voice-and-chat"></a>
+# Tutorial 2: Test the sample voice and chat experience<a name="tutorial1-explore-voice-and-chat"></a>
 
 To better understand what the voice and chat experiences are like for your agents and customers, you can test them without doing any development\. 
 
@@ -13,5 +13,5 @@ This tutorial is part of a series\. If you performed Tutorial 1, you're ready to
 + A claimed phone number
 
 **Topics**
-+ [Step 1: Handle a Voice Contact](tutorial1-explore-voice.md)
-+ [Step 2: Handle a Chat Contact](tutorial1-test-chat.md)
++ [Step 1: Handle a voice contact](tutorial1-explore-voice.md)
++ [Step 2: Handle a chat contact](tutorial1-test-chat.md)

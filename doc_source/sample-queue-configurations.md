@@ -1,4 +1,4 @@
-# Sample Queue Configurations<a name="sample-queue-configurations"></a>
+# Sample queue configurations<a name="sample-queue-configurations"></a>
 
 Type: Contact flow \(inbound\)
 
@@ -51,6 +51,6 @@ These next steps apply to customers who were routed down the voice/**No Match** 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-queue-configurations-transfer-to-queue-block.png)
 
 For information about queued callbacks, see the following topics:
-+ [Set Up Queued Callback](setup-queued-callback.md) 
++ [Set up queued callback](setup-queued-callback.md) 
 + [Contact Block: Transfer to Queue](transfer-to-queue.md) 
-+ [About Queued Callbacks in Metrics](about-queued-callbacks.md) 
++ [About queued callbacks in metrics](about-queued-callbacks.md) 

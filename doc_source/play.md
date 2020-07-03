@@ -1,9 +1,9 @@
 # Contact Block: Play Prompt<a name="play"></a>
 
-## In contact flow types<a name="play-types"></a>
+## Contact flow types<a name="play-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic flow
++ Inbound contact flow
 + Customer Queue flow
 + Customer Whisper flow
 + Agent Whisper flow
@@ -12,7 +12,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Description<a name="play-description"></a>
 + This block can play an interruptible audio prompt, play a text\-to\-speech message, or send a chat response\.
-+ Amazon Connect includes a set of pre\-recorded prompts for you to use\. However, you can record and upload your audio prompts\. For instructions, see [Create Prompts](prompts.md)\.
++ Amazon Connect includes a set of pre\-recorded prompts for you to use\. However, you can record and upload your audio prompts\. For instructions, see [Create prompts](prompts.md)\.
 
 ## Properties<a name="play-properties"></a>
 
@@ -30,7 +30,7 @@ The properties give you different ways to choose the prompt to be played:
 
   When you add a prompt to a contact flow, you can use SSML tags to provide a more personalized experience for your customers\. SSML tags are a way to control how Amazon Polly generates speech from the text you provide\.
 
-  To learn which SSML tags Amazon Connect supports, see [SSML Tags Supported by Amazon Connect](supported-ssml-tags.md)\. 
+  To learn which SSML tags Amazon Connect supports, see [SSML tags supported by Amazon Connect](supported-ssml-tags.md)\. 
 
 ## Configuration tips<a name="play-tips"></a>
 
@@ -44,4 +44,4 @@ When this block is configured, it looks similar to the following image:
 
 ## Sample flows<a name="play-samples"></a>
 
-All of the sample flows use the **Play prompt** block\. Take a look at the [Sample Inbound Flow \(First Contact Experience\)](sample-inbound-flow.md) to see a **Play prompt** for chat and one for audio\.
+All of the sample flows use the **Play prompt** block\. Take a look at the [Sample inbound flow \(first contact experience\)](sample-inbound-flow.md) to see a **Play prompt** for chat and one for audio\.
