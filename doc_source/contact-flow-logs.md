@@ -16,7 +16,7 @@ Use the following procedure to check that logging is enabled for your instance\.
 
 ## Step 2: Add the Set logging behavior block<a name="use-set-logging-behavior-block"></a>
 
-Logs are generated only for contact flows that include a [Set Logging Behavior](set-logging-behavior.md) block with logging set to enabled\. 
+Logs are generated only for contact flows that include a [Set logging behavior](set-logging-behavior.md) block with logging set to enabled\. 
 
 You control which flows, or parts of flows, logs are generated for by including multiple **Set logging behavior** blocks and configuring them as needed\.
 
@@ -24,7 +24,7 @@ When you use a **Set logging behavior** block to enable or disable logging for a
 
 **To enable or disable contact flow logs for a contact flow**
 
-1. Add a [Set Logging Behavior](set-logging-behavior.md) block and connect it to another block in the flow\.
+1. Add a [Set logging behavior](set-logging-behavior.md) block and connect it to another block in the flow\.
 
 1. Open the properties for the block\. Choose **Enable** or **Disable**\.
 

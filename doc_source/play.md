@@ -1,4 +1,4 @@
-# Contact Block: Play Prompt<a name="play"></a>
+# Contact block: Play prompt<a name="play"></a>
 
 ## Contact flow types<a name="play-types"></a>
 

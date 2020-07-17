@@ -1,4 +1,4 @@
-# Contact Block: Set Logging Behavior<a name="set-logging-behavior"></a>
+# Contact block: Set logging behavior<a name="set-logging-behavior"></a>
 
 ## Contact flow types<a name="set-logging-behavior-types"></a>
 

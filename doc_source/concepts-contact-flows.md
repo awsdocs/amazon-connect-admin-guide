@@ -37,7 +37,7 @@ The above contact flow uses five blocks:
 
 In the above example, what happens when the customer is transferred to queue, but no agents are available to take their call? The **Default customer queue** flow is triggered\. It plays music while the contact is waiting in queue\. 
 
-For a list of the available contact blocks and descriptions about what they do, see [Contact Block Definitions](contact-block-definitions.md)\. 
+For a list of the available contact blocks and descriptions about what they do, see [Contact block definitions](contact-block-definitions.md)\. 
 
 ### Sample contact flows<a name="concepts-sample-flows"></a>
 

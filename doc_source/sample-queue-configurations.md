@@ -52,5 +52,5 @@ These next steps apply to customers who were routed down the voice/**No Match** 
 
 For information about queued callbacks, see the following topics:
 + [Set up queued callback](setup-queued-callback.md) 
-+ [Contact Block: Transfer to Queue](transfer-to-queue.md) 
++ [Contact block: Transfer to queue](transfer-to-queue.md) 
 + [About queued callbacks in metrics](about-queued-callbacks.md) 

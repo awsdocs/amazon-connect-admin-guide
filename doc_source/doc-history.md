@@ -2,23 +2,25 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated the topic on Set disconnect flow block, which now supports voice conversations\. ](#doc-history) | For more information, see [Set Disconnect Flow](set-disconnect-flow.md)\.  | June 29, 2020 | 
+| [Changed the name of the Metrics chapter to Monitor metrics & run reports\.](#doc-history) | For more information, see [Monitor metrics and run reports](amazon-connect-metrics.md)\.  | July 16, 2020 | 
+| [Clarified that the following metrics are no longer supported in queue grouping: Agent on contact time, Agent idle time, Occupancy\. Previously we stated that these metrics had been deprecated\.](#doc-history) | For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.  | July 8, 2020 | 
+| [Updated the topic on Set disconnect flow block, which now supports voice conversations\. ](#doc-history) | For more information, see [Set disconnect flow](set-disconnect-flow.md)\.  | June 29, 2020 | 
 | [Added upcoming metric changes](#doc-history) | For more information, see [What's new in metrics](upcoming-changes.md)\.  | June 26, 2020 | 
 | [Updates to CCP](#doc-history) | For more information, see [Upgrade to the latest CCP](upgrade-to-latest-ccp.md) and [Training video: How to use the CCPTraining video](ccp-video-training.md)\.  | June 16, 2020 | 
 | [Deprecated metrics](#doc-history) | For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.  | June 12, 2020 | 
 | [Added topic on quick connects](#doc-history) | For more information, see [How quick connects work](how-quick-connects-work.md)\.  | May 21, 2020 | 
 | [Added how to get administrative support, and added a topic on inherited permissions](#doc-history) | For more information, see [Get administrative support for Amazon Connect](get-admin-support.md) and [About inherited permissions](inherited-permissions.md)\.  | April 17, 2020 | 
 | [Added how to log out agents automatically](#doc-history) | For more information, see [Log out agents automatically when they close their CCP](automatic-logout.md)\.  | April 16, 2020 | 
-| [Updated the Get customer input block to support timeout values for voice input](#doc-history) | For more information, see [Get Customer Input](get-customer-input.md)\.  | April 8, 2020 | 
+| [Updated the Get customer input block to support timeout values for voice input](#doc-history) | For more information, see [Get customer input](get-customer-input.md)\.  | April 8, 2020 | 
 | [Add NLB endpoints and required domain for softphones](#doc-history) | For more information, see [Set up your network](ccp-networking.md)\.  | March 27, 2020 | 
 | [Announced upcoming changes for metrics](#doc-history) | For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.  | March 23, 2020 | 
-| [Added terminating keypress functionality](#doc-history) | For more information, see [Store Customer Input](store-customer-input.md)\.  | March 21, 2020 | 
+| [Added terminating keypress functionality](#doc-history) | For more information, see [Store customer input](store-customer-input.md)\.  | March 21, 2020 | 
 | [Added topic on region requirements for phone numbers](#doc-history) | For more information, see [Region requirements for phone numbers](phone-number-requirements.md)\.  | March 11, 2020 | 
 | [Added tutorials](#doc-history) | For more information, see [Tutorials: An introduction to Amazon Connect](tutorials.md)\.  | March 6, 2020 | 
 | [Added topic tracking who deleted recordings](#doc-history) | For more information, see [Track who deleted or listened to recordings](track-who-deleted-recordings.md)\.  | March 5, 2020 | 
 | [Added topic on emergency admin access](#doc-history) | For more information, see [Emergency admin login](emergency-admin-login.md)\.  | March 2, 2020 | 
 | [Added topics on saving, sharing, and publishing reports](#doc-history) | For more information, see [Save custom reports](save-reports.md), [Share custom reports](share-reports.md), and [Publish reports](publish-reports.md)\.  | January 22, 2020 | 
-| [Updated contact block definitions](#doc-history) | For more information, see [Contact Block Definitions](contact-block-definitions.md)\.  | January 17, 2020 | 
+| [Updated contact block definitions](#doc-history) | For more information, see [Contact block definitions](contact-block-definitions.md)\.  | January 17, 2020 | 
 | [Added topics on queued callbacks](#doc-history) | For more information, see [About queued callbacks in metrics](about-queued-callbacks.md)\.  | January 17, 2020 | 
 | [Updated networking guidance](#doc-history) | For more information, see [Set up your network](ccp-networking.md)\.  | January 15, 2020 | 
 | [Add a topic on logging Amazon Connect API calls with AWS CloudTrail](#doc-history) | For more information, see [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.  | December 13, 2019 | 
@@ -40,7 +42,9 @@
 
 | Change | Description | Date | 
 | --- | --- | --- | 
-| Updated the [Set Disconnect Flow](set-disconnect-flow.md) block, which now supports voice conversations\. |  For more information, see [Set Disconnect Flow](set-disconnect-flow.md)\.   | June 29 2020 | 
+| Changed the name of the **Metrics** chapter to **Monitor metrics & run reports**\. |  For more information, see [Monitor metrics and run reports](amazon-connect-metrics.md)\.   | July 16, 2020 | 
+| Clarified that the following metrics are no longer supported in queue grouping: Agent on contact time, Agent idle time, Occupancy\. Previously we stated that these metrics had been deprecated\. |  For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.   | July 8, 2020 | 
+| Updated the [Set disconnect flow](set-disconnect-flow.md) block, which now supports voice conversations\. |  For more information, see [Set disconnect flow](set-disconnect-flow.md)\.   | June 29 2020 | 
 | Added upcoming metric changes: new real\-time and historical metrics for inbound and outbound contact time |  For more information, see [What's new in metrics](upcoming-changes.md)\.   | June 26, 2020 | 
 | Added how to upgrade CCP |  For more information, see [Upgrade to the latest CCP](upgrade-to-latest-ccp.md)\.   | June 16, 2020 | 
 | Added video on using CCP |  For more information, see [Training video: How to use the CCPTraining video](ccp-video-training.md)\.   | June 16, 2020 | 
@@ -48,8 +52,8 @@
 | Added topic on quick connects work |  For more information, see [How quick connects work](how-quick-connects-work.md)\.   | May 21, 2020 | 
 | Added how to get administrative support, and added a topic on inherited permissions |  For more information, see [Get administrative support for Amazon Connect](get-admin-support.md) and [About inherited permissions](inherited-permissions.md)\.   | April 16, 2020 | 
 | Added how to customize your CCP to log out agents automatically when they close the CCP window |  For more information, see [Log out agents automatically when they close their CCP](automatic-logout.md)\.   | April 16, 2020 | 
-| Updated the **Get customer input **block to support timeout values for voice input |  For more information, see [Get Customer Input](get-customer-input.md)\.   | April 8, 2020 | 
-| Added terminating keypress |  For more information, see [Store Customer Input](store-customer-input.md)\.   | March 31, 2020 | 
+| Updated the **Get customer input **block to support timeout values for voice input |  For more information, see [Get customer input](get-customer-input.md)\.   | April 8, 2020 | 
+| Added terminating keypress |  For more information, see [Store customer input](store-customer-input.md)\.   | March 31, 2020 | 
 | Added NLB endpoints and required domain for softphones |  For more information, see [Set up your network](ccp-networking.md)\.   | March 23, 2020 | 
 | Announced upcoming changes for metrics |  For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.   | March 23, 2020 | 
 | Added topic on region requirements for phone numbers |  For more information, see [Region requirements for phone numbers](phone-number-requirements.md)\.   | March 11, 2020 | 
@@ -75,7 +79,7 @@
 | Added content about agent queues | You can use agent queues to route calls directly to a specific agent\. For more information, see [Transfer contacts to a specific agent](transfer-to-agent.md)\. | December 21, 2018 | 
 | Added information about using Amazon Connect in the Asia Pacific \(Tokyo\) Region\. | For more information, [Claim phone numbers for Amazon Connect in the Asia Pacific \(Tokyo\) Region](connect-tokyo-region.md)\. | December 10, 2018 | 
 | Added information about how to determine agent ACW time from agent event streams | For more information, see [Determine how long an agent spends doing ACW](determine-acw-time.md)\. | October 30, 2018 | 
-| Added troubleshooting and best practices | [Troubleshooting Issues with the CCP](troubleshooting.md) covers best practices for agent connectivity using the CCP and troubleshooting connectivity and call quality issues in Amazon Connect\. | October 18, 2018 | 
+| Added troubleshooting and best practices | [Troubleshooting Issues with the Contact Control Panel \(CCP\)](troubleshooting.md) covers best practices for agent connectivity using the CCP and troubleshooting connectivity and call quality issues in Amazon Connect\. | October 18, 2018 | 
 | Added information about service\-linked roles in Amazon Connect | For more information, see [Use Service\-Linked Roles for Amazon Connect](connect-slr.md)\. | October 17, 2018 | 
 | Added information about queue to queue transfers | You can use the new options of the Transfer to queue block to enable transferring calls that are already in a queue to another queue\. For more information, see [Manage contacts in a queue](queue-to-queue-transfer.md)\. | July 31, 2018 | 
 | Added information about the Call phone number block | Updated the content about contact flows to include the new Call phone number block, including how to use the block in a contact flow\. For more information, see [Initiate an outbound call](using-call-number-block.md)\. | July 2, 1018 | 

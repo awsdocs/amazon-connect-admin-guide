@@ -1,4 +1,4 @@
-# Contact Block: Stop Media Streaming<a name="stop-media-streaming"></a>
+# Contact block: Stop media streaming<a name="stop-media-streaming"></a>
 
 ## Contact flow types<a name="stop-media-streaming-types"></a>
 

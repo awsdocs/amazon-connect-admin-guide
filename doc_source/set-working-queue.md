@@ -1,4 +1,4 @@
-# Contact Block: Set Working Queue<a name="set-working-queue"></a>
+# Contact block: Set working queue<a name="set-working-queue"></a>
 
 ## Contact flow types<a name="set-voice-types"></a>
 

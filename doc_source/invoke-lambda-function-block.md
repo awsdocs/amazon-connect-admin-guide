@@ -1,4 +1,4 @@
-# Contact Block: Invoke AWS Lambda Function<a name="invoke-lambda-function-block"></a>
+# Contact block: Invoke AWS Lambda function<a name="invoke-lambda-function-block"></a>
 
 ## Contact flow types<a name="invoke-lambda-function-block-types"></a>
 

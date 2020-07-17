@@ -206,11 +206,11 @@ Because agents can be **On call** or doing **ACW**, for example, while their CCP
 
 In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `AGENTS_NON_PRODUCTIVE`\.
 
-## Occupancy \(deprecated June, 2020\)<a name="occupancy-real-time"></a>
+## Occupancy<a name="occupancy-real-time"></a>
 
 Percentage of time that an agent was active on contacts\. This percentage is calculated as follows:
 
-\(Agent Handle Time / \(Agent Handle Time \+ Agent Idle Time\)\) \* 100
+\(Agent on contact \(wall clock time\) / \(Agent on contact \(wall clock time\) \+ Agent idle time\)\) 
 
 **Important**  
 **Occupancy** doesn't account for concurrency\. That is, an agent is considered 100% occupied for a given interval if they are handling at least one contact for that entire duration\. 

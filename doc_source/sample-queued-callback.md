@@ -16,5 +16,5 @@ This contact flow provides callback queue logic\. Here's how it works:
 
 For information about queued callbacks, see the following topics:
 + [Set up queued callback](setup-queued-callback.md) 
-+ [Contact Block: Transfer to Queue](transfer-to-queue.md) 
++ [Contact block: Transfer to queue](transfer-to-queue.md) 
 + [About queued callbacks in metrics](about-queued-callbacks.md) 

@@ -1,4 +1,4 @@
-# Contact Block: Set Hold Flow<a name="set-hold-flow"></a>
+# Contact block: Set hold flow<a name="set-hold-flow"></a>
 
 ## Contact flow types<a name="set-hold-flow-types"></a>
 

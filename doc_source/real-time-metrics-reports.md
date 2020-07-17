@@ -7,12 +7,12 @@ You can customize the reports, specify a time range for each report, select metr
 **Topics**
 + [Permissions required to view real\-time metrics reports](rtm-permissions.md)
 + [How often real\-time metrics refresh](rtm-refresh.md)
++ [View how many contacts are waiting in queue](view-contacts-in-queue.md)
 + [Create a real\-time metrics report](create-real-time-report.md)
 + [No metrics or too few rows in a queues report?](troubleshoot-rtm.md)
 + [List queues grouped by routing profile](queues-by-routing-profile.md)
 + [List agents grouped by routing profile](agents-grouped-by-routing-profile.md)
 + [Sort agents by activity in a real\-time metrics report](rtm-sort-by-agent-activity.md)
 + [Change the "Agent activity" status in a real\-time metrics report](rtm-change-agent-activity-state.md)
-+ [View how many contacts are waiting in queue](view-contacts-in-queue.md)
 + [Download a real\-time metrics report](download-real-time-metrics-report.md)
 + [Real\-time metrics definitions](real-time-metrics-definitions.md)

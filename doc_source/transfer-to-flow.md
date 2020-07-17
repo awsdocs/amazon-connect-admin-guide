@@ -1,4 +1,4 @@
-# Contact Block: Transfer to Flow<a name="transfer-to-flow"></a>
+# Contact block: Transfer to flow<a name="transfer-to-flow"></a>
 
 ## Contact flow types<a name="transfer-to-flow-types"></a>
 

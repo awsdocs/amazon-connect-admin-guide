@@ -1,4 +1,4 @@
-# Contact Block: Set Callback Number<a name="set-callback-number"></a>
+# Contact block: Set callback number<a name="set-callback-number"></a>
 
 ## Contact flow types<a name="set-callback-number-types"></a>
 

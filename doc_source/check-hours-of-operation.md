@@ -1,4 +1,4 @@
-# Contact Block: Check Hours of Operation<a name="check-hours-of-operation"></a>
+# Contact block: Check hours of operation<a name="check-hours-of-operation"></a>
 
 ## Contact flow types<a name="check-hours-of-operation-types"></a>
 

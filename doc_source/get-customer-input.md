@@ -1,4 +1,4 @@
-# Contact Block: Get Customer Input<a name="get-customer-input"></a>
+# Contact block: Get customer input<a name="get-customer-input"></a>
 
 ## Contact flow types<a name="get-customer-input-types"></a>
 

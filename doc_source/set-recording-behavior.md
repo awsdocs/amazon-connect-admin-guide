@@ -1,4 +1,4 @@
-# Contact Block: Set Recording Behavior<a name="set-recording-behavior"></a>
+# Contact block: Set recording and analytics behavior<a name="set-recording-behavior"></a>
 
 ## Contact flow types<a name="set-recording-behavior-types"></a>
 

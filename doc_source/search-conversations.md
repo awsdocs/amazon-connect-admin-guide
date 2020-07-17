@@ -1,9 +1,4 @@
-# Search conversations<a name="search-conversations"></a>
-
-
-|  | 
-| --- |
-| Contact Lens for Amazon Connect is in preview release and is subject to change\. | 
+# Search conversations analyzed by Contact Lens<a name="search-conversations"></a>
 
 After a call ends and the agent completes After Contact Work \(ACW\), Contact Lens analyzes and transcribes the recording of the customer\-agent conversation\.
 
@@ -13,11 +8,20 @@ You can search the analyzed and transcribed recordings based on:
 + Sentiment score\.
 + Non\-talk time\.
 
-Each of these criteria is described in the following sections\.
+These criteria are described in the following sections\.
+
+## Required permissions for searching conversations<a name="security-profile-permissions-for-search"></a>
+
+Before you can search conversations, you need the following permissions, which allow you to do the type of search you want\. 
++ **Contact search**\. This is required so you can get to the Contact Search page\.
++ **Search contacts by conversation characteristics**
++ **Search contacts by keywords**
+
+For more information, see [Security profile permissions for Contact Lens](permissions-for-contact-lens.md)\.
 
 ## Search for keywords<a name="keyword-search"></a>
 
-For search, Contact Lens uses the `standard` analyzer in Amazon Elasticsearch Service\. This analyzer is case\-insensitive\. For example, if you enter *thank you for your business 2 CANCELLED Flights*, the search looks for:
+For search, Contact Lens uses the `standard` analyzer in Amazon Elasticsearch Service\. This analyzer is not case sensitive\. For example, if you enter *thank you for your business 2 CANCELLED Flights*, the search looks for:
 
  \[thank, you, for, your, business, 2, cancelled, flights\]
 
@@ -27,13 +31,15 @@ If you enter *"thank you for your business", two, "CANCELLED Flights"*, the sear
 
 **To search conversations for keywords**
 
-1. In Amazon Connect, choose **Metrics and quality**, **Contact search**\.
+1. In Amazon Connect, log in with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Search contacts by keywords** permission\.
+
+1. Choose **Metrics and quality**, **Contact search**\.
 
 1. In the **Filter** section, specify the time period that you want to search\. Include other information to narrow your search\. For instructions, see [Contact search](contact-search.md)\.
 **Tip**  
 When searching by date, you can search up to 14 days at a time\. 
 
-1. In the **Conversation** section, enter the words to search, separated by commas\. If you're entering a phrase, surround it with quotation marks\.
+1. In the **Conversation** section, enter the words to search, separated by commas\. If you enter a phrase, surround it with quotation marks\.
 
    You can enter up to 128 characters\.
    + Choose **Match any** to return contacts that have any of the words present in the transcripts\.
@@ -52,6 +58,8 @@ With Contact Lens, you can search conversations for sentiment scores on a scale 
 For example, suppose you want to identify and investigate all the calls where the customer sentiment ended negatively\. You might search for all calls where the sentiment score is **<=** \(less than or equal to\) \-4\. 
 
 **To search for sentiment scores**
+
+1. In Amazon Connect, log in with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Search contacts by conversation characteristics** permission\.
 
 1. On the **Contact search** page, specify whether you want the score words or phrases spoken by the customer or agent\.
 

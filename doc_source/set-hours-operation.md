@@ -1,6 +1,6 @@
 # Set the hours of operation for a queue<a name="set-hours-operation"></a>
 
-The first thing you need to do when you set up a queue is to specify the hours of operation\. The hours may be referenced in contact flows\. For example, when routing contacts to agents, you might use the [Check Hours of Operation](check-hours-of-operation.md) block first, and then route the contact to the appropriate queue\. 
+The first thing you need to do when you set up a queue is to specify the hours of operation\. The hours may be referenced in contact flows\. For example, when routing contacts to agents, you might use the [Check hours of operation](check-hours-of-operation.md) block first, and then route the contact to the appropriate queue\. 
 
 **To set the hours of operation for a queue**
 
@@ -14,7 +14,7 @@ The first thing you need to do when you set up a queue is to specify the hours o
 
 1. Choose **Save**\.
 
-1. Now you can specify these the hours of operation when you [create a queue](create-queue.md), and check them in the [Check Hours of Operation](check-hours-of-operation.md) block\.
+1. Now you can specify these the hours of operation when you [create a queue](create-queue.md), and check them in the [Check hours of operation](check-hours-of-operation.md) block\.
 
 ## How to specify midnight<a name="set-hours-operation-midnight"></a>
 
@@ -60,4 +60,4 @@ For more information, see these topics:
 
 ## Use the Check Hours of Operation block<a name="use-check-hours-of-operation-block"></a>
 
-At the start of your contact flows, use the [Check Hours of Operation](check-hours-of-operation.md) block to determine whether your contact center is open, and to branch accordingly\. 
+At the start of your contact flows, use the [Check hours of operation](check-hours-of-operation.md) block to determine whether your contact center is open, and to branch accordingly\. 

@@ -1,6 +1,6 @@
 # Initiate an outbound call<a name="using-call-number-block"></a>
 
-Use the [Track events in contact flowsStorage for contact flow logsCall Phone Number](call-phone-number.md) block in an outbound whisper flow to initiate an outbound call to a customer and, optionally, specify a custom caller ID number that is displayed to call recipients\. This is useful when you have multiple telephone numbers used to make outbound calls, but want to consistently display the same company phone number for the caller ID for calls made from your contact center\. You can also use the block to display a phone number for a specific line of business, or for displaying different numbers to customers based on their account type\.
+Use the [Track events in contact flowsStorage for contact flow logsCall phone number](call-phone-number.md) block in an outbound whisper flow to initiate an outbound call to a customer and, optionally, specify a custom caller ID number that is displayed to call recipients\. This is useful when you have multiple telephone numbers used to make outbound calls, but want to consistently display the same company phone number for the caller ID for calls made from your contact center\. You can also use the block to display a phone number for a specific line of business, or for displaying different numbers to customers based on their account type\.
 
 There are two ways you can set up how caller ID works for outbound calls: 
 + Select any phone number from your instance\.

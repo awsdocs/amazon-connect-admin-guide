@@ -1,4 +1,4 @@
-# Contact Block: Loop Prompts<a name="loop-prompts"></a>
+# Contact block: Loop prompts<a name="loop-prompts"></a>
 
 ## Contact flow types<a name="loop-prompts-types"></a>
 

@@ -2,7 +2,7 @@
 
 You can override the way the default flows work by editing them directly\. 
 
-Generally we recommend creating new flows based on the defaults, rather than editing the default flow directly\. You a copy of the default flow, assign a name that indicates it's a custom version, and then edit that one\. This gives you more control over how your contact flows work\.
+Generally we recommend creating new flows based on the defaults, rather than editing the default flow directly\. You can make a copy of the default flow, assign a name that indicates it's a custom version, and then edit that one\. This gives you more control over how your contact flows work\.
 
 ## Change how a default contact flow works<a name="change-default-customer-hold"></a>
 

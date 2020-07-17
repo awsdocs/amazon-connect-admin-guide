@@ -1,4 +1,4 @@
-# Contact Block: Call Phone Number<a name="call-phone-number"></a>
+# Contact block: Call phone number<a name="call-phone-number"></a>
 
 ## Contact flow types<a name="call-phone-number-types"></a>
 

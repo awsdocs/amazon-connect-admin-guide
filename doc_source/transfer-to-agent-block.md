@@ -1,4 +1,4 @@
-# Contact Block: Transfer to Agent<a name="transfer-to-agent-block"></a>
+# Contact block: Transfer to agent<a name="transfer-to-agent-block"></a>
 
 ## Contact flow types<a name="transfer-to-agent-block-types"></a>
 

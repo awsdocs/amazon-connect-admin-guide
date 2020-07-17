@@ -2,7 +2,7 @@
 
 The starting point for creating all contact flows is the contact flow designer\. It's a drag\-and\-drop work surface that enables you to link together blocks of actions\. For example, when a customer first enters your contact center, you can ask for some input and then play a prompt such as "Thank you\."
 
-For descriptions of the available action blocks, see [Contact Block Definitions](contact-block-definitions.md)\.
+For descriptions of the available action blocks, see [Contact block definitions](contact-block-definitions.md)\.
 
 ## Before you begin: develop a naming convention<a name="before-create-contact-flow"></a>
 
@@ -24,14 +24,14 @@ The following contact flow types are available\.
 | Type | When to use | 
 | --- | --- | 
 |  **Inbound contact flow**  |  This is the generic contact flow type that's created when you choose the **Create contact flow** button, and don't select a type using the drop\-down arrow\. It creates an inbound contact flow\.  This contact flow works with voice and chat\.   | 
-|  **Customer queue flow**  |  Use to manage what the customer experiences while in queue, before being joined to an agent\. Customer queue flows are interruptible and can include actions such as an audio clip apologizing for a delay and offering an option to receive a callback, leveraging the **Transfer to queue** block\. This contact follow works with voice and chat\.   | 
-|  **Customer hold flow**  |  Use to manage what the customer experiences while the customer is on hold\. With this flow, one or more audio prompts can be played to a customer using the **Loop prompts** block while waiting on hold\. This contact follow works with voice\.   | 
-|  **Customer whisper flow**  |  Use to manage what the customer experiences as part of an inbound call immediately before being joined with an agent\. The agent and customer whispers are played to completion, then the two are joined\. This contact follow works with voice\.   | 
-|  **Outbound whisper flow**  |  Use to manage what the customer experiences as part of an outbound call before being connected with an agent\. In this flow, the customer whisper is played to completion, then the two are joined\. For example, this flow can be used to enable call recordings for outbound calls with the **Set recording behavior** block\. This contact follow works with voice\.   | 
-|  **Agent hold flow**  |  Use to manage what the agent experiences when on hold with a customer\. With this flow, one or more audio prompts can be played to an agent using the **Loop prompts** block while the customer is on hold\. This contact follow works with voice\.   | 
-| **Agent whisper flow** | Use to manage what the agent experiences as part of an inbound call immediately before being joined with a customer\. The agent and customer whispers are played to completion, then the two are joined\. This contact follow works with voice\.   | 
-| **Transfer to agent flow** | Use to manage what the agent experiences when transferring to another agent\. This type of flow is associated with transfer to agent quick connects, and often plays messaging, then completes the transfer using the **Transfer to agent** block\. This contact follow works with voice\.   | 
-| **Transfer to queue flow** | Use to manage what the agent experiences when transferring to another queue\. This type of flow is associated with transfer to queue quick connects, and often plays messaging, then completes the transfer using the **Transfer to queue** block\. This contact follow works with voice and chat\.  | 
+|  **Customer queue flow**  |  Use to manage what the customer experiences while in queue, before being joined to an agent\. Customer queue flows are interruptible and can include actions such as an audio clip apologizing for a delay and offering an option to receive a callback, leveraging the **Transfer to queue** block\. This contact flow works with voice and chat\.   | 
+|  **Customer hold flow**  |  Use to manage what the customer experiences while the customer is on hold\. With this flow, one or more audio prompts can be played to a customer using the **Loop prompts** block while waiting on hold\. This contact flow works with voice\.   | 
+|  **Customer whisper flow**  |  Use to manage what the customer experiences as part of an inbound call immediately before being joined with an agent\. The agent and customer whispers are played to completion, then the two are joined\. This contact flow works with voice\.   | 
+|  **Outbound whisper flow**  |  Use to manage what the customer experiences as part of an outbound call before being connected with an agent\. In this flow, the customer whisper is played to completion, then the two are joined\. For example, this flow can be used to enable call recordings for outbound calls with the **Set recording behavior** block\. This contact flow works with voice\.   | 
+|  **Agent hold flow**  |  Use to manage what the agent experiences when on hold with a customer\. With this flow, one or more audio prompts can be played to an agent using the **Loop prompts** block while the customer is on hold\. This contact flow works with voice\.   | 
+| **Agent whisper flow** | Use to manage what the agent experiences as part of an inbound call immediately before being joined with a customer\. The agent and customer whispers are played to completion, then the two are joined\. This contact flow works with voice\.   | 
+| **Transfer to agent flow** | Use to manage what the agent experiences when transferring to another agent\. This type of flow is associated with transfer to agent quick connects, and often plays messaging, then completes the transfer using the **Transfer to agent** block\. This contact flow works with voice\.   | 
+| **Transfer to queue flow** | Use to manage what the agent experiences when transferring to another queue\. This type of flow is associated with transfer to queue quick connects, and often plays messaging, then completes the transfer using the **Transfer to queue** block\. This contact flow works with voice and chat\.  | 
 
 ## Create an inbound contact flow<a name="create-inbound-contact-flow"></a>
 
@@ -43,7 +43,7 @@ Use these steps to create an inbound contact flow\.
 
 1. Type a name and a description for your contact flow\.
 
-1. Search for a contact block using the **Search** bar, or expand the relevant group to locate the block\. For descriptions of the contact blocks, see [Contact Block Definitions](contact-block-definitions.md)\.
+1. Search for a contact block using the **Search** bar, or expand the relevant group to locate the block\. For descriptions of the contact blocks, see [Contact block definitions](contact-block-definitions.md)\.
 
 1. Drag and drop contract blocks onto the canvas\. You can add blocks in any order or sequence, as connections between elements aren't required to be strictly linear\.
 **Tip**  

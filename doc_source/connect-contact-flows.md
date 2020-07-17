@@ -15,5 +15,5 @@ A *contact flow* defines the customer experience with your contact center from s
 + [Initiate an outbound call](using-call-number-block.md)
 + [Import/export contact flows](contact-flow-import-export.md)
 + [Track events in contact flows](about-contact-flow-logs.md)
-+ [Contact Block Definitions](contact-block-definitions.md)
++ [Contact block definitions](contact-block-definitions.md)
 + [Use contact attributes](connect-contact-attributes.md)

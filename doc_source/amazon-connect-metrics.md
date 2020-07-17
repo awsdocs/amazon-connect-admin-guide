@@ -1,4 +1,4 @@
-# Amazon Connect Metrics and Contact Trace Records<a name="amazon-connect-metrics"></a>
+# Monitor metrics and run reports<a name="amazon-connect-metrics"></a>
 
 In Amazon Connect, data about contacts are captured in contact trace records \(CTR\)\. This data can include the amount of time a contact spends in each state: customer on hold, customer in queue, agent interaction time\. 
 

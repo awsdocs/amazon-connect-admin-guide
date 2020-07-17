@@ -1,4 +1,4 @@
-# Contact Block: Set Contact Attributes<a name="set-contact-attributes"></a>
+# Contact block: Set contact attributes<a name="set-contact-attributes"></a>
 
 ## Contact flow types<a name="set-contact-attributes-types"></a>
 

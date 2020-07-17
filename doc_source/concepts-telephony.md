@@ -42,7 +42,7 @@ DID numbers are less expensive than toll\-free numbers, but don't have the redun
 
 ## Claiming numbers in Amazon Connect<a name="concepts-claiming-numbers"></a>
 
-Amazon Connect provides you the ability to claim both direct dial and toll\-free numbers in supported countries from inventories maintained by AWS\. To claim a number, log into your Amazon Connect instance and select **Phone numbers**\. For instructions, see [Claim a phone number](claim-phone-number.md)\. 
+Amazon Connect provides you the ability to claim both direct dial and toll\-free numbers in supported countries from inventories maintained by AWS\. To claim a number, log into your Amazon Connect instance and select **Phone numbers**\. For instructions, see [Claim a phone number in your country](claim-phone-number.md)\. 
 
 ## Porting numbers<a name="concepts-porting-numbers"></a>
 
@@ -58,7 +58,7 @@ For detailed porting instructions, see [Port your current phone number](port-pho
 
 ### Starting fresh with Amazon Connect<a name="concepts-new-config"></a>
 
-In this case, simply select new numbers using the claim a number process\. For instructions, see [Claim a phone number](claim-phone-number.md)\.
+In this case, simply select new numbers using the claim a number process\. For instructions, see [Claim a phone number in your country](claim-phone-number.md)\.
 
 ### Migrating to Amazon Connect from another provider/platform<a name="concepts-migrate-platforms"></a>
 

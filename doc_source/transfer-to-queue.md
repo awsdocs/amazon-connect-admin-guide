@@ -1,4 +1,4 @@
-# Contact Block: Transfer to Queue<a name="transfer-to-queue"></a>
+# Contact block: Transfer to queue<a name="transfer-to-queue"></a>
 
 ## Contact flow types<a name="transfer-to-queue-types"></a>
 

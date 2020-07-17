@@ -1,4 +1,4 @@
-# Contact Block: Distribute by Percentage<a name="distribute-by-percentage"></a>
+# Contact block: Distribute by percentage<a name="distribute-by-percentage"></a>
 
 ## Contact flow types<a name="disconnect-hang-up-types"></a>
 

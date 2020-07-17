@@ -136,9 +136,9 @@ Category: Agent activity\-driven metric
 ### Group by queue in historical metrics reports<a name="metrics-changes-june-2020-queue-grouping"></a>
 
 In the historical metrics report, when you group or filter metrics by **Queue**, the results for the following metrics aren't accurate: 
-+ Agent idle time \(deprecated June, 2020\)
-+ Agent on contact time \(deprecated June, 2020\)
-+ Occupancy \(deprecated June, 2020\)
++ Agent idle time \(not supported in queue grouping as of June, 2020\)
++ Agent on contact time \(not supported in queue grouping as of June, 2020\)
++ Occupancy \(not supported in queue grouping as of June, 2020\)
 
 Because of this, on the **Table Settings** page, **Metrics** tab, these metrics are inactive, as shown in the following image:
 
@@ -154,17 +154,17 @@ If the **Queue** grouping or filter is used on the following reports, note these
 + **Saved reports**\. The columns for these metrics don't appear in the saved reports when *grouped* by Queue\. When the saved report is *filtered* by Queue, however, it shows "\-"\.
 + **Scheduled reports**\. These reports continue to run successfully, but no results are returned for these metrics\. 
 
-### Agent on contact time \(deprecated June, 2020\)<a name="metrics-changes-june-2020-agent-on-contact-time"></a>
+### Agent on contact time \(not supported in queue grouping as of June, 2020\)<a name="metrics-changes-june-2020-agent-on-contact-time"></a>
 
 On historical metrics reports when an agent handles multiple chats concurrently, **Agent on contact time** shows wall clock time: the amount of time spent chatting\. However, there isn't a metric that shows the time an agent spends chatting with each contact\.
 
 In addition, no results are returned when you use the **Queue** grouping or filter with **Agent on contact time**\.
 
-### Agent idle time \(deprecated June, 2020\)<a name="metrics-changes-june-2020-agent-idle-time"></a>
+### Agent idle time \(not supported in queue grouping as of June, 2020<a name="metrics-changes-june-2020-agent-idle-time"></a>
 
 The **Agent idle time** metric divides the idle time into each queue associated with the agent\. When contacts are grouped or filtered by **Queue**, however, Amazon Connect doesn't provide an accurate view into the how the agent is working\. Because of this, Amazon Connect doesn't show **Agent idle time** when you apply the **Queue** grouping or filter to your report\. 
 
-### Occupancy \(deprecated June, 2020\)<a name="metrics-changes-june-2020-occupancy"></a>
+### Occupancy \(not supported in queue grouping as of June, 2020\)<a name="metrics-changes-june-2020-occupancy"></a>
 
 With the addition of chat, the **Occupancy** metric is now defined as the percentage of time that an agent was active on contacts\. This percentage is calculated as follows:
 + \(Agent on contact \(wall clock time\) / \(Agent on contact \(wall clock time\) \+ Agent idle time\)\) 

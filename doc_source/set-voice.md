@@ -1,4 +1,4 @@
-# Contact Block: Set Voice<a name="set-voice"></a>
+# Contact block: Set voice<a name="set-voice"></a>
 
 ## Contact flow types<a name="set-voice-types"></a>
 
@@ -17,7 +17,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Configuration tips<a name="set-voice-tips"></a>
 + For the **Joanna** and **Matthew** neural voices, in American English \(en\-US\), you can also specify a [Conversational speaking style](https://docs.aws.amazon.com/polly/latest/dg/ntts-speakingstyles.html) or a [Newscaster speaking style](https://docs.aws.amazon.com/polly/latest/dg/ntts-speakingstyles.html)\.
-+ To enable a speaking style, in the blocks where you include text\-to\-speech \(that is, [Play Prompt](play.md), [Get Customer Input](get-customer-input.md), and [Store Customer Input](store-customer-input.md)\), perform the following steps:
++ To enable a speaking style, in the blocks where you include text\-to\-speech \(that is, [Play prompt](play.md), [Get customer input](get-customer-input.md), and [Store customer input](store-customer-input.md)\), perform the following steps:
 
   1. Add the appropriate SSML tags to the text\. For example, the following image shows how to specify the Conversational speaking style:  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-tts-example.png)

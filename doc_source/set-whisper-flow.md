@@ -1,4 +1,4 @@
-# Contact Block: Set Whisper Flow<a name="set-whisper-flow"></a>
+# Contact block: Set whisper flow<a name="set-whisper-flow"></a>
 
 ## Contact flow types<a name="set-voice-types"></a>
 

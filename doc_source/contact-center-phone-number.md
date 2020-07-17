@@ -7,7 +7,9 @@ For pricing information about how much a claimed phone number costs, see [Amazon
 If you want to keep a phone number you already have, you can port the phone number and use it with Amazon Connect\. After a phone number is ported to Amazon Connect, it appears in the list of available phone numbers for you to assign to contact flows\.
 
 **Topics**
-+ [Claim a phone number](claim-phone-number.md)
++ [Claim a phone number in your country](claim-phone-number.md)
++ [Claim a phone number you already own in another country](another-country.md)
++ [Request a number you don't own in another country, or a special number](special-request.md)
 + [Release a phone number](release-phone-number.md)
 + [Port your current phone number](port-phone-number.md)
 + [Claim phone numbers for Asia Pacific \(Tokyo\)](connect-tokyo-region.md)

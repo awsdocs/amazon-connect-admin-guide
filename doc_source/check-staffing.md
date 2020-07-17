@@ -1,4 +1,4 @@
-# Contact Block: Check Staffing<a name="check-staffing"></a>
+# Contact block: Check staffing<a name="check-staffing"></a>
 
 ## Contact flow types<a name="check-staffing-types"></a>
 
@@ -22,7 +22,7 @@ In the **Status to check** dropdown box, choose one of the following options:
 + **Online** = Check whether agents are in the **Available** or **Staffed** state, or if they are **Offline**\.
 
 ## Configuration tips<a name="check-staffing-tips"></a>
-+ You must set a queue before using a **Check staffing** block in your contact flow\. You can use a [Set Working Queue](set-working-queue.md) block to set the queue\.
++ You must set a queue before using a **Check staffing** block in your contact flow\. You can use a [Set working queue](set-working-queue.md) block to set the queue\.
 + If a queue is not set, the contact is routed down the **Error** branch\.
 + When a contact is transferred from one flow to another, the queue that is set in a contact flow is passed from that flow to the next flow\.
 

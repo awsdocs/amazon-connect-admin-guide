@@ -46,9 +46,9 @@ To view a contact flow that invokes a Lambda function, see [Sample Lambda integr
 
 1. Open or create a contact flow\.
 
-1. Add an [Invoke AWS Lambda Function](invoke-lambda-function-block.md) block \(in the **Integrate** group\) to the grid\. Connect the branches to and from the block\.
+1. Add an [Invoke AWS Lambda function](invoke-lambda-function-block.md) block \(in the **Integrate** group\) to the grid\. Connect the branches to and from the block\.
 
-1. Choose the title of the [Invoke AWS Lambda Function](invoke-lambda-function-block.md) block to open its properties page\.
+1. Choose the title of the [Invoke AWS Lambda function](invoke-lambda-function-block.md) block to open its properties page\.
 
 1. Under **Select a function**, choose from the list of functions you've added to your instance\.
 
@@ -94,7 +94,7 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w54aac32c13c17"></a>
+### Invocation retry policy<a name="w55aac32c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 

@@ -1,4 +1,4 @@
-# Agent training guide for the CCP<a name="agent-user-guide"></a>
+# Agent training guide for the Amazon Connect CCP<a name="agent-user-guide"></a>
 
 Agents use the Amazon Connect Contact Control Panel \(CCP\) to interact with customer contacts\. It's how they receive calls, chat with contacts, transfer them to other agents, put them on hold, and perform other key tasks\.
 

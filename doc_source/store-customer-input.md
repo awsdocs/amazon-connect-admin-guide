@@ -1,4 +1,4 @@
-# Contact Block: Store Customer Input<a name="store-customer-input"></a>
+# Contact block: Store customer input<a name="store-customer-input"></a>
 
 ## Contact flow types<a name="store-customer-input-types"></a>
 
@@ -30,7 +30,7 @@ Note the following properties:
 + **Specify terminating keypress**: Define a custom terminating keypress that is used when your contacts complete their DTMF inputs\. The terminating keypress can be up to five digits long, with \#, \* and 0\-9 characters, instead of just \#\. 
 + **Disable cancel key**: By default, when a customer enters \* as input, it deletes all of the DTMF input that came before it\. However, if you choose **Disable cancel key**, Amazon Connect treats the **\*** as any other key\.
 
-  If you send the DMTF input to an [Invoke AWS Lambda Function](invoke-lambda-function-block.md) block, the **Disable cancel key** property affects the input, as follows: 
+  If you send the DMTF input to an [Invoke AWS Lambda function](invoke-lambda-function-block.md) block, the **Disable cancel key** property affects the input, as follows: 
   + When **Disable cancel key** is selected, all the characters entered—including any \*—are sent to the **Invoke Lambda function** block\. 
   + When **Disable cancel key** is not selected, only the \* is sent to the **Invoke Lambda function** block\. 
 

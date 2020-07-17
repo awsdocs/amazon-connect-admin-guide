@@ -1,4 +1,4 @@
-# Contact Block: Change Routing Priority / Age<a name="change-routing-priority"></a>
+# Contact block: Change routing priority / age<a name="change-routing-priority"></a>
 
 ## Contact flow types<a name="change-routing-priority-types"></a>
 

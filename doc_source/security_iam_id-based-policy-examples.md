@@ -9,7 +9,7 @@ To learn how to create an IAM identity\-based policy using these example JSON po
 + [Allow IAM users to view their own permissions](#security_iam_id-based-policy-examples-view-own-permissions)
 + [Grant "View User" permissions](#security_iam_id-based-policy-example-view-user-permissions)
 + [Describe and update Amazon Connect users based on tags](#security_iam_id-based-policy-examples-view-widget-tags)
-+ [Create Amazon Connect users based on tags](#connect-access-control-resources-example2)
++ [Create Amazon Connect users based on tags](#connect-access-control-resources-example1)
 
 ## Policy best practices<a name="security_iam_service-with-iam-policy-best-practices"></a>
 
@@ -116,7 +116,7 @@ The following sample policy allows the "describe" and "update" actions for users
 
 This policy allows "describe user" and "update user" but only for those Amazon Connect users tagged with tag “Department: Test” where “Department” is the tag key and “Test” is the tag value\. 
 
-## Create Amazon Connect users based on tags<a name="connect-access-control-resources-example2"></a>
+## Create Amazon Connect users based on tags<a name="connect-access-control-resources-example1"></a>
 
 The following sample policy allows the create actions for users with specific request tags\.
 

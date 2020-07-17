@@ -1,4 +1,4 @@
-# Contact Block: Hold Customer or Agent<a name="hold-customer-agent"></a>
+# Contact block: Hold customer or agent<a name="hold-customer-agent"></a>
 
 ## Contact flow types<a name="get-queue-metrics-types"></a>
 

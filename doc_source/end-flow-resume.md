@@ -1,4 +1,4 @@
-# Contact Block: End Flow / Resume<a name="end-flow-resume"></a>
+# Contact block: End flow / Resume<a name="end-flow-resume"></a>
 
 ## Contact flow types<a name="end-flow-resume-types"></a>
 

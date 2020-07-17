@@ -1,4 +1,4 @@
-# Contact Block: Wait<a name="wait"></a>
+# Contact block: Wait<a name="wait"></a>
 
 ## Contact flow types<a name="wait-types"></a>
 

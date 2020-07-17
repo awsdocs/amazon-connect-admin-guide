@@ -30,4 +30,4 @@ You can also resolve the issue by using Firefox as your browser\.
 
 **Agents**: Contact your manager or the technical support provided by your company\. 
 
-**Amazon Connect Administrators**: See [Troubleshooting Issues with the CCP](troubleshooting.md) for detailed troubleshooting steps\. Or, log in to the [AWS Management Console](https://console.aws.amazon.com/console) \(https://console\.aws\.amazon\.com/console\) using your AWS account\. In the upper right corner of the page, choose **Support**, and open a support ticket\.
+**Amazon Connect Administrators**: See [Troubleshooting Issues with the Contact Control Panel \(CCP\)](troubleshooting.md) for detailed troubleshooting steps\. Or, log in to the [AWS Management Console](https://console.aws.amazon.com/console) \(https://console\.aws\.amazon\.com/console\) using your AWS account\. In the upper right corner of the page, choose **Support**, and open a support ticket\.

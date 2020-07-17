@@ -1,4 +1,4 @@
-# Contact Block: Transfer to Phone Number<a name="transfer-to-phone-number"></a>
+# Contact block: Transfer to phone number<a name="transfer-to-phone-number"></a>
 
 ## Contact flow types<a name="transfer-to-phone-number-types"></a>
 

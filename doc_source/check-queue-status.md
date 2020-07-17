@@ -1,4 +1,4 @@
-# Contact Block: Check Queue Status<a name="check-queue-status"></a>
+# Contact block: Check queue status<a name="check-queue-status"></a>
 
 ## Contact flow types<a name="check-queue-status-types"></a>
 

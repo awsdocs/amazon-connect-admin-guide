@@ -1,10 +1,10 @@
-# Troubleshooting Issues with the CCP<a name="troubleshooting"></a>
+# Troubleshooting Issues with the Contact Control Panel \(CCP\)<a name="troubleshooting"></a>
 
-Troubleshooting CCP issues requires support from your network operations, system administrator, and VDI solution teams to collect the appropriate level of information to identify root cause and drive resolution\. To help determine the appropriate resources to engage, it's important to break issues down into those with similar symptoms\. The following guidance has been helpful in assisting Amazon Connect customers in resolving CCP issues with their operations support teams\.
+Troubleshooting Contact Control Panel \(CCP\) issues requires support from your network operations, system administrator, and virtual desktop \(VDI\) solution teams to collect the appropriate level of information to identify root cause and drive resolution\. To help determine the appropriate resources to engage, it's important to break issues down into those with similar symptoms\. The following guidance has been helpful in assisting Amazon Connect customers in resolving CCP issues with their operations support teams\.
 
 **Topics**
 + [Use the Check Connectivity Tool](#check-connectivity-tool)
-+ [Common CCP Issues](#common-ccp-issues)
++ [Common Contact Control Panel \(CCP\) Issues](#common-ccp-issues)
 + [Useful Troubleshooting Tools and Information](#tools-and-info)
 + [Gathering Helpful Information using the Streams API](#info-gathering)
 + [Analyzing the Data](#analyze-data)
@@ -14,9 +14,9 @@ Troubleshooting CCP issues requires support from your network operations, system
 
 When your agents are experiencing problems with CCP, we recommend you go to their workstation and run the [Amazon Connect Check Connectivity Tool](https://s3.amazonaws.com/connectivitytest/checkConnectivity.html)\. 
 
-This tool will check which web browser the agent is running, and whether the microphone has required permissions\. Click the **Test** buttons to check the ports and latency\. 
+This tool checks which web browser the agent is running, and whether the microphone has required permissions\. Click the **Test** buttons to check the ports and latency\. 
 
-## Common CCP Issues<a name="common-ccp-issues"></a>
+## Common Contact Control Panel \(CCP\) Issues<a name="common-ccp-issues"></a>
 
 The following are common issues encountered when using the Amazon Connect CCP\.
 + **CCP does not initialize/connect**—The most common causes are missing port/IP allow list entries, not allowing browser microphone access, or not answering your external device\. Be sure that you have added to the allow list all IPs covered in the [Set up your network](ccp-networking.md) section of this guide, and that you have allowed microphone access to your browser when prompted\.
@@ -24,7 +24,7 @@ The following are common issues encountered when using the Amazon Connect CCP\.
 + **Missed calls, state change delays, and CCP unresponsive**—In most cases, this is intermittent and directly correlated with resource contention in the agent's workstation, network, or both\. This can be made worse, or caused directly, by a poor, unstable, or strained connection to AWS resources at the private WAN/LAN, public WAN levels, or local workstation resource contention\.
 
 The following are common issues with call quality when using the CCP\. Call quality encompasses a large range of potential causes and is best approached by first identifying the types of issues that you're having\.
-+ **Latency/cross\-talk**—in a voice connection manifests as a delay between when something is said and when the person on the other end hears it\. In some use cases that require a lot of conversation, high latency can create situations in which both parties are talking over each other\. The PSTN and agent latency need to be calculated in this scenario to identify contributing factors and take action to reduce PSTN latency, agent latency, or both\. For more information, see the PSTN and agent connection latency section of this documentation\.
++ **Latency/cross\-talk**—in a voice connection manifests as a delay between when something is said and when the person on the other end hears it\. In some use cases that require a lot of conversation, high latency can create situations in which both parties are talking over each other\. The PSTN \(public switched telephone network\) and agent latency need to be calculated in this scenario to identify contributing factors and take action to reduce PSTN latency, agent latency, or both\. For more information, see the PSTN and agent connection latency section of this documentation\.
 + **One way audio**—is when the agent can't hear the caller or the caller can't hear them\. This is normally indicative of an issue with the agent's workstation at the hardware, network, resource levels, or all three\. It and can also be related to browser microphone permissions or headset issues\. For more information, see the [Monitoring workstations](ccp-agent-hardware.md#monitor-workstation) section of this guide\.
 + **Volume increase or decrease**— can happen at the beginning or intermittently during the call, and it's important to differentiate the two for troubleshooting purposes\. Typically, this relates to forwarding calls to or from Amazon Connect that inherit this from an issue with the third party transfer\.
 + **Audio choppy, cutting out, echo, reverb, or other signal noise**—could also manifest as a robotic sound or other distortion making it difficult for either the agent, caller, or both parties to understand what’s being said\. This is normally indicative of an issue with the agent's workstation at the hardware, network, resource levels, or all three\. For more information, see the [Monitoring workstations](ccp-agent-hardware.md#monitor-workstation) section of this guide\.
@@ -34,11 +34,11 @@ The following are common issues with call quality when using the CCP\. Call qual
 ## Useful Troubleshooting Tools and Information<a name="tools-and-info"></a>
 
 The following tools and information can be helpful with troubleshooting issues with Amazon Connect\.
-+ **Instance ARN**—Provide your instance ARN when you contact AWS support so that they can see the activity in your Amazon Connect instance\. You can find the ARN for your instance on the Overview page that you access by choosing the alias of the instance from the Amazon Connect console\.
++ **Instance ARN**—Provide your instance ARN \(Amazon Resource Name\) when you contact AWS support so that they can see the activity in your Amazon Connect instance\. You can find the ARN for your instance on the Overview page that you access by choosing the alias of the instance from the Amazon Connect console\.
 + **Call recordings**—are very useful, not only to illustrate and determine reported behavior, but also to rule out audio issues from the agent's side\. Recordings in Amazon Connect are done at the instance side of the interaction, before the audio traverses the agent connection\. This allows you to determine if the audio issue was isolated to the agent's side of the interaction or if it existed in the audio received by the agent\. You can find call recordings associated with a contact in the Contact Search report\.
-+ **Contact IDs from the CTR**—Provide when you contact AWS support\.
++ **Contact IDs from the Contact Trace Record** \(CTR\)—Provide when you contact AWS support\.
 + **Agent desktop performance/process logs**—can help rule out local resource/network contention\.
-+ **Contact Control Panel logs**—to track agent actions and timing\. To download CCP logs, choose the settings cogwheel in the CCP, and then choose **Download logs**\. The logs are saved to your browser's default download directory\.
++ **Contact Control Panel \(CCP\) logs**—to track agent actions and timing\. To download CCP logs, choose the settings cogwheel in the CCP, and then choose **Download logs**\. The logs are saved to your browser's default download directory\.
 + **Network utilization logging/monitoring**—specifically for latency and dropped packets on the same network segment as your agents\.
 + **Private WAN/LAN network diagram**—outlining connection paths to the edge router to AWS to explain network traversal\.
 + **Firewall allow list access**—to verify that IP/port ranges are added to the allow list \(also known as whitelist\) as described in [Set up your network](ccp-networking.md)\.
@@ -81,7 +81,7 @@ The following example disposition keys are listed by symptom, scenario, and seve
 ## Analyzing the Data<a name="analyze-data"></a>
 
 The following guidelines can assist you in analyzing the data to identify issues in your environment\.
-+ Use the CTR / Contact search report to identify the contact IDs for the contacts during which call quality issues occurred\. The CTR includes a link to the associated call recording, and additional details that you can use for symptom verification and to provide to your AWS support representative\.
++ Use the Contact Trace Record \(CTR\) / Contact search report to identify the contact IDs for the contacts during which call quality issues occurred\. The CTR includes a link to the associated call recording, and additional details that you can use for symptom verification and to provide to your AWS support representative\.
 + Use the agent name and timestamp in the CTR to get a sense of the types of issues you're experiencing and their prevalence by agent, symptom, scenario, and severity over time\. This will allow you to see if issues are happening around the same time, surround a specific event, or are isolated to specific agents or agent actions\. You can also easily identify and access associated call recordings and associated contact IDs available if you need to engage support\.
 + Correlate data sources, such as local network logs, CPU/disk/memory utilization and process monitor logs from the operating system on the client workstation\. This lets you correlate events by agent over time to rule out local resource contention as a cause or contributor\.
 + Analyze data by symptom and scenario reported per minute or per hour to create heat maps of an issue by type and severity by agent over time\. Doing this is especially helpful in environmental troubleshooting as you may find clustered impacts associated with scheduled activity like backups or large file transfers\.

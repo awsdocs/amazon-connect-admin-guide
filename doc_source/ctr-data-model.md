@@ -309,7 +309,7 @@ Length: 0\-256
 **MediaStreamType**  
 Information about the media stream used during the conversation\.   
 Type: String  
-Valid values: AUDIO
+Valid values: AUDIO, VIDEO, CHAT
 
 **ParticipantType**  
 Information about the conversation participant: whether they are an agent or contact\.  

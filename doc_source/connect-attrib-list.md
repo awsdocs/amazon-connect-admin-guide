@@ -100,3 +100,9 @@ Telephony metadata provides additional information from telephony carriers that 
 
 **Note**  
 Telephony metadata is not consistent across all telephony providers\. In some cases, this may result in empty values\.
+
+## User\-defined attributes<a name="user-defined-attributes"></a>
+
+To reference user\-defined attributes, such as those set with the Set contact attributes block, use the drop\-down menus in subsequent blocks to reference the attribute, or use the Attributes namespace in JSONPath to the attribute if used in a text field\. For example, if you create a user\-defined attribute in a Set contact attributes block, you reference it in one of the following ways:
++ In a block that supports attributes, such as a Check contact attributes block, choose User Defined for the Type, and use the value you entered for the Destination key in the Attribute field\.
++ In a text field in a block, such as a Play prompt block, use the JSONPath $\.Attributes\.DestinationKey, replacing DestinationKey with the value you entered in the Destination key\.

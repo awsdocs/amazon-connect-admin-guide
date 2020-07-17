@@ -1,4 +1,4 @@
-# Contact Block: Set Customer Queue Flow<a name="set-customer-queue-flow"></a>
+# Contact block: Set customer queue flow<a name="set-customer-queue-flow"></a>
 
 ## Contact flow types<a name="set-contact-attributes-types"></a>
 

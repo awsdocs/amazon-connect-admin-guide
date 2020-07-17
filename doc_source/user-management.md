@@ -18,6 +18,8 @@ You can add users and configure them with permissions that are appropriate to th
 
 1. Choose **Save**\. If the Save button isn't active, it means you don't have permissions to add or edit a user\. 
 
+1. For information about adding agents, see [Configure agent settings: routing profile, phone type, and auto\-accept calls](configure-agents.md)\. 
+
 ## Add users in bulk<a name="add-users-in-bulk"></a>
 
 Use these steps to add several users from an Excel spreadsheet \(\.csv\)

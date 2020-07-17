@@ -1,9 +1,9 @@
 # Add text\-to\-speech to prompts<a name="text-to-speech"></a>
 
 You can enter text\-to\-speech prompts in the following contact flow blocks: 
-+ [Get Customer Input](get-customer-input.md) 
-+ [Play Prompt](play.md)
-+ [Store Customer Input](store-customer-input.md)
++ [Get customer input](get-customer-input.md) 
++ [Play prompt](play.md)
++ [Store customer input](store-customer-input.md)
 
 You can enter plain text or Speech Synthesis Markup Language \(SSML\)\. 
 

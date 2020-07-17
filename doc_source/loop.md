@@ -1,4 +1,4 @@
-# Contact Block: Loop<a name="loop"></a>
+# Contact block: Loop<a name="loop"></a>
 
 ## Contact flow types<a name="loop-types"></a>
 

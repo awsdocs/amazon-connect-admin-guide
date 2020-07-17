@@ -4,4 +4,4 @@ If an agent can't hear the audio indicator for an incoming chat, the problem is 
 
 To fix this, add the CCP web site to the allow list in the agent's Chrome settings\. For instructions, see this [Google Chrome Help article](https://support.google.com/chrome/answer/114662)\.
 
-For more information about solving audio problems, see [Troubleshooting Issues with the CCP](troubleshooting.md)\. 
+For more information about solving audio problems, see [Troubleshooting Issues with the Contact Control Panel \(CCP\)](troubleshooting.md)\. 

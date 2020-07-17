@@ -12,4 +12,4 @@ Here's what you need to check:
 A change introduced in Google Chrome version 64 may result in issues with receiving calls if you are using an embedded Contact Control Panel \(CCP\) softphone using the Amazon Connect Streams library\. If you are experiencing issues with your microphone when using Chrome version 64, you can resolve the issue by building and deploying the latest version of the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md#downloading-streams), following the steps under *Downloading Streams*\.  
 You can also resolve the issue by using Firefox as your browser\.
 
-For more information about solving audio problems, see [Troubleshooting Issues with the CCP](troubleshooting.md)\. 
+For more information about solving audio problems, see [Troubleshooting Issues with the Contact Control Panel \(CCP\)](troubleshooting.md)\. 

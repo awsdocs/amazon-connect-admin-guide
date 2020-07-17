@@ -1,4 +1,4 @@
-# Contact Block: Get Queue Metrics<a name="get-queue-metrics"></a>
+# Contact block: Get queue metrics<a name="get-queue-metrics"></a>
 
 ## Contact flow types<a name="get-queue-metrics-types"></a>
 
@@ -20,7 +20,7 @@ You can use this block in the following [contact flow types](create-contact-flow
   + [Agents non\-productive](real-time-metrics-definitions.md#non-productive-time-real-time)
 + You can choose to return metrics by channel, for example, voice or chat\. You can also filter by queue or agent\. These options enable you to know how many chat and voice contacts are in a queue and if you have agents available to handle those contacts\. 
 + You can route contacts based on queue status, such as number of contacts in queue or agents available\. Queue metrics are aggregated across all channels and are returned as attributes\. The current queue is used by default\.
-+ After a **Get queue metrics** block, use a [Check Contact Attributes](check-contact-attributes.md) to check metric values and define routing logic based on them, such as number of contacts in a queue, number of available agents, and oldest contact in a queue\. 
++ After a **Get queue metrics** block, use a [Check contact attributes](check-contact-attributes.md) to check metric values and define routing logic based on them, such as number of contacts in a queue, number of available agents, and oldest contact in a queue\. 
 
 ## Properties<a name="get-queue-metrics-properties"></a>
 
@@ -41,7 +41,7 @@ For example, if you choose the following settings, **Get queue metrics** would r
 
 Dynamic attributes can only return metrics for one channel\.
 
-Before you use dynamic attributes in the **Get queue metrics** block, you need to set the attributes in the [Set Contact Attributes](set-contact-attributes.md) block, and specify which channel\.
+Before you use dynamic attributes in the **Get queue metrics** block, you need to set the attributes in the [Set contact attributes](set-contact-attributes.md) block, and specify which channel\.
 
 When you set a channel dynamically using text, as shown in the following image, for the attribute value enter **Voice** or **Chat**\. This value is not case\-sensitive\. 
 
@@ -49,7 +49,7 @@ When you set a channel dynamically using text, as shown in the following image, 
 
 ### Using the Check contact attributes block after the Get queue metrics block<a name="get-queue-metrics-tips2"></a>
 
-After a **Get queue metrics** block, add a [Check Contact Attributes](check-contact-attributes.md) block to branch based on the returned metrics\. Use the following steps:
+After a **Get queue metrics** block, add a [Check contact attributes](check-contact-attributes.md) block to branch based on the returned metrics\. Use the following steps:
 
 1. After **Get queue metrics**, add a **Check contact attributes** block\.
 

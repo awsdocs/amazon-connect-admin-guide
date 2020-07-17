@@ -1,4 +1,4 @@
-# Contact Block: Start Media Streaming<a name="start-media-streaming"></a>
+# Contact block: Start media streaming<a name="start-media-streaming"></a>
 
 ## Contact flow types<a name="start-media-streaming-types"></a>
 

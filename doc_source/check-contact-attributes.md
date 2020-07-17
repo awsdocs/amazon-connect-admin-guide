@@ -1,4 +1,4 @@
-# Contact Block: Check Contact Attributes<a name="check-contact-attributes"></a>
+# Contact block: Check contact attributes<a name="check-contact-attributes"></a>
 
 ## Contact flow types<a name="check-contact-attributes-types"></a>
 

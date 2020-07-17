@@ -1,4 +1,4 @@
-# Contact Block: Disconnect / Hang Up<a name="disconnect-hang-up"></a>
+# Contact block: Disconnect / hang up<a name="disconnect-hang-up"></a>
 
 ## Contact flow types<a name="disconnect-hang-up-types"></a>
 

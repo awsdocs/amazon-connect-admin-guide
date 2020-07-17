@@ -16,6 +16,10 @@ Before you schedule a historical metrics report, here are a few things you need 
 **A scheduled Yesterday report works like a Last 24 hours report**
 + Usually **Yesterday** specifies the previous calendar day while **Last 24 hours** specifies the 24 hours prior to the current time\. However, if you schedule to run a **Yesterday** report, it will work like a **Last 24 hours** report\.
 
+**All scheduled reports use the UTC day, regardless of the timezone of the report**
++ For example, let's say you are in PST \(Pacific Standard Time\) and you schedule a **Last 24 hours** report to run at 16:00 every day\. Here's the logic we use to run the report on May 15, 2020, for example:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/schedule-historical-metrics-report.html)
+
 **No message if a scheduled report doesn't run**
 + If a scheduled report fails to run, you won't get any message in the Amazon Connect UI\. You just won't see the report in the Amazon S3 location\. 
 

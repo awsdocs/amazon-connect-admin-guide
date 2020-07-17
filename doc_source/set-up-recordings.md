@@ -1,6 +1,6 @@
 # Set up recording behavior<a name="set-up-recordings"></a>
 
-Managers can monitor live conversations, and review and download recordings of past agent conversations\. To set this up, you need to add the [Set Recording Behavior](set-recording-behavior.md) block to your contact flows, assign managers the appropriate permissions, and show them how to monitor live conversations and access past recordings in Amazon Connect\.
+Managers can monitor live conversations, and review and download recordings of past agent conversations\. To set this up, you need to add the [Set recording and analytics behavior ](set-recording-behavior.md) block to your contact flows, assign managers the appropriate permissions, and show them how to monitor live conversations and access past recordings in Amazon Connect\.
 
 A conversation is recorded only when the contact is connected to an agent\. The contact is not recorded before then, when they are connected to the flow\. If a customer is put on hold, the agent is still recorded\.
 
@@ -27,9 +27,9 @@ To view a sample contact flow with the **Set recording behavior** block configur
 
 1. Choose **Routing**, **Contact flows**, and then open the contact flow that handles customer contacts you want to monitor\. 
 
-1. Before the contact is connected to an agent, add a [Set Recording Behavior](set-recording-behavior.md) block to the contact flow\.
+1. Before the contact is connected to an agent, add a [Set recording and analytics behavior ](set-recording-behavior.md) block to the contact flow\.
 
-1. To configure the [Set Recording Behavior](set-recording-behavior.md) block, choose from the following: 
+1. To configure the [Set recording and analytics behavior ](set-recording-behavior.md) block, choose from the following: 
    + To record voice conversations, choose what you want to record: **Agent and Customer**, **Agent only**, or **Customer only**\.
    + To record chat conversations, you need to choose **Agent and Customer**\.
    + To enable monitoring of voice and/or chat conversations, you need to choose **Agent and Customer**\.
