@@ -23,7 +23,7 @@ On the **Contact Trace Record** page for a contact, you can view graphs that sum
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-sample-sentiment-graph.png)
 
 **Rules**  
-This permission allows you to view, edit, or create category rules for Contact Lens\. For more information, see [Add category rules to Contact Lens](category-rules.md)\.
+This permission allows you to view, edit, or create rules for categorizing contacts\. For more information, see [Automatically categorize contacts based on uttered keywords and phrases](rules.md)\.
 
 **Contact Lens \- redacted transcripts**  
 On the **Contact Trace Record** page for a contact, this permission allows you to listen to call recording files and view call transcripts in which the sensitive data has been removed\. For more information, see [Example redacted file](contact-lens-example-output-files.md#example-redacted-file)\.

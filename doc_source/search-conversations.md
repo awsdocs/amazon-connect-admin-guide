@@ -51,23 +51,24 @@ When searching by date, you can search up to 14 days at a time\.
      For example, the following query means match \("thank you for your business" AND cancellation AND "example airline"\)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/match-all.png)
 
-## Search for sentiment score<a name="sentiment-search"></a>
+## Search for sentiment score or evaluate sentiment shift<a name="sentiment-search"></a>
 
 With Contact Lens, you can search conversations for sentiment scores on a scale of \-5 \(most negative\) to \+5 \(most positive\)\. This enables you to identify patterns and factors for why calls go well or poorly\.
 
 For example, suppose you want to identify and investigate all the calls where the customer sentiment ended negatively\. You might search for all calls where the sentiment score is **<=** \(less than or equal to\) \-4\. 
 
-**To search for sentiment scores**
+**To search for sentiment scores or evaluate sentiment shift**
 
 1. In Amazon Connect, log in with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Search contacts by conversation characteristics** permission\.
 
-1. On the **Contact search** page, specify whether you want the score words or phrases spoken by the customer or agent\.
+1. On the **Contact search** page, specify whether you want the sentiment score for words or phrases spoken by the customer or agent\.
 
-1. In **Type of score analysis**, specify whether you want to return scores that are:
-   + **>=** greater than or equal to \.\.\.
-   + **<=** less than or equal to \.\.\.
+1. In **Type of score analysis**, specify what type of scores to return:
+   + **Sentiment score for the entire contact**: This returns the average score for the customer or agent's portion of the conversation\.
+   + **Evaluating sentiment shift**: Identify where the customer or agent's sentiment changed during the contact\.
 
-   \.\.\.the specified sentiment score\.
+     For example, you might search where the customer's sentiment score begins at less than or equal to \-1 and ends at greater than or equal to \+1\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-sentiment-score.png)
 
 ## Search for non\-talk time<a name="nontalk-time-search"></a>
 

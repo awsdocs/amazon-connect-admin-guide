@@ -9,11 +9,11 @@ The results of the sentiment analysis appear in the customer's Contact Trace Rec
 **Topics**
 + [Enable Contact Lens](enable-analytics.md)
 + [Assign permissions](permissions-for-contact-lens.md)
-+ [Add category rules](category-rules.md)
++ [Automatically categorize contacts](rules.md)
 + [Search conversations](search-conversations.md)
 + [Review analyzed conversations](review-transcripts.md)
 + [About sentiment scores and non\-talk time](sentiment-scores.md)
-+ [About issue detection](contact-lens-issue-detection.md)
++ [About issue/call driver detection](contact-lens-issue-detection.md)
 + [About loudness scores](contact-lens-loudness.md)
 + [About sensitive data redaction](sensitive-data-redaction.md)
 + [Example Contact Lens output files](contact-lens-example-output-files.md)

@@ -2,7 +2,7 @@
 
 By using Contact Lens for Amazon Connect, you can review the transcript and identify what part of the call is of interest\. You won't need to listen to an entire call to find out what's interesting about it\. 
 
-For example, you might see that 25 seconds into the call the customer moved from a negative sentiment to a positive one\. You can download the recording and fast\-forward 25 seconds to listen to that portion of the call\.
+For example, you might scan the transcript of the call and see a red sentiment emoji for a customer turn\. You can choose the timestamp and jump to that portion of audio recording\.
 
 ## Review an analysis of a voice conversation<a name="review-analysis-of-voice-conversation"></a>
 
@@ -18,6 +18,23 @@ For example, you might see that 25 seconds into the call the customer moved from
 
 1. If desired, choose the play prompt to listen to the recording\. Or, download the recording and fast\-forward to only the portion you're interested in\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-hit.png)
+
+## Turn\-by\-turn transcript<a name="turn-by-turn-transcript"></a>
+
+Busy supervisors often need to review a lot of calls\. The turn\-by\-turn transcript and sentiment data helps you quickly identify and navigate to the portion of the recording that is of interest to you\. 
+
+Following are key features of the turn\-by\-turn transcript:
+
+**Auto scroll**  
+The audio recording and transcript are in sync\. You can quickly scroll through the transcript, stop at interesting turns, and choose the timestamp for the turn to listen that specific point in the recording\. 
+
+**Sentiment emojis**  
+For example, where you see red emojis for customer turns and then a green emoji, you might choose the timestamp to jump to that specific point of the recording to hear how that agent helped the customer\.
+
+**Issue detection**  
+Issues \(also known as call drivers\) are turns where primary call driver or reason for the customer outreach is underlined in the transcript\. You can use this information to identify common emerging patterns across customer conversations\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-navigate-transcripts.png)
 
 ## Why don't I see color\-coded bars on my Amazon Connect console?<a name="where-are-color-coded-bars"></a>
 

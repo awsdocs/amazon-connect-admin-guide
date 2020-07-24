@@ -21,11 +21,7 @@ When configuring this block to [set up recording behavior](set-up-recordings.md)
 + To record chat conversations, you need to choose **Agent and Customer**\.
 + To enable monitoring of voice and/or chat conversations, you need to choose **Agent and Customer**\.
 
-If you've signed up for the Contact Lens for Amazon Connect preview, choose **Agent and Customer**\.
-
-Also choose **Enable analytics**\. If you don't see this option, Contact Lens for Amazon Connect hasn't been enabled for your instance\. To enable it, see [Update instance settings](update-instance-settings.md)\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior2.png)
+For information about using this block to enable Contact Lens, see [Enable Contact Lens for Amazon Connect](enable-analytics.md)\.
 
 ## Configuration tips<a name="set-recording-behavior-tips"></a>
 + Let's say you have a flow that links to a flow that links to another flow\. Each flow might have it's own **Set recording behavior** block\. The last **Set recording behavior** block overrides the settings of the previous two **Set recording behavior** blocks\. 

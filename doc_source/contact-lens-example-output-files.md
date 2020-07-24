@@ -12,7 +12,7 @@ Following are examples of what Contact Lens output files look like when they are
 
 ## Example original, analyzed file<a name="example-original-output-file"></a>
 
-This section shows an example schema for a conversation that Contact Lens has analyzed\. The example shows loudness, issue detection, and what information is going to be redacted\.
+This section shows an example schema for a conversation that Contact Lens has analyzed\. The example shows loudness, issue detection/call drivers, and what information is going to be redacted\.
 
 Note the following about the analyzed file:
 + It doesn't indicate what sensitive data was redacted\. All data are referred to as PII \(personally identifiable information\)\.
@@ -34,7 +34,7 @@ Note the following about the analyzed file:
    ],
     "Channel" :"VOICE",
     "AccountId" :"BBBBBBBBBBB",
-    "Version": "1.0.0",
+    "Version": "1.1.0",
     "JobStatus" :"COMPLETED",
     "LanguageCode" :"en-US",
     "CustomModels" :[  //Large contact centers may want to use custom language models. If so, contact AWS support for help. 
@@ -287,7 +287,7 @@ This section shows an example redacted file\. It's a twin of the original analyz
    ],
     "Channel" :"VOICE",
     "AccountId" :"BBBBBBBBBBB",
-    "Version": "1.0.0",
+    "Version": "1.1.0",
     "JobStatus" :"COMPLETED",
     "LanguageCode" :"en-US",
     "CustomModels" :[ 

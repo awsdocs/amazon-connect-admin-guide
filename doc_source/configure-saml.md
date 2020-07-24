@@ -156,7 +156,7 @@ When you configure the relay state for your identity provider, you can use the d
 
 `https://us-east-1.console.aws.amazon.com/connect/federate/instance-id?destination=%2Fconnect%2Fccp`
 
-## Add users to your Amazon Connect istance<a name="saml-add-users"></a>
+## Add users to your Amazon Connect instance<a name="saml-add-users"></a>
 
 Add users to your connect instance, making sure that the user names exactly match the users names in your existing directory\. If the names do not match, users can log in to the identity provider, but not to Amazon Connect because no user account with that user name exists in Amazon Connect\. You can add users manually on the **User management** page, or you can bulk upload users with the CSV template\. After you add the users to Amazon Connect, you can assign security profiles and other user settings\.
 

@@ -2,6 +2,26 @@
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you a overview of the improvements\. 
 
+## Upcoming changes: Quick filters for drilling into Routing profiles and Queues tables<a name="metrics-changes-quick-filters-rtm"></a>
+
+In real\-time metrics reports, for **Routing profiles** and **Queues** tables, you can open pre\-filtered tables that display the associated queues, routing profiles, or agents\. These quick filters provide a way for you to drill into the performance data\.
+
+### Example 1: Queues table \-> Routing profiles table \-> Agents table<a name="metrics-changes-quick-filters-example1"></a>
+
+For example, at a **Queues** table, choose the dropdown and then choose **View routing profiles**\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queue-table.png)
+
+Below the **Queues** table, a **Routing profiles** table appears\. It is filtered to display only the routing profiles associated with the queue\. On the **Routing profiles** table, you can choose quick filters to display queues or agents *only associated with that routing profile*\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-routing-profiles.png)
+
+### Example 2: Queues table \-> Agents table<a name="metrics-changes-quick-filters-example2"></a>
+
+At the **Queues** table, choose **View agents**\. Below the **Queues** table, an **Agents** table appears\. It it filtered to display all the agents working that queue\. The agents may be associated with different routing profiles\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queues-agents.png)
+
 ## Upcoming changes: New real\-time metrics for inbound and outbound contact time<a name="metrics-changes-inbound-outbound-contact-time-rtm"></a>
 
 The following new real\-time metrics are upcoming in a future release\. 

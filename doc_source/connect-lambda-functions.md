@@ -94,7 +94,7 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w55aac32c13c17"></a>
+### Invocation retry policy<a name="w59aac32c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 

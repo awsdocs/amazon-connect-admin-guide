@@ -1,14 +1,12 @@
-# About issue detection in Contact Lens<a name="contact-lens-issue-detection"></a>
+# About issue/call driver detection in Contact Lens<a name="contact-lens-issue-detection"></a>
 
-In the analyzed files that Contact Lens creates, and in the Amazon Connect console, you can identify potential issues that need further investigation\. 
+In the analyzed files that Contact Lens creates, and in the Amazon Connect console, you can identify potential customer issues \(also known as call drivers\) that need further investigation\. 
 
-Issues are Boolean outputs based on artificial intelligence analysis of each turn in the conversation\. When Contact Lens identifies a turn that is related to the root cause of customer's call or is related to a problem, it highlights it as issue\.
-
-Unlike categories, Contact Lens doesn't rely on input from you, such as terminology, to configure it\.
-
-The following image shows how an issue is highlighted in a transcript\. This helps you scan to identify what needs investigation\.
-
-**Tip**  
-You'll see issues highlighted only in conversations that occur after the release of the issue analysis feature\.
+Contact Lens highlights the primary call driver or reason for the customer outreach in the call transcript\. You can use this information to identify common emerging patterns across customer conversations\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-issue-in-transcript.png)
+
+Unlike the categorization of contacts, you don't need to configure issue detection to use this feature\. Issues are detected based on an artificial intelligence analysis of each turn in the conversation\.
+
+**Tip**  
+Issues are highlighted only in conversations that occur after the release of the issue detection feature\.

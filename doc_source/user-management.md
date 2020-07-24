@@ -20,9 +20,9 @@ You can add users and configure them with permissions that are appropriate to th
 
 1. For information about adding agents, see [Configure agent settings: routing profile, phone type, and auto\-accept calls](configure-agents.md)\. 
 
-## Add users in bulk<a name="add-users-in-bulk"></a>
+## Add users in bulk from a csv file<a name="add-users-in-bulk"></a>
 
-Use these steps to add several users from an Excel spreadsheet \(\.csv\)
+Use these steps to add several users from a csv file such as an Excel spreadsheet"
 
 1. Log in to the Amazon Connect console with an **Admin** account, or an account assigned to a security profile that has permissions to create users\.
 
@@ -36,6 +36,8 @@ Use these steps to add several users from an Excel spreadsheet \(\.csv\)
 
 1. Add your users to the template and upload it to Amazon Connect\.
 
-If you get an error message usually indicates that one of the required columns is missing information, or there's a typo in one of the cells\. Update the \.csv file and try uploading it again\. 
+If you get an error message, it usually indicates that one of the required columns is missing information, or there's a typo in one of the cells\.
++ We recommend checking the format of the phone number as a starting point in your investigation\.
++ Update the \.csv file and try uploading it again\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/error-message-uploaded-csv-file.png)

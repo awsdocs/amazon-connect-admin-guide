@@ -47,3 +47,61 @@ The following sample policy allows "create users" but explicitly denies using ar
     ]
 }
 ```
+
+## Allow recording actions on a contact<a name="connect-access-control-resources-example4"></a>
+
+The following sample policy allows "start contact recording" on a contact in a specific instance\. Since contactID is dynamic, \* is used\.
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+          "connect:StartContactRecording"
+      ],
+      "Resource": "arn:aws:connect:us-west-2:accountID:instance/instanceId/contact/*",
+      "Effect": "Allow"
+    }
+  ]
+}
+```
+
+Set up a trusted relationship with *accountID*\.
+
+The following actions are defined for the recording APIs:
++ "connect:StartContactRecording"
++ "connect:StopContactRecording"
++ "connect:SuspendContactRecording"
++ "connect:ResumeContactRecording"
+
+### Allow more contact Actions in the same role<a name="example4-allow-more-actions"></a>
+
+If the same role is used to calling other contact APIs, you can list the following contact actions:
++ GetContactAttributes
++ ListContactFlows
++ StartChatContact
++ StartOutboundVoiceContact
++ StopContact
++ UpdateContactAttributes
+
+Or use a wildcard to allow all contact actions, for example: "connect:\*"
+
+### Allow more resources<a name="example4-allow-more-resources"></a>
+
+You can also use a wildcard to allow more resources\. For example, here's how to allow contact actions on all contact resources:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "connect:*"
+            ],
+            "Resource": "arn:aws:connect:us-west-2:accountID:instance/*/contact/*",
+            "Effect": "Allow"
+        }
+    ]
+}
+```
