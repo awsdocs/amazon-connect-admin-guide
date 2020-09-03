@@ -44,18 +44,22 @@ After you specify the user name of the administrator for the Amazon Connect inst
 
 ## Step 3: Telephony options<a name="get-started-telephony"></a>
 
-Use the options in this section to choose whether you want your agents to receive calls from customers, and make outbound calls, using Amazon Connect\.
+Use the options in this section to choose whether you want your agents to receive calls from customers, make outbound calls, and hear early media audio\.
 
-Amazon Connect enables agents to hear early media, that is, pre\-connection audio such as busy signals, failure to connect errors, or other informational messages, when making outbound calls\. Telephony providers determine the audio agents hear\.
+### Early media<a name="early-media"></a>
 
-**Tip**  
-Early media is enabled by default for new instances of Amazon Connect\. If you have an existing instance and want to enable this feature, please open a support ticket\. For instructions, see [Get administrative support for Amazon Connect](get-admin-support.md)\.
+When early media audio is enabled, for outbound calls your agents can hear pre\-connection audio such as busy signals, failure\-to\-connect errors, or other informational messages provided by telephony providers\.
+
+**By default, early media is enabled for you\. Note the following exception:**
++ Your instance was created before April 17, 2020, and you weren't enrolled in the preview program\. You need to enable early media audio using the option described in this procedure\.
 
 **To configure telephony options for your instance**
 
 1. \(Optional\) To enable customers to call into your contact center, choose **I want to handle incoming calls with Amazon Connect**\.
 
 1. \(Optional\) To enable outbound calling from your contact center, choose **I want to make outbound calls with Amazon Connect**\.
+
+1. \(Optional\) To enable agents to hear pre\-connection audio such as busy signals or "This phone number has been disconnected and is no longer in service," choose **I want to enable early media**\.
 
 1. Choose **Next step**\.
 

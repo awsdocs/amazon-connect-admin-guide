@@ -30,7 +30,7 @@ Here's what John and Maria do, and what contact blocks are triggered:
 **Note**  
 If you don't create and then select a custom agent whisper flow, Amazon Connect plays the [default agent whisper flow](default-agent-whisper.md), which says the queue name\. 
 
-1. The next [Set whisper flow](set-whisper-flow.md) block is triggered\. It plays the Custom\_Customer\_Whisper to John, for example, "Your call is not connecting to an agent\." 
+1. The next [Set whisper flow](set-whisper-flow.md) block is triggered\. It plays the Custom\_Customer\_Whisper to John, for example, "Your call is now connecting to an agent\." 
 **Note**  
 If you don't create and then select a custom customer whisper flow, Amazon Connect plays the [default customer whisper flow](default-customer-whisper.md), which plays a beep\. 
 

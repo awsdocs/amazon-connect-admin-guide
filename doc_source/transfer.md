@@ -4,10 +4,10 @@ To make it easy for you to set up contact transfers, Amazon Connect provides you
 + Two contact flow types:
   + Transfer to agent: Enables transfers to another agent\. This works with voice contacts\. 
   + Transfer to queue: Enables transfers to a queue\. This works with both voice and chat contacts\.
-+ Action blocks:
-  + **Transfer to queue**: Use to end the current contact flow and place the customer in a queue\. This block works for both voice and chat transfers\. 
-  + **Transfer to phone number**: Use to transfer the customer to a phone number, such as an external number\. This block works for voice transfers\.
-  + **Transfer to flow**: Use to end the current flow and transfer the customer to another contact flow\. This block works for voice transfers\.
++ Contact blocks:
+  + [Transfer to queue](transfer-to-queue.md): Use to end the current contact flow and place the customer in a queue\. This block works for both voice and chat transfers\. 
+  + [Transfer to phone number](transfer-to-phone-number.md): Use to transfer the customer to a phone number, such as an external number\. This block works for voice transfers\.
+  + [Transfer to flow](transfer-to-flow.md): Use to end the current flow and transfer the customer to another contact flow\. This block works for voice transfers\.
 + Quick connects: Use to create common destinations for transfers\. Agents will see them as options in the CCP when they go to do a transfer\.
 
 This topic explains how to create quick connects and use transfer contact blocks in specific scenarios\. 

@@ -62,14 +62,6 @@ When you start exploring the chat experience for the first time, you'll notice t
 
 After a chat is transferred to an agent, the **Contacts Incoming** metric is incremented\. The CTR for the transfer no longer increments the API, but it does increment **Contacts Incoming**\. 
 
-## Chat encryption<a name="chat-encryption"></a>
-
-Chat messages are encrypted end\-to\-end\. We use a service\-owned key that is unique to the instance for encrypting and saving messages\. 
-
-A customer\-provided encryption key is used to encrypt transcripts that are stored in Amazon S3\. 
-
-Chat encryption allows for use cases where security is critical, such as authenticated secure chat in mobile banking applications\.
-
 ## More information<a name="chat-more-info"></a>
 
 To learn more about chat, check out the following topics:

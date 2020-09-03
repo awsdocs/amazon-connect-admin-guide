@@ -2,7 +2,7 @@
 
 ## Step 1: Enable logging for your instance<a name="enable-contact-flow-logs"></a>
 
-By default when you create a new Amazon Connect instance, Amazon Connect creates an Amazon S3 bucket for storing contact flow logs\. When a bucket is created, contact flow logging is enabled at the instance level\.
+By default when you create a new Amazon Connect instance, an Amazon CloudWatch log group is created automatically to store the logs for your instance\. 
 
 Use the following procedure to check that logging is enabled for your instance\.
 

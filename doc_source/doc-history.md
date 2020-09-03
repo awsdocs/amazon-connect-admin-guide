@@ -2,6 +2,10 @@
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated the Consult and Contact consulted metrics to indicate they were deprecated May 2019\.](#doc-history) | For more information, see [Consult](real-time-metrics-definitions.md#consult-real-time) and [Contacts consulted](historical-metrics-definitions.md#contacts-consulted-historical)\.  | August 27, 2020 | 
+| [Added topic on setting up agent\-to\-agent transfers\.](#doc-history) | For more information, see [Set up agent\-to\-agent transfers](setup-agent-to-agent-transfers.md)\.  | August 19, 2020 | 
+| [Added section on requirements for custom termination points\.](#doc-history) | For more information, see [Request international numbers, special numbers, or termination points](special-request.md)\.  | August 18, 2020 | 
+| [Removed the "Known differences" section from "I use the Amazon Connect Streams API\."](#doc-history) | For more information, see [I use the Amazon Connect Streams API](upgrade-ccp-streams-api.md)\.  | August 3, 2020 | 
 | [Changed the name of the Metrics chapter to Monitor metrics & run reports\.](#doc-history) | For more information, see [Monitor metrics and run reports](amazon-connect-metrics.md)\.  | July 16, 2020 | 
 | [Clarified that the following metrics are no longer supported in queue grouping: Agent on contact time, Agent idle time, Occupancy\. Previously we stated that these metrics had been deprecated\.](#doc-history) | For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.  | July 8, 2020 | 
 | [Updated the topic on Set disconnect flow block, which now supports voice conversations\. ](#doc-history) | For more information, see [Set disconnect flow](set-disconnect-flow.md)\.  | June 29, 2020 | 
@@ -42,6 +46,10 @@
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Updated the **Consult** and **Contacts consulted** metrics to indicate that they were deprecated May 2019\. |  For more information, see [Consult](real-time-metrics-definitions.md#consult-real-time) and [Contacts consulted](historical-metrics-definitions.md#contacts-consulted-historical)\.   | August 27, 2020 | 
+| Added topic on setting up agent\-to\-agent transfers\. |  For more information, see [Set up agent\-to\-agent transfers](setup-agent-to-agent-transfers.md)\.   | August 19, 2020 | 
+| Added section on requirements for custom termination points\. |  For more information, see [Request international numbers, special numbers, or termination points](special-request.md)\.   | August 18, 2020 | 
+| Removed the "Known differences" section from [I use the Amazon Connect Streams API](upgrade-ccp-streams-api.md)\. |  For more information, see [I use the Amazon Connect Streams API](upgrade-ccp-streams-api.md)\.   | August 3, 2020 | 
 | Changed the name of the **Metrics** chapter to **Monitor metrics & run reports**\. |  For more information, see [Monitor metrics and run reports](amazon-connect-metrics.md)\.   | July 16, 2020 | 
 | Clarified that the following metrics are no longer supported in queue grouping: Agent on contact time, Agent idle time, Occupancy\. Previously we stated that these metrics had been deprecated\. |  For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.   | July 8, 2020 | 
 | Updated the [Set disconnect flow](set-disconnect-flow.md) block, which now supports voice conversations\. |  For more information, see [Set disconnect flow](set-disconnect-flow.md)\.   | June 29 2020 | 
@@ -82,7 +90,7 @@
 | Added troubleshooting and best practices | [Troubleshooting Issues with the Contact Control Panel \(CCP\)](troubleshooting.md) covers best practices for agent connectivity using the CCP and troubleshooting connectivity and call quality issues in Amazon Connect\. | October 18, 2018 | 
 | Added information about service\-linked roles in Amazon Connect | For more information, see [Use Service\-Linked Roles for Amazon Connect](connect-slr.md)\. | October 17, 2018 | 
 | Added information about queue to queue transfers | You can use the new options of the Transfer to queue block to enable transferring calls that are already in a queue to another queue\. For more information, see [Manage contacts in a queue](queue-to-queue-transfer.md)\. | July 31, 2018 | 
-| Added information about the Call phone number block | Updated the content about contact flows to include the new Call phone number block, including how to use the block in a contact flow\. For more information, see [Initiate an outbound call](using-call-number-block.md)\. | July 2, 1018 | 
+| Added information about the Call phone number block | Updated the content about contact flows to include the new Call phone number block, including how to use the block in a contact flow\. For more information, see [Use the Call phone number block to set caller ID](queues-callerid.md#using-call-number-block)\. | July 2, 1018 | 
 | Added information about contact attributes and the Get queue metrics block | For more information, see [Use Amazon Connect contact attributes](connect-contact-attributes.md)\. | June 18, 2018 | 
 | Added information about new metrics sent to Amazon CloudWatch Logs\. | [Monitoring your instance using CloudWatch](monitoring-cloudwatch.md) includes additional metrics\. | April 19, 2018 | 
 | Added information about using SAML for identity management | You can configure your instance to use SAML for identity management\. You can also use SAML to enable single sign\-on\. For more information, see [Configure SAML with IAM for Amazon Connect](configure-saml.md)\. | March 30, 2018 | 

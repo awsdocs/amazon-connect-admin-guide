@@ -142,11 +142,12 @@ In CloudWatch, a dimension is a name/value pair that uniquely identifies a metri
 
 ### Contact flow metrics dimension<a name="contact-flow-dimension"></a>
 
+**Note**  
+If a contact flow has a dimension name in non\-ASCII characters, you won't be able to see it in CloudWatch\. 
+
 Filters metric data by contact flow\. Includes the following metrics:
-+ CallRecordingUploadError
 + ContactFlowErrors
 + ContactFlowFatalErrors
-+ MisconfiguredPhoneNumbers
 + PublicSigningKeyUsage
 
 ### Instance metrics dimension<a name="instance-metrics-dimension"></a>
@@ -154,8 +155,10 @@ Filters metric data by contact flow\. Includes the following metrics:
 Filters meta data by instance\. Includes the following metrics:
 + CallsBreachingConcurrencyQuota
 + CallsPerInterval
++ CallRecordingUploadError
 + ConcurrentCalls
 + ConcurrentCallsPercentage
++ MisconfiguredPhoneNumbers
 + MissedCalls
 + ThrottledCalls
 

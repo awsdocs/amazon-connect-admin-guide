@@ -10,8 +10,6 @@ You should collect monitoring data from all of the parts of your AWS solution so
 + Who will perform the monitoring tasks?
 + Who should be notified when something goes wrong?
 
-The topics in this section describe how to use Amazon CloudWatch Logs and AWS CloudTrail to monitor Amazon Connect and describes the Amazon Connect metrics sent to CloudWatch\.
-
-**Topics**
-+ [CloudWatch metrics](monitoring-cloudwatch.md)
-+ [Logging service API calls](logging-using-cloudtrail.md)
+See the following topics to learn how to use Amazon CloudWatch Logs and AWS CloudTrail to monitor Amazon Connect and describes the Amazon Connect metrics sent to CloudWatch:
++ [Monitoring your instance using CloudWatch](monitoring-cloudwatch.md)
++ [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)

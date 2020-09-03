@@ -27,12 +27,6 @@ The first name of the agent, as entered in their Amazon Connect user account\. T
 + Type: String 
 + Length: 1\-255
 
-## Agent first name<a name="agent-first-name-historical"></a>
-
-The first name of the agent, as entered in their Amazon Connect user account\. This metric is available only when grouping by agent\.
-+ Type: String 
-+ Length: 1\-255
-
 ## Agent idle time<a name="agent-idle-time-historical"></a>
 
 After the agent sets their status in the CCP to **Available**, this is the amount of time they weren't handling contacts \+ any time their contacts were in an Error state\. 
@@ -206,6 +200,8 @@ Count of contacts that were answered by an agent between 0 and *X* seconds of be
 + Category: CTR\-driven metric
 
 ## Contacts consulted<a name="contacts-consulted-historical"></a>
+
+Deprecated May 2019\. When used in a report, it returns a dash \(\-\)\. 
 
 Count of contacts handled by an agent who consulted with another agent in Amazon Connect\. The agent interacts with the other agent, but the customer is not transferred to the other agent\.
 + Type: Integer 

@@ -1,4 +1,4 @@
-# Contact block: Transfer to agent<a name="transfer-to-agent-block"></a>
+# Contact block: Transfer to agent \(beta\)<a name="transfer-to-agent-block"></a>
 
 ## Contact flow types<a name="transfer-to-agent-block-types"></a>
 
@@ -9,6 +9,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 ## Description<a name="transfer-to-agent-block-description"></a>
 + Ends the current contact flow and transfers the customer to an agent\. If the agent is already with someone else, the contact is disconnected\.
 + The **Transfer to Agent** block is a beta feature and works only for voice interactions\.
++ We recommend using the [Set working queue](set-working-queue.md) block for agent\-to\-agent transfers instead of using this block\. The **Set working queue** block supports omnichannel transfers such as voice and chat\. For instructions, see [Set up agent\-to\-agent transfers](setup-agent-to-agent-transfers.md)\. 
 
 ## Properties<a name="transfer-to-agent-block-properties"></a>
 

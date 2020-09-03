@@ -30,35 +30,3 @@ Use the following steps to upgrade to the latest CCP\.
 We highly recommend setting up your network to use [Option 1 \(recommended\): Replace Amazon EC2 and CloudFront IP range requirements with a domain allow list](ccp-networking.md#option1)\. 
 
 Using this option helps Amazon Connect Support to quickly troubleshoot any issues you have\. Specifically, using **\*\.execute\-api\.\{region\}\.amazonaws\.com** passes more metrics to our Support team to help with troubleshooting\. 
-
-## Known differences<a name="upgrade-known-differences"></a>
-
-This section describes known differences in behavior between the earlier and latest CCP\. 
-
-### FailedConnectAgent<a name="FailedConnectAgent"></a>
-
-The earlier and latest versions of the CCP handle the `FailedConnectAgent` state differently\. 
-
-The `FailedConnectAgent` state occurs when:
-+ The agent makes an outbound call but hangs up while the call is connecting to the other party\.
-+ The agent accepts a queued callback but hangs up while the call is connecting to the other party\.
-
-**How the earlier version handles this:**
-+ Tries to put the agent into the previous state\. If it cannot detect a previous state, it moves the agent to the Offline state\.
-
-**How the latest version handles this:**
-+ Keeps the agent in the `FailedConnectAgent` state\. The agent needs to manually move to the next desired state\.
-
-### FailedConnectCustomer<a name="FailedConnectCustomer"></a>
-
-The earlier and latest versions of the CCP handle the `FailedConnectCustomer` state differently\.
-
-The `FailedConnectCustomer` state occurs when:
-+ The customer hangs up after the call while the call is connecting to the agent\. In other words, after the call is routed, but before it gets connected\.
-+ The agent makes an outbound call, which triggers the Outbound Dial API, but the Outbound Dial API fails\. An example of when this happens is when it reaches a disconnected phone number\.
-
-**How the earlier version handles this:**
-+ Tries to put an agent into the previous agent state\. If it cannot detect a previous agent state, it moves the agent to Available state\.
-
-**How the latest version handles this:**
-+ Moves the agent to the Available state\.

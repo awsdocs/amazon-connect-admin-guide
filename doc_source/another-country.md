@@ -2,7 +2,7 @@
 
 Let's say your business is located in Germany\. You also have agents in Japan to serve customers who live there, and you need a Japanese phone number for that contact center\. To claim a phone number that you already own in another country, use the following steps to create a support case\. 
 
-To claim a number that you don’t already own in another country, see [Request a number you don't own in another country, or a special number](special-request.md)\.
+To claim a number that you don’t already own in another country, see [Request international numbers, special numbers, or termination points](special-request.md)\.
 
 1. Go to [Create case](https://console.aws.amazon.com/support/cases#/create)\.
 

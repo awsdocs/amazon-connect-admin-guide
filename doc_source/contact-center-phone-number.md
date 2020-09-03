@@ -9,7 +9,7 @@ If you want to keep a phone number you already have, you can port the phone numb
 **Topics**
 + [Claim a phone number in your country](claim-phone-number.md)
 + [Claim a phone number you already own in another country](another-country.md)
-+ [Request a number you don't own in another country, or a special number](special-request.md)
++ [Request international numbers or special numbers](special-request.md)
 + [Release a phone number](release-phone-number.md)
 + [Port your current phone number](port-phone-number.md)
 + [Claim phone numbers for Asia Pacific \(Tokyo\)](connect-tokyo-region.md)

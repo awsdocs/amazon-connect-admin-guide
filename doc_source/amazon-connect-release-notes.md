@@ -3,6 +3,7 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
++ [August 2020 Updates](#august20-release-notes)
 + [July 2020 Updates](#july20-release-notes)
 + [June 2020 Updates](#june20-release-notes)
 + [May 2020 Update](#may20-release-notes)
@@ -13,10 +14,10 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [December 2019 Update](#dec19-release-notes)
 + [November 2019 Update](#nov19-release-notes)
 + [October 2019 Update](#oct19-release-notes)
-+ [June 2019 Update](#w59aac63c27)
-+ [May 2019 Updates](#w59aac63c29)
-+ [April 2019 Updates](#w59aac63c31)
-+ [March 2019 Update](#w59aac63c33)
++ [June 2019 Update](#w58aac63c29)
++ [May 2019 Updates](#w58aac63c31)
++ [April 2019 Updates](#w58aac63c33)
++ [March 2019 Update](#w58aac63c35)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -27,6 +28,23 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [July 2018 Updates](#july18-release-notes)
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
+
+## August 2020 Updates<a name="august20-release-notes"></a>
+
+The following updates were released in August 2020:
+
+### Contact flows<a name="august20-contact-flows"></a>
++ Added the ability to automatically use the best sounding voice available from Amazon Polly for text\-to\-speech\. For more information, see [Amazon Polly best sounding voice](text-to-speech.md#amazon-polly-best-sounding-voice)\. 
++ Added the ability to select, cut, copy, and paste contact flows\. For more information, see [Copy and paste contact flows](copy-paste-contact-flows.md)\. 
+
+### Telephony<a name="august20-early-media"></a>
++ Added the ability for all customers to enable/disable media support for outbound phone calls\. For more information, see [Step 3: Telephony options](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect instance](amazon-connect-instances.md) topic\. 
+
+### Monitoring<a name="august20-monitoring"></a>
++ Added logging of Amazon Connect Participant Service calls with AWS CloudTrail\. For more information, see [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
+
+### Contact Lens for Amazon Connect<a name="august20-contact-flows"></a>
++ Updated the security profile permissions for the redaction feature\. For more information, see [Security profile permissions for Contact Lens](permissions-for-contact-lens.md)\.
 
 ## July 2020 Updates<a name="july20-release-notes"></a>
 
@@ -182,14 +200,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-## June 2019 Update<a name="w59aac63c27"></a>
+## June 2019 Update<a name="w58aac63c29"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w59aac63c29"></a>
+## May 2019 Updates<a name="w58aac63c31"></a>
 
 The following updates were released in May 2019:
 
@@ -201,7 +219,7 @@ The following updates were released in May 2019:
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w59aac63c31"></a>
+## April 2019 Updates<a name="w58aac63c33"></a>
 
 The following updates were released in April 2019:
 
@@ -214,7 +232,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w59aac63c33"></a>
+## March 2019 Update<a name="w58aac63c35"></a>
 
 The following updates were released in March 2019:
 
@@ -377,7 +395,7 @@ The following updates were released in July 2018:
 + [Contact Flows](#july18-contact-flows)
 
 ### New Features<a name="july18-features"></a>
-+ [Initiate an outbound call](using-call-number-block.md)
++ [Use the Call phone number block to set caller ID](queues-callerid.md#using-call-number-block)
 + [Add an Amazon Lex bot](amazon-lex.md)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
 + [Manage contacts in a queue](queue-to-queue-transfer.md)
@@ -415,7 +433,7 @@ The following updates were released in June 2018:
 ### Contact Flows<a name="june18-contact-flows"></a>
 + Renamed the **Set queue** block to **Set working queue**\.
 + Added a **Copy to clipboard** button next to the ARN of a contact flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the contact flow in the designer to display the ARN\.
-+ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Initiate an outbound call](using-call-number-block.md)\.
++ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Use the Call phone number block to set caller ID](queues-callerid.md#using-call-number-block)\.
 + Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [How to use system metric attributes](attrib-system-metrics.md)\.
 
 ### Metrics and Reporting<a name="june18-metrics"></a>

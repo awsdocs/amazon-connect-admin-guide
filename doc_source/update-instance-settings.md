@@ -2,10 +2,7 @@
 
 To update the instance settings, open the Amazon Connect console, choose the name of the instance from **Instance Alias**, and complete the following procedures\.
 
-Amazon Connect enables agents to hear early media, that is, pre\-connection audio such as busy signals, failure to connect errors, or other informational messages, when making outbound calls\.
-
-**Tip**  
-Early media is enabled by default for new instances of Amazon Connect\. If you have an existing instance and want to enable this feature, please open a support ticket\. For instructions, see [Get administrative support for Amazon Connect](get-admin-support.md)\.
+By enabling early media audio, your agents can hear pre\-connection audio such as busy signals, failure\-to\-connect errors, or other informational messages from telephony providers, when making outbound calls\.
 
 **To update the telephony options**
 
@@ -14,6 +11,8 @@ Early media is enabled by default for new instances of Amazon Connect\. If you h
 1. \(Optional\) To enable customers to call into your contact center, choose **I want to handle incoming calls with Amazon Connect**\.
 
 1. \(Optional\) To enable outbound calling from your contact center, choose **I want to make outbound calls with Amazon Connect**\.
+
+1. \(Optional\) To enable agents to hear pre\-connection audio such as busy signals or "This phone number has been disconnected and is no longer in service," choose **I want to enable early media**\.
 
 1. Choose **Save**\.
 
@@ -58,3 +57,5 @@ Early media is enabled by default for new instances of Amazon Connect\. If you h
 1. \(Optional\) To integrate with AWS Lambda, select a Lambda function\. For more information, see [Invoke AWS Lambda functions](connect-lambda-functions.md)\.
 
 1. \(Optional\) To enable contact flow logs, choose **Enable contact flow logs**\. For more information, see [Track events as customers interact with contact flows](about-contact-flow-logs.md)\.
+
+1. \(Optional\) To use the best available voice from Amazon Polly, choose **Use the best available voice **\. For more information, see [Amazon Polly best sounding voice](text-to-speech.md#amazon-polly-best-sounding-voice)\.

@@ -1,10 +1,10 @@
-# Request a number you don't own in another country, or a special number<a name="special-request"></a>
+# Request international numbers, special numbers, or termination points<a name="special-request"></a>
 
 **Important**  
 Country regulations often require a local office address and specific identification documents to purchase and own a phone number, and may take additional processing time\. See [Region requirements for phone numbers](phone-number-requirements.md)\.  
 It can take 2\-6 weeks for us to fulfill your request\.
 
-To request a phone number that you don’t already own in another country, or request a special phone number that you don't already own, create a support case\. 
+To request international phone numbers, special numbers, or termination points, create a support case\. 
 
 1. Go to [Create case](https://console.aws.amazon.com/support/cases#/create)\.
 
@@ -19,3 +19,17 @@ To request a phone number that you don’t already own in another country, or re
 1. Choose **Submit**\. 
 
 We'll contact you to help with your request\. 
+
+## Requirements for Custom Termination Points<a name="custom-termination-points"></a>
+
+In the Asia Pacific \(Sydney\) Region, you can request Custom Termination Points\.
+
+The term "Custom Termination Points" means custom Tier 1 telephony destinations for customer calls to Amazon Connect configured as local phone numbers\. In using Custom Termination Points, you understand and agree that you: 
+
+1. Have a current toll\-free national service that allows you to set Custom Termination Points as a destination for customer phone calls\.
+
+1. Cannot port or move Custom Termination Points to a different telephony provider once assigned by Amazon Connect\.
+
+1. Will be billed at the standard daily rate for claimed Australian phone numbers and DID inbound usage fees\.
+
+1. You are responsible for adding the Custom Termination Points in your existing toll\-free national service\.

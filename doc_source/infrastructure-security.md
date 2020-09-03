@@ -6,7 +6,7 @@ You use AWS published API calls to access Amazon Connect through the network\.
 
 ## Supported versions of TLS<a name="supported-version-tls"></a>
 
-Clients must support Transport Layer Security \(TLS\) 1\.0 or later\. We recommend TLS 1\.2 or later\. 
+Clients must support Transport Layer Security \(TLS\) 1\.2 or later\. 
 
 ## Other requirements<a name="client-access-key-requirements"></a>
 

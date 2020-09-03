@@ -25,8 +25,15 @@ On the **Contact Trace Record** page for a contact, you can view graphs that sum
 **Rules**  
 This permission allows you to view, edit, or create rules for categorizing contacts\. For more information, see [Automatically categorize contacts based on uttered keywords and phrases](rules.md)\.
 
-**Contact Lens \- redacted transcripts**  
+**Recorded conversations \(redacted\)**  
 On the **Contact Trace Record** page for a contact, this permission allows you to listen to call recording files and view call transcripts in which the sensitive data has been removed\. For more information, see [Example redacted file](contact-lens-example-output-files.md#example-redacted-file)\.
 
-**Contact Lens \- unredacted transcripts**  
-On the **Contact Trace Record** page for a contact, this permission allows you to view call transcripts that contain sensitive data, such name and credit card information\. For more information, see [Example original, analyzed file](contact-lens-example-output-files.md#example-original-output-file)\.
+**Recorded conversations \(unredacted\)**  
+This permission manages access to unredacted content that contains sensitive data such as name and credit card information\. It manages access to the following unredacted content:   
++ Original, unredacted chat transcripts
++ Original, unredacted transcripts analyzed by Contact Lens
++ Original, unredacted audio recordings
+You can access this content on the **Contact Trace Record** page for a contact\. For more information, see [Example original, analyzed file](contact-lens-example-output-files.md#example-original-output-file)\.  
+If you have permissions to both **Recorded conversations \(redacted\)** and **Recorded conversations \(unredacted\)**, by default only redacted recordings are made available on the **Contact Trace Records** page\.  
+You must remove permissions to **Recorded conversations \(redacted\)** to access unredacted conversations\.   
+You can't access redacted and unredacted content at the same time\. 

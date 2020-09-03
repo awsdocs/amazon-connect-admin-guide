@@ -20,4 +20,5 @@ You can customize the report settings to get the view of the data that is most m
 + [Schedule a historical metrics report](schedule-historical-metrics-report.md)
 + [Update a historical metrics report](update-historical-metrics-report.md)
 + [Download a historical metrics report](download-historical-metrics-report.md)
++ [Run an agent activity audit report](agent-activity-audit-report.md)
 + [Historical metrics definitions](historical-metrics-definitions.md)

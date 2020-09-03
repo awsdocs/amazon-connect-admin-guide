@@ -31,7 +31,7 @@ You're ready to try out the Amazon Lex bot, routing, and contact flow\. The firs
 
 1. Call your phone number\.
 
-1. When prompted, say *Network issue*\. You should hear the message that you're being transferred to the NetworkIssue queue\.
+1. When prompted, say *I'm having trouble accessing the internet*\. You should hear the message that you're being transferred to the NetworkIssue queue\.
 **Tip**  
 After you're transferred, you'll hear this message:   
 *Thank you for calling\. Your call is very important to us and will be answered in the order it was received\.*  

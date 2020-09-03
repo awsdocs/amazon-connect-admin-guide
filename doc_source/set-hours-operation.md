@@ -1,8 +1,8 @@
-# Set the hours of operation for a queue<a name="set-hours-operation"></a>
+# Set the hours of operation and timezone for a queue<a name="set-hours-operation"></a>
 
-The first thing you need to do when you set up a queue is to specify the hours of operation\. The hours may be referenced in contact flows\. For example, when routing contacts to agents, you might use the [Check hours of operation](check-hours-of-operation.md) block first, and then route the contact to the appropriate queue\. 
+The first thing you need to do when you set up a queue is to specify the hours of operation and timezone\. The hours may be referenced in contact flows\. For example, when routing contacts to agents, you might use the [Check hours of operation](check-hours-of-operation.md) block first, and then route the contact to the appropriate queue\. 
 
-**To set the hours of operation for a queue**
+**To set the hours of operation and timezone for a queue**
 
 1. Choose **Routing**, **Hours of operation**\.
 
@@ -57,6 +57,10 @@ For more information, see these topics:
 + [Add custom agent status](agent-custom.md)
 + [About agent status](metrics-agent-status.md)
 + [Change the "Agent activity" status in a real\-time metrics report ](rtm-change-agent-activity-state.md)
+
+## What happens during daylight savings time<a name="daylight-savings-time"></a>
+
+Amazon Connect uses the timezone to determine whether daylight savings time is in effect for the queues, and adjusts automatically\. When a contact comes in, Amazon Connect looks at the hours and timezone to determine whether the contact can be routed to the given queue\. 
 
 ## Use the Check Hours of Operation block<a name="use-check-hours-of-operation-block"></a>
 

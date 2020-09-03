@@ -148,6 +148,8 @@ If an agent's routing profile is configured to handle either one voice **or** up
 
 ## Consult<a name="consult-real-time"></a>
 
+Deprecated May 2019\. When used in a report, it returns a dash \(\-\)\. 
+
 Count of contacts in the queue that were handled by an agent, and the agent consulted with another agent or a call center manager during the contact\.
 
 ## Contact State<a name="contact-state-real-time"></a>

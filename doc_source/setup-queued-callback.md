@@ -6,6 +6,8 @@ You can create contact flows that provide the ability for customers to leave the
 
 1. After an agent accepts the callback in the CCP, Amazon Connect calls the customer\.
 
+1. If there is no answer, Amazon Connect retries based on the number of times you've specified\. If the call goes to voicemail, it's considered connected\. 
+
 ## Steps to set up queued callback<a name="setup-queued-callback-overview"></a>
 
 Use the steps provided in the following overview to set up queued callback\. 
@@ -71,6 +73,8 @@ You can create this flow using different contact flow types: Customer queue flow
    The following properties are available:
    + **Initial delay**: Specify how much time has to pass between a callback contact being initiated in the contact flow, and the customer is put in queue for the next available agent\. In the previous example, the time is 99 seconds\.
    + **Maximum amount of attempts**: Think of this as the maximum number of retries\. If this is set to 2, then Amazon Connect tries to call back the customer a maximum of three times: the initial callback, and two retries\. 
+
+     A retry only happens if it rings but there's no answer\. If the callback goes to voicemail, it's considered connected and Amazon Connect does not retry again\.
 **Tip**  
 We strongly recommend that you double\-check the number entered in **Maximum amount of attempts**\. If you accidentally enter a high number, such as 20, it's going to result in unnecessary work for the agent and too many calls for the customer\.
    + **Minimum time between attempts**: If the customer doesn't answer the phone, this is how long to wait until trying again\. In the previous example, we wait 10 minutes between attempts\.

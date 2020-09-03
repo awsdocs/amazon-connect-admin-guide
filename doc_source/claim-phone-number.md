@@ -12,8 +12,7 @@ To place or receive calls in your instance, you need to claim a phone number\. I
 **Note**  
 Use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) for these situations:   
 If you select a country, but there are no numbers displayed for that country, you can request additional numbers for the country\. 
-If you want to request a specific area code or prefix that you don't see listed\.
-We'll try to accommodate your request\. 
+If you want to request a specific area code or prefix that you don't see listed, we'll try to accommodate your request\.
 
 1. Enter a description for the number and, if required, attach it to a contact flow in **Contact flow / IVR**\.
 

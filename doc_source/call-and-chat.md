@@ -32,7 +32,7 @@ If you're on a chat and having trouble making an outbound call to another agent,
 
  [Agent quick connects](quick-connects.md#agent-quick-connect-type) are not visible in the CCP while you're on a chat\.
 
-If you can't see [external quick connects](quick-connects.md#external-quick-connect-type) in your CCP, however, check that the external quick connect has been added to your queue as described in [Step 2: enable agents to see quick connects](quick-connects.md#step2-enable-agents-to-see-quick-connects)\.
+If you can't see [external quick connects](quick-connects.md#external-quick-connect-type) in your CCP, however, check that the external quick connect has been added to your queue as described in [Step 2: Enable agents to see quick connects](quick-connects.md#step2-enable-agents-to-see-quick-connects)\.
 
 ## Enable agent quick connects for calls during a chat<a name="call-and-chat-enable-agent-quick-connects"></a>
 

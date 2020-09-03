@@ -2,7 +2,7 @@
 
 Country regulations often require a local office address and specific identification documents to purchase and own a phone number\. The address that you provide can be the business or personal address where the phone numbers are used\. 
 
-Following is a list of ID requirements by country\. 
+Following is a list of ID requirements by country\. When you [request an international number](special-request.md), we'll work with you to submit your documents\. 
 
 ## Australia<a name="australia-regulations"></a>
 
@@ -249,3 +249,7 @@ Following is a list of ID requirements by country\.
 
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+## United States<a name="us-regulations"></a>
+
+There aren't any documentation requirements for international customers to claim phone numbers in the United States\.

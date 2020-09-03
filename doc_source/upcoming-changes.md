@@ -18,7 +18,7 @@ Below the **Queues** table, a **Routing profiles** table appears\. It is filtere
 
 ### Example 2: Queues table \-> Agents table<a name="metrics-changes-quick-filters-example2"></a>
 
-At the **Queues** table, choose **View agents**\. Below the **Queues** table, an **Agents** table appears\. It it filtered to display all the agents working that queue\. The agents may be associated with different routing profiles\. 
+At the **Queues** table, choose **View agents**\. Below the **Queues** table, an **Agents** table appears\. It is filtered to display all the agents working that queue\. The agents may be associated with different routing profiles\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queues-agents.png)
 

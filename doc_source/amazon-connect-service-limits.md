@@ -9,7 +9,7 @@
 | --- | --- | 
 |  AWS Lambda functions per instance  |  35  | 
 |  Agent status per instance  |  50 This quota cannot be increased\.  | 
-|  Amazon Connect instances per account\*\*  |  2  | 
+|  Amazon Connect instances per account  |  2  | 
 |  Amazon Lex bots per instance  |  50  | 
 |  Concurrent calls per instance  |  10 If this quota is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   You can calculate your configured quota using CloudWatch metrics\. For instructions, see [Use CloudWatch metrics to calculate concurrent call quota](monitoring-cloudwatch.md#connect-cloudwatch-concurrent-call-quota)\.  Or, edit a queue and enter an exceptionally large number for the contact limit\. The resulting error message will display your quota\. For example, in the following image, it shows the quota for that instance is 99\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/concurrent-call-quota.png)   | 
 |  Concurrent chats per instance  |  100 This includes chats that are waiting\. If this quota is exceeded, the API call fails with a quota exceeded error\.  | 
@@ -18,7 +18,7 @@
 |  Phone numbers per instance  |  5  | 
 |  Prompts per instance  |  500  | 
 |  Queues per instance  |  50  | 
-|  Queues per routing profile per instance  |  50  | 
+|  Queues per routing profile per instance  |  50 This quota refers to number of queue/channel combinations per routing profile\. For example, in the following image there are two queues, but there are three queue\-channel combinations: BasicQueue\-Voice, BasicQueue\-Chat, and Queue10\-Voice\. This counts three towards the service limit of 50\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/routing-profile-queue-channel-combinations.png)  | 
 |  Quick connects per instance  |  100  | 
 |  Rate of API requests  |  See [Amazon Connect API throttling quotas](#connect-api-quotas)\.  | 
 |  Reports per instance  |  500 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies so reports don't pile up\.   | 

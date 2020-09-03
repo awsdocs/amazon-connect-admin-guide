@@ -1,9 +1,9 @@
 # Enable Contact Lens for Amazon Connect<a name="enable-analytics"></a>
 
-To enable Contact Lens in a contact flow, add a [Set recording and analytics behavior ](set-recording-behavior.md) block to the flow, and configure it for Contact Lens\.
+To enable Contact Lens in a contact flow, add a [Set recording and analytics behavior ](set-recording-behavior.md) block for the flow, and configure it for Contact Lens\.
 
 **Tip**  
-If you want to continue using Contact Lens to collect data after transferring a contact to another agent or queue, you need to add another [Set recording and analytics behavior ](set-recording-behavior.md) block with **Enable analytics** enabled to the flow\. This is because a transfer generates a second contact ID and CTR\. Contact Lens needs to run on that CTR as well\.
+If you want to continue using Contact Lens to collect data after transferring a contact to another agent or queue, you need to add another [Set recording and analytics behavior ](set-recording-behavior.md) block with **Enable analytics** enabled for the flow\. This is because a transfer generates a second contact ID and CTR\. Contact Lens needs to run on that CTR as well\.
 
 **To enable Contact Lens in a contact flow**
 
@@ -60,7 +60,7 @@ You can set these attributes in the following ways:
 
   The following image show how to use contact attributes for language:  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-contact-attributes-enable-redaction2.png)
-+ [Use a Lambda function](use-attributes-cust-exp.md#attribs-with-lambda)\. This is similar to how you set up user\-defined contact attributes\. A Lambda function can return the result as a key\-value pair, depending on the language in which the Lambda function is written\. The following example shows a Lambda function written in JSON: 
++ [Use a Lambda function](use-attributes-cust-exp.md#attribs-with-lambda)\. This is similar to how you set up user\-defined contact attributes\. A Lambda function can return the result as a key\-value pair, depending on the language of the Lambda response\. The following example shows a Lambda response in JSON: 
 
   ```
   {
@@ -68,5 +68,3 @@ You can set these attributes in the following ways:
      'language': 'en-US'
   }
   ```
-+ Lex slots contact attributes
-+ Lex attributes

@@ -10,7 +10,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Description<a name="set-recording-behavior-description"></a>
 + Sets options for recording and/or monitoring \(listen\-in\) voice and chat conversations\.
-+ If you've signed up for the [Contact Lens for Amazon Connect](enable-analytics.md) preview, it enables analytics for that contact flow\. To use Contact Lens for Amazon Connect you also need to enable it as the instance level\. For instructions, see [Update instance settings](update-instance-settings.md)\.
++ It enables features in Contact Lens for Amazon Connect\. For more information, see [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.
 
 ## Properties<a name="set-recording-behavior-properties"></a>
 

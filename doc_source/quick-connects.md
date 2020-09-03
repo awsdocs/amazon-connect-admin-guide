@@ -26,7 +26,7 @@ Contacts are transferred to a queue as part of a contact flow\.
 **Important**  
 Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
 
-## Step 1: create quick connects<a name="step1-create-quick-connects"></a>
+## Step 1: Create quick connects<a name="step1-create-quick-connects"></a>
 
 **To create a quick connect**
 
@@ -40,7 +40,7 @@ A description is required when you create a quick connect\. If you don't add one
 
 1. Choose **Save**\.
 
-## Step 2: enable agents to see quick connects<a name="step2-enable-agents-to-see-quick-connects"></a>
+## Step 2: Enable agents to see quick connects<a name="step2-enable-agents-to-see-quick-connects"></a>
 
 **To enable your agents to see the quick connects in the CCP when they transfer a contact**
 

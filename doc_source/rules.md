@@ -25,7 +25,7 @@ To view, edit, or add rules for automatic categorization, you must be assigned t
 1. Choose **Add**\. Each word or phrase separated by a comma gets its own line\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script2.png)
 
-   The logic that Contact Lens uses to read these words or phrases is: \(Hello\) OR \(thank OR your OR for OR calling OR Example OR Corp\) OR \(we OR value OR your OR business\), etc\.
+   The logic that Contact Lens uses to read these words or phrases is: \(Hello\) OR \(thank OR you OR for OR calling OR Example OR Corp\) OR \(we OR value OR your OR business\), etc\.
 
 1. To add more words or phrases, choose **Add group of words or phrases**\. In the following image, the first group of words or phrases are what the agent might utter, and the second group is what the customer might utter\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script3.png)

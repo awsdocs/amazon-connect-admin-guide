@@ -33,7 +33,7 @@ For managers to monitor live conversations, you assign them the **CallCenterMana
 
 **To create a new security profile for monitoring live conversations**
 
-1. Choose **Users**, **User management**, **Security profiles**\. 
+1. Choose **Users**, **Security profiles**\. 
 
 1. Choose **Add new security profile**\. 
 
@@ -49,7 +49,7 @@ For managers to monitor live conversations, you assign them the **CallCenterMana
 
 1. Choose **Save**\. 
 
-## Monitor live conversations with contacts<a name="w59aac43b7c11"></a>
+## Monitor live conversations with contacts<a name="w58aac43b7c11"></a>
 
 **Tip**  
 Call barge\-in is not currently supported\. That is, if you're listening to a conversation, your microphone stays muted\.

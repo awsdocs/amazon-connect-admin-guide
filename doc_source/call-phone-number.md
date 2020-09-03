@@ -28,6 +28,6 @@ See these sample flows for scenarios that use this block:
 
 ## Scenarios<a name="call-phone-number-scenarios"></a>
 
-See these topics for more information about how routing priority works:
-+ [How caller ID works in **Call phone number** block](using-call-number-block.md#call-number-block-how-it-works)
+See these topics for more information about caller ID works:
++ [How caller ID works in **Call phone number** block](queues-callerid.md#call-number-block-how-it-works)
 + [Set up outbound caller ID](queues-callerid.md)

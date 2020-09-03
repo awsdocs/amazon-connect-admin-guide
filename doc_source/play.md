@@ -19,8 +19,18 @@ You can use this block in the following [contact flow types](create-contact-flow
 The properties give you different ways to choose the prompt to be played:
 + **Select from the prompt library \(audio\)**: Choose from one of the pre\-recorded prompts included with Amazon Connect, or [record and upload](prompts.md) your own prompt\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-properties1.png)
-+ **Select dynamically**: You can select which prompt to play by using an attribute\.  
++ **Select dynamically**: 
+
+  1. You can select which prompt to play by using an attribute\. For example, in the **Play prompt** block, choose **User Defined**, and then enter a name for your attribute\. In the following example, we use **Company\_Welcome\_Message**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-properties2.png)
+
+  1. Add [Set contact attributes](set-contact-attributes.md) blocks to your flow\. Configure each one to play the appropriate audio prompt\. For example, the first one might play the \.wav file for when your contact center is open\. The second one might play the \.wav file for when it's closed\.
+
+     The following image shows how you might configure a [Set contact attributes](set-contact-attributes.md) block\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-properties-2-a.png)
+
+  1. Connect the [Set contact attributes](set-contact-attributes.md) blocks to the **Play prompt** block\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-properties-2-b.png)
 + **Text\-to\-speech or chat text**: You have two options: 
   + **Enter text**: To play text, Amazon Connect sends it to Amazon Polly, a service that converts text into lifelike speech using Speech Synthesis Markup Language \(SSML\)\. Amazon Polly returns the speech to Amazon Connect to play\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-properties3.png)

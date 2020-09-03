@@ -25,3 +25,5 @@ For detailed information about the activity of agents in your contact center, us
 + [Login/Logout Reports](login-logout-reports.md)
 + [Amazon Connect agent event streams](agent-event-streams.md)
 + [Contact trace records \(CTR\) data model](ctr-data-model.md)
++ [Monitoring your instance using CloudWatch](monitoring-cloudwatch.md)
++ [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)

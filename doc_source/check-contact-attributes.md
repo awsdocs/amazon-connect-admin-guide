@@ -13,6 +13,14 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-contact-attributes-properties.png)
 
+## Configuration tips<a name="check-contact-attributes-tips"></a>
+
+If you have multiple conditions to compare, Amazon Connect checks them in the order they are listed\. 
+
+For example, in the following image Amazon Connect compares the **greater than 60** condition first and compares **greater than 2** last\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-contact-attributes-tips-order-conditions-are-checked.png)
+
 ## Configured<a name="check-contact-attributes-configured"></a>
 
 When this block is configured, it looks similar to the following image:

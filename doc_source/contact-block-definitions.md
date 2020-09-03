@@ -7,7 +7,7 @@ The following table lists all available contact blocks that you can use\. Choose
 
 | Block | Description | 
 | --- | --- | 
-| [Track events in contact flowsStorage for contact flow logsCall phone number](call-phone-number.md)  | Initiates an outbound call from an outbound whisper flow\. | 
+| [Call phone number](call-phone-number.md)  | Initiates an outbound call from an outbound whisper flow\. | 
 |  [Change routing priority / age](change-routing-priority.md)   |  Changes the priority of the contact in queue\. You may want to do this, for example, based on the contact's issue or other variable\.  | 
 |  [Check contact attributes](check-contact-attributes.md)   |  Checks the values of contact attributes\.  | 
 |   [Check hours of operation](check-hours-of-operation.md)  |  Checks whether the contact is occurring within or outside of the hours of operation defined for the queue\.  | 
@@ -35,7 +35,7 @@ The following table lists all available contact blocks that you can use\. Choose
 |  [Start media streaming](start-media-streaming.md)  | Starts capturing customer audio for a contact\. | 
 |  [Stop media streaming](stop-media-streaming.md)  | Stops capturing customer audio after it is started with a **Start media streaming** block\. | 
 |   [Store customer input](store-customer-input.md)   |  Stores numerical input to a contact attribute\.  | 
-|   [Transfer to agent](transfer-to-agent-block.md)  |  Transfers the customer to an agent\.  | 
+|   [Transfer to agent \(beta\)](transfer-to-agent-block.md)  |  Transfers the customer to an agent\.  | 
 |   [Transfer to flow](transfer-to-flow.md)  |  Transfers the customer to another contact flow\.  | 
 |   [Transfer to phone number](transfer-to-phone-number.md)  |  Transfers the customer to a phone number external to your instance\.  | 
 |   [Transfer to queue](transfer-to-queue.md)   |  In most contact flows, this block ends the current contact flow and places the customer in queue\. When used in a customer queue flow, this block transfers a contact already in a queue to another queue\.  | 
