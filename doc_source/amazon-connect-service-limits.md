@@ -25,7 +25,7 @@
 |  Routing profiles per instance  |  100  | 
 |  Scheduled reports per instance  |  50  | 
 |  Security profiles per instance  |  100  | 
-|  User hierarchy groups per instance  |  250  | 
+|  User hierarchy groups per instance  |  250 This quota applies to the total number of hierarchy groups you have, across all levels\. There is no feature limit for how many hierarchy groups you can have for each level\. For example, one level could have 250 hierarchy groups, which would reach the quota for your instance\.  | 
 |  Users per instance  |  500  | 
 
 **Note**  

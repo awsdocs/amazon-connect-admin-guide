@@ -8,7 +8,7 @@ Auto\-Accept Call doesn't work for callbacks\.
 
 You can't enable Auto\-Accept Call while editing multiple existing users in your Amazon Connect instance\. You must edit existing users individually to enable it\. You can also configure the setting for multiple new users when you bulk upload new users with the CSV template\. 
 
-## Enable auto\-accept call for existing agents<a name="w58aac23c23c13c11"></a>
+## Enable auto\-accept call for existing agents<a name="w117aac23c23c13c11"></a>
 
 To complete these steps, you must log in as a user who has the following permissions in their security profile: **Edit, Create, Remove, Enable / Disable, and Edit permission**\.
 

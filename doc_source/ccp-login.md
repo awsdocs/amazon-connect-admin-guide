@@ -19,7 +19,7 @@ After you have that information, here's how to log in and get started\.
 
 You're all set to go\!
 
-## Log out of the Amazon Connect CCP<a name="w58aac54c25c11"></a>
+## Log out of the Amazon Connect CCP<a name="w117aac54c27c11"></a>
 
 **Important**  
 Closing the CCP window doesn't automatically sign out an agent\. Amazon Connect still tries to route contacts to them\. To change this behavior, a developer can customize CCP for your contact center\. For instructions, see [Log out agents automatically when they close their CCP](automatic-logout.md)\. 

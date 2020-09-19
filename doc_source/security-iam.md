@@ -8,7 +8,7 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 + [Managing access using policies](#security_iam_access-manage)
 + [How Amazon Connect works with IAM](security_iam_service-with-iam.md)
 + [Amazon Connect identity\-based policy examples](security_iam_id-based-policy-examples.md)
-+ [Amazon Connect resource\-based policy examples](security_iam_resource-based-policy-examples.md)
++ [Amazon Connect resource\-level policy examples](security_iam_resource-level-policy-examples.md)
 + [Troubleshooting Amazon Connect identity and access](security_iam_troubleshoot.md)
 + [Use Service\-Linked Roles for Amazon Connect](connect-slr.md)
 

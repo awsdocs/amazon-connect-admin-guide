@@ -1,6 +1,8 @@
 # Data handled by Amazon Connect<a name="data-handled-by-connect"></a>
 
-Amazon Connect handles a variety of data related to the contact center, including but not limited to these categories:
+Data held within Amazon Connect is segregated by the AWS account ID and the Amazon Connect instance ID\. This ensures that data can be accessed only by the authorized users of a specific Amazon Connect instance\.
+
+Amazon Connect handles a variety of data related to the contact center, including but not limited to the following categories\. 
 + **Resources and configurations** \-\- This includes queues, contact flows, users, and routing profiles\.
 + **Contact metadata**\-\- This includes connection time, handle time, source number \(ANI\), destination number \(DNIS\), and user defined contact attributes\.
 + **Agent\-related performance data** \-\- This includes login time, status changes, and contacts handled\.

@@ -4,7 +4,7 @@ Amazon Connect conforms to the AWS [shared responsibility model](http://aws.amaz
 
 To manage who can access the Amazon Connect console, you must assign users [security profiles](connect-security-profiles.md)\.
 
-To manage who can access your contact center data through Amazon Connect APIs, we recommend that you set up individual user accounts with AWS Identity and Access Management \(IAM\) , so that each user is given only the permissions necessary to fulfill their job duties\. 
+To manage who can access your contact center data through Amazon Connect APIs, we recommend that you use [IAM roles](security-iam.md#security_iam_authentication-iamrole)\. IAM roles have temporary credentials versus the long\-lived credentials for IAM users\. 
 
 We also recommend that you secure your data in the following ways:
 + Use multi\-factor authentication \(MFA\) with each account\.

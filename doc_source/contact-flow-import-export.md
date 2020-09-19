@@ -1,6 +1,8 @@
 # Import/export contact flows<a name="contact-flow-import-export"></a>
 
-You can import/export contact flows from one instance to another\. For example, you can copy contact flows from a test environment to a production environment, or from one Region to another as you expand your customer service organization\.
+Use the procedures described in this topic to import/export a few contact flows from one instance to another, or from one Region to another as you expand your customer service organization\.
+
+To migrate tens or hundreds of contact flows, use the APIs described in [Migrate contact flows to a different instance](migrate-contact-flows.md)\. 
 
 **Note**  
 The Contact Flow Import/Export feature is currently in Beta status\. Updates and improvements that we make could result in issues in future releases importing contact flows that are exported during the beta phase\.

@@ -64,7 +64,7 @@ The metrics attributes in the following table are returned when you use the **Ge
 | --- | --- | --- | --- | 
 | Queue name | The name of the queue for which metrics were retrieved\. | System | $\.Metrics\.Queue\.Name | 
 | Queue ARN | The ARN of the queue for which metrics were retrieved\. | System | $\.Metrics\.Queue\.ARN | 
-| Metrics queue size | The number of contacts currently in the queue\. | System | $\.Metrics\.Queue\.Size | 
+| Contacts in queue | The number of contacts currently in the queue\. | System | $\.Metrics\.Queue\.Size | 
 | Oldest contact in queue | For the contact that has been in the queue the longest, the length of time that the contact has been in the queue, in seconds\. | System | $\.Metrics\.Queue\.OldestContactAge | 
 | Agents online | The number of agents currently online, which means logged in and in any state other than offline\. | System | $\.Metrics\.Agents\.Online\.Count | 
 | Agents available | The number of agents whose state is set to Available\. | System | $\.Metrics\.Agents\.Available\.Count | 

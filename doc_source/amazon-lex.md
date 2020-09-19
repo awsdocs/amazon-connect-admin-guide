@@ -110,6 +110,8 @@ Next, publish the bot so that you can add it to a contact flow in Amazon Connect
 1. Choose **Publish**\.
 
 1. Provide an alias for your bot\. Use the alias to specify this version of the bot in the contact flow, for example, Test\.
+**Important**  
+In a production environment, always use a different alias than **$LATEST**\. Only use **$LATEST** for manual testing\. If the bot alias is **$LATEST** Lex invocations are throttled\. For more information, see [Runtime Service Quotas](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
 
 1. Choose **Publish**\.
 
@@ -137,7 +139,7 @@ Next, create a new contact flow that uses your Amazon Lex bot\. When you create 
 
 1. Choose **Routing, Contact flows, Create contact flow**, and type a name for the flow\.
 
-1. Under **Interact**, drag a **Get customer input ** block onto the designer, and connect it to the **Entry point block**\.
+1. Under **Interact**, drag a [Get customer input](get-customer-input.md) block onto the designer, and connect it to the **Entry point block**\.
 
 1. Click the **Get customer input** block to open it\. Choose **Text to speech \(Ad hoc\), Enter text**\.
 
@@ -148,9 +150,11 @@ Next, create a new contact flow that uses your Amazon Lex bot\. When you create 
 
 In this step you'll specify the bot as the method of getting customer input\.
 
-1. In the **Get customer input** block select **Amazon Lex**\.
+1. In the [Get customer input](get-customer-input.md) block select **Amazon Lex**\.
 
-1. For **Name**, use **AccountBalance**\. For **Alias**, use **Test**\.  
+1. For **Name**, use **AccountBalance**\. For **Alias**, use **Test**\. 
+**Important**  
+In a production environment, always use a different alias than **$LATEST**\. Only use **$LATEST** for manual testing\. If the bot alias is **$LATEST** Lex invocations are throttled\. For more information, see [Runtime Service Quotas](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-get-customer-input2.png)
 
 1. Under **Intents**, choose **Add an intent**\.

@@ -1,12 +1,15 @@
 # Set up queued callback<a name="setup-queued-callback"></a>
 
-You can create contact flows that provide the ability for customers to leave their phone number and get a callback from an agent\. Here's how queued callback works: 
+You can create contact flows that provide the ability for customers to leave their phone number and get a callback from an agent\. 
+
+Here's how queued callback works: 
 
 1. When a customer leaves their number it's put in a queue and then routed to the next available agent\.
 
 1. After an agent accepts the callback in the CCP, Amazon Connect calls the customer\.
+   + If no agents are available to work on callbacks, the callbacks stay in queue for up to 7 days after they are created\. After that, they are automatically removed from the queue\.
 
-1. If there is no answer, Amazon Connect retries based on the number of times you've specified\. If the call goes to voicemail, it's considered connected\. 
+1. If there is no answer when the Amazon Connect calls the customer, it retries based on the number of times you've specified\. If the call goes to voicemail, it's considered connected\. 
 
 ## Steps to set up queued callback<a name="setup-queued-callback-overview"></a>
 
@@ -90,10 +93,10 @@ We strongly recommend that you double\-check the number entered in **Maximum amo
 
 1. For information about how callbacks appear in real\-time metrics reports and CTRs, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 
-## What happens to queued callbacks when no agents are online?<a name="queued-callback-no-agents-available"></a>
+## Learn more about queued callbacks<a name="queued-callback-no-agents-available"></a>
 
-If no agents are available to work on callbacks, the callbacks stay in queue for 7 days until the contacts are automatically removed from the queue\.
-
-To see how many callbacks are waiting in a queue in the real\-time metrics reports, you have to set up a queue specifically for callbacks\.
-
-There's no way to see details for the callbacks, such as the customer's phone number\. 
+See the following topics to learn more about queued callbacks:
++ [About queued callbacks in metrics](about-queued-callbacks.md)
++ [How Initial delay affects Scheduled and In queue metrics](scheduled-vs-inqueue.md)
++ [What counts as a "Failed Callback Attempt"](failed-callback-attempt.md)
++ [Example: Metrics for a queued callback](queued-callback-example.md)

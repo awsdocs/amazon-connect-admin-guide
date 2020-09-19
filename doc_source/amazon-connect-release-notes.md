@@ -3,6 +3,8 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
++ [Upcoming changes](#amazon-connect-upcoming-changes)
++ [September 2020 Updates](#september20-release-notes)
 + [August 2020 Updates](#august20-release-notes)
 + [July 2020 Updates](#july20-release-notes)
 + [June 2020 Updates](#june20-release-notes)
@@ -14,10 +16,10 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [December 2019 Update](#dec19-release-notes)
 + [November 2019 Update](#nov19-release-notes)
 + [October 2019 Update](#oct19-release-notes)
-+ [June 2019 Update](#w58aac63c29)
-+ [May 2019 Updates](#w58aac63c31)
-+ [April 2019 Updates](#w58aac63c33)
-+ [March 2019 Update](#w58aac63c35)
++ [June 2019 Update](#w117aac63c33)
++ [May 2019 Updates](#w117aac63c35)
++ [April 2019 Updates](#w117aac63c37)
++ [March 2019 Update](#w117aac63c39)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -28,6 +30,177 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [July 2018 Updates](#july18-release-notes)
 + [June 2018 Updates](#jun18-release-notes)
 + [April and May 2018 Updates](#may18-release-notes)
+
+## Upcoming changes<a name="amazon-connect-upcoming-changes"></a>
+
+We continuously make improvements to Amazon Connect based on your feedback, and also as we find ways to improve your experience\. Take a look at this section to learn about planned changes to help improve how your agents work\. 
+
+### New "Next status" for agents<a name="upcoming-changes-next-status"></a>
+
+
+|  | 
+| --- |
+| This feature is available only to customers who are using the latest Contact Control Panel \(CCP\)\. The URL for the latest CCP looks like this: https://*name of your instance\.awsapps\.com*/connect/ccp\-v2/  | 
+
+In busy contact centers, it can be difficult for agents to take a break or go offline when contacts are being quickly routed to them\. To help agents manage their time, we will release a feature that lets agents pause new contacts being routed to them while they finish their current contacts\. When all their slots are cleared, Amazon Connect automatically sets agents to the next status, such as **Lunch**\.
+
+The following images of the Contact Control Panel \(CCP\) show how agents use this feature\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/next-status-example-new.png)
+
+1. The agent is on a contact\.
+
+1. The agent chooses their next status, such as **Lunch**\. They can choose only a custom \([NPT](real-time-metrics-definitions.md#non-productive-time-real-time)\) status, or **Offline**\. 
+
+1. The agent is in **Next status: Lunch**\. They are still on contact\. No new contacts can be routed to them\. 
+
+1. The contact ends\. The agent finishes ACW, and chooses **Clear contact**\. Instead of going back to **Available**, their CCP is automatically set to **Lunch**\. 
+
+#### How to cancel "Next status"<a name="next-status-example"></a>
+
+Agents can easily switch from **Next status** back to **Available**\. The ability to switch their status is useful, for example, if they accidentally choose **Next status: Lunch**, or if they decide not to go to **Lunch** before Amazon Connect automatically sets to that status\. 
+
+The following images show this workflow\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/next-status-example-cancel.png)
+
+1. While working on the same contact, the agent cancels **Next status: Lunch** and goes back to **Available**\.
+
+1. The contact ends and the agent is still **Available** for new contacts to be routed to them\. 
+
+#### Example 1: Set "Next status" while handling only ACW contacts<a name="next-status-examples-acw"></a>
+
+Let's say an agent is finishing after contact work \(ACW\) for one or more contacts, such as a voice contact or multiple chats\. They are not on contact with anyone\.
+
+Instead of choosing **Clear contact** when the agent finishes ACW, they choose **Lunch**\. This puts them in **Next status: Lunch** only briefly\. 
+
+Here's what happens in this scenario:
+
+1. Agent finishes ACW and chooses **Lunch** instead of **Clear contact**\.
+
+1. Amazon Connect stops routing new contacts to them\.
+
+1. All their slots are cleared\. This is so the agent doesn't have to choose **Clear contact** to end the ACW\. 
+
+1. Because all the ACWs have been cleared, Amazon Connect immediately starts the automatic transition that sets the agent's status to **Lunch**\.
+
+   Agents were put into **Next status \- Lunch** only briefly \(milliseconds\!\)\. They might even see it in the CCP if they look fast enough\. 
+
+This order of events mirrors how the CCP currently works when agents change their status while working on ACW\. For example, an agent is finishing ACW and they set their status to **Lunch**\. Here's what happens next:
+
+1. Amazon Connect stops routing new contacts to them\.
+
+1. The ACW slot is cleared for the agent so they don't have to choose **Clear contact**\. 
+
+1. The agent is set to **Lunch**\.
+
+#### Example 2: Set "Next status" while managing some chats on contact and other chats in ACW<a name="next-status-examples-oncontact"></a>
+
+Let's say an agent is managing two chats: 
++ Customer 1 is in ACW\.
++ Customer 2 is on contact\.
+
+While still on a contact, the agent sets their status to **Offline**\. This puts them in the **Next status: Offline** state\. 
+
+Here's what happens in this scenario:
+
+1. The agent sets their status to **Offline**\.
+
+1. Amazon Connect stops routing new contacts to them\.
+
+1. The contact that is in ACW is cleared so the agent doesn't have to choose **Clear contact**\. Only the connected chat remains\.
+
+1. The agent's status is **Next status: Offline**, and they continue working on their connected chat\.
+
+1. After they finish work on that contact, the agent chooses **Clear contact** to end the ACW\. 
+
+1. Amazon Connect automatically sets the agents status to **Offline**\.
+
+### Metrics: No changes due to "Next status"<a name="next-status-metrics"></a>
+
+When an agent is in **Next status**, their metrics are the same as when their status is **Available**\.
+
+For example, an agent is handling one contact and chooses **Next status**\. Here's what you'll see in the real\-time metrics report:
++ Agent Activity state = On Contact
++ Agent \- Staffed = 1
+
+**Non\-productive time** \(NPT\) is not incremented when an agent is in **Next status** because the agent is still **Available**\. NPT increments only when the agent actually enters the non\-productive status, such as **Lunch**\.
+
+### Agent event stream has new NextAgentStatus field<a name="agent-event-stream-next-status"></a>
+
+When an agent sets their status to **Next status**, Amazon Connect populates a new `NextAgentStatus ` field with the next status selected by the agent\. 
+
+At the same time, the `AgentStatus` field continues to display `Available`\. 
+
+The following code snippet shows what the agent event stream looks like when an agent has set their CCP to **Next status: Lunch**\. 
+
+```
+               
+"CurrentAgentSnapshot": 
+{
+    "AgentStatus": {
+            "ARN": "example-ARN",
+            "Name": "Available",
+            "StartTimestamp": "2019-08-13T20:52:30.704Z"
+        },
+     "NextAgentStatus": {
+            "Name": "Lunch",
+            "ARN": "example-ARN2",
+            "EnqueueTimestamp": "2019-08-13T20:58:00.004Z",
+        }
+}
+```
+
+When an agent has not selected a **Next status**, the field is `null`, as shown in the following snippet:
+
+```
+               
+"CurrentAgentSnapshot": {
+    "AgentStatus": {
+            "ARN": "example-ARN",
+            "Name": "Available",
+            "StartTimestamp": "2019-08-13T20:52:30.704Z"
+        },
+     "NextAgentStatus": null
+}
+```
+
+### Amazon Connect Streams API and "Next status"<a name="streams-next-status"></a>
+
+When we release this feature, it will have the following effect:
++ If you integrate with Amazon Connect Streams API and your agents interact directly with the native CCP user interface, then at release your agents will start using this new feature immediately\.
++ If you integrate with Amazon Connect Streams API but your agents don't interact directly with the native CCP user interface, then at release your contact center will continue to have the previous behavior when agent\.setState\(\) is called: an agent will not be able to select an NPT or Offline status while connected to at least one contact\. 
+
+  To use **Next status** with a custom CCP integration that does not directly embed the CCP, you will need to make additional changes that will be detailed further in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
+
+## September 2020 Updates<a name="september20-release-notes"></a>
+
+The following updates were released in September 2020:
+
+### Contact flows<a name="september20-contact-flows"></a>
++ Added the Amazon Connect Flow language, a JSON\-based representation of a series of flow actions, and the criteria for moving between them\. For more information, see [Amazon Connect Flow language](flow-language.md)\. 
+
+### APIs<a name="september20-apis"></a>
+
+Added the following APIs for contact flows:
++ [CreateContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateContactFlow.html)
++ [DescribeContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeContactFlow.html) 
++ [UpdateContactFlowContent](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactFlowContent.html) 
++ [UpdateContactFlowName](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactFlowName.html) 
+
+Added the following API to list prompts:
++ [ListPrompts](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPrompts.html)
+
+Added the following APIs for routing profiles:
++ [AssociateRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_AssociateRoutingProfileQueues.html)
++ [CreateRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateRoutingProfile.html) 
++ [DeleteRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteRoutingProfile.html)
++ [DescribeRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeRoutingProfile.html)
++ [DisassociateRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_DisassociateRoutingProfileQueues.html)
++ [ListRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListRoutingProfileQueues.html)
++ [UpdateRoutingProfileConcurrency](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileConcurrency.html)
++ [UpdateRoutingProfileName](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileName.html)
++ [UpdateRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileQueues.html)
 
 ## August 2020 Updates<a name="august20-release-notes"></a>
 
@@ -200,14 +373,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-## June 2019 Update<a name="w58aac63c29"></a>
+## June 2019 Update<a name="w117aac63c33"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w58aac63c31"></a>
+## May 2019 Updates<a name="w117aac63c35"></a>
 
 The following updates were released in May 2019:
 
@@ -219,7 +392,7 @@ The following updates were released in May 2019:
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w58aac63c33"></a>
+## April 2019 Updates<a name="w117aac63c37"></a>
 
 The following updates were released in April 2019:
 
@@ -232,7 +405,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w58aac63c35"></a>
+## March 2019 Update<a name="w117aac63c39"></a>
 
 The following updates were released in March 2019:
 

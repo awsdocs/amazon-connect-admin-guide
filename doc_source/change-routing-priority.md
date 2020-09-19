@@ -6,7 +6,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Outbound Whisper flow
 + Inbound contact flow
 + Customer queue flow
-+ Create Outbound Whisper flow
 + Transfer to Agent flow
 + Transfer to Queue flow
 

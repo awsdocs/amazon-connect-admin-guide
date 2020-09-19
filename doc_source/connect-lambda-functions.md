@@ -75,7 +75,10 @@ The following is an example JSON request to a Lambda function:
             "InitiationMethod": "INBOUND | OUTBOUND | TRANSFER | CALLBACK",
             "InstanceARN": "arn:aws:connect:aws-region:1234567890:instance/c8c0e68d-2200-4265-82c0-XXXXXXXXXX",
             "PreviousContactId": "4a573372-1f28-4e26-b97b-XXXXXXXXXXX",
-            "Queue": "QueueName",
+            "Queue": {
+               "ARN": "arn:aws:connect:eu-west-2:111111111111:instance/cccccccc-bbbb-dddd-eeee-ffffffffffff/queue/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+               "Name": "PasswordReset"
+             },
             "SystemEndpoint": {
                 "Address": "+1234567890",
                 "Type": "TELEPHONE_NUMBER"
@@ -94,7 +97,7 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w58aac32c13c17"></a>
+### Invocation retry policy<a name="w117aac32c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 

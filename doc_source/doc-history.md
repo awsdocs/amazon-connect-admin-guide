@@ -1,52 +1,23 @@
 # Document history<a name="doc-history"></a>
 
+The following table describes important changes in each release of the CloudWatch Events User Guide, beginning in June 2018\. For notification about updates to this documentation, you can subscribe to an RSS feed\. 
+
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated the Consult and Contact consulted metrics to indicate they were deprecated May 2019\.](#doc-history) | For more information, see [Consult](real-time-metrics-definitions.md#consult-real-time) and [Contacts consulted](historical-metrics-definitions.md#contacts-consulted-historical)\.  | August 27, 2020 | 
-| [Added topic on setting up agent\-to\-agent transfers\.](#doc-history) | For more information, see [Set up agent\-to\-agent transfers](setup-agent-to-agent-transfers.md)\.  | August 19, 2020 | 
-| [Added section on requirements for custom termination points\.](#doc-history) | For more information, see [Request international numbers, special numbers, or termination points](special-request.md)\.  | August 18, 2020 | 
-| [Removed the "Known differences" section from "I use the Amazon Connect Streams API\."](#doc-history) | For more information, see [I use the Amazon Connect Streams API](upgrade-ccp-streams-api.md)\.  | August 3, 2020 | 
-| [Changed the name of the Metrics chapter to Monitor metrics & run reports\.](#doc-history) | For more information, see [Monitor metrics and run reports](amazon-connect-metrics.md)\.  | July 16, 2020 | 
-| [Clarified that the following metrics are no longer supported in queue grouping: Agent on contact time, Agent idle time, Occupancy\. Previously we stated that these metrics had been deprecated\.](#doc-history) | For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.  | July 8, 2020 | 
-| [Updated the topic on Set disconnect flow block, which now supports voice conversations\. ](#doc-history) | For more information, see [Set disconnect flow](set-disconnect-flow.md)\.  | June 29, 2020 | 
-| [Added upcoming metric changes](#doc-history) | For more information, see [What's new in metrics](upcoming-changes.md)\.  | June 26, 2020 | 
-| [Updates to CCP](#doc-history) | For more information, see [Upgrade to the latest CCP](upgrade-to-latest-ccp.md) and [Training video: How to use the CCPTraining video](ccp-video-training.md)\.  | June 16, 2020 | 
-| [Deprecated metrics](#doc-history) | For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.  | June 12, 2020 | 
-| [Added topic on quick connects](#doc-history) | For more information, see [How quick connects work](how-quick-connects-work.md)\.  | May 21, 2020 | 
-| [Added how to get administrative support, and added a topic on inherited permissions](#doc-history) | For more information, see [Get administrative support for Amazon Connect](get-admin-support.md) and [About inherited permissions](inherited-permissions.md)\.  | April 17, 2020 | 
-| [Added how to log out agents automatically](#doc-history) | For more information, see [Log out agents automatically when they close their CCP](automatic-logout.md)\.  | April 16, 2020 | 
-| [Updated the Get customer input block to support timeout values for voice input](#doc-history) | For more information, see [Get customer input](get-customer-input.md)\.  | April 8, 2020 | 
-| [Add NLB endpoints and required domain for softphones](#doc-history) | For more information, see [Set up your network](ccp-networking.md)\.  | March 27, 2020 | 
-| [Announced upcoming changes for metrics](#doc-history) | For more information, see [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.  | March 23, 2020 | 
-| [Added terminating keypress functionality](#doc-history) | For more information, see [Store customer input](store-customer-input.md)\.  | March 21, 2020 | 
-| [Added topic on region requirements for phone numbers](#doc-history) | For more information, see [Region requirements for phone numbers](phone-number-requirements.md)\.  | March 11, 2020 | 
-| [Added tutorials](#doc-history) | For more information, see [Tutorials: An introduction to Amazon Connect](tutorials.md)\.  | March 6, 2020 | 
-| [Added topic tracking who deleted recordings](#doc-history) | For more information, see [Track who deleted or listened to recordings](track-who-deleted-recordings.md)\.  | March 5, 2020 | 
-| [Added topic on emergency admin access](#doc-history) | For more information, see [Emergency admin login](emergency-admin-login.md)\.  | March 2, 2020 | 
-| [Added topics on saving, sharing, and publishing reports](#doc-history) | For more information, see [Save custom reports](save-reports.md), [Share custom reports](share-reports.md), and [Publish reports](publish-reports.md)\.  | January 22, 2020 | 
-| [Updated contact block definitions](#doc-history) | For more information, see [Contact block definitions](contact-block-definitions.md)\.  | January 17, 2020 | 
-| [Added topics on queued callbacks](#doc-history) | For more information, see [About queued callbacks in metrics](about-queued-callbacks.md)\.  | January 17, 2020 | 
-| [Updated networking guidance](#doc-history) | For more information, see [Set up your network](ccp-networking.md)\.  | January 15, 2020 | 
-| [Add a topic on logging Amazon Connect API calls with AWS CloudTrail](#doc-history) | For more information, see [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.  | December 13, 2019 | 
-| [Add a section on analyzing conversations](#doc-history) | For more information, see [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.  | December 2, 2019 | 
-| [Updated the topics for live media streaming](#doc-history) | For more information, see [Capture customer audio: live media streaming](customer-voice-streams.md)\.  | November 22, 2019 | 
-| [Added information about chat](#doc-history) | For more information, see [Chat](chat.md)\.  | November 21, 2019 | 
-| [Added IAM topic](#doc-history) | Added [Identity and access management for Amazon Connect](security-iam.md)\.  | November 14, 2019 | 
-| [Added dimensions](#doc-history) | Added dimensions to [Monitoring your instance using CloudWatch](monitoring-cloudwatch.md)\.  | October 21, 2019 | 
-| [Added a Networking topic](#doc-history) | Consolidated networking content into [Set up your network](ccp-networking.md)\. Updated the guidance\.  | September 30, 2019 | 
-| [Updated metrics topics](#doc-history) | Improved the descriptions of the real\-time metrics definitions\. Added categories to the historical metrics definitions\. | August 30, 2019 | 
-| [Re\-organized content\.](#doc-history) | Re\-organized content to be task\-based\. | July 19, 2019 | 
-| [Added steps to enable Live media streaming for customer audio streams\.](#doc-history) | Updated the [Data Storage](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instance.html#datastorage) content to include steps to enable Live media streaming for customer audio streams\. | December 21, 2018 | 
-| [Added a topic about using Amazon Connect in the Asia Pacific \(Tokyo\) Region\.](#doc-history) | Added the topic, [Amazon Connect in the Asia Pacific \(Tokyo\) Region](https://docs.aws.amazon.com/connect/latest/adminguide/connect-tokyo-region.html)\. The topic includes information specific to using Amazon Connect instances in the Asia Pacific \(Tokyo\) Region\. | December 10, 2018 | 
-| [Added a Troubleshooting and Best Practices topic\.](#doc-history) | Added the topic [Amazon Connect Troubleshooting and Best Practices](https://docs.aws.amazon.com/connect/latest/adminguide/troubleshooting.html)\. The topic describes best practices for agent connectivity and the CCP when using Amazon Connect\. | October 18, 2018 | 
-| [Added a topic for service\-linked roles in Amazon Connect\.](#doc-history) | Added the [Using Service\-Linked Roles for Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/connect-slr.html) topic\. The topic describes using service\-linked roles in Amazon Connect, introduced 10/17/18\. | October 17, 2018 | 
-| [Updated the steps for adding Amazon Lex bots to your instance\.](#doc-history) | Updated the steps in [Add an Amazon Lex bot to Your Instance](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instance.html#amazon=lex) to include steps for adding a bot from a different region\. | July 30, 2018 | 
-| [RSS Feed for the Amazon Connect Document History](#doc-history) | Starting the RSS feed for the Amazon Connect documentation history so you can keep track of ongoing updates and changes\. | June 29, 2018 | 
+| [Show agent queues in a Queues table\.](#doc-history) | By default, agent queues don't appear in a Queues table in a historical metrics report\. You can choose to show them\. For more information, see [Show agent queues in a Queues table](https://docs.aws.amazon.com/connect/latest/adminguide/show-agent-queues.html)\. | September 18, 2020 | 
+| [Migrate contact flows to a different instance](#doc-history) | You can migrate hundreds of contact flows using a set of contact flow APIs\. For more information, see [Migrate contact flows to a different instance](https://docs.aws.amazon.com/connect/latest/adminguide/migrate-contact-flows.html)\. | September 18, 2020 | 
+| [Languages supported by Amazon Connect](#doc-history) | Learn about which languages are supported in the Amazon Connect console, Contact Control Panel, Contact Lens, Amazon Lex, and Amazon Polly\. For more information, see [Languages supported by Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/supported-languages.html)\. | September 18, 2020 | 
+| [Amazon Connect Flow language](#doc-history) | You can use the Amazon Connect Flow language to efficiently update contact flows that you're migrating from one instance to another, and Write contact flows rather than drag blocks onto the contact flow designer\. For more information, see [Amazon Connect Flow language](https://docs.aws.amazon.com/connect/latest/adminguide/flow-language.html)\. | September 18, 2020 | 
+| [Option 2 \(not recommended\): Allow IP address ranges ](#doc-history) | Removed tip from *Option 2: Allow IP address ranges*, that said if you don't see an entry for your region, use GLOBAL\. For more information, see [Option 2 \(not recommended\): Allow IP address ranges](https://docs.aws.amazon.com/connect/latest/adminguide/option2.html)\. | September 11, 2020 | 
+| [Option 1 \(recommended\): Replace Amazon EC2 and CloudFront IP range requirements with a domain allow list ](#doc-history) | Updated Option 1, second row of table, with a line break between \{myInstanceName\}\.awsapps\.com/connect/api and \*\.cloudfront\.net\. For more information, see [Option 1 \(recommended\): Replace Amazon EC2 and CloudFront IP range requirements with a domain allow list](https://docs.aws.amazon.com/connect/latest/adminguide/option1.html)\. | September 11, 2020 | 
+| [Amazon Connect resource\-level policy examples ](#doc-history) | Changed title of "Amazon Connect resource\-based policy examples" topic to "Amazon Connect resource\-level policy examples\." For more information, see >[Amazon Connect resource\-level policy examples](https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_resource-level-policy-examples.html)\. | September 8, 2020 | 
+| [Consult and Contacts consulted ](#doc-history) | Updated the **Consult** and **Contact consulted** metrics to indicate they were deprecated May 2019\. For more information, see [Consult](https://docs.aws.amazon.com/connect/latest/adminguide/consult-real-time.html) and [Contacts consulted](https://docs.aws.amazon.com/connect/latest/adminguide/contacts-consulted-historical.html)\. | August 27, 2020 | 
+
+## Earlier updates<a name="earlier-updates"></a>
 
 
 | Change | Description | Date | 
 | --- | --- | --- | 
-| Updated the **Consult** and **Contacts consulted** metrics to indicate that they were deprecated May 2019\. |  For more information, see [Consult](real-time-metrics-definitions.md#consult-real-time) and [Contacts consulted](historical-metrics-definitions.md#contacts-consulted-historical)\.   | August 27, 2020 | 
 | Added topic on setting up agent\-to\-agent transfers\. |  For more information, see [Set up agent\-to\-agent transfers](setup-agent-to-agent-transfers.md)\.   | August 19, 2020 | 
 | Added section on requirements for custom termination points\. |  For more information, see [Request international numbers, special numbers, or termination points](special-request.md)\.   | August 18, 2020 | 
 | Removed the "Known differences" section from [I use the Amazon Connect Streams API](upgrade-ccp-streams-api.md)\. |  For more information, see [I use the Amazon Connect Streams API](upgrade-ccp-streams-api.md)\.   | August 3, 2020 | 
