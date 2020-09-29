@@ -21,7 +21,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-lambda-properties.png)
 
 Note the following properties: 
-+ **Timeout**: Enter how long to wait for Lambda to time out\. This creates a branch for you to specify what to do if it times out\. 
++ **Timeout**: Enter how long to wait for Lambda to time out\.
 
   If your Lambda invocation gets throttled, the request is retried\. It is also retried if a general service failure \(500 error\) happens\. 
 
