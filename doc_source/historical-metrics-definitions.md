@@ -43,7 +43,7 @@ Sum of [Agent interaction time](#agent-interaction-time-historical) and [Custome
 
 ## Agent interaction time<a name="agent-interaction-time-historical"></a>
 
-Total time that agents spent interacting with customers on a contact\. This does not include [Customer Hold Time](#customer-hold-time-historical) or [After Contact Work Time](#acw-historical)\.
+Total time that agents spent interacting with customers on inbound and outbound contacts\. This does not include [Customer Hold Time](#customer-hold-time-historical) or [After Contact Work Time](#acw-historical)\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
@@ -102,7 +102,7 @@ Average of the sum of the agent interaction and customer hold time\. This is cal
 
 ## Average agent interaction time<a name="average-agent-interaction-time-historical"></a>
 
-Average time that agents interacted with customers during contacts\.
+Average time that agents interacted with customers during inbound and outbound contacts\. This does not include [Customer Hold Time](#customer-hold-time-historical) or [After Contact Work Time](#acw-historical)\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 

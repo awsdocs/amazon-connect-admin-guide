@@ -10,7 +10,7 @@ The following steps show how to change the default message customers hear when t
 
 1. On the navigation menu, choose **Routing**, **Contact flows**\.
 
-1. Choose the default contact flow you want to customize\. For example, choose **Default customer queue** if you want to create your own message when a customer put in queue instead of using one we've provided\.  
+1. Choose the default contact flow you want to customize\. For example, choose **Default customer queue** if you want to create your own message when a customer is put in queue instead of using the one we've provided\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow1.png)
 
 1. To customize the message, choose the **Loop prompts** block to open the properties page\.   

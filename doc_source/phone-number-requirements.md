@@ -164,7 +164,7 @@ Following is a list of ID requirements by country\. When you [request an interna
 
 | Country Summary | Numbers Summary | ID Requirements | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| Malta \(MT\) | National prefixes: \+356 | No |  | 
+| Malta \(MT\) | National prefixes: \+356 | Yes | Your business name, address, a copy of the business registration \(global\), and a copy of the ID or passport of an authorized representative\. A global address is acceptable\.  | 
 
 ## New Zealand<a name="new-zealand-regulations"></a>
 

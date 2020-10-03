@@ -18,6 +18,7 @@ CallsBreachingConcurrencyQuota = 110: the total number of voice calls that excee
 Unit: Count  
 Dimension:  
 + **InstanceId**: The ID of your instance
++ **MetricGroup**: **VoiceCalls**
 
 **CallBackNotDialableNumber**  
 The number of times a queued callback to a customer could not be dialed because the customer's number is in a country for which outbound calls are not allowed for the instance\. The countries allowed for an instance are defined by the service quotas\.  

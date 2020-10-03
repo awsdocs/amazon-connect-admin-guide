@@ -2,7 +2,7 @@
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you a overview of the improvements\. 
 
-## Upcoming changes: Quick filters for drilling into Routing profiles and Queues tables<a name="metrics-changes-quick-filters-rtm"></a>
+## Upcoming changes: Use quick filters to drill into Routing profiles and Queues tables<a name="quick-filters-rtm"></a>
 
 In real\-time metrics reports, for **Routing profiles** and **Queues** tables, you can open pre\-filtered tables that display the associated queues, routing profiles, or agents\. These quick filters provide a way for you to drill into the performance data\.
 
@@ -21,6 +21,22 @@ Below the **Queues** table, a **Routing profiles** table appears\. It is filtere
 At the **Queues** table, choose **View agents**\. Below the **Queues** table, an **Agents** table appears\. It is filtered to display all the agents working that queue\. The agents may be associated with different routing profiles\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queues-agents.png)
+
+## Upcoming changes: Group by channel in a historical metrics report<a name="metrics-changes-group-by-channel-hmr"></a>
+
+The following changes to the historical metrics report are upcoming in a future release\. 
+
+**To group by channel on historical metrics reports**
+
+1. On the navigation menu, choose **Metrics and quality**, **Historical metrics**, and then choose a report\. 
+
+1. Choose **Settings**\. 
+
+1. On the **Table Settings** page, choose the **Groupings** tab\. Add **Channel**, and choose **Apply**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-grouping-channel.png)
+
+1. The table shows a column for **Channel**, as shown in the following image\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-channel-label.png)
 
 ## Upcoming changes: New real\-time metrics for inbound and outbound contact time<a name="metrics-changes-inbound-outbound-contact-time-rtm"></a>
 
@@ -122,7 +138,27 @@ Type: String \(hh:mm:ss\)
 
 Category: Agent activity\-driven metric
 
-## June 2020: Changes for omnichannel spport<a name="metrics-changes-june-2020"></a>
+## September 2020: Quick filters for drilling into Routing profiles and Queues tables<a name="metrics-changes-quick-filters-rtm"></a>
+
+In real\-time metrics reports, for **Routing profiles** and **Queues** tables, you can open pre\-filtered tables that display the associated queues, routing profiles, or agents\. These quick filters provide a way for you to drill into the performance data\.
+
+### Example 1: Queues table \-> Routing profiles table \-> Agents table<a name="metrics-changes-quick-filters-example1"></a>
+
+For example, at a **Queues** table, choose the dropdown and then choose **View routing profiles**\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queue-table.png)
+
+Below the **Queues** table, a **Routing profiles** table appears\. It is filtered to display only the routing profiles associated with the queue\. On the **Routing profiles** table, you can choose quick filters to display queues or agents *only associated with that routing profile*\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-routing-profiles.png)
+
+### Example 2: Queues table \-> Agents table<a name="metrics-changes-quick-filters-example2"></a>
+
+At the **Queues** table, choose **View agents**\. Below the **Queues** table, an **Agents** table appears\. It is filtered to display all the agents working that queue\. The agents may be associated with different routing profiles\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queues-agents.png)
+
+## June 2020: Changes for omnichannel support<a name="metrics-changes-june-2020"></a>
 
 ### Group by channel<a name="metrics-changes-june-2020-channel"></a>
 
@@ -140,18 +176,6 @@ Category: Agent activity\-driven metric
 1. Choose **Apply**\.
 
 1. The table shows a column for **Channel**\.
-
-**To group by channel on historical metrics reports**
-
-1. On the navigation menu, choose **Metrics and quality**, **Historical metrics**, and then choose a report\. 
-
-1. Choose **Settings**\. 
-
-1. On the **Table Settings** page, choose the **Groupings** tab\. Add **Channel**, and choose **Apply**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-grouping-channel.png)
-
-1. The table shows a column for **Channel**, as shown in the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-channel-label.png)
 
 ### Group by queue in historical metrics reports<a name="metrics-changes-june-2020-queue-grouping"></a>
 

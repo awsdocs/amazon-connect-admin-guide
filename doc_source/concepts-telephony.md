@@ -71,6 +71,6 @@ If you're migrating to Amazon Connect from other platform, we recommend starting
 
 In some cases, you may have more than one Contact Center platform requiring telephony\. Here's an overview of how to configure this:
 + Choose which platform is the initial call\-handling service, and forward to the other platform\. 
-+ If Amazon Connect is the primary call handling platform, you can port or claim numbers\. You will design you contact flows to transfer calls to the other platform on a telephone number you will provide in the contact flow\. 
++ If Amazon Connect is the primary call handling platform, you can port or claim numbers\. You will design your contact flows to transfer calls to the other platform on a telephone number you will provide in the contact flow\. 
 + If the third\-party platform is the primary call handler, you will need to configure that platform to forward calls to a number you claim in Amazon Connect\. Choose either a toll\-free number, which will give you better redundancy and capacity at an increased cost, or a bank of DID numbers to terminate the call into Amazon Connect\.
 + For use case we recommend you engage AWS Solution Architecture support to ensure your contact center is well\-architected to achieve the best possible outcomes\.

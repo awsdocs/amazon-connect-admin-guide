@@ -23,7 +23,7 @@ To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as
 | Domain/URL allow list | AWS Region | Ports | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
 | rtc\.connect\-telecom\.\{region\}\.amazonaws\.com Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \{myInstanceName\}\.awsapps\.com/connect/ccp \{myInstanceName\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{myInstanceName\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \{myInstanceName\}\.awsapps\.com/connect/ccp\-v2 \{myInstanceName\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{myInstanceName\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \*\.execute\-api\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | participant\.connect\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \*\.transport\.connect\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 

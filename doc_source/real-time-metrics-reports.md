@@ -4,6 +4,8 @@ Real\-time metrics reports show real\-time or near\-real time metrics informatio
 
 You can customize the reports, specify a time range for each report, select metrics for each report, and select filters for data to include or exclude from each report\.
 
+You can also use the [Amazon Connect Service APIs](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html) to create custom reports, such as real\-time reports that are filtered by teams of agents\.
+
 **Topics**
 + [Permissions required to view real\-time metrics reports](rtm-permissions.md)
 + [How often real\-time metrics refresh](rtm-refresh.md)

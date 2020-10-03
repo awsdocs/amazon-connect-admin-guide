@@ -4,6 +4,7 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 
 **Topics**
 + [Upcoming changes](#amazon-connect-upcoming-changes)
++ [October 2020 Updates](#october20-release-notes)
 + [September 2020 Updates](#september20-release-notes)
 + [August 2020 Updates](#august20-release-notes)
 + [July 2020 Updates](#july20-release-notes)
@@ -16,10 +17,10 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [December 2019 Update](#dec19-release-notes)
 + [November 2019 Update](#nov19-release-notes)
 + [October 2019 Update](#oct19-release-notes)
-+ [June 2019 Update](#w117aac63c33)
-+ [May 2019 Updates](#w117aac63c35)
-+ [April 2019 Updates](#w117aac63c37)
-+ [March 2019 Update](#w117aac63c39)
++ [June 2019 Update](#w122aac63c35)
++ [May 2019 Updates](#w122aac63c37)
++ [April 2019 Updates](#w122aac63c39)
++ [March 2019 Update](#w122aac63c41)
 + [February 2019 Updates](#feb19-release-notes)
 + [January 2019 Updates](#jan19-release-notes)
 + [December 2018 Updates](#dec18-release-notes)
@@ -173,9 +174,25 @@ When we release this feature, it will have the following effect:
 
   To use **Next status** with a custom CCP integration that does not directly embed the CCP, you will need to make additional changes that will be detailed further in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
 
+## October 2020 Updates<a name="october20-release-notes"></a>
+
+The following updates were released in October 2020:
+
+### Contact flows<a name="october20-contact-flows"></a>
++ Added chat support for whisper flows\. For more information, see [Contact block: Set whisper flow](set-whisper-flow.md)\.
+
+### Metrics<a name="october20-metrics"></a>
++ Added **ContactDetails** and **References** to the contact trace record \(CTR\)\. For more information, see [Contact trace records \(CTR\) data model](ctr-data-model.md)\.
+
 ## September 2020 Updates<a name="september20-release-notes"></a>
 
 The following updates were released in September 2020:
+
+### Service quotas<a name="september20-service-quotas"></a>
++ Updated the service quotas for the following Amazon Connect Participant Service APIs: 
+  + [CreateParticipantConnection](amazon-connect-service-limits.md#connect-participant-api-quotas) 
+  + [DisconnectParticipant](amazon-connect-service-limits.md#connect-participant-api-quotas) 
+  + [GetTranscript](amazon-connect-service-limits.md#connect-participant-api-quotas) 
 
 ### Contact flows<a name="september20-contact-flows"></a>
 + Added the Amazon Connect Flow language, a JSON\-based representation of a series of flow actions, and the criteria for moving between them\. For more information, see [Amazon Connect Flow language](flow-language.md)\. 
@@ -286,7 +303,7 @@ The following updates were released in March 2020:
 + Updated the [Store customer input](store-customer-input.md) block to allow you to specify a custom terminating keypress\.
 
 ### Metrics<a name="mar20-metrics"></a>
-+ Announced [June 2020: Changes for omnichannel spport](upcoming-changes.md#metrics-changes-june-2020)\.
++ Announced [June 2020: Changes for omnichannel support](upcoming-changes.md#metrics-changes-june-2020)\.
 
 ### Networking<a name="mar20-networking"></a>
 + Updated softphone requirements in [Set up your network](ccp-networking.md)\.
@@ -373,14 +390,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-## June 2019 Update<a name="w117aac63c33"></a>
+## June 2019 Update<a name="w122aac63c35"></a>
 
 The following update was released in June 2019:
 
 ### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-## May 2019 Updates<a name="w117aac63c35"></a>
+## May 2019 Updates<a name="w122aac63c37"></a>
 
 The following updates were released in May 2019:
 
@@ -392,7 +409,7 @@ The following updates were released in May 2019:
 ### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-## April 2019 Updates<a name="w117aac63c37"></a>
+## April 2019 Updates<a name="w122aac63c39"></a>
 
 The following updates were released in April 2019:
 
@@ -405,7 +422,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-## March 2019 Update<a name="w117aac63c39"></a>
+## March 2019 Update<a name="w122aac63c41"></a>
 
 The following updates were released in March 2019:
 

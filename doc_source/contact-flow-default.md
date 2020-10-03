@@ -16,6 +16,7 @@ To see the list of default flows in the Amazon Connect console, go to **Routing*
 + [Default customer queue](default-customer-queue.md)
 + [Default customer whisper](default-customer-whisper.md)
 + [Default agent whisper](default-agent-whisper.md)
++ [Set the default whisper flow for chat](set-default-whisper-flow-for-chat.md)
 + [Default customer hold](default-customer-hold.md)
 + [Default outbound](default-outbound.md)
 + [Default queue transfer](default-queue-transfer.md)

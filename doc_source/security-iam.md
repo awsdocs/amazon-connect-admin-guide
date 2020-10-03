@@ -6,6 +6,7 @@ AWS Identity and Access Management \(IAM\) is an AWS service that helps an admin
 + [Audience](#security_iam_audience)
 + [Authenticating with identities](#security_iam_authentication)
 + [Managing access using policies](#security_iam_access-manage)
++ [Required permissions for managing access to the Amazon Connect console](security-iam-amazon-connect-permissions.md)
 + [How Amazon Connect works with IAM](security_iam_service-with-iam.md)
 + [Amazon Connect identity\-based policy examples](security_iam_id-based-policy-examples.md)
 + [Amazon Connect resource\-level policy examples](security_iam_resource-level-policy-examples.md)
@@ -32,7 +33,7 @@ To sign in directly to the [AWS Management Console](https://console.aws.amazon.c
 
 Regardless of the authentication method that you use, you might also be required to provide additional security information\. For example, AWS recommends that you use multi\-factor authentication \(MFA\) to increase the security of your account\. To learn more, see [Using Multi\-Factor Authentication \(MFA\) in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html) in the *IAM User Guide*\.
 
-### AWS Account Root User<a name="security_iam_authentication-rootuser"></a>
+### AWS account root user<a name="security_iam_authentication-rootuser"></a>
 
   When you first create an AWS account, you begin with a single sign\-in identity that has complete access to all AWS services and resources in the account\. This identity is called the AWS account *root user* and is accessed by signing in with the email address and password that you used to create the account\. We strongly recommend that you do not use the root user for your everyday tasks, even the administrative ones\. Instead, adhere to the [best practice of using the root user only to create your first IAM user](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users)\. Then securely lock away the root user credentials and use them to perform only a few account and service management tasks\. 
 

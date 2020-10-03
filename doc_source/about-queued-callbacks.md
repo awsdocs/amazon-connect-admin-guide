@@ -21,5 +21,5 @@ To see only the number of customers who are waiting for a call back, you need to
 
 The [Transfer to queue](transfer-to-queue.md) block has the following properties, which affect how Amazon Connect handles the callback:
 + **Initial delay**: This property affects when a callback is put in queue\. Specify how much time has to pass between a callback contact being initiated in the contact flow, and the customer being put in queue for the next available agent\. For more information, see [How Initial delay affects Scheduled and In queue metrics](scheduled-vs-inqueue.md)\. 
-+ **Maximum amount of attempts**: Think of this as the maximum number of retries\. If this is set to 2, then Amazon Connect tries to call the customer at most three times: the initial callback, and two retries\. 
++ **Maximum number of retries**: If this is set to 2, then Amazon Connect tries to call the customer at most three times: the initial callback, and two retries\. 
 + **Minimum time between attempts**: If the customer doesn't answer the phone, this is how long to wait before trying again\. 

@@ -21,5 +21,5 @@ You can customize the report settings to get the view of the data that is most m
 + [Update a historical metrics report](update-historical-metrics-report.md)
 + [Download a historical metrics report](download-historical-metrics-report.md)
 + [Show agent queues in a Queues table](show-agent-queues.md)
-+ [Run an agent activity audit report](agent-activity-audit-report.md)
++ [About the agent activity audit report](agent-activity-audit-report.md)
 + [Historical metrics definitions](historical-metrics-definitions.md)

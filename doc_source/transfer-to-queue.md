@@ -31,9 +31,9 @@ If no limit is set, the queue is limited to the number of concurrent contacts se
 
 The following properties are available under the **Transfer to callback queue** tab:
 + **Initial delay**: Specify how much time has to pass between a callback contact being initiated in the contact flow, and the customer is put in queue for the next available agent\. 
-+ **Maximum amount of attempts**: Think of this as the maximum number of retries\. If this were set to 1, then Amazon Connect would try to callback the customer at most two times: the initial callback, and 1 retry\.
++ **Maximum number of retries**: If this were set to 1, then Amazon Connect would try to callback the customer at most two times: the initial callback, and 1 retry\.
 **Tip**  
-We strongly recommend that you double\-check the number entered in **Maximum amount of attempts**\. If you accidentally enter a high number, such as 20, it's going to result in unnecessary work for the agent and too many calls for the customer\.
+We strongly recommend that you double\-check the number entered in **Maximum number of retries**\. If you accidentally enter a high number, such as 20, it's going to result in unnecessary work for the agent and too many calls for the customer\.
 + **Minimum time between attempts**: If the customer doesn't answer the phone, this is how long to wait until trying again\.
 + **Set working queue**: You can transfer a callback queue to a different queue\. This is useful if you set up a special queue just for callbacks\. You can then view that queue to see how many customers are waiting for callbacks\.
 **Tip**  

@@ -1,25 +1,29 @@
 # Example contact flow in Amazon Connect Flow language<a name="flow-language-example"></a>
 
-The following example shows a simple contact flow that plays a prompt using static text and disconnects\.
+The following example shows a simple contact flow that plays a prompt using static text and disconnects\. 
+
+To learn how to get block identifiers, we recommend creating a new contact flow in Amazon Connect console, and then calling the [DescribeContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeContactFlow.html) API for it\.
 
 ```
 {
-    "Version": "2019-10-30",  //A string representing the version of the Flow. Currently the only support Version is 2019-10-30.
-    "StartAction": "Play prompt identifier", //A string representing the first Action to run when the flow starts running. 
-                                            //The value of this field must match with the Identifier of an Action in the Actions list.
-    "Metadata": { //An object the may be filled in with data as desired.
+    "Version": "2019-10-30",  //A string representing the version of the Flow. Currently the only supported version is 2019-10-30.
+    
+    "StartAction": "12345678-1234-1234-1234-123456789012", //A string representing the first Action to run when the flow starts running. 
+                                                          //In this case, it's the identifier of the Play prompt block. 
+                                                         //The value of this field must match the Identifier of an Action in the Actions list.
+    "Metadata": { //An object that may be filled in with data as desired.
         "EntryPointPosition": {
             "X": 88,
             "Y": 100
         },
         "ActionMetadata": {
-            "Play prompt identifier": {
+            "12345678-1234-1234-1234-123456789012": {    //The identifier of the Play prompt block.
                 "Position": {
                     "X": 270,
                     "Y": 98
                 }
             },
-            "Disconnect identifier": {
+            "abcdef-abcd-abcd-abcd-abcdefghijkl": {  //The identifier of the Disconnect/hang up block.
                 "Position": {
                     "X": 545,
                     "Y": 92
@@ -31,10 +35,10 @@ The following example shows a simple contact flow that plays a prompt using stat
     "Actions": [  //A list of individual Action objects. These Actions are the definition of the Flow's behavior and are detailed below. 
                   //A single Flow may have no more than 250 Actions defined.
         {
-            "Identifier": "Play prompt identifier",
-            "Type": "PlayPrompt",
+            "Identifier": "12345678-1234-1234-1234-123456789012", //The identifier of the Play prompt block.
+            "Type": "MessageParticipant",  //This is the flow action.
             "Transitions": {
-                "NextAction": "Disconnect identifier",
+                "NextAction": "abcdef-abcd-abcd-abcd-abcdefghijkl", //The identifier of the Disconnect/hang up block.
                 "Errors": [],
                 "Conditions": []
             },
@@ -47,8 +51,8 @@ The following example shows a simple contact flow that plays a prompt using stat
             }
         },
         {
-            "Identifier": "Disconnect identifier",
-            "Type": "Disconnect",
+            "Identifier": "abcdef-abcd-abcd-abcd-abcdefghijkl",  //The identifier of the Disconnect/hang up block.
+            "Type": "DisconnectParticipant",  //This is the flow action.
             "Transitions": {},
             "Parameters": {}
         }

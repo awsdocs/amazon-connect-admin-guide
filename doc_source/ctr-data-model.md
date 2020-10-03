@@ -102,6 +102,15 @@ Type: [AgentHierarchyGroup](#ctr-AgentHierarchyGroup)
 The group at level five of the agent hierarchy\.  
 Type: [AgentHierarchyGroup](#ctr-AgentHierarchyGroup)
 
+## ContactDetails<a name="ctr-contact-details"></a>
+
+Contains user\-defined attributes which are lightly typed within the contact\.
+
+**Reference Info**  
+ReferenceType  
+ContentType  
+Location
+
 ## ContactTraceRecord<a name="ctr-ContactTraceRecord"></a>
 
 Information about a contact\.
@@ -331,6 +340,30 @@ Type: String *\(yyyy\-mm\-ddThh:mm:ssZ\)*
 Where the recording/transcript is stored\.  
 Type: String  
 Valid values: Amazon S3`` 
+
+## References<a name="ctr-contact-references"></a>
+
+Contains links to other documents that are related to a contact\.
+
+**ContactDetailsName**  
+String  
+Min value: 1  
+Max value: 128
+
+**ContactDetailsValue**  
+Type: String  
+Min value: 0  
+Max value: 1024
+
+**ReferenceAttributeName**  
+Type: String  
+Min value: 1  
+Max value: 128
+
+**ReferenceAttributesValue**  
+Type: String  
+Min value: 0  
+Max value: 1024
 
 ## RoutingProfile<a name="ctr-RoutingProfile"></a>
 
