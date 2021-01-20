@@ -29,7 +29,7 @@ Outbound telephony charges occur when using a desk phone to answer inbound calls
 
 1. In **After call work \(ACW\) timeout**, type how many seconds agents have for after contact work, such as entering notes about the contact\.
 
-   Enter **0** if you don't want to allocate ACW time\.  
+   Enter **0** if you don't want to allocate a specific amount of ACW time\. When the conversation ends, ACW starts; the agent must choose **Close contact** to end ACW\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/acw-timeout.png)
 
 1. Under **Agent Hierarchy** select any groups the agent should be part of\.

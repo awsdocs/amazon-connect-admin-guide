@@ -7,7 +7,9 @@ From the Amazon Connect console, you can only download the results currently dis
 
 **To download a historical metrics report as a CSV file**
 
-1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+1. Log in to your contact center at https://*instance name*\.awsapps\.com/connect/\.
+**Note**  
+IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
 
 1. Create a new report or open a saved report\.
 

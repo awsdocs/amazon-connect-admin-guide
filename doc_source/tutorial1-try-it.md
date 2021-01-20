@@ -27,6 +27,8 @@ You're ready to try out the Amazon Lex bot, routing, and contact flow\. The firs
 
 ## Test a custom voice experience<a name="tutorial1-try-it-voice"></a>
 
+
+
 1. If the test chat window is still open, choose **End chat** to close it\. Then you can try the voice experience\.
 
 1. Call your phone number\.

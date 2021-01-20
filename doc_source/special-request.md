@@ -1,7 +1,10 @@
 # Request international numbers, special numbers, or termination points<a name="special-request"></a>
 
 **Important**  
-Country regulations often require a local office address and specific identification documents to purchase and own a phone number, and may take additional processing time\. See [Region requirements for phone numbers](phone-number-requirements.md)\.  
+To purchase and own a phone number, country regulations often require:   
+A local office address
+Specific identification documents
+For identification requirements by country, see [Region requirements for phone numbers](phone-number-requirements.md)\.   
 It can take 2\-6 weeks for us to fulfill your request\.
 
 To request international phone numbers, special numbers, or termination points, create a support case\. 

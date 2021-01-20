@@ -1,5 +1,9 @@
 # Contact block: Set recording and analytics behavior<a name="set-recording-behavior"></a>
 
+## Description<a name="set-recording-behavior-description"></a>
++ Sets options for recording and/or monitoring \(listen\-in\) voice and chat conversations\.
++ It enables features in Contact Lens for Amazon Connect\. For more information, see [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.
+
 ## Contact flow types<a name="set-recording-behavior-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -7,10 +11,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Customer Queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="set-recording-behavior-description"></a>
-+ Sets options for recording and/or monitoring \(listen\-in\) voice and chat conversations\.
-+ It enables features in Contact Lens for Amazon Connect\. For more information, see [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.
 
 ## Properties<a name="set-recording-behavior-properties"></a>
 

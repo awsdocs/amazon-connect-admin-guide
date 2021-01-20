@@ -1,16 +1,10 @@
 # Set up contact transfers<a name="transfer"></a>
 
-To make it easy for you to set up contact transfers, Amazon Connect provides you with several tools: 
-+ Two contact flow types:
-  + Transfer to agent: Enables transfers to another agent\. This works with voice contacts\. 
-  + Transfer to queue: Enables transfers to a queue\. This works with both voice and chat contacts\.
-+ Contact blocks:
-  + [Transfer to queue](transfer-to-queue.md): Use to end the current contact flow and place the customer in a queue\. This block works for both voice and chat transfers\. 
-  + [Transfer to phone number](transfer-to-phone-number.md): Use to transfer the customer to a phone number, such as an external number\. This block works for voice transfers\.
-  + [Transfer to flow](transfer-to-flow.md): Use to end the current flow and transfer the customer to another contact flow\. This block works for voice transfers\.
-+ Quick connects: Use to create common destinations for transfers\. Agents will see them as options in the CCP when they go to do a transfer\.
-
-This topic explains how to create quick connects and use transfer contact blocks in specific scenarios\. 
+Amazon Connect enables you to set up different kinds of transfers:
++ [Agent\-to\-agent transfers](setup-agent-to-agent-transfers.md): For example, if you want agents to be able to transfer calls or tasks to other agents\. 
++ [Transfers to a specific agent](transfer-to-agent.md): For example, if you want to route contacts to the last agent the customer interacted with, or route contacts to agents who have specific responsibilities\.
++ [Transfers to queues](quick-connects.md): For example, if you want to transfer the contact to a sales, support, or escalation queue\. To do this, create a [queue quick connect](how-quick-connects-work.md#queue-quick-connects)\. This works with voice, chat, and task contacts\.
++ [Transfers to external numbers](quick-connects.md): For example, if you want to transfer the contact to an external number, such as an on\-call pager\. To do this, create an external quick connect\.
 
 ## Overview of steps<a name="transfer-overview"></a>
 

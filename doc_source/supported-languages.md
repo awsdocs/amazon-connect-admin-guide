@@ -22,13 +22,27 @@ Amazon Connect provides full Unicode support\. You can chat with customers in an
 + Portuguese \(Brazilian\)
 + Spanish
 
-## Contact Lens for Amazon Connect<a name="supported-languages-admin-console"></a>
-+ English \(Australia\)
-+ English \(India\)
-+ English \(Great Britain\)
-+ English \(United States\)
-+ Spanish \(Spain\)
-+ Spanish \(United States\)
+## Contact Lens for Amazon Connect<a name="supported-languages-contact-lens"></a>
+
+
+| Post\-call analytics | Post\-call redaction | Real\-time analytics | Real\-time redaction | 
+| --- | --- | --- | --- | 
+|  English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | 
+|  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  | 
+|  English \(United States\)  |  English \(United States\)  |  English \(United States\)  |  English \(United States\)  | 
+|  English \(India\)  |  English \(India\)  | Spanish \(United States\)  |  | 
+|  English \(Ireland\)  |  English \(Ireland\)  |  |  | 
+|  English \(Scotland\)  |  English \(Scotland\)  |  |  | 
+|  English \(Wales\)  |  English \(Wales\)  |  |  | 
+|  Spanish \(Spain\)  |   |  |  | 
+|  Spanish \(United States\)  |   |  |  | 
+|  French \(Canada\)  |   |  |  | 
+|  French \(France\)  |   |  |  | 
+|  German \(Germany\)  |   |  |  | 
+|  German \(Switzerland\)  |   |  |  | 
+|  Italian \(Italy\)  |   |  |  | 
+|  Arabic \(Gulf\)  |   |  |  | 
+|  Hindi \(India\)  |   |  |  | 
 
 ## Amazon Lex<a name="supported-languages-lex"></a>
 

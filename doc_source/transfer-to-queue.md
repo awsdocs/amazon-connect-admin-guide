@@ -1,5 +1,10 @@
 # Contact block: Transfer to queue<a name="transfer-to-queue"></a>
 
+## Description<a name="transfer-to-queue-description"></a>
++ In most types of contact flows, this block ends the current contact flow and places the customer in a queue\. 
++ When used in a Customer Queue flow, however, this block transfers a contact already in a queue to another queue\. 
++ When used in a callback scenario, Amazon Connect calls the agent first\. After the agent accepts the call in the CCP, Amazon Connect calls the customer\.
+
 ## Contact flow types<a name="transfer-to-queue-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -7,11 +12,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Customer Queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="transfer-to-queue-description"></a>
-+ In most types of contact flows, this block ends the current contact flow and places the customer in a queue\. 
-+ When used in a Customer Queue flow, however, this block transfers a contact already in a queue to another queue\. 
-+ When used in a callback scenario, Amazon Connect calls the agent first\. After the agent accepts the call in the CCP, Amazon Connect calls the customer\.
 
 ## Properties<a name="transfer-to-queue-properties"></a>
 

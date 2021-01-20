@@ -22,12 +22,16 @@ To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as
 
 | Domain/URL allow list | AWS Region | Ports | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
-| rtc\.connect\-telecom\.\{region\}\.amazonaws\.com Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \{myInstanceName\}\.awsapps\.com/connect/ccp\-v2 \{myInstanceName\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{myInstanceName\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \*\.execute\-api\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| participant\.connect\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \*\.transport\.connect\.\{region\}\.amazonaws\.com  | Replace \{region\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com To instead add specific endpoints to your allow list based on Region, see [NLB endpoints](#nlb-endpoints)\.   | Replace \{region\} with the location of your Amazon Connect instance | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+| rtc\*\.connect\-telecom\.\{*region*\}\.amazonaws\.com Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+|  **New: additional domains to add to your allow list, please see the note following this table** \{*myInstanceName*\}\.my\.connect\.aws/ccp\-v2 \{*myInstanceName*\}\.my\.connect\.aws/api \*\.static\.connect\.aws **Current: ** \{*myInstanceName*\}\.awsapps\.com/connect/ccp\-v2 \{*myInstanceName*\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{*myInstanceName*\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \*\.execute\-api\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| participant\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \*\.transport\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \{*Amazon S3 bucket name*\}\.s3\.\{*region*\}\.amazonaws\.com  | Replace *Amazon S3 bucket name* with the name of the location where you store attachments\. Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com To instead add specific endpoints to your allow list based on Region, see [NLB endpoints](#nlb-endpoints)\.   | Replace \{*region*\} with the location of your Amazon Connect instance | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+
+**Note**  
+IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
 
 **Note**  
 The new region telecom endpoints follow a different format\. Here's a complete list of telecom endpoints:  
@@ -35,16 +39,16 @@ The new region telecom endpoints follow a different format\. Here's a complete l
 
 | Region | Domain/URL | 
 | --- | --- | 
-| us\-west\-2  | rtc\.connect\-telecom\.us\-west\-2\.amazonaws\.com | 
-| us\-east\-1  | rtc\.connect\-telecom\.us\-east\-1\.amazonaws\.com | 
-| eu\-central\-1  | rtc\.connect\-telecom\.eu\-central\-1\.amazonaws\.com | 
-| ap\-southeast\-2  | rtc\.connect\-telecom\.ap\-southeast\-2\.amazonaws\.com | 
-| ap\-northeast\-1  | rtc\.connect\-telecom\.ap\-northeast\-1\.amazonaws\.com | 
+| us\-west\-2  | rtc\*\.connect\-telecom\.us\-west\-2\.amazonaws\.com | 
+| us\-east\-1  | rtc\*\.connect\-telecom\.us\-east\-1\.amazonaws\.com | 
+| eu\-central\-1  | rtc\*\.connect\-telecom\.eu\-central\-1\.amazonaws\.com | 
+| ap\-southeast\-2  | rtc\*\.connect\-telecom\.ap\-southeast\-2\.amazonaws\.com | 
+| ap\-northeast\-1  | rtc\*\.connect\-telecom\.ap\-northeast\-1\.amazonaws\.com | 
 | eu\-west\-2  | rtc\.cell\-1\.prod\.eu\-west\-2\.prod\.connect\.aws\.a2z\.com | 
 | ap\-southeast\-1  | rtc\.cell\-1\.prod\.ap\-southeast\-1\.prod\.connect\.aws\.a2z\.com | 
 
 **Tip**  
-When using `rtc.connect-telecom.{region}.amazonaws.com` and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
+When using `rtc*.connect-telecom.{region}.amazonaws.com` and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
 
 The following table lists the CloudFront domains used for static assets if you want to add domains to your allow list instead of IP ranges:
 
@@ -62,12 +66,12 @@ The following table lists the CloudFront domains used for static assets if you w
 
 ### NLB endpoints<a name="nlb-endpoints"></a>
 
-The following table lists the specific endpoints for the Region the Amazon Connect instance is in\. If you don't want to use the TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com wildcard, you can use add these endpoints to your allow list instead\.
+The following table lists the specific endpoints for the Region the Amazon Connect instance is in\. If you don't want to use the TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com wildcard, you can use add these endpoints to your allow list instead\.
 
 
 | Region | Turn Domain/URL | 
 | --- | --- | 
-| us\-west\-2  | TurnNlb\-8d79b4466d82ad0e\.elb\.us\-west\-2\.amazonaws\.com | 
+| us\-west\-2  | TurnNlb\-8d79b4466d82ad0e\.elb\.us\-west\-2\.amazonaws\.com TurnNlb\-dbc4ebb71307fda2\.elb\.us\-west\-2\.amazonaws\.com | 
 | us\-east\-1  | TurnNlb\-d76454ac48d20c1e\.elb\.us\-east\-1\.amazonaws\.com | 
 | eu\-central\-1  | TurnNlb\-ea5316ebe2759cbc\.elb\.eu\-central\-1\.amazonaws\.com | 
 | ap\-southeast\-2  | TurnNlb\-93f2de0c97c4316b\.elb\.ap\-southeast\-2\.amazonaws\.com | 
@@ -84,7 +88,7 @@ For more information about this file, see [About Amazon Connect IP address range
 
 | IP\-Ranges entry | AWS Region | Ports/Protocols | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
-| AMAZON\_CONNECT | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+| AMAZON\_CONNECT | GLOBAL and Region where your Amazon Connect instance is located \(add GLOBAL AND any region\-specific entry to your allow list\)  | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
 | EC2 | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | CLOUDFRONT | Global\* | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 
@@ -128,15 +132,15 @@ If you're using a stateless firewall for both options, use the requirements desc
 
 ## Allow DNS resolution for softphones<a name="allow-dns-resolution"></a>
 
-If you already added Amazon Connect IP ranges to your allow list, and you don’t have any restriction on DNS name resolution, then you don't need to add **TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com** to your allow list\.
+If you already added Amazon Connect IP ranges to your allow list, and you don’t have any restriction on DNS name resolution, then you don't need to add **TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com** to your allow list\.
 + To check whether there are restrictions on DNS name resolution, while on your network, use the `nslookup` command\. For example: 
 
    `nslookup TurnNlb-d76454ac48d20c1e.elb.us-east-1.amazonaws.com`
 
-If you can't resolve the DNS, you must add **TurnNlb\-\*\.elb\.\{region\}\.amazonaws\.com** to your allow list\. 
+If you can't resolve the DNS, you must add the TurnNLB endpoints [listed above](#nlb-endpoints) or **TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com** to your allow list\.
 
 If you don't allow this domain, your agents will get the following error in their Contact Control Panel \(CCP\) when they try to answer a call: 
-+ Failed to establish softphone connection\. Try again or contact your administrator with the following: Browser unable to establish media channel with turn:TurnNlb\-xxxxxxxxxxxxx\.elb\.\{region\}\.amazonaws\.com:3478?transport=udp
++ Failed to establish softphone connection\. Try again or contact your administrator with the following: Browser unable to establish media channel with turn:TurnNlb\-xxxxxxxxxxxxx\.elb\.\{*region*\}\.amazonaws\.com:3478?transport=udp
 
 ## Port and protocol considerations<a name="port-considerations"></a>
 

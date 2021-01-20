@@ -1,15 +1,15 @@
 # Contact block: Set working queue<a name="set-working-queue"></a>
 
+## Description<a name="set-working-queue-description"></a>
++ This block specifies the queue to be used when **Transfer to queue** is invoked\.
++ A queue must be specified before invoking **Transfer to queue** except when used in a customer queue flow\. It’s also the default queue for checking attributes, such as staffing, queue status, and hours of operation\.
+
 ## Contact flow types<a name="set-working-queue-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Inbound contact flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="set-working-queue-description"></a>
-+ This block specifies the queue to be used when **Transfer to queue** is invoked\.
-+ A queue must be specified before invoking **Transfer to queue** except when used in a customer queue flow\. It’s also the default queue for checking attributes, such as staffing, queue status, and hours of operation\.
 
 ## Properties<a name="set-working-queue-properties"></a>
 

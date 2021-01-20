@@ -41,7 +41,7 @@ By default, contact flow export files are created without a file name extension,
 
 1. Log in to your Amazon Connect instance\. The account must be assigned a security profile that includes edit permissions for contact flows\.
 
-1. Choose **Routing**, **Contact flows**\.
+1. On the navigation menu, choose **Routing**, **Contact flows**\.
 
 1. Do one of the following:
    + To replace an existing contact flow with the one you are importing, open the contact flow to replace\.

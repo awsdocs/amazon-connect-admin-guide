@@ -4,7 +4,7 @@
 
 You can also configure hierarchies with up to five levels, and segment agents or teams\. Here are a couple of things to note about using hierarchies:
 + Removing agents from a level affects historical reporting\.
-+ Hierarchies do not determine agent permissions or security settings\. They define the organizational structure of agent groups for effective reporting\.
++ When you use the **Restrict contact access** permission, you can restrict contact search results based on the agent's hierarchy\. For more information, see [Manage who can search for contacts and access detailed information](contact-search.md#required-permissions-search-contacts)\.
 
 ## Required permissions<a name="permissions-agent-hierarchy"></a>
 

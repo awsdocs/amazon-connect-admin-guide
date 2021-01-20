@@ -8,7 +8,7 @@ Only users who have a security profile with **Queues \- Enable/Disable** permiss
 
 **To disable an active queue**
 
-1. Choose **Routing**, **Queues**\.
+1. On the navigation menu, choose **Routing**, **Queues**\.
 
 1. Hover over the name of the queue to edit\. Choose the power icon that appears\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/disable-queue-power-button.png)

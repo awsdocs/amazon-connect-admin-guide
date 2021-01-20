@@ -1,14 +1,14 @@
 # Contact block: Set customer queue flow<a name="set-customer-queue-flow"></a>
 
+## Description<a name="set-contact-attributes-description"></a>
++ Specifies the flow to invoke when a customer is transferred to a queue\.
+
 ## Contact flow types<a name="set-contact-attributes-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Inbound contact flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="set-contact-attributes-description"></a>
-+ Specifies the flow to invoke when a customer is transferred to a queue\.
 
 ## Properties<a name="set-contact-attributes-properties"></a>
 

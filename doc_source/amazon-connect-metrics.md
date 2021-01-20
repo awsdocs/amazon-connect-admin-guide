@@ -20,7 +20,7 @@ For detailed information about the activity of agents in your contact center, us
 + [Publish reports](publish-reports.md)
 + [Real\-time metrics reports](real-time-metrics-reports.md)
 + [Historical metrics reports](historical-metrics.md)
-+ [Contact search](contact-search.md)
++ [Search for contacts](contact-search.md)
 + [View a CTR in the UI](sample-ctr.md)
 + [Login/Logout reports](login-logout-reports.md)
 + [Amazon Connect agent event streams](agent-event-streams.md)

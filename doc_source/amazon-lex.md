@@ -8,6 +8,9 @@ To follow along with this walkthrough, you need the following:
 + An active AWS account\. 
 + An Amazon Connect instance created in the US East \(N\. Virginia\) Region\. After you create your instance, claim a phone number for it\.
 
+**Tip**  
+You can also use Amazon Lex to power interactive messages for Amazon Connect chat\. Interactive messages are rich messages that present a prompt and pre\-configured display options that a customer can select from\. These messages are powered by Amazon Lex and configured through Amazon Lex using a Lambda\. For more information, see [Add interactive messages to chat](interactive-messages.md)\.
+
 ## Create an Amazon Lex bot<a name="lex-bot-create"></a>
 
 In this step you'll create a custom bot to demonstrate the Press or Say integration with Amazon Connect\. The bot prompts callers to press or say a number that matches the menu option for the task to complete\. In this case, the input is checking their account balance\.
@@ -137,7 +140,7 @@ Next, create a new contact flow that uses your Amazon Lex bot\. When you create 
 
 1. Log in to your Amazon Connect instance with an account that has permissions for contact flows and Amazon Lex bots\.
 
-1. Choose **Routing, Contact flows, Create contact flow**, and type a name for the flow\.
+1. On the navigation menu, choose **Routing, Contact flows, Create contact flow**, and type a name for the flow\.
 
 1. Under **Interact**, drag a [Get customer input](get-customer-input.md) block onto the designer, and connect it to the **Entry point block**\.
 

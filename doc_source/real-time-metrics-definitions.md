@@ -118,9 +118,29 @@ This is not the average amount of time agents spent on contacts\.
 
 To learn more about agent status and contact states, see [About agent status](metrics-agent-status.md) and [About contact states](about-contact-states.md)\.
 
+## Avg callback connecting time<a name="rtm-avg-callback-connecting-time"></a>
+
+Then average time between when callback contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+The following image shows the five parts that go into calculating **Avg callback connecting time**\. It also shows what is in the agent event stream\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-callback-connection-time.png)
+
 ## Avg hold time<a name="average-hold-time-real-time"></a>
 
 Average time, in seconds, that a contact in the queue was on hold\.
+
+This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
+
+## Avg incoming connecting time<a name="rtm-avg-incoming-connecting-time"></a>
+
+The average time between when contacts are initiated Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+In the agent event stream, this time is calculated by averaging the duration between the contact state of STATE\_CHANGE event changes from CONNECTING to CONNECTED/MISSED/ERROR\. 
+
+The following image shows the three parts that go into calculating **Avg incoming connecting time**\. It also shows what is in the agent event stream\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-inbound-connection-time.png)
 
 ## Avg interaction time<a name="average-interaction-time-real-time"></a>
 
@@ -132,9 +152,19 @@ Average time, in seconds, that contacts in the queue spent interacting with agen
 
 Avg hold time \+ Avg interaction time
 
+This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
+
 ## Avg queue answer time<a name="average-queue-answer-time-real-time"></a>
 
 Average time, in seconds, that a contact was in the queue before being answered by an agent\. This is calculated using the amount of time that the contact was in the queue, not any time that the contact spent in prior steps of the contact flow, such as listening or responding to prompts\.
+
+## Avg outbound connecting time<a name="rtm-avg-outbound-connecting-time"></a>
+
+The average time between when outbound contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+The following image shows the four parts that go into calculating **Avg outbound connecting time**\. It also shows what is in the agent event stream\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-outbound-connection-time.png)
 
 ## Callback contacts handled<a name="callback-contacts-handled-real-time"></a>
 
@@ -269,7 +299,9 @@ In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIRef
 
 ## SL *X*<a name="service-level-real-time"></a>
 
-Percentage of contacts removed from the queue between 0 and *X* seconds after being added to it \(Service Level\)\. A contact is removed from the queue when one of the following occurs: an agent answers the call, the customer abandons the call, or the customer requests a call back\. The possible values for *X* are: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\.
+Percentage of contacts removed from the queue between 0 and *X* after being added to it \(Service Level\)\. A contact is removed from the queue when one of the following occurs: an agent answers the call, the customer abandons the call, or the customer requests a call back\. 
+
+For X, you can can choose from pre\-set times in seconds: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\.
 
 ## Staffed<a name="staffed-real-time"></a>
 

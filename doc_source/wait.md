@@ -1,14 +1,14 @@
 # Contact block: Wait<a name="wait"></a>
 
+## Description<a name="wait-description"></a>
++ Use this block in chat contact flows only\. If a contact stops responding to a chat, this block pauses the contact flow for the specified wait time\. 
++ If this block is triggered during a voice conversation, the contact is routed down the **Error** branch\.
+
 ## Contact flow types<a name="wait-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Inbound contact flow
 + Customer Queue flow
-
-## Description<a name="wait-description"></a>
-+ Use this block in chat contact flows only\. If a contact stops responding to a chat, this block pauses the contact flow for the specified wait time\. 
-+ If this block is triggered during a voice conversation, the contact is routed down the **Error** branch\.
 
 ## Properties<a name="wait-properties"></a>
 

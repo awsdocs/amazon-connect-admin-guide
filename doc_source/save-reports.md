@@ -31,3 +31,12 @@ We recommend establishing a naming convention for reports in your organization, 
 
 1. To view to the report at a later time, go to **Metrics and quality**, **Saved reports**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/view-saved-reports.png)
+
+## How to delete saved reports<a name="how-to-delete-saved-reports"></a>
+
+1. On the navigation menu, choose **Metrics and quality**, **Saved reports**\.
+
+1. Choose the **Historical metrics** tab\. 
+
+1. Go to the row that has the report you want to delete, and choose the **Delete** icon\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-delete-saved-report.png)

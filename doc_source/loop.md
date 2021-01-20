@@ -1,14 +1,14 @@
 # Contact block: Loop<a name="loop"></a>
 
-## Contact flow types<a name="loop-types"></a>
-
-You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ All flows
-
 ## Description<a name="loop-description"></a>
 + Counts the number of times customers are looped through the **Looping** branch\.
 + After the loops are completed, the **Complete** branch is followed\. 
 + This block is often used with a **Get customer input** block\. For example, if the customer doesn't succeed in entering their account number, you can loop to give them another opportunity to enter it\. 
+
+## Contact flow types<a name="loop-types"></a>
+
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ All flows
 
 ## Properties<a name="loop-properties"></a>
 

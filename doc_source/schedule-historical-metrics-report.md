@@ -28,7 +28,9 @@ Before you schedule a historical metrics report, here are a few things you need 
 
 ## How to schedule a historical metrics report<a name="howto-schedule-historical-metrics-report"></a>
 
-1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+1. Log in to your contact center at https://*instance name*\.awsapps\.com/connect/\.
+**Note**  
+IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
 
 1. Create a new report and save it, or open a saved report\.
 
@@ -39,3 +41,23 @@ Before you schedule a historical metrics report, here are a few things you need 
 1. \(Optional\) On the **Delivery Options** tab, specify a prefix for the location in Amazon S3 for the report files\.
 
 1. Choose **Create**\.
+
+## How to delete a scheduled report<a name="howto-delete-scheduled-report"></a>
+
+To get to the page where you can delete a scheduled report, you need to create another temporary scheduled report\.
+
+1. Log in to your contact center at https://*instance name*\.awsapps\.com/connect/\.
+
+1. On the navigation menu, choose **Metrics and quality**, **Saved reports**\. 
+
+1. On the **View reports** page, choose the **Historical metrics** tab\.
+
+1. Click or tap on the saved report that has been scheduled\.
+
+1. Choose the down arrow next to **Save** in the top\-right corner of the page and choose **Schedule**\.
+
+1. Choose **Create**\. 
+
+1. On the **Schedule Report** page, choose **Delete** next to the scheduled reports you want to delete\. 
+
+For instructions on deleting saved reports, see [How to delete saved reports](save-reports.md#how-to-delete-saved-reports)\.

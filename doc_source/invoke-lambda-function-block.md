@@ -1,5 +1,9 @@
 # Contact block: Invoke AWS Lambda function<a name="invoke-lambda-function-block"></a>
 
+## Description<a name="invoke-lambda-function-block-description"></a>
++ Calls AWS Lambda, and optionally returns key\-value pairs\.
++ The returned key\-value pairs can be used to set contact attributes\.
+
 ## Contact flow types<a name="invoke-lambda-function-block-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -11,10 +15,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Agent Whisper flow
 + Transfer to Agent flow 
 + Transfer to Queue flow
-
-## Description<a name="invoke-lambda-function-block-description"></a>
-+ Calls AWS Lambda, and optionally returns key\-value pairs\.
-+ The returned key\-value pairs can be used to set contact attributes\.
 
 ## Properties<a name="invoke-lambda-function-block-properties"></a>
 

@@ -1,5 +1,8 @@
 # Contact block: Change routing priority / age<a name="change-routing-priority"></a>
 
+## Description<a name="change-routing-priority-description"></a>
++ Change a customer's position in the queue\.
+
 ## Contact flow types<a name="change-routing-priority-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -8,9 +11,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Customer queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="change-routing-priority-description"></a>
-+ Change a customer's position in the queue\.
 
 ## Properties<a name="change-routing-priority-properties"></a>
 

@@ -41,6 +41,6 @@ This list of best practices can help you get the maximum benefit from Amazon Con
 + Tell agents about the bot\. When a contact is connected to the agent, the agent sees the entire transcript in their window\. The transcript includes text from both the customer and the bot\.
 
 ## Contact Control Panel<a name="bp-ccp"></a>
-+ If your agents use Google Chrome 71 to Chrome 75, and they use chat, add the CCP URL to the allow list in the agent's Chrome settings\. Otherwise, they won't hear the audio indicator notifying them that there's an incoming chat\. 
++ If your agents use Google Chrome 71 to Chrome 75, and they use chat or tasks, add the CCP URL to the allow list in the agent's Chrome settings\. Otherwise, they won't hear the audio indicator notifying them that there's an incoming chat or task\. 
 
   For instructions, see this [Google Chrome Help article](https://support.google.com/chrome/answer/114662)\.

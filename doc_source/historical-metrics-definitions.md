@@ -21,6 +21,22 @@ Percentage of contacts routed to an agent that were answered\.
 + Max value: 100\.00%
 + Category: Agent activity\-driven metric
 
+## Agent API connecting time<a name="htm-agent-api-connecting-time"></a>
+
+The total time between when a contact is initiated using an Amazon Connect API, and the agent is connected\.
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+## Agent callback connecting time<a name="htm-agent-callback-connecting-time"></a>
+
+The total time between when a callback contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\.
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
 ## Agent first name<a name="agent-first-name-historical"></a>
 
 The first name of the agent, as entered in their Amazon Connect user account\. This metric is available only when grouping by agent\.
@@ -35,17 +51,31 @@ Agent idle time doesn’t include the amount of time from when Amazon Connect st
 + Type: String \(*hh:mm:ss*\)
 + Category: Agent activity\-driven metric
 
+## Agent incoming connecting time<a name="htm-agent-incoming-connecting-time"></a>
+
+The total time between when a contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\.
+
+In the agent event stream, this is the duration between the contact state of STATE\_CHANGE event changes from CONNECTING to CONNECTED/MISSED/ERROR\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
 ## Agent interaction and hold time<a name="agent-interaction-hold-time-historical"></a>
 
 Sum of [Agent interaction time](#agent-interaction-time-historical) and [Customer hold time](#customer-hold-time-historical)\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
+This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
+
 ## Agent interaction time<a name="agent-interaction-time-historical"></a>
 
 Total time that agents spent interacting with customers on inbound and outbound contacts\. This does not include [Customer Hold Time](#customer-hold-time-historical) or [After Contact Work Time](#acw-historical)\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
+
+This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
 
 ## Agent last name<a name="agent-last-name-historical"></a>
 
@@ -76,6 +106,14 @@ If you want to include the time spent in a custom status, see [Contact handle ti
 + Type: String \(*hh:mm:ss*\)
 + Category: Agent activity\-driven metric
 
+## Agent outbound connecting time<a name="htm-agent-outbound-connecting-time"></a>
+
+The total time between when an outbound contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\.
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
 ## API contacts<a name="api-contacts-historical"></a>
 
 Count of contacts that were initiated using an Amazon Connect API operation, such as `StartOutboundVoiceContact`\. This includes contacts that were not handled by an agent\.
@@ -94,6 +132,30 @@ Average amount of time that an agent spent doing After Contact Work \(ACW\) for 
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
+## Average agent API connecting time<a name="htm-avg-agent-api-connecting-time"></a>
+
+The average time between when a contact is initiated using an Amazon Connect API, and the agent is connected\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+## Average agent callback connecting time<a name="htm-avg-agent-callback-connecting-time"></a>
+
+The average time between when a callback contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
+## Average agent incoming connecting time<a name="htm-avg-agent-incoming-connecting-time"></a>
+
+The average time between when contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
 ## Average agent interaction and customer hold time<a name="average-agent-interaction-customer-hold-time-historical"></a>
 
 Average of the sum of the agent interaction and customer hold time\. This is calculated by averaging the sum of the following values from the CTR: [AgentInteractionDuration](ctr-data-model.md#AgentInteractionDuration-CTR) and [CustomerHoldDuration](ctr-data-model.md#CustomerHoldDuration-CTR)\.
@@ -106,11 +168,23 @@ Average time that agents interacted with customers during inbound and outbound c
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
+This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
+
+## Average agent outbound connecting time<a name="htm-avg-agent-outbound-connecting-time"></a>
+
+The average time between when an outbound contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+Type: String \(hh:mm:ss\)
+
+Category: Agent activity\-driven metric
+
 ## Average customer hold time<a name="average-customer-hold-time-historical"></a>
 
 Average time that customers spent on hold while connected to an agent\. This is calculated by averaging [CustomerHoldDuration](ctr-data-model.md#CustomerHoldDuration-CTR) \(from the CTR\)\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
+
+This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
 
 ## Average handle time<a name="average-handle-time-historical"></a>
 

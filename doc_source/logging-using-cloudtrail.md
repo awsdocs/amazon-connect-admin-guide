@@ -19,38 +19,7 @@ For an ongoing record of events in your AWS account, including events for Amazon
 + [Configuring Amazon SNS Notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
 + [Receiving CloudTrail Log Files from Multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
-Amazon Connect supports logging both the request parameters and the responses for the following APIs as events in CloudTrail log files:
-+ **Amazon Connect Service APIs**
-  + [AssociateRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_AssociateRoutingProfileQueues.html)
-  + [CreateContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateContactFlow.html)
-  + [CreateRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateRoutingProfile.html) 
-  + [CreateUser](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateUser.html)
-  + [DeleteRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteRoutingProfile.html)
-  + [DeleteUser](https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteUser.html)
-  + [DisassociateRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_DisassociateRoutingProfileQueues.html)
-  + [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html)
-  + [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html)
-  + [StopContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContact.html)
-  + [TagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_TagResource.html)
-  + [UntagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_UntagResource.html)
-  + [UpdateContactFlowContent](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactFlowContent.html) 
-  + [UpdateContactFlowName](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactFlowName.html) 
-  + [UpdateContactAttributes](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html)
-  + [UpdateRoutingProfileConcurrency](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileConcurrency.html)
-  + [UpdateRoutingProfileName](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileName.html)
-  + [UpdateRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileQueues.html)
-  + [UpdateUserHierarchys](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserHierarchy.html)
-  + [UpdateUserIdentityInfo](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserIdentityInfo.html)
-  + [UpdateUserPhoneConfig](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserPhoneConfig.html)
-  + [UpdateUserRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserRoutingProfile.html)
-  + [UpdateUserSecurityProfiles](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserSecurityProfiles.html)
-+ **Amazon Connect Participant Service APIs**
-  + [CreateParticipantConnection](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_CreateParticipantConnection.html)
-  + [DisconnectParticipant](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_DisconnectParticipant.html)
-  + [SendEvent](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_SendEvent.html)
-  + [SendMessage](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_SendMessage.html)
-
-For the following APIs, the request parameters are logged, but the responses are redacted:
+Amazon Connect supports logging both the request parameters and the responses for APIs as events in CloudTrail log files\. For the following APIs, however, the request parameters are logged, but the responses are redacted:
 + **Amazon Connect Service APIs**
   + [DescribeContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeContactFlow.html) 
   + [DescribeRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeRoutingProfile.html)
@@ -74,6 +43,18 @@ For the following APIs, the request parameters are logged, but the responses are
   + [ListUsers](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListUsers.html)
 + **Amazon Connect Participant Service API**
   + [GetTranscript](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_GetTranscript.html)
++ **All Amazon Connect Customer Profiles Service APIs**
+
+**Amazon Connect App Integrations Service APIs**
++ ListEventIntegrations 
++ GetEventIntegration
++ CreateEventIntegration
++ UpdateEventIntegration
++ DeleteEventIntegration 
++ CreateEventIntegrationAssociation
++ CreateEventIntegration
++ DeleteEventIntegrationAssociation
++ ListEventIntegrationAssociationsn
 
 Every event or log entry contains information about who generated the request\. The identity information helps you determine the following: 
 + Whether the request was made with root or AWS Identity and Access Management \(IAM\) user credentials\.

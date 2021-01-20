@@ -4,7 +4,7 @@ To update the instance settings:
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\. For example, in **https://mytest88\.awsapps\.com/connect/home** the instance name is **mytest88**\.  
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. Complete the following procedures\.
@@ -36,6 +36,8 @@ To update the instance settings:
 1. \(Optional\) To enable live media streaming, choose **Live media streaming**, **Edit**\. For more information, see [Capture customer audio: live media streaming](customer-voice-streams.md)\.
 
 1. \(Optional\) To specify the bucket and KMS key for exported reports, choose **Exported reports**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
+
+1. \(Optional\) To enable file sharing for both agents and customers, next to **Attachments** choose **Edit**, then **Enable Attachments sharing**\. For more information about this option and additional steps, see [Enable attachments to share files using chat](enable-attachments.md)\.
 
 ## Update data streaming options<a name="update-data-streaming-options"></a>
 

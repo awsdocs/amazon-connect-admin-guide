@@ -2,7 +2,7 @@
 
 In your business, you might want to route customers to specific agents based on certain criteria, such as the skill of the agent\. This is called queue\-based routing, also known as skills\-based routing\. 
 
-For example, an airline might have some agents who handle reservations for English\-speaking customers, others who handle Spanish\-speaking customers, and a third group who handle both types of customers, but only over the phone\.
+For example, an airline might have some agents who handle reservations for English\-speaking customers, others who handle Spanish\-speaking customers, and a third group that handles both types of customers, but only over the phone\.
 
 The following illustration shows you can: 
 + Assign the same routing profile to multiple agents\.

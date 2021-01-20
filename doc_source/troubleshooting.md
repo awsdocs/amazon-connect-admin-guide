@@ -9,6 +9,10 @@ Troubleshooting Contact Control Panel \(CCP\) issues requires support from your 
 + [Gathering Helpful Information using the Streams API](#info-gathering)
 + [Analyzing the Data](#analyze-data)
 + [Validation Testing](#valid-testing)
++ [Mobile phones \(iPhone, Android\) and iPads are not supported](mobile-devices-not-supported.md)
++ [Microsoft Edge is not supported](microsoft-edge-not-supported.md)
++ [Can't make an outbound call from the CCP](cant-make-outbound-call.md)
++ [Attachments are not appearing in chats](attachments-not-appearing.md)
 
 ## Use the Check Connectivity Tool<a name="check-connectivity-tool"></a>
 
@@ -126,6 +130,8 @@ To perform effective testing for latency, the following are required:
 #### Testing Inbound Calls Using a Soft Phone<a name="inbound-test-plan"></a>
 
 This process allows you to complete a latency test scenario in about 15 seconds\. Analyzing the results and marking timestamps takes approximately 1\-2 minutes per recording\.
+
+
 
 1. Go to a quiet location\.
 

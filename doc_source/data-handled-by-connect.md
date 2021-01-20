@@ -8,9 +8,16 @@ Amazon Connect handles a variety of data related to the contact center, includin
 + **Agent\-related performance data** \-\- This includes login time, status changes, and contacts handled\.
 + **Phone call audio streams** \-\- When enabled, this also includes call recordings\.
 + **Chat transcripts** – Included only if enabled\.
++ **Attachments** – Included only if enabled\.
++ **Integration configuration** – Includes user defined name, description and metadata when creating integration with external applications\.
++ **Knowledge documents** – This includes documents used by agents to handle contacts\.
++ **Voiceprints** – When Amazon Connect Voice ID is enabled, a voiceprint is created from the customer's voice for future authentication\.
 
 Amazon Connect stores the following Personally Identifiable Information \(PII\) data related to your customers:
 + The customer's phone number: ANI for inbound calls, and DNIS for outbound calls or transfers\.
++ If you are using Amazon Connect Customer Profiles, all this data could potentially be PII\. This data is always encrypted at rest using either a customer\-provided KMS key or a service\-owned key\. The Amazon Connect Customer Profiles data is segregated by the AWS account ID and the domain\. Multiple Amazon Connect instances can share a single Customer Profiles domain\.
+
+Amazon AppIntegrations, which enables you to integrate with external applications, stores references to other AWS resources such as Amazon EventBridge buses and rules, and client\-service specified metadata\. No third party data is stored other than incidentally while being processed\.
 
 ## Phone call media<a name="phone-call-media-handling"></a>
 
@@ -50,13 +57,23 @@ In addition, you can track who listens to or deletes recordings; see [Track who 
 
 ## Contact metadata<a name="contact-metadata"></a>
 
-Amazon Connect stores metadata related to contacts that flow through the system and allows authorized users to access this information\. The Contact Search feature allows you to search and view contact data, such as ANI or other attributes set by the contact flow, that are associated with a contact for diagnostics or reporting purposes\. 
+Amazon Connect stores metadata related to contacts that flow through the system and allows authorized users to access this information\. The Contact Search feature allows you to search and view contact data, such as origination phone numbers or other attributes set by the contact flow, that are associated with a contact for diagnostics or reporting purposes\. 
 
-Contact data classified as PII, or data that represents customer content being stored by Amazon Connect, is encrypted at rest using a key that is time\-limited and specific to the Amazon Connect instance\.
+Contact data classified as PII, or data that represents customer content being stored by Amazon Connect, is encrypted at rest using a key that is time\-limited and specific to the Amazon Connect instance\. Specifically, the customer origination phone number is cryptographically hashed with a key that is specific to the instance to allow for use in contact search\.
 
 The following data stored by Amazon Connect is treated as sensitive:
-+ Customer ANI
++ Origination phone number
 + Outbound phone number
 + External numbers dialed by agents for transfers
 + External numbers transferred to by a contact flow
 + All contact attributes
+
+## Contact Lens real\-time processing<a name="real-time-processing-data"></a>
+
+Content processed by Contact Lens in real\-time is encrypted at rest and in transit\. Data is encrypted with keys owned by Contact Lens\.
+
+## Voiceprints<a name="voiceprints-data-protection"></a>
+
+If you enable Amazon Connect Voice ID, it computes and stores voiceprints out of your customers’ speech for authenticating them in future\. You must specify a Speaker ID for each customer while enrolling them for Voice ID\. We strongly recommend that you use an identifier that does not contain PII for this field\.
+
+In the preview release of Voice ID, the audio data used for generating enrollment and authentication voiceprints is enqueued for deletion within 24 hours\.

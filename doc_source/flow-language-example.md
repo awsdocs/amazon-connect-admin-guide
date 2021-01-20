@@ -12,21 +12,21 @@ To learn how to get block identifiers, we recommend creating a new contact flow 
                                                           //In this case, it's the identifier of the Play prompt block. 
                                                          //The value of this field must match the Identifier of an Action in the Actions list.
     "Metadata": { //An object that may be filled in with data as desired.
-        "EntryPointPosition": {
-            "X": 88,
-            "Y": 100
+        "EntryPointPosition": { 
+            "x": 88,
+            "y": 100
         },
         "ActionMetadata": {
             "12345678-1234-1234-1234-123456789012": {    //The identifier of the Play prompt block.
                 "Position": {
-                    "X": 270,
-                    "Y": 98
+                    "x": 270,
+                    "y": 98
                 }
             },
             "abcdef-abcd-abcd-abcd-abcdefghijkl": {  //The identifier of the Disconnect/hang up block.
                 "Position": {
-                    "X": 545,
-                    "Y": 92
+                    "x": 545,
+                    "y": 92
                 }
             }
 

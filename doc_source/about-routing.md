@@ -15,12 +15,13 @@ Here's the logic Amazon Connect uses to route contacts:
 
 ## How routing works with multiple channels<a name="routing-profile-channels-works"></a>
 
-When you set up a routing profile to handle both voice and chat channels, agents must complete the interactions with inbound contacts on one channel before they can receive a contact on the other\. 
+When you set up a routing profile to handle multiple channels, agents must complete the interactions with inbound contacts on one channel before they can receive a contact or a task on the other\. 
 
-**Example**: Say a routing profile is configured for voice contacts and for up to 5 chats\. Here's how it would work: 
-+ When agents sign on, they can be routed a chat or voice contact\.
-+ After the agents begin interacting with a voice contact, no chats or voice contacts are routed to them until they finish the call\. 
-+ When agents accept a chat, up to 5 chats are routed to them, but no voice contacts\. After they're done with the chats, they're available for the next contact, which could be voice or chat\. 
+**Example**: Say a routing profile is configured for voice contacts and for up to 5 chats and up to 10 tasks\. Here's how it would work: 
++ When agents sign on, they can be routed a chat, task, or voice contact\.
++ After the agents begin interacting with a voice call, no chats, tasks, or additional voice contacts are routed to them until they finish the call\. 
++ When agents accept a chat, up to 5 chats are routed to them, but no voice contacts or tasks\. After they're done with the chats, they're available for the next contact, which could be voice, chat, or task\. 
++ When agents accept a task, up to 10 tasks are routed to them, but no voice contacts or chats\. After they're done with the tasks, they're available for the next contact, which could be voice, chat, or task\. 
 
 This routing model allows agents to handle both voice and chat channels\. It routes contacts to the agent based on the type of contact the agent is already on\. This way, if an agent is already chatting with a customer, it's more efficient for the agent to respond to more chats instead of multitasking on two different channels\.
 

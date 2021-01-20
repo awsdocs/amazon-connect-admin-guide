@@ -4,7 +4,7 @@ The first thing you need to do when you set up a queue is to specify the hours o
 
 **To set the hours of operation and timezone for a queue**
 
-1. Choose **Routing**, **Hours of operation**\.
+1. On the navigation menu, choose **Routing**, **Hours of operation**\.
 
 1. To create a template, choose **Add new hours** and enter a name and a description\.
 

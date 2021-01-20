@@ -1,5 +1,8 @@
 # Contact block: Set callback number<a name="set-callback-number"></a>
 
+## Description<a name="set-callback-number-description"></a>
++ Specify the attribute to set the callback number\.
+
 ## Contact flow types<a name="set-callback-number-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -7,9 +10,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Customer Queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="set-callback-number-description"></a>
-+ Specify the attribute to set the callback number\.
 
 ## Properties<a name="set-callback-number-properties"></a>
 

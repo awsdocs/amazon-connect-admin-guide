@@ -10,7 +10,7 @@
 
 1. For the manager to listen to recordings that have been redacted, assign **Recorded conversations \(redacted\)** permissions to the security profile\. For more information about these permissions, see [Security profile permissions for Contact Lens](permissions-for-contact-lens.md)\.
 
-   The redaction feature is provided as part of Contact Lens for Amazon Connect\. For more information, see [About sensitive data redaction in Contact Lens](sensitive-data-redaction.md)\.
+   The redaction feature is provided as part of Contact Lens for Amazon Connect\. For more information, see [Use sensitive data redaction](sensitive-data-redaction.md)\.
 
 1. Choose **Save**\. 
 

@@ -4,10 +4,12 @@ Upgrading to the latest CCP is easy\. If you want, you can try out the latest CC
 
 1. **Try it out**: Change the URL in your browser from **/ccp\#** to **/ccp\-v2**\. The latest CCP appears automatically\. If you want, change it back to /ccp\# to return to the earlier CCP\. 
 
-1. **Upgrade**: Change the URL in your browser from **/ccp\# **to **/ccp\-v2**\. Bookmark the URL\. 
+1. **Upgrade**: Change the URL in your browser from **/ccp\#** to **/ccp\-v2**\. Bookmark the URL\. 
 
 1. If you access the CCP through the Amazon Connect console by choosing the phone icon on the top right of a page, you will be re\-directed according to the automatic upgrade date sent by email\. Please reach out to your Amazon Solution Architect if your request is more urgent\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/upgradeccp-phone-icon.png)
+
+1. After the upgrade happens, if you use the /ccp\# URL, it resolves to **/ccp\-v2**\.
 
 ## Verify your network settings<a name="upgrade-verify-network-settings"></a>
 

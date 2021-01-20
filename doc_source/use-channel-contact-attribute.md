@@ -1,4 +1,4 @@
-# How to use the Channel contact attribute<a name="use-channel-contact-attribute"></a>
+# Route based on contact's channel<a name="use-channel-contact-attribute"></a>
 
 You can personalize the customer's experience based on the channel that they use to contact you\. Here's what you do: 
 

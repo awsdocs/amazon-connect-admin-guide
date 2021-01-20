@@ -5,6 +5,7 @@ A *contact flow* defines the customer experience with your contact center from s
 **Topics**
 + [Default contact flows](contact-flow-default.md)
 + [Sample contact flows](contact-flow-samples.md)
++ [Contact block definitions](contact-block-definitions.md)
 + [Create a new contact flow](create-contact-flow.md)
 + [Copy and paste contact flows](copy-paste-contact-flows.md)
 + [Roll back a contact flow](rollback.md)
@@ -14,8 +15,9 @@ A *contact flow* defines the customer experience with your contact center from s
 + [Set up recording behavior](set-up-recordings.md)
 + [Set up queued callback](setup-queued-callback.md)
 + [Import/export contact flows](contact-flow-import-export.md)
++ [Invoke Lambda functions](connect-lambda-functions.md)
++ [Encrypt customer input](encrypt-data.md)
 + [Track events in contact flows](about-contact-flow-logs.md)
-+ [Contact block definitions](contact-block-definitions.md)
 + [Use contact attributes](connect-contact-attributes.md)
 + [Migrate contact flows](migrate-contact-flows.md)
 + [Flow language](flow-language.md)

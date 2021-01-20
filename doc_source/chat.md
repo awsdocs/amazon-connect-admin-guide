@@ -6,7 +6,7 @@ Amazon Connect allows your customers to start a chat with an agent or Amazon Lex
 
 Suppose a customer and agent are chatting, but then the customer stops responding to the agent\. The agent asks "Are you there?" and doesn't get a reply\. The agent leaves the chat\. Now the chat is no longer associated with an agent; your contact flow determines what happens next\. 
 
-In this scenario let's say the customer eventually sends another message \("Hey, I'm back"\) and the chat resumes\. Depending on the logic you define in the contact flow, the chat can be assigned to the original agent, or a different agent/queue\.
+In this scenario, let's say the customer eventually sends another message \("Hey, I'm back"\) and the chat resumes\. Depending on the logic you define in the contact flow, the chat can be assigned to the original agent, or a different agent/queue\.
 
 Here's how you build this scenario:
 
@@ -34,7 +34,7 @@ During the 25 hours, there's no limit to the number of times a customer can stop
 
 To specify wait time a shorter than 25 hours, use the [Wait](wait.md) block\. For example, you might wait 12 hours for the customer to resume the chat\. If the customer tries to resume the chat after 12 hours, in the flow you can have an Amazon Lex bot ask if they're contacting you about the same issue or a different one\.
 
-By specifying a shorter wait time, you'll ensure customers have a good experience\. Otherwise, it's possible for the customer to resume a chat after 24 hours and 58 minutes, and then be cut off after two minutes because the conversation ends automatically at the 25 hour limit\.
+By specifying a shorter wait time, you help ensure that customers have a good experience\. Otherwise, it's possible for the customer to resume a chat after 24 hours and 58 minutes, and then be cut off after two minutes because the conversation ends automatically at the 25\-hour limit\.
 
 **Tip**  
 If you're using Amazon Lex with chat, note that the default session timeout for an Amazon Lex session is 5 minutes\. The total duration for a session can't exceed 24 hours\. To change the session timeout, see [Setting the Session Timeout](https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html#context-mgmt-session-timeoutg) in the *Amazon Lex Developer Guide*\. 
@@ -47,10 +47,14 @@ With only a few steps, you can enable your app to engage with Amazon Connect cha
 + After you spin up the AWS CloudFormation stack you can call this API from your app, import the pre\-built chat widget, pass the response to the widget, and start chatting\. 
 
 In addition, see these resources to customize the chat experience: 
-+ [Amazon Connect Service API Documentation](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html), especially the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\. 
++ [Amazon Connect Service API Documentation](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html), especially the [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\. 
 +  [Amazon Connect Participant Service API](https://docs.aws.amazon.com/connect-participant/latest/APIReference/Welcome.html)\. 
 +  [Amazon Connect Streams](https://github.com/aws/amazon-connect-streams)\. Use to integrate your existing apps with Amazon Connect\. You can embed the Contact Control Panel \(CCP\) components into your app\. 
 + [Amazon Connect Chat SDK and Sample Implementations](https://github.com/amazon-connect/amazon-connect-chat-ui-examples/) 
++ Interactive messages are rich messages that present a prompt and pre\-configured display options that a customer can select from\. These messages are powered by Amazon Lex and configured through Amazon Lex using a Lambda\. These messages are powered by Amazon Lex and configured through Amazon Lex using a Lambda\. For step\-by\-step instructions that explain how to add interactive messages through Amazon Lex, see this blog: [Set up interactive messages for your Amazon Connect chatbot](https://aws.amazon.com/blogs/contact-center/easily-set-up-interactive-messages-for-your-amazon-connect-chatbot/)\. 
+
+  Amazon Connect supports the following templates: a list picker and a time picker\. For more information, see [Add interactive messages to chat](interactive-messages.md)\. 
++ [Enable Apple Business Chat](apple-business-chat.md) 
 
 ## Chat initiation method: API<a name="chat-initiation-method"></a>
 
@@ -65,7 +69,7 @@ After a chat is transferred to an agent, the **Contacts Incoming** metric is inc
 ## More information<a name="chat-more-info"></a>
 
 To learn more about chat, check out the following topics:
-+ [Test a voice or chat experience](chat-testing.md) 
++ [Test voice, chat, and task experiences](chat-testing.md) 
 + [How routing works with multiple channels](about-routing.md#routing-profile-channels-works) 
 + [Create a routing profile](routing-profiles.md) 
 + [Amazon Connect Chat SDK and Sample Implementations](https://github.com/amazon-connect/amazon-connect-chat-ui-examples/) 

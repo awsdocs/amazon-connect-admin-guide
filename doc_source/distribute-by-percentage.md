@@ -1,5 +1,9 @@
 # Contact block: Distribute by percentage<a name="distribute-by-percentage"></a>
 
+## Description<a name="disconnect-hang-up-description"></a>
++ This block is useful for doing A/B testing\. It routes customers randomly based on a percentage\.
++ Like flipping a coin, contacts are distributed randomly, which doesn’t guarantee exact percentage splits\.
+
 ## Contact flow types<a name="disconnect-hang-up-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -8,10 +12,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Outbound Whisper flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="disconnect-hang-up-description"></a>
-+ This block is useful for doing A/B testing\. It routes customers randomly based on a percentage\.
-+ Like flipping a coin, contacts are distributed randomly, which doesn’t guarantee exact percentage splits\.
 
 ## Properties<a name="disconnect-hang-up-properties"></a>
 

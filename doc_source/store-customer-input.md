@@ -1,13 +1,5 @@
 # Contact block: Store customer input<a name="store-customer-input"></a>
 
-## Contact flow types<a name="store-customer-input-types"></a>
-
-You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
-+ Customer Queue flow
-+ Transfer to Agent flow
-+ Transfer to Queue flow
-
 ## Description<a name="store-customer-input-description"></a>
 
 This block is similar to **Get customer input**, but this one stores the input as a contact attribute and allows you to encrypt it\. This way, you can encrypt sensitive input such as credit card numbers\. This block:
@@ -16,6 +8,14 @@ This block is similar to **Get customer input**, but this one stores the input a
 + Stores numerical input as a contact attribute\.
 + Allows you to specify a custom terminating keypress\.
 + If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.
+
+## Contact flow types<a name="store-customer-input-types"></a>
+
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ Inbound contact flow
++ Customer Queue flow
++ Transfer to Agent flow
++ Transfer to Queue flow
 
 ## Properties<a name="store-customer-input-properties"></a>
 

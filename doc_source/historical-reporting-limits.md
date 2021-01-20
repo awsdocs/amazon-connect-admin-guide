@@ -5,6 +5,9 @@ Historical metrics reports have the following limits:
 **Data only for active queues**
 + You can get data only for active queues\. A queue is inactive if there are no contacts in the queue and no agents available\.
 
+**Query data for three days at a time, for the past 35 days**
++ When you create a report that uses intervals \(such as 30 minute intervals\), you can return data for three days at a time, for the past 35 days\.
+
 **Download data limited to current page max \(100 results\)**
 + When you want to download historical metrics data into a \.csv file from the user interface, you can only download the data displayed on the page at any one time\. For example, if you have 256 records you want to download, and the maximum displayed in the user interface is 100, you would have to download the data three batches:
   + 1\-100

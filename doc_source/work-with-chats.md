@@ -4,7 +4,8 @@ When you set your status in the CCP to **Available**, Amazon Connect delivers ca
 
 You can't initiate chat conversations from the CCP\.
 
-Customers and agents can't send attachments, such as files, through the chat interface\.
+**Note**  
+IT Administrators: To enable customers and agents to send attachments, such as files, through the chat interface, see [Enable attachments to share files using chat](enable-attachments.md)\.
 
 **Tip**  
 Amazon Connect routes contacts to you for only one channel at a time\. When you're on a call, you won't be routed a chat conversation\. And when you're handling chat conversations, you won't be routed a call\.

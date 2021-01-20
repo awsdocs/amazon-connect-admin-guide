@@ -1,14 +1,14 @@
 # Contact block: Transfer to flow<a name="transfer-to-flow"></a>
 
+## Description<a name="transfer-to-flow-description"></a>
++ Ends the current contact flow and transfers the customer to a different contact flow\.
+
 ## Contact flow types<a name="transfer-to-flow-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Inbound contact flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="transfer-to-flow-description"></a>
-+ Ends the current contact flow and transfers the customer to a different contact flow\.
 
 ## Properties<a name="transfer-to-flow-properties"></a>
 

@@ -2,27 +2,72 @@
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you a overview of the improvements\. 
 
-## Upcoming changes: Use quick filters to drill into Routing profiles and Queues tables<a name="quick-filters-rtm"></a>
+## Upcoming change: 15 minutes interval for historical metrics reports<a name="metrics-changes-new-intervals-hmr"></a>
 
-In real\-time metrics reports, for **Routing profiles** and **Queues** tables, you can open pre\-filtered tables that display the associated queues, routing profiles, or agents\. These quick filters provide a way for you to drill into the performance data\.
+When customizing a historical metrics report, you will have the option to select a 15 minutes interval, in addition to the current option of a 30 minutes interval\. 
 
-### Example 1: Queues table \-> Routing profiles table \-> Agents table<a name="metrics-changes-quick-filters-example1"></a>
+The 15 minutes interval works the same as the 30 minutes interval\. For example, you can query up to three days of data at a time, for the past 35 days\. 
 
-For example, at a **Queues** table, choose the dropdown and then choose **View routing profiles**\.
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-15-minute-interval.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queue-table.png)
+## Upcoming changes: New metric groupings and categories<a name="metrics-changes-custom-service-levels"></a>
 
-Below the **Queues** table, a **Routing profiles** table appears\. It is filtered to display only the routing profiles associated with the queue\. On the **Routing profiles** table, you can choose quick filters to display queues or agents *only associated with that routing profile*\.
+With the future release of [custom service level metrics](#custom-service-levels), we will also make the following changes:
++ On the **Table settings** pages, pre\-set and [custom service level metrics](#custom-service-levels) will be in a new group called **Contact Service Levels**\.
++ Historical metrics on the **Table settings** page will be grouped into categories\. Currently they are in a long, unordered list\.
++ The order of metric columns on historical metrics reports is changing to match the order of the metrics on the **Table settings** page\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-routing-profiles.png)
+Following is more information about these changes\.
 
-### Example 2: Queues table \-> Agents table<a name="metrics-changes-quick-filters-example2"></a>
+### Real\-time metrics: New Contact Service Level category<a name="custom-service-levels-rtm"></a>
 
-At the **Queues** table, choose **View agents**\. Below the **Queues** table, an **Agents** table appears\. It is filtered to display all the agents working that queue\. The agents may be associated with different routing profiles\. 
+A new category of metrics will be added to the **Table settings** page: **Contact Service Level**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queues-agents.png)
+The following image shows how this new category will appear on the **Table settings** page, in an expandable group\. Choose the arrow next to the group to view and select the metrics you want to add to your report\. 
 
-## Upcoming changes: Group by channel in a historical metrics report<a name="metrics-changes-group-by-channel-hmr"></a>
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-csl-groups.png)
+
+Use the **Contact Service Level** category to choose pre\-set service level metrics, and to create custom service level metrics\.
+
+The following image shows the user interface for creating custom service level metrics\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-create-csl.png)
+
+### Historical metrics: New categories for metrics<a name="hmr-new-categories"></a>
+
+To make it easier to find the historical metrics you want to add to a report, metrics on the **Table settings** page will be grouped into the following categories:
++ Agents
++ Contacts Abandoned
++ Contact Service Level: This group contains preset and custom service levels\.
++ Contacts Answered
++ Performance
+
+Choose **Add Custom SL** to add custom service levels to your historical metrics report\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-csl-group.png)
+
+### The order of the metric columns on the historical metrics reports is changing<a name="upcoming-changes-static-columns"></a>
+
+The order of the metric columns on the historical metrics reports will match the updated grouping scheme and order of the metrics on the **Table settings** page\.
+
+This change supports the addition of [custom service level metrics](#custom-service-levels)\. It will also allow us to make future improvements for where, for example, control of how a report looks resides on the **Real\-time metrics** page and the **Historical metrics** page, not the **Table settings** page\.
+
+Note how metric columns will appear on reports in the upcoming release:
++ When you open the **Real\-time metrics** page, custom service levels will appear at the end of the **Performance** group\. 
++ Metrics on existing **Scheduled reports** \(the processed documents that arrive in your Amazon S3 buckets\) will not be re\-ordered automatically\. However, if you update an existing report, the metrics will be re\-ordered to match the order on the **Table settings** page\.
++ **Service level metrics**:
+  + Real\-time metrics reports: Service level metrics will always be added to the end of the **Performance** group, in ascending order\. 
+  + Historical metrics reports: When you add custom service level metrics, they will be added to the end of the report in the order they were created\.
+
+## Upcoming change: Custom service level metrics<a name="custom-service-levels"></a>
+
+Currently you can choose from pre\-set service levels in seconds\. In a future release, you will have the ability to add custom service level metrics\. You will also have the ability to choose from additional durations, such as minutes, hours, or days\.
+
+The maximum duration for a custom service level is 7 days\. That's because in Amazon Connect you can't have a contact that goes longer than 7 days\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-custom-servicelevels.png)
+
+## Upcoming change: Group by channel in a historical metrics report<a name="metrics-changes-group-by-channel-hmr"></a>
 
 The following changes to the historical metrics report are upcoming in a future release\. 
 
@@ -38,125 +83,30 @@ The following changes to the historical metrics report are upcoming in a future 
 1. The table shows a column for **Channel**, as shown in the following image\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-channel-label.png)
 
-## Upcoming changes: New real\-time metrics for inbound and outbound contact time<a name="metrics-changes-inbound-outbound-contact-time-rtm"></a>
+## October 2020<a name="metrics-changes-october-2020"></a>
 
-The following new real\-time metrics are upcoming in a future release\. 
+### New historical metrics for inbound and outbound contact time<a name="metrics-changes-inbound-outbound-contact-time-htm"></a>
 
-### Avg incoming connecting time<a name="rtm-avg-incoming-connecting-time"></a>
+Released the following real\-time metrics:
++  [Avg callback connecting time](real-time-metrics-definitions.md#rtm-avg-callback-connecting-time)
++ [Avg incoming connecting time](real-time-metrics-definitions.md#rtm-avg-incoming-connecting-time)
++  [Avg outbound connecting time](real-time-metrics-definitions.md#rtm-avg-outbound-connecting-time)
 
-The average time between when contacts are initiated Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+Released the following historical metrics:
++  [Agent API connecting time](historical-metrics-definitions.md#htm-agent-api-connecting-time)
++  [Agent callback connecting time](historical-metrics-definitions.md#htm-agent-callback-connecting-time)
++  [Agent incoming connecting time](historical-metrics-definitions.md#htm-agent-incoming-connecting-time)
++  [Agent outbound connecting time](historical-metrics-definitions.md#htm-agent-outbound-connecting-time)
++  [Average agent API connecting time](historical-metrics-definitions.md#htm-avg-agent-api-connecting-time)
++  [Average agent callback connecting time](historical-metrics-definitions.md#htm-avg-agent-callback-connecting-time)
++  [Average agent incoming connecting time](historical-metrics-definitions.md#htm-avg-agent-incoming-connecting-time)
++  [Average agent outbound connecting time](historical-metrics-definitions.md#htm-avg-agent-outbound-connecting-time)
 
-In the agent event stream, this time is calculated by averaging the duration between the contact state of STATE\_CHANGE event changes from CONNECTING to CONNECTED/MISSED/ERROR\. 
+### One\-click drill\-downs for Routing profiles and Queues tables<a name="metrics-changes-october-2020-one-click"></a>
 
-The following image shows the three parts that go into calculating **Avg incoming connecting time**\. It also shows what is in the agent event stream\.
+In real\-time metrics reports, for **Routing profiles** and **Queues** tables, you can open pre\-filtered tables that display the associated queues, routing profiles, or agents\. These one\-click filters provide a way for you to drill into the performance data\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-inbound-connection-time.png)
-
-### Avg outbound connecting time<a name="rtm-avg-outbound-connecting-time"></a>
-
-The average time between when outbound contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
-
-The following image shows the four parts that go into calculating **Avg outbound connecting time**\. It also shows what is in the agent event stream\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-outbound-connection-time.png)
-
-### Avg callback connecting time<a name="rtm-avg-callback-connecting-time"></a>
-
-Then average time between when callback contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
-
-The following image shows the five parts that go into calculating **Avg callback connecting time**\. It also shows what is in the agent event stream\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-callback-connection-time.png)
-
-## Upcoming changes: New historical metrics for inbound and outbound contact time<a name="metrics-changes-inbound-outbound-contact-time-htm"></a>
-
-The following new historical metrics are upcoming in a future release\. 
-
-### Agent incoming connecting time<a name="htm-agent-incoming-connecting-time"></a>
-
-The total time between when a contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\.
-
-In the agent event stream, this is the duration between the contact state of STATE\_CHANGE event changes from CONNECTING to CONNECTED/MISSED/ERROR\. 
-
-Type: String \(hh:mm:ss\)
-
-Category: Agent activity\-driven metric
-
-### Agent outbound connecting time<a name="htm-agent-outbound-connecting-time"></a>
-
-The total time between when an outbound contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\.
-
-Type: String \(hh:mm:ss\)
-
-Category: Agent activity\-driven metric
-
-### Agent callback connecting time<a name="htm-agent-callback-connecting-time"></a>
-
-The total time between when a callback contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\.
-
-Type: String \(hh:mm:ss\)
-
-Category: Agent activity\-driven metric
-
-### Agent API connecting time<a name="htm-agent-api-connecting-time"></a>
-
-The total time between when a contact is initiated using an Amazon Connect API, and the agent is connected\.
-
-Type: String \(hh:mm:ss\)
-
-Category: Agent activity\-driven metric
-
-### Average agent incoming connecting time<a name="htm-avg-agent-incoming-connecting-time"></a>
-
-The average time between when contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
-
-Type: String \(hh:mm:ss\)
-
-Category: Agent activity\-driven metric
-
-### Average agent outbound connecting time<a name="htm-avg-agent-outbound-connecting-time"></a>
-
-The average time between when an outbound contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
-
-Type: String \(hh:mm:ss\)
-
-Category: Agent activity\-driven metric
-
-### Average agent callback connecting time<a name="htm-avg-agent-callback-connecting-time"></a>
-
-The average time between when a callback contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
-
-Type: String \(hh:mm:ss\)
-
-Category: Agent activity\-driven metric
-
-### Average agent API connecting time<a name="htm-avg-agent-api-connecting-time"></a>
-
-The average time between when a contact is initiated using an Amazon Connect API, and the agent is connected\. 
-
-Type: String \(hh:mm:ss\)
-
-Category: Agent activity\-driven metric
-
-## September 2020: Quick filters for drilling into Routing profiles and Queues tables<a name="metrics-changes-quick-filters-rtm"></a>
-
-In real\-time metrics reports, for **Routing profiles** and **Queues** tables, you can open pre\-filtered tables that display the associated queues, routing profiles, or agents\. These quick filters provide a way for you to drill into the performance data\.
-
-### Example 1: Queues table \-> Routing profiles table \-> Agents table<a name="metrics-changes-quick-filters-example1"></a>
-
-For example, at a **Queues** table, choose the dropdown and then choose **View routing profiles**\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queue-table.png)
-
-Below the **Queues** table, a **Routing profiles** table appears\. It is filtered to display only the routing profiles associated with the queue\. On the **Routing profiles** table, you can choose quick filters to display queues or agents *only associated with that routing profile*\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-routing-profiles.png)
-
-### Example 2: Queues table \-> Agents table<a name="metrics-changes-quick-filters-example2"></a>
-
-At the **Queues** table, choose **View agents**\. Below the **Queues** table, an **Agents** table appears\. It is filtered to display all the agents working that queue\. The agents may be associated with different routing profiles\. 
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-quick-filter-queues-agents.png)
+For more information, see [Use one\-click drill\-downs for Routing profiles and Queues tables](one-click-drill-downs.md)
 
 ## June 2020: Changes for omnichannel support<a name="metrics-changes-june-2020"></a>
 
@@ -254,26 +204,26 @@ When the name of **Agent Status** changed to **Agent Activity**, the following l
 
 | Scenario | Before: Agent Status Labels | After: Agent Activity Labels | Notes | 
 | --- | --- | --- | --- | 
-|  Agent is logged in but offline  |  Not shown  |  Not shown  |   | 
-|  Agent switches to **Available** in the CCP  |  Available  |  Available  |   | 
+|  Agent is logged in but offline  |  Not shown  |  Not shown  |    | 
+|  Agent switches to **Available** in the CCP  |  Available  |  Available  |    | 
 |  Agent has an incoming call  |  CallIncoming  |  Incoming  |  ContactState = Incoming contact  | 
 |  Agent has an incoming callback  |  CallbackIncoming  |  Incoming  |  ContactState = Inbound callback  | 
 |  Agent accepted a callback, which is now making an outbound call to the customer  |  Calling  |  On Contact  |  ContactState = Outbound callback  | 
 |  Agent makes outbound call \(regardless of what status the agent chose in their CCP\)  |  Calling  |  On Contact  |  ContactState = Outbound contact  | 
-|  Agent missed a phone call due to timer expired  |  MissedCallAgent  |  Missed  |   | 
-|  Agent is interacting with customer on phone call \(regardless of what status the agent chose in their CCP\)  |  On call  |  On Contact  |   | 
-|  Agent puts customer on hold while on phone call \(regardless of what status the agent chose in their CCP\)  |  On call  |  On Contact  |   | 
-|  After agent hangs up call  |  After call work  |  After contact work  |   | 
-|  Agent is on Lunch \(a custom status\)  |  Lunch  |  Lunch  |   | 
-|  Supervisor's activity state if they are monitoring some agent  |  Monitoring  |  Monitoring  |   | 
-|  Agent's activity state if they are connected to customer while being monitored by a supervisor  |  On call  |  On Contact  |   | 
+|  Agent missed a phone call due to timer expired  |  MissedCallAgent  |  Missed  |    | 
+|  Agent is interacting with customer on phone call \(regardless of what status the agent chose in their CCP\)  |  On call  |  On Contact  |    | 
+|  Agent puts customer on hold while on phone call \(regardless of what status the agent chose in their CCP\)  |  On call  |  On Contact  |    | 
+|  After agent hangs up call  |  After call work  |  After contact work  |    | 
+|  Agent is on Lunch \(a custom status\)  |  Lunch  |  Lunch  |    | 
+|  Supervisor's activity state if they are monitoring some agent  |  Monitoring  |  Monitoring  |    | 
+|  Agent's activity state if they are connected to customer while being monitored by a supervisor  |  On call  |  On Contact  |    | 
 
 The following table shows the how the labels changed for **Contact State**\.
 
 
 | Scenario | Label Name Before | Label Name After | 
 | --- | --- | --- | 
-|  Agent is logged in but offline  |   |   | 
+|  Agent is logged in but offline  |    |    | 
 |  Agent switches to **Available** in the CCP  | \-  | \-  | 
 |  Agent has an incoming call  |  \-  |  Incoming contact  | 
 |  Agent has an incoming callback  |  \-  |  Inbound callback  | 

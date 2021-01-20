@@ -4,16 +4,20 @@ You can create a real\-time metrics report to view real\-time or near\-real time
 
 **To create a real\-time metrics report**
 
-1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+1. Log in to your contact center at https://*instance name*\.awsapps\.com/connect/\.
+**Note**  
+IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
 
 1. Choose **Metrics and Quality**, **Real\-time metrics**\.
 
-1. Choose one of the following report types, which group and order the data in different ways and include different metrics by default:
+1. Choose one of the following report types\. They group and order the data in different ways and include different metrics by default\.
    + **Queues**
    + **Agents**
    + **Routing profiles**
 
 1. To add a another report to the page, choose **New table** and then choose a report type\. You can add multiple reports of the same report type\.
+
+   There's no limit to the number of tables you can add, but you might start experiencing performance issues if you add a lot of them\.
 
 1. To customize a report, choose the gear icon from its table\.
 

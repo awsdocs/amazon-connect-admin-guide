@@ -1,5 +1,9 @@
 # Contact block: Play prompt<a name="play"></a>
 
+## Description<a name="play-description"></a>
++ This block can play an interruptible audio prompt, play a text\-to\-speech message, or send a chat response\.
++ Amazon Connect includes a set of pre\-recorded prompts for you to use\. However, you can record and upload your audio prompts\. For instructions, see [Create prompts](prompts.md)\.
+
 ## Contact flow types<a name="play-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -9,10 +13,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Agent Whisper flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="play-description"></a>
-+ This block can play an interruptible audio prompt, play a text\-to\-speech message, or send a chat response\.
-+ Amazon Connect includes a set of pre\-recorded prompts for you to use\. However, you can record and upload your audio prompts\. For instructions, see [Create prompts](prompts.md)\.
 
 ## Properties<a name="play-properties"></a>
 

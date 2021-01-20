@@ -1,5 +1,11 @@
 # Contact block: Set hold flow<a name="set-hold-flow"></a>
 
+## Description<a name="set-hold-flow-description"></a>
++ Links from one contact flow type to another\.
++ Specifies the flow to invoke when a customer or agent is put on hold\.
+
+  If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.
+
 ## Contact flow types<a name="set-hold-flow-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -8,12 +14,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Outbound whisper flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="set-hold-flow-description"></a>
-+ Links from one contact flow type to another\.
-+ Specifies the flow to invoke when a customer or agent is put on hold\.
-
-  If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.
 
 ## Properties<a name="set-hold-flow-properties"></a>
 

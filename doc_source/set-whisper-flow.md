@@ -1,13 +1,5 @@
 # Contact block: Set whisper flow<a name="set-whisper-flow"></a>
 
-## Contact flow types<a name="set-whisper-types"></a>
-
-You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
-+ Customer Queue flow
-+ Transfer to Agent flow
-+ Transfer to Queue flow
-
 ## Description<a name="set-whisper-description"></a>
 
 A *whisper flow* is what a customer or agent experiences when they are joined in a voice or chat conversation\. For example:
@@ -34,6 +26,14 @@ For chat conversations, you need to include a **Set whisper flow** block for def
 +  If a customer disconnects while the customer whisper is running, the contact ends\.
 + If an agent whisper flow or customer whisper flow includes a block that chat does not support, such as [Start](start-media-streaming.md)/[Stop](stop-media-streaming.md) media streaming or [Set voice](set-voice.md), chat skips these blocks and triggers an error branch\. However, it doesn't prevent the contact flow from progressing\.
 + Whisper flows don't appear in transcripts\.
+
+## Contact flow types<a name="set-whisper-types"></a>
+
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ Inbound contact flow
++ Customer Queue flow
++ Transfer to Agent flow
++ Transfer to Queue flow
 
 ## Properties<a name="set-whisper-properties"></a>
 

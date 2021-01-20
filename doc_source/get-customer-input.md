@@ -1,5 +1,12 @@
 # Contact block: Get customer input<a name="get-customer-input"></a>
 
+## Description<a name="get-customer-input-description"></a>
++ It plays a prompt to get a response from the customer\. For example, "For Sales, press one\. For Support, press two\." 
++ When customers enter DTMF input \(touch\-tone keypad or telephone input\), the prompt is interruptible\. 
++ When an Amazon Lex bot plays a voice prompt, customers can interrupt it with their voice\. To set this up, use the `barge-in-enabled` session attribute\.
++ It then branches based on the customer's input\.
++ This block works for chat only when Amazon Lex is used\.
+
 ## Contact flow types<a name="get-customer-input-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -7,13 +14,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Customer queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="get-customer-input-description"></a>
-+ It plays a prompt to get a response from the customer\. For example, "Press 1 for Sales, press 2 for Support\." 
-+ When customers enter DTMF input, the prompt is interruptible\. 
-+ When an Amazon Lex bot plays a voice prompt, customers can interrupt it with their voice\. To set this up, use the `barge-in-enabled` session attribute\.
-+ It then branches based on the customer's input\.
-+ This block works for chat only when Amazon Lex is used\.
 
 ## Properties<a name="get-customer-input-properties"></a>
 
@@ -72,6 +72,40 @@ To set up this functionality, set the `barge-in-enabled` session attribute in th
   Barge\-in is disabled globally by default\. You must set the session attribute to enable it at the global, bot, or slot levels\. For more information, see [How to use Lex session attributes](how-to-use-session-attributes.md)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/barge-in-session-attribute.png)
 
+### Configurable fields for DTMF input<a name="get-customer-input-configurable-dtmf"></a>
+
+Use the following session attributes to specify how your Lex bot responds to DTMF input\. 
++ **End character**
+
+  `x-amz-lex:dtmf:end-character:[IntentName]:[SlotName]`
+
+  The DTMF end character that ends the utterance\. 
+
+  Default = \# 
++ **Deletion character**
+
+   `x-amz-lex:dtmf:deletion-character:[IntentName]:[SlotName]`
+
+  The DTMF character that clears the accumulated DTMF digits and ends the utterance\. 
+
+  Default = \*
++ **End timeout**
+
+  `x-amz-lex:dtmf:end-timeout-ms:[IntentName]:[SlotName]` 
+
+  The idle time \(in milliseconds\) between DTMF digits to consider the utterance as concluded\.
+
+  Default = 5000 milliseconds \(5 seconds\)
++ **Max number of allow DTMF digits per utterance**
+
+  `x-amz-lex:dtmf:max-length:[IntentName]:[SlotName]` 
+
+  The maximum number of DTMF digits allowed in a given utterance\. This cannot be increased\.
+
+  Default = 1024 characters
+
+For more information, see [How to use Lex session attributes](how-to-use-session-attributes.md)\.
+
 ### Intents<a name="get-customer-input-intents"></a>
 + Enter the intents you created in Amazon Lex\. They are case sensitive\!  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-configure-get-customer-input3.png)
@@ -79,6 +113,13 @@ To set up this functionality, set the `barge-in-enabled` session attribute in th
 ## Configuration tips<a name="get-customer-input-tips"></a>
 + When you use text, either for text\-to\-speech or chat, you can use a maximum of 3,000 billed characters \(6,000 total characters\)\.
 + Amazon Lex bots support both spoken utterances and keypad input when used in a contact flow\.
++ For both voice and DTMF, there can be only one set of session attributes per conversation\. Following is the order of precedence: 
+
+  1. Lambda provided session attributes: Overrides to session attributes during customer Lambda invocation\.
+
+  1. Amazon Connect console provided session attributes: Defined in the **Get customer input** block\.
+
+  1. Service defaults: These are used only if no attributes are defined\.
 + You can prompt contacts to end their input with a pound key \# and to cancel it using the star key \*\. When you use a Lex bot, if you don't prompt customers to end their input with \#, they will end up waiting five seconds for Lex to stop waiting for additional key presses\. It's not possible to configure Lex to wait a shorter length of time\. 
 + To control time\-out  functionality, you can use Lex session attributes in this block, or in set them in your Lex Lambda function\. If you choose to set the attributes in a Lex Lambda function, the default values are used until the Lex bot is invoked\. For more information, see [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html) in the *Amazon Lex Developer Guide*\. 
 + When you specify one of the session attributes described in this article, you can use wildcards\. They let you set multiple slots for an intent or bots\.
@@ -105,6 +146,10 @@ To set up this functionality, set the `barge-in-enabled` session attribute in th
 When this block is configured, it looks similar to the following image:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-configured.png)
+
+1. **Timeout**: What to do when the time in the **Set timeout** property has elapsed\.
+
+1. **Default**: What to do if a customer enters a value other than 1 or 2\.
 
 ## Sample flows<a name="get-customer-input-samples"></a>
 

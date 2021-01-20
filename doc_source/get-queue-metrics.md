@@ -1,10 +1,5 @@
 # Contact block: Get queue metrics<a name="get-queue-metrics"></a>
 
-## Contact flow types<a name="get-queue-metrics-types"></a>
-
-You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ All flows
-
 ## Description<a name="get-queue-metrics-description"></a>
 + Retrieves the following real\-time metrics from a queue so you can make routing decisions\. If there is no current activity in your contact center, nothing is returned for these metrics\. 
   + [Queue name](real-time-metrics-definitions.md#queue-real-time) 
@@ -21,6 +16,11 @@ You can use this block in the following [contact flow types](create-contact-flow
 + You can choose to return metrics by channel, for example, voice or chat\. You can also filter by queue or agent\. These options enable you to know how many chat and voice contacts are in a queue and if you have agents available to handle those contacts\. 
 + You can route contacts based on queue status, such as number of contacts in queue or agents available\. Queue metrics are aggregated across all channels and are returned as attributes\. The current queue is used by default\.
 + After a **Get queue metrics** block, use a [Check contact attributes](check-contact-attributes.md) to check metric values and define routing logic based on them, such as number of contacts in a queue, number of available agents, and oldest contact in a queue\. 
+
+## Contact flow types<a name="get-queue-metrics-types"></a>
+
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ All flows
 
 ## Properties<a name="get-queue-metrics-properties"></a>
 
@@ -67,4 +67,4 @@ When this block is configured, it looks similar to the following image:
 ## Scenarios<a name="get-queue-metrics-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Checking attribute values in a Check contact attributes block](how-to-reference-attributes.md#check-contact-attrib-block)
++ [How to reference contact attributes](how-to-reference-attributes.md)

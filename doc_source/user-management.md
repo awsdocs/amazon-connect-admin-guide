@@ -2,7 +2,7 @@
 
 You can add users and configure them with permissions that are appropriate to their roles \(for example, agents or managers\)\. For more information, see [Security profiles](connect-security-profiles.md)\. Contacts can be routed based on the skills required of the agents\. For more information, see [Create a routing profile](routing-profiles.md)\.
 
-## Required permissions for adding users<a name="add-a-user"></a>
+## Required permissions for adding users<a name="required-permissions-add-user"></a>
 
 Before you can add users to Amazon Connect, you need the following permissions assigned to your security profile: **Users \- Create**\.
 

@@ -9,7 +9,7 @@ The security profile permissions shown in the following image apply to Contact L
 Following is a description of each of these permissions:
 
 **Contact search**  
-This permission isn't specific to Contact Lens, but it is required so you can access the **Contact search** page, which is where Contact Lens functionality appears\.
+This permission isn't specific to Contact Lens, but it is required so you can access the **Contact search** page, which is where you can search contacts so you can review the analyzed recording and transcript\. In addition, you can do fast, full\-text search on call transcripts, and search by sentiment score and non\-talk time\. 
 
 **Search contacts by conversation characteristics**  
 On the **Contact Search** page, you can access additional filters that allow you to return results by sentiment score and non\-talk time\. For more information, see [Search conversations analyzed by Contact Lens](search-conversations.md)\.

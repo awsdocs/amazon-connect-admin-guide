@@ -10,9 +10,11 @@ Finally, you'll need to provide your agents access to the Contact Control Panel 
 
 **Topics**
 + [Create an Amazon Connect instance](amazon-connect-instances.md)
-+ [Test a voice or chat experience](chat-testing.md)
++ [Test voice, chat, and task experiences](chat-testing.md)
 + [Set up your phone numbers](contact-center-phone-number.md)
 + [Set up routing](connect-queues.md)
 + [Set up agents](connect-agents.md)
 + [Upgrade to the latest CCP](upgrade-to-latest-ccp.md)
 + [Provide access to the CCP](amazon-connect-contact-control-panel.md)
++ [Embed CCP into Salesforce](salesforce-integration.md)
++ [Embed CCP into Zendesk](zendesk-integration.md)

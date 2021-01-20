@@ -1,13 +1,13 @@
 # Contact block: Check contact attributes<a name="check-contact-attributes"></a>
 
+## Description<a name="check-contact-attributes-description"></a>
++ Branches based on a comparison to the value of a contact attribute\.
++ Supported comparisons include: **Equals**, **Is Greater Than**, **Is Less Than**, **Starts With**, **Contains**\.
+
 ## Contact flow types<a name="check-contact-attributes-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows
-
-## Description<a name="check-contact-attributes-description"></a>
-+ Branches based on a comparison to the value of a contact attribute\.
-+ Supported comparisons include: **Equals**, **Is Greater Than**, **Is Less Than**, **Starts With**, **Contains**\.
 
 ## Properties<a name="check-contact-attributes-properties"></a>
 
@@ -37,5 +37,5 @@ See these sample flows for scenarios that use this block:
 
 See these topics for scenarios that use this block:
 + [How to reference contact attributes](how-to-reference-attributes.md)
-+ [How to use the Channel contact attribute](use-channel-contact-attribute.md)
-+ [How to use contact attributes to personalize the customer experience](use-attributes-cust-exp.md)
++ [Route based on contact's channel](use-channel-contact-attribute.md)
++ [How to reference contact attributes](how-to-reference-attributes.md)

@@ -7,14 +7,23 @@ Here's how queued callback works:
 1. When a customer leaves their number it's put in a queue and then routed to the next available agent\.
 
 1. After an agent accepts the callback in the CCP, Amazon Connect calls the customer\.
-   + If no agents are available to work on callbacks, the callbacks stay in queue for up to 7 days after they are created\. After that, they are automatically removed from the queue\.
+
+   If no agents are available to work on callbacks, the callbacks stay in queue for up to 7 days after they are created\. After that, they are automatically removed from the queue\.
+**Tip**  
+There's no way to manually remove a callback from the queue\. You can either answer them, or wait 7 days until they are removed automatically\.
 
 1. If there is no answer when the Amazon Connect calls the customer, it retries based on the number of times you've specified\. If the call goes to voicemail, it's considered connected\. 
+
+## How queued callbacks affect and queue limits<a name="queued-callback-limits"></a>
++ Queued callbacks count towards the queue size limit, but they are routed to the error branch\. For example, if you have a queue that handles callbacks and incoming calls, and that queue reaches the size limit:
+  + The next callback is routed to the error branch\.
+  + The next incoming call gets a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.
++ Consider setting up your queued callbacks to be lower priority than your queue for incoming calls\. This way, your agents only work on queued callbacks when the incoming call volume is low\.
 
 ## Steps to set up queued callback<a name="setup-queued-callback-overview"></a>
 
 Use the steps provided in the following overview to set up queued callback\. 
-+ [Set up a contact queue ](create-queue.md) specifically for callbacks\. In your real\-time metrics reports, you can look at that queue and see how many customers are waiting for callbacks\.
++ [Set up a queue](create-queue.md) specifically for callbacks\. In your real\-time metrics reports, you can look at that queue and see how many customers are waiting for callbacks\.
 + [Set up caller ID](queues-callerid.md)\. When setting your callback queue, specify the caller ID name and phone number that appears to customers when you call back\. 
 + [Add the callback queue to a routing profile](routing-profiles.md)\. Set this up so that contacts waiting for a call are routed to agents\. 
 + [Create a contact flow for queued callbacks](#queued-callback-contact-flow)\. You offer the option for a callback to the customer\. 

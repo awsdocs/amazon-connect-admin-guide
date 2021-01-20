@@ -1,5 +1,9 @@
 # Contact block: Check hours of operation<a name="check-hours-of-operation"></a>
 
+## Description<a name="check-hours-of-operation-description"></a>
++ Checks whether the contact is occurring within or outside of the hours of operation defined for the queue\.
++ Branches based on specified hours of operation\.
+
 ## Contact flow types<a name="check-hours-of-operation-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -7,10 +11,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Customer queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="check-hours-of-operation-description"></a>
-+ Checks whether the contact is occurring within or outside of the hours of operation defined for the queue\.
-+ Branches based on specified hours of operation\.
 
 ## Properties<a name="check-hours-of-operation-properties"></a>
 

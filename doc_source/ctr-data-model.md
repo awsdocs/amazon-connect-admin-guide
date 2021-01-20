@@ -9,7 +9,7 @@ Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for mul
 
 ## Agent<a name="ctr-Agent"></a>
 
-Information about the agent that handled the contact\.
+Information about the agent who accepted the incoming contact\.
 
 **AgentInteractionDuration**  <a name="AgentInteractionDuration-CTR"></a>
 The time, in whole seconds, that an agent interacted with a customer\.  
@@ -106,10 +106,21 @@ Type: [AgentHierarchyGroup](#ctr-AgentHierarchyGroup)
 
 Contains user\-defined attributes which are lightly typed within the contact\.
 
-**Reference Info**  
-ReferenceType  
-ContentType  
-Location
+**ContactDetailsName**  
+Type: String  
+Length: 1\-128
+
+**ContactDetailsValue**  
+Type: String  
+Length: 0\-1024
+
+**ReferenceAttributeName**  
+Type: String  
+Length: 1\-128
+
+**ReferenceAttributesValue**  
+Type: String  
+Length: 0\-1024
 
 ## ContactTraceRecord<a name="ctr-ContactTraceRecord"></a>
 
@@ -138,8 +149,8 @@ The record format version\.
 Type: String
 
 **Channel**  
-How the customer reached your contact center\.  
-Valid values: Voice, Chat
+How the contact reached your contact center\.  
+Valid values: Voice, Chat, Tasks
 
 **ConnectedToSystemTimestamp**  
 The date and time the customer endpoint connected to Amazon Connect, in UTC time\. For `INBOUND`, this matches `InitiationTimestamp`\. For `OUTBOUND`, `CALLBACK`, and `API`, this is when the customer endpoint answers\.  
@@ -174,6 +185,9 @@ Valid values:
   For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 +  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
 +  `QUEUE_TRANSFER`: While the customer is in one queue \(listening to Customer queue flow\), they are transferred into another queue using a contact flow block\.
++  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which contact flow to run after a disconnect event during a conversation\. A disconnect event is when an agent disconnects\. When the disconnect event occurs, the corresponding content flow runs\.
+
+  If a new contact is created while running a disconnect flow, then the initiation method for that new contact is DISCONNECT\.
 
 **InitiationTimestamp**  
 The date and time this contact was initiated, in UTC time\. For `INBOUND`, this is when the contact arrived\. For `OUTBOUND`, this is when the agent began dialing\. For `CALLBACK`, this is when the callback contact was created\. For `TRANSFER` and `QUEUE_TRANSFER`, this is when the transfer was initiated\. For `API`, this is when the request arrived\.  
@@ -345,25 +359,10 @@ Valid values: Amazon S3``
 
 Contains links to other documents that are related to a contact\.
 
-**ContactDetailsName**  
-String  
-Min value: 1  
-Max value: 128
-
-**ContactDetailsValue**  
-Type: String  
-Min value: 0  
-Max value: 1024
-
-**ReferenceAttributeName**  
-Type: String  
-Min value: 1  
-Max value: 128
-
-**ReferenceAttributesValue**  
-Type: String  
-Min value: 0  
-Max value: 1024
+**Reference Info**  
+ReferenceType  
+ContentType  
+Location
 
 ## RoutingProfile<a name="ctr-RoutingProfile"></a>
 

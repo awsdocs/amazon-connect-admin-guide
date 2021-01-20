@@ -1,5 +1,12 @@
 # Contact block: Start media streaming<a name="start-media-streaming"></a>
 
+## Description<a name="start-media-streaming-description"></a>
+
+Captures what the customer hears and says during a contact\. You can then perform analysis on the audio streams to:
++ Determine customer sentiment\.
++ Use the audio for training purposes\.
++ Identify and flag abusive callers\.
+
 ## Contact flow types<a name="start-media-streaming-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -10,13 +17,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Agent Whisper flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="start-media-streaming-description"></a>
-
-Captures what the customer hears and says during a contact\. You can then perform analysis on the audio streams to:
-+ Determine customer sentiment\.
-+ Use the audio for training purposes\.
-+ Identify and flag abusive callers\.
 
 ## Properties<a name="start-media-streaming-properties"></a>
 

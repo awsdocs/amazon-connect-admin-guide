@@ -1,9 +1,6 @@
 # Enable Contact Lens for Amazon Connect<a name="enable-analytics"></a>
 
-To enable Contact Lens in a contact flow, add a [Set recording and analytics behavior ](set-recording-behavior.md) block for the flow, and configure it for Contact Lens\.
-
-**Tip**  
-If you want to continue using Contact Lens to collect data after transferring a contact to another agent or queue, you need to add another [Set recording and analytics behavior ](set-recording-behavior.md) block with **Enable analytics** enabled for the flow\. This is because a transfer generates a second contact ID and CTR\. Contact Lens needs to run on that CTR as well\.
+You can enable Contact Lens in just a few steps\. Just add a [Set recording and analytics behavior ](set-recording-behavior.md) block to a flow, and configure it for Contact Lens\.
 
 **To enable Contact Lens in a contact flow**
 
@@ -11,21 +8,38 @@ If you want to continue using Contact Lens to collect data after transferring a 
 
 1. In the contact block, under **Call recording**, choose **On**, **Agent and Customer**\.
 
-   You need both agent and customer call recordings to use Content Lens\.  
+   Both agent and customer call recordings are required to use Contact Lens\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior.png)
 
 1. Select **Enable Contact Lens for speech analytics**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior2.png)
 
-1. Choose the language\.
+1. Choose one of the following:
+   + **Post\-call analytics**: Contact Lens analyzes the call recording after the conversation and After Contact Work \(ACW\) is complete\. This option provides the best transcription accuracy\.
+   + **Real\-time analytics**: Contact Lens provides both real\-time insights during the call, and post\-call analytics after the conversation has ended and After Contact Work \(ACW\) is complete\.
+
+     If you choose this option, we recommend setting up alerts based on keywords and phrases that the customer may utter during the call\. Contact Lens analyzes the conversation real\-time to detect the specified keywords or phrases, and alerts supervisors\. From there, supervisors can listen in on the live call and provide guidance to the agent to help them resolve the issue faster\.
+
+     For information about setting up alerts, see [Alert supervisors real\-time based on keywords and phrases](add-rules-for-alerts.md)\.
+
+     If your instance was created before October 2018, additional configuration is needed to access real\-time analytics\. For more information, see [Service\-Linked Role Permissions for Amazon Connect](connect-slr.md#slr-permissions)\.
+
+1. Choose the language\. For a list of available languages for various Contact Lens features, see [Supported languages](supported-languages.md)\.
+
+   For instructions on using an attribute, see [Use contact attributes](#dynamically-enable-analytics-contact-flow)\.
 
 1. Choose **Save**\.
 
 1. If the contact is going to be transferred to another agent or queue, repeat these steps to add another [Set recording and analytics behavior ](set-recording-behavior.md) block with **Enable Contact Lens for speech analytics** enabled\. 
 
+**Tip**  
+If you want to continue using Contact Lens to collect data after transferring a contact to another agent or queue, you need to add another [Set recording and analytics behavior ](set-recording-behavior.md) block with **Enable analytics** enabled for the flow\. This is because a transfer generates a second contact ID and CTR\. Contact Lens needs to run on that CTR as well\.
+
 ## How to enable redaction of sensitive data<a name="enable-redaction"></a>
 
-To enable redaction of sensitive data in a contact flow, choose **Redact sensitive data**\.
+To enable redaction of sensitive data in a contact flow, choose **Redact sensitive data**\. No other configuration is needed\. Contact Lens determines what data can be redacted\.
+
+For more information about using redaction, see [Use sensitive data redaction](sensitive-data-redaction.md)\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-enable-redaction.png)
 
@@ -45,22 +59,17 @@ You can dynamically enable Contact Lens and the redaction of the output files ba
   + None
   + RedactedOnly
   + RedactedandOriginal
-+ Language: choose one of the following \(case sensitive\)
-  + en\-US
-  + en\-GB
-  + en\-IN
-  + en\-AU
-  + es\-US: Redaction is not supported for this language
++ Language: Choose from the [list of available languages](supported-languages.md#supported-languages-contact-lens)\.
 
 You can set these attributes in the following ways:
-+ User defined: use a **Set contact attributes** block\. For general instructions about using this block, see [Using a Set contact attributes block](use-attributes-cust-exp.md#use-set-contact-attrib-block)\. Define the **Destination key** and **Value** for redaction and language as needed\. 
++ User defined: use a **Set contact attributes** block\. For general instructions about using this block, see [How to reference contact attributes](how-to-reference-attributes.md)\. Define the **Destination key** and **Value** for redaction and language as needed\. 
 
-  The following image shows how to use contact attributes for redaction:   
+  The following image shows how to use contact attributes for redaction\. Note that **Value** is case sensitive\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-contact-attributes-enable-redaction1.png)
 
   The following image show how to use contact attributes for language:  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-contact-attributes-enable-redaction2.png)
-+ [Use a Lambda function](use-attributes-cust-exp.md#attribs-with-lambda)\. This is similar to how you set up user\-defined contact attributes\. A Lambda function can return the result as a key\-value pair, depending on the language of the Lambda response\. The following example shows a Lambda response in JSON: 
++ [Use a Lambda function](attribs-with-lambda.md)\. This is similar to how you set up user\-defined contact attributes\. An AWS Lambda function can return the result as a key\-value pair, depending on the language of the Lambda response\. The following example shows a Lambda response in JSON: 
 
   ```
   {
@@ -68,3 +77,16 @@ You can set these attributes in the following ways:
      'language': 'en-US'
   }
   ```
+
+## Availability of Contact Lens features by Region<a name="regions-contactlens"></a>
+
+
+| Region | Post\-call analytics | Real\-time analytics | Categorization with pattern matching |  Categorization with semantic matching | Extended language support  | 
+| --- | --- | --- | --- | --- | --- | 
+|  US West \(Oregon\)  | Yes  | Yes  | Yes  | Yes  | Yes  | 
+|  US East \(N\. Virginia\)  | Yes  | Yes  | Yes  | Yes  | Yes  | 
+|  Asia Pacific \(Sydney\)  | Yes  | Yes  | Yes  | Yes  | Yes  | 
+|  Europe \(London\)  | Yes  | \-  | Yes  | Yes  | \-  | 
+|  Europe \(Frankfurt\)  | Yes  | \-  | Yes  | Yes  | \-  | 
+|  Asia Pacific \(Singapore\)  | Yes | \-  | Yes  | Yes  | \-  | 
+|  Asia Pacific \(Tokyo\)  | Yes  | \-  | Yes  | Yes  | \-  | 

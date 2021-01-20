@@ -23,7 +23,7 @@ Use the following steps to upgrade to the latest CCP\.
 
    1. Enter your domain URL\. All domains that embed the CCP for a particular instance to be explicitly added\. For more information, see [this article](https://github.com/amazon-connect/amazon-connect-streams#whitelisting) on GitHub\. 
 
-      If you use Salesforce, you need to add the Salesforce domains to your allow list to prevent any issues with the CTI Adapter CCP functionality\. For detailed instructions, see the [Amazon Connect CTI Adapter v5 for Salesforce installation guide](https://connect-blogs.s3.amazonaws.com/Amazon+Connect+Salesforce+CTI+Adapter/Amazon+Connect+CTI+Adapter+for+Salesforce+Lightning+-+Setup+and+Installation+Guide.pdf) or the [Amazon Connect CTI Adapter v4 for Salesforce Classic Setup Guide](https://connect-blogs.s3.amazonaws.com/Amazon+Connect+Salesforce+CTI+Adapter/Amazon+Connect+CTI+Adapter+for+Salesforce+Classic+-+Setup+and+Installation+Guide.pdf)\. 
+      If you use Salesforce, you need to add the Salesforce domains to your allow list to prevent any issues with the CTI Adapter CCP functionality\. For detailed instructions, see the  [Amazon Connect CTI Adapter v5\.9 for Salesforce Lightning installation guide](https://github.com/amazon-connect/amazon-connect-salesforce-cti/blob/main/util/lightning.pdf) or the [Amazon Connect CTI Adapter v5\.9 for Salesforce Classic installation guide](https://github.com/amazon-connect/amazon-connect-salesforce-cti/blob/main/util/classic.pdf)\. 
 
 ## Verify your network settings<a name="upgrade-verify-network-settings"></a>
 

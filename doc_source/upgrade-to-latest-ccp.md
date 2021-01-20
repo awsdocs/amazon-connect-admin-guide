@@ -1,6 +1,6 @@
 # Upgrade to the latest CCP<a name="upgrade-to-latest-ccp"></a>
 
-The URL for the latest Contact Control Panel \(CCP\) looks like this: https://*name of your instance*\.awsapps\.com/connect/ccp\-v2/
+The URL for the latest Contact Control Panel \(CCP\) ends with **ccp\-v2**
 
 You only need to upgrade to the latest CCP if you're using one the following options:
 + [The URL for your CCP ends with **/ccp\#**](upgrade-browser-ccp.md)

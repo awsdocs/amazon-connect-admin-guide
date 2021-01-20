@@ -32,6 +32,8 @@ You may want to implement a solution other than the one provided by the previous
 
 #### LMSDemo\.java<a name="lasdemo-java"></a>
 
+
+
 ```
 package com.amazonaws.kinesisvideo.parser.demo;
 
@@ -85,6 +87,8 @@ public class LMSDemo {
 ```
 
 #### LMSExample\.java<a name="lasexample-java"></a>
+
+
 
 ```
 package com.amazonaws.kinesisvideo.parser.examples;

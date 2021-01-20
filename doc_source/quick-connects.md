@@ -14,8 +14,6 @@ Contacts are transferred to an external number \(such as an on\-call pager\)\.
 
 Contacts are transferred to a specific agent as part of a contact flow\.
 
-If you want all of your agents to appear individually in the list of quick connects in the Contact Control Panel \(CCP\), you need to add each one manually\. There's no way to automate this process\.
-
 **Important**  
 Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
 
@@ -28,13 +26,13 @@ Agent and Queue quick connects only appear in the CCP when an agent goes to tran
 
 ## Step 1: Create quick connects<a name="step1-create-quick-connects"></a>
 
+ Following are the instructions to add quick connects manually using the Amazon Connect console\. To add quick connects programmatically, use the [CreateQuickConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateQuickConnect.html) API\.
+
 **To create a quick connect**
 
-1. Choose **Routing**, **Quick connects**, **Add a new destination**\.
+1. On the navigation menu, choose **Routing**, **Quick connects**, **Add a new destination**\.
 
 1. Enter a name for the connect\. Choose the type, and then specify the destination \(such as a phone number or the name of an agent\), contact flow \(if applicable\), and description\.
-**Important**  
-A description is required when you create a quick connect\. If you don't add one, you'll get an error when you try to save the quick connect\. 
 
 1. To add more quick connects, choose **Add new**\.
 

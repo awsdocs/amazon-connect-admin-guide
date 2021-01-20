@@ -9,4 +9,5 @@ Following this list of best practices can help you ensure your Amazon Connect co
 + For a detailed walkthrough that explains how to encrypt PCI, see [Creating a secure IVR solution with Amazon Connect](https://aws.amazon.com/blogs/contact-center/creating-a-secure-ivr-solution-with-amazon-connect/)\. 
 + AWS Key Management Service \(KMS\) encrypts Amazon S3 contents at the object level, which covers recordings, logs, and saved reports by default for Amazon S3\. Make sure encryption in transit and at rest rules apply downstream or to third party apps\. 
 + Use encryption in the **Store customer input** block for sensitive DTMF information\.
++ Use your own KMS key when ingesting data in Amazon Connect Customer Profile domains\.
 + For more information, see [ https://www\.pcisecuritystandards\.org]( https://www.pcisecuritystandards.org)\. 

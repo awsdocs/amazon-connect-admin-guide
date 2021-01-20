@@ -10,6 +10,9 @@ For the best agent and customer experience, we recommend using a USB headset\.
 
 Alternatively, you can redirect the contact to an external number, in E\.164 format, using an agent's existing telephony\.
 
+**Note**  
+If the agent's audio device does not support up to 48khz and the browser asserts a sample rate of 48khz, audio issues such as an audible humming sound may be present in the agent's outgoing audio\. This has been seen with Firefox but not with Chrome\. 
+
 ## Workstation minimum requirements<a name="ccp-agent-workstation"></a>
 
 Under\-powered workstations can make it difficult for agents to access the tools and resources they need to service contacts\. Also, keep in mind the resource requirements when scoping workstations to ensure that they can perform under load while appropriately multitasking for the use case\. 

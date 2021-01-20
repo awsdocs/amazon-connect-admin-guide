@@ -1,5 +1,8 @@
 # Enable contact flow logs<a name="contact-flow-logs"></a>
 
+**Tip**  
+Amazon Connect delivers contact flow logs at least once\. They may be delivered again for multiple reasons\. For example, a service retry due to an unavoidable failure\.
+
 ## Step 1: Enable logging for your instance<a name="enable-contact-flow-logs"></a>
 
 By default when you create a new Amazon Connect instance, an Amazon CloudWatch log group is created automatically to store the logs for your instance\. 

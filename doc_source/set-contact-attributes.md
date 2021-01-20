@@ -1,15 +1,15 @@
 # Contact block: Set contact attributes<a name="set-contact-attributes"></a>
 
-## Contact flow types<a name="set-contact-attributes-types"></a>
-
-You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ All flows
-
 ## Description<a name="set-contact-attributes-description"></a>
 + Stores key\-value pairs as contact attributes\.
 + Contact attributes are accessible by other areas of Amazon Connect, such as the CTRs\. 
 
   For more information about how to use contact attributes, see [Use Amazon Connect contact attributes](connect-contact-attributes.md)\. 
+
+## Contact flow types<a name="set-contact-attributes-types"></a>
+
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ All flows
 
 ## Properties<a name="set-contact-attributes-properties"></a>
 
@@ -29,4 +29,4 @@ See these sample flows for scenarios that use this block:
 ## Scenarios<a name="set-contact-attributes-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [How to use contact attributes to personalize the customer experience](use-attributes-cust-exp.md)
++ [How to reference contact attributes](how-to-reference-attributes.md)

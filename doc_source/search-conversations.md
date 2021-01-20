@@ -1,7 +1,5 @@
 # Search conversations analyzed by Contact Lens<a name="search-conversations"></a>
 
-After a call ends and the agent completes After Contact Work \(ACW\), Contact Lens analyzes and transcribes the recording of the customer\-agent conversation\.
-
 You can search the analyzed and transcribed recordings based on: 
 + Speaker\.
 + Keywords\.
@@ -9,6 +7,9 @@ You can search the analyzed and transcribed recordings based on:
 + Non\-talk time\.
 
 These criteria are described in the following sections\.
+
+**Important**  
+After a call ends **and** the agent completes After Contact Work \(ACW\), Contact Lens analyzes and transcribes the recording of the customer\-agent conversation\. The agent must choose **Clear contact** first\.
 
 ## Required permissions for searching conversations<a name="security-profile-permissions-for-search"></a>
 
@@ -35,9 +36,9 @@ If you enter *"thank you for your business", two, "CANCELLED Flights"*, the sear
 
 1. Choose **Metrics and quality**, **Contact search**\.
 
-1. In the **Filter** section, specify the time period that you want to search\. Include other information to narrow your search\. For instructions, see [Contact search](contact-search.md)\.
+1. In the **Filter** section, specify the time period that you want to search\. Include other information to narrow your search\. For instructions, see [Search for contacts](contact-search.md)\.
 **Tip**  
-When searching by date, you can search up to 14 days at a time\. 
+When searching by date, you can search up to 8 weeks at a time\. 
 
 1. In the **Conversation** section, enter the words to search, separated by commas\. If you enter a phrase, surround it with quotation marks\.
 
@@ -55,7 +56,7 @@ When searching by date, you can search up to 14 days at a time\.
 
 With Contact Lens, you can search conversations for sentiment scores on a scale of \-5 \(most negative\) to \+5 \(most positive\)\. This enables you to identify patterns and factors for why calls go well or poorly\.
 
-For example, suppose you want to identify and investigate all the calls where the customer sentiment ended negatively\. You might search for all calls where the sentiment score is **<=** \(less than or equal to\) \-4\. 
+For example, suppose you want to identify and investigate all the calls where the customer sentiment ended negatively\. You might search for all calls where the sentiment score is **<=** \(less than or equal to\) \-1\. 
 
 **To search for sentiment scores or evaluate sentiment shift**
 

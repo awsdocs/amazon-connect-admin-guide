@@ -1,14 +1,14 @@
 # Contact block: Loop prompts<a name="loop-prompts"></a>
 
+## Description<a name="loop-prompts-description"></a>
++ Loops a sequence of prompts while a customer or agent is on hold or in queue\.
+
 ## Contact flow types<a name="loop-prompts-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Customer Queue flow
 + Customer Hold flow
 + Agent Hold flow
-
-## Description<a name="loop-prompts-description"></a>
-+ Loops a sequence of prompts while a customer or agent is on hold or in queue\.
 
 ## Properties<a name="loop-prompts-properties"></a>
 

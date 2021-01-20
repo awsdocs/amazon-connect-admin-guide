@@ -9,4 +9,4 @@ Use the [Set whisper flow](set-whisper-flow.md) block to override the default ag
 **Important**  
 For chat conversations, you need to include a [Set whisper flow](set-whisper-flow.md) for default agent or customer whispers to play\. For instructions, see [Set the default whisper flow for a chat conversation](set-default-whisper-flow-for-chat.md)\.
 
-For more information about system variables, see [Contact flow system attributes](connect-attrib-list.md#attribs-system-table)\.
+For more information about system variables, see [System attributes](connect-attrib-list.md#attribs-system-table)\.

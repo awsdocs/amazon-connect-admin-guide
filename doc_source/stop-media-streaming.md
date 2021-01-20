@@ -1,5 +1,9 @@
 # Contact block: Stop media streaming<a name="stop-media-streaming"></a>
 
+## Description<a name="stop-media-streaming-description"></a>
++ Stops capturing customer audio after it is started with a **Start media streaming** block\.
++ You must use a **Stop media streaming** block to stop media streaming\.
+
 ## Contact flow types<a name="stop-media-streaming-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -10,10 +14,6 @@ You can use this block in the following [contact flow types](create-contact-flow
 + Agent Whisper flow
 + Transfer to Agent flow
 + Transfer to Queue flow
-
-## Description<a name="stop-media-streaming-description"></a>
-+ Stops capturing customer audio after it is started with a **Start media streaming** block\.
-+ You must use a **Stop media streaming** block to stop media streaming\.
 
 ## Properties<a name="stop-media-streaming-properties"></a>
 
