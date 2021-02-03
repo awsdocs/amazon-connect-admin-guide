@@ -1,4 +1,4 @@
-# Sample Note for Screenpop<a name="sample-note-for-screenpop"></a>
+# Sample note for screenpop<a name="sample-note-for-screenpop"></a>
 
 Type: Contact flow \(inbound\)
 

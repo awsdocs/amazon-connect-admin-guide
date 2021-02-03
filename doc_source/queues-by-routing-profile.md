@@ -1,4 +1,4 @@
-# List Queues Grouped By Routing Profile<a name="queues-by-routing-profile"></a>
+# List queues grouped by routing profile<a name="queues-by-routing-profile"></a>
 
 1. Go to **Metrics and quality**, **Real\-time metrics**, **Queues**\.
 

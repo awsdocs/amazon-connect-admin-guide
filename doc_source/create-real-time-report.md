@@ -1,19 +1,23 @@
-# Create a Real\-time Metrics Report<a name="create-real-time-report"></a>
+# Create a real\-time metrics report<a name="create-real-time-report"></a>
 
-You can create a real\-time metrics report to view real\-time or near\-real time metrics data for activity in your contact center\. You must have permission to access metric data\. The **CallCenterManager** and **QualityAnalyst** security profiles include this permission\. For more information, see [Security Profiles](connect-security-profiles.md)\.
+You can create a real\-time metrics report to view real\-time or near\-real time metrics data for activity in your contact center\. You must have permission to access metric data\. The **CallCenterManager** and **QualityAnalyst** security profiles include this permission\. For more information, see [Security profiles](connect-security-profiles.md)\.
 
 **To create a real\-time metrics report**
 
-1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+1. Log in to your contact center at https://*instance name*\.awsapps\.com/connect/\.
+**Note**  
+IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
 
 1. Choose **Metrics and Quality**, **Real\-time metrics**\.
 
-1. Choose one of the following report types, which group and order the data in different ways and include different metrics by default:
+1. Choose one of the following report types\. They group and order the data in different ways and include different metrics by default\.
    + **Queues**
    + **Agents**
    + **Routing profiles**
 
 1. To add a another report to the page, choose **New table** and then choose a report type\. You can add multiple reports of the same report type\.
+
+   There's no limit to the number of tables you can add, but you might start experiencing performance issues if you add a lot of them\.
 
 1. To customize a report, choose the gear icon from its table\.
 
@@ -29,7 +33,7 @@ You can create a real\-time metrics report to view real\-time or near\-real time
    + **Queues**—Includes data only for the queues that you select from **Include**\.
    + **Routing profiles**—Includes data only for the routing profiles that you select from **Include**\.
 
-1. On the **Metrics** tab, choose the metrics and fields to include in the report\. The available metrics and fields depend on the report type and filters that you select\. For more information, see [Real\-time Metrics Definitions](real-time-metrics-definitions.md)\.
+1. On the **Metrics** tab, choose the metrics and fields to include in the report\. The available metrics and fields depend on the report type and filters that you select\. For more information, see [Real\-time metrics definitions](real-time-metrics-definitions.md)\.
 
 1. When you are finished customizing the report, choose **Apply**\.
 

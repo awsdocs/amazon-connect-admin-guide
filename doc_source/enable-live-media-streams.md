@@ -1,4 +1,4 @@
-# Enable Live Media Streaming in Your Instance<a name="enable-live-media-streams"></a>
+# Enable live media streaming in your instance<a name="enable-live-media-streams"></a>
 
 Live media streaming \(customer audio streams\) is not enabled by default\. You can enable customer audio streams from the settings page for your instance\.
 
@@ -6,7 +6,7 @@ Live media streaming \(customer audio streams\) is not enabled by default\. You 
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. Choose the instance alias for the instance from the **Instance Alias** column\.
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.
 
 1. In the navigation pane, choose **Data storage**\.
 
@@ -20,4 +20,4 @@ Live media streaming \(customer audio streams\) is not enabled by default\. You 
 
 1. Choose **Save** under **Live media streaming**, and then choose **Save** at the bottom of the page\.
 
-After you enable live media streaming, add **Start media streaming** and **Stop media streaming** blocks to your contact flow\. Configure those blocks to specify what audio you want to capture\. For instructions and an example, see [Example Contact Flow for Testing Live Media Streaming](use-media-streams-blocks.md)\.
+After you enable live media streaming, add **Start media streaming** and **Stop media streaming** blocks to your contact flow\. Configure those blocks to specify what audio you want to capture\. For instructions and an example, see [Example contact flow for testing live media streaming](use-media-streams-blocks.md)\.

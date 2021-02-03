@@ -1,4 +1,4 @@
-# Determine How Long an Agent Spends Doing ACW<a name="determine-acw-time"></a>
+# Determine how long an agent spends doing ACW<a name="determine-acw-time"></a>
 
 There's no event in the agent event stream that tells you how long a contact is in the ACW state, and by extension how long an agent spends doing ACW\. However, there's other data in the agent event stream that you can use to figure this out\. 
 

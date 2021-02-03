@@ -1,4 +1,4 @@
-# Download Recordings/Transcripts of Past Conversations<a name="download-recordings"></a>
+# Download recordings/transcripts of past conversations<a name="download-recordings"></a>
 
 These are the steps that a manager does to download past recordings/transcripts of conversations\.
 

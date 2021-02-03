@@ -1,4 +1,4 @@
-# Use an Allow List for Integrated Applications<a name="app-integration"></a>
+# Use an allow list for integrated applications<a name="app-integration"></a>
 
 All domains that embed the CCP for a particular instance must be explicitly allowed for cross\-domain access to the instance\. For example, to integrate with Salesforce, you must place your Salesforce Visualforce domain in an allow list\.
 

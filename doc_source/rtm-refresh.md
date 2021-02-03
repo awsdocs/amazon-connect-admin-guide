@@ -1,4 +1,4 @@
-# How Often Real\-Time Metrics Refresh<a name="rtm-refresh"></a>
+# How often real\-time metrics refresh<a name="rtm-refresh"></a>
 
 Data in real\-time metrics reports is refreshed as follows:
 + The **Real\-time metrics** page refreshes every 15 seconds, as long as the page is active\. For example, if you have multiple tabs open in your browser and navigate to a different tab, the real\-time metric page won't be updated until you return to it\.

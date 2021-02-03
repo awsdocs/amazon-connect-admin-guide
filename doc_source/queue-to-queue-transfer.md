@@ -1,9 +1,9 @@
-# Manage Contacts in a Queue<a name="queue-to-queue-transfer"></a>
+# Manage contacts in a queue<a name="queue-to-queue-transfer"></a>
 
 For inbound contacts, you can define advanced routing decisions to minimize queue wait times, or route contacts to specific queues, using blocks in your contact flow\. For example: 
 + Use a **Check queue status** block to check staffing or agent availability for a queue before sending a contact to that queue\.
 + Or, use a **Get queue metrics** block to retrieve queue metrics\.
-+ Then use a **Check contact attributes** block to check specific queue metric attributes, and define conditions to determine which queue to route the contact to based on attribute values\. For more information about using queue metrics, see [How to Use System Metric Attributes](attrib-system-metrics.md)\.
++ Then use a **Check contact attributes** block to check specific queue metric attributes, and define conditions to determine which queue to route the contact to based on attribute values\. For more information about using queue metrics, see [Route based on number of contacts in a queue](attrib-system-metrics.md)\.
 
 After determining which queue to transfer the contact to, use a **Transfer to queue** block in a contact flow to transfer the contact to that queue\. When the **Transfer to queue** block runs, it checks the queue capacity to determine whether or not the queue is at capacity \(full\)\. This check for queue capacity compares the current number of contacts in the queue to the [Maximum contacts in queue](set-maximum-queue-limit.md) limit, if one is set for the queue\. If no limit is set, the queue is limited to the number of concurrent contacts set in the [service quota](amazon-connect-service-limits.md) for the instance\.
 
@@ -13,7 +13,7 @@ To change the queue associated with the call after it is already placed in a que
 
 **To manage contacts in a queue using a Transfer to queue block**
 
-1. In Amazon Connect, choose **Routing**, **Contact flows**\.
+1. In Amazon Connect, on the navigation menu choose **Routing**, **Contact flows**\.
 
 1. Choose the down arrow next to **Create contact flow**, then choose **Create customer queue flow**\.
 

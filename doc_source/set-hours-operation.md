@@ -1,10 +1,10 @@
-# Set the Hours of Operation for a Queue<a name="set-hours-operation"></a>
+# Set the hours of operation and timezone for a queue<a name="set-hours-operation"></a>
 
-The first thing you need to do when you set up a queue is to specify the hours of operation\. The hours may be referenced in contact flows\. For example, when routing contacts to agents, you might use the [Check Hours of Operation](check-hours-of-operation.md) block first, and then route the contact to the appropriate queue\. 
+The first thing you need to do when you set up a queue is to specify the hours of operation and timezone\. The hours may be referenced in contact flows\. For example, when routing contacts to agents, you might use the [Check hours of operation](check-hours-of-operation.md) block first, and then route the contact to the appropriate queue\. 
 
-**To set the hours of operation for a queue**
+**To set the hours of operation and timezone for a queue**
 
-1. Choose **Routing**, **Hours of operation**\.
+1. On the navigation menu, choose **Routing**, **Hours of operation**\.
 
 1. To create a template, choose **Add new hours** and enter a name and a description\.
 
@@ -14,9 +14,9 @@ The first thing you need to do when you set up a queue is to specify the hours o
 
 1. Choose **Save**\.
 
-1. Now you can specify these the hours of operation when you [create a queue](create-queue.md), and check them in the [Check Hours of Operation](check-hours-of-operation.md) block\.
+1. Now you can specify these the hours of operation when you [create a queue](create-queue.md), and check them in the [Check hours of operation](check-hours-of-operation.md) block\.
 
-## How to Specify Midnight<a name="set-hours-operation-midnight"></a>
+## How to specify midnight<a name="set-hours-operation-midnight"></a>
 
 To specify midnight, enter 12:00AM\.
 
@@ -41,6 +41,27 @@ The final schedule looks like this:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-hours-of-operation-closed-weekends.png)
 
-## Use the Check Hours of Operation Block<a name="use-check-hours-of-operation-block"></a>
+## Add lunch and other breaks<a name="add-lunch-breaks"></a>
 
-At the start of your contact flows, use the [Check Hours of Operation](check-hours-of-operation.md) block to determine whether your contact center is open, and to branch accordingly\. 
+If your entire contact center were to close for lunch from 12\-1, for example, then you'd enter hours to specify that, as in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hours-of-operation-lunch.png)
+
+In most contact centers breaks are staggered\. While some agents are at lunch, for example, others are still available to handle contacts\. Instead of specifying this in the hours of operation, you [add custom agent statuses](agent-custom.md) that appear in the agent's Contact Control Panel \(CCP\)\. 
+
+For example, you might create a custom status named **Lunch**\. When the agent goes to lunch, they change their status in the CCP from **Available** to **Lunch**\. During this time, no contacts are routed to them\. When they return from lunch and are ready to take contacts again, they change their status back to **Available**\. 
+
+Supervisors can change an agent's status using the real\-time metrics report\.
+
+For more information, see these topics: 
++ [Add custom agent status](agent-custom.md)
++ [About agent status](metrics-agent-status.md)
++ [Change the "Agent activity" status in a real\-time metrics report ](rtm-change-agent-activity-state.md)
+
+## What happens during daylight savings time<a name="daylight-savings-time"></a>
+
+Amazon Connect uses the timezone to determine whether daylight savings time is in effect for the queues, and adjusts automatically\. When a contact comes in, Amazon Connect looks at the hours and timezone to determine whether the contact can be routed to the given queue\. 
+
+## Use the Check Hours of Operation block<a name="use-check-hours-of-operation-block"></a>
+
+At the start of your contact flows, use the [Check hours of operation](check-hours-of-operation.md) block to determine whether your contact center is open, and to branch accordingly\. 

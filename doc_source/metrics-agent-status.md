@@ -1,4 +1,4 @@
-# About Agent Status<a name="metrics-agent-status"></a>
+# About agent status<a name="metrics-agent-status"></a>
 
 Agents have a status\. It's manually set in the Contact Control Panel \(CCP\)\. 
 + When they're ready to handle contacts, they set their status in the CCP to **Available**\. This means inbound contacts can be routed to them\.
@@ -7,29 +7,37 @@ Agents have a status\. It's manually set in the Contact Control Panel \(CCP\)\.
 **Tip**  
 Supervisors can manually [change the agent's status in the real\-time metrics report](rtm-change-agent-activity-state.md)\. 
 
+The following diagram illustrates how the agent's status in the CCP stays constant while they are handling contacts, but in the real\-time metrics report, the **Agent activity state** and the **Contact state** change\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-acw-contactstate.png)
+
+For example, when the **Agent activity state** = **Incoming**, the **Contact state** = **Incoming contact**\.
+
+## About custom agent statuses<a name="custom-agent-status"></a>
+
 It's possible for agents to make outbound calls when their status in the CCP is set to a custom status\. Technically, agents can make an outbound call when their CCP is set to **Offline**\. 
 
-For example, an agent wants to make an outbound call to a contact\. Because they don't want contacts to be routed to them during this time, they set their status to a custom status\. So when you look at your metrics, you'll see the agent is simultaneously on **NPT** \(the metric that indicates a custom status\) and **On Call**, for example\.
+For example, an agent wants to make an outbound call to a contact\. Because they don't want contacts to be routed to them during this time, they set their status to a custom status\. So when you look at your real\-time metrics report, you'll see the agent is simultaneously on **NPT** \(the metric that indicates a custom status\) and **On contact**, for example\.
 
-## About ACW \(After Contact Work\)<a name="agent-status-acw"></a>
+## About ACW \(After contact work\)<a name="agent-status-acw"></a>
 
-After a conversation between an agent and customer ends, the contact is moved into the ACW state, not the agent\. The agent's status in the CCP is still set to **Available**\. 
+After a conversation between an agent and customer ends, the contact is moved into the ACW state\.
 
 When the agent finishes doing ACW for the contact, they click **Clear** to clear that slot so another contact can be routed to them\.
 
-Because we're tracking the contact state, if you want to identify how long an agent spent on ACW for a contact:
+To identify how long an agent spent on ACW for a contact:
 + In the historical metrics report, **After contact work time** captures the amount of time each contact spent in ACW\.
-+ In the agent event stream, you have to do some calculations\. For more information, see [Determine How Long an Agent Spends Doing ACW](determine-acw-time.md)\.
++ In the agent event stream, you have to do some calculations\. For more information, see [Determine how long an agent spends doing ACW](determine-acw-time.md)\.
 
-## How Do You Know When an Agent Can Handle Another Contact?<a name="agent-availability"></a>
+## How do you know when an agent can handle another contact?<a name="agent-availability"></a>
 
 The **Availability** metric tells you when agents are finished with a contact and ready to have another one routed to them\.
 
-## What Appears in the Real\-Time Metrics Report?<a name="agent-status-rtm.title"></a>
+## What appears in the real\-time metrics report?<a name="agent-status-rtm.title"></a>
 
 To find out what the agent status is in the real\-time metrics report, look at the **Agent Activity** metric\.
 
-## What Appears in the Agent Event Stream?<a name="agent-status-in-agent-event-stream"></a>
+## What appears in the agent event stream?<a name="agent-status-in-agent-event-stream"></a>
 
 In the agent event stream you'll see the **AgentStatus**, for example: 
 
@@ -41,7 +49,7 @@ In the agent event stream you'll see the **AgentStatus**, for example:
       "AgentStatus": {   //Here's the agent's status that they set in the CCP.  
           "ARN": "arn:aws:connect:us-east-1:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
           "Name": "Available",  //When an agent sets their status to "Available" it means they are ready for
-              inbound contacts to be routed to them, and not say, at Lunch.  
+                                                      // inbound contacts to be routed to them, and not say, at Lunch.  
           "StartTimestamp": "2019-05-25T18:43:59.049Z"
       },
 ```

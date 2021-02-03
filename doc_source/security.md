@@ -9,9 +9,9 @@ Security is a shared responsibility between AWS and you\. The [shared responsibi
 This documentation helps you understand how to apply the shared responsibility model when using Amazon Connect\. The following topics show you how to configure Amazon Connect to meet your security and compliance objectives\. You also learn how to use other AWS services that help you to monitor and secure your Amazon Connect resources\. 
 
 **Topics**
-+ [Data Protection in Amazon Connect](data-protection.md)
-+ [Identity and Access Management for Amazon Connect](security-iam.md)
-+ [Logging and Monitoring Amazon Connect](logging-and-monitoring.md)
-+ [Compliance Validation Amazon Connect](compliance-validation.md)
++ [Data protection in Amazon Connect](data-protection.md)
++ [Identity and access management for Amazon Connect](security-iam.md)
++ [Logging and monitoring Amazon Connect](logging-and-monitoring.md)
++ [Compliance validation in Amazon Connect](compliance-validation.md)
 + [Resilience in Amazon Connect](disaster-recovery-resiliency.md)
-+ [Infrastructure Security in Amazon Connect](infrastructure-security.md)
++ [Infrastructure security in Amazon Connect](infrastructure-security.md)

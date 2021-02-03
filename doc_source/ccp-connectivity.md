@@ -1,4 +1,4 @@
-# CCP Connectivity<a name="ccp-connectivity"></a>
+# CCP connectivity<a name="ccp-connectivity"></a>
 
 When an agent logs in, the CCP attempts to connect to the Amazon EC2 signaling endpoints listed in the AWS ipranges\.json file, Amazon Connect for media, and CloudFront for web artifacts such as images\. When the agent logs out or the browser is closed, endpoints are reselected when the agent next logs in\. If a connection to Amazon EC2 or Amazon Connect fails, errors display on the CCP\. If a connection to CloudFront fails, web elements such as buttons and icons, or even the page itself fails to load correctly\.
 

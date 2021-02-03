@@ -1,4 +1,4 @@
-# Sample Inbound Flow \(First Contact Experience\)<a name="sample-inbound-flow"></a>
+# Sample inbound flow \(first contact experience\)<a name="sample-inbound-flow"></a>
 
 Type: Contact flow \(inbound\)
 

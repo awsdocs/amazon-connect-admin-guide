@@ -1,4 +1,4 @@
-# List Agents Grouped By Routing Profile<a name="agents-grouped-by-routing-profile"></a>
+# List agents grouped by routing profile<a name="agents-grouped-by-routing-profile"></a>
 
 1. Go to **Metrics and quality**, **Real\-time metrics**, **Queues**\.
 

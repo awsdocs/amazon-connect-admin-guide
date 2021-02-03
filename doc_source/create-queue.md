@@ -1,19 +1,22 @@
-# Create a Queue<a name="create-queue"></a>
+# Create a queue<a name="create-queue"></a>
 
-When you create a queue, it is automatically active and can be assigned to a routing profile\. Users with the proper permissions can deactivate the queue, which puts it in an offline mode and makes it unavailable to assign to a routing profile\.
+1. On the navigation menu, choose **Routing**, **Queues**, **Add new queue**\.
 
-To learn how queues work, see [Routing Profiles](concepts-routing.md) and [Queue\-Based Routing](concepts-queue-based-routing.md)\.
+1. Add the appropriate information about your queue and choose **Add new queue**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/add-a-new-queue.png)
 
-**To create a standard queue**
+   See the following topics for detailed information about each of the above areas:
 
-1. Choose **Routing**, **Queues**, **Add new queue**\.
+   1. [Set the hours of operation and timezone for a queue](set-hours-operation.md)
 
-1. Add the appropriate information about your queue and choose **Add new queue**\.
+   1. [Set up outbound caller ID](queues-callerid.md)
 
-**To disable an active queue**
+   1. [Set the Maximum contacts in queue limit](set-maximum-queue-limit.md)
 
-1. Choose **Routing**, **Queues**\.
+   1. [Create quick connects](quick-connects.md)
 
-1. Hover over the name of the queue to edit and choose the power icon\.
+   The queue is automatically active\.
 
-1. Choose **Disable**\.
+1. Assign the queue to a routing profile; for information, see [Create a routing profile](routing-profiles.md)\. The routing profile links the queue and agents together\.
+
+To learn how queues work, see [Routing profiles](concepts-routing.md) and [Queue\-based routing](concepts-queue-based-routing.md)\.

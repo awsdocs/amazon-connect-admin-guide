@@ -1,8 +1,6 @@
 # Concepts<a name="connect-concepts"></a>
 
-Amazon Connect enables you to create an **omnichannel contact center**: a contact center that provides a unified experience across multiple communication channels, such as voice and chat\.
-
-In Amazon Connect you build once and enable the experience for both voice and chat channels:
+Amazon Connect enables you to create an **omnichannel contact center**: a contact center that provides a unified experience across multiple channels, such as voice, chat, and tasks\.
 + You use the same routing profiles, queues, contact flows, metrics, and reports for both channels\.
 + Managers monitor both channels from one dashboard\.
 + Agents handle all customers from just one interface\. If a customer interaction starts with chat and moves to voice, the agent handling the voice call has the complete chat transcript so context is preserved\. 
@@ -14,9 +12,11 @@ This section explains concepts that will help you set up your Amazon Connect con
 **Topics**
 + [Telephony](concepts-telephony.md)
 + [Chat](chat.md)
-+ [Routing Profiles](concepts-routing.md)
-+ [Queues: Standard and Agent](concepts-queues-standard-and-agent.md)
-+ [Queues: Priority and Delay](concepts-routing-profiles-priority.md)
-+ [Queue\-Based Routing](concepts-queue-based-routing.md)
-+ [Channels and Concurrency](channels-and-concurrency.md)
-+ [Contact Flows](concepts-contact-flows.md)
++ [Tasks](tasks.md)
++ [Routing profiles](concepts-routing.md)
++ [Queues: standard and agent](concepts-queues-standard-and-agent.md)
++ [Queues: priority and delay](concepts-routing-profiles-priority.md)
++ [Queue\-based routing](concepts-queue-based-routing.md)
++ [Channels and concurrency](channels-and-concurrency.md)
++ [Contact flows](concepts-contact-flows.md)
++ [Rules](concepts-rules.md)

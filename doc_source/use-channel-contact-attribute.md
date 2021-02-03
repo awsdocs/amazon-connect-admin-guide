@@ -1,6 +1,6 @@
-# How to Use the Channel Contact Attribute<a name="use-channel-contact-attribute"></a>
+# Route based on contact's channel<a name="use-channel-contact-attribute"></a>
 
-You can personalize the customer's experience based on the channel they use to contact you\. Here's what you do: 
+You can personalize the customer's experience based on the channel that they use to contact you\. Here's what you do: 
 
 1. Add a **Check contact attributes** block to the beginning of your contact flow\.
 

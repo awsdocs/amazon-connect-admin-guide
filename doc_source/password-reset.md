@@ -1,4 +1,4 @@
-# Reset a User's Password<a name="password-reset"></a>
+# Reset a user's password for Amazon Connect<a name="password-reset"></a>
 
 **To reset a password for a user**
 
@@ -10,21 +10,22 @@
 
 1. Choose **reset password**\. Specify a new password and then choose **Submit**\.
 
-   Resetting the user's password will immediately log them out of the contact control panel\.
+   Resetting the user's password will immediately log them out of the Contact Control Panel\.
 
 1. Communicate the new password to the user\.
 
-**To reset your own lost or forgotten Amazon Connect Admin password**
+## Reset your own lost or forgotten Amazon Connect admin password<a name="password-reset-admin"></a>
++ See [Emergency admin login](emergency-admin-login.md)\.
 
-1. Log in to the [AWS Management Console](https://console.aws.amazon.com/console) using your AWS account\. 
+## Reset your agent or manager password<a name="password-reset-aws"></a>
 
-1. Choose **Amazon Connect**\.
+Use the following steps if you want to change your password, or if you forgot it and need a new one\.
 
-1. Under **Instance Alias**, click the instance alias your Amazon Connect instance \(not the Access URL\)\.
+1. If you're an Amazon Connect agent or manager, at the login page, choose **Forgot Password**\.
 
-1. Choose **Login as administrator**\.
+1. Type the characters you see in the image, and then choose **Recover Password**\.
 
-1. Perform the steps to reset a user's password but on your own account\.
+1. A message will be sent to your email address with a link that you can use to reset your password\.
 
-**To reset your own lost or forgotten AWS password**
+## Reset your own lost or forgotten AWS password<a name="password-reset-aws"></a>
 + To reset the password you used when you first created your AWS account, see [Resetting a Lost or Forgotten Root User Password](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys_retrieve.html#reset-root-password) in the *IAM User Guide*\. 

@@ -1,17 +1,18 @@
-# Enable Auto\-Accept Call for Agents<a name="enable-auto-accept"></a>
+# Enable auto\-accept call for agents<a name="enable-auto-accept"></a>
 
 When Auto\-Accept Call is enabled for an available agent, the agent connects to contacts automatically\. 
 
-**Tip**  
-When a call arrives to an agent who has Auto\-Accept Call enabled, the Contact Control Panel \(CCP\) briefly shows the options **Accept** or **Reject**\. This is expected behavior\. After a moment, the call is automatically accepted and these options disappear\.
+**How long until the call is connected to the agent?** Less than one second\. When a call arrives to an available agent who has Auto\-Accept Call enabled, the Contact Control Panel \(CCP\) briefly shows the options **Accept** or **Reject**\. This is expected behavior\. After less than a second, the call is automatically accepted and these options disappear\.
+
+Auto\-Accept Call doesn't work for callbacks\.
 
 You can't enable Auto\-Accept Call while editing multiple existing users in your Amazon Connect instance\. You must edit existing users individually to enable it\. You can also configure the setting for multiple new users when you bulk upload new users with the CSV template\. 
 
-## Enable Auto\-Accept Call for Existing Agents<a name="w49aac20c22c13b9"></a>
+## Enable auto\-accept call for existing agents<a name="w161aac24c23c13c11"></a>
 
 To complete these steps, you must log in as a user who has the following permissions in their security profile: **Edit, Create, Remove, Enable / Disable, and Edit permission**\.
 
-1. Log in to your Amazon Connect instance using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+1. Log in to the Amazon Connect console with an Admin account, or an account assigned to a security profile that has permissions to create or edit users\.
 
 1. In the left navigation bar, choose **Users**, **User management**\.
 
@@ -23,7 +24,7 @@ To complete these steps, you must log in as a user who has the following permiss
 
 1. Repeat these steps for each user that you want to edit\.
 
-## Bulk Upload New Users with Auto\-Accept Call Enabled<a name="bulk-upload-users-auto-accept"></a>
+## Bulk upload new users with auto\-accept call enabled<a name="bulk-upload-users-auto-accept"></a>
 
 You can't use the CSV template to edit information for existing users\. If you include duplicate users with different information in the CSV template, you will receive an error\.
 
@@ -47,7 +48,7 @@ You can't use the CSV template to edit information for existing users\. If you i
 
 1. Under **Verify user details**, verify that the information is correct for the new users, and then choose **Create users**\.
 
-## \(Optional\) Verify the Change in CCP Logs<a name="bulk-upload-users-auto-accept-verify"></a>
+## \(Optional\) Verify the change in CCP logs<a name="bulk-upload-users-auto-accept-verify"></a>
 
 To confirm that **Auto\-Accept Call** is enabled for an agent, download the CCP logs generated for that agent: in the CCP for the agent, choose **Settings**, **Download logs**\. The logs are saved to your browser's default download directory\. 
 

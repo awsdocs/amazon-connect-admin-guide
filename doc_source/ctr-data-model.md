@@ -1,13 +1,15 @@
-# Contact Trace Records Data Model<a name="ctr-data-model"></a>
+# Contact trace records \(CTR\) data model<a name="ctr-data-model"></a>
 
 This article describes the data model for Amazon Connect contact trace records \(CTRs\)\. CTRs capture the events associated with a contact in your contact center\. Real\-time and historical metrics are based on the data captured in the CTRs\.
+
+For the CTR retention period and maximum size of the CTR attributes section, see [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.
 
 **Tip**  
 Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for multiple reasons, such as new information arriving after initial delivery\. If you're building a system that consumes CTR export streams, be sure to include logic that checks for duplicate CTRs for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
 
 ## Agent<a name="ctr-Agent"></a>
 
-Information about the agent that handled the contact\.
+Information about the agent who accepted the incoming contact\.
 
 **AgentInteractionDuration**  <a name="AgentInteractionDuration-CTR"></a>
 The time, in whole seconds, that an agent interacted with a customer\.  
@@ -100,6 +102,26 @@ Type: [AgentHierarchyGroup](#ctr-AgentHierarchyGroup)
 The group at level five of the agent hierarchy\.  
 Type: [AgentHierarchyGroup](#ctr-AgentHierarchyGroup)
 
+## ContactDetails<a name="ctr-contact-details"></a>
+
+Contains user\-defined attributes which are lightly typed within the contact\.
+
+**ContactDetailsName**  
+Type: String  
+Length: 1\-128
+
+**ContactDetailsValue**  
+Type: String  
+Length: 0\-1024
+
+**ReferenceAttributeName**  
+Type: String  
+Length: 1\-128
+
+**ReferenceAttributesValue**  
+Type: String  
+Length: 0\-1024
+
 ## ContactTraceRecord<a name="ctr-ContactTraceRecord"></a>
 
 Information about a contact\.
@@ -127,8 +149,8 @@ The record format version\.
 Type: String
 
 **Channel**  
-How the customer reached your contact center\.  
-Valid values: Voice, Chat
+How the contact reached your contact center\.  
+Valid values: Voice, Chat, Tasks
 
 **ConnectedToSystemTimestamp**  
 The date and time the customer endpoint connected to Amazon Connect, in UTC time\. For `INBOUND`, this matches `InitiationTimestamp`\. For `OUTBOUND`, `CALLBACK`, and `API`, this is when the customer endpoint answers\.  
@@ -147,6 +169,17 @@ Type: [Endpoint](#ctr-endpoint)
 The date and time that the customer endpoint disconnected from Amazon Connect, in UTC time\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
+**DisconnectReason**  
+Indicates how the call was terminated\.  
+Type: String   
+Voice contacts can have the following disconnect reasons:  
++ `CUSTOMER_DISCONNECT`: Contact disconnected first\.
++ `AGENT_DISCONNECT`: Agent disconnected when the contact was still on the call\.
++ `THIRD_PARTY_DISCONNECT`: In a third\-party call, after the agent has left, the third\-party disconnected the call while the contact was still on the call\.
++ `TELECOM_PROBLEM`: Disconnected due to an issue with connecting the call from the carrier, network congestion, network error, etc\.
++ `CONTACT_FLOW_DISCONNECT`: Disconnected in a contact flow\.
++ `OTHER`: This includes any reason not explicitly covered by the previous codes\. For example, the contact was disconnected by an API\.
+
 **InitialContactId**  
 If this contact is related to other contacts, this is the ID of the initial contact\.  
 Type: String  
@@ -154,7 +187,18 @@ Length: 1\-256
 
 **InitiationMethod**  
 Indicates how the contact was initiated\.  
-Valid values: `INBOUND` \| `OUTBOUND` \| `TRANSFER` \| `CALLBACK` \| `API` \| `QUEUE_TRANSFER` 
+Valid values:  
++  `INBOUND`: The customer initiated voice \(phone\) contact with your contact center\. 
++  `OUTBOUND`: An agent initiated voice \(phone\) contact with the customer, by using the CCP to call their number\. This initiation method calls the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API\.
++  `TRANSFER`: The customer was transferred by an agent to another agent or to a queue, using quick connects in the CCP\. This results in a new CTR being created\.
++  `CALLBACK`: The customer was contacted as part of a callback flow\. 
+
+  For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
++  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
++  `QUEUE_TRANSFER`: While the customer was in one queue \(listening to Customer queue flow\), they were transferred into another queue using a contact flow block\.
++  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which contact flow to run after a disconnect event during a conversation\. A disconnect event is when an agent disconnects\. When the disconnect event occurs, the corresponding content flow runs\.
+
+  If a new contact is created while running a disconnect flow, then the initiation method for that new contact is DISCONNECT\.
 
 **InitiationTimestamp**  
 The date and time this contact was initiated, in UTC time\. For `INBOUND`, this is when the contact arrived\. For `OUTBOUND`, this is when the agent began dialing\. For `CALLBACK`, this is when the callback contact was created\. For `TRANSFER` and `QUEUE_TRANSFER`, this is when the transfer was initiated\. For `API`, this is when the request arrived\.  
@@ -192,7 +236,9 @@ Type: [RecordingInfo](#ctr-RecordingInfo)
 
 **Recordings**  
 If recording was enabled, this is information about the recording\.  
-Type: Array of [RecordingInfo](#ctr-RecordingInfo)  
+
+Type: Array of [RecordingsInfo](#ctr-RecordingsInfo)  
+
 The first recording for a contact will appear in both the Recording and Recordings sections of the CTR\.
 
 **SystemEndpoint**  
@@ -222,11 +268,11 @@ Valid values: `TELEPHONE_NUMBER`
 
 ## MediaStream<a name="MediaStream"></a>
 
-Information about the media stream used on the contact\.
+Information about the media stream used during the contact\.
 
 **Type**  
 Type: MediaStreamType  
-Valid value: AUDIO
+Valid value: AUDIO, VIDEO, CHAT
 
 ## QueueInfo<a name="ctr-QueueInfo"></a>
 
@@ -256,7 +302,7 @@ Length: 1\-256
 
 ## RecordingInfo<a name="ctr-RecordingInfo"></a>
 
-Information about a recording\.
+Information about a voice recording\.
 
 **DeletionReason**  
 If the recording was deleted, this is the reason entered for the deletion\.  
@@ -275,6 +321,62 @@ Valid values: `AVAILABLE` \| `DELETED` \| `NULL`
 The recording type\.  
 Valid values: `AUDIO` 
 
+## RecordingsInfo<a name="ctr-RecordingsInfo"></a>
+
+Information about a voice recording or chat transcript\.
+
+**DeletionReason**  
+If the recording/transcript was deleted, this is the reason entered for the deletion\.  
+Type: String
+
+**FragmentStartNumber**  
+The number that identifies the Kinesis Video Streams fragment where the customer audio stream started\.  
+Type: String
+
+**FragmentStopNumber**  
+The number that identifies the Kinesis Video Streams fragment where the customer audio stream stopped\.  
+Type: String
+
+**Location**  
+The location, in Amazon S3, for the recording/transcript\.  
+Type: String  
+Length: 0\-256
+
+**MediaStreamType**  
+Information about the media stream used during the conversation\.   
+Type: String  
+Valid values: AUDIO, VIDEO, CHAT
+
+**ParticipantType**  
+Information about the conversation participant: whether they are an agent or contact\.  
+Type: String
+
+**StartTimestamp**  
+When the conversation started\.  
+Type: String *\(yyyy\-mm\-ddThh:mm:ssZ\)*
+
+**Status**  
+The status of the recording/transcript\.  
+Valid values: `AVAILABLE` \| `DELETED` \| `NULL` 
+
+**StopTimestamp**  
+When the conversation stopped\.  
+Type: String *\(yyyy\-mm\-ddThh:mm:ssZ\)*
+
+**StorageType**  
+Where the recording/transcript is stored\.  
+Type: String  
+Valid values: Amazon S3`` 
+
+## References<a name="ctr-contact-references"></a>
+
+Contains links to other documents that are related to a contact\.
+
+**Reference Info**  
+ReferenceType  
+ContentType  
+Location
+
 ## RoutingProfile<a name="ctr-RoutingProfile"></a>
 
 Information about a routing profile\.
@@ -288,7 +390,7 @@ The name of the routing profile\.
 Type: String  
 Length: 1\-100
 
-## How to Identify Abandoned Contacts<a name="abandoned-contact"></a>
+## How to identify abandoned contacts<a name="abandoned-contact"></a>
 
 An abandoned contact refers to a contact that was disconnected by the customer while in queue\. This means that they weren't connected to an agent\. 
 

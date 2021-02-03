@@ -1,4 +1,4 @@
-# How to Use Contact Attributes to Personalize the Customer Experience<a name="use-attributes-cust-exp"></a>
+# How to use contact attributes to personalize the customer experience<a name="use-attributes-cust-exp"></a>
 
 Contact attributes in your contact flows can provide a more personalized customer experience\. For example, specify a custom flow based on comparing an attribute to a value\. You then route the contact based on the value comparison, such as routing customers to different tiers of support based on their account number\. Or retrieve a customer's name and save it as an attribute\. Include the name attribute in a text to speech string so that the customer's name is said during the interaction\.
 
@@ -7,7 +7,7 @@ Contact attributes are shared across all contacts with the same InitialContactId
 
 The steps in the following sections describe how to use contact attributes with different blocks in a contact flow\.
 
-## Using a Set Contact Attributes Block<a name="use-set-contact-attrib-block"></a>
+## Using a Set contact attributes block<a name="use-set-contact-attrib-block"></a>
 
 Use a **Set contact attributes** block to set a value that is later referenced in a contact flow\. For example, create a personalized greeting for customers routed to a queue based on the type of customer account\. You could also define an attribute for a company name or line of business to include in the text to speech strings said to a customer\. The **Set contact attributes** block is useful for copying attributes retrieved from external sources to user\-defined attributes\.
 
@@ -25,7 +25,7 @@ Use a **Set contact attributes** block to set a value that is later referenced i
 
    You can also choose to use an existing attribute as the basis for creating the new attribute\.
 
-## Using Attributes with a Lambda Function<a name="attribs-with-lambda"></a>
+## Using attributes with a Lambda function<a name="attribs-with-lambda"></a>
 
 Retrieve data from a system your organization uses internally, such as an ordering system or other database with a Lambda function, and store the values as attributes that can then be referenced in a contact flow\.
 
@@ -67,7 +67,7 @@ Any attribute returned from an AWS Lambda function is overwritten with the next 
 
 1. Under **Conditions to check**, choose the operator for the condition, then enter a value to compare to the attribute value\. A branch is created for each comparison you enter, letting you route the contact based on the conditions specified\. If no condition is matched, the contact takes the **No Match** branch from the block\.
 
-## "$" is a Special Character<a name="dollar-sign-special"></a>
+## "$" is a special character<a name="dollar-sign-special"></a>
 
 Amazon Connect treats the "$" character as a special character\. You can't use it in a key when setting an attribute\. 
 
@@ -75,6 +75,6 @@ Amazon Connect treats the "$" character as a special character\. You can't use i
 
  ` {"$one":"please read this text"} ` 
 
-When Amazon Connect reads this text, it will read "dollar sign one" to the contact instead of "please read this text\." Also, if you were to include $ in a key and try to reference the value later using Amazon Connect, it won't retrieve the value\. 
+When Amazon Connect reads this text, it reads "dollar sign one" to the contact instead of "please read this text\." Also, if you were to include $ in a key and try to reference the value later using Amazon Connect, it wouldn't retrieve the value\. 
 
 Amazon Connect does log and pass the full key:value pair `({"_$one":"please read this text"})` to integrations such as Lambda\. 

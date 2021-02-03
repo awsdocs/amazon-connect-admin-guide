@@ -1,4 +1,4 @@
-# Example: Metrics for a Queued Callback<a name="queued-callback-example"></a>
+# Example: Metrics for a queued callback<a name="queued-callback-example"></a>
 
 This topic shows an example queued callback flow and reviews how the CTRs and times are set for it\. 
 
@@ -20,13 +20,13 @@ In this example, John calls customer service\. Here's what happens:
 
    1. The callback contact was initiated at 11:37\.
 
-   1. Because the initial delay is 99 seconds, the callback contact is placed into CallbackQueue after the 99 seconds pass, so now the time would be 11:38:39\. Now, the callback contact is offered to an available agent\. 
+   1. Because the initial delay is 99 seconds, the callback contact is placed into CallbackQueue at 11:38:39, after the 99 seconds pass\. Now the callback contact is offered to an available agent\. 
 
-   1. There is an agent available at 11:40:00 who accepts the contact\. The 10\-second agent whisper flow is played to the agent\. 
+   1. After 21 seconds, an agent available at 11:39:00 and accepts the contact\. The 10\-second agent whisper flow is played to the agent\. 
 
-   1. After the agent whisper flow is complete, Amazon Connect calls John at 11:40:10\. John picks up, and listens to the 15\-second outbound whisper flow\. 
+   1. After the agent whisper flow is complete, Amazon Connect calls John at 11:39:10\. John picks up, and listens to the 15\-second outbound whisper flow\. 
 
-   1. When the outbound whisper flow is complete, John is connected to the agent at 11:40:25\. They talk until 11:45, and then John hangs up\. 
+   1. When the outbound whisper flow is complete, John is connected to the agent at 11:39:25\. They talk until 11:45, and then John hangs up\. 
 
 This scenario results in two CTRs, which include the following metadata\.
 
@@ -50,8 +50,8 @@ This scenario results in two CTRs, which include the following metadata\.
 |  Initiation Timestamp  | 11:37  | The callback contact is created in Amazon Connect\.  | 
 |  Queue  | CallbackQueue  |   | 
 |  Enqueued Timestamp  | 11:38:39  | The contact was put into the CallbackQueue, after the 99\-second initial delay completes\.  | 
-|  Dequeued Timestamp  | 11:40:00  | An agent accepts the contact\.  | 
+|  Dequeued Timestamp  | 11:39:00  | After 21 seconds, an agent accepts the contact\.  | 
 |  Queue Duration  | 120 seconds  | This is the initial delay \(99 seconds\), plus any additional time sitting in queue waiting for an agent to become available \(21 seconds\)\.  | 
-|  ConnectedToSystem Timestamp  | 11:40:10  | John is called after the 10 second agent whisper flow completes\.  | 
-|  ConnectedToAgent Timestamp  | 11:40:25  | John and the agent are connected, after the 15 second outbound whisper flow completes\.  | 
+|  ConnectedToSystem Timestamp  | 11:39:10  | John is called after the 10 second agent whisper flow completes\.  | 
+|  ConnectedToAgent Timestamp  | 11:39:25  | John and the agent are connected, after the 15 second outbound whisper flow completes\.  | 
 |  Disconnected Timestamp  | 11:45  | John hangs up\.  | 
