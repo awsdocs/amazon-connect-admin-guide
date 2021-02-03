@@ -38,16 +38,14 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 
 | Item | Default quotas  | 
 | --- | --- | 
-|  Maximum domains per account  |  100  | 
-|  Maximum profile objects types per domain  |  100  | 
-|  Maximum keys per object type  |  10  | 
-|  Maximum expiration of objects and profiles  |  3 years  | 
-|  Maximum modifications to a profile per second per account  |  100TPS  | 
-|  Maximum size of a profile not counting objects  |  250KB This quota cannot be increased\.  | 
-|  Maximum size of a profile including all objects  |  5MB  | 
-|  Maximum size of a single profile object  |  250KB This quota cannot be increased\.  | 
+|  Amazon Connect Customer Profiles domains count  |  100  | 
+|  Keys per object type  |  10  | 
+|  Maximum expiration in days  |  1,096 \(3 years\) This is the expiration of objects and profiles\.  | 
 |  Maximum number of integrations  |  50  | 
-|  Maximum objects attached to a profile  |  100  | 
+|  Maximum size of all objects for a profile  |  5MB  | 
+|  Object and profile maximum size  |  250KB This quota cannot be increased\.   | 
+|  Objects per domain  |  100  | 
+|  Objects per profile  |  100 This is the maximum number of objects that can be attached to a profile\.  | 
 
 ## About default quotas<a name="default-quotas"></a>
 

@@ -16,7 +16,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callback-number.png)
 
 ## Configuration tips<a name="set-callback-number-tips"></a>
-+ The **Store customer input** block often comes before this block\. It stores the customer's callback number\.
++ The [Store customer input](store-customer-input.md) block often comes before this block\. It stores the customer's callback number\.
 
 ## Configured block<a name="set-callback-number-configured"></a>
 

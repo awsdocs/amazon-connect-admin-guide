@@ -90,7 +90,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View chat transcripts | connect:DescribeInstance connect:DescribeInstanceStorageConfig connect:ListInstanceStorageConfigs  | 
-| Edit chat transcripts |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:CreateBucket kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Edit chat transcripts |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:GetBucketAcl s3:CreateBucket kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant iam:PutRolePolicy iam:AttachRolePolicy  | 
 
 #### Attachments section<a name="attachments-section"></a>
 
@@ -98,7 +98,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View chat attachments | connect:DescribeInstance connect:DescribeInstanceStorageConfig connect:ListInstanceStorageConfigs  | 
-| Edit chat attachments |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:CreateBucket kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Edit chat attachments |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:CreateBucket s3:GetBucketAcl kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant iam:PutRolePolicy iam:AttachRolePolicy  | 
 
 #### Live media streaming section<a name="live-media-streaming-section"></a>
 

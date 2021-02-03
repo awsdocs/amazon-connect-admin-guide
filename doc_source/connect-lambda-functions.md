@@ -54,7 +54,7 @@ To view a contact flow that invokes a Lambda function, see [Sample Lambda integr
 
 1. \(Optional\) Under **Function input parameters**, choose **Add a parameter**\. You can specify key\-value pairs that are sent to the Lambda function when it is invoked\. You can also specify a **Timeout** value for the function\.
 
-1. In **Timeout \(max 8 seconds\)**, specify how long to wait for Lambda to time out\. This creates a branch for you to specify what to do if it times out\.
+1. In **Timeout \(max 8 seconds\)**, specify how long to wait for Lambda to time out\. After this time, the contact routes down the Error branch\.
 
 For every Lambda function invocation from a contact flow, you pass a default set of information related to ongoing contact, as well as any additional attributes defined in the **Function input parameters** section for the **Invoke AWS Lambda function** block added\.
 
@@ -97,7 +97,7 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w128aac26c35c13c17"></a>
+### Invocation retry policy<a name="w161aac26c35c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 

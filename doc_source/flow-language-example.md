@@ -42,12 +42,8 @@ To learn how to get block identifiers, we recommend creating a new contact flow 
                 "Errors": [],
                 "Conditions": []
             },
-            "Parameters": {
-                "Prompt": {
-                    "Text": "Thanks for calling the sample flow!",
-                    "TextType": "text",
-                    "PromptId": null
-                }
+            "Parameters": { 
+                "Text": "Thanks for calling the sample flow!"                    
             }
         },
         {

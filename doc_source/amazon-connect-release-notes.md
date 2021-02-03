@@ -5,12 +5,9 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 **Topics**
 + [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"](#new-domain)
 + [Upcoming change: New "Next status" for agents](#upcoming-changes-next-status)
++ [January 2021 Updates](#january21-release-notes)
 + [December 2020 Updates](#december20-release-notes)
 + [November 2020 Updates](#november20-release-notes)
-+ [October 2020 Updates](#october20-release-notes)
-+ [September 2020 Updates](#september20-release-notes)
-+ [August 2020 Updates](#august20-release-notes)
-+ [July 2020 Updates](#july20-release-notes)
 + [Earlier Updates](#release-notes-earlier-updates)
 
 ## Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"<a name="new-domain"></a>
@@ -186,9 +183,21 @@ When we release this feature, it will have the following effect:
 
   To use **Next status** with a custom CCP integration that does not directly embed the CCP, you will need to make additional changes that will be detailed further in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
 
-## December 2020 Updates<a name="december20-release-notes"></a>
+## January 2021 Updates<a name="january21-release-notes"></a>
 
-The following updates were released in December 2020:
+### CCP: Change your audio settings<a name="january21-audio-settings"></a>
+
+Added the ability to change audio settings from the Contact Control Panel \(CCP\)\. This applies to organizations using a customized CCP\. For more information, see [Change your audio device settings](audio-device-settings.md)\.
+
+### Queue APIs \(Preview\)<a name="january21-queue-apis"></a>
+
+Added APIs so you can programmatically create and manage queues\. For more information, see [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\.
+
+### Amazon AppIntegrations APIs \- GA<a name="january21-appintegrations"></a>
+
+Released Amazon AppIntegrations APIs for general availability \(GA\)\. For more information, see [Amazon AppIntegrations Service API Reference](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html)\.
+
+## December 2020 Updates<a name="december20-release-notes"></a>
 
 ### Quick Connect APIs \(Preview\)<a name="december20-quickconnects"></a>
 
@@ -203,7 +212,7 @@ Added the following APIs:
 + [GetAttachment](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_GetAttachment.html)
 + [StartAttachmentUpload](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html)
 
-### Configurable DTMF timeouts for Lex bots<a name="december20-tasks"></a>
+### Configurable DTMF timeouts for Lex bots<a name="december20-confdtmf"></a>
 
 For more information, see [Configurable fields for DTMF input](get-customer-input.md#get-customer-input-configurable-dtmf)\. 
 
@@ -249,8 +258,6 @@ Added support for using Amazon Connect with Apple Business Chat\. For more infor
 
 ## November 2020 Updates<a name="november20-release-notes"></a>
 
-The following updates were released in November 2020:
-
 ### Contact search<a name="november20-contact-search"></a>
 + Made several improvements to contact search\. For more information, see [What's new in contact search](contact-search.md#new-contact-search-experience)\.
 
@@ -275,14 +282,16 @@ The following updates were released in November 2020:
   + UpdateInstanceAttribute
   + UpdateInstanceStorageConfig
 
-## October 2020 Updates<a name="october20-release-notes"></a>
+## Earlier Updates<a name="release-notes-earlier-updates"></a>
+
+### October 2020 Updates<a name="october20-release-notes"></a>
 
 The following updates were released in October 2020:
 
-### Contact flows<a name="october20-contact-flows"></a>
+#### Contact flows<a name="october20-contact-flows"></a>
 + Added chat support for whisper flows\. For more information, see [Contact block: Set whisper flow](set-whisper-flow.md)\.
 
-### Metrics<a name="october20-metrics"></a>
+#### Metrics<a name="october20-metrics"></a>
 + Released the following real\-time metrics:
   +  [Avg callback connecting time](real-time-metrics-definitions.md#rtm-avg-callback-connecting-time)
   + [Avg incoming connecting time](real-time-metrics-definitions.md#rtm-avg-incoming-connecting-time)
@@ -301,20 +310,20 @@ The following updates were released in October 2020:
 + Added the **Restrict contact access** permission which enables you to manage a user's access to results on the **Contact search** page based on their agent hierarchy group\. For more information, see [Search for contacts](contact-search.md)\.
 + Added **ContactDetails** and **References** to the contact trace record \(CTR\)\. For more information, see [Contact trace records \(CTR\) data model](ctr-data-model.md)\.
 
-## September 2020 Updates<a name="september20-release-notes"></a>
+### September 2020 Updates<a name="september20-release-notes"></a>
 
 The following updates were released in September 2020:
 
-### Service quotas<a name="september20-service-quotas"></a>
+#### Service quotas<a name="september20-service-quotas"></a>
 + Updated the service quotas for the following Amazon Connect Participant Service APIs: 
   + [CreateParticipantConnection](amazon-connect-service-limits.md#connect-participant-api-quotas) 
   + [DisconnectParticipant](amazon-connect-service-limits.md#connect-participant-api-quotas) 
   + [GetTranscript](amazon-connect-service-limits.md#connect-participant-api-quotas) 
 
-### Contact flows<a name="september20-contact-flows"></a>
+#### Contact flows<a name="september20-contact-flows"></a>
 + Added the Amazon Connect Flow language, a JSON\-based representation of a series of flow actions, and the criteria for moving between them\. For more information, see [Amazon Connect Flow language](flow-language.md)\. 
 
-### APIs<a name="september20-apis"></a>
+#### APIs<a name="september20-apis"></a>
 
 Added the following APIs for contact flows:
 + [CreateContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateContactFlow.html)
@@ -336,43 +345,41 @@ Added the following APIs for routing profiles:
 + [UpdateRoutingProfileName](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileName.html)
 + [UpdateRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateRoutingProfileQueues.html)
 
-## August 2020 Updates<a name="august20-release-notes"></a>
+### August 2020 Updates<a name="august20-release-notes"></a>
 
 The following updates were released in August 2020:
 
-### Contact flows<a name="august20-contact-flows"></a>
+#### Contact flows<a name="august20-contact-flows"></a>
 + Added the ability to automatically use the best sounding voice available from Amazon Polly for text\-to\-speech\. For more information, see [Amazon Polly best sounding voice](text-to-speech.md#amazon-polly-best-sounding-voice)\. 
 + Added the ability to select, cut, copy, and paste contact flows\. For more information, see [Copy and paste contact flows](copy-paste-contact-flows.md)\. 
 
-### Telephony<a name="august20-early-media"></a>
+#### Telephony<a name="august20-early-media"></a>
 + Added the ability for all customers to enable/disable media support for outbound phone calls\. For more information, see [Step 3: Telephony options](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect instance](amazon-connect-instances.md) topic\. 
 
-### Monitoring<a name="august20-monitoring"></a>
+#### Monitoring<a name="august20-monitoring"></a>
 + Added logging of Amazon Connect Participant Service calls with AWS CloudTrail\. For more information, see [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
 
-### Contact Lens for Amazon Connect<a name="august20-contact-flows"></a>
+#### Contact Lens for Amazon Connect<a name="august20-contact-flows"></a>
 + Updated the security profile permissions for the redaction feature\. For more information, see [Security profile permissions for Contact Lens](permissions-for-contact-lens.md)\.
 
-## July 2020 Updates<a name="july20-release-notes"></a>
+### July 2020 Updates<a name="july20-release-notes"></a>
 
 The following updates were released in July 2020:
 
-### Contact flows<a name="july20-contact-flows"></a>
+#### Contact flows<a name="july20-contact-flows"></a>
 + The **Set voice** block supports speaking styles with neural text\-to\-speech \(TTS\) voices\. For more information, see [Contact block: Set voice](set-voice.md)\.
 
-### APIs<a name="july20-apis"></a>
+#### APIs<a name="july20-apis"></a>
 + Added [StartContactRecording](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactRecording.html), [StopContactRecording](https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContactRecording.html), [SuspendContactRecording](https://docs.aws.amazon.com/connect/latest/APIReference/API_SuspendContactRecording.html), [ResumeContactRecording](https://docs.aws.amazon.com/connect/latest/APIReference/API_ResumeContactRecording.html) to the Amazon Connect Service API\.
 
-### Contact Lens for Amazon Connect<a name="july20-contact-lens"></a>
+#### Contact Lens for Amazon Connect<a name="july20-contact-lens"></a>
 + Updated Contact Lens for Amazon Connect for general availability\. This feature lets you analyze customer\-agent conversations, by using speech transcription, natural language processing, and intelligent search capabilities\. For more information, see [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.
 
-### Metrics<a name="july20-metrics"></a>
+#### Metrics<a name="july20-metrics"></a>
 + Fixed content that was added in June 2020 that said **Agent idle time**,** Agent on contact time**, and **Occupancy** had been deprecated\. That was incorrect\. Rather, they are no longer available for queue groupings only\. For more information, see [What's new in metrics](upcoming-changes.md)\.
 + Corrected how **Occupancy** is calculated\. The correct calculation is: 
 
   \(Agent on contact \(wall clock time\) / \(Agent on contact \(wall clock time\) \+ Agent idle time\)\)
-
-## Earlier Updates<a name="release-notes-earlier-updates"></a>
 
 ### June 2020 Updates<a name="june20-release-notes"></a>
 
@@ -509,14 +516,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-### June 2019 Update<a name="w128aac70c23c21"></a>
+### June 2019 Update<a name="w161aac70c17c29"></a>
 
 The following update was released in June 2019:
 
 #### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-### May 2019 Updates<a name="w128aac70c23c23"></a>
+### May 2019 Updates<a name="w161aac70c17c31"></a>
 
 The following updates were released in May 2019:
 
@@ -528,7 +535,7 @@ The following updates were released in May 2019:
 #### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-### April 2019 Updates<a name="w128aac70c23c25"></a>
+### April 2019 Updates<a name="w161aac70c17c33"></a>
 
 The following updates were released in April 2019:
 
@@ -541,7 +548,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-### March 2019 Update<a name="w128aac70c23c27"></a>
+### March 2019 Update<a name="w161aac70c17c35"></a>
 
 The following updates were released in March 2019:
 

@@ -18,23 +18,14 @@ The following image shows the CCP\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-intro.png)
 
-**Topics**
-+ [Training video](ccp-video-training.md)
-+ [Agent training cheat sheet](ccp-cheat-sheet.md)
-+ [Launch the CCP](launch-ccp.md)
-+ [Log in and log out of the CCP](ccp-login.md)
-+ [Set your status to available](set-status-available.md)
-+ [Chat with contacts](work-with-chats.md)
-+ [Transfer chats to another queue](transfer-chats.md)
-+ [Make a call while on a chat](call-and-chat.md)
-+ [Accept incoming calls](work-with-calls.md)
-+ [Transfer calls](transfers.md)
-+ [Make outbound calls](make-outbound-calls.md)
-+ [Accept a task](accept-task.md)
-+ [Create a new task](create-task.md)
-+ [Transfer a task](transfer-task.md)
-+ [Accept incoming contacts with Customer Profiles](select-customer-profile.md)
-+ [Create a new customer profile](create-new-customer-profile.md)
-+ [Search for a customer profile](search-customer-profile.md)
-+ [Search for content](search-for-answers.md)
-+ [Use real\-time recommendations](use-realtime-recommendations.md)
+1. Set your status\.
+
+1. The channels enabled for your agent routing profile\.
+
+1. Log in and out\. Set your language preferences, device settings \(if enabled\), and phone type\.
+
+1. Name of the signed in agent\.
+
+1. Call a number or enter digits into an IVR menu\.
+
+1. Choose a predefined destination to transfer the contact\. Or call an external number\.

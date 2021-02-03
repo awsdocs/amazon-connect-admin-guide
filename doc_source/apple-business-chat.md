@@ -77,7 +77,7 @@ Use the following steps to find your contact flow ID:
 
 With [Chat Suggest](https://register.apple.com/resources/business-chat/BC-ChatSuggestGuide.pdf) you can allow users to choose between voice and messaging when tapping on your business phone number in Safari, Maps, Siri, or Search\. 
 
-To enable Chat Suggest, send an email to the Apple Business Chat Team at [registry@apple\.com](registry@apple.com) with the following information and Apple can set up the channel for you: 
+To enable Chat Suggest, send an email to the Apple Business Chat Team at **registry@apple\.com** with the following information and Apple can set up the channel for you: 
 + Provide all of your primary phone numbers, including high call volume phone numbers\.
 + Provide phone contact hours to set customer expectations for your after\-hours message\.
 + Provide intent, group, and body parameters to associate with each phone number\.

@@ -4,7 +4,7 @@ Use pre\-built integrations to generate tasks based on events in external applic
 
 For more information about Amazon AppFlow and Amazon EventBridge, see the documentation: [Amazon AppFlow User Guide](https://docs.aws.amazon.com/appflow/latest/userguide/what-is-appflow.html) and [Amazon EventBridge User Guide](https://docs.aws.amazon.com/eventbridge/latest/userguide/)\.
 
-In addition, check out the [Amazon AppIntegrations Service API Reference \(Preview\)](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html), which enables you to access and configure AppIntegrations associations programmatically with Amazon Connect instances\.
+In addition, check out the [Amazon AppIntegrations Service API Reference](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html), which enables you to access and configure AppIntegrations associations programmatically with Amazon Connect instances\.
 
 **Topics**
 + [Set up applications for task creation](integrate-external-apps-tasks.md)

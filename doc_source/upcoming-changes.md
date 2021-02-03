@@ -1,6 +1,6 @@
 # What's new in metrics<a name="upcoming-changes"></a>
 
-Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you a overview of the improvements\. 
+Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you an overview of the improvements\. 
 
 ## Upcoming change: 15 minutes interval for historical metrics reports<a name="metrics-changes-new-intervals-hmr"></a>
 

@@ -10,9 +10,9 @@ The [Amazon Connect Service API Documentation](https://docs.aws.amazon.com/conne
 
 The [Amazon Connect Participant Service API](https://docs.aws.amazon.com/connect-participant/latest/APIReference/Welcome.html) provides details about the APIs used by chat participants, such as agents and customers\. 
 
-## Amazon AppIntegrations API \(Preview\)<a name="appintegrations-api"></a>
+## Amazon AppIntegrations API<a name="appintegrations-api"></a>
 
-The [Amazon AppIntegrations Service API Reference \(Preview\)](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html) which enables you to access and configure AppIntegrations associations programmatically with Amazon Connect instances\. 
+The [Amazon AppIntegrations Service API Reference](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html) which enables you to access and configure AppIntegrations associations programmatically with Amazon Connect instances\. 
 
 ## Contact Lens for Amazon Connect API<a name="contactlens-api"></a>
 

@@ -27,9 +27,9 @@ You can't configure how long an available agent has to connect with a contact be
 Outbound telephony charges occur when using a desk phone to answer inbound calls\.
    + If you select soft phone, choose **Auto\-Accept Call** if you want agents to be connected to calls automatically\. This doesn't apply to chats\. 
 
-1. In **After call work \(ACW\) timeout**, type how many seconds agents have for after contact work, such as entering notes about the contact\.
+1. In **After call work \(ACW\) timeout**, type how many seconds agents have for after contact work, such as entering notes about the contact\. 1 second is the minimum amount of time you can enter\.
 
-   Enter **0** if you don't want to allocate a specific amount of ACW time\. When the conversation ends, ACW starts; the agent must choose **Close contact** to end ACW\.  
+   Enter **0** if you don't want to allocate a specific amount of ACW time\. It essentially means an indefinite amount of time\. When the conversation ends, ACW starts; the agent must choose **Close contact** to end ACW\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/acw-timeout.png)
 
 1. Under **Agent Hierarchy** select any groups the agent should be part of\.

@@ -169,6 +169,17 @@ Type: [Endpoint](#ctr-endpoint)
 The date and time that the customer endpoint disconnected from Amazon Connect, in UTC time\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
+**DisconnectReason**  
+Indicates how the call was terminated\.  
+Type: String   
+Voice contacts can have the following disconnect reasons:  
++ `CUSTOMER_DISCONNECT`: Contact disconnected first\.
++ `AGENT_DISCONNECT`: Agent disconnected when the contact was still on the call\.
++ `THIRD_PARTY_DISCONNECT`: In a third\-party call, after the agent has left, the third\-party disconnected the call while the contact was still on the call\.
++ `TELECOM_PROBLEM`: Disconnected due to an issue with connecting the call from the carrier, network congestion, network error, etc\.
++ `CONTACT_FLOW_DISCONNECT`: Disconnected in a contact flow\.
++ `OTHER`: This includes any reason not explicitly covered by the previous codes\. For example, the contact was disconnected by an API\.
+
 **InitialContactId**  
 If this contact is related to other contacts, this is the ID of the initial contact\.  
 Type: String  
@@ -177,14 +188,14 @@ Length: 1\-256
 **InitiationMethod**  
 Indicates how the contact was initiated\.  
 Valid values:  
-+  `INBOUND`: The customer initiates voice \(phone\) contact with your contact center\. 
-+  `OUTBOUND`: An agent initiates voice \(phone\) contact with the customer, by using the CCP to call their number\. This initiation method calls the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API\.
-+  `TRANSFER`: The customer is transferred by an agent to another agent or to a queue, using quick connects in the CCP\. This results in a new CTR being created\.
-+  `CALLBACK`: The customer is contacted as part of a callback flow\. 
++  `INBOUND`: The customer initiated voice \(phone\) contact with your contact center\. 
++  `OUTBOUND`: An agent initiated voice \(phone\) contact with the customer, by using the CCP to call their number\. This initiation method calls the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API\.
++  `TRANSFER`: The customer was transferred by an agent to another agent or to a queue, using quick connects in the CCP\. This results in a new CTR being created\.
++  `CALLBACK`: The customer was contacted as part of a callback flow\. 
 
   For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 +  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
-+  `QUEUE_TRANSFER`: While the customer is in one queue \(listening to Customer queue flow\), they are transferred into another queue using a contact flow block\.
++  `QUEUE_TRANSFER`: While the customer was in one queue \(listening to Customer queue flow\), they were transferred into another queue using a contact flow block\.
 +  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which contact flow to run after a disconnect event during a conversation\. A disconnect event is when an agent disconnects\. When the disconnect event occurs, the corresponding content flow runs\.
 
   If a new contact is created while running a disconnect flow, then the initiation method for that new contact is DISCONNECT\.
@@ -225,7 +236,7 @@ Type: [RecordingInfo](#ctr-RecordingInfo)
 
 **Recordings**  
 If recording was enabled, this is information about the recording\.  
-Type: [RecordingsInfo](#ctr-RecordingsInfo)  
+Type: Array of [RecordingsInfo](#ctr-RecordingsInfo)  
 The first recording for a contact will appear in both the Recording and Recordings sections of the CTR\.
 
 **SystemEndpoint**  

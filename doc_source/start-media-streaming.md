@@ -24,6 +24,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Configuration tips<a name="start-media-streaming-tips"></a>
 + You must enable live media streaming in your instance to successfully capture customer audio\. For instructions, see [Capture customer audio: live media streaming](customer-voice-streams.md)\.
++ When selecting the stream to start, only choose one option\. Selecting both options results in an inaudible media stream\.
 + Customer audio is captured until a **Stop media streaming** block is invoked, even if the contact is passed to another contact flow\.
 + You must use a **Stop media streaming** block to stop media streaming\.
 + If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.

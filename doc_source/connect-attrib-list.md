@@ -26,7 +26,7 @@ Not all blocks in a contact flow support using System attributes\. For example, 
 | Previous contact id | The unique identifier for the contact before it was transferred\. Use the previous contact ID to trace contacts between contact flows\. | System | $\.PreviousContactId | 
 | Channel | The method used to contact your contact center, either VOICE or CHAT\.  | System | $\.Channel | 
 | Instance ARN | The ARN for your Amazon Connect instance\. | System | $\.InstanceARN | 
-| Initiation method | How the contact was initiated\. Valid values include: INBOUND, OUTBOUND, TRANSFER, CALLBACK, QUEUE\_TRANSFER and API\. | System | $\.InitiationMethod | 
+| Initiation method | How the contact was initiated\. Valid values include: INBOUND, OUTBOUND, TRANSFER, CALLBACK, QUEUE\_TRANSFER, DISCONNECT, and API\. | System | $\.InitiationMethod | 
 | Name | The name of the task\. | System | $\.Name | 
 | Description | A description of the task\. | System | $\.Description | 
 | References | Links to other documents that are related to a contact\. | System | $\.References\.*ReferenceKey*\.Value and $\.References\.*ReferenceKey*\.Type where *ReferenceKey* is the user\-defined Reference name\. | 
