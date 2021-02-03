@@ -236,7 +236,9 @@ Type: [RecordingInfo](#ctr-RecordingInfo)
 
 **Recordings**  
 If recording was enabled, this is information about the recording\.  
+
 Type: Array of [RecordingsInfo](#ctr-RecordingsInfo)  
+
 The first recording for a contact will appear in both the Recording and Recordings sections of the CTR\.
 
 **SystemEndpoint**  
