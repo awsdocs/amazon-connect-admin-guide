@@ -1,4 +1,4 @@
-# Sample Lambda Integration<a name="sample-lambda-integration"></a>
+# Sample Lambda integration<a name="sample-lambda-integration"></a>
 
 Type: Contact flow \(inbound\)
 
@@ -16,4 +16,6 @@ This contact flow shows you how to invoke a Lambda function and do a data dip, t
 
 1. If the transfer fails, it plays a prompt and then disconnects the contact\. 
 
-For more information about using attributes, see [Using Attributes with a Lambda Function](use-attributes-cust-exp.md#attribs-with-lambda)\.
+
+
+For more information about using attributes, see [Lambda functions and attributes](attribs-with-lambda.md)\.

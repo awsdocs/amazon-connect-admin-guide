@@ -1,4 +1,4 @@
-# About Inherited Permissions<a name="inherited-permissions"></a>
+# About inherited permissions<a name="inherited-permissions"></a>
 
 Some security profiles included inherited permissions: when you give a user explicit permissions to **View** or **Edit** one resource type, such as queues, they implicitly inherit permissions to **View** another resource type, such as phone numbers\.
 
@@ -14,7 +14,7 @@ However, the user doesn't have permissions to **Edit** the phone numbers and hou
 
 In this case, they also don't inherit permissions to **View** contact flows \(the outbound whisper flow\) and quick connects because those resources are optional\.
 
-## List of Inherited Permissions<a name="list-of-inherited-permissions"></a>
+## List of inherited permissions<a name="list-of-inherited-permissions"></a>
 
 The following table lists permissions that are implicitly inherited when you assign dedicated permissions\. 
 

@@ -1,4 +1,4 @@
-# Step 4: Create a Contact Flow<a name="tutorial1-create-contact-flow"></a>
+# Step 4: Create a contact flow<a name="tutorial1-create-contact-flow"></a>
 
 Although Amazon Connect comes with a set of [built\-in contact flows](contact-flow-default.md), you can create your own contact flows to determine how a customer experiences your contact center\. The contact flows contain the prompts that customers hear or see, and they transfer them to the right queue or agent, among other things\.
 
@@ -16,7 +16,7 @@ In this step, create a contact flow that's specific to the IT Help Desk experien
 1. Choose the drop\-down arrows to expand the sections to access the blocks in them\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-expand-contact-flow.png)
 
-1. Drag the following blocks onto the grid: [Set Logging Behavior](set-logging-behavior.md) \(in the **Set** group\), [Set Voice](set-voice.md) \(in the **Set** group\), and [Play Prompt](play.md) \(in the **Interact** group\)\.   
+1. Drag the following blocks onto the grid: [Set logging behavior](set-logging-behavior.md) \(in the **Set** group\), [Set voice](set-voice.md) \(in the **Set** group\), and [Play prompt](play.md) \(in the **Interact** group\)\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-add-blocks1.png)
 
 1. Use your mouse to drag an arrow from the **Start** block to the **Set logging behavior** block\.   
@@ -31,10 +31,10 @@ In this step, create a contact flow that's specific to the IT Help Desk experien
 1. Configure the **Play prompt** block, as shown in the following image, and then choose **Save**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-play-prompt1.png)
 
-1. Add a [Get Customer Input](get-customer-input.md) block and connect to the **Play prompt** block\.  
+1. Add a [Get customer input](get-customer-input.md) block and connect to the **Play prompt** block\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-add-get-customer-input3.png)
 
-1. Choose the title of the [Get Customer Input](get-customer-input.md) block to open the properties page\.  
+1. Choose the title of the [Get customer input](get-customer-input.md) block to open the properties page\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-add-get-customer-input.png)
 
 1.  Configure the **Get customer input** block, as shown in the following images\.  
@@ -60,10 +60,10 @@ In this step, create a contact flow that's specific to the IT Help Desk experien
 
 1. Choose the **Play prompt** title to open its properties page\. Configure the **Play prompt** block with the message *We’re putting you in a queue to help you with your network issues\.* Choose **Save**\.
 
-1. Add a [Disconnect / Hang Up](disconnect-hang-up.md) block \(from the **Terminate/Transfer** group\) to the grid\. Connect the **Default** and **Error** branches to it\.  
+1. Add a [Disconnect / hang up](disconnect-hang-up.md) block \(from the **Terminate/Transfer** group\) to the grid\. Connect the **Default** and **Error** branches to it\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-disconnect1.png)
 
-1. Add a [Set Working Queue](set-working-queue.md) block \(from the **Set** group\) to the grid\. Connect the **Play prompt**\.  
+1. Add a [Set working queue](set-working-queue.md) block \(from the **Set** group\) to the grid\. Connect the **Play prompt**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-set-working-queue1.png)
 
 1. Choose the **Set working queue** title to open its properties page\. Configure the **Set working queue** block by using the drop\-down arrow to choose the **PasswordReset** queue\. Choose **Save**  

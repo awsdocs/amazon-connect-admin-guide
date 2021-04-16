@@ -1,11 +1,11 @@
-# How Quick Connects Work<a name="how-quick-connects-work"></a>
+# How quick connects work<a name="how-quick-connects-work"></a>
 
 This article explains how each type of quick connect works: agent, queue, and external quick connects\. It explains which contact flows are used, and what appears on the agent's Contact Control Panel \(CCP\)\.
 
 **Tip**  
 For all three types of quick connects, when the quick connect is invoked, the contact that the agent is working on hears the [Default customer hold](default-customer-hold.md) flow unless you specify a different customer hold flow\. 
 
-## Agent Quick Connects<a name="agent-quick-connects"></a>
+## Agent quick connects<a name="agent-quick-connects"></a>
 
 Let's say an agent named John is talking to a customer\. During the conversation he needs to transfer the call to an agent named Maria\. This is an agent quick connect\.
 
@@ -26,11 +26,11 @@ Here's what John and Maria do, and what contact blocks are triggered:
 
 1. Maria accepts the incoming call\. The banner in her CCP changes to **Connecting**\.
 
-1. The first [Set Whisper Flow](set-whisper-flow.md) block is triggered\. This block sets the custom agent whisper flow\. It plays the Custom\_Agent\_Whisper to Maria, for example, "This is an internal call transferred from another agent\."
+1. The first [Set whisper flow](set-whisper-flow.md) block is triggered\. This block sets the custom agent whisper flow\. It plays the Custom\_Agent\_Whisper to Maria, for example, "This is an internal call transferred from another agent\."
 **Note**  
 If you don't create and then select a custom agent whisper flow, Amazon Connect plays the [default agent whisper flow](default-agent-whisper.md), which says the queue name\. 
 
-1. The next [Set Whisper Flow](set-whisper-flow.md) block is triggered\. It plays the Custom\_Customer\_Whisper to John, for example, "Your call is not connecting to an agent\." 
+1. The next [Set whisper flow](set-whisper-flow.md) block is triggered\. It plays the Custom\_Customer\_Whisper to John, for example, "Your call is now connecting to an agent\." 
 **Note**  
 If you don't create and then select a custom customer whisper flow, Amazon Connect plays the [default customer whisper flow](default-customer-whisper.md), which plays a beep\. 
 
@@ -42,7 +42,7 @@ If you don't create and then select a custom customer whisper flow, Amazon Conne
    + Put Maria on hold, so he only talks to the customer\.
    + Choose **End call**\. He leaves the call but Maria and the customer are directly connected and continue talking\.
 
-## Queue Quick Connects<a name="queue-quick-connects"></a>
+## Queue quick connects<a name="queue-quick-connects"></a>
 
 Let’s say John is talking to a customer\. The customer needs help resetting his password, so John needs to transfer him to the PasswordReset queue\. This is a queue quick connect\.
 
@@ -55,7 +55,7 @@ Here's what John and Maria do, and what contact blocks are triggered:
 Even though the status of the transferred call \(internal\-transfer\) shows on John's CCP banner as **Connecting**, the contact is not yet transferred to the PasswordReset queue\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-flow-transfer-transfer-connecting.png)
 
-1. Amazon Connect invokes the queue transfer flow that's associated with the PasswordReset quick connect\. In this flow, the [Transfer to Queue](transfer-to-queue.md) block transfers the contact to the PasswordReset queue since it's specified in the block\. The contact is now in the PasswordReset queue\.
+1. Amazon Connect invokes the queue transfer flow that's associated with the PasswordReset quick connect\. In this flow, the [Transfer to queue](transfer-to-queue.md) block transfers the contact to the PasswordReset queue since it's specified in the block\. The contact is now in the PasswordReset queue\.
 
 1. Maria is notified in her CCP to accept or reject the incoming call\. 
 
@@ -73,7 +73,7 @@ Even though the status of the transferred call \(internal\-transfer\) shows on J
    + Put Maria on hold, so he only talks to the customer\.
    + Choose **End call**\. He leaves the call but Maria and the customer are directly connected and continue talking\.
 
-## External Quick Connects<a name="external-quick-connects"></a>
+## External quick connects<a name="external-quick-connects"></a>
 
 There are no contact flows involved in external quick connect\. When an agent invokes an external quick connect, the call is directly connected the destination without invoking any flows\.
 

@@ -1,4 +1,4 @@
-# Create a Security Profile<a name="create-security-profile"></a>
+# Create a security profile<a name="create-security-profile"></a>
 
 Creating a security profile enables you to grant your users only the permissions that they need\.
 
@@ -6,7 +6,15 @@ For each permission group, there is a set of resources and supported set of acti
 
 Some actions depend on other actions\. When you choose an action that depends on another action, the dependent action is automatically chosen and must also be granted\. For example, if you add permission to edit users, we also add permission to view users\.
 
-**To create a security profile**
+## Required permissions to create security profiles<a name="create-security-profiles-required-permissions"></a>
+
+Before you can create a new security profile, you must be logged in with an Amazon Connect account that has the following permissions: **Security profiles \- Create**\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/security-profile-create.png)
+
+By default, the Amazon Connect **Admin** security profile has these permissions\.
+
+## How to create security profiles<a name="how-to-security-profiles-required-permissions"></a>
 
 1. Log in to your contact center using your access URL \(https://*instance name*\.awsapps\.com/connect/login\)\.
 

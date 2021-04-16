@@ -1,4 +1,4 @@
-# Step 2: Handle a Chat Contact<a name="tutorial1-test-chat"></a>
+# Step 2: Handle a chat contact<a name="tutorial1-test-chat"></a>
 
 In Step 1, you used the Contact Control Panel \(CCP\) to manage a voice contact\. In this step, you experience how to use the CCP to manage a chat contact\. 
 
@@ -17,4 +17,4 @@ In Step 1, you used the Contact Control Panel \(CCP\) to manage a voice contact\
 
 Congratulations\! You've experienced what it's like to chat using Amazon Connect\. 
 
-Next, try Tutorial 3 to set up an IT Help Desk\. It shows you how to set up routing, create a contact flow, and then test the custom voice and chat experience\. Go to [Tutorial 3: Create an IT Help Desk](tutorial1-create-helpdesk.md)\.
+Next, try Tutorial 3 to set up an IT Help Desk\. It shows you how to set up routing, create a contact flow, and then test the custom voice and chat experience\. Go to [Tutorial 3: Create an IT help desk](tutorial1-create-helpdesk.md)\.

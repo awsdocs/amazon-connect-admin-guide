@@ -1,8 +1,8 @@
-# About Contact States<a name="about-contact-states"></a>
+# About contact states<a name="about-contact-states"></a>
 
 Contact states appear in two places: the real\-time metrics reports and the agent event stream\.
 
-## Contact States in the Agent Event Stream<a name="contact-states-agent-event-stream"></a>
+## Contact states in the agent event stream<a name="contact-states-agent-event-stream"></a>
 
 There are different events that can appear in the lifecycle of a contact\. Each of these events appear in the agent event stream as a **State**\. A contact can have the following states that appear in the agent event stream:
 + INCOMING \- This is specific to queued callbacks\. The agent is presented with a callback\.
@@ -36,9 +36,9 @@ Here's what the contact state looks like in the agent event stream:
   ]
 ```
 
-## Events in the Contact Trace Record \(CTR\)<a name="ctr-events"></a>
+## Events in the contact trace record \(CTR\)<a name="ctr-events"></a>
 
-A contact trace record \(CTR\) captures events associated with the contact in your contact center\. For example, how long the contact lasted, when it started and stopped\. For a list of all data that's captured in the CTR, see [Contact Trace Records \(CTR\) Data Model](ctr-data-model.md)\. 
+A contact trace record \(CTR\) captures events associated with the contact in your contact center\. For example, how long the contact lasted, when it started and stopped\. For a list of all data that's captured in the CTR, see [Contact trace records \(CTR\) data model](ctr-data-model.md)\. 
 
 A CTR is opened for a customer when they are connected to your contact center\. The CTR is completed when the interaction with the contact flow or agent ends\. This means it's possible for a customer to have multiple CTRs\.
 

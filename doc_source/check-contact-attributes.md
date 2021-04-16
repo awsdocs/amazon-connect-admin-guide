@@ -1,17 +1,25 @@
-# Contact Block: Check Contact Attributes<a name="check-contact-attributes"></a>
-
-## In contact flow types<a name="check-contact-attributes-types"></a>
-
-You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ All flows
+# Contact block: Check contact attributes<a name="check-contact-attributes"></a>
 
 ## Description<a name="check-contact-attributes-description"></a>
 + Branches based on a comparison to the value of a contact attribute\.
 + Supported comparisons include: **Equals**, **Is Greater Than**, **Is Less Than**, **Starts With**, **Contains**\.
 
+## Contact flow types<a name="check-contact-attributes-types"></a>
+
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ All flows
+
 ## Properties<a name="check-contact-attributes-properties"></a>
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-contact-attributes-properties.png)
+
+## Configuration tips<a name="check-contact-attributes-tips"></a>
+
+If you have multiple conditions to compare, Amazon Connect checks them in the order they are listed\. 
+
+For example, in the following image Amazon Connect compares the **greater than 60** condition first and compares **greater than 2** last\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-contact-attributes-tips-order-conditions-are-checked.png)
 
 ## Configured<a name="check-contact-attributes-configured"></a>
 
@@ -22,12 +30,12 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="check-contact-attributes-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Inbound Flow \(First Contact Experience\)](sample-inbound-flow.md)
-+  [Sample Interruptible Queue Flow with Callback](sample-interruptible-queue.md)
++ [Sample inbound flow \(first contact experience\)](sample-inbound-flow.md)
++  [Sample interruptible queue flow with callback](sample-interruptible-queue.md)
 
 ## Scenarios<a name="check-contact-attributes-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [How to Reference Contact Attributes](how-to-reference-attributes.md)
-+ [How to Use the Channel Contact Attribute](use-channel-contact-attribute.md)
-+ [How to Use Contact Attributes to Personalize the Customer Experience](use-attributes-cust-exp.md)
++ [How to reference contact attributes](how-to-reference-attributes.md)
++ [Route based on contact's channel](use-channel-contact-attribute.md)
++ [How to reference contact attributes](how-to-reference-attributes.md)

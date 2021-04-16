@@ -1,14 +1,14 @@
-# Contact Block: Transfer to Flow<a name="transfer-to-flow"></a>
-
-## In contact flow types<a name="transfer-to-flow-types"></a>
-
-You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic contact flow
-+ Transfer to Agent flow
-+ Transfer to Queue flow
+# Contact block: Transfer to flow<a name="transfer-to-flow"></a>
 
 ## Description<a name="transfer-to-flow-description"></a>
 + Ends the current contact flow and transfers the customer to a different contact flow\.
+
+## Contact flow types<a name="transfer-to-flow-types"></a>
+
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ Inbound contact flow
++ Transfer to Agent flow
++ Transfer to Queue flow
 
 ## Properties<a name="transfer-to-flow-properties"></a>
 
@@ -23,9 +23,9 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="transfer-to-flow-samples"></a>
 
 See these sample flows for scenarios that use this block: 
-+ [Sample AB Test](sample-ab-test.md)
++ [Sample AB test](sample-ab-test.md)
 
 ## Scenarios<a name="transfer-to-flow-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Set Up Contact Transfers](transfer.md)
++ [Set up contact transfers](transfer.md)

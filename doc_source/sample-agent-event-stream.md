@@ -1,10 +1,9 @@
-# Sample Agent Event Stream<a name="sample-agent-event-stream"></a>
+# Sample agent event stream<a name="sample-agent-event-stream"></a>
 
 In the following agent event stream, the agent is assigned to a routing profile that requires them to take both chats and calls\. They can take one call, and up to three chats at a time\. 
 
 ```
-            
-           {
+{
     "AWSAccountId": "012345678901",
     "AgentARN": "arn:aws:connect:us-west-2:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent/agent-ARN",
     "CurrentAgentSnapshot": {

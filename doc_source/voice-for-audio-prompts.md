@@ -1,6 +1,6 @@
-# Choose the Voice for Audio Prompts<a name="voice-for-audio-prompts"></a>
+# Choose the voice for audio prompts<a name="voice-for-audio-prompts"></a>
 
-You select the text\-to\-speech voice and language in the **Set voice** block\. 
+You select the text\-to\-speech voice and language in the [Set voice](set-voice.md) block\. 
 
 You can also use SSML in Amazon Lex bots to modify the voice used by a chat bot when interacting with your customers\. For more information about using SSML in Amazon Lex bots, see [Managing Messages](https://docs.aws.amazon.com/lex/latest/dg/howitworks-manage-prompts.html#msg-prompts-response) and [Managing Conversation Context](https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html#special-response) in the Amazon Lex Developer Guide\.
 

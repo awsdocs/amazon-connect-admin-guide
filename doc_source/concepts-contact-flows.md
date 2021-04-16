@@ -1,10 +1,10 @@
-# Contact Flows<a name="concepts-contact-flows"></a>
+# Contact flows<a name="concepts-contact-flows"></a>
 
 A contact flow defines how a customer experiences your contact center from start to finish\. At the most basic level, contact flows enable you to customize your IVR \(interactive voice response\) system\. 
 
 For example, you can give customers a set of menu options and route customers to agents based on what they enter on their phone\. Although with Amazon Connect, contact flows are significantly more powerful than that: you can create dynamic, personalized flows that interact with other AWS services\.
 
-## Default Contact Flows<a name="concepts-default-flows"></a>
+## Default contact flows<a name="concepts-default-flows"></a>
 
 When you create an instance and claim a number, you automatically have a working contact center in just 5 minutes\. This is because Amazon Connect includes a set of default contact flows that have already been published\. It uses them to power your contact center\. 
 
@@ -16,13 +16,13 @@ For example, say you create a contact flow that includes putting the customer on
 
 To see the list of default flows in the Amazon Connect console, go to **Routing**, **Contact Flows**\. They all start with **Default** in their name\. 
 
-For a list of all the default contact flows and what they do, see [Default Contact Flows](contact-flow-default.md)\.
+For a list of all the default contact flows and what they do, see [Default contact flows](contact-flow-default.md)\.
 
-## Contact Flow Designer<a name="concepts-visual-editor"></a>
+## Contact flow designer<a name="concepts-visual-editor"></a>
 
 To customize your contact center, you use the contact flow designer\. It's a drag\-and\-drop interface that allows you to customize your contact center without any coding\.
 
-### Contact Blocks<a name="concepts-contact-blocks"></a>
+### Contact blocks<a name="concepts-contact-blocks"></a>
 
 Contact blocks are the building blocks of your contact flows\. Each block is designed for a specific function a business might want in a contact center\. 
 
@@ -37,8 +37,8 @@ The above contact flow uses five blocks:
 
 In the above example, what happens when the customer is transferred to queue, but no agents are available to take their call? The **Default customer queue** flow is triggered\. It plays music while the contact is waiting in queue\. 
 
-For a list of the available contact blocks and descriptions about what they do, see [Contact Block Definitions](contact-block-definitions.md)\. 
+For a list of the available contact blocks and descriptions about what they do, see [Contact block definitions](contact-block-definitions.md)\. 
 
-### Sample Contact Flows<a name="concepts-sample-flows"></a>
+### Sample contact flows<a name="concepts-sample-flows"></a>
 
-To see how to put contact blocks together to create different flows, see [Sample Contact Flows](contact-flow-samples.md)\.
+To see how to put contact blocks together to create different flows, see [Sample contact flows](contact-flow-samples.md)\.

@@ -1,4 +1,4 @@
-# Accept Incoming Calls<a name="work-with-calls"></a>
+# Accept incoming calls<a name="work-with-calls"></a>
 
 1. Whenever you set your status in the CCP to **Available**, Amazon Connect can deliver calls to you, based on the settings in your [routing profile](routing-profiles.md)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/incoming-call-ccp2.png)

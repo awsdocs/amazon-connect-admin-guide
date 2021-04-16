@@ -1,4 +1,4 @@
-# What Counts as a "Failed Callback Attempt"<a name="failed-callback-attempt"></a>
+# What counts as a "Failed Callback Attempt"<a name="failed-callback-attempt"></a>
 
 If an agent doesn't accept an offered callback, it doesn't count as an failed callback attempt\. Rather, the routing engine offers the callback to the next available agent, until an agent accepts\. 
 

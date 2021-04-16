@@ -1,4 +1,4 @@
-# Step 2: Create an Instance<a name="tutorial1-create-instance"></a>
+# Step 2: Create an instance<a name="tutorial1-create-instance"></a>
 
 1. On the **Amazon Connect virtual contact center instances** page, choose **Add an instance**\.
 
@@ -28,4 +28,4 @@
 1. You're now on the Amazon Connect dashboard\. On the left is the navigation menu\. Your instance name \(also called an **alias**\) displays in the URL\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-dashboard.png)
 
-Congratulations\! You set up your instance and now you're on the Amazon Connect dashboard\. Go to [Step 3: Claim a Phone Number](tutorial1-claim-phone-number.md)\.
+Congratulations\! You set up your instance and now you're on the Amazon Connect dashboard\. Go to [Step 3: Claim a phone number](tutorial1-claim-phone-number.md)\.

@@ -25,6 +25,12 @@ The role permissions policy allows Amazon Connect to complete the following acti
 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete a service\-linked role\. For more information, see [Service\-Linked Role Permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.
 
+### Set up instances created before October 2018 to use service\-linked roles<a name="not-using-slr"></a>
+
+If your instance was created before October 2018, you don't have service\-linked roles set up\. 
+
+Add the **connect:\*** policy on the role that is associated with your Amazon Connect instance\. This enables you to access the public API for real\-time transcription, and real\-time transcription page that utilizes the API\.
+
 ## Creating a Service\-Linked Role for Amazon Connect<a name="create-slr"></a>
 
 You don't need to manually create a service\-linked role\. When you create a new instance in Amazon Connect in the AWS Management Console, Amazon Connect creates the service\-linked role for you\.

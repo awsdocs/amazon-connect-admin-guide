@@ -1,8 +1,6 @@
-# Sample Disconnect Flow<a name="sample-disconnect"></a>
+# Sample disconnect flow<a name="sample-disconnect"></a>
 
 Type: Contact flow \(inbound\)
-
-This contact flow only works for chat conversations\.
 
 1. The **Play prompt** block shows a text message that the agent has disconnected\.
 

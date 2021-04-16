@@ -1,4 +1,4 @@
-# Sample Interruptible Queue Flow with Callback<a name="sample-interruptible-queue"></a>
+# Sample interruptible queue flow with callback<a name="sample-interruptible-queue"></a>
 
 Type: Customer queue
 

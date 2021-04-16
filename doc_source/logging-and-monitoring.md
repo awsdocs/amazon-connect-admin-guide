@@ -1,4 +1,4 @@
-# Logging and Monitoring Amazon Connect<a name="logging-and-monitoring"></a>
+# Logging and monitoring Amazon Connect<a name="logging-and-monitoring"></a>
 
 Monitoring is important for maintaining the reliability, availability, and performance of your contact center\. 
 
@@ -10,8 +10,6 @@ You should collect monitoring data from all of the parts of your AWS solution so
 + Who will perform the monitoring tasks?
 + Who should be notified when something goes wrong?
 
-The topics in this section describe how to use Amazon CloudWatch Logs and AWS CloudTrail to monitor Amazon Connect and describes the Amazon Connect metrics sent to CloudWatch\.
-
-**Topics**
-+ [CloudWatch Metrics](monitoring-cloudwatch.md)
-+ [Logging Service API Calls](logging-using-cloudtrail.md)
+See the following topics to learn how to use Amazon CloudWatch Logs and AWS CloudTrail to monitor Amazon Connect and describes the Amazon Connect metrics sent to CloudWatch:
++ [Monitoring your instance using CloudWatch](monitoring-cloudwatch.md)
++ [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)

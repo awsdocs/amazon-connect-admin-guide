@@ -1,4 +1,4 @@
-# Encrypt Customer Input<a name="encrypt-data"></a>
+# Encrypt customer input<a name="encrypt-data"></a>
 
 You can encrypt sensitive data that is collected by contact flows\. To do this, you need to use public\-key cryptography\. Here's how this works: 
 
@@ -16,7 +16,7 @@ For a detailed walkthrough, see [Creating a secure IVR solution with Amazon Conn
 + Encrypt the credit card digits\.
 + Send it to our backend AWS Lambda for decryption, using the customer supplied decryption key\.
 
-## How to Decrypt Data Encrypted by Amazon Connect<a name="sample-decryption"></a>
+## How to decrypt data encrypted by Amazon Connect<a name="sample-decryption"></a>
 
 The following code sample shows how to decrypt data using the AWS Encryption SDK\. 
 

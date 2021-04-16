@@ -1,4 +1,4 @@
-# Example Contact Flow for Testing Live Media Streaming<a name="use-media-streams-blocks"></a>
+# Example contact flow for testing live media streaming<a name="use-media-streams-blocks"></a>
 
 Here's how you can set up a contact flow to test live media streaming: 
 
@@ -19,4 +19,4 @@ The following example contact flow shows how you might use media streaming with 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/media-streaming-flow.png)
 
-After the audio is successfully streamed to Kinesis Video Streams, the contact attributes are populated from the **Invoke AWS Lambda function** block\. You can use the attributes to identify the location in the stream where the customer audio starts\. For instructions, see [Contact Attributes for Live Media Streaming](media-streaming-attributes.md)\.
+After the audio is successfully streamed to Kinesis Video Streams, the contact attributes are populated from the **Invoke AWS Lambda function** block\. You can use the attributes to identify the location in the stream where the customer audio starts\. For instructions, see [Contact attributes for live media streaming](media-streaming-attributes.md)\.

@@ -1,4 +1,4 @@
-# Log Out Agents Automatically When They Close Their CCP<a name="automatic-logout"></a>
+# Log out agents automatically when they close their CCP<a name="automatic-logout"></a>
 
 When using the default Amazon Connect CCP, closing the CCP window doesn't change an agent's status from **Available** to **Offline**\. An agent must change their status manually, and then log out\.
 

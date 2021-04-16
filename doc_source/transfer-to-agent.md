@@ -1,4 +1,4 @@
-# Transfer Contacts to a Specific Agent<a name="transfer-to-agent"></a>
+# Transfer contacts to a specific agent<a name="transfer-to-agent"></a>
 
 Agent queues enable you to route contacts directly to a specific agent\. Following are a couple of scenarios where you might want to do this: 
 + Route contacts to the last agent the customer interacted with\. This provides a consistent customer experience\.
@@ -27,13 +27,13 @@ A queue is created for all users in your Amazon Connect instance, but only users
 
 You can also choose to use an attribute to select the queue created for the agent user account\. To do so, after you choose **By agent**, choose **Use attribute**\.
 
-## Use Contact Attributes to Route Contacts to a Specific Agent<a name="use-attribs-agent-queue"></a>
+## Use contact attributes to route contacts to a specific agent<a name="use-attribs-agent-queue"></a>
 
 When you use contact attributes in a contact flow to route calls to an agent, the attribute value must be either the agent's user name, or the agent's user ID\.
 
 To determine the user ID for an agent so that you can use the value as an attribute, use the [ListUsers](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListUsers.html) operation to retrieve the users from your instance\. The agent's user ID is returned with the results from the operation as the value of the `Id` in the [UserSummary](https://docs.aws.amazon.com/connect/latest/APIReference/API_UserSummary.html) object\.
 
-You can also find the user ID for an agent by using [Amazon Connect Agent Event Streams](agent-event-streams.md)\. The agent events, which are included in the agent event data stream, include the agent ARN\. The user ID is included in the agent ARN after **`agent/`**\. 
+You can also find the user ID for an agent by using [Amazon Connect agent event streams](agent-event-streams.md)\. The agent events, which are included in the agent event data stream, include the agent ARN\. The user ID is included in the agent ARN after **`agent/`**\. 
 
 In the following agent event data, the agent ID is **87654321\-4321\-4321\-4321\-123456789012**\.
 

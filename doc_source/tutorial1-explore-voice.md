@@ -1,4 +1,4 @@
-# Step 1: Handle a Voice Contact<a name="tutorial1-explore-voice"></a>
+# Step 1: Handle a voice contact<a name="tutorial1-explore-voice"></a>
 
 1. On the navigation menu, choose **Dashboard**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-dashboard-menu.png)
@@ -20,7 +20,7 @@
 
 1. Use your mobile phone to call the phone number that you claimed earlier\. If you didn't write down the number, you can find it by going to **Routing**, **Phone numbers**\.
 
-1. When your call is joined to Amazon Connect you'll hear "Press 1 to be put in queue for an agent, 2 to \.\.\." This is the [Sample Inbound Flow](sample-inbound-flow.md) that Amazon Connect runs by default\. You're going to change this later in the tutorial\.
+1. When your call is joined to Amazon Connect you'll hear "Press 1 to be put in queue for an agent, 2 to \.\.\." This is the [Sample inbound flow](sample-inbound-flow.md) that Amazon Connect runs by default\. You're going to change this later in the tutorial\.
 
 1. You can play around with the different options in the Sample inbound contact flow\. To connect to an agent, press **1**, **1**, **1**\.
 
@@ -44,6 +44,6 @@ As an administrator, you can launch the CCP from anywhere on the Amazon Connect 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-phone-icon.png)
 
-## Next Step<a name="tutorial1-test-voice-next-step"></a>
+## Next step<a name="tutorial1-test-voice-next-step"></a>
 
-Go to [Step 2: Handle a Chat Contact](tutorial1-test-chat.md) to experience how to handle a chat contact\.
+Go to [Step 2: Handle a chat contact](tutorial1-test-chat.md) to experience how to handle a chat contact\.

@@ -1,6 +1,6 @@
-# Detailed Network Paths for Amazon Connect<a name="detailed-network-paths"></a>
+# Detailed network paths for Amazon Connect<a name="detailed-network-paths"></a>
 
-## Voice Calls<a name="detailed-network-paths-voice"></a>
+## Voice calls<a name="detailed-network-paths-voice"></a>
 
 The following diagram shows how voice calls flow through Amazon Connect 
 

@@ -19,4 +19,4 @@ This step walks you through finding Amazon Connect in the AWS console, and openi
 
 **Congratulations\!** You found and accessed Amazon Connect\. You can use these same steps to search for and launch any AWS service\.
 
-Go to [Step 2: Create an Instance](tutorial1-create-instance.md)\.
+Go to [Step 2: Create an instance](tutorial1-create-instance.md)\.

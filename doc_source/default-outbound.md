@@ -1,4 +1,4 @@
-# Default Outbound: "This call is not being recorded"<a name="default-outbound"></a>
+# Default outbound: "This call is not being recorded"<a name="default-outbound"></a>
 
 This contact flow is an outbound whisper that manages what the customer experiences as part of an outbound call, before being connected with an agent\. 
 
@@ -10,4 +10,4 @@ This contact flow is an outbound whisper that manages what the customer experien
 
 1. The customer remains in the system \(on the call\) after the flows ends\. 
 
-For instructions about how to override and change a default contact flow, see [Change a Default Contact Flow](change-default-contact-flow.md)\.
+For instructions about how to override and change a default contact flow, see [Change a default contact flow](change-default-contact-flow.md)\.

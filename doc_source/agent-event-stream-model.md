@@ -1,23 +1,30 @@
-# Agent Event Streams Data Model<a name="agent-event-stream-model"></a>
+# Agent event streams data model<a name="agent-event-stream-model"></a>
 
 Agent event streams are created in JavaScript Object Notation \(JSON\) format\. For each event type, a JSON blob is sent to the Kinesis data stream\. The following event types are included in agent event streams:
 + LOGIN—An agent login to the contact center\.
 + LOGOUT—An agent logout from the contact center\.
 + STATE\_CHANGE—One of the following changed:
-  + Something in the agent's configuration changed, such as their routing profile\.
-  + The agent changed their status in the CCP\. For example, they changed it from Available to on Break\.
-  + The state of the conversation between then agent and contact changed\. For example, they were connected and then on hold\. 
+  + The agent changed their status in the Contact Control Panel \(CCP\)\. For example, they changed it from Available to on Break\.
+  + The state of the conversation between the agent and contact changed\. For example, they were connected and then on hold\. 
+  + One of the following settings changed in the agent's configuration:
+    + Their routing profile
+    + The queues in their routing profile
+    + Phone type: soft phone or desk phone
+    + Auto\-accept call
+    + Sip address
+    + Agent hierarchy group
+    + Language preference setting in the CCP
 + HEART\_BEAT—This event is published every 120 seconds if there are no other events published during that interval\.
 
 **Topics**
 + [AgentEvent](#AgentEvent)
 + [AgentSnapshot](#AgentSnapshot)
 + [Configuration](#Configuration)
-+ [Contact Object](#Contact)
-+ [HierarchyGroup Object](#Hierarchygroup-object)
-+ [AgentHierarchyGroups Object](#Hierarchygroups-object)
-+ [Queue Object](#queue-object)
-+ [RoutingProfile Object](#routingprofile)
++ [Contact object](#Contact)
++ [HierarchyGroup object](#Hierarchygroup-object)
++ [AgentHierarchyGroups object](#Hierarchygroups-object)
++ [Queue object](#queue-object)
++ [RoutingProfile object](#routingprofile)
 
 ## AgentEvent<a name="AgentEvent"></a>
 
@@ -114,7 +121,7 @@ The user name for the agent's Amazon Connect user account\.
 Type: String  
 Length: 1\-100
 
-## Contact Object<a name="Contact"></a>
+## Contact object<a name="Contact"></a>
 
 The `Contact` object includes the following properties:
 
@@ -156,7 +163,7 @@ Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
 The queue the contact was placed in\.  
 Type: `Queue` object
 
-## HierarchyGroup Object<a name="Hierarchygroup-object"></a>
+## HierarchyGroup object<a name="Hierarchygroup-object"></a>
 
 The `HierarchyGroup` object includes the following properties:
 
@@ -168,7 +175,7 @@ Type: String
 The name of the hierarchy group\.  
 Type: String
 
-## AgentHierarchyGroups Object<a name="Hierarchygroups-object"></a>
+## AgentHierarchyGroups object<a name="Hierarchygroups-object"></a>
 
 The `AgentHierarchyGroups` object includes the following properties:
 
@@ -192,7 +199,7 @@ Type: `HierarchyGroup` object
 Includes details for Level5 of the hierarchy assigned to the agent\.  
 Type: `HierarchyGroup` object
 
-## Queue Object<a name="queue-object"></a>
+## Queue object<a name="queue-object"></a>
 
 The `Queue` object includes the following properties:
 
@@ -204,7 +211,7 @@ Type: String
 The name of the queue\.  
 Type: String
 
-## RoutingProfile Object<a name="routingprofile"></a>
+## RoutingProfile object<a name="routingprofile"></a>
 
 The `RoutingProfile` object includes the following properties:
 

@@ -1,7 +1,10 @@
-# Emergency Admin Login<a name="emergency-admin-login"></a>
+# Emergency admin login<a name="emergency-admin-login"></a>
 
 As a best practice, users assigned to the Amazon Connect **Admin** security profile should always use their Amazon Connect instance URL to login:
-+ Login in at https://*name\_of\_instance*\.awsapps\.com/connect/login
++ Log in to your contact center at https://*instance name*\.awsapps\.com/connect/\.
+
+**Note**  
+IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
 
 This method ensures the appropriate levels security\.
 

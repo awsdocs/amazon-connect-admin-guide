@@ -1,8 +1,8 @@
-# Track Who Deleted or Listened to Recordings<a name="track-who-deleted-recordings"></a>
+# Track who deleted or listened to recordings<a name="track-who-deleted-recordings"></a>
 
 You need an AWS account to do these steps\.
 
-## Set Up Logging<a name="setup-logging-of-deleted-recordings"></a>
+## Set up logging<a name="setup-logging-of-deleted-recordings"></a>
 
 1. If you have multiple instances and buckets, look up the name of the Amazon S3 bucket for your instance\. Go to the Amazon Connect console, choose the instance alias, and choose **Data storage**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/s3-bucket-name.png)
@@ -30,7 +30,7 @@ You need an AWS account to do these steps\.
 
 1. Choose **Allow**\. You can now close the AWS CloudTrail console\.
 
-## Find Who Deleted or Listened to Recordings<a name="find-who-deleted-recordings"></a>
+## Find who deleted or listened to recordings<a name="find-who-deleted-recordings"></a>
 
 1. Go to the Amazon CloudWatch console\.
 

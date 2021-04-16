@@ -1,10 +1,15 @@
-# Logging Amazon Connect API Calls with AWS CloudTrail<a name="logging-using-cloudtrail"></a>
+# Logging Amazon Connect API calls with AWS CloudTrail<a name="logging-using-cloudtrail"></a>
 
-Amazon Connect is integrated with AWS CloudTrail, a service that provides a record of the Amazon Connect API calls that a user, role, or AWS service makes\. CloudTrail captures Amazon Connect API calls as events\. For more information about CloudTrail, including how to configure and enable it, see the [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)\.
+Amazon Connect is integrated with AWS CloudTrail, a service that provides a record of the Amazon Connect API calls that a user, role, or AWS service makes\. CloudTrail captures Amazon Connect API calls as events\. 
 
-Using the information that CloudTrail collects, you can identify a specific request to an Amazon Connect API, the IP address of the requester, the requester's identity, the date and time of the request, and so on\. If you configure a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket\. If you don't configure a trail, you can view the most recent events in **Event History** in the CloudTrail console\. For more information, see [Creating a Trail For Your AWS Account](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html)\.
+**Note**  
+Events from the Amazon Connect admin console aren't recorded in CloudTrail\.
 
-## Amazon Connect Information in CloudTrail<a name="connect-info-in-cloudtrail"></a>
+Using the information that CloudTrail collects, you can identify a specific request to an Amazon Connect API, the IP address of the requester, the requester's identity, the date and time of the request, and so on\. If you configure a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket\. If you don't configure a trail, you can view the most recent events in **Event History** in the CloudTrail console\.
+
+For more information about CloudTrail, including how to configure and enable it, see [Creating a Trail For Your AWS Account](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html) and [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)\.
+
+## Amazon Connect information in CloudTrail<a name="connect-info-in-cloudtrail"></a>
 
 CloudTrail is enabled on your AWS account when you create the account\. When supported event activity occurs in Amazon Connect, that activity is recorded in a CloudTrail event along with other AWS service events in **Event history**\. You can view, search, and download recent events in your AWS account\. For more information, see [Viewing Events with CloudTrail Event History](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html)\. 
 
@@ -14,22 +19,20 @@ For an ongoing record of events in your AWS account, including events for Amazon
 + [Configuring Amazon SNS Notifications for CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/getting_notifications_top_level.html)
 + [Receiving CloudTrail Log Files from Multiple Regions](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/receive-cloudtrail-log-files-from-multiple-regions.html) and [Receiving CloudTrail Log Files from Multiple Accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
-Amazon Connect supports logging both the request parameters and the responses for the following APIs as events in CloudTrail log files:
-+ [CreateUser](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateUser.html)
-+ [DeleteUser](https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteUser.html)
-+ [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html)
-+ [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html)
-+ [StopContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContact.html)
-+ [TagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_TagResource.html)
-+ [UntagResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_UntagResource.html)
-+ [UpdateContactAttributes](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html)
-+ [UpdateUserHierarchys](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserHierarchy.html)
-+ [UpdateUserIdentityInfo](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserIdentityInfo.html)
-+ [UpdateUserPhoneConfig](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserPhoneConfig.html)
-+ [UpdateUserRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserRoutingProfile.html)
-+ [UpdateUserSecurityProfiles](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserSecurityProfiles.html)
+Every event or log entry contains information about who generated the request\. The identity information helps you determine the following: 
++ Whether the request was made with root or AWS Identity and Access Management \(IAM\) user credentials\.
++ Whether the request was made with temporary security credentials for a role or federated user\.
++ Whether the request was made by another AWS service\.
 
-For the following APIs, the request parameters are logged, but the responses are redacted:
+For more information, see the [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
+
+## Logged Amazon Connect APIs<a name="connect-apis-in-cloudtrail"></a>
+
+Amazon Connect supports logging both the request parameters and the responses for APIs as events in CloudTrail log files\. For the following APIs, however, the request parameters are logged, but the responses are redacted:
++ [DescribeContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeContactFlow.html) 
++ [DescribeQueue](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeQueue.html)
++ [DescribeQuickConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeQuickConnect.html)
++ [DescribeRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeRoutingProfile.html)
 + [DescribeUser](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeUser.html)
 + [DescribeUserHierarchyGroup](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeUserHierarchyGroup.html)
 + [DescribeUserHierarchyStructure](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeUserHierarchyStructure.html)
@@ -40,21 +43,40 @@ For the following APIs, the request parameters are logged, but the responses are
 + [ListContactFlows](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListContactFlows.html)
 + [ListHoursOfOperations](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListHoursOfOperations.html)
 + [ListPhoneNumbers](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPhoneNumbers.html)
++ [ListPrompts](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListPrompts.html)
 + [ListQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListQueues.html)
++ [ListQueueQuickConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListQueueQuickConnect.html)
++ [ListQuickConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListQuickConnect.html)
 + [ListRoutingProfiles](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListRoutingProfiles.html)
++ [ListRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListRoutingProfileQueues.html)
 + [ListSecurityProfiles](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListSecurityProfiles.html)
 + [ListTagsForResource](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListTagsForResource.html)
 + [ListUserHierarchyGroups](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListUserHierarchyGroups.html)
 + [ListUsers](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListUsers.html)
 
-Every event or log entry contains information about who generated the request\. The identity information helps you determine the following: 
-+ Whether the request was made with root or AWS Identity and Access Management \(IAM\) user credentials\.
-+ Whether the request was made with temporary security credentials for a role or federated user\.
-+ Whether the request was made by another AWS service\.
+## Logged Amazon Connect Participant Service APIs<a name="appintegration-apis-in-cloudtrail"></a>
 
-For more information, see the [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
+Amazon Connect; Participant Service API supports logging both the request parameters and the responses for APIs as events in CloudTrail log files\. For the following APIs, however, the request parameters are logged, but the responses are redacted:
++ [GetTranscript](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_GetTranscript.html)
 
-## Example: Amazon Connect Log File Entries<a name="understanding-connect-entries"></a>
+## Logged Amazon Connect Customer Profiles APIs<a name="customerprofiles-apis-in-cloudtrail"></a>
+
+Amazon Connect Customer Profiles APIs support logging both the request parameters and the responses for APIs as events in CloudTrail log files\. For all of the APIs, however, the request parameters are logged, but the responses are redacted\.
+
+## Logged Amazon Connect App Integrations Service APIs<a name="appintegration-apis-in-cloudtrail"></a>
+
+Amazon Connect App Integrations Service supports logging both the request parameters and the responses for APIs as events in CloudTrail log files\. For the following APIs, however, the request parameters are logged, but the responses are redacted:
++  [ListEventIntegrations](https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_ListEventIntegrations.html) 
++ [GetEventIntegration](https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_GetEventIntegration.html)
++ [CreateEventIntegration](https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateEventIntegration.html)
++ [UpdateEventIntegration](https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_UpdateEventIntegration.html)
++ [DeleteEventIntegration](https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DeleteEventIntegration.html) 
++ [CreateEventIntegrationAssociation](https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateEventIntegrationAssociation.html)
++ [CreateEventIntegration](https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateEventIntegration.html)
++ [DeleteEventIntegrationAssociation](https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DeleteEventIntegrationAssociation.html)
++ [ListEventIntegrationAssociations](https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_ListEventIntegrationAssociations.html)
+
+## Example: Amazon Connect log file entries<a name="understanding-connect-entries"></a>
 
  A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files aren't an ordered stack trace of the public API calls, so they don't appear in any specific order\.
 

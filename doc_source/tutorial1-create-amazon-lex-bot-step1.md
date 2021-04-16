@@ -1,4 +1,4 @@
-# Part 1: Create an Amazon Lex Bot<a name="tutorial1-create-amazon-lex-bot-step1"></a>
+# Part 1: Create an Amazon Lex bot<a name="tutorial1-create-amazon-lex-bot-step1"></a>
 
 This step assumes it's the first time you've opened the Amazon Lex console\. If you've created a Amazon Lex bot before, your steps differ slightly from the ones in this section\.
 
@@ -21,4 +21,4 @@ This step assumes it's the first time you've opened the Amazon Lex console\. If 
 
 1. Choose **Create**\.
 
-Go to [Part 2: Add Intents to Your Amazon Lex Bot](tutorial-lex-bot-intents.md)\.
+Go to [Part 2: Add intents to your Amazon Lex bot](tutorial-lex-bot-intents.md)\.

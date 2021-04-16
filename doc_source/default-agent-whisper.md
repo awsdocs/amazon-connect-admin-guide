@@ -1,9 +1,12 @@
-# Default Agent Whisper: Name of the Queue<a name="default-agent-whisper"></a>
+# Default agent whisper: name of the queue<a name="default-agent-whisper"></a>
 
-This contact flow plays for the agent immediately before the call is connected with the customer\. This type of flow can be used to play a prompt for the agent\. 
+This contact flow uses a [Set whisper flow](set-whisper-flow.md) block to play a message for the agent when the customer and agent are joined\. 
 
-The name of the queue is played to the agent\. It identifies for the agent the queue that the customer was in\. The name of the queue is retrieved from the system variable `$.Queue.Name`\. 
+The name of the queue is played to the agent\. It identifies the queue that the customer was in\. The name of the queue is retrieved from the system variable `$.Queue.Name`\. 
 
-For more information about system variables, see [Contact Flow System Attributes](connect-attrib-list.md#attribs-system-table)\.
+Use the [Set whisper flow](set-whisper-flow.md) block to override the default agent whisper in a voice conversation\.
 
-For instructions about how to override and change a default contact flow, see [Change a Default Contact Flow](change-default-contact-flow.md)\.
+**Important**  
+For chat conversations, you need to include a [Set whisper flow](set-whisper-flow.md) for default agent or customer whispers to play\. For instructions, see [Set the default whisper flow for a chat conversation](set-default-whisper-flow-for-chat.md)\.
+
+For more information about system variables, see [System attributes](connect-attrib-list.md#attribs-system-table)\.

@@ -1,6 +1,6 @@
-# Add Custom Agent Status<a name="agent-custom"></a>
+# Add custom agent status<a name="agent-custom"></a>
 
-Agents are responsible for setting their status in the Contact Control Panel \(CCP\)\. In fact, the only time an agent's status changes is when they manually change it in the CCP\. 
+Agents are responsible for setting their status in the Contact Control Panel \(CCP\)\. In fact, the only time an agent's status changes is when they manually change it in the CCP, or when [their supervisor changes it](rtm-change-agent-activity-state.md) in a real\-time metrics report\. 
 
 Amazon Connect provides two default status values: 
 + Available

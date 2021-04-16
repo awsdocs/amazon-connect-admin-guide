@@ -1,4 +1,4 @@
-# Part 2: Add Intents to Your Amazon Lex Bot<a name="tutorial-lex-bot-intents"></a>
+# Part 2: Add intents to your Amazon Lex bot<a name="tutorial-lex-bot-intents"></a>
 
 An intent is the action the user wants to perform\. In this part, add two intents to the bot\. Each intent represents a reason that users call the Help Desk: password reset and network issues\.
 

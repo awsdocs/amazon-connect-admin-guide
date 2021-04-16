@@ -1,4 +1,4 @@
-# Step 3: Set Up Routing<a name="tutorial1-set-up-routing"></a>
+# Step 3: Set up routing<a name="tutorial1-set-up-routing"></a>
 
 In this step, you start at the Amazon Connect console for your instance\. This step shows how to set up your queues, create a routing profile, and then assign your user account to the profile\. 
 

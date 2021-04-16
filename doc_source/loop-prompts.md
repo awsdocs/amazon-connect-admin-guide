@@ -1,14 +1,14 @@
-# Contact Block: Loop Prompts<a name="loop-prompts"></a>
+# Contact block: Loop prompts<a name="loop-prompts"></a>
 
-## In contact flow types<a name="loop-prompts-types"></a>
+## Description<a name="loop-prompts-description"></a>
++ Loops a sequence of prompts while a customer or agent is on hold or in queue\.
+
+## Contact flow types<a name="loop-prompts-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Customer Queue flow
 + Customer Hold flow
 + Agent Hold flow
-
-## Description<a name="loop-prompts-description"></a>
-+ Loops a sequence of prompts while a customer or agent is on hold or in queue\.
 
 ## Properties<a name="loop-prompts-properties"></a>
 
@@ -30,9 +30,9 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="loop-prompts-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Interruptible Queue Flow with Callback](sample-interruptible-queue.md)
++ [Sample interruptible queue flow with callback](sample-interruptible-queue.md)
 
 ## Scenarios<a name="loop-prompts-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Manage Contacts in a Queue](queue-to-queue-transfer.md)
++ [Manage contacts in a queue](queue-to-queue-transfer.md)

@@ -1,4 +1,4 @@
-# Best Practices for Security Profiles<a name="security-profile-best-practices"></a>
+# Best practices for security profiles<a name="security-profile-best-practices"></a>
 + Limit who has **Users \- Edit or Create** permissions
 
   People with these permissions pose a risk to your contact center because they can do the following:

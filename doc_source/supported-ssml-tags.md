@@ -1,6 +1,9 @@
-# SSML Tags Supported by Amazon Connect<a name="supported-ssml-tags"></a>
+# SSML tags supported by Amazon Connect<a name="supported-ssml-tags"></a>
 
-Amazon Connect supports the following SSML tags\. To learn how to use these tags together to achieve a natural sounding voice, see [SSML in Amazon Connect Contact Flows](https://aws.amazon.com/blogs/contact-center/ssml-in-amazon-connect-contact-flows/)\.
+Amazon Connect supports the following SSML tags\. To learn more about the SSML tags, see [Supported SSML Tags](https://docs.aws.amazon.com/polly/latest/dg/supportedtags.html) in the Amazon Polly Developer Guide\.
+
+**Tip**  
+If you use an unsupported tag in your input text, it's automatically ignored when it's processed\. 
 
 
 | Tag | Use to\.\.\. | 
@@ -21,3 +24,7 @@ Amazon Connect supports the following SSML tags\. To learn how to use these tags
 If you use an unsupported tag in your input text it is automatically ignored when it is processed\. 
 
 To learn more about the SSML tags, see [SSML Tags Supported by Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/supported-ssml.html)\.
+
+## Neural and Conversational Speaking Styles<a name="neural-and-conversational-tts"></a>
+
+For the **Joanna** and **Matthew** neural voices, in American English \(en\-US\), you can also specify a [Conversational speaking style](https://docs.aws.amazon.com/polly/latest/dg/ntts-speakingstyles.html) or a [Newscaster speaking style](https://docs.aws.amazon.com/polly/latest/dg/ntts-speakingstyles.html)\.

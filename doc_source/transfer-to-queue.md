@@ -1,17 +1,17 @@
-# Contact Block: Transfer to Queue<a name="transfer-to-queue"></a>
-
-## In contact flow types<a name="transfer-to-queue-types"></a>
-
-You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic contact flow
-+ Customer Queue flow
-+ Transfer to Agent flow
-+ Transfer to Queue flow
+# Contact block: Transfer to queue<a name="transfer-to-queue"></a>
 
 ## Description<a name="transfer-to-queue-description"></a>
 + In most types of contact flows, this block ends the current contact flow and places the customer in a queue\. 
 + When used in a Customer Queue flow, however, this block transfers a contact already in a queue to another queue\. 
 + When used in a callback scenario, Amazon Connect calls the agent first\. After the agent accepts the call in the CCP, Amazon Connect calls the customer\.
+
+## Contact flow types<a name="transfer-to-queue-types"></a>
+
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ Inbound contact flow
++ Customer Queue flow
++ Transfer to Agent flow
++ Transfer to Queue flow
 
 ## Properties<a name="transfer-to-queue-properties"></a>
 
@@ -31,9 +31,9 @@ If no limit is set, the queue is limited to the number of concurrent contacts se
 
 The following properties are available under the **Transfer to callback queue** tab:
 + **Initial delay**: Specify how much time has to pass between a callback contact being initiated in the contact flow, and the customer is put in queue for the next available agent\. 
-+ **Maximum amount of attempts**: Think of this as the maximum number of retries\. If this were set to 1, then Amazon Connect would try to callback the customer at most two times: the initial callback, and 1 retry\.
++ **Maximum number of retries**: If this were set to 1, then Amazon Connect would try to callback the customer at most two times: the initial callback, and 1 retry\.
 **Tip**  
-We strongly recommend that you double\-check the number entered in **Maximum amount of attempts**\. If you accidentally enter a high number, such as 20, it's going to result in unnecessary work for the agent and too many calls for the customer\.
+We strongly recommend that you double\-check the number entered in **Maximum number of retries**\. If you accidentally enter a high number, such as 20, it's going to result in unnecessary work for the agent and too many calls for the customer\.
 + **Minimum time between attempts**: If the customer doesn't answer the phone, this is how long to wait until trying again\.
 + **Set working queue**: You can transfer a callback queue to a different queue\. This is useful if you set up a special queue just for callbacks\. You can then view that queue to see how many customers are waiting for callbacks\.
 **Tip**  
@@ -61,13 +61,13 @@ When this block is configured to **transfer to callback queue**, it looks simila
 ## Scenarios<a name="transfer-to-queue-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Manage Contacts in a Queue](queue-to-queue-transfer.md)
-+ [Set Up Queued Callback](setup-queued-callback.md)
-+ [About Queued Callbacks in Metrics](about-queued-callbacks.md)
++ [Manage contacts in a queue](queue-to-queue-transfer.md)
++ [Set up queued callback](setup-queued-callback.md)
++ [About queued callbacks in metrics](about-queued-callbacks.md)
 
 ## Sample flows<a name="transfer-to-queue-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Queue Configurations](sample-queue-configurations.md)
-+ [Sample Customer Queue Priority](sample-customer-queue-priority.md)
-+ [Sample Queued Callback](sample-queued-callback.md)
++ [Sample queue configurations](sample-queue-configurations.md)
++ [Sample customer queue priority](sample-customer-queue-priority.md)
++ [Sample queued callback](sample-queued-callback.md)

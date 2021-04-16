@@ -1,9 +1,11 @@
-# Integrate With Your CRM<a name="crm"></a>
+# Set up pre\-built integrations<a name="crm"></a>
 
-You can integrate Amazon Connect with your customer relationship management \(CRM\) application\. Integration allows you to launch your contact center in your CRM of choice, maintain your existing user base, and use the Amazon Connect cloud\-based infrastructure\.
+Use pre\-built integrations to generate tasks based on events in external applications, or create customer profiles based on data in external applications\. These integrations are built on top of Amazon AppFlow and Amazon EventBridge to enable easy access to your data that's stored outside of Amazon Connect\.
 
-To integrate the Contact Control Panel \(CCP\) into your CRM, see [Amazon Connect Streams](https://github.com/aws/amazon-connect-streams)\. When completed, add the origin URLs to your instance settings\. This enables communication between Amazon Connect and your CRM\. For more information, see [Use an Allow List for Integrated Applications](app-integration.md)\.
+For more information about Amazon AppFlow and Amazon EventBridge, see the documentation: [Amazon AppFlow User Guide](https://docs.aws.amazon.com/appflow/latest/userguide/what-is-appflow.html) and [Amazon EventBridge User Guide](https://docs.aws.amazon.com/eventbridge/latest/userguide/)\.
+
+In addition, check out the [Amazon AppIntegrations Service API Reference](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html), which enables you to access and configure AppIntegrations associations programmatically with Amazon Connect instances\.
 
 **Topics**
-+ [Salesforce Integration](salesforce-integration.md)
-+ [Zendesk Integration](zendesk-integration.md)
++ [Set up applications for task creation](integrate-external-apps-tasks.md)
++ [Add rules for task creation](add-rules-task-creation.md)

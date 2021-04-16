@@ -1,4 +1,4 @@
-# Sample Secure Input with Agent<a name="sample-secure-input-with-agent"></a>
+# Sample secure input with agent<a name="sample-secure-input-with-agent"></a>
 
 Type: Queue transfer
 

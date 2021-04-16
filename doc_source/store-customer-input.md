@@ -1,12 +1,4 @@
-# Contact Block: Store Customer Input<a name="store-customer-input"></a>
-
-## In contact flow types<a name="store-customer-input-types"></a>
-
-You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Generic flow
-+ Customer Queue flow
-+ Transfer to Agent flow
-+ Transfer to Queue flow
+# Contact block: Store customer input<a name="store-customer-input"></a>
 
 ## Description<a name="store-customer-input-description"></a>
 
@@ -16,6 +8,14 @@ This block is similar to **Get customer input**, but this one stores the input a
 + Stores numerical input as a contact attribute\.
 + Allows you to specify a custom terminating keypress\.
 + If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.
+
+## Contact flow types<a name="store-customer-input-types"></a>
+
+You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
++ Inbound contact flow
++ Customer Queue flow
++ Transfer to Agent flow
++ Transfer to Queue flow
 
 ## Properties<a name="store-customer-input-properties"></a>
 
@@ -30,7 +30,7 @@ Note the following properties:
 + **Specify terminating keypress**: Define a custom terminating keypress that is used when your contacts complete their DTMF inputs\. The terminating keypress can be up to five digits long, with \#, \* and 0\-9 characters, instead of just \#\. 
 + **Disable cancel key**: By default, when a customer enters \* as input, it deletes all of the DTMF input that came before it\. However, if you choose **Disable cancel key**, Amazon Connect treats the **\*** as any other key\.
 
-  If you send the DMTF input to an [Invoke AWS Lambda Function](invoke-lambda-function-block.md) block, the **Disable cancel key** property affects the input, as follows: 
+  If you send the DMTF input to an [Invoke AWS Lambda function](invoke-lambda-function-block.md) block, the **Disable cancel key** property affects the input, as follows: 
   + When **Disable cancel key** is selected, all the characters entered—including any \*—are sent to the **Invoke Lambda function** block\. 
   + When **Disable cancel key** is not selected, only the \* is sent to the **Invoke Lambda function** block\. 
 
@@ -52,10 +52,10 @@ When this block is configured, it looks similar to the following image:
 ## Sample flows<a name="store-customer-input-samples"></a>
 
 See these sample flows for scenarios that use this block:
-+ [Sample Secure Input with Agent](sample-secure-input-with-agent.md)
-+ [Sample Secure Input with No Agent](sample-secure-input-with-noagent.md) 
-+ [Sample Queue Configurations](sample-queue-configurations.md) 
-+ [Sample Queued Callback](sample-queued-callback.md) 
++ [Sample secure input with agent](sample-secure-input-with-agent.md)
++ [Sample secure input with no agent](sample-secure-input-with-noagent.md) 
++ [Sample queue configurations](sample-queue-configurations.md) 
++ [Sample queued callback](sample-queued-callback.md) 
 
 ## Scenarios<a name="store-customer-input-scenarios"></a>
 

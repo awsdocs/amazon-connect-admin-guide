@@ -1,6 +1,6 @@
-# Sample Contact Flows<a name="contact-flow-samples"></a>
+# Sample contact flows<a name="contact-flow-samples"></a>
 
-Amazon Connect includes a set of sample contact flows that show you how to perform common functions\. They are designed to help you learn how to create your own contact flows that work in a similar way\. For example, if you want to add a queued callback flow to your call center, take a look at the [Sample Queued Callback](sample-queued-callback.md) flow\.
+Amazon Connect includes a set of sample contact flows that show you how to perform common functions\. They are designed to help you learn how to create your own contact flows that work in a similar way\. For example, if you want to add a queued callback flow to your call center, take a look at the [Sample queued callback](sample-queued-callback.md) flow\.
 
 **To explore how the sample flows work**
 
@@ -25,16 +25,16 @@ Amazon Connect includes a set of sample contact flows that show you how to perfo
 The topics in this section describe how each of the sample contact flows work\.
 
 **Topics**
-+ [Sample Inbound Flow](sample-inbound-flow.md)
-+ [Sample AB Test](sample-ab-test.md)
-+ [Sample Customer Queue Priority](sample-customer-queue-priority.md)
-+ [Sample Disconnect Flow](sample-disconnect.md)
-+ [Sample Queue Configurations](sample-queue-configurations.md)
-+ [Sample Queue Customer](sample-queue-customer.md)
-+ [Sample Queued Callback](sample-queued-callback.md)
-+ [Sample Interruptible Queue Flow with Callback](sample-interruptible-queue.md)
-+ [Sample Lambda Integration](sample-lambda-integration.md)
-+ [Sample Recording Behavior](sample-recording-behavior.md)
-+ [Sample Note for Screenpop](sample-note-for-screenpop.md)
-+ [Sample Secure Input with Agent](sample-secure-input-with-agent.md)
-+ [Sample Secure Input with No Agent](sample-secure-input-with-noagent.md)
++ [Sample inbound flow](sample-inbound-flow.md)
++ [Sample AB test](sample-ab-test.md)
++ [Sample customer queue priority](sample-customer-queue-priority.md)
++ [Sample disconnect flow](sample-disconnect.md)
++ [Sample queue configurations](sample-queue-configurations.md)
++ [Sample queue customer](sample-queue-customer.md)
++ [Sample queued callback](sample-queued-callback.md)
++ [Sample interruptible queue flow with callback](sample-interruptible-queue.md)
++ [Sample Lambda integration](sample-lambda-integration.md)
++ [Sample recording behavior](sample-recording-behavior.md)
++ [Sample note for screenpop](sample-note-for-screenpop.md)
++ [Sample secure input with agent](sample-secure-input-with-agent.md)
++ [Sample secure input with no agent](sample-secure-input-with-noagent.md)

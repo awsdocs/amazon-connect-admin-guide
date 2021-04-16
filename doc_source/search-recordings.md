@@ -1,4 +1,4 @@
-# Search for Recordings by Contact ID<a name="search-recordings"></a>
+# Search for recordings by contact ID<a name="search-recordings"></a>
 
 To find a recording of a specific contact, you only need the contact ID\. You don't need to know the date range, agent, or any other information about the contact\. 
 
@@ -11,4 +11,4 @@ To find a recording of a specific contact, you only need the contact ID\. You do
 1. Conversations that were recorded have icons in the **Recording/Transcript** column\. If you don't have the appropriate permissions, you won't see these icons\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recording-icons.png)
 
-To learn more about searching, see [Contact Search](contact-search.md)\.
+To learn more about searching, see [Search for contacts](contact-search.md)\.
