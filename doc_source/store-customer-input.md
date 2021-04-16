@@ -2,10 +2,10 @@
 
 ## Description<a name="store-customer-input-description"></a>
 
-This block is similar to **Get customer input**, but this one stores the input as a contact attribute and allows you to encrypt it\. This way, you can encrypt sensitive input such as credit card numbers\. This block:
+This block is similar to **Get customer input**, but this one stores the input as a contact attribute \(in the [Stored customer input](connect-attrib-list.md#attribs-system-table) system attribute\) and allows you to encrypt it\. This way, you can encrypt sensitive input such as credit card numbers\. This block:
 + Plays an interruptible prompt to get a response from the customer\. For example, "Please enter your credit card number" or "Please enter the phone number we should use to call you back\." 
 + Plays an interruptible audio prompt or play text\-to\-speech for a customer to respond to\. 
-+ Stores numerical input as a contact attribute\.
++ Stores numerical input as in the [Stored customer input](connect-attrib-list.md#attribs-system-table) system attribute\.
 + Allows you to specify a custom terminating keypress\.
 + If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.
 

@@ -13,9 +13,9 @@ You set the caller ID name, such as the name of your company, in the queue setti
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callerID-callerName.png)
 
-The name you use should be the same one that's registered in the CNAM database\. The CNAM \(Caller Name Delivery\) database is a national database used by telephone carriers to provide the name of the calling party\.
+**If your phone number is in the US**: The name you use should be the same one that’s registered in the CNAM \(Caller Name\) database provided by Amazon Connect; this is a nationwide resource available in the US to provide the name of the calling party on incoming calls if recipients subscribe to CNAM services from their telecom carrier\.
 
-To register your Amazon Connect phone number with your company name in the CNAM database, open an AWS Support ticket\. We'll handle the registration process for you\.
+Open an AWS Support ticket to register your US\-based phone number with your company name in the CNAM database of the Amazon Connect carrier\. We'll handle the registration process for you\.
 
 **Tip**  
 If you want each agent to have their own caller ID name while dialing out \(such as *Example Corp Billing Dept*\), create a queue for each agent/caller ID name\.
@@ -33,6 +33,9 @@ You can set the caller ID number as follows:
 
   You can also use this block with the [Set contact attributes](set-contact-attributes.md) block to set the callback number dynamically\. For example, you can display a certain caller ID number based on the customer's account type\.
 + **Queue:** If no caller ID number is specified in the [Call phone number](call-phone-number.md) block, then the caller ID in the queue settings is used\.
+
+**Important**  
+**In Australia**: The caller ID must be an Amazon Connect provided DID \(Direct Inward Dialing\) phone number\. If a toll free number or a number not provided by Amazon Connect is used in the caller ID, local telephony suppliers may reject outbound calls due to local anti\-fraud requirements\.
 
 ## Setting the caller ID dynamically<a name="using-dynamic-caller-id"></a>
 

@@ -1,6 +1,6 @@
 # Change your audio device settings<a name="audio-device-settings"></a>
 
-If your organization is using a customized version of the Contract Control Panel \(CCP\), you can use it to change your audio device settings\. 
+If your organization is using a customized version of the Contact Control Panel \(CCP\), you can use it to change your audio device settings\. 
 
 **Tip**  
 **Developers**: for more information about enabling this feature, see the [Amazon Connect Streams](https://github.com/amazon-connect/amazon-connect-streams/blob/master/Documentation.md#connectcoreinitccp) documentation on GitHub\.

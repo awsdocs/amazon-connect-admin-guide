@@ -26,7 +26,7 @@ Not all blocks in a contact flow support using System attributes\. For example, 
 | Previous contact id | The unique identifier for the contact before it was transferred\. Use the previous contact ID to trace contacts between contact flows\. | System | $\.PreviousContactId | 
 | Channel | The method used to contact your contact center, either VOICE or CHAT\.  | System | $\.Channel | 
 | Instance ARN | The ARN for your Amazon Connect instance\. | System | $\.InstanceARN | 
-| Initiation method | How the contact was initiated\. Valid values include: INBOUND, OUTBOUND, TRANSFER, CALLBACK, QUEUE\_TRANSFER, DISCONNECT, and API\. | System | $\.InitiationMethod | 
+| Initiation method | How the contact was initiated\. Valid values include: INBOUND, OUTBOUND, TRANSFER, CALLBACK, QUEUE\_TRANSFER, DISCONNECT, and API\. Initiation method doesn't work in Agent whisper flows or Customer whisper flows\. | System | $\.InitiationMethod | 
 | Name | The name of the task\. | System | $\.Name | 
 | Description | A description of the task\. | System | $\.Description | 
 | References | Links to other documents that are related to a contact\. | System | $\.References\.*ReferenceKey*\.Value and $\.References\.*ReferenceKey*\.Type where *ReferenceKey* is the user\-defined Reference name\. | 
@@ -127,10 +127,10 @@ The following table lists the attributes that are returned from Amazon Lex bots\
 
 | Attribute | Description | Type | JSONPath Reference | 
 | --- | --- | --- | --- | 
-| Dialog state | The last dialog state returned from an Amazon Lex bot\. The value is 'Fulfilled' if an intent was returned to the contact flow\. | External | $\.Lex\.DialogState | 
-| Intent name | The user intent returned by Amazon Lex\. | External | $\.Lex\.IntentName | 
-| Slots | Map of intent slots \(key/value pairs\) Amazon Lex detected from the user input during the interaction\.   | External | $\.Lex\.Slots\.slotName | 
-| Session attributes |   Map of key\-value pairs representing the session\-specific context information\.   | External | $\.Lex\.SessionAttributes\.attributeKey | 
+| Dialog state | The last dialog state returned from an Amazon Lex bot\. The value is 'Fulfilled' if an intent was returned to the contact flow\. | N/A \(no type appears in the UI\) | $\.Lex\.DialogState | 
+| Intent name | The user intent returned by Amazon Lex\. | System | $\.Lex\.IntentName | 
+| Slots | Map of intent slots \(key/value pairs\) Amazon Lex detected from the user input during the interaction\.   | Lex Slots | $\.Lex\.Slots\.slotName | 
+| Session attributes |   Map of key\-value pairs representing the session\-specific context information\.   | Lex Attributes | $\.Lex\.SessionAttributes\.attributeKey | 
 
 ## Lambda contact attributes<a name="attribs-lambda-table"></a>
 
@@ -152,7 +152,7 @@ These attributes are not included in CTRs, not passed to the next Lambda invocat
 
 ## User\-defined attributes<a name="user-defined-attributes"></a>
 
-For all other attributes we've defined the key and Amazon Connect provides the value\. For user\-defined attributes, however, you provide a name for the key and the value\.
+For all other attributes Amazon Connect defines the key and value\. For user\-defined attributes, however, you provide a name for the key and the value\.
 
 Use user\-defined attributes in situations where you want to store values in a contact flow, and then refer to those values later\. For example, if you integrate Amazon Connect and a CRM or other system, you might want to get input from the customer such as their member number\. Then you can use that member number retrieve information about the member from the CRM, and/or use the member number throughout the contact flow, etc\.
 
@@ -161,4 +161,4 @@ Use user\-defined attributes in situations where you want to store values in a c
 | --- | --- | --- | --- | 
 | Any name you choose | A user\-defined attribute has two parts: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/connect-attrib-list.html)  | User\-defined | $\.Attributes\.*name\_of\_your\_destination\_key* | 
 
-To create user\-defined attributes, use the **Set contact attributes** block\. 
+To create user\-defined attributes, use the [Set contact attributes](set-contact-attributes.md) block\. 

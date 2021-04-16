@@ -1,29 +1,29 @@
 # Amazon Connect service quotas<a name="amazon-connect-service-limits"></a>
 
 **All service quotas can be adjusted/increased unless otherwise noted\.**
-+ To submit a service quota increase, use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
-+ It can take up to a few days to increase your service quota\. If you're increasing your quotas as part of a larger project, be sure to add this time to your plan\.
++ Create your instance \(it must exist\) and then submit a service quota increase\. Use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
++ It can take up to a few weeks to increase your service quota\. If you're increasing your quotas as part of a larger project, be sure to add this time to your plan\.
 + Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port your current phone number](port-phone-number.md)\.
 
 
-| Item | Default quotas for new accounts created February, 2020 or later\. [Learn more](#default-quotas) | 
+| Item | Default quotas for new accounts created October, 2020 or later\. [Learn more](#default-quotas) | 
 | --- | --- | 
-|  Active tasks per instance  |  2500  | 
+|  Active tasks per instance  |  2500 concurrent active tasks By default [Maximum contacts in queue](set-maximum-queue-limit.md) is set to your **Concurrent calls per instance** quota\. If you plan to have more tasks than that in a queue, submit a request to increase this quota, and then increase the [Maximum contacts in queue](set-maximum-queue-limit.md) setting\.   | 
 |  AWS Lambda functions per instance  |  35  | 
 |  Agent status per instance  |  50 This quota cannot be increased\.  | 
 |  Amazon Connect instances per account  |  2  | 
 |  Amazon Lex bots per instance  |  50  | 
-|  Concurrent calls per instance  |  10  **What is counted?** All calls currently being handled by agents or waiting in a queue for an agent\. Callbacks waiting in a callback queue are not counted until the callback is offered to an available agent\. If this quota is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   You can calculate your configured quota using CloudWatch metrics\. For instructions, see [Use CloudWatch metrics to calculate concurrent call quota](monitoring-cloudwatch.md#connect-cloudwatch-concurrent-call-quota)\.  Or, edit a queue and enter an exceptionally large number for the contact limit\. The resulting error message will display your quota\. For example, in the following image, it shows the quota for that instance is 99\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/concurrent-call-quota.png)   | 
-|  Concurrent chats per instance  |  100 This includes chats that are waiting\. If this quota is exceeded, the API call fails with a quota exceeded error\.  | 
+|  Concurrent calls per instance  |  10  **What is counted?** All calls currently being handled by agents or waiting in a queue for an agent\. Callbacks waiting in a callback queue are not counted until the callback is offered to an available agent\. If this quota is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   You can calculate your configured quota using CloudWatch metrics\. For instructions, see [Use CloudWatch metrics to calculate concurrent call quota](monitoring-cloudwatch.md#connect-cloudwatch-concurrent-call-quota)\.  **If you're only taking calls**: Another way to determine your concurrent calls quota is to edit a queue and enter an exceptionally large number for the contact limit\. The resulting error message will display your quota for concurrent calls\. For example, in the following image, it shows the call quota for that instance is 99\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/concurrent-call-quota.png)   | 
+|  Concurrent chats per instance  |  100 This includes chats that are waiting\. If this quota is exceeded, the API call fails with a quota exceeded error\. By default [Maximum contacts in queue](set-maximum-queue-limit.md) is set to your **Concurrent calls per instance** quota\. If you plan to have more chats than that in a queue, submit a request to increase this quota, and then increase the [Maximum contacts in queue](set-maximum-queue-limit.md) setting\.   | 
 |  Contact flows per instance  |  100  | 
 |  Hours of operation per instance  |  100  | 
 |  Phone numbers per instance  |  5  | 
 |  Prompts per instance  |  500  | 
 |  Queues per instance  |  50  | 
-|  Queues per routing profile per instance  |  50 This quota refers to number of queue/channel combinations per routing profile\. For example, in the following image there are two queues, but there are three queue\-channel combinations: BasicQueue\-Voice, BasicQueue\-Chat, and Queue10\-Voice\. This counts three towards the service limit of 50\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/routing-profile-queue-channel-combinations.png)  | 
+|  Queues per routing profile per instance  |  50 This quota refers to number of queue/channel combinations per routing profile\. For example, in the following image there are two queues, but there are three queue\-channel combinations: Escalation queue Voice, Escalation queue Chat, and BasicQueue Voice\. This counts three towards the service limit of 50\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/routing-profile-queue-channel-combinations.png)  | 
 |  Quick connects per instance  |  100  | 
 |  Rate of API requests  |  See [Amazon Connect API throttling quotas](#connect-api-quotas)\.  | 
-|  Reports per instance  |  500 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies so reports don't pile up\.   | 
+|  Reports per instance  |  2000 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies so reports don't pile up\.   | 
 |  Routing profiles per instance  |  100  | 
 |  Scheduled reports per instance  |  50  | 
 |  Security profiles per instance  |  100  | 
@@ -58,19 +58,20 @@ The following table lists feature specifications\. They cannot be increased\.
 
 | Item | Feature Specification | 
 | --- | --- | 
-| File types supported for attachments |  \.pdf, \.jpg, \.jpeg, \.png, \.doc, \.docx, \.xls, \.csv, \.wav, \.pptx, \.ppt, \.txt  | 
-| Max file size for an attachment |  20MB  | 
-| Attachments per conversation |  5  | 
+| File types supported for chat attachments |  \.pdf, \.jpg, \.jpeg, \.png, \.doc, \.docx, \.xls, \.csv, \.wav, \.pptx, \.ppt, \.txt  | 
+| Max file size for a chat attachment |  20MB  | 
+| Attachments per chat conversation |  5  | 
 | People who can listen in on the same agent call at the same time  |  5 For example, you can have a group of 5 people listen in to a call at the same time, and then a different group of 5 people listen in to a different call at the same time, and so on\.   | 
 |  Contact Trace Record retention  |  24 months from the time the associated contact was initiated\.  You can choose to stream CTRs to Kinesis so you can manage retention and perform advanced analysis\.  | 
 |  Max size of the CTR attributes section  |  32KB   | 
 |  Active chats per agent  |  5  | 
 |  Total duration per chat  |  25 hours, including wait time  | 
 |  Characters per chat message  |  1024  | 
-|  Open websocket connections per participant  |  5  | 
+|  Open websocket connections per chat participant  |  5  | 
 |  Maximum duration of a task  |  7 days  | 
 |  Maximum number of transfers for a task  |  11 transfers  | 
 |  Maximum number of linked tasks on an existing contact  |  11  | 
+|  Limit on creating and deleting instances  |  Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days\. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances\. You must wait 30 days before you can restart creating and deleting instances in your account\.  | 
 
 ## Countries you can call<a name="country-code-allow-list"></a>
 
@@ -83,7 +84,10 @@ If you already have an instance, the countries that you are allowed to call may 
 | --- | --- | 
 | Country code allow list for Outbound Calls |  [Submit a service quota increase request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) to allow calling to additional countries, or to limit the countries that you can call from\. You must be signed in to your AWS account to access the form\. For a list of all the countries available for outbound calling, see [Amazon Connect pricing](http://aws.amazon.com/connect/pricing/)\.  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
 
-† UK numbers with a 447 prefix are not allowed by default\. Before you can dial these UK mobile numbers, you must submit a service quota increase request\.
+† UK numbers with the following prefixes are not allowed by default:
++ \+447 \+44111 \+44118 \+44119 \+448 \+44826 \+449 
+
+Before you can dial these UK mobile numbers, you must submit a service quota increase request\.
 
 ## Amazon Connect API throttling quotas<a name="connect-api-quotas"></a>
 

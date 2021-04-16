@@ -3,12 +3,9 @@
 Agents use the Amazon Connect Contact Control Panel \(CCP\) to interact with customer contacts\. It's how they receive calls, chat with contacts, transfer them to other agents, put them on hold, and perform other key tasks\.
 
 The URL to launch the CCP is:
-+ https://*instance name*\.awsapps\.com/connect/ccp\-v2/
++ https://*instance name*\.my\.connect\.aws/ccp\-v2/
 
 Where *instance name* is provided by your IT department or whoever set up Amazon Connect for your business\.
-
-**Note**  
-IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
 
 Large businesses often choose to customize their CCP\. For example, they might want to integrate it with a CRM\. However, this section describes how CCP works before it is customized\.
 

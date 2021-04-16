@@ -6,7 +6,6 @@ One way to make your customers feel cared for is to create personalized experien
 + [What is a contact attribute?](what-is-a-contact-attribute.md)
 + [List of available contact attributes and their JSONPath reference](connect-attrib-list.md)
 + [How to reference contact attributes](how-to-reference-attributes.md)
-+ [Create dynamic text strings in prompts](create-dynamic-text-strings.md)
 + [Display contact information to the agent in the CCP](use-attribs-ccp.md)
 + [Route based on number of contacts in a queue](attrib-system-metrics.md)
 + [Route based on contact's channel](use-channel-contact-attribute.md)

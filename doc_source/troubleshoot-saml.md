@@ -62,18 +62,24 @@ Then the same user tried to login but with a different `Role` SAML Attribute, fo
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-new-attribute-name-login.png)
 
 ### Resolution<a name="troubleshoot-saml-bad-request-resolution"></a>
-+ If you need to change the Amazon Connect user to the new role then you need to delete and recreate the user in the Amazon Connect instance\. For instructions for doing this in Amazon Connect console, see [Manage users in Amazon Connect](manage-users.md)\. Or, use these commands: 
 
-  1. Get the user ID:
+The recommended solution is to reuse the existing Role associated with the Amazon Connect user and [edit the trust relationship](https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy) to reference a new identity provider or service principal to meet your new authentication requirements\. If you do need to associate an Amazon Connect user with a new Role, you need to delete and recreate the user in the existing Amazon Connect instance which will result in the loss of data for that user\. 
 
-     `aws connect list-users --instance-id [INSTANCE_ID]`
+ For instructions for doing this in the Amazon Connect console, see [Manage users in Amazon Connect](manage-users.md)\. Or, use these commands for doing this from the AWS CLI:
 
-  1. Delete the user:
+1. Get the user ID:
 
-     `aws connect delete-user --instance-id [INSTANCE_ID] --user-id [USER_ID]` 
+   `aws connect list-users --instance-id [INSTANCE_ID]`
 
-  1. Use the Amazon Connect console or the CLI to create the user account\.
-+ If you don't need to change the user to the new role, double\-check the IdP settings to make sure that the user logs in using the old role instead\.
+1. Delete the user account:
+
+   `aws connect delete-user --instance-id [INSTANCE_ID] --user-id [USER_ID]` 
+
+1. Create the user account:
+
+   `aws create-user --username [USER_ID] --phone-config [PHONE_CONFIG] --security-profile-ids [SECURITY_PROFILE_ID] --routing-profile-id [ROUTING_PROFILE_ID] --instance-id [INSTANCE_ID]` 
+
+You can also complete these actions using the [AWS SDKs](http://aws.amazon.com/tools/)\. 
 
 ## Error Message: Access denied, Please contact your AWS account administrator for assistance\.<a name="troubleshoot-saml-contact-admin"></a>
 

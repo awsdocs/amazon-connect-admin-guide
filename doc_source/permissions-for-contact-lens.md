@@ -12,10 +12,14 @@ Following is a description of each of these permissions:
 This permission isn't specific to Contact Lens, but it is required so you can access the **Contact search** page, which is where you can search contacts so you can review the analyzed recording and transcript\. In addition, you can do fast, full\-text search on call transcripts, and search by sentiment score and non\-talk time\. 
 
 **Search contacts by conversation characteristics**  
-On the **Contact Search** page, you can access additional filters that allow you to return results by sentiment score and non\-talk time\. For more information, see [Search conversations analyzed by Contact Lens](search-conversations.md)\.
+On the **Contact Search** page, you can access additional filters that allow you to return results by sentiment score and non\-talk time\. In addition, you can search conversations that fall into specific contact categories\. For more information, see [Search for sentiment score](search-conversations.md#sentiment-search), [Search for non\-talk time](search-conversations.md#nontalk-time-search), and [Search a contact category](search-conversations.md#contact-category-search)\.  
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-contact-category-1.png)
 
 **Search contacts by keywords**  
-On the **Contact Search** page, you can access additional filters that allow you to search call transcripts by keywords or phrases, such as "*thank you for your business*\." For more information, see [Search conversations analyzed by Contact Lens](search-conversations.md)\.
+On the **Contact Search** page, you can access additional filters that allow you to search call transcripts by keywords or phrases, such as "*thank you for your business*\." For more information, see [Search for keywords](search-conversations.md#keyword-search)\.  
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-words-phrases.png)
 
 **Contact Lens \- speech analytics**  
 On the **Contact Trace Record** page for a contact, you can view graphs that summarize speech analytics: customer sentiment trend, sentiment, and talk time\. For example, the following image shows how this information is displays on the CTR page for a contact\.  

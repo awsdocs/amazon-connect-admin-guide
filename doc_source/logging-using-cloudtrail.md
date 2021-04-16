@@ -3,7 +3,7 @@
 Amazon Connect is integrated with AWS CloudTrail, a service that provides a record of the Amazon Connect API calls that a user, role, or AWS service makes\. CloudTrail captures Amazon Connect API calls as events\. 
 
 **Note**  
-Events from the Amazon Connect admin console aren't recorded in CloudTrail\.
+Events from the Amazon Connect admin console aren't recorded in CloudTrail\. If you have a custom integration that uses the Amazon Connect API, those events will be logged\.
 
 Using the information that CloudTrail collects, you can identify a specific request to an Amazon Connect API, the IP address of the requester, the requester's identity, the date and time of the request, and so on\. If you configure a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket\. If you don't configure a trail, you can view the most recent events in **Event History** in the CloudTrail console\.
 

@@ -2,7 +2,7 @@
 
 After you create an Amazon Connect instance, you can claim a phone number to use for your contact center\. You can use this phone number to place a test call in to your contact center to confirm that it is working correctly\. You can also use it in your production environment\.
 
-For pricing information about how much a claimed phone number costs, see [Amazon Connect pricing](https://aws.amazon.com/connect/pricing/)\.
+For pricing information about how much a claimed phone number costs, see [Amazon Connect pricing](http://aws.amazon.com/connect/pricing/)\.
 
 If you want to keep a phone number you already have, you can port the phone number and use it with Amazon Connect\. After a phone number is ported to Amazon Connect, it appears in the list of available phone numbers for you to assign to contact flows\.
 

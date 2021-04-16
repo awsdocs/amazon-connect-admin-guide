@@ -13,6 +13,11 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-contact-attributes-properties.png)
 
+### Conditions to check can be dynamic<a name="check-dynamic-attributes"></a>
+
+You can check conditions like the following:
++ $\.Attributes\.verificationCode
+
 ## Configuration tips<a name="check-contact-attributes-tips"></a>
 
 If you have multiple conditions to compare, Amazon Connect checks them in the order they are listed\. 

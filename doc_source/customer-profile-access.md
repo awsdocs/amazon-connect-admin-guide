@@ -9,10 +9,7 @@ In this option, the Customer Profiles widget is already embedded into the CCP\. 
 **Note**  
 Want to join the preview? [Request access](https://pages.awscloud.com/profiles-agent-app-preview.html)\.  
 If your request is approved, your agents will access the CCP and Customer Profiles in the same browser window using a link that looks like this:  
-**https://*instance name*\.awsapps\.com/connect/agent\-app/**
-
-**Note**  
-IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
+**https://*instance name*\.my\.connect\.aws/agent\-app/**
 
 ## Option 2: Embed the Customer Profiles widget into a custom agent experience<a name="customer-profile-access-embed"></a>
 

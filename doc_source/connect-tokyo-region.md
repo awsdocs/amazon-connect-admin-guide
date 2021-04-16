@@ -19,11 +19,11 @@ Amazon Connect supports the following phone numbers for instances created in the
 + **Direct Inward Dialing \(DID\) numbers**—DID numbers are also referred to as local numbers\.
   + 050 prefix numbers\.
   + 03 prefix for numbers in Tokyo\. Amazon Connect does not offer phone numbers for other cities in Japan at this time\.
-
-    To claim a number with a 03, 050, 0120, or 0800 prefix, you must provide documentation to verify that you have a physical address in Tokyo\. See the next section for more information\.
 + **Toll Free numbers**
   + 0120 prefix numbers\.
   + 0800 prefix numbers\.
+
+For both DID and Toll Free: To claim a number with a 03, 050, 0120, or 0800 prefix, you must provide documentation to verify that you have a physical address in Tokyo\. See the next section for more information\.
 
 **Note**  
 When you claim a toll free phone number for Amazon Connect, there is no corresponding DID number with a 03 prefix also assigned, as with other toll free numbers in Japan\. If you need to use a DID number, you can claim one in Amazon Connect\.
@@ -32,7 +32,7 @@ When you claim a toll free phone number for Amazon Connect, there is no correspo
 
 If you plan to use a number with a 03, 050, 0120, or 0800 prefix from Tokyo, pursuant to Japanese regulatory requirements, you must submit an [Amazon Connect service quota increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) to request that number\. As part of the approval process, you must provide proof of address documentation to confirm that you have an address in Tokyo\. The documents required for address verification are described later in this topic\.
 
-While you wait for the request to be processed, you can claim a number with a 050 prefix for your instance\. This helps you become familiar with how to configure and use Amazon Connect\. When your service quota increase for a 03 prefix number is approved, you can then follow step 6 to search for a “3” prefix number and claim it\. After the service quota increase is approved, you will be able to claim additional 03 prefix numbers in the **Claim phone number **page for that specific account moving forward without opening another support case\. 
+When your service quota increase for a prefix number is approved, you can then follow step 6 to search for the prefix number and claim it\. After the service quota increase is approved, you will be able to claim additional prefix numbers in the **Claim phone number **page for that specific account moving forward without opening another support case\. 
 
 Use these steps to claim a phone number for an instance you create in the Asia Pacific \(Tokyo\) Region\.
 
@@ -49,8 +49,6 @@ Use these steps to claim a phone number for an instance you create in the Asia P
 1. If you have not yet claimed a number for your instance, choose **Begin** and follow these steps\. If you have already claimed a number for your instance, and are claiming an additional number, skip to the next step\.
 
    1. On the **Claim phone number** page, choose the country from which to claim a phone number\.
-
-      Note that only 050 prefix number are available to claim for instances in the Asia Pacific \(Tokyo\) Region\. To claim a 03 prefix number for Tokyo, you must submit a [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\.
 
    1. Choose the type of number to claim, **Direct Dial** or **Toll Free**\.
 
@@ -80,10 +78,8 @@ Use these steps to claim a phone number for an instance you create in the Asia P
 
 ## Proof of address requirements for 03 prefix numbers<a name="proof-of-address-tokyo"></a>
 
-When you submit a request to claim a 03 prefix number from Tokyo to use for your Amazon Connect instance, you must provide the following documentation as proof of address due to Japanese regulations as follows:
-+ If the AWS account used to create the Amazon Connect instance is for an individual, the individual must provide a valid, government\-issued identification document, such as a national ID card, passport, or driver's license, with an address visible on the document that matches the city from which the phone number is assigned\.
-+ If the AWS account used to create the instance is for an organization, a representative of the organization must provide the both of the following:
-  + A valid, government\-issued identification document, such as a national ID card, passport, or driver's license\.
-  + One of the following documents, with an address visible on the document that matches the city from which the number is assigned\. This can be a utility bill, a certificate of company registration from the Ministry of Justice, receipts of payments to a government entity, such as a national or local tax return, or a social security payment receipt\.
+When you submit a request to claim a 03 prefix number from Tokyo to use for your Amazon Connect instance, a representative of your organization must provide the following documents per Japanese regulations:
++ A valid, government\-issued identification document, such as a national ID card, passport, or driver's license\.
++ One of the following documents, with an address visible on the document that matches the city from which the number is assigned: a utility bill, a certificate of company registration from the Ministry of Justice, or receipts of payments to a government entity, such as a national or local tax return, or a social security payment receipt\.
 
 You can include copies of these documents with your support request for the number, or provide them when requested by AWS Support\. After you submit the request, AWS Support reviews it, and then resolves the ticket when address validation is confirmed or if more information is needed\. AWS Support will contact you with the results of your request when it is completed\. Once AWS Support resolves the ticket, and address validation is confirmed you can then follow step 6 above to claim a Tokyo 03 prefix number\.

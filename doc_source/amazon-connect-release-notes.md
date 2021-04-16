@@ -3,49 +3,32 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
-+ [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"](#new-domain)
++ [Upcoming change: Fixes for chat metrics](#upcoming-fixes-chat-metrics)
 + [Upcoming change: New "Next status" for agents](#upcoming-changes-next-status)
++ [March 2021 Updates](#march21-release-notes)
++ [February 2021 Updates](#february21-release-notes)
 + [January 2021 Updates](#january21-release-notes)
 + [December 2020 Updates](#december20-release-notes)
 + [November 2020 Updates](#november20-release-notes)
 + [Earlier Updates](#release-notes-earlier-updates)
 
-## Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"<a name="new-domain"></a>
+## Upcoming change: Fixes for chat metrics<a name="upcoming-fixes-chat-metrics"></a>
 
-The domain for the Amazon Connect access URL is changing to **my\.connect\.aws**\.
+We will release fixes for the following issues identified in chat metrics:
++ Currently Amazon Connect incorrectly reports that chat contacts that were created from disconnect flows were created from transfer flows\.
++ When the fixes are released, Amazon Connect will correctly reflect in the CTRs and agent event stream that these chat contacts were created from disconnect flows\. 
 
-For example:
-+ Current: https://\[*instance name*\]\.**awsapps\.com**/connect/
-+ New: https://\[*instance name*\]\.**my\.connect\.aws**/
+There is no impact to voice or task contacts\. 
 
-### How does this change impact logging in to Amazon Connect?<a name="new-domain-login"></a>
+Chat contacts created through disconnect flows will no longer increment the following metrics: 
++ [Contact flow time](historical-metrics-definitions.md#contact-flow-time-historical) 
++ [Contacts incoming](historical-metrics-definitions.md#contacts-incoming-historical)
++ [Contacts handled incoming](historical-metrics-definitions.md#contacts-handled-incoming-historical)
++ [Contacts transferred in](historical-metrics-definitions.md#contacts-transferred-in-historical)
 
-The current access URL will continue to work for Amazon Connect instances created before the release of the **my\.connect\.aws** domain\. Any Amazon Connect instances created after the release will automatically use the new domain\. 
-
-Also, if you create new Amazon Connect instances after the release of the new domain, you must add new domains to your allow list\. These domains are **in addition** to the ones that are currently required\. 
-
-**Currently required domains added to your allow list:**
-+ \{myInstanceName\}\.awsapps\.com/connect/ccp\-v2
-+ \{myInstanceName\}\.awsapps\.com/connect/api
-+ \*\.cloudfront\.net
-
-**New additional domains to add to your allow list:**
-+ \{myInstanceName\}\.my\.connect\.aws/ccp\-v2
-+ \{myInstanceName\}\.my\.connect\.aws/api
-+ \*\.static\.connect\.aws
-
-For more information, see [Set up your network](ccp-networking.md)\.
-
-### Schedule for domain change<a name="new-domain-schedule"></a>
-
-Following is the schedule for when this change will be released to each Region:
-+ EU \(Frankfurt\) \- March 1, 2021
-+ US West \- March 3, 2021
-+ Asia Pacific \(Sydney\) \- March 8, 2021
-+ Asia Pacific \(Tokyo\) \- March 8, 2021
-+ Asia Pacific \(Singapore\) \- March 10, 2021
-+ EU \(London\) \- March 10, 2021
-+ US East \- March 15, 2021
+In addition, note the following fixes for CTRs and the agent event stream for chat contacts:
++ CTRs: There is currently an issue in the Attributes section of a chat CTR where the initiation method is **API** for both disconnect and transfer contacts\. With this fix, the initiation method will correctly reflect **Disconnect** and **Transfer**, respectively\. 
++ Agent event stream: Chat contacts created from disconnect flows will now have **Disconnect** as the initiation method\. 
 
 ## Upcoming change: New "Next status" for agents<a name="upcoming-changes-next-status"></a>
 
@@ -181,7 +164,71 @@ When we release this feature, it will have the following effect:
 + If you integrate with Amazon Connect Streams API and your agents interact directly with the native CCP user interface, then at release your agents will start using this new feature immediately\.
 + If you integrate with Amazon Connect Streams API but your agents don't interact directly with the native CCP user interface, then at release your contact center will continue to have the previous behavior when agent\.setState\(\) is called: an agent will not be able to select an NPT or Offline status while connected to at least one contact\. 
 
-  To use **Next status** with a custom CCP integration that does not directly embed the CCP, you will need to make additional changes that will be detailed further in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
+  If you are handling state change logic yourself from Amazon Connect Streams, you will need to make additional changes that will be detailed further in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
+
+## March 2021 Updates<a name="march21-release-notes"></a>
+
+### Amazon Connect is now available in the Canada \(Central\) Region<a name="new-domain"></a>
+
+Amazon Connect is now available in the Canada \(Central\) AWS Region\. You can claim toll\-free and local telephone numbers from Canadian telephony suppliers\. For a list of countries were the Canada \(Central\) Region is supported, see [Region requirements for phone numbers](https://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)\. For a list of Contact Lens features available in the Canada \(Central\) Region, see [Availability of Contact Lens features by Region](https://docs.aws.amazon.com/connect/latest/adminguide/enable-analytics.html#regions-contactlens)\. 
+
+### Domain for new Amazon Connect instances is "my\.connect\.aws"<a name="new-domain"></a>
+
+The domain for the Amazon Connect access URL has changed to **my\.connect\.aws**\.
+
+For example:
++ Current: https://\[*instance name*\]\.**awsapps\.com**/connect/
++ New: https://\[*instance name*\]\.**my\.connect\.aws**/
+
+#### How does this change impact logging in to Amazon Connect?<a name="new-domain-login"></a>
+
+The current access URL continues to work for Amazon Connect instances created before the release of the **my\.connect\.aws** domain\. Any Amazon Connect instances created after the release automatically use the new domain\. 
+
+Also, if you create new Amazon Connect instances after the release of the new domain, you must add new domains to your allow list\. These domains are **in addition** to the ones that are currently required\. 
+
+**Currently required domains added to your allow list:**
++ \{myInstanceName\}\.awsapps\.com/connect/ccp\-v2
++ \{myInstanceName\}\.awsapps\.com/connect/api
++ \*\.cloudfront\.net
+
+**New additional domains to add to your allow list:**
++ \{myInstanceName\}\.my\.connect\.aws/ccp\-v2
++ \{myInstanceName\}\.my\.connect\.aws/api
++ \*\.static\.connect\.aws
+
+For more information, see [Set up your network](ccp-networking.md)\.
+
+#### Schedule for domain change<a name="new-domain-schedule"></a>
+
+The change has been rolled out to all Regions\.
+
+### Chat: Add a chat user interface your website<a name="march21-chat"></a>
+
+Added a chat widget that you can customize and secure so it can only be launched from your widget\. For more information, see [Set up your customer's chat experience](enable-chat-in-app.md)\.
+
+Provided an open source example\. For more information, see [Download and customize our open source example](download-chat-example.md)\.
+
+### Amazon Connect Endpoint Test Utility<a name="march21-troubleshoot"></a>
+
+To help you validate connectivity to Amazon Connect, or troubleshoot when your agents are experiencing problems with the Contact Control Panel \(CCP\), we've added the Amazon Connect Endpoint Test Utility\. For more information, see [Use the Endpoint Test Utility](check-connectivity-tool.md)\.
+
+## February 2021 Updates<a name="february21-release-notes"></a>
+
+### Contact Lens: Availability of real\-time analytics<a name="february21-contact-lens"></a>
+
+Content Lens real\-time analytics is available in Europe \(London\), Europe \(Frankfurt\), and Asia \(Tokyo\)\. For more information, see [Availability of Contact Lens features by Region](enable-analytics.md#regions-contactlens)\.
+
+### Ingest data into Customer Profiles using Amazon S3<a name="february21-customer-profiles"></a>
+
+Added the ability to create and ingest data from Amazon S3\. For more information, see [Create and ingest customer data into Customer Profiles by using Amazon S3](customer-profiles-object-type-mappings.md)\.
+
+### Disconnect reason in CTR stream<a name="february21-metrics"></a>
+
+The Amazon Connect CTR \(contact trace records\) stream now includes **DisconnectReason** for voice calls and tasks\. **DisconnectReason** indicates whether an agent or customer disconnected the call, or whether a telecom or network issue caused a call to disconnect\. You can also determine whether a task was completed by an agent or an automatic flow, or it expired\. For more information, see [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord)\.
+
+### Custom service levels<a name="february21-metrics"></a>
+
+Added the ability to create custom service levels\. For details, see [New metric groupings and categories](upcoming-changes.md#metrics-changes-custom-service-levels)\.
 
 ## January 2021 Updates<a name="january21-release-notes"></a>
 
@@ -516,14 +563,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-### June 2019 Update<a name="w161aac70c17c29"></a>
+### June 2019 Update<a name="w189aac68c21c29"></a>
 
 The following update was released in June 2019:
 
 #### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-### May 2019 Updates<a name="w161aac70c17c31"></a>
+### May 2019 Updates<a name="w189aac68c21c31"></a>
 
 The following updates were released in May 2019:
 
@@ -535,7 +582,7 @@ The following updates were released in May 2019:
 #### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-### April 2019 Updates<a name="w161aac70c17c33"></a>
+### April 2019 Updates<a name="w189aac68c21c33"></a>
 
 The following updates were released in April 2019:
 
@@ -548,7 +595,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-### March 2019 Update<a name="w161aac70c17c35"></a>
+### March 2019 Update<a name="w189aac68c21c35"></a>
 
 The following updates were released in March 2019:
 

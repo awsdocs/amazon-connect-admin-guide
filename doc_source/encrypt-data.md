@@ -1,13 +1,13 @@
 # Encrypt customer input<a name="encrypt-data"></a>
 
-You can encrypt sensitive data that is collected by contact flows\. To do this, you need to use public\-key cryptography\. Here's how this works: 
+You can encrypt sensitive data that is collected by contact flows\. To do this, you need to use public\-key cryptography\. 
 
-Amazon Connect requires an X\.509 certificate that is signed using the same private key that will decrypt data\.
+When configuring Amazon Connect, you first provide the public key\. This is the key used when encrypting data\. Later, you provide the X\.509 certificate, which includes a signature that proves you possess the private key\. 
 
 In a contact flow that collects data, you provide an X\.509 certificate to encrypt data that's captured using the **Stored customer input** system attribute\. You must upload the key in `.pem` format to use this feature\. The encryption key is used to verify the signature of the certificate used within the contact flow\. 
 
 **Note**  
-You can have up to two signing keys active at one time to facilitate rotation\.
+You can have up to two encryption keys active at one time to facilitate rotation\.
 
 To decrypt the data in the **Stored customer input** attribute, use the AWS Encryption SDK\. For more information, see the [AWS Encryption SDK Developer Guide](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/)\.
 
@@ -15,6 +15,10 @@ For a detailed walkthrough, see [Creating a secure IVR solution with Amazon Conn
 + Configure Amazon Connect to collect a credit card number\.
 + Encrypt the credit card digits\.
 + Send it to our backend AWS Lambda for decryption, using the customer supplied decryption key\.
+
+It provides two commands using OpenSSL: 
++ One to generate an RSA key pair and a self\-signed X\.509 certificate
++ Another to extract the public key from the RSA key pair
 
 ## How to decrypt data encrypted by Amazon Connect<a name="sample-decryption"></a>
 

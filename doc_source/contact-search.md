@@ -8,19 +8,20 @@ When you filter by Contact ID, only results for that specific contact will be re
 
 ## What's new in contact search<a name="new-contact-search-experience"></a>
 
-Thanks to your feedback, we're making the following changes to contact search\.
+Thanks to your feedback, we've made the following changes to contact search\.
 + Search up to 8 weeks\.
 + Multi\-select for filters such as agent names, contact queues, contact flows, and more\. Previously only single\-select was supported\. 
 
   This new feature is available only for searches with a date range that starts November 2, 2020, or later, when the feature was released\. If you search for contacts that occurred before November 2, 2020, you will be prompted to ensure only one value is selected for each filter mentioned above\. 
-+ New filters for [Contact Lens for Amazon Connect](analyze-conversations.md)\. You can now search for Contact categories by specifying the full category name\.
++ New filters for [Contact Lens for Amazon Connect](analyze-conversations.md)\. You can now [search for Contact categories](search-conversations.md#contact-category-search) by specifying the full category name\.
 
-  In the **Add filter** drop\-down box, the Contact Lens filters have **CL** next to them\. You can apply these filters only if your organization has enabled Contact Lens\. 
+  In the **Add filter** drop\-down box, the Contact Lens filters have **CL** next to them\. You can apply these filters only if your organization has enabled Contact Lens\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-contact-category-1.png)
 
   If you want to remove the Contact Lens filters from a user's drop\-down list, remove the following permissions from their security profile: 
-  + **Search contacts by conversation**
-  +  **Search contacts by keywords**
-  +  **Contact Lens \- speech analytics**
+  + **Search contacts by conversation**: This controls access to the sentiment scores, non\-talk time, and category searches\.
+  +  **Search contacts by keywords**: This controls access to the keywords search\.
+  +  **Contact Lens \- speech analytics**: On the Contact Trace Record page, this displays graphs that summarize speech analytics\.
 
 ## Manage who can search for contacts and access detailed information<a name="required-permissions-search-contacts"></a>
 
@@ -56,7 +57,14 @@ For information about how add more permissions to an existing security profile, 
 
 1. Use the filters on the page to narrow your search\. For date, you can search up to 8 weeks at a time\.
 
-1. To see additional columns in your search results, expand **Additional fields** to choose what other data you want to view\. Choose **Apply** to view the columns\. 
-
 **Tip**  
 To see if a conversation was recorded, you need to be assigned to a profile that has **Manager monitor** permissions\. If a conversation was recorded, by default the search result will indicate so with an icon in the **Recording** column\. You won't see this icon if you don't have permission to review the recordings\.
+
+## Additional fields: Add columns to your search results<a name="additional-fields"></a>
+
+Use the options under **Additional fields** to add columns in your search results\. These options are not used to filter your search\.
+
+For example, if you want to include columns for **Agent Name** and **Routing profile** in your search output, choose those columns here\.
+
+**Tip**  
+The **Is transferred out** option provides the date and time \(in UTC time\) when the transfer was connected\. It maps to `TransferCompletedTimestamp` in the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord)\. 

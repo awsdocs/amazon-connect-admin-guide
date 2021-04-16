@@ -5,7 +5,7 @@ Before you configure your agent settings, here is some info to have on hand\. Of
 + Will they have the **Agent** security profile or a custom profile you created? 
 + Are they going to use a soft phone? If so, will they be connected to contacts automatically, or will they need to press the **Accept** button in their Contact Control Panel \(CCP\)?
 + Or, are they going to use a desk phone? If so, what is their number?
-+ How many seconds do they have for After contact work \(ACW\)?
++ How many seconds do they have for After contact work \(ACW\)? There's no way you can turn off ACW time altogether so agents never go to ACW\. \(A value of **0 **means an indefinite amount of time\.\)
 + Are they going to be assigned to an agent hierarchy?
 
 **Note**  

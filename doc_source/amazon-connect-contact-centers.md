@@ -14,6 +14,7 @@ Finally, you'll need to provide your agents access to the Contact Control Panel 
 + [Set up your phone numbers](contact-center-phone-number.md)
 + [Set up routing](connect-queues.md)
 + [Set up agents](connect-agents.md)
++ [Set up your customer's chat experience](enable-chat-in-app.md)
 + [Upgrade to the latest CCP](upgrade-to-latest-ccp.md)
 + [Provide access to the CCP](amazon-connect-contact-control-panel.md)
 + [Embed CCP into Salesforce](salesforce-integration.md)

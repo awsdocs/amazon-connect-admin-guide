@@ -1,29 +1,34 @@
 # Assign permissions to review recordings of past conversations<a name="assign-permssions-to-review-recordings"></a>
 
-**To assign a manager permissions to review recordings of past conversations**
+Assign the **CallCenterManager** security profile so a user can listen to call recordings or review chat transcripts\. This security profile also includes a setting that makes the icon to download recordings appear in the results of the **Contact search** page\. 
 
-1. Go to **Users**, **User management**, choose the manager, and then choose **Edit**\.
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recording-permissions-listen-download-delete.png)
 
-1. In the Security Profiles box, assign the manager to the **CallCenterManager** security profile\. This security profile also includes a setting that makes **the icon to download recordings appear in the results of the **Contact search page\. 
+Or, assign the following individual permissions\.
 
-1. If you also want the manager to monitor live conversations, assign the manager to the **Agent** security profile so they can access the Contact Control Panel \(CCP\)\. This is so they can monitor the conversation through the CCP\.
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recordings-assign-permissions.png)
 
-1. For the manager to listen to recordings that have been redacted, assign **Recorded conversations \(redacted\)** permissions to the security profile\. For more information about these permissions, see [Security profile permissions for Contact Lens](permissions-for-contact-lens.md)\.
+1. **Contact search**: This permission is required so you can access the **Contact search** page, which is where you can search contacts so you can listen to recordings and review transcripts\. 
+
+1. **Restrict contact access**: Manage access to results on the **Contact search** page based on their agent hierarchy group\. 
+
+   For example, agents who are assigned to AgentGroup\-1 can only view contact trace records \(CTRs\) for contacts handled by agents in that hierarchy group, and any groups below them\. \(If they have permissions for **Recorded conversations**, they can also listen to call recordings and view transcripts\.\) Agents assigned to AgentGroup\-2 can only access CTRs for contacts handled by their group, and any groups below them\. 
+
+   Managers and others who are in higher level groups can view CTRs for contacts handled by all the groups below them, such as AgentGroup\-1 and 2\.
+
+   For this permission, **All** = **View** since **View** is the only action granted\.
+
+   For more information about hierarchy groups, see [Set up agent hierarchies](agent-hierarchy.md)\.
+**Note**  
+When you change a the hierarchy group of a user, it may take a couple of minutes for their contact search results to reflect their new permissions\.
+
+1. **Recorded conversations \(redacted\)**: If your organization uses Contact Lens for Amazon Connect, you can assign this permission so agents access only those call recordings and transcripts in which sensitive data has been removed\.
 
    The redaction feature is provided as part of Contact Lens for Amazon Connect\. For more information, see [Use sensitive data redaction](sensitive-data-redaction.md)\.
 
-1. Choose **Save**\. 
+1. **Manager monitor**: This permission allows you to monitor live conversations and listen to recordings\.
 
-**Or, to create a new security profile specific for this purpose**
+1. **Recorded conversations \(unredacted\)**: If your organization isn't using Contact Lens for Amazon Connect, you need this permission so you can access the recordings\.
 
-1. Choose **Users**, **User management**, **Security profiles**\. 
-
-1. Choose **Add new security profile**\. 
-
-1. Expand **Metrics and Quality**, then choose **Manager monitor** and **Recorded conversations** \(choose both **Access** and **Enable download button**\)\. 
-
-1. If you also want the manager to monitor live conversations, assign the manager to the **Agent** security profile so they can access the Contact Control Panel \(CCP\)\. This is so they can monitor the conversation through the CCP\.
-
-1. For the manager to listen to recordings that have been redacted, assign **Recorded conversations \(redacted\)** permissions to the security profile\. For more information about these permissions, see [Security profile permissions for Contact Lens](permissions-for-contact-lens.md)\.
-
-1. Choose **Save**\. 
+**Tip**  
+If you also want the manager to monitor live conversations, assign the manager to the **Agent** security profile so they can access the Contact Control Panel \(CCP\)\. This is so they can monitor the conversation through the CCP\.

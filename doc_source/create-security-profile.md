@@ -16,7 +16,7 @@ By default, the Amazon Connect **Admin** security profile has these permissions\
 
 ## How to create security profiles<a name="how-to-security-profiles-required-permissions"></a>
 
-1. Log in to your contact center using your access URL \(https://*instance name*\.awsapps\.com/connect/login\)\.
+1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
 1. Choose **Users**, **Security profiles**\.
 

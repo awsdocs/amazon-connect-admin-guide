@@ -21,7 +21,8 @@ Note the following properties:
 + **Send DTMF**: This property is useful to bypass some of the DTMF of the external party\. For example, if you know you'll need to press 1, 1, 362 to reach the external party, you can enter that here\.
 + **Caller ID number**: You can choose a number from your instance to appear as the caller ID\. This is useful in cases where you want to use a number that's different from the one the contact flow is actually using to make the call\.
 **Important**  
-If you are using Amazon Connect outside of the United States, we recommend choosing **Caller ID number** and then selecting an Amazon Connect number\. Otherwise, local regulations may cause telephony providers to block or redirect non\-Amazon Connect phone numbers\. This will result in service\-related events, such as poor audio quality, delay, latency, and displaying the incorrect caller ID\. 
+If you are using Amazon Connect outside of the United States, we recommend choosing **Caller ID number** and then selecting an Amazon Connect number\. Otherwise, local regulations may cause telephony providers to block or redirect non\-Amazon Connect phone numbers\. This will result in service\-related events, such as rejected calls, poor audio quality, delay, latency, and displaying the incorrect caller ID\.   
+**In Australia**: The caller ID must be an Amazon Connect provided DID \(Direct Inward Dialing\) phone number\. If a toll free number or a number not provided by Amazon Connect is used in the caller ID, local telephony suppliers may reject outbound calls due to local anti\-fraud requirements\.
 + **Caller ID name**: You can set a caller ID name, but there's no guarantee it will appear correctly to the customer\. For more information, see [Why your caller ID might not appear correctly to customers](queues-callerid.md#why-callerid-name-might-not-appear-correctly)\.
 
 ## Configuration tips<a name="transfer-to-phone-number-tips"></a>

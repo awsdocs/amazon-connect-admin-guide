@@ -2,7 +2,7 @@
 
 **To reset a password for a user**
 
-1. Log in to your contact center using your access URL \(https://*domain*\.awsapps\.com/connect/login\)\.
+1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
 1. Choose **Users**, **User management**\.
 

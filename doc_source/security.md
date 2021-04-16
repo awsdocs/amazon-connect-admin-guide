@@ -15,3 +15,4 @@ This documentation helps you understand how to apply the shared responsibility m
 + [Compliance validation in Amazon Connect](compliance-validation.md)
 + [Resilience in Amazon Connect](disaster-recovery-resiliency.md)
 + [Infrastructure security in Amazon Connect](infrastructure-security.md)
++ [Security Best Practices for Amazon Connect](security-best-practices.md)

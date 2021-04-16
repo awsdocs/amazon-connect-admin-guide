@@ -12,7 +12,9 @@ Here's how queued callback works:
 **Tip**  
 There's no way to manually remove a callback from the queue\. You can either answer them, or wait 7 days until they are removed automatically\.
 
-1. If there is no answer when the Amazon Connect calls the customer, it retries based on the number of times you've specified\. If the call goes to voicemail, it's considered connected\. 
+1. If there is no answer when the Amazon Connect calls the customer, it retries based on the number of times you've specified\. 
+
+1. If the call goes to **voicemail**, it's considered connected\.
 
 ## How queued callbacks affect and queue limits<a name="queued-callback-limits"></a>
 + Queued callbacks count towards the queue size limit, but they are routed to the error branch\. For example, if you have a queue that handles callbacks and incoming calls, and that queue reaches the size limit:

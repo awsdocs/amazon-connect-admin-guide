@@ -26,6 +26,10 @@ You shouldn't disable encryption\.
 For voice conversations to be stored in an Amazon S3 bucket, you need to enable recording in the contact flow block using the [Set recording and analytics behavior ](set-recording-behavior.md) block\.
 For chat conversations, if there's an S3 bucket for storing chat transcripts, then all chats are recorded and stored there\. If no bucket exists, then no chats are recorded\. However, if you want to monitor chat conversations, you still need to add the [Set recording and analytics behavior ](set-recording-behavior.md) block to the flow\.
 
+**Tip**  
+We recommend using the contact ID to search for recordings\.  
+Even though many call recordings for specific contact IDs may be named with the contact ID prefix itself \(for example, 123456\-aaaa\-bbbb\-3223\-2323234\.wav\), there is no guarantee that the contact IDs and name of the contact recording file *always* match\. By using **Contact ID** for your search on the [Contact search](search-recordings.md) page, you can find the correct recording by referring the audio file on the contact's Contact Trace Record \(CTR\)\.
+
 ## When are recordings available?<a name="when-are-recordings-available"></a>
 
 When call recording is enabled, the recording is placed in your S3 bucket shortly after the contact is disconnected\. Then you can [review the recording](review-recorded-conversations.md)\.

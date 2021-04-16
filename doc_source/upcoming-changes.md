@@ -2,6 +2,24 @@
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you an overview of the improvements\. 
 
+## Upcoming change: Fixes for chat metrics<a name="metrics-changes-chat-metrics"></a>
+
+We will release fixes for the following issues identified in chat metrics:
++ Currently Amazon Connect incorrectly reports that chat contacts that were created from disconnect flows were created from transfer flows\.
++ When the fixes are released, Amazon Connect will correctly reflect in the CTRs and agent event stream that these chat contacts were created from disconnect flows\. 
+
+There is no impact to voice or task contacts\. 
+
+Chat contacts created through disconnect flows will no longer increment the following metrics: 
++ [Contact flow time](historical-metrics-definitions.md#contact-flow-time-historical) 
++ [Contacts incoming](historical-metrics-definitions.md#contacts-incoming-historical)
++ [Contacts handled incoming](historical-metrics-definitions.md#contacts-handled-incoming-historical)
++ [Contacts transferred in](historical-metrics-definitions.md#contacts-transferred-in-historical)
+
+In addition, note the following fixes for CTRs and the agent event stream for chat contacts:
++ CTRs: There is currently an issue in the Attributes section of a chat CTR where the initiation method is **API** for both disconnect and transfer contacts\. With this fix, the initiation method will correctly reflect **Disconnect** and **Transfer**, respectively\. 
++ Agent event stream: Chat contacts created from disconnect flows will now have **Disconnect** as the initiation method\. 
+
 ## Upcoming change: 15 minutes interval for historical metrics reports<a name="metrics-changes-new-intervals-hmr"></a>
 
 When customizing a historical metrics report, you will have the option to select a 15 minutes interval, in addition to the current option of a 30 minutes interval\. 
@@ -10,20 +28,24 @@ The 15 minutes interval works the same as the 30 minutes interval\. For example,
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-15-minute-interval.png)
 
-## Upcoming changes: New metric groupings and categories<a name="metrics-changes-custom-service-levels"></a>
+## February 2021<a name="metrics-changes-february-2021"></a>
 
-With the future release of [custom service level metrics](#custom-service-levels), we will also make the following changes:
-+ On the **Table settings** pages, pre\-set and [custom service level metrics](#custom-service-levels) will be in a new group called **Contact Service Levels**\.
-+ Historical metrics on the **Table settings** page will be grouped into categories\. Currently they are in a long, unordered list\.
-+ The order of metric columns on historical metrics reports is changing to match the order of the metrics on the **Table settings** page\.
+The following updates where released in February 2021\. 
+
+### New metric groupings and categories<a name="metrics-changes-custom-service-levels"></a>
+
+With the release of [custom service level metrics](#custom-service-levels), we also made the following changes:
++ On the **Table settings** pages, pre\-set and [custom service level metrics](#custom-service-levels) are in a new group called **Contact Service Levels**\.
++ Historical metrics on the **Table settings** page are grouped into categories\. 
++ The order of metric columns on historical metrics reports changed to match the order of the metrics on the **Table settings** page\.
 
 Following is more information about these changes\.
 
-### Real\-time metrics: New Contact Service Level category<a name="custom-service-levels-rtm"></a>
+#### Real\-time metrics: New Contact Service Level category<a name="custom-service-levels-rtm"></a>
 
-A new category of metrics will be added to the **Table settings** page: **Contact Service Level**\.
+A new category of metrics appears on the **Table settings** page: **Contact Service Level**\.
 
-The following image shows how this new category will appear on the **Table settings** page, in an expandable group\. Choose the arrow next to the group to view and select the metrics you want to add to your report\. 
+The following image shows this new category on the **Table settings** page, in an expandable group\. Choose the arrow next to the group to view and select the metrics you want to add to your report\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-csl-groups.png)
 
@@ -33,9 +55,9 @@ The following image shows the user interface for creating custom service level m
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-create-csl.png)
 
-### Historical metrics: New categories for metrics<a name="hmr-new-categories"></a>
+#### Historical metrics: New categories for metrics<a name="hmr-new-categories"></a>
 
-To make it easier to find the historical metrics you want to add to a report, metrics on the **Table settings** page will be grouped into the following categories:
+To make it easier to find the historical metrics you want to add to a report, metrics on the **Table settings** page are grouped into the following categories:
 + Agents
 + Contacts Abandoned
 + Contact Service Level: This group contains preset and custom service levels\.
@@ -46,30 +68,28 @@ Choose **Add Custom SL** to add custom service levels to your historical metrics
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-csl-group.png)
 
-### The order of the metric columns on the historical metrics reports is changing<a name="upcoming-changes-static-columns"></a>
+#### The order of the metric columns on the historical metrics reports has changed<a name="upcoming-changes-static-columns"></a>
 
-The order of the metric columns on the historical metrics reports will match the updated grouping scheme and order of the metrics on the **Table settings** page\.
+The order of the metric columns on the historical metrics reports matches the updated grouping scheme and order of the metrics on the **Table settings** page\.
 
-This change supports the addition of [custom service level metrics](#custom-service-levels)\. It will also allow us to make future improvements for where, for example, control of how a report looks resides on the **Real\-time metrics** page and the **Historical metrics** page, not the **Table settings** page\.
+This change supports the addition of [custom service level metrics](#custom-service-levels)\. It also allows us to make future improvements for where, for example, control of how a report looks resides on the **Real\-time metrics** page and the **Historical metrics** page, not the **Table settings** page\.
 
-Note how metric columns will appear on reports in the upcoming release:
-+ When you open the **Real\-time metrics** page, custom service levels will appear at the end of the **Performance** group\. 
-+ Metrics on existing **Scheduled reports** \(the processed documents that arrive in your Amazon S3 buckets\) will not be re\-ordered automatically\. However, if you update an existing report, the metrics will be re\-ordered to match the order on the **Table settings** page\.
+Note how metric columns now appear on reports:
++ When you open the **Real\-time metrics** page, custom service levels appear at the end of the **Performance** group\. 
++ Metrics on existing **Scheduled reports** \(the processed documents that arrive in your Amazon S3 buckets\) are not re\-ordered automatically\. However, if you update an existing report, the metrics are re\-ordered to match the order on the **Table settings** page\.
 + **Service level metrics**:
-  + Real\-time metrics reports: Service level metrics will always be added to the end of the **Performance** group, in ascending order\. 
-  + Historical metrics reports: When you add custom service level metrics, they will be added to the end of the report in the order they were created\.
+  + Real\-time metrics reports: Service level metrics are always added to the end of the **Performance** group, in ascending order\. 
+  + Historical metrics reports: When you add custom service level metrics, they are added to the end of the report in the order they were created\.
 
-## Upcoming change: Custom service level metrics<a name="custom-service-levels"></a>
+### Custom service level metrics<a name="custom-service-levels"></a>
 
-Currently you can choose from pre\-set service levels in seconds\. In a future release, you will have the ability to add custom service level metrics\. You will also have the ability to choose from additional durations, such as minutes, hours, or days\.
+You have the ability to add custom service level metrics\. You can also choose from additional durations, such as minutes, hours, or days\.
 
 The maximum duration for a custom service level is 7 days\. That's because in Amazon Connect you can't have a contact that goes longer than 7 days\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-custom-servicelevels.png)
 
-## Upcoming change: Group by channel in a historical metrics report<a name="metrics-changes-group-by-channel-hmr"></a>
-
-The following changes to the historical metrics report are upcoming in a future release\. 
+### Group by channel in a historical metrics report<a name="metrics-changes-group-by-channel-hmr"></a>
 
 **To group by channel on historical metrics reports**
 

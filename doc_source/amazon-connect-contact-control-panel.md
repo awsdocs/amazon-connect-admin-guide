@@ -8,9 +8,7 @@ Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with 
 
 1. Provide the user name, password, and the CCP website link to your agents so they can log in\. 
 
-   The CCP website link is: **https://*instance name*\.awsapps\.com/connect/ccp\-v2/**
-**Note**  
-IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
+   The CCP website link is: **https://*instance name*\.my\.connect\.aws/ccp\-v2/**
 
    We recommend telling agents to bookmark the URL to the CCP so they can access it easily\.
 

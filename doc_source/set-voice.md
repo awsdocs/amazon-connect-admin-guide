@@ -3,6 +3,8 @@
 ## Description<a name="set-voice-description"></a>
 + Sets the text\-to\-speech \(TTS\) language and voice to use for the contact flow\.
 + The default voice is configured to Joanna \(Conversational speaking style\), an [Amazon Polly Neural Text\-to\-Speech \(NTTS\)](https://docs.aws.amazon.com/polly/latest/dg/NTTS-main.html) voice\. Neural voices make automated conversations sound more lifelike by improving the pitch, inflection, intonation, and tempo\.
+
+  For a list of supported neural voices, see [Neural Voices](https://docs.aws.amazon.com/polly/latest/dg/ntts-voices-main.html) in the *Amazon Polly Developer Guide*\. 
 + After this block is run, any TTS invocation resolves to the neural or standard voice selected\.
 + If this block is triggered during a chat conversation, the contact goes down the **Success** branch\. It has no effect on the chat experience\. 
 

@@ -4,4 +4,5 @@
 
 1. Go to **Metrics and quality**, **Real\-time metrics**, **Queues**\.
 
-1. This column counts all customers who are in a queue for an agent, including the callback customers\.
+1. This column counts all customers who are in waiting a queue for an agent, including the callback customers\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-waiting-in-queue.png)

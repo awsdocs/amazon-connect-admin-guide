@@ -3,7 +3,6 @@
 
   People with these permissions pose a risk to your contact center because they can do the following:
   + Reset passwords, including that of the administrator\.
-  + Change the login credentials of a user, including the login username\.
   + Grant other users permission to the Admin security profile\. People assigned to the Admin security profile have full access to your contact center\.
 
   Doing these things would enable someone to lock out those who need to access Amazon Connect, and allow in others who can steal customer data and damage your business\. 

@@ -14,7 +14,7 @@ This topic explains the options that Amazon Connect provides for telephony, whic
 
 ## Telephony architecture<a name="concepts-telephony-architecture"></a>
 
-Amazon Connect provides capabilities to host both toll\-free and direct dial numbers \(DID\) in all AWS Regions supported by Amazon Connect\. You can use both types of numbers in a single instance\. A complete list of supported countries and costs, including the price differences between DID and toll\-free numbers can be found on the [Amazon Connect pricing](https://aws.amazon.com/connect/pricing/) page\.
+Amazon Connect provides capabilities to host both toll\-free and direct dial numbers \(DID\) in all AWS Regions supported by Amazon Connect\. You can use both types of numbers in a single instance\. A complete list of supported countries and costs, including the price differences between DID and toll\-free numbers can be found on the [Amazon Connect pricing](http://aws.amazon.com/connect/pricing/) page\.
 
 AWS manages the connectivity to our network of carriers providing diverse connections to multiple carriers in each region supported by Amazon Connect\. When Amazon Connect is deployed in a Region, we take advantage of the built\-in redundancy of the AWS Availability Zone design to provide multiple carrier interfaces into multiple data centers\. You can see how AWS manages the design of a region [here](https://infrastructure.aws/)\.
 
@@ -36,7 +36,7 @@ In the United States, DID numbers are regulated by State Public Utilities commis
 
 DID numbers offer you the ability to present a local calling line identification when placing outbound calls, and a local presence to inbound callers\. This can be very useful to increase the likelihood outbound and queued callback calls get answered by your customers\. It can also show a customer that you are local to their area, and provide a cheaper inbound route than a long\-distance call if you don't publish a toll\-free number\.
 
-Because DID numbers are threaded to single carrier, Amazon Connect doesn't offer carrier redundancy for DID numbers\. We do offer link redundancy across multiple Availability Zones , so in the event of a link failure that carrier still has facilities available in another location to deliver calls\. DID numbers also have a capacity limitation on how many calls a single number can accommodate, and this number does vary by Region\. It is important to work with your AWS account team to ensure you are properly enabled with the right type of DID numbers if you plan on using DID numbers as your primary inbound channel, and have an expectation of over 100 concurrent calls per number\.
+Because DID numbers are threaded to single carrier, Amazon Connect doesn't offer carrier redundancy for DID numbers\. We do offer link redundancy across multiple Availability Zones, so in the event of a link failure that carrier still has facilities available in another location to deliver calls\. DID numbers also have a capacity limitation on how many calls a single number can accommodate, and this number does vary by Region\. It is important to work with your AWS account team to ensure you are properly enabled with the right type of DID numbers if you plan on using DID numbers as your primary inbound channel, and have an expectation of over 100 concurrent calls per number\.
 
 DID numbers are less expensive than toll\-free numbers, but don't have the redundancy and broad geographical coverage of a toll\-free number\. The ability to localize numbers may be an attractive option for your business\.
 
@@ -46,7 +46,7 @@ Amazon Connect provides you the ability to claim both direct dial and toll\-free
 
 ## Porting numbers<a name="concepts-porting-numbers"></a>
 
-Porting of numbers refers to the ability to move an existing telephone number from one carrier to another provided you are the “customer\-of\-record\.” In the United States, portability is required and regulated by the Federal Communications Commission\. Laws regarding the requirements for number portability vary greatly between countries\. In the United States and Canada, the process is regulated and well\-defined\. In other countries, some have well\-defined processes while some are dependent on carrier and geography\. 
+Porting of numbers refers to the ability to move an existing telephone number from one carrier to another provided you are the "customer\-of\-record\." In the United States, portability is required and regulated by the Federal Communications Commission\. Laws regarding the requirements for number portability vary greatly between countries\. In the United States and Canada, the process is regulated and well\-defined\. In other countries, some have well\-defined processes while some are dependent on carrier and geography\. 
 
 If you are trying to port a number outside of the United States, follow the [porting process](port-phone-number.md) we've documented, however, the timeline to complete may vary\. If porting is not possible at all, AWS Support will let you know that it's not available\. 
 

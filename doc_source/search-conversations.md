@@ -6,6 +6,8 @@ You can search the analyzed and transcribed recordings based on:
 + Sentiment score\.
 + Non\-talk time\.
 
+In addition, you can search conversations that are in specific contact categories \(that is, the conversation has been categorized based on uttered keywords and phrases\)\.
+
 These criteria are described in the following sections\.
 
 **Important**  
@@ -15,7 +17,7 @@ After a call ends **and** the agent completes After Contact Work \(ACW\), Contac
 
 Before you can search conversations, you need the following permissions, which allow you to do the type of search you want\. 
 + **Contact search**\. This is required so you can get to the Contact Search page\.
-+ **Search contacts by conversation characteristics**
++ **Search contacts by conversation characteristics**\. This includes non\-talk time, sentiment score, and contact category\.
 + **Search contacts by keywords**
 
 For more information, see [Security profile permissions for Contact Lens](permissions-for-contact-lens.md)\.
@@ -80,3 +82,10 @@ Non\-talk time includes hold time and any silence where both participants aren't
 Use the drop\-down arrow to specify whether to search conversations for the duration or percentage of non\-talk time\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/non-talk-time.png)
+
+## Search a contact category<a name="contact-category-search"></a>
+
+1. On the **Contact search** page, choose **Add filter**, **Contact category**\.
+
+1. In the **Contact categories** box, type the name of the category that you want to search, and then choose **Apply**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-contact-category.png)

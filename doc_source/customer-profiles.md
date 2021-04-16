@@ -17,4 +17,5 @@ The following image shows an agent's Contact Control Panel \(CCP\), and an examp
 + [Assign permissions](assign-security-profile-customer-profile.md)
 + [Integrate external applications](integrate-external-apps-customer-profiles.md)
 + [Object mapping for Customer Profiles](customer-profiles-objectmapping.md)
++ [Create and ingest customer data using Amazon S3](customer-profiles-object-type-mappings.md)
 + [Use the Customer Profiles API](use-customerprofiles-api.md)

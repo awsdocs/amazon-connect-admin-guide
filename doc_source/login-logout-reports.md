@@ -1,6 +1,6 @@
 # Login/Logout reports<a name="login-logout-reports"></a>
 
-The Login/Logout report displays the login and logout information for the agents in your contact center\. For each agent session, the login and logout times are displayed as a row in the report\. You can use the report to determine the time your agents were logged in to Amazon Connect\. The report also displays the amount of time for each session that an agent was logged in to Amazon Connect\.
+The Login/Logout report displays the login and logout information for the users in your contact center \(for example, agents, managers, and administrators\)\. For each user session, the login and logout times are displayed as a row in the report\. You can use the report to determine the time users were logged in to Amazon Connect\. The report also displays the amount of time for each session that user was logged in to Amazon Connect\.
 
 **Important**  
 By default, when an agent closes their CCP window, they are not logged out\. Unless you have [customized your CCP for automatic logout](automatic-logout.md), agents must choose the **Logout** button\. Until they choose the **Logout** button, the Login/Logout report shows them as logged in\.
@@ -9,7 +9,7 @@ By default, when an agent closes their CCP window, they are not logged out\. Unl
 + If you try to generate a Login/Logout report that has more than 10,000 rows, it won't complete\.
 + The Login/Logout report page displays only 10,000\. 
 + If you schedule a Login/Logout report that contains more than 10,000 rows, the report will fail\. In addition, no report output will be saved to your S3 bucket, and you cannot view the report\.
-+ If you have a contact center with a lot of agents, and your reports fail to complete, you can specify a shorter time range to reduce the size of the report generated, or apply filters to the report, such as routing profile and agent hierarchy\. You can then use other filters to capture all of the login/logout data for your instance\.
++ If you have a contact center with a lot of users, and your reports fail to complete, you can specify a shorter time range to reduce the size of the report generated, or apply filters to the report, such as routing profile and agent hierarchy\. You can then use other filters to capture all of the login/logout data for your instance\.
 
 ## Required permissions to access the Login/Logout report<a name="loginlogout-report-permissions"></a>
 
@@ -23,9 +23,9 @@ For information about how add more permissions to an existing security profile, 
 
 ## Generate a Login/Logout report<a name="loginlogout-report-generate"></a>
 
-A Login/Logout report includes only login or logout actions by your agents that occurred during the specified time range\.
-+  If an agent logged in during the time range and did not log out, the report shows a login time but not a logout time\.
-+ If the agent logged in before the start of the time range, and then logged out during the time range, the report shows both the login and logout times even though the login occurred before the start of the time range\. This is so you can view the duration of the agent session associated with the most recent logout\.
+A Login/Logout report includes only login or logout actions by your users that occurred during the specified time range\.
++  If user logged in during the time range and did not log out, the report shows a login time but not a logout time\.
++ If the user logged in before the start of the time range, and then logged out during the time range, the report shows both the login and logout times even though the login occurred before the start of the time range\. This is so you can view the duration of the user session associated with the most recent logout\.
 
 **To generate a Login/Logout report**
 

@@ -190,7 +190,7 @@ This metric doesn't apply to tasks so you'll notice a value of 0 on the report f
 
 The average time, from start to finish, that a contact was connected with an agent \(average handled time\)\. It includes talk time, hold time, and After Contact Work \(ACW\) time\.
 
-AHT is calculated by averaging the amount of time between the contact being answered by an agent and the conversation ending\.
+AHT is calculated by averaging the amount of time between the contact being answered by an agent and the conversation ending\. It applies to both inbound and outbound calls\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
@@ -418,6 +418,10 @@ Percentage of time that agents were active on contacts\. This percentage is calc
 
 \(Agent on contact \(wall clock time\) / \(Agent on contact \(wall clock time\) \+ Agent idle time\)\) 
 
+Where: 
++ \(Agent on contact \+ Agent idle time\) = total amount of agent time
++ So \(Agent on contact\)/\(total amount of agent time\) = percentage of time agents were active on contacts\.
+
 **Important**  
 **Occupancy** doesn't account for concurrency\. That is, an agent is considered 100% occupied for a given interval if they are handling at least one contact for that entire duration\. 
 + Type: String
@@ -431,12 +435,24 @@ Total time that an agent spent with their CCP set to a status other than **Offli
 + Type: String
 + Category: Agent activity\-driven metric
 
-## Service level *X* seconds<a name="service-level-historical"></a>
+## Service level *X*<a name="service-level-historical"></a>
 
-Percentage of contacts removed from the queue between 0 and *X* seconds after being added to it\. A contact is removed from a queue when the following occurs: an agent answers the contact, the customer abandons the contact, or the customer requests a call back\. The possible values for *X* are: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\. This percentage is calculated as follows:
+Percentage of contacts removed from the queue between 0 and *X* after being added to it\. A contact is removed from a queue when the following occurs: an agent answers the contact, the customer abandons the contact, or the customer requests a call back\. 
+
+For *X* you can choose from pre\-set times in seconds: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\. This percentage is calculated as follows:
 
 \(Contacts removed from queue in *X* seconds / Contacts queued\) \* 100
 + Type: String
 + Min value: 0\.00%
 + Max value: 100\.00%
 + Category: CTR\-driven metric
+
+### Custom service levels<a name="custom-service-level-historical"></a>
+
+You can also create custom service level metrics\. Choose from additional durations, such as minutes, hours, or days\.
+
+Custom service levels are localized to the report where they are created\. For example, you create a report that has a custom service level of 75\. You leave the page and then create another report\. The custom service level 75 won't exist in the second report\. You'll need to create it again\. 
+
+The maximum duration for a custom service level is 7 days\. That's because in Amazon Connect you can't have a contact that goes longer than 7 days\.
+
+You can add up to 10 custom service levels per report\.

@@ -11,7 +11,9 @@ You can enable Contact Lens in just a few steps\. Just add a [Set recording and 
    Both agent and customer call recordings are required to use Contact Lens\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior.png)
 
-1. Select **Enable Contact Lens for speech analytics**\.   
+1. Select **Enable Contact Lens for speech analytics**\.
+
+   If you don't see this option, Contact Lens for Amazon Connect hasn't been enabled for your instance\. To enable it, see [Update instance settings](update-instance-settings.md)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior2.png)
 
 1. Choose one of the following:
@@ -20,7 +22,7 @@ You can enable Contact Lens in just a few steps\. Just add a [Set recording and 
 
      If you choose this option, we recommend setting up alerts based on keywords and phrases that the customer may utter during the call\. Contact Lens analyzes the conversation real\-time to detect the specified keywords or phrases, and alerts supervisors\. From there, supervisors can listen in on the live call and provide guidance to the agent to help them resolve the issue faster\.
 
-     For information about setting up alerts, see [Alert supervisors real\-time based on keywords and phrases](add-rules-for-alerts.md)\.
+     For information about setting up alerts, see [Alert supervisors in real\-time based on keywords and phrases](add-rules-for-alerts.md)\.
 
      If your instance was created before October 2018, additional configuration is needed to access real\-time analytics\. For more information, see [Service\-Linked Role Permissions for Amazon Connect](connect-slr.md#slr-permissions)\.
 
@@ -55,10 +57,10 @@ For the location of redacted files and examples, see [Example Contact Lens outpu
 ## Dynamically enable Contact Lens using contact attributes<a name="dynamically-enable-analytics-contact-flow"></a>
 
 You can dynamically enable Contact Lens and the redaction of the output files based on the language of the customer\. For example, for customers using en\-US, you may want only a redacted file whereas for those using en\-GB, you may want both the original and redacted output files\.
-+ Redaction: choose one of the following \(case sensitive\)
++ Redaction: choose one of the following \(they are case sensitive\)
   + None
   + RedactedOnly
-  + RedactedandOriginal
+  + RedactedAndOriginal
 + Language: Choose from the [list of available languages](supported-languages.md#supported-languages-contact-lens)\.
 
 You can set these attributes in the following ways:
@@ -81,12 +83,13 @@ You can set these attributes in the following ways:
 ## Availability of Contact Lens features by Region<a name="regions-contactlens"></a>
 
 
-| Region | Post\-call analytics | Real\-time analytics | Categorization with pattern matching |  Categorization with semantic matching | Extended language support  | 
-| --- | --- | --- | --- | --- | --- | 
-|  US West \(Oregon\)  | Yes  | Yes  | Yes  | Yes  | Yes  | 
-|  US East \(N\. Virginia\)  | Yes  | Yes  | Yes  | Yes  | Yes  | 
-|  Asia Pacific \(Sydney\)  | Yes  | Yes  | Yes  | Yes  | Yes  | 
-|  Europe \(London\)  | Yes  | \-  | Yes  | Yes  | \-  | 
-|  Europe \(Frankfurt\)  | Yes  | \-  | Yes  | Yes  | \-  | 
-|  Asia Pacific \(Singapore\)  | Yes | \-  | Yes  | Yes  | \-  | 
-|  Asia Pacific \(Tokyo\)  | Yes  | \-  | Yes  | Yes  | \-  | 
+| Region | Post\-call analytics | Real\-time analytics | Extended language support  | 
+| --- | --- | --- | --- | 
+|  US East \(N\. Virginia\)  | Yes  | Yes  | Yes  | 
+|  US West \(Oregon\)   | Yes  | Yes  | Yes  | 
+|  Canada \(Central\)   | Yes  | Yes  | Yes  | 
+|  Europe \(Frankfurt\)  | Yes  | Yes  | Yes  | 
+|  Europe \(London\)  | Yes  | Yes  | Yes  | 
+|  Asia Pacific \(Singapore\)  | Yes | \-  | \-  | 
+|  Asia Pacific \(Sydney\)  | Yes  | Yes  | Yes  | 
+|  Asia Pacific \(Tokyo\)  | Yes  | Yes  | Yes  | 

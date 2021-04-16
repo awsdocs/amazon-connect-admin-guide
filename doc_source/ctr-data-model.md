@@ -4,6 +4,8 @@ This article describes the data model for Amazon Connect contact trace records \
 
 For the CTR retention period and maximum size of the CTR attributes section, see [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.
 
+For information about when a CTR is created \(and thus can be exported or used for data reporting\), see [Events in the contact trace record \(CTR\)](about-contact-states.md#ctr-events)\.
+
 **Tip**  
 Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for multiple reasons, such as new information arriving after initial delivery\. If you're building a system that consumes CTR export streams, be sure to include logic that checks for duplicate CTRs for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
 
@@ -170,15 +172,21 @@ The date and time that the customer endpoint disconnected from Amazon Connect, i
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **DisconnectReason**  
-Indicates how the call was terminated\.  
+Indicates how the contact was terminated\. This data is currently available in the Amazon Connect CTR stream only\.  
 Type: String   
 Voice contacts can have the following disconnect reasons:  
 + `CUSTOMER_DISCONNECT`: Contact disconnected first\.
 + `AGENT_DISCONNECT`: Agent disconnected when the contact was still on the call\.
 + `THIRD_PARTY_DISCONNECT`: In a third\-party call, after the agent has left, the third\-party disconnected the call while the contact was still on the call\.
 + `TELECOM_PROBLEM`: Disconnected due to an issue with connecting the call from the carrier, network congestion, network error, etc\.
-+ `CONTACT_FLOW_DISCONNECT`: Disconnected in a contact flow\.
++ `CONTACT_FLOW_DISCONNECT`: Call was disconnected in a flow\.
 + `OTHER`: This includes any reason not explicitly covered by the previous codes\. For example, the contact was disconnected by an API\.
+Tasks can have the following disconnect reasons:  
++ `AGENT_DISCONNECT`: Agent marked the task as complete\.
++ `EXPIRED`: Task expired automatically because it was not assigned or completed within 7 days\.
++ `CONTACT_FLOW_DISCONNECT`: Task was disconnected or completed by a flow\.
++ `API`: The [StopContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContact.html) API was called to end the task\.
++ `OTHER`: This includes any reason not explicitly covered by the previous codes\.
 
 **InitialContactId**  
 If this contact is related to other contacts, this is the ID of the initial contact\.  
@@ -236,9 +244,7 @@ Type: [RecordingInfo](#ctr-RecordingInfo)
 
 **Recordings**  
 If recording was enabled, this is information about the recording\.  
-
 Type: Array of [RecordingsInfo](#ctr-RecordingsInfo)  
-
 The first recording for a contact will appear in both the Recording and Recordings sections of the CTR\.
 
 **SystemEndpoint**  

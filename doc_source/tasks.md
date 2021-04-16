@@ -77,6 +77,13 @@ You can use tasks in the following contact blocks:
 + Transfer to queue
 + Wait
 
+## Using IAM? Add Task permissions<a name="iam-tasks"></a>
+
+If your organization is using custom [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) policies to manage access to the Amazon Connect console, make sure users have the appropriate permissions to set up applications for task creation\. For a list of required permissions, see [Tasks page](security-iam-amazon-connect-permissions.md#tasks-page)\.
+
+**Note**  
+If your instance was created before October 2018, for information about how to configure your service\-linked roles \(SLR\), see [Set up instances created before October 2018 to use service\-linked roles](connect-slr.md#not-using-slr)\.
+
 ## Track tasks in real\-time and historical metrics reports<a name="tracking-tasks"></a>
 
 You can track the status of all tasks in real\-time and historical metrics reports, just like you track contacts in other channels\. For example, you can track:
@@ -94,6 +101,10 @@ There are a few metrics that don't apply to tasks so you'll notice a value of 0 
 + [Agent interaction time](historical-metrics-definitions.md#agent-interaction-time-historical)
 + [Average agent interaction time](historical-metrics-definitions.md#average-agent-interaction-time-historical)
 + [Average customer hold time](historical-metrics-definitions.md#average-customer-hold-time-historical)
+
+### Manage tasks to custom service levels \(SL\)<a name="tasks-custom-sl"></a>
+
+While voice and chats may have short service level times based on seconds or minutes, you may have some tasks with service levels that are hours or days\. You can create custom service level durations that are appropriate to each of your channels\. For more information, see [real\-time custom service levels](real-time-metrics-definitions.md#custom-service-level-real-time) and [historical custom service levels](historical-metrics-definitions.md#custom-service-level-historical)\. 
 
 ## When do tasks end?<a name="when-do-tasks-end"></a>
 

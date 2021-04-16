@@ -2,14 +2,9 @@
 
 You can download the data included in a report as a comma\-separated value \(CSV\) file so you can use it with other applications\. If there's no data for one of the selected metrics, the field in the downloaded CSV file contains a dash\.
 
-**Important**  
-From the Amazon Connect console, you can only download the results currently displayed on the page\. For example, if there are 256 results, but only 100 are displayed on the page at a time, you would need to download the data in three batches \(1\-100, 101\-200, 201\-256\)\. For a workaround, see [Download all historical metric results](#download-all-historical-metrics)\. 
-
 **To download a historical metrics report as a CSV file**
 
-1. Log in to your contact center at https://*instance name*\.awsapps\.com/connect/\.
-**Note**  
-IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
+1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
 1. Create a new report or open a saved report\.
 

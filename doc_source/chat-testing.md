@@ -36,7 +36,7 @@ The test environment uses the BasicQueue and Basic Routing Profile\. The Basic R
 
 ## Test tasks<a name="test-tasks"></a>
 
-The first step in testing the task experience is to create a quick connect for yourself or whoever you want to assign the example tasks to\. 
+The first step in testing the task experience is to create a quick connect for the queue you want to assign the example tasks to\. 
 
 **Step 1: Create a quick connect**
 
@@ -44,22 +44,23 @@ The first step in testing the task experience is to create a quick connect for y
 
 1. Enter a name for the quick connect\. For example, if you want to assign the test task to yourself, enter your name \(for example, **Jane Doe**\)\.
 
-1. Under **Type**, use the dropdown list to choose **Agent queue**\.
+1. Under **Type**, use the dropdown list to choose **Queue**\.
 
-1. Under **Destination**, use the dropdown list to choose your own user name \(assuming you want to assign the test task to yourself\)\.
+1. Under **Destination**, use the dropdown list to choose a queue you set up for yourself \(assuming you want to assign the test task to yourself\)\.
 
-1. Under **Contact flow**, choose **Default agent transfer**\.
+1. Under **Contact flow**, choose **Default queue transfer**\.
 
 1. Under **Description**, enter something like **Test quick connect**\.
 
 1. Choose **Save**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-agent-quick-connect.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-tasks-quick-connect-setup.png)
 
-**Step 2: Make the quick connect visible in the CCP**
+**Step 2: Make the quick connect visible in the CCP by assigning it to a queue**
 
 1. After you create the quick connect, go to **Routing**, **Queues** and then choose the appropriate queue for the contact to be routed to\. 
 
-1. On the **Edit queue** page, in the **Quick connects** box, search for the quick connect you created\. For example, it might have your name\. 
+1. On the **Edit queue** page, in the **Quick connects** box, search for the quick connect you created\. For example, it might have your name\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-tasks-janedoe-queue.png)
 
 1. Select the quick connect and then choose **Save**\.
 

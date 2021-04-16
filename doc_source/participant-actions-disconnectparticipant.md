@@ -4,11 +4,7 @@ Disconnects the participant from the contact and stops this flow from running\.
 
 ## Parameter object<a name="disconnectparticipant-parameter"></a>
 
-```
-{
-                
-}
-```
+No parameters are expected\.
 
 ## Results and conditions<a name="disconnectparticipant-results"></a>
 

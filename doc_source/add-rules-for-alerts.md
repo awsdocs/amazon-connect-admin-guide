@@ -1,4 +1,4 @@
-# Alert supervisors real\-time based on keywords and phrases<a name="add-rules-for-alerts"></a>
+# Alert supervisors in real\-time based on keywords and phrases<a name="add-rules-for-alerts"></a>
 
 After you [enable real\-time analytics](enable-analytics.md) in your contact flow, you can add rules that automatically alert supervisors when a customer experience issue occurs\. 
 

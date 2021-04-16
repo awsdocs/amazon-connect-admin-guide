@@ -1,9 +1,9 @@
-# Required permissions for managing access to the Amazon Connect console<a name="security-iam-amazon-connect-permissions"></a>
+# Required permissions for using custom IAM policies to manage access to the Amazon Connect console<a name="security-iam-amazon-connect-permissions"></a>
 
-To manage your Amazon Connect instance using the Amazon Connect console, your users need some or all of the permissions listed in this article, depending on the tasks they need to do\.
+If you're using custom [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) policies to manage access to the Amazon Connect console, your users need some or all of the permissions listed in this article, depending on the tasks they need to do\. 
 
 **Note**  
-Using **connect:\*** grants your users all of the Amazon Connect permissions listed in this article\.
+Using **connect:\*** in a custom IAM policy grants your users all of the Amazon Connect permissions listed in this article\.
 
 **Note**  
 Certain pages on the Amazon Connect console, such as [Tasks](#tasks-page) and [Customer Profiles](#customer-profiles-page), require that you add permissions to your inline policies\. 
@@ -50,7 +50,7 @@ Use the permissions listed in the following table to manage access to this page\
 | --- | --- | 
 | List instance  | connect:ListInstances ds:DescribeDirectories  | 
 | Describe instance: View the details of the instance/ current settings  | connect:DescribeInstance connect:ListLambdaFunctions connect:ListLexBots connect:ListInstanceStorageConfigs connect:ListApprovedOrigins connect:ListSecurityKeys connect:DescribeInstanceAttributes connect:DescribeInstanceStorageConfig ds:DescribeDirectories  | 
-| Create instance  | connect:CreateInstance connect:DescribeInstance connect:ListInstances connect:AssociateInstanceStorageConfig connect:UpdateInstanceAttribute ds:CheckAlias ds:CreateAlias ds:AuthorizeApplication ds:UnauthorizeApplication ds:CreateIdentityPoolDirectory ds:CreateDirectory ds:DescribeDirectories iam:CreateServiceLinkedRole iam:AttachRolePolicy iam:PutRolePolicy kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant logs:CreateLogGroup s3:CreateBucket s3:GetBucketLocation s3:ListAllMyBuckets servicequotas:GetServiceQuota  | 
+| Create instance  | connect:CreateInstance connect:DescribeInstance connect:ListInstances connect:AssociateInstanceStorageConfig connect:UpdateInstanceAttribute ds:CheckAlias ds:CreateAlias ds:AuthorizeApplication ds:UnauthorizeApplication ds:CreateIdentityPoolDirectory ds:CreateDirectory ds:DescribeDirectories iam:CreateServiceLinkedRole  kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant logs:CreateLogGroup s3:CreateBucket s3:GetBucketLocation s3:ListAllMyBuckets servicequotas:GetServiceQuota  | 
 | Delete instance  |  connect:DescribeInstance connect:DeleteInstance connect:ListInstances ds:DescribeDirectories ds:DeleteDirectory ds:UnauthorizeApplication  | 
 
 ## Detailed instance pages<a name="detail-pages"></a>
@@ -82,7 +82,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View call recording | connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig | 
-| Edit call recording  |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:GetBucketAcl s3:CreateBucket kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Edit call recording  |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:GetBucketAcl s3:CreateBucket kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant   | 
 
 #### Chat transcripts section<a name="chat-transcripts-section"></a>
 
@@ -90,7 +90,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View chat transcripts | connect:DescribeInstance connect:DescribeInstanceStorageConfig connect:ListInstanceStorageConfigs  | 
-| Edit chat transcripts |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:GetBucketAcl s3:CreateBucket kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Edit chat transcripts |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:GetBucketAcl s3:CreateBucket kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant   | 
 
 #### Attachments section<a name="attachments-section"></a>
 
@@ -98,7 +98,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View chat attachments | connect:DescribeInstance connect:DescribeInstanceStorageConfig connect:ListInstanceStorageConfigs  | 
-| Edit chat attachments |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:CreateBucket s3:GetBucketAcl kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Edit chat attachments |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:CreateBucket s3:GetBucketAcl kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant   | 
 
 #### Live media streaming section<a name="live-media-streaming-section"></a>
 
@@ -106,7 +106,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View live media streaming | connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
-| Edit live media streaming |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig kms:CreateGrant kms:DescribeKey kms:RetireGrant iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Edit live media streaming |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig kms:CreateGrant kms:DescribeKey kms:RetireGrant   | 
 
 #### Exported reports section<a name="exported-reports-section"></a>
 
@@ -114,7 +114,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View exported reports | connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
-| Edit exported reports |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect: DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:CreateBucket kms:DescribeKey kms:ListAliases kms:RetireGrant kms:CreateGrant iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Edit exported reports |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect: DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:CreateBucket kms:DescribeKey kms:ListAliases kms:RetireGrant kms:CreateGrant   | 
 
 ### Data streaming page<a name="data-streaming-page"></a>
 
@@ -124,7 +124,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View data streaming \- Contact trace records |  connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
-| Edit contact trace record |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig firehose:ListDeliveryStreams firehose:DescribeDeliveryStream kinesis:ListStreams kinesis:DescribeStream iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Edit contact trace record |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig firehose:ListDeliveryStreams firehose:DescribeDeliveryStream kinesis:ListStreams kinesis:DescribeStream   | 
 
 #### Agent events section<a name="agent-events-section"></a>
 
@@ -132,7 +132,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View data streaming \- Agent events |  connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
-| Edit agent events |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig kinesis:ListStreams kinesis: DescribeStream iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Edit agent events |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig kinesis:ListStreams kinesis: DescribeStream   | 
 
 ### Application integration page<a name="application-integration-page"></a>
 
@@ -174,7 +174,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | View Lex bots | connect:ListLexBots  | 
-| Add/remove Lex bots |  lex:GetBots lex:GetBot connect:AssociateLexBot connect:DisassociateLexBot connect:ListLexBots iam:PutRolePolicy iam:AttachRolePolicy  | 
+| Add/remove Lex bots |  lex:GetBots lex:GetBot connect:AssociateLexBot connect:DisassociateLexBot connect:ListLexBots   | 
 
 #### Lambda functions section<a name="lambda-functions-section"></a>
 

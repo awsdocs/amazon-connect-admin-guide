@@ -16,7 +16,7 @@ The results of the sentiment analysis appear in the customer's Contact Trace Rec
 + [Enable Contact Lens](enable-analytics.md)
 + [Assign permissions](permissions-for-contact-lens.md)
 + [Automatically categorize contacts](rules.md)
-+ [Alert supervisors real\-time](add-rules-for-alerts.md)
++ [Alert supervisors in real\-time](add-rules-for-alerts.md)
 + [Search conversations](search-conversations.md)
 + [Review analyzed conversations](review-transcripts.md)
 + [Quickly navigate transcripts and audio](turn-by-turn-transcript.md)

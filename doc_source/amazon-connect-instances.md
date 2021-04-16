@@ -5,7 +5,7 @@ The first step in setting up your Amazon Connect contact center is to create a v
 ## Things to know before you begin<a name="get-started-prerequisites"></a>
 + When you sign up for Amazon Web Services \(AWS\), your AWS account is automatically signed up for all services in AWS, including Amazon Connect\. You are charged only for the services that you use\. To create an AWS account, see [How do I create and activate an AWS account?](http://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/)
 + To allow an IAM user to create an instance, ensure that they have the permissions granted by the **AmazonConnect\_FullAccess** policy\.
-+ For a list of the minimum IAM permissions required to create an instance, see [Required permissions for managing access to the Amazon Connect console](security-iam-amazon-connect-permissions.md)\.
++ For a list of the minimum IAM permissions required to create an instance, see [Required permissions for using custom IAM policies to manage access to the Amazon Connect console](security-iam-amazon-connect-permissions.md)\.
 + Amazon Connect is not available to customers in India using Amazon Web Services through Amazon Internet Services Pvt\. Ltd \(AISPL\)\. You will receive an error message if you try to create an instance in Amazon Connect\.
 + When you create an instance, you must decide how you want to manage users\. **You can't change the identity management option after you create the instance**\. For more information, see [Plan your identity management in Amazon Connect](connect-identity-management.md)\.
 
@@ -65,6 +65,9 @@ When early media audio is enabled, for outbound calls your agents can hear pre\-
 1. Choose **Next step**\.
 
 ## Step 4: Data storage<a name="get-started-data-storage"></a>
+
+**Note**  
+Amazon Connect does not support Amazon S3 Object Lock in compliance mode to store objects using a write\-once\-read\-many \(WORM\) model\.
 
 When you create an instance, by default we create an Amazon S3 bucket\. Data, such as reports and recordings of conversations, is encrypted using AWS Key Management Service, and then stored in the Amazon S3 bucket\.
 

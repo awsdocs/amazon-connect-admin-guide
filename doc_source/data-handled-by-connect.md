@@ -59,7 +59,7 @@ In addition, you can track who listens to or deletes recordings; see [Track who 
 
 Amazon Connect stores metadata related to contacts that flow through the system and allows authorized users to access this information\. The Contact Search feature allows you to search and view contact data, such as origination phone numbers or other attributes set by the contact flow, that are associated with a contact for diagnostics or reporting purposes\. 
 
-Contact data classified as PII, or data that represents customer content being stored by Amazon Connect, is encrypted at rest using a key that is time\-limited and specific to the Amazon Connect instance\. Specifically, the customer origination phone number is cryptographically hashed with a key that is specific to the instance to allow for use in contact search\.
+Contact data classified as PII, or data that represents customer content being stored by Amazon Connect, is encrypted at rest using a key that is time\-limited and specific to the Amazon Connect instance\. Specifically, the customer origination phone number is cryptographically hashed with a key that is specific to the instance to allow for use in contact search\. For contact search, the encryption key is not time\-sensitive\. 
 
 The following data stored by Amazon Connect is treated as sensitive:
 + Origination phone number

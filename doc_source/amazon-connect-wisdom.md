@@ -27,10 +27,7 @@ If you're using the CCP that is provided with Amazon Connect, after you enable A
 
 **Note**  
 This link only works if you're signed up for the Amazon Connect Wisdom preview:  
-**https://*instance name*\.awsapps\.com/connect/agent\-app/**
-
-**Note**  
-IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
+**https://*instance name*\.my\.connect\.aws/agent\-app/**
 
 By using the new URL, your agents can view the CCP and Amazon Connect Wisdom in the same browser window\.
 

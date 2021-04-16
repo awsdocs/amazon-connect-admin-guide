@@ -11,7 +11,8 @@ For the best agent and customer experience, we recommend using a USB headset\.
 Alternatively, you can redirect the contact to an external number, in E\.164 format, using an agent's existing telephony\.
 
 **Note**  
-If the agent's audio device does not support up to 48khz and the browser asserts a sample rate of 48khz, audio issues such as an audible humming sound may be present in the agent's outgoing audio\. This has been seen with Firefox but not with Chrome\. 
+If the agent's audio device does not support up to 48khz and the browser asserts a sample rate of 48khz, audio issues such as an audible humming sound may be present in the agent's outgoing audio\. This has been seen with Firefox but not with Chrome\.   
+For instructions on verifying the sample rate of the agent's headset and browser, see [Humming sound in headset: Verify the headset and browser sample rates](verify-sample-rate.md)
 
 ## Workstation minimum requirements<a name="ccp-agent-workstation"></a>
 

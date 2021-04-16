@@ -17,7 +17,7 @@ In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIRef
 
 ## ACW<a name="aftercallwork-real-time"></a>
 
-Count of contacts who are in an **AfterContactWork** state\. After a conversation between an agent and customer ends, the contact is moved into the ACW state\.
+Count of contacts who are in an **AfterContactWork** state\. \(After contact work is also known as After call work\.\)  After a conversation between an agent and customer ends, the contact is moved into the ACW state\.
 
 In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `AGENTS_AFTER_CONTACT_WORK`\. The name of this metric is confusing because in the Amazon Connect console, ACW counts the number of *contacts* who are in an ACW state, not the number of agents\. 
 
@@ -244,6 +244,10 @@ Percentage of time that an agent was active on contacts\. This percentage is cal
 
 \(Agent on contact \(wall clock time\) / \(Agent on contact \(wall clock time\) \+ Agent idle time\)\) 
 
+Where: 
++ \(Agent on contact \+ Agent idle time\) = total amount of agent time
++ So \(Agent on contact\)/\(total amount of agent time\) = percentage of time agents were active on contacts\.
+
 **Important**  
 **Occupancy** doesn't account for concurrency\. That is, an agent is considered 100% occupied for a given interval if they are handling at least one contact for that entire duration\. 
 
@@ -302,6 +306,14 @@ In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIRef
 Percentage of contacts removed from the queue between 0 and *X* after being added to it \(Service Level\)\. A contact is removed from the queue when one of the following occurs: an agent answers the call, the customer abandons the call, or the customer requests a call back\. 
 
 For X, you can can choose from pre\-set times in seconds: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\.
+
+### Custom service levels<a name="custom-service-level-real-time"></a>
+
+You can also create custom service level metrics\. You can also choose from additional durations, such as minutes, hours, or days\.
+
+You can add up to 10 custom service levels per report\.
+
+The maximum duration for a custom service level is 7 days\. That's because in Amazon Connect you can't have a contact that goes longer than 7 days\. 
 
 ## Staffed<a name="staffed-real-time"></a>
 

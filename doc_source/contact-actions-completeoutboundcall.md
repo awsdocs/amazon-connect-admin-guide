@@ -7,8 +7,7 @@ When a flow is run before an outbound call is made as part of an outbound contac
 ```
 {
     "CallerId": { Optional, an override of the caller ID to present when calling
-        "Number": The caller ID number to present when calling. Can either be fully static or a single valid JSONPath identifier
-        "Name": The caller ID name to present when calling. **This is not currently supported on the UI, so it should be treated as unknown but is an area of expansion since we should support name anywhere we support number ideally**
+        "Number": The caller ID number to present when calling. Can either be fully static or a single valid JSONPath identifier       
     }
 }
 ```

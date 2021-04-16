@@ -53,6 +53,14 @@ To update the instance settings:
 
 1. Choose **Save**\.
 
+## Update analytics tools options<a name="update-analytics-tools"></a>
+
+1. In the navigation pane, choose **Analytics tools**\.
+
+1. Choose **Enable Contact Lens**\. For more information, see [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.
+
+1. Choose **Save**\.
+
 ## Update contact flow settings<a name="update-contact-flow-settings"></a>
 
 1. In the navigation pane, choose **Contact flows**\.
@@ -65,4 +73,4 @@ To update the instance settings:
 
 1. \(Optional\) To enable contact flow logs, choose **Enable contact flow logs**\. For more information, see [Track events as customers interact with contact flows](about-contact-flow-logs.md)\.
 
-1. \(Optional\) To use the best available voice from Amazon Polly, choose **Use the best available voice **\. For more information, see [Amazon Polly best sounding voice](text-to-speech.md#amazon-polly-best-sounding-voice)\.
+1. \(Optional\) To use the best available voice from Amazon Polly, choose **Use the best available voice**\. For more information, see [Amazon Polly best sounding voice](text-to-speech.md#amazon-polly-best-sounding-voice)\.

@@ -13,6 +13,7 @@ There are different events that can appear in the lifecycle of a contact\. Each 
 + MISSED \- The contact was missed by the agent\.
 + ERROR \- This appears when, for example, the customer abandons the call during outbound whisper\.  
 + ENDED \- The conversation has ended, and the agent has started doing ACW for that contact\.
++ REJECTED \- The contact was rejected by the agent\. This applies to chat and tasks\.
 
 Here's what the contact state looks like in the agent event stream:
 
@@ -40,7 +41,7 @@ Here's what the contact state looks like in the agent event stream:
 
 A contact trace record \(CTR\) captures events associated with the contact in your contact center\. For example, how long the contact lasted, when it started and stopped\. For a list of all data that's captured in the CTR, see [Contact trace records \(CTR\) data model](ctr-data-model.md)\. 
 
-A CTR is opened for a customer when they are connected to your contact center\. The CTR is completed when the interaction with the contact flow or agent ends\. This means it's possible for a customer to have multiple CTRs\.
+A CTR is opened for a customer when they are connected to your contact center\. The CTR is completed when the interaction with the contact flow or agent ends \(that is, the agent has completed the ACW and cleared the contact\)\. This means it's possible for a customer to have multiple CTRs\.
 
 The following diagram shows when a CTR is created for a contact\. 
 

@@ -23,7 +23,7 @@ You can configure this block to accept DTMF input, a chat response, or an Amazon
 
 ### DTMF tab properties<a name="get-customer-input-dtmf"></a>
 + **Audio prompt**: Select from a list of default audio prompts, or upload your own audio prompt\. 
-+ **Set timeout**: Specify how long to wait while the user decides how they want to respond to the prompt\.
++ **Set timeout**: Specify how long to wait while the user decides how they want to respond to the prompt\. The maximum timeout you can set is 179 seconds\.
 
 ### Amazon Lex tab properties<a name="get-customer-input-lex-tab-properties"></a>
 + **Lex bot properties**: After you create your Lex bot, enter the name and alias of the bot here\. Only published bots appear in the drop\-down list\.  

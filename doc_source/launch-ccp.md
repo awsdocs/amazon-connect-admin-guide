@@ -1,12 +1,9 @@
 # Launch the CCP<a name="launch-ccp"></a>
 
 The URL to launch the CCP is:
-+ https://*instance name*\.awsapps\.com/connect/ccp\-v2/
++ https://*instance name*\.my\.connect\.aws/ccp\-v2/
 
 Where *instance name* is provided by your IT department or whoever set up Amazon Connect for your business\.
-
-**Note**  
-IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
 
 With this updated CCP, your agents can manage voice, chat, and tasks from this single interface\.
 

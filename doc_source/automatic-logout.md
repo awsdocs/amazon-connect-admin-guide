@@ -1,12 +1,12 @@
 # Log out agents automatically when they close their CCP<a name="automatic-logout"></a>
 
-When using the default Amazon Connect CCP, closing the CCP window doesn't change an agent's status from **Available** to **Offline**\. An agent must change their status manually, and then log out\.
+When using the default Amazon Connect CCP, closing the CCP window doesn't change an agent's status from **Available** to **Offline**\. An agent must change their status manually to **Offline** and then log out\.
 
 To change this behavior, you must create a custom CCP\.
 
 Use the [Amazon Connect Streams API](https://github.com/amazon-connect/amazon-connect-streams) and the [Agent API](https://github.com/amazon-connect/amazon-connect-streams/blob/master/Documentation.md#agent-api) to create a custom CCP for your contact center\. For an example custom CCP setup, see [Perform an external screen pop with Amazon Connect](http://aws.amazon.com/blogs/contact-center/perform-an-external-screen-pop-with-amazon-connect/)\. 
 
-Use the following steps to update your CCP so it logs out agents automatically when they close the CCP window\.
+Use the following steps to update your CCP so it switches agents to **Offline**  and logs out agents automatically when they close the CCP window\.
 
 ## Step 1: Set up the Streams API<a name="automatic-logout-for-agents-step1"></a>
 

@@ -2,6 +2,8 @@
 
 It's possible that Contact Lens can't analyze a contact file, even though analysis is enabled on the contact flow\. When this happens, Contact Lens sends error notifications using Amazon EventBridge events\. 
 
+Events are emitted on a best effort basis\.
+
 ## Subscribe to EventBridge notifications<a name="contact-lens-error-notifications-subscribe"></a>
 
 To subscribe to these notifications, create a custom EventBridge rule that matches the following:

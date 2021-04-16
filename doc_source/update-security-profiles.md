@@ -12,7 +12,7 @@ By default, the Amazon Connect **Admin** security profile has these permissions\
 
 ## How to update security profiles<a name="how-to-update-security-profiles"></a>
 
-1. Log in to your contact center using your access URL \(https://*instance name*\.awsapps\.com/connect/login\)\. You must be logged in with an Amazon Connect account that has permissions to update security profiles\.
+1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\. You must be logged in with an Amazon Connect account that has permissions to update security profiles\.
 
 1. Choose **Users**, **Security profiles**\.
 

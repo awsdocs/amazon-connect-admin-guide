@@ -1,6 +1,6 @@
 # How to use Lex session attributes<a name="how-to-use-session-attributes"></a>
 
-When a customer starts a conversation with your bot, Amazon Lex creates a *session*\. With *session attributes*, also known as *Lex attributes*, you can pass information between the bot and Amazon Connect during the session\.
+When a customer starts a conversation with your bot, Amazon Lex creates a *session*\. With *session attributes*, also known as *Lex attributes*, you can pass information between the bot and Amazon Connect during the session\. For a list of Amazon Lex attributes you can use, see [Amazon Lex contact attributes](connect-attrib-list.md#attribs-lex-table)\.
 
 ## Life cycle of session attributes<a name="session-attribute-lifecycle"></a>
 

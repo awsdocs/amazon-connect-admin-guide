@@ -7,6 +7,7 @@ You can customize the reports, specify a time range for each report, select metr
 You can also use the [Amazon Connect Service APIs](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html) to create custom reports, such as real\-time reports that are filtered by teams of agents\.
 
 **Topics**
++ [Real\-time metrics definitions](real-time-metrics-definitions.md)
 + [Permissions required to view real\-time metrics reports](rtm-permissions.md)
 + [How often real\-time metrics refresh](rtm-refresh.md)
 + [Use one\-click drill\-downs for Routing profiles and Queues tables](one-click-drill-downs.md)
@@ -18,4 +19,3 @@ You can also use the [Amazon Connect Service APIs](https://docs.aws.amazon.com/c
 + [Sort agents by activity in a real\-time metrics report](rtm-sort-by-agent-activity.md)
 + [Change the "Agent activity" status in a real\-time metrics report](rtm-change-agent-activity-state.md)
 + [Download a real\-time metrics report](download-real-time-metrics-report.md)
-+ [Real\-time metrics definitions](real-time-metrics-definitions.md)

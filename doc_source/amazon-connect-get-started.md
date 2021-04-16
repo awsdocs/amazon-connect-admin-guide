@@ -12,9 +12,9 @@ Use these steps to set up your contact center\.
 
 1. Add users, which are your managers and agents, and configure their settings\. Assign a routing profile to each agent, specify whether they are using a softphone or desk phone, and set how long they have for **After contact work**\. For instructions, see [Add users to Amazon Connect](user-management.md) and [Set up agents](connect-agents.md)\. 
 
-1. If you're using chat, enable your customer\-facing app to engage with Amazon Connect chat\. For an example on GitHub, click [here](https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/asyncCustomerChatUX)\. 
+1. If you're using chat, we provide several tools to help you enable your customer\-facing app to engage with Amazon Connect chat\. For more information, see [Set up your customer's chat experience](enable-chat-in-app.md)\. 
 
-## Next steps<a name="w161aac10b7"></a>
+## Next steps<a name="w189aac10b7"></a>
 
 There's a lot you can do to optimize your contact center\. Here are a couple of additional steps that you may find useful: 
 

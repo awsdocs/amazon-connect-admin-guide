@@ -2,7 +2,7 @@
 
 Contact data classified as PII, or data that represents customer content being stored by Amazon Connect, is encrypted at rest using a key that is time\-limited and specific to the Amazon Connect instance\.
 
-Amazon S3 server\-side encryption is used to encrypt call recordings and knowledge documents at rest with a KMS data key unique per customer account\. Amazon AppIntegrations configuration data is encrypted the same way\.
+Amazon S3 server\-side encryption is used to encrypt conversation recordings \(voice and chat\) and knowledge documents at rest with a KMS data key unique per customer account\. Amazon AppIntegrations configuration data is encrypted the same way\.
 
 Amazon Connect Voice ID stores customer voiceprints which cannot be reverse\-engineered to obtain the enrolled customer’s speech or identify a customer\. These are encrypted using a service\-owned KMS key\.
 

@@ -14,6 +14,15 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-prompts-properties.png)
 
+### How the Interrupt option works<a name="loop-prompts-properties-interrupt"></a>
+
+Let's say you have multiple prompts and you set **Interrupt** to 60 seconds\. Following is what will happen: 
++ The block plays prompts in the order that they are listed for the entirety of the prompt length\.
++ If the combined play time for the prompts is 75 seconds, after 60 seconds the prompt is interrupted and reset to the 0 second point again\. 
++ It's possible your customers would never hear potentionally important information that is supposed to play after 60 seconds\. 
+
+This scenario is especially possible when using the default audio prompts that Amazon Connect provides since these audio prompts can be as long as 4 minutes\. 
+
 ## Configuration tips<a name="loop-prompts-tips"></a>
 + When **Loop prompts** is used in a Queue flow, audio playback can be interrupted with a flow at preset times\.
 + Always use an interruption period that's greater than 20 seconds\. This is the amount of time an available agent has to accept the contact\. If the interruption period is less than 20 seconds, you might get contacts going down the **Error** branch\. This is because Amazon Connect doesn't support dequeueing the customer when they are being routed to an active agent and are in the 20 second window to join\.

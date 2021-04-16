@@ -1,15 +1,14 @@
 # Log in and log out of the Amazon Connect CCP<a name="ccp-login"></a>
 
 Before you can log in to the Contact Control Panel \(CCP\), your administrator must give you the following information: 
++ The URL to launch the CCP:
+  + https://*instance name*\.my\.connect\.aws/ccp\-v2/
 
-The URL to launch the CCP:
-+ https://*instance name*\.awsapps\.com/connect/ccp\-v2/
-
-Where *instance name* is provided by your IT department or whoever set up Amazon Connect for your business\.
-**Note**  
-IT administrators: In the future, the access URL is going to change\. For the release schedule and technical details, see [Upcoming change: Domain for new Amazon Connect instances is "my\.connect\.aws"New domain for access URL](amazon-connect-release-notes.md#new-domain)\. 
+  Where *instance name* is provided by your IT department or whoever set up Amazon Connect for your business\.
 + Your agent ID\.
 + Your agent password\.
+
+**To log in**
 
 After you have that information, here's how to log in and get started\.
 
@@ -25,7 +24,11 @@ After you have that information, here's how to log in and get started\.
 
 You're all set to go\!
 
-## Log out of the Amazon Connect CCP<a name="w161aac61c31c13"></a>
+## Problems logging in?<a name="w189aac59c27c11"></a>
+
+If you have problems logging in to the CCP, contact your manager for help, or the IT Department for your organization\.
+
+## Log out of the Amazon Connect CCP<a name="w189aac59c27c13"></a>
 
 **Important**  
 Closing the CCP window doesn't automatically sign out an agent\. Amazon Connect still tries to route contacts to them\. To change this behavior, a developer can customize CCP for your contact center\. For instructions, see [Log out agents automatically when they close their CCP](automatic-logout.md)\. 

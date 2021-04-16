@@ -34,7 +34,8 @@ Before you can use an Lambda function in a contact flow, you need to add it to y
 
 1. In the **AWS Lambda** section, use the **Function** drop\-down box to select the function to add to your instance\.
 **Tip**  
-The drop\-down lists only those functions in the same Region as your instance\. If no functions are listed, choose **Create a new Lambda function**, which opens the AWS Lambda console\.
+The drop\-down lists only those functions in the same Region as your instance\. If no functions are listed, choose **Create a new Lambda function**, which opens the AWS Lambda console\.  
+To use a Lambda in a different Region or account, in the [Invoke AWS Lambda function](invoke-lambda-function-block.md), under **Select a function**, you can enter the ARN of a Lambda\. Then set up the corresponding resource\-based policy on that Lambda to allow the contact flow to call it\. For more information, see [Granting function access to other accounts](https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html#permissions-resource-xaccountinvoke)\.
 
 1. Choose **Add Lambda Function**\. Confirm that the ARN of the function is added under **Lambda Functions**\.
 
@@ -97,7 +98,7 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w161aac26c35c13c17"></a>
+### Invocation retry policy<a name="w189aac26c35c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 
