@@ -68,4 +68,18 @@ All connectors must be connected to a block in order to successfully publish you
 
 After your contact flow is published live, you can use contact flow logs to help analyze contact flows and quickly find errors your customers encounter\. If needed, you can roll back to a previous version of the contact flow\. 
 
+
+For more information about enabling and using contact flow logs, see [Enable Contact Flow Logs](contact-flow-logs.md)\. 
+
+## Roll back a Contact Flow<a name="rollback"></a>
+
+1. In the contact flow designer, open the contact flow you want to roll back\.
+
+1. Use the drop\-down to choose the version of the contact flow you want to roll back to\. If you have the option to choose **Latest**, it reverts the flow to the most recent published version\. If there isn't a published version, it reverts to the most recent saved version\. If you have the option to Revert to last saved it will revert the contact flow designer layout to the last saved version or if you have the option to Revert to last published it will revert the contact flow designer layout to the last published version of that flow\.
+**Note**  
+To see a consolidated view of all changes across all flows, click the **View historical changes** link at the bottom of the Contact flows page\. You can filter to a specific flow by date or user name\.
+
+1. Choose **Publish** to push that version into production\. 
+
 For more information about using contact flow logs, see [Track events as customers interact with contact flows](about-contact-flow-logs.md)\. 
+
