@@ -89,7 +89,51 @@ When your customers interact with the start chat icon on your website, the chat 
 
   Replace `widgetId` with your own widgetId\. To find your widgetId, see the example [Chat widget script](#chat-widget-script)\.
 + Expiration: 10 minutes
++ "iat" (Issued At) 
 
+  The "iat" (issued at) claim identifies the time at which the JWT was issued.  This claim can be used to determine the age of the JWT.  Its value MUST be a number containing a NumericDate value. This claim has to be part of the payload
+### Format of payload###
+   payload = {
+    'sub': *widgetId*
+    'exp': *The time taken for expiration*
+    'iat': *current time*
+    }
+### Header ###
+  header = {
+       'typ': "JWT",
+       'alg': 'HS256'
+       }
+### An example of generating a Json Web Token in Python ###
+``` 
+from datetime import datetime, timedelta
+import jwt
+import json
+
+CONNECT_SECRET = <connect_secret>
+JWT_ALGORITHM = 'HS256'
+JWT_EXP_DELTA_SECONDS = 600 
+def lambda_handler(event, context):
+    payload = {
+    'sub':  <widget_Id>,
+    'exp': datetime.utcnow()   timedelta(seconds=JWT_EXP_DELTA_SECONDS),
+    'iat': datetime.utcnow()
+    }
+
+    header = {  
+        'typ': "JWT",
+        'alg': 'HS256'
+        }
+    encoded_token = jwt.encode((payload), CONNECT_SECRET, algorithm=JWT_ALGORITHM, headers=header)
+    print("encoded token ")
+    print(encoded_token)
+    print("decoded toekn ")
+    print(jwt.decode(encoded_token, CONNECT_SECRET, algorithms=['HS256']))
+    response = {
+        'data' : encoded_token
+            }
+    return response 
+  ```
+    
 ### Chat widget script<a name="chat-widget-script"></a>
 
 The following image shows an example of the JavaScript that you embed on the websites where you want customers to chat with agents\. This script displays the widget in the bottom\-right corner of your website\. 
