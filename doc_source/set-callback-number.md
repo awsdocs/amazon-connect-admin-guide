@@ -24,6 +24,10 @@ When this block is configured, it looks similar to the following image:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callback-number-configured.png)
 
+1. The customer entered phone number that is not valid\.
+
+1. Amazon Connect is unable to dial that number\. For example, if your instance is not allowed to make calls to \+447 prefix phone numbers, and the customer requested callback to a \+447 prefix number\. Even though number is valid, Amazon Connect cannot call it\. 
+
 ## Sample flows<a name="set-callback-number-samples"></a>
 
  See these sample flows for scenarios that use this block:

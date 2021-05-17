@@ -8,10 +8,9 @@ Before you work with Amazon Connect, verify that your browser is supported using
 | Browser | Version | How to check your version | 
 | --- | --- | --- | 
 |  Google Chrome  |  Latest three versions  | Open Chrome and type chrome://version in your address bar\. The version is in the Google Chrome field at the top of the results\. | 
-|  Mozilla Firefox ESR  |  Latest three versions  | Open Firefox\. On the menu, choose the Help icon and then choose **About Firefox**\. The version number is listed underneath the Firefox name\.  | 
+|  Mozilla Firefox ESR  |  Versions are supported until their Firefox [end\-of\-life date](https://support.mozilla.org/en-US/kb/firefox-esr-release-cycle)\. For details, see the [Firefox ESR release calendar](https://wiki.mozilla.org/Release_Management/Calendar)\.   | Open Firefox\. On the menu, choose the Help icon and then choose **About Firefox**\. The version number is listed underneath the Firefox name\.  | 
 |  Mozilla Firefox  |  Latest three versions  | Open Firefox\. On the menu, choose the Help icon and then choose **About Firefox**\. The version number is listed underneath the Firefox name\. Please see [Issue with Firefox version 86](#browsers-firefox-issue)\.  | 
-
-Microsoft Edge is not supported\.
+|  Microsoft Edge  |  Not supported  |   | 
 
  For more requirements, see [Agent headset and workstation requirements for the CCPHeadset and workstation requirements](ccp-agent-hardware.md)\.
 

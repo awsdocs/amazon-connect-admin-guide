@@ -4,7 +4,7 @@
 + Ends the current contact flow and transfers the customer to an agent\. 
 **Note**  
 If the agent is already with someone else, the contact is disconnected\.  
-If the agent is in After Contact Work, they are automatically removed from from ACW at the time of transfer\.
+If the agent is in After Contact Work, they are automatically removed from ACW at the time of transfer\.
 + The **Transfer to Agent** block is a beta feature and works only for voice interactions\.
 + We recommend using the [Set working queue](set-working-queue.md) block for agent\-to\-agent transfers instead of using this block\. The **Set working queue** block supports omnichannel transfers such as voice and chat\. For instructions, see [Set up agent\-to\-agent transfers](setup-agent-to-agent-transfers.md)\. 
 

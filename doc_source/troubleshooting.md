@@ -5,6 +5,7 @@ Troubleshooting Contact Control Panel \(CCP\) issues requires support from your 
 **Topics**
 + [Use the Endpoint Test Utility](check-connectivity-tool.md)
 + [Common Contact Control Panel \(CCP\) Issues](common-ccp-issues.md)
++ [Download CCP logs](download-ccp-logs.md)
 + [Troubleshooting Tools and Information](tools-and-info.md)
 + [Mobile phones \(iPhone, Android\) and iPads are not supported](mobile-devices-not-supported.md)
 + [Microsoft Edge is not supported](microsoft-edge-not-supported.md)

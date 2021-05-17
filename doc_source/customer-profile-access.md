@@ -2,14 +2,22 @@
 
 After you enable Amazon Connect Customer Profiles, you need to take steps to make the functionality available through the agent user interface\. This topic explains your options\.
 
+**Tip**  
+Make sure your agents have **Customer profiles** permissions in their security profile so they can access the UI\. For more information, see [Security profile permissions for Customer Profiles](assign-security-profile-customer-profile.md)\.
+
 ## Option 1: Use Customer Profiles with CCP out\-of\-the\-box \(Preview\)<a name="customer-profile-access-out-of-the-box"></a>
 
-In this option, the Customer Profiles widget is already embedded into the CCP\. This option is currently in preview\.
+The Customer Profiles widget is already embedded alongside the CCP\. Your agents will access the CCP and Customer Profiles in the same browser window using a link that looks like this:
++ **https://*instance name*\.my\.connect\.aws/agent\-app/** 
 
-**Note**  
-Want to join the preview? [Request access](https://pages.awscloud.com/profiles-agent-app-preview.html)\.  
-If your request is approved, your agents will access the CCP and Customer Profiles in the same browser window using a link that looks like this:  
-**https://*instance name*\.my\.connect\.aws/agent\-app/**
+If you access your instance using the **awsapps\.com** domain, use the following URL: 
++ **https://*instance name*\.awsapps\.com/connect/agent\-app/**
+
+For help finding your instance name, see [Find your Amazon Connect instance name](find-instance-name.md)\.
+
+Following is an example of what the CCP and Customer Profiles look like in the same browser window\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-agent-app.png)
 
 ## Option 2: Embed the Customer Profiles widget into a custom agent experience<a name="customer-profile-access-embed"></a>
 

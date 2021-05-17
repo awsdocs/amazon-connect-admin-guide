@@ -32,9 +32,9 @@ For information about how add more permissions to an existing security profile, 
 
 1. For information about adding agents, see [Configure agent settings: routing profile, phone type, and auto\-accept calls](configure-agents.md)\. 
 
-## Add users in bulk from a csv file<a name="add-users-in-bulk"></a>
+## Add users in bulk from a \.csv file<a name="add-users-in-bulk"></a>
 
-Use these steps to add several users from a csv file such as an Excel spreadsheet"
+Use these steps to add several users from a \.csv file such as an Excel spreadsheet\.
 
 1. Log in to the Amazon Connect console with an **Admin** account, or an account assigned to a security profile that has permissions to create users\.
 
@@ -42,7 +42,7 @@ Use these steps to add several users from a csv file such as an Excel spreadshee
 
 1. Choose **Add new users**\.
 
-1. Choose **Upload my users from a template \(csv\)** and then choose **Next**\.
+1. Choose **Upload my users from a template \(\.csv\)** and then choose **Next**\.
 
 1. Choose **Download template**\. 
 

@@ -23,3 +23,9 @@ Each agent is assigned to one routing profile\. For more information about routi
 + For each queue in the profile, choose whether it's for voice, chat, task, or all three\. 
 + If you want a queue to handle voice, chat, and task, but want to assign a different priority to each channel, add the queue twice\. For example, in the following image, voice is priority 1 but chat and task are priority 2\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-channels-and-concurrency-2.png)
+
+## Delete a routing profile<a name="delete-routing-profiles"></a>
+
+Currently it's not possible to delete a routing profile\. To take a routing profile out of use, detach it from the agents\.
+
+To indicate that the routing profile is no longer in use, we recommend renaming it with a **zz\_** prefix, for example, zz\_Sales\.

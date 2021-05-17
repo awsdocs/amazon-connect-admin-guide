@@ -10,10 +10,6 @@ To subscribe to these notifications, create a custom EventBridge rule that match
 + "source" = "aws\.connect"
 + "detail\-type" = "Contact Lens Analysis State Change"
 
-The following image shows what this looks like in EventBridge:
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-eventbridge-rule.png)
-
 You can also add to the pattern to be notified when a specific event code occurs\. For more information, see [Event Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/filtering-examples-structure.html) in the *Amazon EventBridge User Guide*\.
 
 The format of a notification looks like the following sample: 

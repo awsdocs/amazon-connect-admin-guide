@@ -2,27 +2,39 @@
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you an overview of the improvements\. 
 
-## Upcoming change: Fixes for chat metrics<a name="metrics-changes-chat-metrics"></a>
+## Upcoming changes: Download the Agent activity audit report<a name="upcoming-changes-reports"></a>
 
-We will release fixes for the following issues identified in chat metrics:
-+ Currently Amazon Connect incorrectly reports that chat contacts that were created from disconnect flows were created from transfer flows\.
-+ When the fixes are released, Amazon Connect will correctly reflect in the CTRs and agent event stream that these chat contacts were created from disconnect flows\. 
+The following changes will be released in the future:
++ After you generate a report, you will now be able to download it using the **Download CSV** button\.
++ If you don’t generate a report, the **Download CSV** button will be inactive\. 
+
+The following image shows an example where the first report has been generated and can be downloaded, the second report hasn't:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/agent-activity-report.png)
+
+## April 2021<a name="metrics-changes-chat-metrics-april2021"></a>
+
+The following updates were released in April 2021\.
++ Amazon Connect incorrectly reported that chat contacts that were created from disconnect flows were created from transfer flows\.
++ With these fixes, Amazon Connect correctly reflects in the CTRs and agent event stream that these chat contacts were created from disconnect flows\. 
 
 There is no impact to voice or task contacts\. 
 
-Chat contacts created through disconnect flows will no longer increment the following metrics: 
+Chat contacts created through disconnect flows no longer increment the following metrics: 
 + [Contact flow time](historical-metrics-definitions.md#contact-flow-time-historical) 
 + [Contacts incoming](historical-metrics-definitions.md#contacts-incoming-historical)
 + [Contacts handled incoming](historical-metrics-definitions.md#contacts-handled-incoming-historical)
 + [Contacts transferred in](historical-metrics-definitions.md#contacts-transferred-in-historical)
 
 In addition, note the following fixes for CTRs and the agent event stream for chat contacts:
-+ CTRs: There is currently an issue in the Attributes section of a chat CTR where the initiation method is **API** for both disconnect and transfer contacts\. With this fix, the initiation method will correctly reflect **Disconnect** and **Transfer**, respectively\. 
-+ Agent event stream: Chat contacts created from disconnect flows will now have **Disconnect** as the initiation method\. 
++ CTRs: There was an issue in the Attributes section of a chat CTR where the initiation method is **API** for both disconnect and transfer contacts\. With this fix, the initiation method correctly reflect **Disconnect** and **Transfer**, respectively\. 
++ Agent event stream: Chat contacts created from disconnect flows now have **Disconnect** as the initiation method\. 
 
-## Upcoming change: 15 minutes interval for historical metrics reports<a name="metrics-changes-new-intervals-hmr"></a>
+## March 2021<a name="metrics-changes-new-intervals-hmr-march2021"></a>
 
-When customizing a historical metrics report, you will have the option to select a 15 minutes interval, in addition to the current option of a 30 minutes interval\. 
+The following updates were released in March 2021\.
+
+When customizing a historical metrics report, you have the option to select a 15 minutes interval, in addition to the current option of a 30 minutes interval\. 
 
 The 15 minutes interval works the same as the 30 minutes interval\. For example, you can query up to three days of data at a time, for the past 35 days\. 
 
@@ -30,7 +42,7 @@ The 15 minutes interval works the same as the 30 minutes interval\. For example,
 
 ## February 2021<a name="metrics-changes-february-2021"></a>
 
-The following updates where released in February 2021\. 
+The following updates were released in February 2021\. 
 
 ### New metric groupings and categories<a name="metrics-changes-custom-service-levels"></a>
 

@@ -34,6 +34,8 @@ To determine whether a workstation is the source of problems, you need access to
 
 Collect additional historical logging and data sources for correlation\. If you see a correlation between the time of the event and the time the issue was reported, you may be able to determine the root cause with the following information:
 + Round trip time \(RTT\) and packet loss to endpoints located within your Amazon Connect Region from your agent workstation, or an identical workstation on the same network segment\. If no Region endpoints are available because of security policies, any public WAN endpoint suffices, for example, www\.Amazon\.com\. Ideally, use your instance alias address \(https://yourInstanceName\.awsapps\.com\), and also your signaling address for endpoints\.
+
+  You can find your Region endpoints here: [Amazon Connect endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/connect_region.html)\.
 + Regular monitoring of workstations that show processes running, and the current resource usage of each process\.
 + Workstation performance/utilization in these areas:
   + Processor \(CPU\)

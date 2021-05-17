@@ -68,9 +68,11 @@ Images should be uploaded in Amazon S3 and publicly accessible\.
 
 ### List picker limits<a name="list-picker-limits"></a>
 
-The following table lists the limits for each of the list picker elements, should you choose to build your own Lambda from scratch\.
+The following table lists the limits for each of the list picker elements, should you choose to build your own Lambda from scratch\. The mandatory parameters are in bold\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/interactive-messages-listpicker-images-table.png)
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/interactive-messages.html)
 
 ## Time picker template<a name="list-picker-images"></a>
 
@@ -123,6 +125,8 @@ The following code is the time picker template that you can use in your Lambda\.
 
 ### Time picker limits<a name="time-picker-limits"></a>
 
-The following table lists the limits for each of the time picker elements\. Use this information if you choose to build your own Lambda from scratch\.
+The following table lists the limits for each of the time picker elements\. Use this information if you choose to build your own Lambda from scratch\. The mandatory parameters are in bold\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/interactive-messages-timepicker-table.png)
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/interactive-messages.html)

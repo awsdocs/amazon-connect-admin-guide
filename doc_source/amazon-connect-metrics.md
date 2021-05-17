@@ -15,6 +15,7 @@ For detailed information about the activity of agents in your contact center, us
 + [Historical metrics reports](historical-metrics.md)
 + [Login/Logout reports](login-logout-reports.md)
 + [Amazon Connect agent event streams](agent-event-streams.md)
++ [Amazon Connect contact events](contact-events.md)
 + [Contact trace records \(CTR\) data model](ctr-data-model.md)
 + [Search for contacts](contact-search.md)
 + [View a CTR in the UI](sample-ctr.md)

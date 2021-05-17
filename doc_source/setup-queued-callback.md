@@ -16,6 +16,8 @@ There's no way to manually remove a callback from the queue\. You can either ans
 
 1. If the call goes to **voicemail**, it's considered connected\.
 
+1. If the customer calls again while in the callback queue, it's treated as a new call and will be handled as usual\. To avoid duplicate callback requests in a callback queue, see this blog: [Preventing duplicate callback requests in Amazon Connect](http://aws.amazon.com/blogs/contact-center/preventing-duplicate-callback-requests-in-amazon-connect/)\. 
+
 ## How queued callbacks affect and queue limits<a name="queued-callback-limits"></a>
 + Queued callbacks count towards the queue size limit, but they are routed to the error branch\. For example, if you have a queue that handles callbacks and incoming calls, and that queue reaches the size limit:
   + The next callback is routed to the error branch\.

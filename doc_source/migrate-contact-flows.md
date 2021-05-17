@@ -14,4 +14,6 @@ To migrate hundreds of contact flows, you need developer skills\. You use the fo
    + [CreateContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateContactFlow.html): Create the contact flows\.
    + [UpdateContactFlowContent](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactFlowContent.html): Update the contact flow content\.
 
+You must also build an ARN\-to\-ARN mapping for queues, contact flows, and prompts between the source and target Amazon Connect instances, and replace every ARN in the source contact flow with the corresponding ARN from the target instance\. Otherwise UpdateContactFlowContent fails with `InvalidContactFlow` error\. 
+
 You can update the information in the contact flows that you migrate\. For more information, see [Amazon Connect Flow Language](flow-language.md)\. 

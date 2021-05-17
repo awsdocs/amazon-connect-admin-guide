@@ -3,6 +3,7 @@
 A *contact flow* defines the customer experience with your contact center from start to finish\. Amazon Connect includes a set of [default contact flows](contact-flow-default.md) so you can quickly set up and run a contact center\. However, you may want to create custom contact flows for your specific scenario\.
 
 **Topics**
++ [Required permissions](contact-flow-permissions.md)
 + [Default contact flows](contact-flow-default.md)
 + [Sample contact flows](contact-flow-samples.md)
 + [Contact block definitions](contact-block-definitions.md)

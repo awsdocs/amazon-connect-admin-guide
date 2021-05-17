@@ -38,5 +38,5 @@ We recommend establishing a naming convention for reports in your organization, 
 
 1. Choose the **Historical metrics** tab\. 
 
-1. Go to the row that has the report you want to delete, and choose the **Delete** icon\.  
+1. Go to the row that has the report you want to delete, and choose the **Delete** icon\. If you don't have permissions in your security profile to delete reports, this option won't be available\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-delete-saved-report.png)

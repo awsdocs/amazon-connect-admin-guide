@@ -68,3 +68,7 @@ For example, if you want to include columns for **Agent Name** and **Routing pro
 
 **Tip**  
 The **Is transferred out** option provides the date and time \(in UTC time\) when the transfer was connected\. It maps to `TransferCompletedTimestamp` in the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord)\. 
+
+## Download search results<a name="download-search-results"></a>
+
+You can download up to 3,000 search results at a time\. 

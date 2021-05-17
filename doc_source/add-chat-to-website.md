@@ -85,10 +85,31 @@ When your customers interact with the start chat icon on your website, the chat 
 
 #### JSON web token specifics<a name="jwt"></a>
 + Algorithm: **HS256**
-+ Claims: **sub**: *widgetId*\.
++ Claims: 
+  + **sub**: *widgetId*
 
-  Replace `widgetId` with your own widgetId\. To find your widgetId, see the example [Chat widget script](#chat-widget-script)\.
-+ Expiration: 10 minutes
+    Replace `widgetId` with your own widgetId\. To find your widgetId, see the example [Chat widget script](#chat-widget-script)\.
+  + **iat**: \*Issued At Time\.
+  + **exp**: \*Expiration \(10 minute maximum\)\.
+
+  \* For information about the date format, see the following Internet Engineering Task Force \(IETF\) document: [JSON Web Token \(JWT\)](https://tools.ietf.org/html/rfc7519), page 5\. 
+
+The following code snippet shows an example of how to generate a JWT in Python:
+
+```
+payload = {
+'sub': widgetId, // don't add single quotes, such as 'widgetId'
+'iat': datetime.utcnow(),
+'exp': datetime.utcnow() + timedelta(seconds=JWT_EXP_DELTA_SECONDS)
+}
+
+header = {
+'typ': "JWT",
+'alg': 'HS256'
+}
+
+encoded_token = jwt.encode((payload), CONNECT_SECRET, algorithm=JWT_ALGORITHM, headers=header) // CONNECT_SECRET is the security key provided by Amazon Connect
+```
 
 ### Chat widget script<a name="chat-widget-script"></a>
 

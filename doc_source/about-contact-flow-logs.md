@@ -5,6 +5,7 @@ Amazon Connect contact flow logs provide you with real\-time details about event
 **Topics**
 + [Storage for contact flow logs](contact-flow-logs-stored-in-cloudwatch.md)
 + [Enable contact flow logs](contact-flow-logs.md)
++ [Search contact flow logs](search-contact-flow-logs.md)
 + [Data in contact flow logs](contact-flow-log-data.md)
 + [Track customers between contact flows](contact-flow-log-multiple-flows.md)
 + [Create alerts for contact flow log events](contact-flow-log-alerts.md)

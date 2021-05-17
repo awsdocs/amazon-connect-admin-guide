@@ -8,18 +8,16 @@ If you use Amazon Lex or AWS Lambda in your contact flows, the logs show the ent
 
 Because the logs also include the contact flow ID, and the contact flow ID stays the same when you change a contact flow, you can use the logs to compare the interactions with different versions of the contact flow\.
 
-The following example log entry shows a **Set working queue** block of a customer queue flow\.
+The following example log entry shows a **Set working queue** block of an inbound flow\.
 
 ```
 {
-    "Timestamp": "2017-11-09T12:17.898Z",
-    "ContactId": "f0b21968-952b-47ba-b764-f29a57bcf626",
-    "ContactFlowId": "arn:aws:connect:us-east-2:0123456789012:instance/d-92673ef055/contact-flow/b1d791cf-1264-42e3-9a73-62cbcb3c9a45",
+    "ContactId": "11111111-2222-3333-4444-555555555555",
+    "ContactFlowId": "arn:aws:connect:us-west-2:0123456789012:instance/nnnnnnnnnnn-3333-4444-5555-111111111111/contact-flow/123456789000-aaaa-bbbbbbbbb-cccccccccccc",
     "ContactFlowModuleType": "SetQueue",
-    "Events": {
-        "Queue": [
-            "arn:aws:connect:us-east-2:670047220557:instance/d-92673ef044/queue/f0300e43-9547-477c-b8ba-0bb7a72f7fa1"
-        ]
+    "Timestamp": "2021-04-13T00:14:31.581Z",
+    "Parameters": {
+        "Queue": "arn:aws:connect:us-west-2:0123456789012:instance/nnnnnnnnnnn-3333-4444-5555-111111111111/queue/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
     }
 }
 ```

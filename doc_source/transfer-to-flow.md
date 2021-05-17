@@ -14,6 +14,8 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-flow-properties.png)
 
+Only published flows appear in the dropdown list\. 
+
 ## Configured block<a name="transfer-to-flow-configured"></a>
 
 When this block is configured, it looks similar to the following image:

@@ -140,6 +140,14 @@ For more information, see [How to use Lex session attributes](how-to-use-session
 
   For example, you have a Get\_Account\_Number bot\. In the contact flow, you have two **Get customer input** blocks\. The first block sets the session attribute with a wildcard\. The second one doesn't set the attribute\. In this scenario, the change in behavior for the bot applies only to the first **Get customer input** block, where the session attribute is set\. 
 + Because you can specify that session attributes apply to the intent and slot level, you can specify that the attribute is set only when you're collecting a certain type of input\. For example, you can specify a longer **Start Silence Threshold** when you're collecting an account number than when you're collecting a date\. 
++ If DTMF input is provided to a Lex bot using Amazon Connect, the customer input is made available as a [Lex request attribute](https://docs.aws.amazon.com/lex/latest/dg/context-mgmt-request-attribs.html)\. The attribute name is `x-amz-lex:dtmf-transcript` and the value can be a maximum of 1024 characters\. 
+
+  Following are different DTMF input scenarios:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/get-customer-input.html)
+
+  Where: 
+  + \[DEL\] = Deletion character \(Default is **\*** \)
+  + \[END\] = End character \(Default is **\#** \)
 
 ## Configured block<a name="get-customer-input-configured"></a>
 
@@ -147,7 +155,7 @@ When this block is configured, it looks similar to the following image:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-configured.png)
 
-1. **Timeout**: What to do when the time in the **Set timeout** property has elapsed\.
+1. **Timeout**: What to do when the time in the **Set timeout** property has elapsed\. This branch appears only if you're using DTMF properties since that's where the **Set timeout** property is available\. It doesn't appear if you're using Amazon Lex properties\.
 
 1. **Default**: What to do if a customer enters a value other than 1 or 2\.
 

@@ -122,6 +122,8 @@ To learn more about agent status and contact states, see [About agent status](me
 
 Then average time between when callback contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
 
+No equivalent to this metric is available in the GetCurrentMetricData API\. 
+
 The following image shows the five parts that go into calculating **Avg callback connecting time**\. It also shows what is in the agent event stream\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-callback-connection-time.png)
@@ -137,6 +139,8 @@ This metric doesn't apply to tasks so you'll notice a value of 0 on the report f
 The average time between when contacts are initiated Amazon Connect reserving the agent for the contact, and the agent is connected\. 
 
 In the agent event stream, this time is calculated by averaging the duration between the contact state of STATE\_CHANGE event changes from CONNECTING to CONNECTED/MISSED/ERROR\. 
+
+No equivalent to this metric is available in the GetCurrentMetricData API\. 
 
 The following image shows the three parts that go into calculating **Avg incoming connecting time**\. It also shows what is in the agent event stream\.
 
@@ -161,6 +165,8 @@ Average time, in seconds, that a contact was in the queue before being answered 
 ## Avg outbound connecting time<a name="rtm-avg-outbound-connecting-time"></a>
 
 The average time between when outbound contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+
+No equivalent to this metric is available in the GetCurrentMetricData API\. 
 
 The following image shows the four parts that go into calculating **Avg outbound connecting time**\. It also shows what is in the agent event stream\.
 

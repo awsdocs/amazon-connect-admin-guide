@@ -25,3 +25,9 @@ For example, where you see red emojis for customer turns and then a green emoji,
 ## Scan for highlighted issues<a name="highlighted-issues"></a>
 
 Issues \(also known as call drivers\) are turns where the primary call driver or reason for the customer outreach is underlined in the transcript\. You can use this information to identify common emerging patterns across customer conversations\. 
+
+## Tap or click category tags to navigate through transcript<a name="category-navigation"></a>
+
+When you tap or click on the category tags, Contact Lens auto\-navigates to the corresponding point\-of\-interests in the transcript\. There are also category markers in the recording playback visualization to indicate which part of the audio file has utterances related to the category\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-tag-navigation.png)

@@ -3,8 +3,11 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
-+ [Upcoming change: Fixes for chat metrics](#upcoming-fixes-chat-metrics)
++ [Upcoming change: Fix for agent event stream](#upcoming-changes-agent-eventstream-april21)
++ [Upcoming changes: Contact search](#upcoming-changes-contact-search-april21)
 + [Upcoming change: New "Next status" for agents](#upcoming-changes-next-status)
++ [May 2021 Updates](#may21-release-notes)
++ [April 2021 Updates](#april21-release-notes)
 + [March 2021 Updates](#march21-release-notes)
 + [February 2021 Updates](#february21-release-notes)
 + [January 2021 Updates](#january21-release-notes)
@@ -12,23 +15,24 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [November 2020 Updates](#november20-release-notes)
 + [Earlier Updates](#release-notes-earlier-updates)
 
-## Upcoming change: Fixes for chat metrics<a name="upcoming-fixes-chat-metrics"></a>
+## Upcoming change: Fix for agent event stream<a name="upcoming-changes-agent-eventstream-april21"></a>
 
-We will release fixes for the following issues identified in chat metrics:
-+ Currently Amazon Connect incorrectly reports that chat contacts that were created from disconnect flows were created from transfer flows\.
-+ When the fixes are released, Amazon Connect will correctly reflect in the CTRs and agent event stream that these chat contacts were created from disconnect flows\. 
+There is currently an issue in the contacts section of Agent Event Stream events where the initiationMethod is **TRANSFER** for both contacts that are initiated by queue\-to\-queue transfer, and contacts that were initiated by agent transfer\. With this fix, the initiationMethod will correctly reflect **QUEUE\_TRANSFER** and **TRANSFER** respectively, to align with the correct behavior in the Contact Trace Record\. 
 
-There is no impact to voice or task contacts\. 
+## Upcoming changes: Contact search<a name="upcoming-changes-contact-search-april21"></a>
 
-Chat contacts created through disconnect flows will no longer increment the following metrics: 
-+ [Contact flow time](historical-metrics-definitions.md#contact-flow-time-historical) 
-+ [Contacts incoming](historical-metrics-definitions.md#contacts-incoming-historical)
-+ [Contacts handled incoming](historical-metrics-definitions.md#contacts-handled-incoming-historical)
-+ [Contacts transferred in](historical-metrics-definitions.md#contacts-transferred-in-historical)
+We will release the following changes for Contact search:
++ Download increase: You will be able to 3,000 rows of search results to a CSV file, instead of 1,000 rows\. This increase will apply to contacts that occurred after Dec 01, 2020\. 
++ Contact search will support Disconnect Reason as a new filter on the **Contact search** page\. 
 
-In addition, note the following fixes for CTRs and the agent event stream for chat contacts:
-+ CTRs: There is currently an issue in the Attributes section of a chat CTR where the initiation method is **API** for both disconnect and transfer contacts\. With this fix, the initiation method will correctly reflect **Disconnect** and **Transfer**, respectively\. 
-+ Agent event stream: Chat contacts created from disconnect flows will now have **Disconnect** as the initiation method\. 
+  The following image shows how **Disconnect reason** will appear in the user interface as a filter\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason.png)
+
+  The following image shows how you can filter by type of disconnect reason\. For a definition of each disconnect reason, see the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord) section of the *Contact Trace Records data model* topic\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason-choose.png)
+
+  The following image shows how you add **Disconnect reason** as a column to your search results\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason-additionfields.png)
 
 ## Upcoming change: New "Next status" for agents<a name="upcoming-changes-next-status"></a>
 
@@ -165,6 +169,40 @@ When we release this feature, it will have the following effect:
 + If you integrate with Amazon Connect Streams API but your agents don't interact directly with the native CCP user interface, then at release your contact center will continue to have the previous behavior when agent\.setState\(\) is called: an agent will not be able to select an NPT or Offline status while connected to at least one contact\. 
 
   If you are handling state change logic yourself from Amazon Connect Streams, you will need to make additional changes that will be detailed further in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
+
+## May 2021 Updates<a name="may21-release-notes"></a>
+
+### Added contact events<a name="contact-events-may2021"></a>
+
+Subscribe to a near real\-time stream of contact events \(for example, call is queued\) in your Amazon Connect contact center\. For more information, see [Amazon Connect contact events](contact-events.md)\.
+
+## April 2021 Updates<a name="april21-release-notes"></a>
+
+### Customer Profiles: Identity resolution<a name="customer-profiles-april2021-"></a>
+
+Added identity resolution APIs to Customer Profiles\. For more information, see the [GetMatches](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html) and [MergeProfiles](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_MergeProfiles.html) APIs in the Amazon Connect Customer Profiles API reference\.
+
+### Contact Lens: Use category tags to navigate transcript<a name="contact-lens-april2021-"></a>
+
+For more information, see [Tap or click category tags to navigate through transcript](turn-by-turn-transcript.md#category-navigation)\.
+
+### Fixes for chat metrics<a name="chat-metrics-april2021"></a>
+
+We released fixes for the following issues identified in chat metrics:
++ Amazon Connect incorrectly reported that chat contacts that were created from disconnect flows were created from transfer flows\.
++ When these fixes, Amazon Connect correctly reflects in the CTRs and agent event stream that these chat contacts were created from disconnect flows\. 
+
+There is no impact to voice or task contacts\. 
+
+Chat contacts created through disconnect flows no longer increment the following metrics: 
++ [Contact flow time](historical-metrics-definitions.md#contact-flow-time-historical) 
++ [Contacts incoming](historical-metrics-definitions.md#contacts-incoming-historical)
++ [Contacts handled incoming](historical-metrics-definitions.md#contacts-handled-incoming-historical)
++ [Contacts transferred in](historical-metrics-definitions.md#contacts-transferred-in-historical)
+
+In addition, note the following fixes for CTRs and the agent event stream for chat contacts:
++ CTRs: There was an issue in the Attributes section of a chat CTR where the initiation method is **API** for both disconnect and transfer contacts\. With this fix, the initiation method correctly reflects **Disconnect** and **Transfer**, respectively\. 
++ Agent event stream: Chat contacts created from disconnect flows now have **Disconnect** as the initiation method\. 
 
 ## March 2021 Updates<a name="march21-release-notes"></a>
 
@@ -563,14 +601,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-### June 2019 Update<a name="w189aac68c21c29"></a>
+### June 2019 Update<a name="w260aac71c27c29"></a>
 
 The following update was released in June 2019:
 
 #### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-### May 2019 Updates<a name="w189aac68c21c31"></a>
+### May 2019 Updates<a name="w260aac71c27c31"></a>
 
 The following updates were released in May 2019:
 
@@ -582,7 +620,7 @@ The following updates were released in May 2019:
 #### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-### April 2019 Updates<a name="w189aac68c21c33"></a>
+### April 2019 Updates<a name="w260aac71c27c33"></a>
 
 The following updates were released in April 2019:
 
@@ -595,7 +633,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-### March 2019 Update<a name="w189aac68c21c35"></a>
+### March 2019 Update<a name="w260aac71c27c35"></a>
 
 The following updates were released in March 2019:
 

@@ -16,6 +16,7 @@ You can customize the report settings to get the view of the data that is most m
 
 **Topics**
 + [Historical metrics definitions](historical-metrics-definitions.md)
++ [Permissions required to view historical metrics reports](htm-permissions.md)
 + [Create a historical metrics report](create-historical-metrics-report.md)
 + [Historical report limits](historical-reporting-limits.md)
 + [Schedule a historical metrics report](schedule-historical-metrics-report.md)

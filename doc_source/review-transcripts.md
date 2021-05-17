@@ -8,7 +8,7 @@ For example, you might scan the transcript of the call and see a red sentiment e
 
 **To review analyzed conversations**
 
-1. Log in to Amazon Connect with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Contact search** and **Contact Lens \- speech analytics** permissions\.
+1. Log in to Amazon Connect with a user account that has **Contact search** and **Contact Lens \- speech analytics** permissions in the security profile\.
 
 1. In Amazon Connect, choose **Metrics and quality**, **Contact search**\.
 

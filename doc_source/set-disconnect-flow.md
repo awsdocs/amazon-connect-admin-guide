@@ -1,7 +1,7 @@
 # Contact block: Set disconnect flow<a name="set-disconnect-flow"></a>
 
 ## Description<a name="set-disconnect-flow-description"></a>
-+ Specifies which contact flow to run after a disconnect event during a conversation\. A disconnect event is when an agent disconnects\. When the disconnect event occurs, the corresponding content flow runs\. 
++ Specifies which contact flow to run after a disconnect event during a conversation\. A disconnect event is when an agent disconnects\. When the disconnect event occurs, the corresponding contact flow runs\. 
 + Here are examples of when you might use this block:
   + Run post\-call surveys\. For example, the agent asks the customer to remain on the line for a post\-call survey\. The agent hangs up and a disconnect flow is run\. In the disconnect flow, the customer is asked a set of questions using the [Get customer input](get-customer-input.md) block\. Their answers are uploaded using an [Invoke AWS Lambda function](invoke-lambda-function-block.md) block to an external customer feedback database\. The customer is thanked and disconnected\.
 

@@ -8,7 +8,7 @@ All domains that embed the CCP for a particular instance must be explicitly allo
 
 1. Choose the name of the instance from **Instance Alias**\.
 
-1. In the navigation pane, choose **Application integration**\.
+1. In the navigation pane, choose **Approved origins**\.
 
 1. Choose **Add origin**\.
 

@@ -9,3 +9,6 @@
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-task-end-task.png)
 
 1. When you've completed the task, choose **End task**\.
+
+1. You will then be in ACW\. When finished, choose **Close contact**\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-task-close-task.png)

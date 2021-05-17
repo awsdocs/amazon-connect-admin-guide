@@ -183,11 +183,11 @@ To complete the **AccountLookup** intent:
 
 To complete the **SpeakToAgent** intent:
 
-1. Add a **Set customer queue** block and connect it to the **SpeakToAgent** node of the **Get customer input** block\.
+1. Add a **Set working queue** block and connect it to the **SpeakToAgent** node of the **Get customer input** block\.
 
 1. Add a **Transfer to queue** block\. 
 
-1. Connect the Success node of the **Set customer queue** block to the **Transfer queue**\.
+1. Connect the Success node of the **Set working queue** block to the **Transfer queue**\.
 
 1. Choose **Save**, then **Publish**\.
 

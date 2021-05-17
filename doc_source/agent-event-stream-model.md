@@ -9,7 +9,6 @@ Agent event streams are created in JavaScript Object Notation \(JSON\) format\. 
   + One of the following settings changed in the agent's configuration:
     + Their routing profile
     + The queues in their routing profile
-    + Phone type: soft phone or desk phone
     + Auto\-accept call
     + Sip address
     + Agent hierarchy group
@@ -137,7 +136,7 @@ Length: 1\-256
 
 **Channel**  
 The method of communication\.  
-Valid values: `VOICE`
+Valid values: `VOICE`, `CHAT`, `TASKS`
 
 **InitiationMethod**  
 Indicates how the contact was initiated\.   

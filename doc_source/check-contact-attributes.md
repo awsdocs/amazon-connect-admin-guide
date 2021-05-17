@@ -18,6 +18,8 @@ You can use this block in the following [contact flow types](create-contact-flow
 You can check conditions like the following:
 + $\.Attributes\.verificationCode
 
+To check for a NULL value, you need to use a Lambda\. 
+
 ## Configuration tips<a name="check-contact-attributes-tips"></a>
 
 If you have multiple conditions to compare, Amazon Connect checks them in the order they are listed\. 

@@ -7,7 +7,8 @@ For the CTR retention period and maximum size of the CTR attributes section, see
 For information about when a CTR is created \(and thus can be exported or used for data reporting\), see [Events in the contact trace record \(CTR\)](about-contact-states.md#ctr-events)\.
 
 **Tip**  
-Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for multiple reasons, such as new information arriving after initial delivery\. If you're building a system that consumes CTR export streams, be sure to include logic that checks for duplicate CTRs for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
+Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for multiple reasons, such as new information arriving after initial delivery\. For example, when you use [update\-contact\-attributes](https://docs.aws.amazon.com/cli/latest/reference/connect/update-contact-attributes.html) to update a CTR, Amazon Connect delivers a new CTR\. This CTR is available for 24 months from the time the associated contact was initiated\.  
+If you're building a system that consumes CTR export streams, be sure to include logic that checks for duplicate CTRs for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
 
 ## Agent<a name="ctr-Agent"></a>
 
@@ -173,9 +174,10 @@ Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **DisconnectReason**  
 Indicates how the contact was terminated\. This data is currently available in the Amazon Connect CTR stream only\.  
+The disconnect reason may not be accurate when there are agent or customer connectivity issues\. For example, if the agent is having connectivity issues, the customer might not be able to hear them \("Are you there?"\) and hang up\. This would be recorded as CUSTOMER\_DISCONNECT and not reflect the connectivity issue\.  
 Type: String   
 Voice contacts can have the following disconnect reasons:  
-+ `CUSTOMER_DISCONNECT`: Contact disconnected first\.
++ `CUSTOMER_DISCONNECT`: Customer disconnected first\.
 + `AGENT_DISCONNECT`: Agent disconnected when the contact was still on the call\.
 + `THIRD_PARTY_DISCONNECT`: In a third\-party call, after the agent has left, the third\-party disconnected the call while the contact was still on the call\.
 + `TELECOM_PROBLEM`: Disconnected due to an issue with connecting the call from the carrier, network congestion, network error, etc\.

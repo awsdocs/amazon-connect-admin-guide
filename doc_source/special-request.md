@@ -1,13 +1,13 @@
 # Request international numbers, special numbers, or termination points<a name="special-request"></a>
 
 **Important**  
-To purchase and own a phone number, country regulations often require:   
-A local office address
-Specific identification documents
-For identification requirements by country, see [Region requirements for phone numbers](phone-number-requirements.md)\.   
+To purchase and own a phone number, country or region regulations often require:   
+A local office address\.
+Specific identification documents\.
+For identification requirements by country, see [Region requirements for ordering and porting phone numbers](phone-number-requirements.md)\.   
 It can take 2\-6 weeks for us to fulfill your request\.
 
-To request international phone numbers, special numbers, or termination points, create a support case\. 
+To request international phone numbers, special numbers, or termination points, create a support case\. In the support case, you must specify exactly how many numbers you want for each country\.
 
 1. Go to [Create case](https://console.aws.amazon.com/support/cases#/create)\.
 
@@ -15,13 +15,16 @@ To request international phone numbers, special numbers, or termination points, 
 
 1. In **Limit type** select **Amazon Connect**\.
 
-1. In **Use case description**, enter the number you want to request\. 
+1. In **Use case description**, enter the number that you want to request or exactly how many numbers you want for each country\. 
 
 1. In **Contact options**, choose whether we should contact you by email or phone\. 
 
 1. Choose **Submit**\. 
 
 We'll contact you to help with your request\. 
+
+**Note**  
+After your request is approved, the exact number of requested phone numbers appear in your Amazon Connect console for you to claim\. You won't have access to all available numbers in that country\.
 
 ## Requirements for Custom Termination Points<a name="custom-termination-points"></a>
 

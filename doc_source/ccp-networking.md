@@ -36,13 +36,14 @@ The new region telecom endpoints follow a different format\. Here's a complete l
 
 | Region | Domain/URL | 
 | --- | --- | 
-| us\-west\-2  | rtc\*\.connect\-telecom\.us\-west\-2\.amazonaws\.com | 
 | us\-east\-1  | rtc\*\.connect\-telecom\.us\-east\-1\.amazonaws\.com | 
-| eu\-central\-1  | rtc\*\.connect\-telecom\.eu\-central\-1\.amazonaws\.com | 
-| ap\-southeast\-2  | rtc\*\.connect\-telecom\.ap\-southeast\-2\.amazonaws\.com | 
+| us\-west\-2  | rtc\*\.connect\-telecom\.us\-west\-2\.amazonaws\.com | 
 | ap\-northeast\-1  | rtc\*\.connect\-telecom\.ap\-northeast\-1\.amazonaws\.com | 
-| eu\-west\-2  | rtc\.cell\-1\.prod\.eu\-west\-2\.prod\.connect\.aws\.a2z\.com | 
 | ap\-southeast\-1  | rtc\.cell\-1\.prod\.ap\-southeast\-1\.prod\.connect\.aws\.a2z\.com | 
+| ap\-southeast\-2  | rtc\*\.connect\-telecom\.ap\-southeast\-2\.amazonaws\.com | 
+| ca\-central\-1  | rtc\*\.connect\-telecom\.ca\-central\-1\.amazonaws\.com | 
+| eu\-central\-1  | rtc\*\.connect\-telecom\.eu\-central\-1\.amazonaws\.com | 
+| eu\-west\-2  | rtc\.cell\-1\.prod\.eu\-west\-2\.prod\.connect\.aws\.a2z\.com | 
 
 **Tip**  
 When using `rtc*.connect-telecom.{region}.amazonaws.com` and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
@@ -52,14 +53,13 @@ The following table lists the CloudFront domains used for static assets if you w
 
 | Region | CloudFront Domain | 
 | --- | --- | 
-| us\-west\-2  | https://d38fzyjx9jg8fj\.cloudfront\.net/  https://d366s8lxuwna4d\.cloudfront\.net/  | 
 | us\-east\-1  | https://dd401jc05x2yk\.cloudfront\.net/  https://d1f0uslncy85vb\.cloudfront\.net/  | 
-| eu\-central\-1  | https://d1n9s7btyr4f0n\.cloudfront\.net/  https://d3tqoc05lsydd3\.cloudfront\.net/  | 
-| ap\-southeast\-2  | https://d2190hliw27bb8\.cloudfront\.net/  https://d3mgrlqzmisce5\.cloudfront\.net/  | 
+| us\-west\-2  | https://d38fzyjx9jg8fj\.cloudfront\.net/  https://d366s8lxuwna4d\.cloudfront\.net/  | 
 | ap\-northeast\-1  | https://d3h58onr8hrozw\.cloudfront\.net/  https://d13ljas036gz6c\.cloudfront\.net/  | 
-| ap\-south\-1  | https://d30zes7xe5707g\.cloudfront\.net/  https://dhpg19j09qxx0\.cloudfront\.net/  | 
-| eu\-west\-2  | https://dl32tyuy2mmv6\.cloudfront\.net/  https://d2p8ibh10q5exz\.cloudfront\.net/  | 
 | ap\-southeast\-1  | https://d2g7up6vqvaq2o\.cloudfront\.net/  https://d12o1dl1h4w0xc\.cloudfront\.net/  | 
+| ap\-southeast\-2  | https://d2190hliw27bb8\.cloudfront\.net/  https://d3mgrlqzmisce5\.cloudfront\.net/  | 
+| eu\-central\-1  | https://d1n9s7btyr4f0n\.cloudfront\.net/  https://d3tqoc05lsydd3\.cloudfront\.net/  | 
+| eu\-west\-2  | https://dl32tyuy2mmv6\.cloudfront\.net/  https://d2p8ibh10q5exz\.cloudfront\.net/  | 
 
 ### NLB endpoints<a name="nlb-endpoints"></a>
 
@@ -70,12 +70,12 @@ The following table lists the specific endpoints for the Region the Amazon Conne
 | --- | --- | 
 | us\-west\-2  | TurnNlb\-8d79b4466d82ad0e\.elb\.us\-west\-2\.amazonaws\.com TurnNlb\-dbc4ebb71307fda2\.elb\.us\-west\-2\.amazonaws\.com | 
 | us\-east\-1  | TurnNlb\-d76454ac48d20c1e\.elb\.us\-east\-1\.amazonaws\.com | 
+| ap\-northeast\-1  | TurnNlb\-3c6ddabcbeb821d8\.elb\.ap\-northeast\-1\.amazonaws\.com | 
+| ap\-southeast\-1  | TurnNlb\-261982506d86d300\.elb\.ap\-southeast\-1\.amazonaws\.com | 
+| ap\-southeast\-2  | TurnNlb\-93f2de0c97c4316b\.elb\.ap\-southeast\-2\.amazonaws\.com | 
 | ca\-central\-1  | TurnNlb\-b019de6142240b9f\.elb\.ca\-central\-1\.amazonaws\.com | 
 | eu\-central\-1  | TurnNlb\-ea5316ebe2759cbc\.elb\.eu\-central\-1\.amazonaws\.com | 
-| ap\-southeast\-2  | TurnNlb\-93f2de0c97c4316b\.elb\.ap\-southeast\-2\.amazonaws\.com | 
-| ap\-northeast\-1  | TurnNlb\-3c6ddabcbeb821d8\.elb\.ap\-northeast\-1\.amazonaws\.com | 
 | eu\-west\-2  | TurnNlb\-1dc64a459ead57ea\.elb\.eu\-west\-2\.amazonaws\.com | 
-| ap\-southeast\-1  | TurnNlb\-261982506d86d300\.elb\.ap\-southeast\-1\.amazonaws\.com | 
 
 ## Option 2 \(not recommended\): Allow IP address ranges<a name="option2"></a>
 

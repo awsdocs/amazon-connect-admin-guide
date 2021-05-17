@@ -15,6 +15,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-contact-attributes-properties.png)
 
+**Tip**  
+When using a user\-defined destination key, you can name it anything you want but don't include the **$** and **\.** \(period\) characters\. They are not allowed because they are both used in defining the attribute paths in JSONPath\.
+
 ## Configured block<a name="set-contact-attributes-configured"></a>
 
 When this block is configured, it looks similar to the following image:

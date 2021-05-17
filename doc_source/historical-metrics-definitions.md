@@ -10,6 +10,8 @@ Developers can use the [GetMetricData ](https://docs.aws.amazon.com/connect/late
 The total time that an agent spent doing ACW for a contact\. 
 
 You specify the amount of time an agent has to do ACW in their [ agent configuration settings](configure-agents.md)\. When a conversation with a contact ends, the agent is automatically allocated to do ACW for the contact\. They stop doing ACW for a contact when they indicate they are ready for another contact in the CCP\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is AFTER\_CONTACT\_WORK\_TIME\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
@@ -123,6 +125,8 @@ Count of contacts that were initiated using an Amazon Connect API operation, suc
 ## API contacts handled<a name="api-contacts-handled-historical"></a>
 
 Count of contacts that were initiated using an Amazon Connect API operation, such as `StartOutboundVoiceContact`, and handled by an agent\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is API\_CONTACTS\_HANDLED\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
@@ -152,6 +156,8 @@ Category: Agent activity\-driven metric
 
 The average time between when contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
 
+No equivalent to this metric is available in the GetMetricData API\. 
+
 Type: String \(hh:mm:ss\)
 
 Category: Agent activity\-driven metric
@@ -159,12 +165,16 @@ Category: Agent activity\-driven metric
 ## Average agent interaction and customer hold time<a name="average-agent-interaction-customer-hold-time-historical"></a>
 
 Average of the sum of the agent interaction and customer hold time\. This is calculated by averaging the sum of the following values from the CTR: [AgentInteractionDuration](ctr-data-model.md#AgentInteractionDuration-CTR) and [CustomerHoldDuration](ctr-data-model.md#CustomerHoldDuration-CTR)\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is INTERACTION\_AND\_HOLD\_TIME\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
 ## Average agent interaction time<a name="average-agent-interaction-time-historical"></a>
 
 Average time that agents interacted with customers during inbound and outbound contacts\. This does not include [Customer Hold Time](#customer-hold-time-historical) or [After Contact Work Time](#acw-historical)\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is INTERACTION\_TIME\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
@@ -181,6 +191,8 @@ Category: Agent activity\-driven metric
 ## Average customer hold time<a name="average-customer-hold-time-historical"></a>
 
 Average time that customers spent on hold while connected to an agent\. This is calculated by averaging [CustomerHoldDuration](ctr-data-model.md#CustomerHoldDuration-CTR) \(from the CTR\)\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is HOLD\_TIME\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
@@ -191,6 +203,8 @@ This metric doesn't apply to tasks so you'll notice a value of 0 on the report f
 The average time, from start to finish, that a contact was connected with an agent \(average handled time\)\. It includes talk time, hold time, and After Contact Work \(ACW\) time\.
 
 AHT is calculated by averaging the amount of time between the contact being answered by an agent and the conversation ending\. It applies to both inbound and outbound calls\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is HANDLE\_TIME\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
@@ -217,6 +231,8 @@ A contact is considered abandoned if it was removed from a queue but not answere
 ## Average queue answer time<a name="average-queue-answer-time-historical"></a>
 
 Average time that contacts waited in the queue before being answered by an agent\. This is the average of [Duration](ctr-data-model.md#Duration-CTR) \(from the CTR\)\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is QUEUE\_ANSWER\_TIME\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
@@ -229,6 +245,8 @@ Count of contacts that were initiated from a queued callback\.
 ## Callback contacts handled<a name="callback-contacts-handled-historical"></a>
 
 Count of contacts that were initiated from a queued callback and handled by an agent\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CALLBACK\_CONTACTS\_HANDLED\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
@@ -252,18 +270,24 @@ If you want to exclude the amount of time spent in a custom status, see [Agent o
 ## Contact abandoned<a name="contacts-abandoned-historical"></a>
 
 Count of contacts disconnected by the customer while in the queue\. Contacts queued for callback are not counted as abandoned\. When you create customized historical reports, to include this metric, on the **Groupings** tab choose either **Queue** or **Phone Number**\. 
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_ABANDONED\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
 ## Contacts abandoned in *X* seconds<a name="contacts-abandoned-x-historical"></a>
 
 Count of contacts disconnected by the customer while in the queue for 0 to *X* seconds\. The possible values for *X* are: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is ABANDON\_TIME\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
 ## Contacts agent hung up first<a name="contacts-agent-hung-up-first-historical"></a>
 
 Count of contacts disconnected where the agent disconnected before the customer\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_AGENT\_HUNG\_UP\_FIRST\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
@@ -278,6 +302,8 @@ Count of contacts that were answered by an agent between 0 and *X* seconds of be
 Deprecated May 2019\. When used in a report, it returns a dash \(\-\)\. 
 
 Count of contacts handled by an agent who consulted with another agent in Amazon Connect\. The agent interacts with the other agent, but the customer is not transferred to the other agent\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_CONSULTED\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
@@ -286,18 +312,24 @@ Count of contacts handled by an agent who consulted with another agent in Amazon
 Count of contacts that were connected to an agent\.
 
 It doesn’t matter how the contact got to the agent\. It could be a customer calling your contact center, or an agent calling the customer\. It could be a contact transferred from one agent to another\. It could be a contact where the agent answered it, but then they weren’t sure what to do and they transferred the contact away again\. As long as the agent was connected to the contact, it increments **Contacts handled**\. 
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_HANDLED\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
 ## Contacts handled incoming<a name="contacts-handled-incoming-historical"></a>
 
 Count of incoming contacts that were handled by an agent, including inbound contacts and transferred contacts\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_HANDLED\_INCOMING
 + Type: Integer 
 + Category: CTR\-driven metric
 
 ## Contacts handled outbound<a name="contacts-handled-outbound-historical"></a>
 
 Count of outbound contacts that were handled by an agent\. This includes contacts that were initiated by an agent using the CCP\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_HANDLED\_OUTBOUND
 + Type: Integer 
 + Category: CTR\-driven metric
 
@@ -310,6 +342,8 @@ Count of contacts that were disconnected by the agent while the customer was on 
 ## Contacts hold customer disconnect<a name="contacts-hold-customer-disconnect-historical"></a>
 
 Count of contacts that were disconnected by the customer while the customer was on hold\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_HOLD\_ABANDONS\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
@@ -330,6 +364,8 @@ Count of incoming contacts, including inbound contacts and transferred contacts\
 Count of contacts routed to an agent but not answered by the agent, including contacts abandoned by the customer\. A contact can be counted as missed multiple times, once for each time it is routed to an agent but not answered\.
 
 When you add this to a historical metrics report, it appears under the column named **Agent non\-response**\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_MISSED
 + Type: Integer 
 + Category: Agent activity\-driven metric
 
@@ -342,24 +378,32 @@ Count of contacts put on hold by an agent one or more times\.
 ## Contacts queued<a name="contacts-queued-historical"></a>
 
 Count of contacts placed in the queue\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_QUEUED\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
 ## Contacts transferred in<a name="contacts-transferred-in-historical"></a>
 
 Count of contacts transferred to the queue by an agent using the CCP\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_TRANSFERRED\_IN\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
 ## Contacts transferred in from queue<a name="contacts-transferred-in-from-queue-historical"></a>
 
 Count of contacts transferred to the queue from another in a **Transfer to queue** contact flow\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_TRANSFERRED\_IN\_FROM\_Q\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
 ## Contacts transferred out<a name="contacts-transferred-out-historical"></a>
 
 Count of contacts transferred from the queue after being answered by an agent\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_TRANSFERRED\_OUT\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
@@ -372,6 +416,8 @@ Count of contacts that an agent transferred from the queue to an external source
 ## Contacts transferred out queue<a name="contacts-transferred-out-from-queue-historical"></a>
 
 Count of contacts transferred from the queue to another queue in a **Transfer to queue** contact flow\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_TRANSFERRED\_OUT\_FROM\_QUEUE\.
 + Type: Integer 
 + Category: CTR\-driven metric
 
@@ -396,6 +442,8 @@ For a specific agent, the total time contacts were in an error status\. This met
 ## Maximum queued time<a name="maximum-queued-time-historical"></a>
 
 The longest time that a contact spent waiting in the queue\. This includes all contacts added to the queue, even if they were not connected with an agent, such as abandoned contacts\.
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is QUEUED\_TIME\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
@@ -423,7 +471,8 @@ Where:
 + So \(Agent on contact\)/\(total amount of agent time\) = percentage of time agents were active on contacts\.
 
 **Important**  
-**Occupancy** doesn't account for concurrency\. That is, an agent is considered 100% occupied for a given interval if they are handling at least one contact for that entire duration\. 
+**Occupancy** doesn't account for concurrency\. That is, an agent is considered 100% occupied for a given interval if they are handling at least one contact for that entire duration\.   
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is OCCUPANCY\.
 + Type: String
 + Min value: 0\.00%
 + Max value: 100\.00%
@@ -442,6 +491,8 @@ Percentage of contacts removed from the queue between 0 and *X* after being adde
 For *X* you can choose from pre\-set times in seconds: 15, 20, 25, 30, 45, 60, 90, 120, 180, 240, 300, and 600\. This percentage is calculated as follows:
 
 \(Contacts removed from queue in *X* seconds / Contacts queued\) \* 100
+
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is SERVICE\_LEVEL
 + Type: String
 + Min value: 0\.00%
 + Max value: 100\.00%

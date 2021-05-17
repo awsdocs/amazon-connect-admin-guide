@@ -1,8 +1,11 @@
-# Region requirements for phone numbers<a name="phone-number-requirements"></a>
+# Region requirements for ordering and porting phone numbers<a name="phone-number-requirements"></a>
 
-Country regulations often require a local office address and specific identification documents to purchase and own a phone number\. The address that you provide can be the business or personal address where the phone numbers are used\. 
+Country or region regulations often require a local office address and specific identification documents to purchase and own a phone number\. The address that you provide can be the business or personal address where the phone numbers are used\. 
 
-Following is a list of ID Requirements by country\. When you [request an international number](special-request.md), we'll work with you to submit your documents\. 
+Following is a list of ID Requirements by country or region\. When you [request an international number](special-request.md), we'll work with you to submit your documents\. 
+
+**Note**  
+After your numbers are ordered or ported, the exact number of requested phone numbers appear in your Amazon Connect console for you to claim\. You won't have access to all available numbers in that country\.
 
 ## Argentina \(AR\)<a name="argentina-regulations"></a>
 
@@ -249,7 +252,7 @@ Following is a list of ID Requirements by country\. When you [request an interna
 
 ****  
 
-| Supported Regions | Type of Number | ID Requirements? | Acceptable Identification | 
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
 | EU \(Frankfurt\) EU \(London\) | National prefixes: \+995 70 | No |  | 
 
@@ -337,7 +340,7 @@ Following is a list of ID Requirements by country\. When you [request an interna
 
 ****  
 
-| Supported Regions | Type of Number | ID Requirements? | Acceptable Identification | 
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
 | Asia Pacific \(Sydney\) Asia Pacific \(Singapore\) Asia Pacific \(Tokyo\) | Mobile prefixes: \+62 855 | Yes | Proof of business address, a copy of the ID or passport of an authorized representative, and the business registration\. You must also provide a description of how you plan to use the numbers\.  | 
 
@@ -476,7 +479,7 @@ Following is a list of ID Requirements by country\. When you [request an interna
 
 ****  
 
-| Supported Regions | Type of Number | ID Requirements? | Acceptable Identification | 
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
 | EU \(Frankfurt\) EU \(London\) | National prefixes: \+356 | Yes | Your business name, address, a copy of the business registration \(global\), and a copy of the ID or passport of an authorized representative\. A global address is acceptable\.  | 
 
@@ -548,7 +551,7 @@ Following is a list of ID Requirements by country\. When you [request an interna
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-Numbers are only available to businesses, not individuals\. The DID type is Landline not Geographic since all formerly geographic numbers are now classified as landline, and do not have a geographic zone\.
+Numbers are available to businesses only, not individuals\. The DID type is Landline, instead of Geographic\. This is because all formerly geographic numbers are now classified as landline, and do not have a geographic zone\.
 
 ### For porting numbers<a name="no-porting"></a>
 

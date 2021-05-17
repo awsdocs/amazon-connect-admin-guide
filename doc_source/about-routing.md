@@ -8,7 +8,7 @@ Contacts are routed through your contact center based on these factors:
 For example, you use routing profiles to route specific types of contacts to agents with specific skill sets\. If no agent with the required skill set is available, you can place the contact in the queue defined in the contact flow\. 
 
 Here's the logic Amazon Connect uses to route contacts: 
-+ Contacts in a queue are automatically prioritized and forwarded to the next available agent\.
++ Contacts in a queue are automatically prioritized and forwarded to the next available agent \(that is, the agent who has been idle longest\)\.
 + Contacts are placed on hold if there are no available agents\. The order in which they are serviced is determined by their time in queue, on a first\-come, first\-served basis\.
 + If multiple agents are available, the contact is routed to the agent who has been in the **Available** status for the longest time\.
 + A routing profile may assign a priority to one queue over another, but the priority within the queue is always set by the order the contact was added to the queue\.
