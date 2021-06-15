@@ -3,6 +3,17 @@
 ## Description<a name="loop-prompts-description"></a>
 + Loops a sequence of prompts while a customer or agent is on hold or in queue\.
 
+## Supported channels<a name="loop-prompts-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="loop-prompts-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

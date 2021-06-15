@@ -5,6 +5,17 @@
 + After the loops are completed, the **Complete** branch is followed\. 
 + This block is often used with a **Get customer input** block\. For example, if the customer doesn't succeed in entering their account number, you can loop to give them another opportunity to enter it\. 
 
+## Supported channels<a name="loop-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="loop-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

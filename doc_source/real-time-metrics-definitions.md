@@ -202,7 +202,7 @@ Amount of time that the agent has been in the current Agent Activity State\.
 
 ## Error<a name="error-real-time"></a>
 
-A count of agents in Error state\.
+A count of agents in Error state\. An agent is included in this metric if they miss a call or reject a chat/task \(most common\)\. They could also be counted if there is a connection failure\. 
 
 In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `AGENTS_ERROR`\.
 

@@ -13,3 +13,4 @@ Troubleshooting Contact Control Panel \(CCP\) issues requires support from your 
 + [Attachments are not appearing in chats](attachments-not-appearing.md)
 + [Humming sound in headset: Verify the headset and browser sample rates](verify-sample-rate.md)
 + [One\-way audio from customers?](one-way-audio-from-customers.md)
++ [Troubleshoot problems pausing, rewinding, or fast\-fowarding recordings](troubleshoot-pause-rewind-fastforward-recording.md)

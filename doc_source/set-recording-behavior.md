@@ -4,6 +4,17 @@
 + Sets options for recording and/or monitoring \(listen\-in\) voice and chat conversations\.
 + It enables features in Contact Lens for Amazon Connect\. For more information, see [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md)\.
 
+## Supported channels<a name="set-recording-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="set-recording-behavior-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

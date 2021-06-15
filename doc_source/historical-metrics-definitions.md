@@ -435,7 +435,7 @@ Total time that customers spent on hold after being connected to an agent\. This
 
 ## Error status time<a name="error-status-time-historical"></a>
 
-For a specific agent, the total time contacts were in an error status\. This metric can't be grouped or filtered by queue\.
+For a specific agent, the total time contacts were in an error status\. This metric can't be grouped or filtered by queue\. 
 + Type: String \(*hh:mm:ss*\)
 + Category: Agent activity\-driven metric
 
@@ -492,7 +492,7 @@ For *X* you can choose from pre\-set times in seconds: 15, 20, 25, 30, 45, 60, 9
 
 \(Contacts removed from queue in *X* seconds / Contacts queued\) \* 100
 
-In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is SERVICE\_LEVEL
+In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is SERVICE\_LEVEL\.
 + Type: String
 + Min value: 0\.00%
 + Max value: 100\.00%

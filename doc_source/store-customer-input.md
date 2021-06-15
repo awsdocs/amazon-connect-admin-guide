@@ -7,8 +7,18 @@ This block is similar to **Get customer input**, but this one stores the input a
 + Plays an interruptible audio prompt or play text\-to\-speech for a customer to respond to\. 
 + Stores numerical input as in the [Stored customer input](connect-attrib-list.md#attribs-system-table) system attribute\.
 + Allows you to specify a custom terminating keypress\.
-+ If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.
-+ If the customer doesn't enter any input, the contact is routed down the **Success branch** branch with a value of Timeout\. Add a **Check contact attributes** block to check for timeouts\.
++ If during a call the customer doesn't enter any input, the contact is routed down the **Success branch** branch with a value of Timeout\. Add a **Check contact attributes** block to check for timeouts\.
+
+## Supported channels<a name="store-customer-input-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | No \- Error branch | 
+| Task | No \- Error branch | 
 
 ## Contact flow types<a name="store-customer-input-types"></a>
 

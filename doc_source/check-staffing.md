@@ -4,6 +4,17 @@
 + Checks the current working queue, or queue you specify in the block, for whether agents are [available](real-time-metrics-definitions.md#available-real-time), [staffed](real-time-metrics-definitions.md#staffed-real-time), or [online](real-time-metrics-definitions.md#online-real-time)\.
 + Before transferring a call to agent and putting that call in a queue, use the **Check hours of operation** and **Check staffing** blocks\. They verify that the call is within working hours and that agents are staffed to service\.
 
+## Supported channels<a name="check-staffing-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="check-staffing-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

@@ -4,6 +4,17 @@
 + Branches based on a comparison to the value of a contact attribute\.
 + Supported comparisons include: **Equals**, **Is Greater Than**, **Is Less Than**, **Starts With**, **Contains**\.
 
+## Supported channels<a name="check-contact-attributes-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="check-contact-attributes-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -21,12 +32,11 @@ You can check conditions like the following:
 To check for a NULL value, you need to use a Lambda\. 
 
 ## Configuration tips<a name="check-contact-attributes-tips"></a>
++ If you have multiple conditions to compare, Amazon Connect checks them in the order they are listed\. 
 
-If you have multiple conditions to compare, Amazon Connect checks them in the order they are listed\. 
-
-For example, in the following image Amazon Connect compares the **greater than 60** condition first and compares **greater than 2** last\. 
-
+  For example, in the following image Amazon Connect compares the **greater than 60** condition first and compares **greater than 2** last\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-contact-attributes-tips-order-conditions-are-checked.png)
++ This block doesn't support case\-insensitive pattern matching\. For example, if you're trying to match against the word **green** and the customer types **Green**, it would fail\. You would have to include every permutation of upper and lower\-case letters\.
 
 ## Configured<a name="check-contact-attributes-configured"></a>
 

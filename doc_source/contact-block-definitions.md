@@ -14,7 +14,7 @@ The following table lists all available contact blocks that you can use\. Choose
 |   [Check queue status](check-queue-status.md)   |  Checks the status of the queue based on specified conditions\.  | 
 |   [Check security status](check-security-status.md)   |  Branches based on the authentication status of the caller returned by Voice ID\.  | 
 |   [Check staffing](check-staffing.md)   |  Checks the current working queue, or queue you specify in the block, for whether agents are available, staffed, or online\. Staffed availability could be on call, or after contact work status\.  | 
-|  [Disconnect / hang up](disconnect-hang-up.md)  |  Terminates a customer contact\.  | 
+|  [Disconnect / hang up](disconnect-hang-up.md)  |  Disconnects a contact\.  | 
 |   [Distribute by percentage](distribute-by-percentage.md)   |  Routes customers randomly based on a percentage\.  | 
 |   [End flow / Resume](end-flow-resume.md)   |  Ends the current flow without disconnecting the contact\.  | 
 |   [Get customer input](get-customer-input.md)   |  Branches based on customer intent\.  | 
@@ -27,8 +27,9 @@ The following table lists all available contact blocks that you can use\. Choose
 |   [Set callback number](set-callback-number.md)   |  Sets a callback number\.  | 
 |   [Set contact attributes](set-contact-attributes.md)   |  Stores key\-value pairs as contact attributes\.  | 
 |  [Set customer queue flow](set-customer-queue-flow.md)  |  Specifies the flow to invoke when a customer is transferred to a queue\.  | 
-|   [Set disconnect flow](set-disconnect-flow.md)   |  Sets the flow to run when the agent disconnects from the chat\.  | 
+|   [Set disconnect flow](set-disconnect-flow.md)   |  Sets the flow to run after a disconnect event\.  | 
 |   [Set hold flow](set-hold-flow.md)   |  Links from one contact flow type to another\.  | 
+|   [Set logging behavior](set-logging-behavior.md)   |  Enables contact flow logs so you can track events as contacts interact with contact flows\.  | 
 |   [Set security behavior](set-security-behavior.md)   |  Sends audio to Amazon Connect Voice ID to verify the caller's identity, as soon as the call is connected to a contact flow\.  | 
 |   [Set recording and analytics behavior ](set-recording-behavior.md)  |  Sets options for recording conversations\.  | 
 |  [Set voice](set-voice.md)   |  Sets the text\-to\-speech \(TTS\) language and voice to be used in the contact flow\.  | 

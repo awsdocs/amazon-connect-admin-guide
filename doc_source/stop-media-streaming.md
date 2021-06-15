@@ -4,6 +4,17 @@
 + Stops capturing customer audio after it is started with a **Start media streaming** block\.
 + You must use a **Stop media streaming** block to stop media streaming\.
 
+## Supported channels<a name="stop-media-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | No \- Error branch | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="stop-media-streaming-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

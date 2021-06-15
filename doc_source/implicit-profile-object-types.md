@@ -1,0 +1,5 @@
+# Implicit profile object types<a name="implicit-profile-object-types"></a>
+
+You can use any object type that matches the name of a template ID \(as returned by the [ListProfileObjectTypeTemplates](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListProfileObjectTypeTemplates.html) API\) without explicitly defining it\. The object type will exactly match the definition of the template definition of this object type\. If an explicit object type is defined, it replaces the implicit one\. 
+
+Implicit object types are included in the [ListProfileObjectTypes](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListProfileObjectTypes.html) API or returned by [GetProfileObjectType](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetProfileObjectType.html) operations, but they can still be deleted if you want to remove all data ingested from that object type\.

@@ -7,6 +7,17 @@
 + It then branches based on the customer's input\.
 + This block works for chat only when Amazon Lex is used\.
 
+## Supported channels<a name="get-customer-input-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes when Amazon Lex is used Otherwise, No \- Error branch | 
+| Task | Yes | 
+
 ## Contact flow types<a name="get-customer-input-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

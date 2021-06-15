@@ -8,6 +8,19 @@ If the agent is in After Contact Work, they are automatically removed from ACW a
 + The **Transfer to Agent** block is a beta feature and works only for voice interactions\.
 + We recommend using the [Set working queue](set-working-queue.md) block for agent\-to\-agent transfers instead of using this block\. The **Set working queue** block supports omnichannel transfers such as voice and chat\. For instructions, see [Set up agent\-to\-agent transfers](setup-agent-to-agent-transfers.md)\. 
 
+## Supported channels<a name="transfer-to-agent-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | No \- Error branch | 
+| Task | No \- Error branch | 
+
+To transfer chats and tasks to agents, use the [Set working queue](set-working-queue.md) block\. Because [Set working queue](set-working-queue.md) works for all channels, we recommend using it for voice calls too, instead of using **Transfer to agents \(beta\)**\. For instructions, see [Set up agent\-to\-agent transfers](setup-agent-to-agent-transfers.md)\.
+
 ## Contact flow types<a name="transfer-to-agent-block-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

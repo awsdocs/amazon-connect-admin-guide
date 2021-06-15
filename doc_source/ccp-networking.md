@@ -63,7 +63,7 @@ The following table lists the CloudFront domains used for static assets if you w
 
 ### NLB endpoints<a name="nlb-endpoints"></a>
 
-The following table lists the specific endpoints for the Region the Amazon Connect instance is in\. If you don't want to use the TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com wildcard, you can use add these endpoints to your allow list instead\.
+The following table lists the specific endpoints for the Region the Amazon Connect instance is in\. If you don't want to use the TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com wildcard, you can add these endpoints to your allow list instead\.
 
 
 | Region | Turn Domain/URL | 

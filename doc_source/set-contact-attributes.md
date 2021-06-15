@@ -6,6 +6,17 @@
 
   For more information about how to use contact attributes, see [Use Amazon Connect contact attributes](connect-contact-attributes.md)\. 
 
+## Supported channels<a name="set-contact-attributes-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="set-contact-attributes-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

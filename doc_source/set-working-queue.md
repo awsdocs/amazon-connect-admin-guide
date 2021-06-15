@@ -4,6 +4,17 @@
 + This block specifies the queue to be used when **Transfer to queue** is invoked\.
 + A queue must be specified before invoking **Transfer to queue** except when used in a customer queue flow\. It’s also the default queue for checking attributes, such as staffing, queue status, and hours of operation\.
 
+## Supported channels<a name="set-working-queue-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="set-working-queue-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

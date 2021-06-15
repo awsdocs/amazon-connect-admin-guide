@@ -5,6 +5,17 @@
 + When used in a Customer Queue flow, however, this block transfers a contact already in a queue to another queue\. 
 + When used in a callback scenario, Amazon Connect calls the agent first\. After the agent accepts the call in the CCP, Amazon Connect calls the customer\.
 
+## Supported channels<a name="transfer-to-queue-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="transfer-to-queue-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

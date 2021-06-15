@@ -5,6 +5,17 @@
 + This block is often used for the **Success** branch of the **Transfer to queue** block\. The flow doesn't end until the call is picked up by an agent\.
 + You also might use this block when a **Loop prompts** block is interrupted\. You can return the customer to the **Loop prompts** block\.
 
+## Supported channels<a name="end-flow-resume-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="end-flow-resume-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

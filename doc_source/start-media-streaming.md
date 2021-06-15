@@ -7,6 +7,17 @@ Captures what the customer hears and says during a contact\. You can then perfor
 + Use the audio for training purposes\.
 + Identify and flag abusive callers\.
 
+## Supported channels<a name="start-media-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | No \- Error branch | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="start-media-streaming-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

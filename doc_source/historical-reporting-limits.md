@@ -8,6 +8,9 @@ Historical metrics reports have the following limits:
 **Query data for three days at a time, for the past 35 days**
 + When you create a report that uses intervals \(such as 30 minute intervals\), you can return data for three days at a time, for the past 35 days\.
 
+**The availability of historical metric data is based on the retention period of CTRs**
++ Historical metrics are based CTRs\. For the current retention period for CTRs, see [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.
+
 **80k cell limit**
 
 There is currently an 80k cell limitation on historical metrics reports and scheduled reports\. This applies to the total number of cells \(columns \* rows\), accounting for grouping and filtering\. 

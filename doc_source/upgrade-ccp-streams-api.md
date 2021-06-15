@@ -30,3 +30,11 @@ Use the following steps to upgrade to the latest CCP\.
 We highly recommend setting up your network to use [Option 1 \(recommended\): Replace Amazon EC2 and CloudFront IP range requirements with a domain allow list](ccp-networking.md#option1)\. 
 
 Using this option helps Amazon Connect Support to quickly troubleshoot any issues you have\. Specifically, using **\*\.execute\-api\.\{region\}\.amazonaws\.com** passes more metrics to our Support team to help with troubleshooting\. 
+
+## Update your SAML URL to ccp\-v2<a name="update-saml-url"></a>
+
+If you use SAML 2\.0 as your identity management system, be sure to update the destination in your relay state URL to **ccp\-v2**\. 
+
+Change `destination=/connect/ccp` to `destination=/connect/ccp-v2`\.
+
+For more information, see [Use a destination in your relay state URL](configure-saml.md#destination-relay)

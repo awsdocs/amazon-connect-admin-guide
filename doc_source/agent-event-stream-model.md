@@ -149,7 +149,12 @@ Valid values:
   For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 +  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
 +  `QUEUE_TRANSFER`: While the customer was in one queue \(listening to Customer queue flow\), they were transferred into another queue using a contact flow block\.
-+  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which contact flow to run after a disconnect event during a conversation\. A disconnect event is when an agent disconnects\. When the disconnect event occurs, the corresponding content flow runs\.
++  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which contact flow to run after a disconnect event during a contact\. 
+
+  A disconnect event is when:
+  + A call, chat, or task is disconnected by an agent\.
+  + A task is disconnected as a result of a flow action\.
+  + If a task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
 
   If a new contact is created while running a disconnect flow, then the initiation method for that new contact is DISCONNECT\.
 

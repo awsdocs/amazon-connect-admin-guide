@@ -4,6 +4,17 @@
 + Use this block in chat contact flows only\. If a contact stops responding to a chat, this block pauses the contact flow for the specified wait time\. 
 + If this block is triggered during a voice conversation, the contact is routed down the **Error** branch\.
 
+## Supported channels<a name="wait-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | No \- Error branch | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="wait-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

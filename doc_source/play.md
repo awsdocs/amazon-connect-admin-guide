@@ -4,6 +4,17 @@
 + This block can play an interruptible audio prompt, play a text\-to\-speech message, or send a chat response\.
 + Amazon Connect includes a set of pre\-recorded prompts for you to use\. However, you can record and upload your audio prompts\. For instructions, see [Create prompts](prompts.md)\.
 
+## Supported channels<a name="play-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="play-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

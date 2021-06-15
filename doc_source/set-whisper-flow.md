@@ -27,6 +27,17 @@ For chat conversations, you need to include a **Set whisper flow** block for def
 + If an agent whisper flow or customer whisper flow includes a block that chat does not support, such as [Start](start-media-streaming.md)/[Stop](stop-media-streaming.md) media streaming or [Set voice](set-voice.md), chat skips these blocks and triggers an error branch\. However, it doesn't prevent the contact flow from progressing\.
 + Whisper flows don't appear in transcripts\.
 
+## Supported channels<a name="set-whisper-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="set-whisper-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

@@ -62,9 +62,10 @@ The following table lists feature specifications\. They cannot be increased\.
 | Max file size for a chat attachment |  20MB  | 
 | Attachments per chat conversation |  5  | 
 | People who can listen in on the same agent call at the same time  |  5 For example, you can have a group of 5 people listen in to a call at the same time, and then a different group of 5 people listen in to a different call at the same time, and so on\.   | 
+| Participants on a conference call |  3 The three participants are the customer, agent, and a third person who can be either another agent or an external third\-party\.  | 
 |  Contact Trace Record retention  |  24 months from the time the associated contact was initiated\.  You can choose to stream CTRs to Kinesis so you can manage retention and perform advanced analysis\.  | 
 |  Max size of the CTR attributes section  |  32KB   | 
-|  Active chats per agent  |  5  | 
+|  Active chats per agent  |  10  | 
 |  Total duration per chat  |  25 hours, including wait time  | 
 |  Characters per chat message  |  1024  | 
 |  Open websocket connections per chat participant  |  5  | 
@@ -97,6 +98,8 @@ Amazon Connect throttling quotas are by account, not by user and not by instance
 
  When you use the [Amazon Connect Service API ](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html), the number of requests per second is limited to the following:
 + For the [GetMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) and [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) operations, a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\.
+**Note**  
+The rate limit cannot be increased for GetMetricData and GetCurrentMetricData\.
 + For all other operations, a RateLimit of 2 requests per second, and a BurstLimit of 5 requests per second\.
 
 ## Amazon Connect Participant Service API throttling quotas<a name="connect-participant-api-quotas"></a>

@@ -1,6 +1,6 @@
 # Amazon Connect workload layers<a name="workload-layers"></a>
 
-You can separate Amazon Connect workloads into the following layers: telelphony, Amazon Connect interface/API, agent workstation, and metric and reporting\. 
+You can separate Amazon Connect workloads into the following layers: telephony, Amazon Connect interface/API, agent workstation, and metric and reporting\. 
 
 ## Telephony<a name="workload-layers-telephony"></a>
 

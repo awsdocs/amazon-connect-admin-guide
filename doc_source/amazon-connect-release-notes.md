@@ -3,9 +3,11 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
++ [Upcoming change: Faster reload times for the Real\-time metrics page](#upcoming-changes-metrics-rtm-page2021)
 + [Upcoming change: Fix for agent event stream](#upcoming-changes-agent-eventstream-april21)
-+ [Upcoming changes: Contact search](#upcoming-changes-contact-search-april21)
 + [Upcoming change: New "Next status" for agents](#upcoming-changes-next-status)
++ [Coming soon: New AppIntegrations Service APIs](#upcoming-appintegrations-apis)
++ [June 2021 Updates](#june21-release-notes)
 + [May 2021 Updates](#may21-release-notes)
 + [April 2021 Updates](#april21-release-notes)
 + [March 2021 Updates](#march21-release-notes)
@@ -15,24 +17,15 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [November 2020 Updates](#november20-release-notes)
 + [Earlier Updates](#release-notes-earlier-updates)
 
+## Upcoming change: Faster reload times for the Real\-time metrics page<a name="upcoming-changes-metrics-rtm-page2021"></a>
+
+We are upgrading the performance of the **Real\-time metrics** page so reload times are faster\. The page will have the same functionality and user experience as the existing **Real\-time metrics** page\.
+
+This upgrade will be rolled out to all Regions between July 19, 2021, and September 19, 2021\. These dates are subject to change\. 
+
 ## Upcoming change: Fix for agent event stream<a name="upcoming-changes-agent-eventstream-april21"></a>
 
 There is currently an issue in the contacts section of Agent Event Stream events where the initiationMethod is **TRANSFER** for both contacts that are initiated by queue\-to\-queue transfer, and contacts that were initiated by agent transfer\. With this fix, the initiationMethod will correctly reflect **QUEUE\_TRANSFER** and **TRANSFER** respectively, to align with the correct behavior in the Contact Trace Record\. 
-
-## Upcoming changes: Contact search<a name="upcoming-changes-contact-search-april21"></a>
-
-We will release the following changes for Contact search:
-+ Download increase: You will be able to 3,000 rows of search results to a CSV file, instead of 1,000 rows\. This increase will apply to contacts that occurred after Dec 01, 2020\. 
-+ Contact search will support Disconnect Reason as a new filter on the **Contact search** page\. 
-
-  The following image shows how **Disconnect reason** will appear in the user interface as a filter\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason.png)
-
-  The following image shows how you can filter by type of disconnect reason\. For a definition of each disconnect reason, see the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord) section of the *Contact Trace Records data model* topic\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason-choose.png)
-
-  The following image shows how you add **Disconnect reason** as a column to your search results\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason-additionfields.png)
 
 ## Upcoming change: New "Next status" for agents<a name="upcoming-changes-next-status"></a>
 
@@ -170,11 +163,40 @@ When we release this feature, it will have the following effect:
 
   If you are handling state change logic yourself from Amazon Connect Streams, you will need to make additional changes that will be detailed further in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
 
+## Coming soon: New AppIntegrations Service APIs<a name="upcoming-appintegrations-apis"></a>
+
+New DataIntegration APIs for the AppIntegrations Service: CreateDataIntegration, DeleteDataIntegration, GetDataIntegration, ListDataIntegrationAssociations, ListDataIntegrations, UpdateDataIntegration\. 
+
+## June 2021 Updates<a name="june21-release-notes"></a>
+
+### Chat: Increase to chat agent concurrency<a name="chat-june2021"></a>
+
+Chat agents can now handle up to 10 concurrent chat contacts\. For more information, see [Create a routing profile](https://docs.aws.amazon.com/connect/latest/adminguide/routing-profiles)\. 
+
 ## May 2021 Updates<a name="may21-release-notes"></a>
+
+### AppIntegrations Service APIs<a name="appintegrations-apis-may2021"></a>
+
+Added new DataIntegration APIs to the AppIntegrations Service: CreateDataIntegration, DeleteDataIntegration, GetDataIntegration, ListDataIntegrationAssociations, ListDataIntegrations, UpdateDataIntegration\. For more information, see [Amazon AppIntegrations Service API Reference](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html)\.
 
 ### Added contact events<a name="contact-events-may2021"></a>
 
 Subscribe to a near real\-time stream of contact events \(for example, call is queued\) in your Amazon Connect contact center\. For more information, see [Amazon Connect contact events](contact-events.md)\.
+
+### Contact search<a name="contact-search-may21"></a>
+
+The following changes were release for Contact search:
++ Download increase: You are able to download 3,000 rows of search results to a CSV file, instead of 1,000 rows\. This increase applies to contacts that occurred after Dec 01, 2020\. 
++ Contact search supports Disconnect Reason as a new filter on the **Contact search** page\. 
+
+  The following image shows how **Disconnect reason** appears in the user interface as a filter\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason.png)
+
+  The following image shows how you can filter by type of disconnect reason\. For a definition of each disconnect reason, see the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord) section of the *Contact Trace Records data model* topic\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason-choose.png)
+
+  The following image shows how you add **Disconnect reason** as a column to your search results\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason-additionfields.png)
 
 ## April 2021 Updates<a name="april21-release-notes"></a>
 
@@ -601,14 +623,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-### June 2019 Update<a name="w260aac71c27c29"></a>
+### June 2019 Update<a name="w274aac71c31c29"></a>
 
 The following update was released in June 2019:
 
 #### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-### May 2019 Updates<a name="w260aac71c27c31"></a>
+### May 2019 Updates<a name="w274aac71c31c31"></a>
 
 The following updates were released in May 2019:
 
@@ -620,7 +642,7 @@ The following updates were released in May 2019:
 #### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-### April 2019 Updates<a name="w260aac71c27c33"></a>
+### April 2019 Updates<a name="w274aac71c31c33"></a>
 
 The following updates were released in April 2019:
 
@@ -633,7 +655,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-### March 2019 Update<a name="w260aac71c27c35"></a>
+### March 2019 Update<a name="w274aac71c31c35"></a>
 
 The following updates were released in March 2019:
 

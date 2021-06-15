@@ -3,6 +3,17 @@
 ## Description<a name="set-callback-number-description"></a>
 + Specify the attribute to set the callback number\.
 
+## Supported channels<a name="set-callback-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | No \- Error branch | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="set-callback-number-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

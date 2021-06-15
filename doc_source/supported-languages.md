@@ -14,9 +14,11 @@ Amazon Connect provides full Unicode support\. You can chat with customers in an
 
 ## Amazon Connect Admin console<a name="supported-languages-admin-console"></a>
 + Chinese \(Simplified\)
++ Chinese \(Traditional\)
 + English
 + French
 + German
++ Italian
 + Japanese
 + Korean
 + Portuguese \(Brazilian\)
@@ -41,6 +43,8 @@ Amazon Connect provides full Unicode support\. You can chat with customers in an
 |  German \(Germany\)  |   |  |  | 
 |  German \(Switzerland\)  |   |  |  | 
 |  Italian \(Italy\)  |   |  |  | 
+|  Portuguese \(Brazil\)  |   |  |  | 
+|  Portuguese \(Portugal\)  |   |  |  | 
 |  Arabic \(Gulf\)  |   |  |  | 
 |  Hindi \(India\)  |   |  |  | 
 

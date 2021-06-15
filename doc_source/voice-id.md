@@ -67,7 +67,7 @@ To enable Voice ID, add the following blocks to your contact flow:
 
 1. Voice ID starts listening to the audio to create a voiceprint\. The voiceprint that is created this time is used for authentication purposes so Voice ID can compare if the caller had been enrolled previously\.
 
-1. It compares the caller’s current voiceprint and other representations with similar historical representations associated with the claimed identity\. It returns a result based on the **Authentication threshold** property you configured in the [Set security behavior](set-security-behavior.md) block\.
+1.  It compares the caller's current voiceprint with the stored voiceprint associated with the claimed identity\. It returns a result based on the **Authentication threshold** property you configured in the [Set security behavior](set-security-behavior.md) block\.
 
 1. After it evaluates the speech, it returns the message **Authenticated** if the voiceprints are similar\. Or it returns one of the other statuses\.
 

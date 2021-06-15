@@ -4,6 +4,17 @@
 + Calls AWS Lambda, and optionally returns key\-value pairs\.
 + The returned key\-value pairs can be used to set contact attributes\.
 
+## Supported channels<a name="invoke-lambda-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="invoke-lambda-function-block-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

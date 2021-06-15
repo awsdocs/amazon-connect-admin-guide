@@ -5,6 +5,17 @@
 + Sends audio to Amazon Connect Voice ID to verify the caller's identity, as soon as the call is connected to a contact flow\.
 + Use a [Check security status](check-security-status.md) block after this one to branch based on the results of the verification\.
 
+## Supported channels<a name="set-security-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | No \- Error branch | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="set-security-behavior-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

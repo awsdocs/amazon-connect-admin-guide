@@ -42,3 +42,7 @@ We recommend using the **Contact ID **filter to [search for recordings](search-r
    1. Adjust the playing speed\.
 
    1. Play, pause, skip backwards or forwards in 10 second increments\.
+
+## Troubleshoot problems pausing, rewinding, or fast\-fowarding<a name="problems-pause-rewind-fastforward-recording"></a>
+
+If you are unable to pause, rewind or fast\-forward recordings on the **Contact search** page, one possible reason could be that your network is blocking HTTP range requests\. See [HTTP range requests]( https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) on the MDN Web Docs site\. Work with your network administrator to unblock HTTP range requests\.

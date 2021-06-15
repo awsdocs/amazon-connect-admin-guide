@@ -6,6 +6,11 @@ Amazon Connect allows you to subscribe to a near real\-time stream of contact \(
 + CONNECTED\_TO\_AGENT \- A voice call, chat, or task is connected to an agent\.
 + DISCONNECTED \- A voice call, chat, or task is disconnected\. 
 
+  A disconnect event is when:
+  + A call, chat, or task is disconnected by an agent\.
+  + A task is disconnected as a result of a flow action\.
+  + If a task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
+
 You can use contact events to create analytics dashboards to monitor and track contact activity, integrate into workforce management \(WFM\) solutions to better understand contact center performance, or to integrate applications that react to events \(for example, call disconnected\) in real\-time\. 
 
 ## Subscribe to Amazon Connect contact events<a name="subscribe-contact-events"></a>
@@ -27,6 +32,11 @@ Contact events are generated in JSON\. For each event type, a JSON blob is sent 
 + QUEUED \- A voice call, chat, or task is queued to be assigned to an agent\.
 + CONNECTED\_TO\_AGENT \- A voice call, chat, or task is connected to an agent\.
 + DISCONNECTED \- A voice call, chat, or task is disconnected\. 
+
+  A disconnect event is when:
+  + A call, chat, or task is disconnected by an agent\.
+  + A task is disconnected as a result of a flow action\.
+  + If a task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
 
 **Topics**
 + [Contact event](#ContactEvent)
@@ -82,7 +92,14 @@ Valid values:
 + CALLBACK: The customer was contacted as part of a callback flow\. For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 + API: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API, or it could be a tasks initiated by the customer by calling the [StartTaskContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartTaskContact.html) API\. 
 + QUEUE\_TRANSFER: While the contact is one queue, and was then transferred into another queue using a contact flow block\.
-+ DISCONNECT: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which contact flow to run after a disconnect event\. A disconnect event is when an agent disconnects\. When the disconnect event occurs, the corresponding content flow runs\. If a new contact is created while running a disconnect flow, then the initiation method for that new contact is DISCONNECT\.
++ DISCONNECT: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which contact flow to run after a disconnect event\. 
+
+  A disconnect event is when:
+  + A call, chat, or task is disconnected by an agent\.
+  + A task is disconnected as a result of a flow action\.
+  + If a task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
+
+  When the disconnect event occurs, the corresponding content flow runs\. If a new contact is created while running a disconnect flow, then the initiation method for that new contact is DISCONNECT\.
 
 ### QueueInfo<a name="QueueInfo"></a>
 
@@ -122,16 +139,16 @@ Type: String
 "resources": [ "arn:aws..." contactArn and instanceArn
 ],
 "detail": { 
-    "EventType": "CONNECTED_TO_AGENT", 
-    "ContactId": "11111111-1111-1111-1111-111111111111",
-    "InitialContactId": "11111111-2222-3333-4444-555555555555",
-    "PreviousContactId": "11111111-2222-3333-4444-555555555555",
-    "Channel": "Voice",
-    "InstanceARN": "arn:aws:connect:us-west-2:123456789012:instance/12345678-1234-1234-1234-123456789012",
-    "InitiationMethod": "INBOUND",
-    "QueueInfo": {
-        "QueueArn": "arn",       
-        "QueueType": "type"
+    "eventType": "CONNECTED_TO_AGENT", 
+    "contactId": "11111111-1111-1111-1111-111111111111",
+    "initialContactId": "11111111-2222-3333-4444-555555555555",
+    "previousContactId": "11111111-2222-3333-4444-555555555555",
+    "channel": "Voice",
+    "instanceARN": "arn:aws:connect:us-west-2:123456789012:instance/12345678-1234-1234-1234-123456789012",
+    "initiationMethod": "INBOUND",
+    "queueInfo": {
+        "queueArn": "arn",       
+        "queueType": "type"
 },
 "AgentInfo": {
     "AgentArn" : "arn"

@@ -9,7 +9,7 @@ Following is an overview of key concepts and the information that you'll be prom
 ### About the customer profiles domain<a name="customer-profiles-domain"></a>
 
 When you enable Amazon Connect Customer Profiles, you create a customer profiles domain: a container for all data, such as customer profiles, object types, profile keys, and encryption keys\. Following are guidelines for creating Customer Profile domains: 
-+ Each Amazon Connect instance can only be associated to one domain\. 
++ Each Amazon Connect instance can only be associated with one domain\. 
 + You can create multiple domains, but they don't share external application integrations or customer data between each other\. 
 + All the external application integrations you create are at a domain level\. All of the Amazon Connect instances associated with a domain inherit the domain's integrations\. 
 + You can change the association of your Amazon Connect instance from your current domain to a new domain at any time, by choosing a different domain\. This isn't recommended, however, because the customer profiles from the earlier domain won't be moved to the new domain\.

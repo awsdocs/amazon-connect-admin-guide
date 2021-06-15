@@ -4,6 +4,17 @@
 + Checks whether the contact is occurring within or outside of the hours of operation defined for the queue\.
 + Branches based on specified hours of operation\.
 
+## Supported channels<a name="check-hours-of-operation-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="check-hours-of-operation-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

@@ -7,6 +7,17 @@
   + **Queue capacity** is number of contacts waiting in a queue\.
 + If no match is found, the **No Match** branch is followed\.
 
+## Supported channels<a name="check-queue-status-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="check-queue-status-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
@@ -18,6 +29,18 @@ You can use this block in the following [contact flow types](create-contact-flow
 ## Properties<a name="check-queue-status-properties"></a>
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-queue-status-properties.png)
+
+## Configuration tips<a name="check-queue-status-tips"></a>
+
+The order in which you add conditions matters at the runtime\. Results are evaluated against conditions in the same order in which you add them to the\. Contacts are routed down the first condition to match\. 
+
+For example, in the following condition order, every value matches one of first two conditions\. None of the other conditions are ever matched\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-queue-status-example1.png)
+
+In this next example, all contacts with a wait time in queue of 90 or less will match first condition only\. This means <=9, <=12, <=15, <=18, <=20, <=21 are never run\. Any value greater than 90 is routed down the >=21 condition branch\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-queue-status-example1.png)
 
 ## Configured block<a name="check-queue-status-configured"></a>
 

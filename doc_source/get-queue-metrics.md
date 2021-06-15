@@ -17,6 +17,17 @@
 + You can route contacts based on queue status, such as number of contacts in queue or agents available\. Queue metrics are aggregated across all channels and are returned as attributes\. The current queue is used by default\.
 + After a **Get queue metrics** block, use a [Check contact attributes](check-contact-attributes.md) to check metric values and define routing logic based on them, such as number of contacts in a queue, number of available agents, and oldest contact in a queue\. 
 
+## Supported channels<a name="get-queue-metrics-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="get-queue-metrics-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

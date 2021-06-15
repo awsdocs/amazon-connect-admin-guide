@@ -1,7 +1,18 @@
 # Contact block: Disconnect / hang up<a name="disconnect-hang-up"></a>
 
 ## Description<a name="disconnect-hang-up-description"></a>
-+ Disconnects the customer\.
++ Disconnects the contact\.
+
+## Supported channels<a name="disconnect-hang-up-channels"></a>
+
+The following table lists how this block routes a contact that is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
 
 ## Contact flow types<a name="disconnect-hang-up-types"></a>
 

@@ -4,6 +4,17 @@
 + Transfers the customer to a phone number external to your instance\.
 + If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.
 
+## Supported channels<a name="transfer-to-phone-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | No \- Error branch | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="transfer-to-phone-number-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

@@ -1,7 +1,18 @@
 # Contact block: Set logging behavior<a name="set-logging-behavior"></a>
 
 ## Description<a name="set-logging-behavior-description"></a>
-+ Enables contact flow logs\.
++ Enables contact flow logs so you can track events as contacts interact with contact flows\.
+
+## Supported channels<a name="set-logging-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
 
 ## Contact flow types<a name="set-logging-behavior-types"></a>
 

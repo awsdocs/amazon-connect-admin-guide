@@ -9,6 +9,17 @@
   + **Not enrolled**: The caller has not yet been enrolled in voice authentication\. When this status is returned, for example, you may want to directly route the call to an agent for enrollment\.
   + **Opted out**: The caller has opted out of voice authentication\.
 
+## Supported channels<a name="check-security-status-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | No \- Error branch | 
+| Task | No \- Error branch | 
+
 ## Contact flow types<a name="check-security-status-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

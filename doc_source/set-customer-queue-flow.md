@@ -3,6 +3,17 @@
 ## Description<a name="set-contact-attributes-description"></a>
 + Specifies the flow to invoke when a customer is transferred to a queue\.
 
+## Supported channels<a name="set-customer-queue-flow-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
+
 ## Contact flow types<a name="set-contact-attributes-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

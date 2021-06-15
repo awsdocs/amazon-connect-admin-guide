@@ -8,6 +8,17 @@
 + After this block is run, any TTS invocation resolves to the neural or standard voice selected\.
 + If this block is triggered during a chat conversation, the contact goes down the **Success** branch\. It has no effect on the chat experience\. 
 
+## Supported channels<a name="set-voice-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | No \- Success branch | 
+| Task | No \- Success branch | 
+
 ## Contact flow types<a name="set-voice-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):

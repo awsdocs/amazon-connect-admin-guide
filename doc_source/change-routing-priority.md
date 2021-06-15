@@ -1,7 +1,18 @@
 # Contact block: Change routing priority / age<a name="change-routing-priority"></a>
 
 ## Description<a name="change-routing-priority-description"></a>
-+ Change a customer's position in the queue\.
++ Change a customer's position in the queue\. For example, move the contact to the front of the queue, or to the back of the queue\.
+
+## Supported channels<a name="change-routing-priority-channels"></a>
+
+The following table lists how this block routes a contact who is using the specified channel\. 
+
+
+| Channel | Supported? | 
+| --- | --- | 
+| Voice | Yes | 
+| Chat | Yes | 
+| Task | Yes | 
 
 ## Contact flow types<a name="change-routing-priority-types"></a>
 
@@ -27,6 +38,10 @@ Here's how this block works:
 1. The additional seconds makes this specific contact look artificially older than it is\. 
 
 1. The routing system now perceives this contact’s “time in queue” as longer than it actually is, which affects its position within the ranked list\.
+
+## Configuration tips<a name="change-routing-priority-tips"></a>
++ When using this block, it takes at least 60 seconds for a change to take effect for contacts already in queue\. 
++ If you need a change in a contact's priority to take effect immediately, set the priority before putting the contact in queue, that is, before using a [Transfer to queue](transfer-to-queue.md) block\.
 
 ## Configured block<a name="change-routing-priority-configured"></a>
 
