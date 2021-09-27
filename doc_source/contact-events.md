@@ -129,30 +129,32 @@ Type: String
 
 ```
 {
-"version": "0", 
-"id": "abcabcab-abca-abca-abca-abcabcabcabc", 
-"detail-type": "Amazon Connect Contact Event", 
-"source": "aws.connect", 
-"account": "111122223333", 
-"time": "2021-05-01T18:43:48Z",   // this is the timestamp
-"region": "us-west-1", 
-"resources": [ "arn:aws..." contactArn and instanceArn
-],
-"detail": { 
-    "eventType": "CONNECTED_TO_AGENT", 
-    "contactId": "11111111-1111-1111-1111-111111111111",
-    "initialContactId": "11111111-2222-3333-4444-555555555555",
-    "previousContactId": "11111111-2222-3333-4444-555555555555",
-    "channel": "Voice",
-    "instanceARN": "arn:aws:connect:us-west-2:123456789012:instance/12345678-1234-1234-1234-123456789012",
-    "initiationMethod": "INBOUND",
-    "queueInfo": {
-        "queueArn": "arn",       
-        "queueType": "type"
-},
-"AgentInfo": {
-    "AgentArn" : "arn"
-            "RoutingProfileArn": "",
-     }
+    "version": "0",
+    "id": "abcabcab-abca-abca-abca-abcabcabcabc",
+    "detail-type": "Amazon Connect Contact Event",
+    "source": "aws.connect",
+    "account": "111122223333",
+    "time": "2021-05-01T18:43:48Z",
+    "region": "us-west-1",
+    "resources": [
+        "arn:aws...", "contactArn", "instanceArn"
+    ],
+    "detail": {
+        "eventType": "CONNECTED_TO_AGENT",
+        "contactId": "11111111-1111-1111-1111-111111111111",
+        "initialContactId": "11111111-2222-3333-4444-555555555555",
+        "previousContactId": "11111111-2222-3333-4444-555555555555",
+        "channel": "Voice",
+        "instanceARN": "arn:aws:connect:us-west-2:123456789012:instance/12345678-1234-1234-1234-123456789012",
+        "initiationMethod": "INBOUND",
+        "queueInfo": {
+            "queueArn": "arn",
+            "queueType": "type"
+        },
+        "AgentInfo": {
+            "AgentArn": "arn",
+            "RoutingProfileArn": "arn"
+        }
+    }
 }
 ```
