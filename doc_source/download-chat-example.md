@@ -1,6 +1,6 @@
 # Download and customize our open source example<a name="download-chat-example"></a>
 
-You can further customize the chat experience customers use to interact with agents\. Use the [ Amazon Connect open source library](https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/asyncCustomerChatUX) on GitHub\. It's a platform to help you get started quickly\. Here's how it works:
+You can further customize the chat experience customers use to interact with agents\. Use the [Amazon Connect open source library](https://github.com/amazon-connect/amazon-connect-chat-ui-examples/tree/master/cloudformationTemplates/asyncCustomerChatUX) on GitHub\. It's a platform to help you get started quickly\. Here's how it works:
 + The GitHub repository links to a CloudFormation template, which starts the Amazon API Gateway endpoint that initiates a Lambda function\. You can use this template as an example\.
 + After you create the AWS CloudFormation stack, you can call this API from your app, import the pre\-built chat widget, pass the response to the widget, and start chatting\. 
 

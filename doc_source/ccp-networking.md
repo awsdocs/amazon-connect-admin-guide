@@ -14,21 +14,21 @@ This first option lets you significantly reduce your blast radius\.
 
 We recommend trying Option 1 and testing it with more than 200 calls\. Test for softphone errors, dropped calls, and conference/transfer functionality\. If your error rate is greater than 2 percent, there might be an issue with proxy resolution\. If that's the case, consider using Option 2\. 
 
-**Tip**  
-If you don't see an entry for your region, use GLOBAL\. For example, there isn't an entry for ap\-southeast\-1, so you would use GLOBAL\.
-
 To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as shown in the first row of the following table\. Do this instead of allowing all of the IP address ranges listed in the ip\-ranges\.json file\. You get the same benefit using a domain for CloudFront, as shown in the second row of the following table\.
 
 
 | Domain/URL allow list | AWS Region | Ports | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
-| rtc\*\.connect\-telecom\.\{*region*\}\.amazonaws\.com Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| rtc\*\.connect\-telecom\.\{*region*\}\.amazonaws\.com This is used by ccp\# \(v1\)\. Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 |  **New: additional domains to add to your allow list** \{*myInstanceName*\}\.my\.connect\.aws/ccp\-v2 \{*myInstanceName*\}\.my\.connect\.aws/api \*\.static\.connect\.aws **Current: ** \{*myInstanceName*\}\.awsapps\.com/connect/ccp\-v2 \{*myInstanceName*\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{*myInstanceName*\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \*\.execute\-api\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | participant\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \*\.transport\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \*\.transport\.connect\.\{*region*\}\.amazonaws\.com This is used by ccp\-v2\.  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \{*Amazon S3 bucket name*\}\.s3\.\{*region*\}\.amazonaws\.com  | Replace *Amazon S3 bucket name* with the name of the location where you store attachments\. Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com To instead add specific endpoints to your allow list based on Region, see [NLB endpoints](#nlb-endpoints)\.   | Replace \{*region*\} with the location of your Amazon Connect instance | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+
+**Note**  
+If you're using SAML Sign\-In to your Amazon Connect instance, add the Global Accelerator domain to your allow list: **\*\.awsglobalaccelerator\.com**\.
 
 **Note**  
 The new region telecom endpoints follow a different format\. Here's a complete list of telecom endpoints:  
@@ -46,7 +46,7 @@ The new region telecom endpoints follow a different format\. Here's a complete l
 | eu\-west\-2  | rtc\.cell\-1\.prod\.eu\-west\-2\.prod\.connect\.aws\.a2z\.com | 
 
 **Tip**  
-When using `rtc*.connect-telecom.{region}.amazonaws.com` and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
+When using `rtc*.connect-telecom.{region}.amazonaws.com`, ` *.transport.connect.{region}.amazonaws.com`, and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
 
 The following table lists the CloudFront domains used for static assets if you want to add domains to your allow list instead of IP ranges:
 
@@ -89,6 +89,7 @@ For more information about this file, see [About Amazon Connect IP address range
 | AMAZON\_CONNECT | GLOBAL and Region where your Amazon Connect instance is located \(add GLOBAL AND any region\-specific entry to your allow list\)  | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
 | EC2 | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | CLOUDFRONT | Global\* | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| GLOBALACCELERATOR | GLOBAL and Region where your Amazon Connect instance is located \(add GLOBAL AND any region\-specific entry to your allow list\) | 443 \(HTTPS\) and 80 \(HTTP\) | OUTBOUND | SEND/RECEIVE | 
 
 \*CloudFront serves static content such as images or javascript from an edge location that has the lowest latency in relation to where your agents are located\. IP range allow lists for CloudFront are global and require all IP ranges associated with **"service": "CLOUDFRONT"** in the ip\-ranges\.json file\. 
 
@@ -154,7 +155,7 @@ Consider the following when implementing your network configuration changes for 
 Amazon Connect Region selection is contingent upon data governance requirements, use case, services available in each Region, and latency in relation to your agents, contacts, and external transfer endpoint geography\.
 + **Agent location/network**—CCP connectivity traverses the public WAN, so it is important that the workstation has the lowest latency and fewest hops possible, specifically to the AWS Region where your resources and Amazon Connect instance are hosted\. For example, hub and spoke networks that need to make several hops to reach an edge router can add latency and reduce the quality of experience\.
 
-  When you set up your instance and agents, make sure to create your instance in the Region that is geographically closest to the Region where you create your instance\. If you need to set up an instance in a specific Region to comply with company policies or other regulations, choose the configuration that results in the fewest network hops between your agent computers and your Amazon Connect instance\.
+  When you set up your instance and agents, make sure to create your instance in the Region that is geographically closest to the agents\. If you need to set up an instance in a specific Region to comply with company policies or other regulations, choose the configuration that results in the fewest network hops between your agents' computers and your Amazon Connect instance\.
 + **Location of your callers**—Because calls are anchored to your Amazon Connect Region endpoint, they are subject to PSTN latency\. Ideally your callers and transfer endpoints are geographically located as closely as possible to the AWS Region where your Amazon Connect instance is hosted for lowest latency\.
 
   For optimal performance, and to limit the latency for your customers when they call in to your contact center, create your Amazon Connect instance in the Region that is geographically closest to where your customers call from\. You might consider creating multiple Amazon Connect instances, and providing contact information to customers for the number that is closest to where they call from\.

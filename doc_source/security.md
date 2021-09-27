@@ -12,6 +12,7 @@ This documentation helps you understand how to apply the shared responsibility m
 + [Data protection in Amazon Connect](data-protection.md)
 + [Identity and access management for Amazon Connect](security-iam.md)
 + [Logging and monitoring Amazon Connect](logging-and-monitoring.md)
++ [Tagging resources in Amazon Connect](tagging.md)
 + [Compliance validation in Amazon Connect](compliance-validation.md)
 + [Resilience in Amazon Connect](disaster-recovery-resiliency.md)
 + [Infrastructure security in Amazon Connect](infrastructure-security.md)

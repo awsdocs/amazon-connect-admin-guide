@@ -5,6 +5,8 @@ Amazon Connect Tasks allows you to prioritize, assign, track, and even automate 
 + Follow\-up with a customer via a call\.
 + Complete actions in a business\-specific system, such as processing a customer claim in an insurance application\.
 
+Currently, Amazon Connect Tasks can be used in compliance with [GDPR](http://aws.amazon.com/compliance/gdpr-center) and is pending additional certifications held by Amazon Connect\. 
+
 ## What is a task?<a name="what-is-a-task"></a>
 
 A *task* is a unit of work that an agent must complete\. This includes work that may have originated in external applications\. It's routed, prioritized, assigned, and tracked just like voice and chat\. 

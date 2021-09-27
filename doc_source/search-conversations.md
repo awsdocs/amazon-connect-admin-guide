@@ -24,7 +24,7 @@ For more information, see [Security profile permissions for Contact Lens](permis
 
 ## Search for keywords<a name="keyword-search"></a>
 
-For search, Contact Lens uses the `standard` analyzer in Amazon Elasticsearch Service\. This analyzer is not case sensitive\. For example, if you enter *thank you for your business 2 CANCELLED Flights*, the search looks for:
+For search, Contact Lens uses the `standard` analyzer in Amazon OpenSearch Service\. This analyzer is not case sensitive\. For example, if you enter *thank you for your business 2 CANCELLED Flights*, the search looks for:
 
  \[thank, you, for, your, business, 2, cancelled, flights\]
 

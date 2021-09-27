@@ -18,7 +18,7 @@ For a list of Amazon Lex attributes you can use, see [Amazon Lex contact attribu
 
 1. By default, the **Alias** field is populated with $LATEST\. To use a different alias of the bot, enter the alias value to use\.
 **Important**  
-In a production environment, always use a different alias than **$LATEST**\. Only use **$LATEST** for manual testing\. If the bot alias is **$LATEST** Lex invocations are throttled\. For more information, see [Runtime Service Quotas](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
+In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime Service Quotas](https://docs.aws.amazon.com/lexv2/latest/dg/gl-limits.html#gl-limits-runtime) or [Runtime Service Quotas \(Amazon Lex Classic\)](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
 
 1. Optionally, to pass an attribute to Amazon Lex to use as a session attribute, choose **Add an attribute**\. Specify the value to pass using either text or an attribute\.
 

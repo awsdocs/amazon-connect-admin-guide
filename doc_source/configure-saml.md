@@ -151,6 +151,8 @@ Replacing this Role causes previously federated users to fail at login because i
 
 1. Configure SAML Assertions for the Authentication Response\. For more information, [Configuring SAML Assertions for the Authentication Response](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml_assertions.html)\.
 
+1. For Amazon Connect, leave the **Application Start URL** blank\.
+
 1. Configure the relay state of your identity provider to point to your Amazon Connect instance\. The URL to use for the relay state is comprised as follows:
 
    `https://region-id.console.aws.amazon.com/connect/federate/instance-id`

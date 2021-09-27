@@ -29,24 +29,27 @@ Amazon Connect provides full Unicode support\. You can chat with customers in an
 
 | Post\-call analytics | Post\-call redaction | Real\-time analytics | Real\-time redaction | 
 | --- | --- | --- | --- | 
+|  Arabic \(Gulf\)  |   |  |  | 
 |  English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | 
 |  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  | 
 |  English \(United States\)  |  English \(United States\)  |  English \(United States\)  |  English \(United States\)  | 
-|  English \(India\)  |  English \(India\)  | Spanish \(United States\)  |  | 
+|  English \(India\)  |  English \(India\)  |   |  | 
 |  English \(Ireland\)  |  English \(Ireland\)  |  |  | 
 |  English \(Scotland\)  |  English \(Scotland\)  |  |  | 
 |  English \(Wales\)  |  English \(Wales\)  |  |  | 
-|  Spanish \(Spain\)  |   |  |  | 
-|  Spanish \(United States\)  |   |  |  | 
-|  French \(Canada\)  |   |  |  | 
-|  French \(France\)  |   |  |  | 
-|  German \(Germany\)  |   |  |  | 
+|  French \(Canada\)  |   |  French \(Canada\)  |  | 
+|  French \(France\)  |   |  French \(France\)  |  | 
+|  German \(Germany\)  |   |  German \(Germany\)  |  | 
 |  German \(Switzerland\)  |   |  |  | 
-|  Italian \(Italy\)  |   |  |  | 
-|  Portuguese \(Brazil\)  |   |  |  | 
-|  Portuguese \(Portugal\)  |   |  |  | 
-|  Arabic \(Gulf\)  |   |  |  | 
 |  Hindi \(India\)  |   |  |  | 
+|  Italian \(Italy\)  |   |  Italian \(Italy\)  |  | 
+|  Japanese \(Japan\)  |   | Japanese \(Japan\) |  | 
+|  Korean \(South Korea\)  |   |  Korean \(South Korea\)  |  | 
+|  Mandarin \(Mainland China\)  |   |  Mandarin \(Mainland China\)  |  | 
+|  Portuguese \(Brazil\)  |   |  Portuguese \(Brazil\)  |  | 
+|  Portuguese \(Portugal\)  |   |  |  | 
+|  Spanish \(Spain\)  |   |  |  | 
+|  Spanish \(United States\)  |   | Spanish \(United States\) |  | 
 
 ## Amazon Lex<a name="supported-languages-lex"></a>
 

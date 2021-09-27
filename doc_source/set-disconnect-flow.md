@@ -6,7 +6,7 @@
   A disconnect event is when:
   + A call, chat, or task is disconnected by an agent\.
   + A task is disconnected as a result of a flow action\.
-  + If a task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
+  + A task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
 
   When the disconnect event occurs, the corresponding contact flow runs\. 
 + Here are examples of when you might use this block:

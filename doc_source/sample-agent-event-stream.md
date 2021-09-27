@@ -1,17 +1,27 @@
 # Sample agent event stream<a name="sample-agent-event-stream"></a>
 
-In the following agent event stream, the agent is assigned to a routing profile that requires them to take both chats and calls\. They can take one call, and up to three chats at a time\. 
+In the following sample agent event stream, the agent is assigned to a routing profile that requires them to take both chats and calls\. They can take one call, and up to three chats at a time\. 
+
+**Note**  
+For how many chats and tasks an agent can take concurrently, see [Amazon Connect service quotas](amazon-connect-service-limits.md)\.
 
 ```
 {
     "AWSAccountId": "012345678901",
     "AgentARN": "arn:aws:connect:us-west-2:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent/agent-ARN",
-    "CurrentAgentSnapshot": {
-        "AgentStatus": {
-            "ARN": "arn:aws:connect:us-west-2:012345678901:instance/aaaaaaaa-bbbb-cccc-dddd-111111111111/agent-state/agent-state-ARN",
-            "Name": "Offline",  //The agent is offline. 
+    "CurrentAgentSnapshot": 
+      {
+    "AgentStatus": {
+            "ARN": "example-ARN", //The ARN for the agent's current agent status (not for the agent).
+            "Name": "Available",  //This shows the agent status in the CCP is set to Available. 
             "StartTimestamp": "2019-08-13T20:52:30.704Z"
         },
+     "NextAgentStatus": {
+            "Name": "Lunch", //They set their next status, which pauses new contacts being routed to them while they finish their current contacts.
+            "ARN": "example-ARN2",  //The ARN of the agent status that the agent has set as their next status. 
+            "EnqueueTimestamp": "2019-08-13T20:58:00.004Z",   //When the agent set their next status and paused routing of incoming contacts.
+        }
+      } ,
         "Configuration": {
             "AgentHierarchyGroups": null,
             "FirstName": "AgentEventStreamTest",

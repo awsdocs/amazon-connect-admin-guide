@@ -1,7 +1,0 @@
-# Contact attribute concepts<a name="using-contact-attributes"></a>
-
-When you create a contact flow, you can create user\-defined contact attributes using **Set contact attributes** blocks\. You can then reference them in other parts of a contact flow using any other block that supports dynamic attributes\. For example, you could use a **Check contact attributes** block to compare the value of an attribute to a condition you define, and then route the contact based on the results of the comparison\. You could also retrieve data from external sources, and then create user\-defined attributes from the external data so that you can reference them later in a contact flow, such as the status of an order or an expected shipping date\.
-
-Personalize the customer experience by including the customer's name when you use text to speech text in a **Play prompt** or **Get customer input** block to speak messages to your customer\. Use contact attributes to store input provided by a customer during an interaction with an Amazon Lex bot to enable automated interactions\.
-
-As a best practice, make attributes and attribute values case\-sensitive, and always match case in each context where they are used\.

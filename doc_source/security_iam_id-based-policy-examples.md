@@ -12,6 +12,7 @@ To learn how to create an IAM identity\-based policy using these example JSON po
 + [Describe and update Amazon Connect users based on tags](#security_iam_id-based-policy-examples-view-widget-tags)
 + [Create Amazon Connect users based on tags](#connect-access-control-resources-example1)
 + [Create and view Amazon AppIntegrations resources](#appintegration-resources-example1)
++ [Create and view Amazon Connect Wisdom Assistants](#wisdom-resources-example1)
 
 ## Policy best practices<a name="security_iam_service-with-iam-policy-best-practices"></a>
 
@@ -103,7 +104,12 @@ This example shows how you might create a policy that allows IAM users to intera
                 "app-integrations:CreateEventIntegration",
                 "app-integrations:GetEventIntegration",
                 "app-integrations:UpdateEventIntegration",
-                "app-integartions:DeleteEventIntegration"
+                "app-integartions:DeleteEventIntegration",
+                "app-integrations:ListDataIntegrations",
+                "app-integrations:CreateDataIntegration",
+                "app-integrations:GetDataIntegration",
+                "app-integrations:UpdateDataIntegration",
+                "app-integartions:DeleteDataIntegration"
             ],
             "Resource": "*" 
 	}
@@ -187,5 +193,131 @@ The following sample policy allows event integrations to be created, listed, and
             "Resource": "*"
         }
     ]
+}
+```
+
+## Create and view Amazon Connect Wisdom Assistants<a name="wisdom-resources-example1"></a>
+
+The following sample policy allows Wisdom assistants to be created, listed, fetched, and deleted\.
+
+### Manage Amazon Connect High\-Volume Outbound Communications resources<a name="outboundcommunications-policy-example1"></a>
+
+Onboarding permissions: The following sample policy allows Amazon Connect instances to be onboarded to Amazon Connect High\-Volume Outbound Communications\.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "wisdom:CreateAssistant",
+                "wisdom:GetAssistant",
+                "wisdom:ListAssistants",
+                "wisdom:DeleteAssistant",
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+Management permissions: The following sample policy allows all read and write operations on the high\-volume outbound campaigns\.
+
+```
+{
+    "Sid": "AllowConnectCampaignsOperations",
+    "Effect": "Allow",
+    "Action": [
+        "connect-campaigns:CreateCampaign",
+        "connect-campaigns:DeleteCampaign",
+        "connect-campaigns:DescribeCampaign",
+        "connect-campaigns:UpdateCampaignName",
+        "connect-camapigns:GetCampaignState"
+        "connect-campaigns:UpdateOutboundCallConfig",
+        "connect-campaigns:UpdateDialerConfig",
+        "connect-campaigns:PauseCampaign",
+        "connect-campaigns:ResumeCampaign",
+        "connect-campaigns:StopCampaign",
+        "connect-campaigns:GetCampaignStateBatch",
+        "connect-campaigns:ListCampaigns"
+    ],
+    "Resource": "*"
+}
+```
+
+ReadOnly permissions: The following sample policy allows read\-only access to the campaigns\.
+
+```
+{
+    "Sid": "AllowConnectCampaignsReadOnlyOperations",
+    "Effect": "Allow",
+    "Action": [
+        "connect-campaigns:DescribeCampaign",
+        "connect-camapigns:GetCampaignState",
+        "connect-campaigns:GetCampaignStateBatch",
+        "connect-campaigns:ListCampaigns"
+     ],
+    "Resource": "*",
+}
+```
+
+Tag\-based permissions: The following sample policy restricts access to the campaigns integrated with a particular Amazon Connect instance using tags\. More permissions can be added based on the use case\.
+
+```
+{
+    "Sid": "AllowConnectCampaignsOperations",
+    "Effect": "Allow",
+    "Action": [
+        "connect-campaigns:DescribeCampaign",
+        "connect-campaigns:GetCampaignState"
+    ],
+    "Resource": "*",
+    "Condition": {
+        "StringEquals": {
+             "aws:ResourceTag/owner": "arn:aws:connect:region:customer_account_id:instance/connect_instance_id"
+         }
+    }
+}
+```
+
+**Note**  
+`connect-campaigns:ListCampaigns` and `connect-campaigns:GetCampaignStateBatch` operations cannot be restricted by Tag\.
+
+Permissions required to call `PutDialRequestBatch`:
+
+You need to create this role in your account\. However, this API cannot be called directly\. The role created should be used in Amazon Pinpoint Journey to send contacts to campaign\. AWS KMS permission is only needed if your instance was onboarded with a customer managed key in your account\. If an AWS owned key was used, you can remove AWS KMS permission\. 
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "kms:Decrypt",
+            "Resource": "arn:aws:kms:region:account-id:key/key-id"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "connect-campaigns:PutDialRequestBatch",
+            "Resource": "arn:aws:connect-campaigns:region:account-id:campaign/campaign-id"
+        }
+    ]
+}
+
+Trust policy:
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "pinpoint.amazonaws.com"
+},
+      "Action": "sts:AssumeRole"
+    }
+  ]
 }
 ```

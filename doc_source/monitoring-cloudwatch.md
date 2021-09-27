@@ -51,14 +51,32 @@ Dimensions:
 + **MetricGroup**: **VoiceCalls**
 
 **ConcurrentCallsPercentage**  
-The percentage of the concurrent active voice calls service quota used in the instance\. This is calculated by `ConcurrentCalls/ConfiguredConcurrentCallsLimit`\.   
+The percentage of the concurrent active voice calls service quota used in the instance\. This is calculated by:  
++ ConcurrentCalls / ConfiguredConcurrentCallsLimit
 Unit: Percent \(output displays as a decimal\)  
 Dimensions:  
 + **InstanceId**: The ID of your instance
 + **MetricGroup**: **VoiceCalls**
 
+**ConcurrentTasks**  
+The number of concurrent active tasks in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active tasks at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active tasks are included, not only active tasks that are connected to agents\.  
+While all statistics are available in CloudWatch for concurrent tasks you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.   
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Tasks**
+
+**ConcurrentTasksPercentage**  
+The percentage of the concurrent active tasks service quota used in the instance\. This is calculated by:   
++ ConcurrentTasks / ConfiguredConcurrentTasksLimit 
+Where ConfiguredConcurrentTasksLimit is the [Concurrent tasks per instance](amazon-connect-service-limits.md) configured for your instance\.   
+Unit: Percent \(output displays as a decimal\)  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Tasks**
+
 **ContactFlowErrors**  
-The number of times the error branch for a contact flow was executed\.  
+The number of times the error branch for a contact flow was run\.  
 Unit: Count  
 Dimensions:  
 + **InstanceId**: The ID of your instance
@@ -101,7 +119,7 @@ The number of times a contact flow security key \(public signing key\) was used 
 Unit: Count  
 Dimensions:  
 + **InstanceId**: The ID of your instance
-+ **SigningKeyId**: The ID of yoru signing key
++ **SigningKeyId**: The ID of your signing key
 
 **QueueCapacityExceededError**  
 The number of calls that were rejected because the queue was full\.  
@@ -118,6 +136,36 @@ Dimensions:
 + **InstanceId**: The ID of your instance
 + **MetricGroup**: **Queue**
 + **QueueName**: The name of your queue
+
+**TasksBreachingConcurrencyQuota**  
+The total number of tasks that exceeded the concurrent tasks quota for the instance\. For the total number of tasks that breach the quota, take a look at the Sum statistic\.   
+For example, assume your contact center experiences the following volumes, and your service quota is 2500 concurrent tasks:   
++ 0:00 : 2525 concurrent tasks\. This is 25 over the quota\.
++ 0:04 : 2535 concurrent tasks\. This is 35 over the quota\.
++ 0:10 : 2550 concurrent tasks\. This is 50 over the quota\.
+ TasksBreachingConcurrencyQuota = 110: the total number of tasks that exceeded the quota between 0:00 and 0:10\.   
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Tasks**
+
+**TasksExpired**  
+ Tasks which have expired after being active for 7 days\.   
+To monitor the total number of tasks that have expired in a given time period, take a look at the Sum statistic in CloudWatch\.   
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Tasks**
++ **ContactId**: The ID of the task contact
+
+**TasksExpiryWarningReached**  
+Tasks that have been active for 6 days 22 hours and reached expiry warning limit\.   
+To monitor the total number of tasks that have reached expiry warning limit in a given time period, take a look at the Sum statistic in CloudWatch\.   
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Tasks**
++ **ContactId**: The ID of the task contact
 
 **ThrottledCalls**  
 The number of voice calls that were rejected because the rate of calls per second exceeded the maximum supported quota\. To increase the supported rate of calls, request an increase in the service quota for concurrent active calls per instance\.  
@@ -139,7 +187,9 @@ Dimensions:
 
 ## Amazon Connect CloudWatch metrics dimensions<a name="connect-cloudwatch-dimensions"></a>
 
-In CloudWatch, a dimension is a name/value pair that uniquely identifies a metric\. In the dashboard, metrics are grouped by dimension\. The following dimensions are used in the CloudWatch dashboard for Amazon Connect metrics\. When you view metrics in the dashboard, only metrics with data are displayed\. If there is no activity during the refresh interval for which there is a metric, then no data from your instance is displayed in the dashboard\. The following dimensions are used for Amazon Connect metrics in CloudWatch\.
+In CloudWatch, a dimension is a name/value pair that uniquely identifies a metric\. In the dashboard, metrics are grouped by dimension\. When you view metrics in the dashboard, only metrics with data are displayed\. If there is no activity during the refresh interval for which there is a metric, then no data from your instance is displayed in the dashboard\.
+
+The following dimensions are used in the CloudWatch dashboard for Amazon Connect metrics\. 
 
 ### Contact flow metrics dimension<a name="contact-flow-dimension"></a>
 
@@ -151,6 +201,12 @@ Filters metric data by contact flow\. Includes the following metrics:
 + ContactFlowFatalErrors
 + PublicSigningKeyUsage
 
+### Contact metrics dimension<a name="contact-metrics-dimension"></a>
+
+Filters metric data by contacts\. Includes the following metrics:
++ TasksExpiryWarningReached
++ TasksExpired
+
 ### Instance metrics dimension<a name="instance-metrics-dimension"></a>
 
 Filters meta data by instance\. Includes the following metrics:
@@ -159,8 +215,11 @@ Filters meta data by instance\. Includes the following metrics:
 + CallRecordingUploadError
 + ConcurrentCalls
 + ConcurrentCallsPercentage
++ ConcurrentTasks
++ ConcurrentTasksPercentage
 + MisconfiguredPhoneNumbers
 + MissedCalls
++ TasksBreachingConcurrencyQuota
 + ThrottledCalls
 
 ### Instance ID, Participant, Stream Type, Type of Connection<a name="stream-type-dimension"></a>
@@ -179,6 +238,81 @@ Filters metric data by queue\. Includes the following metrics:
 + QueueCapacityExceededError
 + QueueSize
 
+## Amazon Connect Voice ID metrics sent to CloudWatch<a name="voiceid-metrics-cloudwatch"></a>
+
+The `VoiceID` namespace includes the following metrics\.
+
+**RequestLatency**  
+The elapsed time for the request\.  
+Frequency: 1 minute  
+Unit: Milliseconds  
+Dimension: API
+
+**UserErrors**  
+The number of Error counts due to bad requests from user\.  
+Frequency: 1 minute  
+Unit: Count  
+Dimension: API
+
+**SystemErrors**  
+The number of Error counts due to internal service error\.  
+Frequency: 1 minute  
+Unit: Count  
+Dimension: API
+
+**Throttles**  
+The number of requests that are rejected due to exceeding the max rate allowed for sending requests\.  
+Frequency: 1 minute  
+Unit: Count  
+Dimension: API
+
+**ActiveSessions**  
+The number of active sessions in the domain\. Active sessions are sessions that are in pending or ongoing status\.  
+Frequency: 1 minute  
+Unit: Count  
+Dimension: Domain
+
+**ActiveSpeakerEnrollmentJobs**  
+The number of active Batch Enrollment Jobs in the domain\. Active Jobs are those which are in Pending or InProgress status\.  
+Frequency: 15 minutes  
+Unit: Count  
+Dimension: Domain
+
+**ActiveFraudsterRegistrationJobs**  
+The number of active Batch Registration Jobs in the domain\. Active Jobs are those which are in Pending or InProgress status\.   
+Frequency: 15 minutes  
+Unit: Count  
+Dimension: Domain
+
+**Speakers**  
+The number of Speakers in the domain\.  
+Frequency: 15 minutes  
+Unit: Count  
+Dimension: Domain
+
+**Fraudsters**  
+The number of Fraudsters in the domain\.  
+Frequency: 15 minutes  
+Unit: Count  
+Dimension: Domain
+
+## Amazon Connect Voice ID metrics dimensions<a name="voiceid-cloudwatch-dimensions"></a>
+
+The following dimensions are used in the CloudWatch dashboard for Amazon Connect Voice ID metrics\. When you view metrics in the dashboard, only metrics with data are displayed\. If there is no activity during the refresh interval for which there is a metric, then no data from your instance is displayed in the dashboard\.
+
+### API metrics dimension<a name="voiceid-api-dimension"></a>
+
+This dimension limits the data to one of the following Voice ID operations:
++ DeleteFraudster
++ EvaluateSession
++ ListSpeakers
++ DeleteSpeaker
++ OptOutSpeaker
+
+### Domain metrics dimension<a name="voiceid-domain-dimension"></a>
+
+The Voice ID domain where the enrollment, authentication or registration is conducted\. 
+
 ## Use CloudWatch metrics to calculate concurrent call quota<a name="connect-cloudwatch-concurrent-call-quota"></a>
 
 Here's how to calculate your quota for concurrent calls\. 
@@ -187,3 +321,12 @@ With calls active in the system, look at **ConcurrentCalls** and **ConcurrentCal
 + \(ConcurrentCalls / ConcurrentCallsPercentage\) \* 100
 
 For example, if **ConcurrentCalls** is 20 and **ConcurrentCallsPercentage** is 50, your quota is calculated as \(20/50\)\*100 = 40\.
+
+## Use CloudWatch metrics to calculate concurrent task quota<a name="connect-cloudwatch-concurrent-task-quota"></a>
+
+Here's how to calculate your quota for concurrent tasks\. 
+
+With tasks active in the system, look at **ConcurrentTasks** and **ConcurrentTasksPercentage**\. Calculate the quota: 
++ \(ConcurrentTasks / ConcurrentTasksPercentage\) \* 100
+
+For example, if **ConcurrentTasks** is 20 and **ConcurrentTasksPercentage** is 50, your quota is calculated as \(20/50\)\*100 = 40\.

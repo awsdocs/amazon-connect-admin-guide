@@ -2,7 +2,7 @@
 
 Country or region regulations often require a local office address and specific identification documents to purchase and own a phone number\. The address that you provide can be the business or personal address where the phone numbers are used\. 
 
-Following is a list of ID Requirements by country or region\. When you [request an international number](special-request.md), we'll work with you to submit your documents\. 
+Following is a list of ID Requirements by country or region\. When you [ request an international number](number-request.md), we'll work with you to submit your documents\. 
 
 **Note**  
 After your numbers are ordered or ported, the exact number of requested phone numbers appear in your Amazon Connect console for you to claim\. You won't have access to all available numbers in that country\.
@@ -107,7 +107,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-| US East US West EU \(Frankfurt\) EU \(London\) AWS GovCloud \(US\-West\)  | 7 AM to 5 PM CST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West Canada \(Central\)  EU \(Frankfurt\) EU \(London\) AWS GovCloud \(US\-West\)  | 7 AM to 5 PM CST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## Chile \(CL\)<a name="chile-regulations"></a>
 
@@ -397,12 +397,15 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 
 ### For porting numbers<a name="jp-porting"></a>
 
+**Note**  
+Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported\.
+
 
 ****  
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-|  Asia Pacific \(Tokyo\)  | TBD | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+|  Asia Pacific \(Tokyo\)  | Toll\-free prefixes: \+81 120, \+81 800 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## Latvia \(LV\)<a name="latvia-regulations"></a>
 
@@ -458,6 +461,14 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 ## Malaysia \(MY\)<a name="malaysia-regulations"></a>
 
 ### For ordering phone numbers<a name="my-ordering"></a>
+
+**Inside Malaysia**
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+**Outside Malaysia**
 
 
 ****  
@@ -662,7 +673,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-|  Not supported  | N/A | N/A  | 
+|  Asia Pacific \(Singapore\)  | None specified | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## Slovakia \(SK\)<a name="slovakia-regulations"></a>
 

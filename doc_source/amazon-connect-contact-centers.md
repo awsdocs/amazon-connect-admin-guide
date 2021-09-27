@@ -12,6 +12,7 @@ Finally, you'll need to provide your agents access to the Contact Control Panel 
 + [Create an Amazon Connect instance](amazon-connect-instances.md)
 + [Test voice, chat, and task experiences](chat-testing.md)
 + [Set up your phone numbers](contact-center-phone-number.md)
++ [Set up outbound communications](outbound-communications.md)
 + [Set up routing](connect-queues.md)
 + [Set up agents](connect-agents.md)
 + [Set up your customer's chat experience](enable-chat-in-app.md)

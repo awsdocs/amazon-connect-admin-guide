@@ -13,9 +13,9 @@ You set the caller ID name, such as the name of your company, in the queue setti
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callerID-callerName.png)
 
-**If your phone number is in the US**: The name you use should be the same one that’s registered in the CNAM \(Caller Name\) database provided by Amazon Connect; this is a nationwide resource available in the US to provide the name of the calling party on incoming calls if recipients subscribe to CNAM services from their telecom carrier\.
+**If your DID phone number is in the US/CANADA**: The name you use should be the same one that’s registered in the CNAM \(Caller Name\) database provided by Amazon Connect; this is a nationwide resource available in the US/CANADA to provide the name of the calling party on incoming calls if recipients subscribe to CNAM services from their telecom carrier\. 
 
-Open an AWS Support ticket to register your US\-based phone number with your company name in the CNAM database of the Amazon Connect carrier\. We'll handle the registration process for you\.
+Open an AWS Support ticket to register your US/CANADA\-based phone number with your company name in the CNAM database of the Amazon Connect carrier\. We'll handle the registration process for you\.
 
 **Tip**  
 If you want each agent to have their own caller ID name while dialing out \(such as *Example Corp Billing Dept*\), create a queue for each agent/caller ID name\.

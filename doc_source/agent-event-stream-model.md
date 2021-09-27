@@ -71,7 +71,7 @@ The `AgentSnapshot` object includes the following properties:
 
 **AgentStatus**  
 Agent status data, including:  
-+ AgentARN—The ARN for the agent\.
++ ARN—The ARN for the agent's current agent status \(not for the agent\)\. 
 + Name—This is the [status of the agent that they manually set in the CCP](metrics-agent-status.md), or that the supervisor manually [changes in the real\-time metrics report](rtm-change-agent-activity-state.md)\. 
 
   For example, their status might be **Available**, which means that they are ready for inbound contacts to be routed to them\. Or it might be a custom status, such as Break or Training, which means that inbound contacts can't be routed to them BUT they can still make outbound calls\.
@@ -79,6 +79,15 @@ Agent status data, including:
 
   Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
 Type: `AgentStatus` object\.
+
+**NextAgentStatus**  
+If the agent set a next agent status, the data appears here\.  
++ ARN—The ARN of the agent status that the agent has set as their next status\.
++ Name—This is the name of the agent status that the agent has set as their next status\.
++ EnqueueTimestamp—The timestamp in ISO 8601 standard format for the time at which the agent set their next status and paused routing of incoming contacts\.
+
+  Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
+Type: `NextAgentStatus` object\.
 
 **Configuration**  
 Information about the agent, including:   
@@ -154,13 +163,14 @@ Valid values:
   A disconnect event is when:
   + A call, chat, or task is disconnected by an agent\.
   + A task is disconnected as a result of a flow action\.
-  + If a task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
+  + A task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
 
   If a new contact is created while running a disconnect flow, then the initiation method for that new contact is DISCONNECT\.
 
 **State**  
 The state of the contact\.  
-Valid values: `INCOMING` \| `PENDING` \| `CONNECTING` \| `CONNECTED` \| `CONNECTED_ONHOLD` \| `MISSED` \| `ERROR` \| `ENDED` 
+Valid values: `INCOMING` \| `PENDING` \| `CONNECTING` \| `CONNECTED` \| `CONNECTED_ONHOLD` \| `MISSED` \| `REJECTED` \| `ERROR` \| `ENDED`   
+The `REJECTED` state does not apply to voice contacts\. Rejected voice contacts appear as `MISSED`\.
 
 **StateStartTimestamp**  
 The time at which the contact entered the current state\.  

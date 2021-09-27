@@ -8,13 +8,14 @@
 
 | Item | Default quotas for new accounts created October, 2020 or later\. [Learn more](#default-quotas) | 
 | --- | --- | 
-|  Active tasks per instance  |  2500 concurrent active tasks By default [Maximum contacts in queue](set-maximum-queue-limit.md) is set to your **Concurrent calls per instance** quota\. If you plan to have more tasks than that in a queue, submit a request to increase this quota, and then increase the [Maximum contacts in queue](set-maximum-queue-limit.md) setting\.   | 
 |  AWS Lambda functions per instance  |  35  | 
 |  Agent status per instance  |  50 This quota cannot be increased\.  | 
 |  Amazon Connect instances per account  |  2  | 
 |  Amazon Lex bots per instance  |  50  | 
-|  Concurrent calls per instance  |  10  **What is counted?** All calls currently being handled by agents or waiting in a queue for an agent\. Callbacks waiting in a callback queue are not counted until the callback is offered to an available agent\. If this quota is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   You can calculate your configured quota using CloudWatch metrics\. For instructions, see [Use CloudWatch metrics to calculate concurrent call quota](monitoring-cloudwatch.md#connect-cloudwatch-concurrent-call-quota)\.  **If you're only taking calls**: Another way to determine your concurrent calls quota is to edit a queue and enter an exceptionally large number for the contact limit\. The resulting error message will display your quota for concurrent calls\. For example, in the following image, it shows the call quota for that instance is 99\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/concurrent-call-quota.png)   | 
-|  Concurrent chats per instance  |  100 This includes chats that are waiting\. If this quota is exceeded, the API call fails with a quota exceeded error\. By default [Maximum contacts in queue](set-maximum-queue-limit.md) is set to your **Concurrent calls per instance** quota\. If you plan to have more chats than that in a queue, submit a request to increase this quota, and then increase the [Maximum contacts in queue](set-maximum-queue-limit.md) setting\.   | 
+|  Amazon Lex V2 bot aliases per instance  |  100  | 
+|  Concurrent active calls per instance   |  10  **What is counted?** All calls currently being handled by agents or waiting in a queue for an agent\. Callbacks waiting in a callback queue are not counted until the callback is offered to an available agent\. If this quota is exceeded, contacts will get a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.   You can calculate your configured quota using CloudWatch metrics\. For instructions, see [Use CloudWatch metrics to calculate concurrent call quota](monitoring-cloudwatch.md#connect-cloudwatch-concurrent-call-quota)\.  **If you're only taking calls**: Another way to determine your concurrent calls quota is to edit a queue and enter an exceptionally large number for the contact limit\. The resulting error message will display your quota for concurrent calls\. For example, in the following image, it shows the call quota for that instance is 99\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/concurrent-call-quota.png)   | 
+|  Concurrent active chats per instance  |  100 This includes chats that are waiting\. If this quota is exceeded, the API call fails with a quota exceeded error\. By default [Maximum contacts in queue](set-maximum-queue-limit.md) is set to your **Concurrent calls per instance** quota\. If you plan to have more chats than that in a queue, submit a request to increase the **Active chats per instance** quota, and then increase the [Maximum contacts in queue](set-maximum-queue-limit.md) setting\.   | 
+|  Concurrent active tasks per instance  |  2500 concurrent active tasks **What is counted?** All tasks that have not yet ended are considered active and are counted as concurrent tasks: tasks that are being routed in flows, waiting in a queue for an agent, being handled by agents, or being run in After Contact Work \(ACW\)\. By default [Maximum contacts in queue](set-maximum-queue-limit.md) is set to your **Concurrent calls per instance** quota\. If you plan to have more tasks than that in a queue, submit a request to increase the **Active tasks per instance** quota, and then increase the [Maximum contacts in queue](set-maximum-queue-limit.md) setting\.   | 
 |  Contact flows per instance  |  100  | 
 |  Hours of operation per instance  |  100  | 
 |  Phone numbers per instance  |  5  | 
@@ -25,7 +26,7 @@
 |  Rate of API requests  |  See [Amazon Connect API throttling quotas](#connect-api-quotas)\.  | 
 |  Reports per instance  |  2000 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies so reports don't pile up\.   | 
 |  Routing profiles per instance  |  100  | 
-|  Scheduled reports per instance  |  50  | 
+|  Scheduled reports per instance  |  50 This quota cannot be increased\.  | 
 |  Security profiles per instance  |  100  | 
 |  User hierarchy groups per instance  |  500 This quota applies to the total number of hierarchy groups you have, across all levels\. There is no feature limit for how many hierarchy groups you can have for each level\. For example, one level could have 500 hierarchy groups, which would reach the quota for your instance\.  | 
 |  Users per instance  |  500  | 
@@ -47,9 +48,27 @@ Amazon Connect is not available to customers in India using Amazon Web Services 
 |  Objects per domain  |  100  | 
 |  Objects per profile  |  100 This is the maximum number of objects that can be attached to a profile\.  | 
 
+## Amazon Connect Voice ID service quotas<a name="voiceid-quotas"></a>
+
+
+| Item | Default quotas  | 
+| --- | --- | 
+|  Assistants  |  3 This quota applies per account\.  | 
+|  Knowledge bases  |  10  | 
+|  Maximum size of a knowledge base  |  5GB per knowledge base Concurrent active sessions per domain  | 
+|  Maximum number of fraudsters per domain  |  500  | 
+|  Content per knowledge base  |  10,000  | 
+|  Maximum size per document  |  10MB  | 
+|  RateLimit for all APIs  |  50TPS  | 
+|  Maximum number of speakers per domain  |  100,000  | 
+|  Active Batch Speaker Enrollment Jobs per domain  |  1  | 
+|  Active Batch Fraudster Registration Jobs per domain  |  1  | 
+|  Speakers per Batch Speaker Enrollment Job  |  10,000  | 
+|  Fraudsters per Batch Fraudster Registration Job  |  500  | 
+
 ## About default quotas<a name="default-quotas"></a>
 
-The preceding table that lists Amazon Connect service quotas provides the default quotas for new Amazon Connect accounts as of February 2020\. Because the quotas have been adjusted over time, the quotas in place for your account may be different than the quotas described here\.
+The preceding tables that lists service quotas provides the default quotas for new Amazon Connect accounts as of February 2020\. Because the quotas have been adjusted over time, the quotas in place for your account may be different than the quotas described here\.
 
 ## Feature specifications<a name="feature-limits"></a>
 
@@ -72,23 +91,71 @@ The following table lists feature specifications\. They cannot be increased\.
 |  Maximum duration of a task  |  7 days  | 
 |  Maximum number of transfers for a task  |  11 transfers  | 
 |  Maximum number of linked tasks on an existing contact  |  11  | 
-|  Limit on creating and deleting instances  |  Amazon Connect enforces a limit on the total number of instances that you can create or delete in 30 days\. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances\. You must wait 30 days before you can restart creating and deleting instances in your account\.  | 
+|  Limit on creating and deleting instances  | 100 instances can be created or deleted in 30 days Amazon Connect enforces a limit on the **total** number of instances that you can create and delete in 30 days\. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances\. You must wait 30 days before you can restart creating and deleting instances in your account\. For example, if you create 80 instances and delete 20 over the course of 30 days, you must wait an additional 30 days before you can create or delete any more instances\. If you create and delete the same instance 100 times in 30 days, the limit also applies\.   | 
 
 ## Countries you can call<a name="country-code-allow-list"></a>
 
-You can place calls to the following countries when you create a new instance\.
+The Region where your instance is created determines which countries you can call by default\.
 
-If you already have an instance, the countries that you are allowed to call may be different that those listed in the following table because we have changed the service quotas over time\.
+ [Submit a service quota increase request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) to allow calling to additional countries, or to limit the countries that you can call from\. You must be signed in to your AWS account to access the form\.
 
+For a list of all the countries available for outbound calling, see [Amazon Connect pricing](http://aws.amazon.com/connect/pricing/)\. 
 
-| Item | Countries you can call by default | 
-| --- | --- | 
-| Country code allow list for Outbound Calls |  [Submit a service quota increase request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) to allow calling to additional countries, or to limit the countries that you can call from\. You must be signed in to your AWS account to access the form\. For a list of all the countries available for outbound calling, see [Amazon Connect pricing](http://aws.amazon.com/connect/pricing/)\.  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
+If you already have an instance, the countries that you are allowed to call may be different that those listed in the following sections because we have changed the service quotas over time\.
 
-† UK numbers with the following prefixes are not allowed by default:
+### Instances created in US East, US West, Canada \(Central\) and AWS GovCloud \(US\-West\)<a name="country-allow-list-us-canada-govcloud"></a>
+
+You can call the following countries by default:
++ United States
++ Canada
++ Mexico
++ Puerto Rico
++ United Kingdom: See [Prefixes that are not allowed by default](#prefixes-not-allowed)
+
+### Instances created in EU \(Frankfurt\) and EU \(London\)<a name="country-allow-list-eu"></a>
+
+You can call the following countries by default:
++ United Kingdom: See [Prefixes that are not allowed by default](#prefixes-not-allowed)
++ Italy
++ France
++ Ireland
++ United States
+
+### Instances created in Asia Pacific \(Tokyo\)<a name="country-allow-list-nrt"></a>
+
+You can call the following countries by default:
++ Japan: See [Prefixes that are not allowed by default](#prefixes-not-allowed)
++ Vietnam
++ United States
+
+### Instances created in Asia Pacific \(Singapore\)<a name="country-allow-list-sin"></a>
+
+You can call the following countries by default:
++ Singapore
++ Australia
++ Hong Kong
++ United States
++ United Kingdom: See [Prefixes that are not allowed by default](#prefixes-not-allowed)
+
+### Instances created in Asia Pacific \(Sydney\)<a name="country-allow-list-syd"></a>
+
+You can call the following countries by default:
++ Australia
++ New Zealand
++ Philippines
++ United States
+
+### Prefixes that are not allowed by default<a name="prefixes-not-allowed"></a>
+
+**UK** numbers with the following prefixes are not allowed by default:
 + \+447 \+44111 \+44118 \+44119 \+448 \+44826 \+449 
 
 Before you can dial these UK mobile numbers, you must submit a service quota increase request\.
+
+**Japan** mobile numbers with the following prefixes are not allowed by default:
++ \+8170, 8180, and 8190
+
+Before you can dial these Japan mobile numbers, you must submit a service quota increase request\.
 
 ## Amazon Connect API throttling quotas<a name="connect-api-quotas"></a>
 
@@ -120,3 +187,15 @@ Amazon Connect Contact Lens throttling quotas are by account, not by user and no
 
 When you use the [Amazon Connect Contact Lens API](https://docs.aws.amazon.com/contact-lens/latest/APIReference/Welcome.html), the number of requests per second is limited to the following:
 + [ListRealtimeContactAnalysisSegments](https://docs.aws.amazon.com/contact-lens/latest/APIReference/ListRealtimeContactAnalysisSegments.html): a RateLimit of 1 request per second, and a BurstLimit of 2 requests per second\.
+
+## Amazon Connect Voice ID Service API throttling quotas<a name="voiceid-api-quotas"></a>
+
+
+| API | Default TPS throttling limits | 
+| --- | --- | 
+|  EvaluateSession  |  60  | 
+|  Domain APIs: CreateDomain, DescribeDomain, UpdateDomain, DeleteDomain, ListDomains Batch APIs: StartSpeakerEnrollmentJob, DescribeSpeakerEnrollmentJob, ListSpeakerEnrollmentJobs, StartFraudsterRegistrationJob, DescribeFraudsterRegistrationJob, ListFraudsterRegistrationJobs  |  2  | 
+|  ListSpeakers  |  5  | 
+|  DescribeSpeaker, OptOutSpeaker, DeleteSpeaker, DescribeFraudster, DeleteFraudster  |  10  | 
+|  CreateIntegrationAssociation, DeleteIntegrationAssociation, ListIntegrationAssociation  |  2  | 
+|  TagResource, UnTagResource, ListTagsForResource  |  2  | 

@@ -1,4 +1,4 @@
-# Glossary<a name="glossary"></a>
+# Amazon Connect Glossary<a name="glossary"></a>
 
 ## Channel<a name="channel-def"></a>
 

@@ -37,7 +37,7 @@ Here's how this block works:
 
 1. The additional seconds makes this specific contact look artificially older than it is\. 
 
-1. The routing system now perceives this contact’s “time in queue” as longer than it actually is, which affects its position within the ranked list\.
+1. The routing system now perceives this contact's “time in queue” as longer than it actually is, which affects its position within the ranked list\.
 
 ## Configuration tips<a name="change-routing-priority-tips"></a>
 + When using this block, it takes at least 60 seconds for a change to take effect for contacts already in queue\. 

@@ -1,4 +1,4 @@
-# Design your contact center in Amazon Connect<a name="architecture-guidance"></a>
+# Architectural guidance for Amazon Connect<a name="architecture-guidance"></a>
 
 *Authored by Mike Woodward, Naveen Narayan, Jeremy Puent, Anjali Khambete, Cameron Worrell, Sayed Hassan, Bamba Diouf, Ramprasad Srirama, Tu Do, Clifton Wiser — Solution Architects, Amazon Web Services*
 

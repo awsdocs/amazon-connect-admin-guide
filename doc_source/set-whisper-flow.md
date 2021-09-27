@@ -8,7 +8,7 @@ A *whisper flow* is what a customer or agent experiences when they are joined in
 + An agent and customer are joined in a **chat**\. Using a contact attribute, an agent whisper flow records which agent is being connected to the conversation\. This attribute is then used in a disconnect flow to route the contact back to the same agent if the customer has a follow\-up question after the agent disconnects\.
 
 A whisper flow has the following characteristics:
-+ It’s a one\-sided interaction: either the customer hears or sees it, or the agent does\.
++ It's a one\-sided interaction: either the customer hears or sees it, or the agent does\.
 + It can be used to create personalized and automated interactions\.
 + It runs when a customer and agent are being connected\.
 
@@ -26,6 +26,7 @@ For chat conversations, you need to include a **Set whisper flow** block for def
 +  If a customer disconnects while the customer whisper is running, the contact ends\.
 + If an agent whisper flow or customer whisper flow includes a block that chat does not support, such as [Start](start-media-streaming.md)/[Stop](stop-media-streaming.md) media streaming or [Set voice](set-voice.md), chat skips these blocks and triggers an error branch\. However, it doesn't prevent the contact flow from progressing\.
 + Whisper flows don't appear in transcripts\.
++ Whispers can be a maximum of 2 minutes long\. After that point, the contact or agent is disconnected\.
 
 ## Supported channels<a name="set-whisper-channels"></a>
 
@@ -57,6 +58,8 @@ For information about using attributes, see [Use Amazon Connect contact attribut
 ## Configuration tips<a name="set-whisper-tips"></a>
 + In a single block, you can set either a customer whisper or an agent whisper, but not both\. Instead, use multiple **Set whisper flow** blocks in your contact flow\.
 + If you use a [Play prompt](play.md) block instead of a **Set whisper** block in an agent whisper flow or customer whisper flow, in a voice conversation the prompt is audible to both the agent and the customer\. In a chat, however, only the agent or customer sees the **Play prompt** text\.
++ Make sure your whispers are able to complete within two minutes\. Otherwise, calls will be disconnected before being established\.
++ If agents appear to be stuck in the "Connecting\.\.\." state before being forcefully disconnected from calls, make sure that your configured whisper flows meet the two minute maximum\.
 
 ## Configured block<a name="set-whisper-configured"></a>
 

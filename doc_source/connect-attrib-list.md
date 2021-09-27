@@ -13,7 +13,8 @@ Not all blocks in a contact flow support using System attributes\. For example, 
 
 | Attribute | Description | Type | JSONPath Reference | 
 | --- | --- | --- | --- | 
-| Customer number | The customer’s phone number\. When used in an outbound whisper flow, this is the number that the agents dialed to reach the customer\. When used in inbound flows, this is the number from which the customer placed the call\. This attribute is included in Contact Trace Records \(CTRs\)\. When used in a Lambda function, it's included in the input object under CustomerEndpoint\.  | System | $\.CustomerEndpoint\.Address | 
+| Customer number | The customer's phone number\. When used in an outbound whisper flow, this is the number that the agents dialed to reach the customer\. When used in inbound flows, this is the number from which the customer placed the call\. This attribute is included in Contact Trace Records \(CTRs\)\. When used in a Lambda function, it's included in the input object under CustomerEndpoint\.  | System | $\.CustomerEndpoint\.Address | 
+| Customer ID | The customer's identification number\.  | System | $\.CustomerId | 
 | Dialed number | The number the customer dialed to call your contact center\. This attribute is included in CTRs\. When used in a Lambda function, it's included in the input object under SystemEndpoint\. | System | $\.SystemEndpoint\.Address | 
 | Customer callback number | The number that Amazon Connect uses to call back the customer\. This number can be the one used for a queued callback, or when an agent is dialing from the CCP\. Transfer to callback queue functionality, or for an agent dialing from the CCP\. The default value is the number that the customer used to call your contact center\. However, it can be overwritten with the **Set callback number** block\.  This attribute is not included in CTRs, and it's not accessible in Lambda input\. However, you can copy the attribute to a user\-defined attribute with the Set contact attribute block, which is included in CTRs\. You can also pass this attribute as a Lambda input parameter in an Invoke AWS Lambda function block, which is not included in CTRs\.  | System | not applicable | 
 | Stored customer input | An attribute created from the most recent invocation of a **Store customer input** block\. The attribute values created from the most recent Store customer input block invocation\. This attribute is not included in CTRs, and is not accessible in Lambda input\. You can copy the attribute to a user\-defined attribute with the Set contact attribute block, which is included in CTRs\. You can also pass this attribute as a Lambda input parameter in an Invoke AWS Lambda function block,  | System | not applicable | 
@@ -24,7 +25,7 @@ Not all blocks in a contact flow support using System attributes\. For example, 
 | Contact id | The unique identifier of the contact\. | System | $\.ContactId | 
 | Initial contact id | The unique identifier for the contact associated with the first interaction between the customer and your contact center\. Use the initial contact ID to track contacts between contact flows\.  | System | $\.InitialContactId | 
 | Previous contact id | The unique identifier for the contact before it was transferred\. Use the previous contact ID to trace contacts between contact flows\. | System | $\.PreviousContactId | 
-| Channel | The method used to contact your contact center, either VOICE or CHAT\.  | System | $\.Channel | 
+| Channel | The method used to contact your contact center: VOICE, CHAT, TASK\.   | System | $\.Channel | 
 | Instance ARN | The ARN for your Amazon Connect instance\. | System | $\.InstanceARN | 
 | Initiation method | How the contact was initiated\. Valid values include: INBOUND, OUTBOUND, TRANSFER, CALLBACK, QUEUE\_TRANSFER, DISCONNECT, and API\. Initiation method doesn't work in Agent whisper flows or Customer whisper flows\. | System | $\.InitiationMethod | 
 | Name | The name of the task\. | System | $\.Name | 
@@ -162,3 +163,25 @@ Use user\-defined attributes in situations where you want to store values in a c
 | Any name you choose | A user\-defined attribute has two parts: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/connect-attrib-list.html)  | User\-defined | $\.Attributes\.*name\_of\_your\_destination\_key* | 
 
 To create user\-defined attributes, use the [Set contact attributes](set-contact-attributes.md) block\. 
+
+## Apple Business Chat attributes<a name="apple-business-chat-attributes"></a>
+
+Use the following contact attributes to route Apple Business Chat customers\. For example, if you have different lines of business using Apple Business Chat, you can branch to different contact flows based on the AppleBusinessChatGroup contact attribute\. Or, if you want to route Apple Business Chat messages differently from other chat messages, you can branch based on MessagingPlatform\. 
+
+
+| Attribute | Description | Type | JSON | 
+| --- | --- | --- | --- | 
+|  MessagingPlatform  |  The messaging platform from where the customer request originated\.  Exact value: **AppleBusinessChat**  | User\-defined | $\.Attributes\.MessagingPlatform | 
+|  AppleBusinessChatCustomerId  |  The customer’s opaque ID provided by Apple\. This remains constant for the AppleID and a business\. You can use this to identify if the message is from a new customer or a returning customer\.  | User\-defined | $\.Attributes\.AppleBusinessChatCustomerId | 
+|  AppleBusinessChatIntent  |  You can define the intent or purpose of the chat\. This parameter is included in a URL that initiates a chat session in Messages when a customer chooses the **Business Chat** button\.  | User\-defined | $\.Attributes\.AppleBusinessChatIntent | 
+|  AppleBusinessChatGroup  |  You define the group which designates the department or individuals best qualified to handle the customer’s particular question or problem\. This parameter is included in a URL that initiates a chat session in Messages when a customer chooses the **Business Chat** button\.   | User\-defined | $\.Attributes\.AppleBusinessChatGroup | 
+|  AppleBusinessChatLocale  |  Defines the language and AWS Region preferences that the user wants to see in their user interface\. It consists of a language identifier \(ISO 639\-1\) and a Region identifier \(ISO 3166\)\. For example, **en\_US**\.   | User\-defined | $\.Attributes\.AppleBusinessChatLocale | 
+
+## Customer Profiles attributes<a name="customer-profiles-attributes"></a>
+
+Use the following contact attributes to autopopulate customer profiles in the agent app using the value of your choosing\. 
+
+
+| Attribute | Description | Type | JSONPath Reference | 
+| --- | --- | --- | --- | 
+| profileSearchKey | A user\-defined attribute that has two parts: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/connect-attrib-list.html)  | User\-defined | $\.Attributes\.*name\_of\_your\_destination\_key* | 

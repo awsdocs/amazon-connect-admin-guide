@@ -25,8 +25,8 @@ If no Neural version is available, Amazon Connect defaults to the standard voice
 
 1. If prompted to login, enter your AWS account credentials\.
 
-1. Choose the name of the instance from the **Instance Alias** column\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance-alias.png)
+1. Choose the name of the instance from the **Instance alias** column\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Contact flows**\.
 

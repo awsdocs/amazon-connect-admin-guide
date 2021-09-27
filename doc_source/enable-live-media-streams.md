@@ -14,7 +14,7 @@ Live media streaming \(customer audio streams\) is not enabled by default\. You 
 
 1. Enter a prefix for the Kinesis Video Streams created for your customer audio\. This prefix makes it easier for you to identify the stream with the data\.
 
-1. Choose the KMS master key to use to encrypt the data sent to Kinesis\. The KMS key must be in the same Region as the instance\. 
+1. Choose the KMS key to use to encrypt the data sent to Kinesis\. The KMS key must be in the same Region as the instance\. 
 
 1. Specify a number and unit for the **Data retention period**\. If you select **No data retention**, data is not retained and can be used only for immediate consumption\.
 

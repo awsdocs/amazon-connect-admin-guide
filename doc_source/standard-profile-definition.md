@@ -18,7 +18,7 @@ The following table lists all the fields in the Customer Profiles standard profi
 |  PhoneNumber  | String  | The customer's phone number, which has not been specified as a mobile, home, or business number\. | 
 |  MobilePhoneNumber  | String  | The customer's mobile phone number\. | 
 |  HomePhoneNumber  | String  | The customer's home phone number\. | 
-|  BusinesPhoneNumber  | String  | The customer's business phone number\. | 
+|  BusinessPhoneNumber  | String  | The customer's business phone number\. | 
 |  EmailAddress  | String  | The customer’s email address, which has not been specified as a personal or business address\. | 
 |  BusinessEmailAddress  | String  | The customer’s business email address\. | 
 |  Address  | Address  | A generic address associated with the customer that is not mailing, shipping, or billing\. | 

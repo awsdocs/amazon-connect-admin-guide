@@ -6,8 +6,6 @@ Thanks to your feedback, we've made changes to Amazon Connect metrics\. This top
 
 We are upgrading the performance of the **Real\-time metrics** page so reload times are faster\. The page will have the same functionality and user experience as the existing **Real\-time metrics** page\.
 
-This upgrade will be rolled out to all Regions between July 19, 2021, and September 19, 2021\. These dates are subject to change\. 
-
 ## Upcoming changes: Download the Agent activity audit report<a name="upcoming-changes-reports"></a>
 
 The following changes will be released in the future:

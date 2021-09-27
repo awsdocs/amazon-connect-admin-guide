@@ -9,11 +9,25 @@ When you filter by Contact ID, only results for that specific contact will be re
 ## What's new in contact search<a name="new-contact-search-experience"></a>
 
 Thanks to your feedback, we've made the following changes to contact search\.
-+ Search up to 8 weeks\.
-+ Multi\-select for filters such as agent names, contact queues, contact flows, and more\. Previously only single\-select was supported\. 
 
-  This new feature is available only for searches with a date range that starts November 2, 2020, or later, when the feature was released\. If you search for contacts that occurred before November 2, 2020, you will be prompted to ensure only one value is selected for each filter mentioned above\. 
-+ New filters for [Contact Lens for Amazon Connect](analyze-conversations.md)\. You can now [search for Contact categories](search-conversations.md#contact-category-search) by specifying the full category name\.
+To use the **Agent** filter on the **Contact search** page, in your Amazon Connect security profile you must have **Users \- View** permissions, as shown in the following image: 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search.png)
+
+When you have **Users \- View** permissions, on the **Contact search** page the **Agent** filter appears, as shown in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search1.png)
+
+Without **User \- View** permissions, the **Agent** filter is not visible, and searching contacts by Agent login is not supported, as shown in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search2.png)
+
+## Key search features<a name="key-search-features"></a>
++ Search a time range up to 8 weeks\.
++ Multi\-select for filters such as agent names, contact queues, contact flows, and more\. 
+
+  This feature is available only for searches with a date range that starts November 2, 2020, or later, when the feature was released\. If you search for contacts that occurred before November 2, 2020, you will be prompted to ensure only one value is selected for each filter mentioned above\. 
++ Filters for [Contact Lens for Amazon Connect](analyze-conversations.md)\. You can [search for Contact categories](search-conversations.md#contact-category-search) by specifying the full category name\.
 
   In the **Add filter** drop\-down box, the Contact Lens filters have **CL** next to them\. You can apply these filters only if your organization has enabled Contact Lens\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-contact-category-1.png)
@@ -67,7 +81,7 @@ Use the options under **Additional fields** to add columns in your search result
 For example, if you want to include columns for **Agent Name** and **Routing profile** in your search output, choose those columns here\.
 
 **Tip**  
-The **Is transferred out** option provides the date and time \(in UTC time\) when the transfer was connected\. It maps to `TransferCompletedTimestamp` in the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord)\. 
+The **Is transferred out** option indicates whether the contact was transferred to an external number\. For the the date and time \(in UTC time\) when the transfer was connected, see `TransferCompletedTimestamp` in the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord)\. 
 
 ## Download search results<a name="download-search-results"></a>
 

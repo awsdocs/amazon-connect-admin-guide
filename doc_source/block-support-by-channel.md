@@ -7,11 +7,13 @@ The following table lists all available contact blocks, and whether they support
 | --- | --- | --- | --- | 
 | [Call phone number](call-phone-number.md)  | Yes | No \- Error branch | No \- Error branch | 
 |  [Change routing priority / age](change-routing-priority.md)   | Yes | Yes | Yes | 
+|  [Check call progress](check-call-progress.md)   | Yes | No \- Error branch | No \- Error branch | 
 |  [Check contact attributes](check-contact-attributes.md)   | Yes | Yes | Yes | 
 |   [Check hours of operation](check-hours-of-operation.md)  | Yes | Yes | Yes | 
 |   [Check queue status](check-queue-status.md)   | Yes | Yes | Yes | 
-|   [Check security status](check-security-status.md)   | Yes | No \- Error branch | No \- Error branch | 
+|   [Check Voice ID](check-voice-id.md)   | Yes | No \- Error branch | No \- Error branch | 
 |   [Check staffing](check-staffing.md)   | Yes | Yes | Yes | 
+|   [Create task](create-task-block.md)   | Yes | Yes | Yes | 
 |  [Disconnect / hang up](disconnect-hang-up.md)  | Yes | Yes | Yes | 
 |   [Distribute by percentage](distribute-by-percentage.md)   | Yes | Yes | Yes | 
 |   [End flow / Resume](end-flow-resume.md)   | Yes | Yes | Yes | 
@@ -28,8 +30,8 @@ The following table lists all available contact blocks, and whether they support
 |   [Set disconnect flow](set-disconnect-flow.md)   | Yes | Yes | Yes | 
 |   [Set hold flow](set-hold-flow.md)   | Yes | No \- Error branch | No \- Error branch | 
 |   [Set logging behavior](set-logging-behavior.md)   | Yes | Yes | Yes | 
-|   [Set recording and analytics behavior ](set-recording-behavior.md)  | Yes | Yes | No \- Error branch | 
-|   [Set security behavior](set-security-behavior.md)   | Yes | No \- Error branch | No \- Error branch | 
+|   [Set recording and analytics behavior](set-recording-behavior.md)  | Yes | Yes | No \- Error branch | 
+|   [Set Voice ID](set-voice-id.md)   | Yes | No \- Error branch | No \- Error branch | 
 |  [Set voice](set-voice.md)   | Yes | No \- Success branch | No \- Success branch | 
 |   [Set whisper flow](set-whisper-flow.md)  | Yes | Yes | No \- Error branch | 
 |   [Set working queue](set-working-queue.md)   | Yes | Yes | Yes | 

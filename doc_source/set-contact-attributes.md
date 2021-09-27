@@ -2,7 +2,7 @@
 
 ## Description<a name="set-contact-attributes-description"></a>
 + Stores key\-value pairs as contact attributes\.
-+ Contact attributes are accessible by other areas of Amazon Connect, such as the CTRs\. 
++ Contact attributes are accessible by other areas of Amazon Connect, such as Contact Trace Records \(CTRs\)\. 
 
   For more information about how to use contact attributes, see [Use Amazon Connect contact attributes](connect-contact-attributes.md)\. 
 
@@ -26,8 +26,12 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-contact-attributes-properties.png)
 
-**Tip**  
-When using a user\-defined destination key, you can name it anything you want but don't include the **$** and **\.** \(period\) characters\. They are not allowed because they are both used in defining the attribute paths in JSONPath\.
+## Configuration tips<a name="set-contact-attributes-tips"></a>
++ When using a user\-defined destination key, you can name it anything you want but don't include the **$** and **\.** \(period\) characters\. They are not allowed because they are both used in defining the attribute paths in JSONPath\.
++ You can use the **Set contact attribute** block to set the language attribute required for an Amazon Lex V2 bot\. \(Your language attribute in Amazon Connect must match the language model used to build your Amazon Lex V2 bot\.\)  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-contact-attributes-language.png)
+
+  Or, you can use the [Set voice](set-voice.md) block to set the language required for an Amazon Lex V2 bot\. 
 
 ## Configured block<a name="set-contact-attributes-configured"></a>
 

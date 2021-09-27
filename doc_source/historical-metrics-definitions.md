@@ -69,15 +69,11 @@ Sum of [Agent interaction time](#agent-interaction-time-historical) and [Custome
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
 
-This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
-
 ## Agent interaction time<a name="agent-interaction-time-historical"></a>
 
 Total time that agents spent interacting with customers on inbound and outbound contacts\. This does not include [Customer Hold Time](#customer-hold-time-historical) or [After Contact Work Time](#acw-historical)\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
-
-This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
 
 ## Agent last name<a name="agent-last-name-historical"></a>
 
@@ -177,8 +173,6 @@ Average time that agents interacted with customers during inbound and outbound c
 In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is INTERACTION\_TIME\.
 + Type: String \(*hh:mm:ss*\)
 + Category: CTR\-driven metric
-
-This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
 
 ## Average agent outbound connecting time<a name="htm-avg-agent-outbound-connecting-time"></a>
 
@@ -385,7 +379,7 @@ In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/A
 
 ## Contacts transferred in<a name="contacts-transferred-in-historical"></a>
 
-Count of contacts transferred to the queue by an agent using the CCP\.
+Count of contacts transferred in from queue to queue, and transferred in by an agent using the CCP\.
 
 In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_TRANSFERRED\_IN\.
 + Type: Integer 
@@ -401,7 +395,7 @@ In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/A
 
 ## Contacts transferred out<a name="contacts-transferred-out-historical"></a>
 
-Count of contacts transferred from the queue after being answered by an agent\.
+Count of contacts transferred out from queue to queue, and transferred out by an agent using the CCP\.
 
 In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_TRANSFERRED\_OUT\.
 + Type: Integer 

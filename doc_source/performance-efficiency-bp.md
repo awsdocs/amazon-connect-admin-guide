@@ -42,7 +42,7 @@ For example, you can play prompts or use Text\-to\-Speech \(TTS\) to greet calle
 
 ## Load testing<a name="loadtesting-bp"></a>
 
-If you need to run load or scale testing, you can employ third\-party or partner solutions to run load tests, or develop your own custom solution using the Amazon Connect [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API to generate calls combined with browser automation scripts to simulate agent behavior\. Before to performing load tests, review and follow the [Amazon Connect Load Testing Policy](http://aws.amazon.com/connect/testing/.html)\. 
+If you need to run load or scale testing, you can employ third\-party or partner solutions to run load tests, or develop your own custom solution using the Amazon Connect [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API to generate calls combined with browser automation scripts to simulate agent behavior\. Before to performing load tests, review and follow the [Amazon Connect Load Testing Policy](http://aws.amazon.com/connect/testing/)\. 
 
 ## Agent enablement<a name="agentenablement-bp"></a>
 
@@ -82,7 +82,7 @@ Amazon Lex is a service that allows you to create intelligent conversational cha
 
 Building an effective Amazon Lex bot requires providing simple and realistic utterances as training sets to the bot, periodically reviewing your bot’s performance, updating your utterance set, and modifying the bot based on such a review\. For more information, see the following resources: 
 + [Monitoring in Amazon Lex](https://docs.aws.amazon.com/lex/latest/dg/monitoring-aws-lex.html)
-+ [Building Better bots using Amazon Lex](http://aws.amazon.com/blogs/blogs/machine-learning/building-better-bots/)
++ [Building Better bots using Amazon Lex](http://aws.amazon.com/blogs/machine-learning/building-better-bots/)
 
 ### Amazon Kinesis<a name="amazonkinesis-bp"></a>
 
@@ -91,9 +91,9 @@ For situations where you need to gain additional insight from your contact metri
 + Use Amazon Kinesis video stream \(KVS\) and AWS Lambda to transcribe call recordings or voice contacts in real\-time using Amazon Transcribe and send the resulting text to Amazon Comprehend for sentiment analysis\.
 + Leverage the [Amazon Connect Agent Event Kinesis Stream](agent-event-streams.md) for real\-time agent CTI and schedule adherence data\.
 
-### Amazon Elasticsearch Service and Kibana<a name="kibana-bp"></a>
+### Amazon OpenSearch Service and Kibana<a name="kibana-bp"></a>
 
-Using Amazon Elasticsearch Service and Kibana to process real\-time Amazon Connect data gives you a flexible way to query and visualize real\-time and historical Amazon Connect data beyond native reporting capabilities\.
+Using Amazon OpenSearch Service and Kibana to process real\-time Amazon Connect data gives you a flexible way to query and visualize real\-time and historical Amazon Connect data beyond native reporting capabilities\.
 
 ### Amazon Connect Contact Lens<a name="contactlens-bp"></a>
 

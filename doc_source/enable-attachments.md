@@ -13,9 +13,6 @@ You will need to update your customer\-facing user interface to support attachme
 1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
-1. Choose **Data storage**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/attachments-datastorage.png)
-
 1. On the **Data storage** page, under the **Attachments**, choose **Edit**, select **Enable Attachments sharing**, and then choose **Save**\.
 
    Storage options appear, similar to the following image\.  
@@ -38,7 +35,13 @@ To allow customers and agents to upload and download files, update your cross\-o
 
 **To configure CORS on the attachments bucket**
 
-1. Find the name of the Amazon S3 bucket for storing attachments: In the Amazon Connect console, choose **Data storage**, and locate the Amazon S3 bucket name\.
+1. Find the name of the Amazon S3 bucket for storing attachments: 
+
+   1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
+
+   1. In the Amazon Connect console, choose **Data storage**, and locate the Amazon S3 bucket name\. 
+
+1. Open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
 1. In the Amazon S3 console, select your Amazon S3 bucket\. 
 

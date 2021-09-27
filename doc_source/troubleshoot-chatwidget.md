@@ -35,3 +35,11 @@ If you have implemented the callback already, the following scenarios may still 
 A 404 status code indicates that your `widgetId` cannot be found\. Verify that your snippet is exactly how it was copied from the Amazon Connect website, and none of the identifiers have changed\.
 
 If the identifiers have not changed and you are seeing a 404, contact AWS Support\. 
+
+## 500 Internal server error<a name="500-internalservererror-chatwidget"></a>
+
+This can be caused by your service\-linked role not having the required permissions to start chat\. This happens if your Amazon Connect instance was created before October 2018 because you don’t have service\-linked roles set up\.
+
+**Solution**: Add the `connect:*` policy on the role that is associated with your Amazon Connect instance\. For more information, see [Use service\-linked roles for Amazon Connect](connect-slr.md)\.
+
+If your service\-linked role has the correct permissions, contact AWS Support\.

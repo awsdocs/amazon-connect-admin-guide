@@ -34,4 +34,4 @@ Analytics is only supported by the voice channel\.
 
 ## Corresponding block in the UI<a name="updatecontactrecordingbehavior-ui"></a>
 
-[Set recording and analytics behavior ](set-recording-behavior.md)
+[Set recording and analytics behavior](set-recording-behavior.md)

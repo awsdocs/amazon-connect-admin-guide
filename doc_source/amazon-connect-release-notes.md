@@ -5,8 +5,9 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 **Topics**
 + [Upcoming change: Faster reload times for the Real\-time metrics page](#upcoming-changes-metrics-rtm-page2021)
 + [Upcoming change: Fix for agent event stream](#upcoming-changes-agent-eventstream-april21)
-+ [Upcoming change: New "Next status" for agents](#upcoming-changes-next-status)
-+ [Coming soon: New AppIntegrations Service APIs](#upcoming-appintegrations-apis)
++ [September 2021 Updates](#sept21-release-notes)
++ [August 2021 Updates](#august21-release-notes)
++ [July 2021 Updates](#july21-release-notes)
 + [June 2021 Updates](#june21-release-notes)
 + [May 2021 Updates](#may21-release-notes)
 + [April 2021 Updates](#april21-release-notes)
@@ -21,94 +22,69 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 
 We are upgrading the performance of the **Real\-time metrics** page so reload times are faster\. The page will have the same functionality and user experience as the existing **Real\-time metrics** page\.
 
-This upgrade will be rolled out to all Regions between July 19, 2021, and September 19, 2021\. These dates are subject to change\. 
-
 ## Upcoming change: Fix for agent event stream<a name="upcoming-changes-agent-eventstream-april21"></a>
 
 There is currently an issue in the contacts section of Agent Event Stream events where the initiationMethod is **TRANSFER** for both contacts that are initiated by queue\-to\-queue transfer, and contacts that were initiated by agent transfer\. With this fix, the initiationMethod will correctly reflect **QUEUE\_TRANSFER** and **TRANSFER** respectively, to align with the correct behavior in the Contact Trace Record\. 
 
-## Upcoming change: New "Next status" for agents<a name="upcoming-changes-next-status"></a>
+## September 2021 Updates<a name="sept21-release-notes"></a>
 
+### Released Amazon Connect Wisdom General Availability<a name="wisdom-sept21"></a>
 
-|  | 
-| --- |
-| This feature will be available only to customers who are using the latest Contact Control Panel \(CCP\)\. The URL for the latest CCP ends with **ccp\-v2**\.  | 
+For more information, see [Deliver information to agents using Amazon Connect Wisdom](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-wisdom.html) and the [Amazon Connect Wisdom API Reference](https://docs.aws.amazon.com/wisdom/latest/APIReference/Welcome.html)\. 
 
-In busy contact centers, it can be difficult for agents to take a break or go offline when contacts are being quickly routed to them\. To help agents manage their time, we will release a feature that lets agents pause new contacts being routed to them while they finish their current contacts\. When all their slots are cleared, Amazon Connect automatically sets agents to the next status, such as **Lunch**\.
+### Amazon Connect Voice ID \- General Availability<a name="voiceid-sept21"></a>
 
-The following images of the Contact Control Panel \(CCP\) show how agents use this feature\.
+For more information, see [Use real\-time caller authentication with Voice ID](https://docs.aws.amazon.com/connect/latest/adminguide/connect/latest/adminguide/voice-id.html) and the [Amazon Connect Voice ID API Reference](https://docs.aws.amazon.com/voiceid/latest/APIReference/Welcome.html)\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/next-status-example-new.png)
+### Preview release of Amazon Connect High\-Volume Outbound Communications<a name="outbound-sept21"></a>
 
-1. The agent is on a contact\.
+Added content for the preview release of Amazon Connect High\-Volume Outbound Communications\. By using Amazon Pinpoint Journeys and Amazon Connect, you can now create high\-volume outbound campaigns for voice, SMS, and email\. For more information, see [Enable High\-Volume Outbound Communications](https://docs.aws.amazon.com/connect/latest/adminguide/enable-high-volume-outbound-communications.html)\. 
 
-1. The agent chooses their next status, such as **Lunch**\. They can choose only a custom \([NPT](real-time-metrics-definitions.md#non-productive-time-real-time)\) status, or **Offline**\. 
+### New Amazon AppIntegrations Service APIs<a name="appintegrations-apis"></a>
 
-1. The agent is in **Next status: Lunch**\. They are still on contact\. No new contacts can be routed to them\. 
+New DataIntegration APIs for the Amazon AppIntegrations Service: `CreateDataIntegration`, `DeleteDataIntegration`, `GetDataIntegration`, `ListDataIntegrationAssociations`, `ListDataIntegrations`, `UpdateDataIntegration`\. 
 
-1. The contact ends\. The agent finishes ACW, and chooses **Clear contact**\. Instead of going back to **Available**, their CCP is automatically set to **Lunch**\. 
+For more information, see [Amazon AppIntegrations Service API Reference](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html)\.
 
-### How to cancel "Next status"<a name="next-status-example"></a>
+### Display name and contact attributes in chat<a name="chat-sept21"></a>
 
-Agents can easily switch from **Next status** back to **Available**\. The ability to switch their status is useful, for example, if they accidentally choose **Next status: Lunch**, or if they decide not to go to **Lunch** before Amazon Connect automatically sets to that status\. 
+You can now personalize the chat experience, as you can specify the name of your customer that interacts using the chat user interface\. You can also securely pass the contact attributes to capture information about the contact which can be used in the contact flow to further personalize the experience\. For more information, see [Pass the customer display name when a chat initializes](https://docs.aws.amazon.com/connect/latest/adminguide/pass-display-name-chat.html) and [Pass contact attributes when a chat initializes](https://docs.aws.amazon.com/connect/latest/adminguide/pass-contact-attributes-chat.html)\. 
 
-The following images show this workflow\.
+### Preview of agent application<a name="customerprofiles-sept21"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/next-status-example-cancel.png)
+Launched an updated UI for the agent application preview that combines Customer Profiles and the Contact Control Panel \(CCP\)\. For more information, see [Access Customer Profiles in the agent application](https://docs.aws.amazon.com/connect/latest/adminguide/customer-profile-access.html)\. 
 
-1. While working on the same contact, the agent cancels **Next status: Lunch** and goes back to **Available**\.
+### Added Create task block<a name="contactblocks-sept21"></a>
 
-1. The contact ends and the agent is still **Available** for new contacts to be routed to them\. 
+Added the **Create task** block\. It creates a new task, sets the tasks attributes, and initiates a contact flow to start the task\. For more information, see [Contact block: Create task](https://docs.aws.amazon.com/connect/latest/adminguide/create-task-block.html)\. 
 
-### Example 1: Set "Next status" while handling only ACW contacts<a name="next-status-examples-acw"></a>
+## August 2021 Updates<a name="august21-release-notes"></a>
 
-Let's say an agent is finishing after contact work \(ACW\) for one or more contacts, such as a voice contact or multiple chats\. They are not on contact with anyone\.
+### Improved user interface for Amazon Connect console<a name="adminconsole-august21"></a>
 
-Instead of choosing **Clear contact** when the agent finishes ACW, they choose **Lunch**\. This puts them in **Next status: Lunch** only briefly\. 
+Released a redesigned and improved user interface for the Amazon Connect console, making it easier and faster to manage Amazon Connect instances\. For more information, see [Create an Amazon Connect instance](amazon-connect-instances.md)\. 
 
-Here's what happens in this scenario:
+### APIs for Hours of Operation and Agent Status \(Preview\)<a name="apis-august21"></a>
 
-1. Agent finishes ACW and chooses **Lunch** instead of **Clear contact**\.
+Released for ungated preview new APIs for managing hours of operation and agent status\. For more information, see [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\.
 
-1. Amazon Connect stops routing new contacts to them\.
+### Contact Lens: Build rules that generate tasks and EventBridge events<a name="contact-lens-august21"></a>
 
-1. All their slots are cleared\. This is so the agent doesn't have to choose **Clear contact** to end the ACW\. 
+Contact Lens rules now allow you to automatically generate tasks and EventBridge events based on uttered keywords, sentiment scores, customer attributes, and other criteria\. For more information, see [Build rules with Contact Lens](build-rules-for-contact-lens.md)\.
 
-1. Because all the ACWs have been cleared, Amazon Connect immediately starts the automatic transition that sets the agent's status to **Lunch**\.
+### Networking: Allow AWS Global Accelerator<a name="august-networking-2021"></a>
 
-   Agents were put into **Next status \- Lunch** only briefly \(milliseconds\!\)\. They might even see it in the CCP if they look fast enough\. 
+When using SAML Sign\-In to your Amazon Connect instance, you now need to add the AWS Global Accelerator domain, **\*\. awsglobalaccelerator\.com**, to your allow list\. For more information, see [Set up your network](ccp-networking.md)\.
 
-This order of events mirrors how the CCP currently works when agents change their status while working on ACW\. For example, an agent is finishing ACW and they set their status to **Lunch**\. Here's what happens next:
+## July 2021 Updates<a name="july21-release-notes"></a>
 
-1. Amazon Connect stops routing new contacts to them\.
+### "Next status" feature for the CCP<a name="next-status-2021"></a>
 
-1. The ACW slot is cleared for the agent so they don't have to choose **Clear contact**\. 
+In busy contact centers, it can be difficult for agents to take a break or go offline when contacts are being quickly routed to them\. To help agents manage their time, we have released a feature that lets agents pause new contacts being routed to them while they finish their current contacts\. When all their slots are cleared, Amazon Connect automatically sets agents to the next status, such as **Lunch**\.
 
-1. The agent is set to **Lunch**\.
+For details about how agents use this feature, see [Set your "Next status"](set-next-status.md)\.
 
-### Example 2: Set "Next status" while managing some chats on contact and other chats in ACW<a name="next-status-examples-oncontact"></a>
-
-Let's say an agent is managing two chats: 
-+ Customer 1 is in ACW\.
-+ Customer 2 is on contact\.
-
-While still on a contact, the agent sets their status to **Offline**\. This puts them in the **Next status: Offline** state\. 
-
-Here's what happens in this scenario:
-
-1. The agent sets their status to **Offline**\.
-
-1. Amazon Connect stops routing new contacts to them\.
-
-1. The contact that is in ACW is cleared so the agent doesn't have to choose **Clear contact**\. Only the connected chat remains\.
-
-1. The agent's status is **Next status: Offline**, and they continue working on their connected chat\.
-
-1. After they finish work on that contact, the agent chooses **Clear contact** to end the ACW\. 
-
-1. Amazon Connect automatically sets the agents status to **Offline**\.
-
-### Metrics: No changes due to "Next status"<a name="next-status-metrics"></a>
+#### Metrics: No changes due to "Next status"<a name="next-status-metrics"></a>
 
 When an agent is in **Next status**, their metrics are the same as when their status is **Available**\.
 
@@ -118,7 +94,7 @@ For example, an agent is handling one contact and chooses **Next status**\. Here
 
 **Non\-productive time** \(NPT\) is not incremented when an agent is in **Next status** because the agent is still **Available**\. NPT increments only when the agent actually enters the non\-productive status, such as **Lunch**\.
 
-### Agent event stream has new NextAgentStatus field<a name="agent-event-stream-next-status"></a>
+#### Agent event stream has new NextAgentStatus field<a name="agent-event-stream-next-status"></a>
 
 When an agent sets their status to **Next status**, Amazon Connect populates a new `NextAgentStatus ` field with the next status selected by the agent\. 
 
@@ -155,29 +131,47 @@ When an agent has not selected a **Next status**, the field is `null`, as shown 
 }
 ```
 
-### Amazon Connect Streams API and "Next status"<a name="streams-next-status"></a>
+#### Amazon Connect Streams API and "Next status"<a name="streams-next-status"></a>
 
-When we release this feature, it will have the following effect:
-+ If you integrate with Amazon Connect Streams API and your agents interact directly with the native CCP user interface, then at release your agents will start using this new feature immediately\.
-+ If you integrate with Amazon Connect Streams API but your agents don't interact directly with the native CCP user interface, then at release your contact center will continue to have the previous behavior when agent\.setState\(\) is called: an agent will not be able to select an NPT or Offline status while connected to at least one contact\. 
+The feature has the following effect:
++ If you integrate with Amazon Connect Streams API and your agents interact directly with the native CCP user interface, your agents will start using this new feature immediately\.
++ If you integrate with Amazon Connect Streams API but your agents don't interact directly with the native CCP user interface, your contact center will continue to have the previous behavior when agent\.setState\(\) is called: an agent will not be able to select an NPT or Offline status while connected to at least one contact\. 
 
-  If you are handling state change logic yourself from Amazon Connect Streams, you will need to make additional changes that will be detailed further in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
+  If you are handling state change logic yourself from Amazon Connect Streams, you will need to make additional changes explained in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
 
-## Coming soon: New AppIntegrations Service APIs<a name="upcoming-appintegrations-apis"></a>
+### Contact search: To search contacts by Agent login requires Users \- View permissions in your security profile<a name="contact-search-july21"></a>
 
-New DataIntegration APIs for the AppIntegrations Service: CreateDataIntegration, DeleteDataIntegration, GetDataIntegration, ListDataIntegrationAssociations, ListDataIntegrations, UpdateDataIntegration\. 
+To use the **Agent** filter on the **Contact search** page, in your Amazon Connect security profile you must have **Users \- View** permissions, as shown in the following image: 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search.png)
+
+When you have **Users \- View** permissions, on the **Contact search** page the **Agent** filter appears, as shown in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search1.png)
+
+Without **User \- View** permissions, the **Agent** filter is not visible, and searching contacts by Agent login is not supported, as shown in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search2.png)
 
 ## June 2021 Updates<a name="june21-release-notes"></a>
+
+### Apple Business Chat GA<a name="apple-business-chat-june2021"></a>
+
+Released Apple Business Chat for general availability \(GA\)\. For more information, see [Enable Apple Business Chat](apple-business-chat.md)\.
+
+### Quick connects management API GA<a name="quickconnects-api-june2021"></a>
+
+Released Amazon Connect quick connects management API for general availability \(GA\)\. For more information, see [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\. The quick connects API also supports AWS CloudFormation\. For more information, see [Amazon Connect Resource Type Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Connect.html) in the AWS CloudFormation User Guide\.
+
+### Support for Amazon Lex V2 console and APIs<a name="lexv2-june2021"></a>
+
+For more information on using the Amazon Lex V2 console with Amazon Connect, see [Add an Amazon Lex bot](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-lex)\. Added these three APIs: AssociateLexBot, DisassociateLexBot, and ListLexBots\. See the [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\. 
 
 ### Chat: Increase to chat agent concurrency<a name="chat-june2021"></a>
 
 Chat agents can now handle up to 10 concurrent chat contacts\. For more information, see [Create a routing profile](https://docs.aws.amazon.com/connect/latest/adminguide/routing-profiles)\. 
 
 ## May 2021 Updates<a name="may21-release-notes"></a>
-
-### AppIntegrations Service APIs<a name="appintegrations-apis-may2021"></a>
-
-Added new DataIntegration APIs to the AppIntegrations Service: CreateDataIntegration, DeleteDataIntegration, GetDataIntegration, ListDataIntegrationAssociations, ListDataIntegrations, UpdateDataIntegration\. For more information, see [Amazon AppIntegrations Service API Reference](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html)\.
 
 ### Added contact events<a name="contact-events-may2021"></a>
 
@@ -230,7 +224,7 @@ In addition, note the following fixes for CTRs and the agent event stream for ch
 
 ### Amazon Connect is now available in the Canada \(Central\) Region<a name="new-domain"></a>
 
-Amazon Connect is now available in the Canada \(Central\) AWS Region\. You can claim toll\-free and local telephone numbers from Canadian telephony suppliers\. For a list of countries were the Canada \(Central\) Region is supported, see [Region requirements for phone numbers](https://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)\. For a list of Contact Lens features available in the Canada \(Central\) Region, see [Availability of Contact Lens features by Region](https://docs.aws.amazon.com/connect/latest/adminguide/enable-analytics.html#regions-contactlens)\. 
+Amazon Connect is now available in the Canada \(Central\) Region\. You can claim toll\-free and local telephone numbers from Canadian telephony suppliers\. For a list of countries were the Canada \(Central\) Region is supported, see [Region requirements for phone numbers](https://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)\. For a list of Contact Lens features available in the Canada \(Central\) Region, see [Availability of Contact Lens features by Region](https://docs.aws.amazon.com/connect/latest/adminguide/enable-analytics.html#regions-contactlens)\. 
 
 ### Domain for new Amazon Connect instances is "my\.connect\.aws"<a name="new-domain"></a>
 
@@ -357,7 +351,7 @@ Added Amazon Connect Voice ID \(Preview\), which provides for real\-time caller 
 
 ### Amazon Connect Wisdom \(Preview\)<a name="december20-wisdom"></a>
 
-Added Amazon Connect Wisdom \(Preview\), which enables agents to search and find content across multiple repositories, such as frequently asked questions \(FAQs\), wikis, articles, and step\-by\-step instructions for handling different customer issues\. For more information, see [Amazon Connect Wisdom: Get the content you need](amazon-connect-wisdom.md)\. 
+Added Amazon Connect Wisdom \(Preview\), which enables agents to search and find content across multiple repositories, such as frequently asked questions \(FAQs\), wikis, articles, and step\-by\-step instructions for handling different customer issues\. For more information, see [Deliver information to agents using Amazon Connect Wisdom](amazon-connect-wisdom.md)\. 
 
 ### Amazon Connect with Apple Business Chat \(Preview\)<a name="december20-applebusinesschat"></a>
 
@@ -461,7 +455,7 @@ The following updates were released in August 2020:
 + Added the ability to select, cut, copy, and paste contact flows\. For more information, see [Copy and paste contact flows](copy-paste-contact-flows.md)\. 
 
 #### Telephony<a name="august20-early-media"></a>
-+ Added the ability for all customers to enable/disable media support for outbound phone calls\. For more information, see [Step 3: Telephony options](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect instance](amazon-connect-instances.md) topic\. 
++ Added the ability for all customers to enable/disable media support for outbound phone calls\. For more information, see [Step 3: Set telephony](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect instance](amazon-connect-instances.md) topic\. 
 
 #### Monitoring<a name="august20-monitoring"></a>
 + Added logging of Amazon Connect Participant Service calls with AWS CloudTrail\. For more information, see [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
@@ -525,7 +519,7 @@ The following updates were released in May 2020:
 The following updates were released in April 2020:
 
 #### Telephony<a name="april20-telephony"></a>
-+ Added early media support for outbound phone calls\. Enabled by default, an agent hears tones and audio messages played by phone companies—such as busy signals, failure to connect errors, or other informational messages—through their headset or audio device\. For more information, see [Step 3: Telephony options](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect instance](amazon-connect-instances.md) topic\. 
++ Added early media support for outbound phone calls\. Enabled by default, an agent hears tones and audio messages played by phone companies—such as busy signals, failure to connect errors, or other informational messages—through their headset or audio device\. For more information, see [Step 3: Set telephony](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect instance](amazon-connect-instances.md) topic\. 
 + Added the `barge-in-enabled` session attribute to the [Get customer input](get-customer-input.md) block so customers can interrupt Amazon Lex bots with their voice\. 
 
 ### March 2020 Update<a name="mar20-release-notes"></a>
@@ -623,14 +617,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-### June 2019 Update<a name="w274aac71c31c29"></a>
+### June 2019 Update<a name="w463aac73c33c29"></a>
 
 The following update was released in June 2019:
 
 #### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-### May 2019 Updates<a name="w274aac71c31c31"></a>
+### May 2019 Updates<a name="w463aac73c33c31"></a>
 
 The following updates were released in May 2019:
 
@@ -642,7 +636,7 @@ The following updates were released in May 2019:
 #### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-### April 2019 Updates<a name="w274aac71c31c33"></a>
+### April 2019 Updates<a name="w463aac73c33c33"></a>
 
 The following updates were released in April 2019:
 
@@ -655,7 +649,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-### March 2019 Update<a name="w274aac71c31c35"></a>
+### March 2019 Update<a name="w463aac73c33c35"></a>
 
 The following updates were released in March 2019:
 

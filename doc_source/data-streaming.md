@@ -27,8 +27,8 @@ If you enable server\-side encryption for the Kinesis stream you select, Amazon 
 
 1. Enable encryption for recordings of conversations or scheduled reports\.
 
-1. Create a customer master key \(CMK\) to use for encryption\.
+1. Create a customer managed key to use for encryption\.
 
-1. Choose the same CMK for the Kinesis data stream that you use for scheduled reports or recordings of conversations\.
+1. Choose the same customer managed key for the Kinesis data stream that you use for scheduled reports or recordings of conversations\.
 
    For more information, see [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.

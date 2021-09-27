@@ -187,3 +187,66 @@ Following is an example for granting read access to the data in Amazon Connect C
     ]
 }
 ```
+
+## Query Amazon Connect Wisdom only for a specific Assistant<a name="query-wisdom-assistant"></a>
+
+The following sample policy allows querying only a specific Assistant\. 
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "wisdom:QueryAssistant "
+            ],
+            "Resource": "arn:aws:wisdom:us-west-2:accountID:assistant/assistantID"
+        }
+    ]
+}
+```
+
+## Grant full access to Amazon Connect Voice ID<a name="grant-read-only-access-to-voiceid"></a>
+
+Amazon Connect Voice ID uses `voiceid` as the prefix for actions instead of connect\. The following policy grants full access to a specific domain in Amazon Connect Voice ID: 
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": [
+          "voiceid:*"
+      ],
+      "Resource": "arn:aws:voiceid:us-west-2:accountID:domain/domainName",
+      "Effect": "Allow"
+    }
+  ]
+}
+```
+
+Set up a trusted relationship with accountID to domain domainName\.
+
+## Grant access to Amazon Connect High\-Volume Outbound Communications resources<a name="grant-read-only-access-to-outboundcommunications"></a>
+
+Amazon Connect High\-Volume Outbound Communications uses `connect-campaign` as the prefix for actions instead of `connect`\. The following policy grants full access to a specific high\-volume outbound campaign\. 
+
+```
+{
+    "Sid": "AllowConnectCampaignsOperations",
+    "Effect": "Allow",
+    "Action": [
+        "connect-campaigns:DeleteCampaign",
+        "connect-campaigns:DescribeCampaign",
+        "connect-campaigns:UpdateCampaignName",
+        "connect-camapigns:GetCampaignState"
+        "connect-campaigns:UpdateOutboundCallConfig",
+        "connect-campaigns:UpdateDialerConfig",
+        "connect-campaigns:PauseCampaign",
+        "connect-campaigns:ResumeCampaign",
+        "connect-campaigns:StopCampaign"
+    ],
+    "Resource": "arn:aws:connect-campaigns:us-west-2:accountID:campaign/campaignId",
+    }
+```

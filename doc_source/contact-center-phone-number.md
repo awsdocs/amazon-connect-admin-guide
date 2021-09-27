@@ -11,6 +11,6 @@ If you want to keep a phone number you already have, you can port the phone numb
 + [Claim a phone number in your country](claim-phone-number.md)
 + [Claim a phone number you already own in another country](another-country.md)
 + [Claim phone numbers for Asia Pacific \(Tokyo\)](connect-tokyo-region.md)
-+ [Request international numbers or special numbers](special-request.md)
++ [Request numbers or international numbers](number-request.md)
 + [Release a phone number](release-phone-number.md)
-+ [Region requirements for ordering and porting phone numbers](phone-number-requirements.md)
++ [Telecoms regulations](telecoms-regulations.md)

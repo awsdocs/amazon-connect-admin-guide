@@ -158,6 +158,14 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View customer profiles | appflow:DescribeFlow appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:ListConnectorProfiles kms:ListKeys profile:ListDomains profile:ListAccountIntegrations sqs:ListQueues  | 
 | Edit customer profiles | appflow:CreateFlow appflow:CreateConnectorProfile appflow:DescribeFlow appflow:DeleteFlow appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:ListConnectorProfiles appflow:StartFlow appflow:StopFlow kms:ListKeys profile:CreateDomain profile:DeleteIntegration profile:DeleteDomain profile:ListDomains profile:ListAccountIntegrations profile:PutIntegration profile:UpdateDomain kms:ListGrants kms:DescribeKey kms:ListAliases kms:ListKeys sqs:ListQueues  | 
 
+### Voice ID page<a name="voiceid-page"></a>
+
+
+| Action/Use case | Permissions needed | 
+| --- | --- | 
+| View Voice ID integrations | voiceid:DescribeDomain voiceid:ListDomains voiceid:RegisterComplianceConsent voiceid:DescribeComplianceConsent connect:ListIntegrationAssociations  | 
+| Edit Voice ID integrations | voiceid:DescribeDomain voiceid:ListDomains voiceid:RegisterComplianceConsent voiceid:DescribeComplianceConsent voiceid:UpdateDomain voiceid:CreateDomain connect:ListIntegrationAssociations connect:CreateIntegrationAssociation connect:DeleteIntegrationAssociation events:PutRule events:DeleteRule events:PutTargets events:RemoveTargets  | 
+
 ### Contact flows page<a name="contact-flows-page"></a>
 
 #### Contact flows security keys section<a name="security-keys-section"></a>
@@ -173,8 +181,8 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 
 | Action/Use case | Permissions needed | 
 | --- | --- | 
-| View Lex bots | connect:ListLexBots  | 
-| Add/remove Lex bots |  lex:GetBots lex:GetBot connect:AssociateLexBot connect:DisassociateLexBot connect:ListLexBots   | 
+| View Lex bots | connect:ListLexBots connect:ListBots  | 
+| Add/remove Lex bots |  lex:GetBots lex:GetBot  lex:CreateResourcePolicy lex:DeleteResourcePolicy lex:UpdateResourcePolicy lex:DescribeBotAlias lex:ListBotAliases lex:ListBots connect:AssociateBot connect:DisassociateBot connect:ListBots connect:AssociateLexBot connect:DisassociateLexBot connect:ListLexBots   | 
 
 #### Lambda functions section<a name="lambda-functions-section"></a>
 

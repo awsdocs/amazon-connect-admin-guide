@@ -2,7 +2,7 @@
 
 Use these steps to set up your contact center\.  
 
-1. [Create an Amazon Connect instance](amazon-connect-instances.md)\. Use an instance to contain all the resources and settings related to your contact center\. You specify where voice recordings and chat transcripts are stored, and how you plan to manage user accounts and other aspects\. 
+1. [Create an Amazon Connect instance](amazon-connect-instances.md)\. Use an instance to contain all the resources and settings related to your contact center\. You specify how you plan to manage user accounts, whether your contact center will accept incoming calls and make outbound calls, and review the location where data will be stored in your Amazon S3 bucket\. 
 
 1. [Set up phone numbers for your contact center](contact-center-phone-number.md)\. If you're using voice, either claim a phone number that AWS provides, or port your current phone number to Amazon Connect\. If you choose to port your numbers, we suggest claiming a number so you can test Amazon Connect and build your contact center while waiting for your numbers to be ported over\. 
 
@@ -14,7 +14,7 @@ Use these steps to set up your contact center\.
 
 1. If you're using chat, we provide several tools to help you enable your customer\-facing app to engage with Amazon Connect chat\. For more information, see [Set up your customer's chat experience](enable-chat-in-app.md)\. 
 
-## Next steps<a name="w274aac10b7"></a>
+## Next steps<a name="w463aac10b7"></a>
 
 There's a lot you can do to optimize your contact center\. Here are a couple of additional steps that you may find useful: 
 

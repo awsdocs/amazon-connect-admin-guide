@@ -10,7 +10,7 @@ The following tools and information can be helpful with troubleshooting issues w
 + **Private WAN/LAN network diagram**—outlining connection paths to the edge router to AWS to explain network traversal\.
 + **Firewall allow list access**—to verify that IP/port ranges are added to the allow list \(also known as whitelist\) as described in [Set up your network](ccp-networking.md)\.
 + **Audio capturing and analytic tools**—for latency calculations from the agent's workstation\.
-+ **AWS region latency test tools**—such as the [Amazon Connect Call Control Panel Connectivity Tool](https://s3.amazonaws.com/connectivitytest/checkConnectivity.html)\.
++ **AWS region latency test tools**—use the [Endpoint Test Utility tool](check-connectivity-tool.md)\. 
 
 ## Gathering Helpful Information using the Streams API<a name="info-gathering"></a>
 

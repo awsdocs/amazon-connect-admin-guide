@@ -100,7 +100,7 @@ You should define log retention requirements and lifecycle policies early on, an
 
 Amazon S3 is the best choice for long\-term retention and archiving of log data, especially for organizations with compliance programs that require log data to be auditable in its native format\. After log data is in an S3 bucket, define lifecycle rules to automatically enforce retention policies and move these objects to other, cost\-effective storage classes, such as Amazon S3 Standard \- Infrequent Access \(Standard \- IA\) or Amazon S3 Glacier\.
 
-The AWS cloud provides flexible infrastructure and tools to support both sophisticated in cooperation with offerings and self\-managed centralized\-logging solutions\. This includes solutions such as Amazon Elasticsearch Service and Amazon CloudWatch Logs\. 
+The AWS cloud provides flexible infrastructure and tools to support both sophisticated in cooperation with offerings and self\-managed centralized\-logging solutions\. This includes solutions such as Amazon OpenSearch Service and Amazon CloudWatch Logs\. 
 
 Fraud detection and prevention for incoming contacts can be implemented by customizing Amazon Connect contact flows per the customer requirements\. As an example, customers can check incoming contacts against previous contact activity in DynamoDB, and then take action, such as disconnecting a contact because they are a blocked contact\.
 

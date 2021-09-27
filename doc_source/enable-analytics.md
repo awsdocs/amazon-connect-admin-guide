@@ -1,10 +1,10 @@
 # Enable Contact Lens for Amazon Connect<a name="enable-analytics"></a>
 
-You can enable Contact Lens in just a few steps\. Just add a [Set recording and analytics behavior ](set-recording-behavior.md) block to a flow, and configure it for Contact Lens\.
+You can enable Contact Lens in just a few steps\. Just add a [Set recording and analytics behavior](set-recording-behavior.md) block to a flow, and configure it for Contact Lens\.
 
 **To enable Contact Lens in a contact flow**
 
-1. Add the [Set recording and analytics behavior ](set-recording-behavior.md) block to a contact flow\.
+1. Add the [Set recording and analytics behavior](set-recording-behavior.md) block to a contact flow\.
 
 1. In the contact block, under **Call recording**, choose **On**, **Agent and Customer**\.
 
@@ -24,7 +24,7 @@ You can enable Contact Lens in just a few steps\. Just add a [Set recording and 
 
      For information about setting up alerts, see [Alert supervisors in real\-time based on keywords and phrases](add-rules-for-alerts.md)\.
 
-     If your instance was created before October 2018, additional configuration is needed to access real\-time analytics\. For more information, see [Service\-Linked Role Permissions for Amazon Connect](connect-slr.md#slr-permissions)\.
+     If your instance was created before October 2018, additional configuration is needed to access real\-time analytics\. For more information, see [Service\-linked role permissions for Amazon Connect](connect-slr.md#slr-permissions)\.
 
 1. Choose the language\. For a list of available languages for various Contact Lens features, see [Supported languages](supported-languages.md)\.
 
@@ -32,10 +32,10 @@ You can enable Contact Lens in just a few steps\. Just add a [Set recording and 
 
 1. Choose **Save**\.
 
-1. If the contact is going to be transferred to another agent or queue, repeat these steps to add another [Set recording and analytics behavior ](set-recording-behavior.md) block with **Enable Contact Lens for speech analytics** enabled\. 
+1. If the contact is going to be transferred to another agent or queue, repeat these steps to add another [Set recording and analytics behavior](set-recording-behavior.md) block with **Enable Contact Lens for speech analytics** enabled\. 
 
 **Tip**  
-If you want to continue using Contact Lens to collect data after transferring a contact to another agent or queue, you need to add another [Set recording and analytics behavior ](set-recording-behavior.md) block with **Enable analytics** enabled for the flow\. This is because a transfer generates a second contact ID and CTR\. Contact Lens needs to run on that CTR as well\.
+If you want to continue using Contact Lens to collect data after transferring a contact to another agent or queue, you need to add another [Set recording and analytics behavior](set-recording-behavior.md) block with **Enable analytics** enabled for the flow\. This is because a transfer generates a second contact ID and CTR\. Contact Lens needs to run on that CTR as well\.
 
 ## How to enable redaction of sensitive data<a name="enable-redaction"></a>
 

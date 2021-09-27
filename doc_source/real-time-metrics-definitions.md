@@ -101,7 +101,7 @@ This is different from how many more inbound contacts an agent could take\. If y
 
 What causes this number to go down? An agent is considered **unavailable** when: 
 + The agent has set their status in the CCP to a custom status, such as Break or Training\. Amazon Connect doesn't count these slots because agents can't take inbound contacts when they've set their status to a custom status\. 
-+ The agent is at maximum capacity\. For example, they are only allowed to handle 3 contacts at a time and they are currently handling 3\. 
++ The agent has at least one contact ongoing\.  
 + The agent has a contact in a missed or error state, which prevents the agent from taking any more contacts until they are flipped back to routable\. 
 
 In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `AGENTS_AVAILABLE`\.
@@ -155,8 +155,6 @@ Average time, in seconds, that contacts were connected to and interacting with a
 Average time, in seconds, that contacts in the queue spent interacting with agents and on hold\. This is calculated as follows:
 
 Avg hold time \+ Avg interaction time
-
-This metric doesn't apply to tasks so you'll notice a value of 0 on the report for them\.
 
 ## Avg queue answer time<a name="average-queue-answer-time-real-time"></a>
 

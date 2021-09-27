@@ -4,6 +4,27 @@ Connects the participant with the specified Amazon Lex bot\. When the interactio
 
 ## Parameter object<a name="connectparticipantwithlexbot-parameter"></a>
 
+Provide either LexBot or LexV2Bot object depending on the Amazon Lex version in thr following format\.
+
+------
+#### [ Amazon Lex ]
+
+```
+{
+    "PromptId": [Optional] A prompt ID or prompt ARN to play to the participant along with gathering input. May not be specified if Text or SSML is also specified. Must be specified either statically or as a single valid JSONPath identifier.
+    "Text":  An optional string that defines text to send to the participant along with gathering input. May not be specified if PromptId or SSML is also specified. May be specified statically or dynamically.
+    "SSML": An optional string that defines SSML to send to the participant along with gathering input. May not be specified if Text or PromptId is also specified May be specified statically or dynamically.
+    "LexV2Bot": { The details of the LexV2 bot to invoke       
+        "AliasArn": The alias ARN of the LexV2 bot to invoke. May be specified statically or dynamically.
+    },
+    "LexSessionAttributes: { A map of session attributes to pass to the Amazon LexV2 bot when it is invoked. The keys and values may be static or dynamic.
+    }
+}
+```
+
+------
+#### [ Amazon Lex \(Classic\) ]
+
 ```
 {
     "PromptId": [Optional] A prompt ID or prompt ARN to play to the participant along with gathering input. May not be specified if Text or SSML is also specified. Must be specified either statically or as a single valid JSONPath identifier.
@@ -18,6 +39,8 @@ Connects the participant with the specified Amazon Lex bot\. When the interactio
     }
 }
 ```
+
+------
 
 ## Results and conditions<a name="connectparticipantwithlexbot-results"></a>
 

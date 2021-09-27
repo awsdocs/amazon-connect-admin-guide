@@ -1,8 +1,10 @@
 # Contact block: Wait<a name="wait"></a>
 
 ## Description<a name="wait-description"></a>
-+ Use this block in chat contact flows only\. If a contact stops responding to a chat, this block pauses the contact flow for the specified wait time\. 
-+ If this block is triggered during a voice conversation, the contact is routed down the **Error** branch\.
+
+This block pauses the contact flow for the specified wait time\. 
+
+For example, if a contact stops responding to a chat, the block pauses the contact flow for the specified wait time, then branches accordingly, such as to disconnect\.
 
 ## Supported channels<a name="wait-channels"></a>
 

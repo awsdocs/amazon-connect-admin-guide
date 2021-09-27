@@ -19,7 +19,7 @@ You'll get an error message, as shown in the following image\.
 ## Required permissions to change an agent's activity status<a name="rtm-change-agent-activity-state-permissions"></a>
 
 For someone such as a supervisor to be able to change an agent's activity status, they need to be assigned a security profile that has the following permissions: 
-+ Edit/View Agent Status
++ View \- Agent Status
 + Access metrics
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/security-profile-change-agent-status2.png)

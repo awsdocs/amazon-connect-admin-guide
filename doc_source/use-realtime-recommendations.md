@@ -1,16 +1,18 @@
 # Use real\-time recommendations<a name="use-realtime-recommendations"></a>
 
-If your organization uses Contact Lens for Amazon Connect, you may get real\-time recommendations that point you to information related to the current conversation with the customer\.  
+If your organization uses Contact Lens for Amazon Connect, you may get real\-time recommendations that point you to information related to the current conversation with the customer\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro.png)
+The following image shows how an article may appear in the agent application when you're on a call\. 
 
-The following list refers to the designated areas in the preceding example:
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro2.png)
 
-1. Real\-time recommendations based on real\-time analytics
+1. You're on a call\.
 
-1. Search for words or phrases
+1. The Customer profile tab is available\.
 
-1. Provide feedback on the helpfulness of the results
+1. You can have multiple articles open at the same time\.
+
+1. You can search for articles\.
 
 You can select the recommendation to view the entire article, or choose **Show less** to close the details of the recommendation\. 
 

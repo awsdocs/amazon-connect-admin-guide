@@ -17,13 +17,12 @@ However, if there's an emergency, you can log in from the Amazon Connect console
 
 1. If prompted to login, enter your AWS account credentials\.
 
-1. Choose the name of the instance from the **Instance Alias** column\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance-alias.png)
+1. Choose the name of the instance from the **Instance alias** column\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Overview**\.
 
-1. Choose **Log in for emergency access**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/login-as-administrator.png)
+1. Choose **Log in for emergency access**\.
 
    You aren't prompted for your credentials because you are federated in from the AWS console\.
 **Important**  

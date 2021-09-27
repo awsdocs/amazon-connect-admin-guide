@@ -10,11 +10,9 @@ To set up this feature, add rules that contain the words or phrases that you wan
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-overview.png)
 
-## Security profile permissions for Contact Lens rules<a name="permissions-for-rules"></a>
-
-To view, edit, or add rules for automatic categorization, you must be assigned to a security profile that has **Rules** permissions\. For more information, see [Security profile permissions for Contact Lens](permissions-for-contact-lens.md)\.
-
 ## Add rules to categorize contacts<a name="add-category-rules"></a>
+
+### Step 1: Define conditions<a name="add-category-rules-define-conditions"></a>
 
 1. Log in to Amazon Connect with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for **Rules** permissions\.
 
@@ -24,7 +22,7 @@ To view, edit, or add rules for automatic categorization, you must be assigned t
 
 1. Assign a name to the rule\.
 
-1. Next to **When**, use the dropdown list to choose **post\-call analysis** or **real\-time analysis**\.
+1. Under **When**, use the dropdown list to choose **post\-call analysis** or **real\-time analysis**\.
 
 1. Choose **Add condition**, and then choose the type of match: 
    + **Exact Match**: Finds only the exact words or phrases\.
@@ -50,64 +48,30 @@ To view, edit, or add rules for automatic categorization, you must be assigned t
 
    1. In this first card, Content Lens reads each line as an OR\. For example: \(Hello\) OR \(thank OR you OR for OR calling OR Example OR Corp\) OR \(we OR value OR your OR business\)\.
 
-   1. The two cards are connected with an AND\. This means, one of the rows in the first card needs to be uttered AND then one of the phrases in the second card needs to be uttered\.\.
+   1. The two cards are connected with an AND\. This means, one of the rows in the first card needs to be uttered AND then one of the phrases in the second card needs to be uttered\.
 
    The logic that Contact Lens uses to read the two cards of words or phrases is \(card 1\) AND \(card 2\)\.
 
+1. Choose **Add condition** to apply the rules to:
+   + Specific queues
+   + When contact attributes have certain values
+   + When sentiment scores have certain values
+
+   For example, the following image shows a rule that applies when an agent is working the BasicQueue or Billing and Payments queues, the customer is for autoinsurance, and the agent is located in Seattle\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-3.png)
+
+### Step 2: Define actions<a name="add-category-rules-define-actions"></a>
+
+In addition to categorizing a contact, you can define what actions Amazon Connect should take: 
+
+1. [Generate an EventBridge event](contact-lens-rules-eventbridge-event.md)
+
+1. [Create task](contact-lens-rules-create-task.md)
+
+### Step 3: Review and save<a name="add-category-rules-review-save"></a>
+
 1. When done, choose **Save**\. 
 
-1. After you add the rules, they are applied in real time to **new** contacts when Contact Lens analyzes conversations\. You can't analyze past, stored conversations\.
+1. After you add rules, they are applied to new contacts that occur after the rule was added\. Rules are applied when Contact Lens analyzes conversations\.
 
-## Tips for adding rules<a name="tips-for-adding-rules"></a>
-
-Following are some tips for adding rules\.
-
-### How to enter a script<a name="enter-script"></a>
-
-To enter a script, enter phrases\. For example, if you want to highlight when agents say *Thank you for being a member\. We appreciate your business*, enter two phrases: 
-+ Thank you for being a member\.
-+ We appreciate your business\.
-
-### How to use exact match<a name="exact-match"></a>
-
-**Exact Match** really is an exact word match, singular or plural\.
-
-### How to use pattern match<a name="pattern-match"></a>
-
-If you want to match related words, append an asterisk \(\*\) to the criteria\. For example, if you want to match on all variations of "neighbor" \(neighbors, neighborhood\) you would type **neighbo\***\.
-
-With **Pattern Match** you can specify the following:
-+ **List of values**: This is useful when you want to build expressions with interchangeable values\. For example, the expression might be: 
-
-  *I'm calling about a power outage in \["Beijing" or "London" or "New York" or "Paris" or "Tokyo"\]*
-
-  Then in your list of values you would add the cities: Beijing, London, New York, Paris, Tokyo\. 
-
-  The advantage of using values is that you can create one expression, instead of multiple\. This reduces the number of cards that you need to create\.
-+ **Number**: This option is used most frequently in compliance scripts, or if your looking for a context when you know somewhere in between there's a number\. This way you can put all of your criteria into one expression instead of two\. For example, an agent compliance script might say:
-
-  *I have been in this industry for \[num\] years and would like to discuss this topic with you\.*
-
-  Or a customer might say: 
-
-  *I have been a member for \[num\] years\.*
-+ **Proximity definition**: Finds matches that may be less than 100 percent exact\. You can also specify the distance between words\. For example, if you are looking for contacts where the word "credit" was mentioned but you do not want to see any mention of the words "credit card," you can define a pattern matching category to look for the word "credit" that is not within a one\-word distance of "card\."
-
-  For example, a proximity definition might be:
-
-  *credit\* \[is not within 0 to 1 word apart\] card\**
-
-### How to use semantic match<a name="semantic-match"></a>
-
-Semantic matching is supported only for post\-call analysis\.
-+ An “intent” is an example of utterance\. It can be a phrase or a sentence\.
-+ You can enter up to four intents in one card \(group\)\.
-+ We recommend using semantically similar intents within one card to get the best results\. For example, there's category for "politeness\." It includes two intents: "greetings" and "goodbye"\. We recommend separating these intents into two cards:
-  + Card 1: "How are you today" and "How’s everything going"\. They are semantically similar greetings\.
-  + Card 2: "Thanks for contacting us" and "Thank you for being our customer\." They are semantically similar goodbyes\.
-
-  Separating the intents into two cards provides more accuracy than putting them all into one card\.
-
-## Rules are applied to new contacts<a name="rules-applied-to-new-contacts"></a>
-
-After you add the rules, they are applied in real time to **new** contacts when Contact Lens analyzes conversations\. You can't analyze past, stored conversations\.
+   You cannot apply rules to past, stored conversations\. 

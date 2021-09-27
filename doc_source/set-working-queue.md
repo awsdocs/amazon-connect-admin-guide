@@ -2,7 +2,7 @@
 
 ## Description<a name="set-working-queue-description"></a>
 + This block specifies the queue to be used when **Transfer to queue** is invoked\.
-+ A queue must be specified before invoking **Transfer to queue** except when used in a customer queue flow\. It’s also the default queue for checking attributes, such as staffing, queue status, and hours of operation\.
++ A queue must be specified before invoking **Transfer to queue** except when used in a customer queue flow\. It's also the default queue for checking attributes, such as staffing, queue status, and hours of operation\.
 
 ## Supported channels<a name="set-working-queue-channels"></a>
 

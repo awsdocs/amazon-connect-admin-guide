@@ -1,4 +1,4 @@
-# Add a chat user interface your website<a name="add-chat-to-website"></a>
+# Add a chat user interface to your website<a name="add-chat-to-website"></a>
 
 To support your customers through chat, you can add a chat widget to your website that is hosted by Amazon Connect\. You can configure the chat widget in the Amazon Connect console: customize the font and colors, and secure the widget so that it can be launched only from your website\. As a result, you will have a short code snippet that you add to your website\. 
 
@@ -36,7 +36,7 @@ In this step, you customize the experience of the chat widget for your customers
 
 1. Under **Select contact flow**, choose the inbound flow that initiates when a customer starts a chat\.
 
-1. Choose **Next**
+1. Choose **Next**\.
 
 ## Step 2: Specify the website domains where you expect to display the chat widget<a name="chat-widget-domains"></a>
 
@@ -129,3 +129,9 @@ Saved changes update the customer experience in a few minutes\. Confirm your wid
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-edit.png)
 
 To make changes to widget icons on the website, you will receive a new code snippet to update your website directly\.
+
+### More customizations for your chat widget<a name="chat-widget-more-customizations"></a>
+
+See the following topics for more you can do to customize the chat experience:
++ [Pass the customer display name when a chat initializes](pass-display-name-chat.md)
++ [Pass contact attributes when a chat initializes](pass-contact-attributes-chat.md)

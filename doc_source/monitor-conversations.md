@@ -6,7 +6,7 @@ Managers and agents in training can monitor live conversations between agents an
 
 ## Set up live monitoring for voice and/or chat<a name="monitor-conversations-set-up"></a>
 
-1. Add the [Set recording and analytics behavior ](set-recording-behavior.md) block to your contact flow\. Do this to monitor calls, chats, or both\. 
+1. Add the [Set recording and analytics behavior](set-recording-behavior.md) block to your contact flow\. Do this to monitor calls, chats, or both\. 
 
    To enable monitoring of voice and/or chat conversations, in the block's properties choose **Agent and Customer**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior.png)
@@ -49,12 +49,12 @@ For managers to monitor live conversations, you assign them the **CallCenterMana
 
 1. Choose **Save**\. 
 
-## Monitor live conversations with contacts<a name="w274aac47b7c11"></a>
+## Monitor live conversations with contacts<a name="w463aac49b7c11"></a>
 
 **Tip**  
 Call barge\-in is not currently supported\. That is, if you're listening to a conversation, your microphone stays muted\.
 
-1. Check that the [Set recording and analytics behavior ](set-recording-behavior.md) block is in the contact flow you want to monitor\. It has to be there whether you're monitoring calls or chats\. In the block's Properties, choose **Agent and Customer**\.
+1. Check that the [Set recording and analytics behavior](set-recording-behavior.md) block is in the contact flow you want to monitor\. It has to be there whether you're monitoring calls or chats\. In the block's Properties, choose **Agent and Customer**\.
 
 1. Log in to your Amazon Connect instance with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Manager monitor** permission\.
 

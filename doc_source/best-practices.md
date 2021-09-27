@@ -15,7 +15,7 @@ We also recommend reviewing [Security Best Practices for Amazon Connect](securit
 + Ensure that attributes used in the flow are set and referenced correctly\. If there are periods prepended to the attribute names, you are likely using JSONPath \($\.\) format while also selecting a variable type from the pick list\. For example:, using:
   + **Save text as attribute** and value `$.External.variableName` works as expected\.
   + `Use attribute` and value `variableName` works as expected\.
-  + **Use attribute** and `$.External.varableName` results in a prepended period\. 
+  + **Use attribute** and `$.External.variableName` results in a prepended period\. 
 + Before transferring a call to agent and putting that call in a queue, ensure that **Check hours of operation** and **Check staffing** blocks are used\. They verify that the call is within working hours and that agents are staffed to service\.
 + Ensure that callbacks are offered before and after queue transfer by using **Check queue status** blocks\. Include a condition for **Queue capacity** that is greater than X, where X is a number representing your expected queue capacity\.
   + If queue capacity exceeds the expected capacity, use a **Get Customer Input** block to offer a callback\. This retains the caller's position in the queue and calls them back when an agent is available\.

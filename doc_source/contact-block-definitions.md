@@ -9,11 +9,13 @@ The following table lists all available contact blocks that you can use\. Choose
 | --- | --- | 
 | [Call phone number](call-phone-number.md)  | Initiates an outbound call from an outbound whisper flow\. | 
 |  [Change routing priority / age](change-routing-priority.md)   |  Changes the priority of the contact in queue\. You may want to do this, for example, based on the contact's issue or other variable\.  | 
+|  [Check call progress](check-call-progress.md)   |  Engages with the output provided by an answering machine, and provides branches to route the contact accordingly\.  | 
 |  [Check contact attributes](check-contact-attributes.md)   |  Checks the values of contact attributes\.  | 
 |   [Check hours of operation](check-hours-of-operation.md)  |  Checks whether the contact is occurring within or outside of the hours of operation defined for the queue\.  | 
 |   [Check queue status](check-queue-status.md)   |  Checks the status of the queue based on specified conditions\.  | 
-|   [Check security status](check-security-status.md)   |  Branches based on the authentication status of the caller returned by Voice ID\.  | 
+|   [Check Voice ID](check-voice-id.md)   |  Branches based on the enrollment status, voice authentication status, or status of detection of fraudsters in a watchlist of the caller returned by Voice ID\.  | 
 |   [Check staffing](check-staffing.md)   |  Checks the current working queue, or queue you specify in the block, for whether agents are available, staffed, or online\. Staffed availability could be on call, or after contact work status\.  | 
+|   [Create task](create-task-block.md)   |  Creates a new task, sets the tasks attributes, and initiates a contact flow to start the task\. To learn more about Amazon Connect Tasks, see [Tasks](tasks.md)\.   | 
 |  [Disconnect / hang up](disconnect-hang-up.md)  |  Disconnects a contact\.  | 
 |   [Distribute by percentage](distribute-by-percentage.md)   |  Routes customers randomly based on a percentage\.  | 
 |   [End flow / Resume](end-flow-resume.md)   |  Ends the current flow without disconnecting the contact\.  | 
@@ -30,8 +32,8 @@ The following table lists all available contact blocks that you can use\. Choose
 |   [Set disconnect flow](set-disconnect-flow.md)   |  Sets the flow to run after a disconnect event\.  | 
 |   [Set hold flow](set-hold-flow.md)   |  Links from one contact flow type to another\.  | 
 |   [Set logging behavior](set-logging-behavior.md)   |  Enables contact flow logs so you can track events as contacts interact with contact flows\.  | 
-|   [Set security behavior](set-security-behavior.md)   |  Sends audio to Amazon Connect Voice ID to verify the caller's identity, as soon as the call is connected to a contact flow\.  | 
-|   [Set recording and analytics behavior ](set-recording-behavior.md)  |  Sets options for recording conversations\.  | 
+|   [Set Voice ID](set-voice-id.md)   |  Sends audio to Amazon Connect Voice ID to verify the caller's identity and match against fraudsters in watchlist, as soon as the call is connected to a contact flow\.   | 
+|   [Set recording and analytics behavior](set-recording-behavior.md)  |  Sets options for recording conversations\.  | 
 |  [Set voice](set-voice.md)   |  Sets the text\-to\-speech \(TTS\) language and voice to be used in the contact flow\.  | 
 |   [Set whisper flow](set-whisper-flow.md)  |  Overrides the default whisper by linking to a whisper flow\.  | 
 |   [Set working queue](set-working-queue.md)   |  Specifies the queue to be used when **Transfer to queue** is invoked\.  | 
@@ -43,3 +45,4 @@ The following table lists all available contact blocks that you can use\. Choose
 |   [Transfer to phone number](transfer-to-phone-number.md)  |  Transfers the customer to a phone number external to your instance\.  | 
 |   [Transfer to queue](transfer-to-queue.md)   |  In most contact flows, this block ends the current contact flow and places the customer in queue\. When used in a customer queue flow, this block transfers a contact already in a queue to another queue\.  | 
 |   [Wait](wait.md)  |  Pauses the contact flow\.  | 
+|   [Wisdom](wisdom.md)  |  Associates a Wisdom domain to a contact to enable real\-time recommendations\.  | 

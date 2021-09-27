@@ -9,9 +9,9 @@ You cannot undo the deletion of an instance or restore settings or data from the
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. Select the check box for the instance and choose **Remove**\. If you don't see the **Remove** button, you don't have permissions to delete instances\. Contact your AWS administrator for help\.
+1. Select the check box for the instance and choose **Delete**\. If you don't see the **Delete** button, you don't have permissions to delete instances\. Contact your AWS administrator for help\.
 
-1. When prompted, type the name of the instance and choose **Remove**\.
+1. When prompted, type the name of the instance and choose **Delete**\.
 
 ## Error message: "Region Unsupported\. Amazon Connect is not available in \[Region\]"<a name="region-unsupported"></a>
 

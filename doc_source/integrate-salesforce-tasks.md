@@ -22,7 +22,7 @@ If you use custom AWS Identity and Access Management \(IAM\) policies, for a lis
    The following image shows the requirements for Salesforce\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-choose-an-app-salesforce.png)
 
-   1. To verify that Salesforce is compatible with Amazon AppFlow, log in to Salesforce, for example, https://\[instance\_name\]\.my\.saleforce\.com\.
+   1. To verify that Salesforce is compatible with Amazon AppFlow, log in to Salesforce, for example, https://\[instance\_name\]\.my\.salesforce\.com\.
 **Important**  
 Verify that you have enabled **Change Data Capture** in Salesforce\. The following image shows an example **Change Data Capture** page in Salesforce where you select the Case entities:  
 

@@ -44,13 +44,13 @@ When you enable Customer Profiles, you have the option of specifying an Amazon S
 
 Step\-by\-step instructions are provided in [Enable Customer Profiles](#enable-customer-profiles-step1)\. For general information, see [Basic examples of Amazon SQS policies](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-basic-examples-of-sqs-policies.html)\.
 
-### Create a CMK to be used by Customer Profiles to encrypt data \(required\)<a name="enable-customer-profiles-awsmanagedkey"></a>
+### Create a KMS key to be used by Customer Profiles to encrypt data \(required\)<a name="enable-customer-profiles-awsmanagedkey"></a>
 
-When you enable Customer Profiles, you are prompted to create or provide a AWS Key Management Service [customer master key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) \(CMK\)\. Step\-by\-step instructions for creating a CMK are provided in [Enable Customer Profiles](#enable-customer-profiles-step1)\.
+When you enable Customer Profiles, you are prompted to create or provide a AWS Key Management Service [KMS key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys)\. Step\-by\-step instructions for creating a KMS key are provided in [Enable Customer Profiles](#enable-customer-profiles-step1)\.
 
-All data at rest for Customer Profiles is encrypted under the CMK you choose\. Your customer\-managed CMK is created, owned, and managed by you\. You have full control over the CMK \(AWS KMS charges apply\)\.
+All data at rest for Customer Profiles is encrypted under the KMS key you choose\. Your customer managed key is created, owned, and managed by you\. You have full control over the KMS key \(AWS KMS charges apply\)\.
 
-If you choose to set up a CMK where someone else is the administrator, it must have a policy that allows `kms:GenerateDataKey`, `kms:CreateGrant`, and `kms:Decrypt` permissions to the Customer Profiles service principal\. For information about how to change a key policy, see [Changing a key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying.html) in the AWS Key Management Service Developer Guide\.
+If you choose to set up a KMS key where someone else is the administrator, it must have a policy that allows `kms:GenerateDataKey`, `kms:CreateGrant`, and `kms:Decrypt` permissions to the Customer Profiles service principal\. For information about how to change a key policy, see [Changing a key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying.html) in the AWS Key Management Service Developer Guide\.
 
 ## Enable Customer Profiles<a name="enable-customer-profiles-step1"></a>
 

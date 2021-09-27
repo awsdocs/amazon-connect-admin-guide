@@ -11,13 +11,17 @@ Amazon Connect handles a variety of data related to the contact center, includin
 + **Attachments** – Included only if enabled\.
 + **Integration configuration** – Includes user defined name, description and metadata when creating integration with external applications\.
 + **Knowledge documents** – This includes documents used by agents to handle contacts\.
-+ **Voiceprints** – When Amazon Connect Voice ID is enabled, a voiceprint is created from the customer's voice for future authentication\.
++ **Voiceprints** – When Amazon Connect Voice ID is enabled, a voiceprint is created from the customer's voice for future authentication\. Similarly, a voiceprint is created while registering a fraudster in the Voice ID system for future fraud detection\.
++ **Speaker and Fraudster Audio** – When Amazon Connect Voice ID is enabled, the audio used for enrolling speakers and registering fraudsters is stored so that Voice ID can re\-enroll and reregister them in future when there is a need to do so\.
 
 Amazon Connect stores the following Personally Identifiable Information \(PII\) data related to your customers:
 + The customer's phone number: ANI for inbound calls, and DNIS for outbound calls or transfers\.
 + If you are using Amazon Connect Customer Profiles, all this data could potentially be PII\. This data is always encrypted at rest using either a customer\-provided KMS key or a service\-owned key\. The Amazon Connect Customer Profiles data is segregated by the AWS account ID and the domain\. Multiple Amazon Connect instances can share a single Customer Profiles domain\.
++ For Amazon Connect High\-Volume Outbound Communications, Amazon Pinpoint passes customer phone numbers and relevant attributes to Amazon Connect\. On the Amazon Connect side, these are always encrypted at rest using either a customer managed key or an AWS owned key\. The Amazon Connect High\-Volume Outbound Communications data is segregated by the Amazon Connect instance ID and are encrypted by instance\-specific keys\.
 
-Amazon AppIntegrations, which enables you to integrate with external applications, stores references to other AWS resources such as Amazon EventBridge buses and rules, and client\-service specified metadata\. No third party data is stored other than incidentally while being processed\.
+## External application data<a name="external-application-data"></a>
+
+Amazon AppIntegrations enables you to integrate with external applications\. It stores references to other AWS resources and client\-service specified metadata\. No data is stored other than incidentally while being processed\. When syncing data periodically with an Amazon Connect service, data is encrypted using a customer managed key and stored temporarily for one month\. 
 
 ## Phone call media<a name="phone-call-media-handling"></a>
 
@@ -59,7 +63,7 @@ In addition, you can track who listens to or deletes recordings; see [Track who 
 
 Amazon Connect stores metadata related to contacts that flow through the system and allows authorized users to access this information\. The Contact Search feature allows you to search and view contact data, such as origination phone numbers or other attributes set by the contact flow, that are associated with a contact for diagnostics or reporting purposes\. 
 
-Contact data classified as PII, or data that represents customer content being stored by Amazon Connect, is encrypted at rest using a key that is time\-limited and specific to the Amazon Connect instance\. Specifically, the customer origination phone number is cryptographically hashed with a key that is specific to the instance to allow for use in contact search\. For contact search, the encryption key is not time\-sensitive\. 
+Contact data classified as PII that is stored by Amazon Connect is encrypted at rest using a key that is time\-limited and specific to the Amazon Connect instance\. Specifically, the customer origination phone number is cryptographically hashed with a key that is specific to the instance to allow for use in contact search\. For contact search, the encryption key is not time\-sensitive\. 
 
 The following data stored by Amazon Connect is treated as sensitive:
 + Origination phone number
@@ -72,8 +76,16 @@ The following data stored by Amazon Connect is treated as sensitive:
 
 Content processed by Contact Lens in real\-time is encrypted at rest and in transit\. Data is encrypted with keys owned by Contact Lens\.
 
-## Voiceprints<a name="voiceprints-data-protection"></a>
+## Voiceprints and Voice ID audio recordings<a name="voiceprints-data-protection"></a>
 
-If you enable Amazon Connect Voice ID, it computes and stores voiceprints out of your customers’ speech for authenticating them in future\. You must specify a Speaker ID for each customer while enrolling them for Voice ID\. We strongly recommend that you use an identifier that does not contain PII for this field\.
+When you enable Amazon Connect Voice ID, it computes voiceprints out of your customer's speech for authenticating them in future, and stores the data\. Similarly, when you enable fraud detection, it stores the voiceprint for each fraudster registered in Voice ID\. 
 
-In the preview release of Voice ID, the audio data used for generating enrollment and authentication voiceprints is enqueued for deletion within 24 hours\.
+While enrolling a customer into Voice ID for authentication and fraud detection, you must specify a `CustomerSpeakerId` for them\. Since Voice ID stores biometric information for each speaker, we strongly recommend that you use an identifier that does not contain PII in the `CustomerSpeakerId` field\. 
+
+## Speaker and Fraudster Audio<a name="speaker-fraudster-audio-data-protection"></a>
+
+When you enable Amazon Connect Voice ID, it stores the necessary amount of audio it aggregated while enrolling a speaker or registering a fraudster into the system\. The data is retained until the speaker/fraudster is deleted\. This audio is used in the future whenever the voiceprints for the speakers and fraudsters need to be regenerated\.
+
+## High\-Volume Outbound Communications<a name="outbound-communications-data-protection"></a>
+
+For Amazon Connect High\-Volume Outbound Communications, Amazon Pinpoint passes customer phone numbers and relevant attributes to Amazon Connect\. On Amazon Connect, these are always encrypted at rest using either a customer managed key or an AWS owned key\. The Amazon Connect High\-Volume Outbound Communications data is segregated by the Amazon Connect instance ID and are encrypted by instance specific keys\.

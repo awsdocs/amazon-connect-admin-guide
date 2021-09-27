@@ -38,4 +38,4 @@ Use the following steps to create a new flow based a current default\.
 1. Assign a new name for the contact flow, for example, **Customer hold message**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-customer-hold.png)
 
-1. Add the new contact flow \(in this case, Customer hold message\) to the contact flows you create so it's run instead of the default\. 
+1. Add the new contact flow \(in this case, **Customer hold message**\) to the contact flows you create so it's run instead of the default\. 

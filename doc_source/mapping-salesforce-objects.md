@@ -85,7 +85,7 @@ A subset of the fields in the Salesforce\-Account object map to the standard pro
 The following table lists which fields can be mapped from the Salesforce\-Account object to the standard profile\. \(The table includes the mapping for a Salesforce instance that has been configured to include Person fields\.\)
 
 
-| Saleforce\-Account source field | Standard profile target field | 
+| Salesforce\-Account source field | Standard profile target field | 
 | --- | --- | 
 |  Id  | Attributes\.sfdcAccountId  | 
 |  Name  | BusinessName  | 
@@ -210,7 +210,7 @@ Following is a list of all the fields in a Salesforce\-Contact object\.
 A subset of the fields in the Salesforce\-Contact object map to the standard profile object in Customer Profiles\. The following table lists which fields can be mapped from the Salesforce\-Contact object to the standard profile object\.
 
 
-| Saleforce\-Contact source field | Standard profile target field | 
+| Salesforce\-Contact source field | Standard profile target field | 
 | --- | --- | 
 |  Id  | Attributes\.sfdcContactId  | 
 |  AccountId  | Attributes\.sfdcAccountId  | 
@@ -238,8 +238,8 @@ The Salesforce\-Contact customer data from a Salesforce object is associated wit
 
 | Standard Index Name | Salesforce\-Contact source field | 
 | --- | --- | 
-|  \_saleforceContactId  | Id  | 
-|  \_saleforceAccountId  | AccountId  | 
+|  \_salesforceContactId  | Id  | 
+|  \_salesforceAccountId  | AccountId  | 
 
 For example, you can use `_salesforceAccountId` and `_salesforceContactId` as a key name with the [SearchProfiles](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_SearchProfiles.html) API to find a profile\. You can find the Salesforce\-Contact objects associated with a specific profile by using the [ListProfileObjects](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListProfileObjects.html) API with the `ProfileId` and `ObjectTypeName` set to `Salesforce-Contact`\.
 

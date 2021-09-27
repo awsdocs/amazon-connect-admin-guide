@@ -19,6 +19,5 @@ Each agent is assigned to one routing profile\.
 + [Disable a queue](disable-a-queue.md)
 + [Set queue capacity](set-maximum-queue-limit.md)
 + [Set the hours of operation](set-hours-operation.md)
-+ [Set up outbound caller ID](queues-callerid.md)
 + [Create a routing profile](routing-profiles.md)
 + [Set up queue\-based routing](set-up-queue-based-routing.md)
