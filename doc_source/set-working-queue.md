@@ -29,6 +29,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 Note the following properties:
 + **By queue > Use attribute**\. To set the queue dynamically, you must specify the Amazon Resource Name \(ARN\) for the queue rather than the queue name\. To find the ARN for a queue, open the queue in the queue editor\. The ARN is included as the last part of the URL displayed in the browser address bar after /queue\. For example, `.../queue/aaaaaaaa-bbbb-cccc-dddd-111111111111`\.
 
++ **By Agent queue > Use attribute**\. To set the agent queue dynamically, you must specify the Agent ID and not the full agent \(ARN\)  For example, `aaaaaaaa-bbbb-cccc-dddd-111111111111`.
+
+
 ## Configured block<a name="set-working-queue-configured"></a>
 
 When this block is configured, it looks similar to the following image:
