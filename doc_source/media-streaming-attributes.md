@@ -16,10 +16,10 @@ The time at which the customer audio stream stopped\.
 
 Customer audio start fragment number  
 The number that identifies the Kinesis Video Streams fragment in which the customer audio stream started\.  
-**JSONPath format: **$\.MediaStreams\.Customer\.Audio\.StartPosition
+**JSONPath format: **$\.MediaStreams\.Customer\.Audio\.StartFragmentNumber
 
 Customer audio stop fragment number  
 The number that identifies the Kinesis Video Streams fragment in which the customer audio stream stopped\.  
-**JSONPath format: **$\.MediaStreams\.Customer\.Audio\.StopPosition
+**JSONPath format: **$\.MediaStreams\.Customer\.Audio\.StopFragmentNumber
 
 For more information about Amazon Kinesis Video Streams fragments, see [Fragment](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/API_reader_Fragment.html) in the * Amazon Kinesis Video Streams Developer Guide*\.
