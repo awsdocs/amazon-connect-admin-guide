@@ -1,6 +1,6 @@
 # Use the Endpoint Test Utility<a name="check-connectivity-tool"></a>
 
-To validate connectivity to Amazon Connect, or when your agents are experiencing problems with the Contact Control Panel \(CCP\), we recommend using the [Amazon Connect Endpoint Test Utility](https://a.co/4pBJMng)\. 
+To validate connectivity to Amazon Connect, or when your agents are experiencing problems with the Contact Control Panel \(CCP\), we recommend using the [Amazon Connect Endpoint Test Utility](https://www.connect-tools.net/endpoint-test/)\. 
 
 The Amazon Connect Endpoint Test Utility performs the following checks: 
 + Validates that the browser being used supports WebRTC\.
@@ -25,7 +25,7 @@ Use the following URL parameters to customize the Endpoint Test Utility:
 
 Example customized URL:
 
-`https://a.co/4pBJMng?lng=es&autoRun=true&connectInstanceUrl=https://myinstance.awsapps.com/connect/login` 
+`https://www.connect-tools.net/endpoint-test/?lng=es&autoRun=true&connectInstanceUrl=https://myinstance.awsapps.com/connect/login` 
 
 ## Previous Check Connectivity Tool<a name="previous-check-connectivity-tool"></a>
 
