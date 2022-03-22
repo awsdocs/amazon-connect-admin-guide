@@ -111,7 +111,7 @@ Or use a wildcard to allow all contact actions, for example: "connect:\*"
 
 ### Allow more resources<a name="example4-allow-more-resources"></a>
 
-You can also use a wildcard to allow more resources\. For example, here's how to allow connect actions on all contact resources:
+You can also use a wildcard to allow more resources\. For example, here's how to allow all connect actions on all contact resources:
 
 ```
 {
