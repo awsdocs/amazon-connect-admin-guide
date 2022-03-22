@@ -87,7 +87,7 @@ Building an effective Amazon Lex bot requires providing simple and realistic utt
 ### Amazon Kinesis<a name="amazonkinesis-bp"></a>
 
 For situations where you need to gain additional insight from your contact metrics and real\-time data from Amazon Connect, you can:
-+ Export your Contact Trace Record \(CTR\) data to Amazon Redshift using Amazon Kinesis\.
++ Export your contact record data to Amazon Redshift using Amazon Kinesis\.
 + Use Amazon Kinesis video stream \(KVS\) and AWS Lambda to transcribe call recordings or voice contacts in real\-time using Amazon Transcribe and send the resulting text to Amazon Comprehend for sentiment analysis\.
 + Leverage the [Amazon Connect Agent Event Kinesis Stream](agent-event-streams.md) for real\-time agent CTI and schedule adherence data\.
 
@@ -109,5 +109,5 @@ Contact Lens for Amazon Connect is a set of machine learning \(ML\) capabilities
 + [Performance Eﬃciency Pillar](                         https://d0.awsstatic.com/whitepapers/architecture/AWS-Performance-Efficiency-Pillar.pdf)
 
 **Video**
-+ [ AWS re:Invent 2016: Scaling Up to Your First 10 Million Users \(ARC201\)](https://www.youtube.com/watch?v=n28lDDdlnVg) 
-+ [ AWS re:Invent 2017: Deep Dive on Amazon EC2 Instances](https://www.youtube.com/watch?v=mZy6E2I5Rek) 
++ [AWS re:Invent 2016: Scaling Up to Your First 10 Million Users \(ARC201\)](https://www.youtube.com/watch?v=n28lDDdlnVg) 
++ [AWS re:Invent 2017: Deep Dive on Amazon EC2 Instances](https://www.youtube.com/watch?v=mZy6E2I5Rek) 

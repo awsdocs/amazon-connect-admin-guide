@@ -2,6 +2,28 @@
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you an overview of the improvements\. 
 
+## Upcoming changes to Saved reports<a name="saved-report-changes"></a>
+
+We are in the process of rolling out a new service to improve saved report limits\. With this launch, tables in your real\-time metrics reports may default to 10 rows per page instead of what you previously saved\. To solve this issue, select the desired table size, re\-save your report, and it will persist the table size\.
+
+## Upcoming improvements to agent metrics on the Real\-Time Metrics page<a name="improvements-agent-metrics"></a>
+
+We are making improvements to the near real\-time Agent Metrics\. Previously, agent metrics, such as **Occupancy**, refreshed every 5 minutes\. With this change, these metrics will update in real\-time after every event, such as when agent answers a call\. 
+
+Additionally, we fixed an issue where, if an agent was handling multiple channels, metrics such as **Agent Non\-Response** were incremented in the wrong channel\.
+
+Finally, with this change, if an agent is handling multiple channels we now calculate **Occupancy** for each channel\. However, this metric is directional\. To ensure you have an accurate view of **Occupancy** for multi\-channel agents, we recommend leveraging the **Historical metrics** page to review **Occupancy** at the agent level\. There is no impact if agents handle a single channel\. 
+
+## New contact transferred related metrics<a name="contact-transferred-whats-new"></a>
+
+We are upgrading the existing [Contacts transferred in](historical-metrics-definitions.md#contacts-transferred-in-historical) and [Contacts transferred out](historical-metrics-definitions.md#contacts-transferred-out-historical) historical metrics to have consistent definitions\. We are adding [Contacts transferred in by agent](historical-metrics-definitions.md#contacts-transferred-in-by-agent-historical) and [Contacts transferred out by agent](historical-metrics-definitions.md#contacts-transferred-out-by-agent-historical) for more granular contact transferred related metrics\. 
+
+## Changes to real\-time metrics agent tables<a name="agent-tables-rtm-page"></a>
+
+We are rolling out a new service to maintain the high availability from metrics that you expect from Amazon Connect\. Due to this change, the agent tables will now be sorted by availability status by default, rather than by agent login\. 
+
+Additionally, the queues and routing profiles table will sort by agents online by default instead of queue or routing profile name\. 
+
 ## Faster reload times for the Real\-time metrics page<a name="upgrading-rtm-page"></a>
 
 We are upgrading the performance of the **Real\-time metrics** page so reload times are faster\. The page will have the same functionality and user experience as the existing **Real\-time metrics** page\.
@@ -20,7 +42,7 @@ The following image shows an example where the first report has been generated a
 
 The following updates were released in April 2021\.
 + Amazon Connect incorrectly reported that chat contacts that were created from disconnect flows were created from transfer flows\.
-+ With these fixes, Amazon Connect correctly reflects in the CTRs and agent event stream that these chat contacts were created from disconnect flows\. 
++ With these fixes, Amazon Connect correctly reflects in the contact records and agent event stream that these chat contacts were created from disconnect flows\. 
 
 There is no impact to voice or task contacts\. 
 
@@ -30,8 +52,8 @@ Chat contacts created through disconnect flows no longer increment the following
 + [Contacts handled incoming](historical-metrics-definitions.md#contacts-handled-incoming-historical)
 + [Contacts transferred in](historical-metrics-definitions.md#contacts-transferred-in-historical)
 
-In addition, note the following fixes for CTRs and the agent event stream for chat contacts:
-+ CTRs: There was an issue in the Attributes section of a chat CTR where the initiation method is **API** for both disconnect and transfer contacts\. With this fix, the initiation method correctly reflect **Disconnect** and **Transfer**, respectively\. 
+In addition, note the following fixes for contact records and the agent event stream for chat contacts:
++ Contact records: There was an issue in the **Attributes** section of a chat contact record where the initiation method is **API** for both disconnect and transfer contacts\. With this fix, the initiation method correctly reflect **Disconnect** and **Transfer**, respectively\. 
 + Agent event stream: Chat contacts created from disconnect flows now have **Disconnect** as the initiation method\. 
 
 ## March 2021<a name="metrics-changes-new-intervals-hmr-march2021"></a>

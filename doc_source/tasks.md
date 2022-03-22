@@ -5,7 +5,7 @@ Amazon Connect Tasks allows you to prioritize, assign, track, and even automate 
 + Follow\-up with a customer via a call\.
 + Complete actions in a business\-specific system, such as processing a customer claim in an insurance application\.
 
-Currently, Amazon Connect Tasks can be used in compliance with [GDPR](http://aws.amazon.com/compliance/gdpr-center) and is pending additional certifications held by Amazon Connect\. 
+Currently, Amazon Connect Tasks can be used in compliance with [GDPR](http://aws.amazon.com/compliance/gdpr-center) and is approved for SOC, PIC, HITRUST, ISO, and HIPAA\.
 
 ## What is a task?<a name="what-is-a-task"></a>
 
@@ -28,6 +28,8 @@ Amazon Connect provides different ways for you to create tasks:
 1. You can integrate with your homegrown or business\-specific applications to create tasks using Amazon Connect APIs\.
 
    For more information, see the [StartTaskContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartTaskContact.html) API\.
+
+1. You can add a [Create task](create-task-block.md) block to your contact flows\. This block enables you to create and orchestrate tasks directly from flows based on customer input \(DTMF input\), and contact and tasks information\.
 
 1. You can enable your agents to create tasks from the Contact Control Panel \(CCP\) without you doing any development work\.
 
@@ -65,6 +67,7 @@ You can use tasks in the following contact blocks:
 + Check hours of operation
 + Check queue status
 + Check staffing
++ Create task
 + Disconnect / hang up
 + Distribute by percentage
 + End flow / resume
@@ -84,7 +87,7 @@ You can use tasks in the following contact blocks:
 If your organization is using custom [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) policies to manage access to the Amazon Connect console, make sure users have the appropriate permissions to set up applications for task creation\. For a list of required permissions, see [Tasks page](security-iam-amazon-connect-permissions.md#tasks-page)\.
 
 **Note**  
-If your instance was created before October 2018, for information about how to configure your service\-linked roles \(SLR\), see [Set up instances created before October 2018 to use service\-linked roles](connect-slr.md#not-using-slr)\.
+If your instance was created before October 2018, for information about how to configure your service\-linked roles \(SLR\), see [For instances created before October 2018](connect-slr.md#migrate-slr)\.
 
 ## Track tasks in real\-time and historical metrics reports<a name="tracking-tasks"></a>
 
@@ -120,17 +123,19 @@ The total duration of a task can be up to 7 days\. A task ends when one of the f
 
 Use the [Contact search](contact-search.md) page to search for and review completed tasks\. 
 
-Following is an example image of what the **Contact Summary** and **References** look like in a contact trace record \(CTR\) for a task\.
+The following image is an example of what the **Contact Summary** and **References** look like in a contact record for a task\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-sample-ctr.png)
 
-The following data is appended to the CTR but not stored with it\. The data is included in an export\. 
+The following data is appended to the contact record but not stored with it\. The data is included in an export\. 
 + Contact flow ID
 + Potential attributes:
   + [ContactDetails](ctr-data-model.md#ctr-contact-details)
     + Name: the name of the task
     + Description: the description of the task
   + [References](ctr-data-model.md#ctr-contact-references): any links to forms or other sites
+
+When task is scheduled for a future date and time, **Contact Summary** also displays **Scheduled time**\.
 
 ## More information<a name="tasks-more-information"></a>
 + [Feature specifications](amazon-connect-service-limits.md#feature-limits)

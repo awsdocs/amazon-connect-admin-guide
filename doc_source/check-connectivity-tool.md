@@ -25,7 +25,7 @@ Use the following URL parameters to customize the Endpoint Test Utility:
 
 Example customized URL:
 
-`https://www.connect-tools.net/endpoint-test/?lng=es&autoRun=true&connectInstanceUrl=https://myinstance.awsapps.com/connect/login` 
+`https://a.co/4pBJMng?lng=es&autoRun=true&connectInstanceUrl=https://myinstance.awsapps.com/connect/login` 
 
 ## Previous Check Connectivity Tool<a name="previous-check-connectivity-tool"></a>
 

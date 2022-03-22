@@ -283,6 +283,9 @@ Amazon Connect uses Amazon Lex resource\-based policies to make calls to your Am
 
 ## Create a contact flow and add your Amazon Lex bot<a name="lex-bot-create-flow-add-bot"></a>
 
+**Important**  
+If you're using an Amazon Lex V2 bot, your language attribute in Amazon Connect must match the language model used to build your Lex bot\. This is different than Amazon Lex \(Classic\)\. Use a [Set voice](set-voice.md#set-voice-lexv2bot) block to indicate the Amazon Connect language model, or use a [Set contact attributes](set-contact-attributes.md) block\.
+
 Next, create a new contact flow that uses your Amazon Lex bot\. When you create the contact flow, you configure the message played to callers\.
 
 1. Log in to your Amazon Connect instance with an account that has permissions for contact flows and Amazon Lex bots\.
@@ -313,9 +316,6 @@ Next, create a new contact flow that uses your Amazon Lex bot\. When you create 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-get-customer-input3.png)
 
 1. Type **SpeakToAgent** and choose **Save**\.
-
-**Important**  
-If you're using an Amazon Lex V2 bot, your language attribute in Amazon Connect must match the language model used to build your Lex bot\. This is different than Amazon Lex \(Classic\)\. Use a [Set voice](set-voice.md#set-voice-lexv2bot) block to indicate the Amazon Connect language model, or use a [Set contact attributes](set-contact-attributes.md) block\.
 
 ### Finish the contact flow<a name="lex-bot-finish-flow"></a>
 

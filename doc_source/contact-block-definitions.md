@@ -9,13 +9,14 @@ The following table lists all available contact blocks that you can use\. Choose
 | --- | --- | 
 | [Call phone number](call-phone-number.md)  | Initiates an outbound call from an outbound whisper flow\. | 
 |  [Change routing priority / age](change-routing-priority.md)   |  Changes the priority of the contact in queue\. You may want to do this, for example, based on the contact's issue or other variable\.  | 
-|  [Check call progress](check-call-progress.md)   |  Engages with the output provided by an answering machine, and provides branches to route the contact accordingly\.  | 
+|  [Check call progress](check-call-progress.md)   |  Engages with the output provided by an answering machine, and provides branches to route the contact accordingly\. This block works with Amazon Connect High\-Volume Outbound Communications only\.  | 
 |  [Check contact attributes](check-contact-attributes.md)   |  Checks the values of contact attributes\.  | 
 |   [Check hours of operation](check-hours-of-operation.md)  |  Checks whether the contact is occurring within or outside of the hours of operation defined for the queue\.  | 
 |   [Check queue status](check-queue-status.md)   |  Checks the status of the queue based on specified conditions\.  | 
 |   [Check Voice ID](check-voice-id.md)   |  Branches based on the enrollment status, voice authentication status, or status of detection of fraudsters in a watchlist of the caller returned by Voice ID\.  | 
 |   [Check staffing](check-staffing.md)   |  Checks the current working queue, or queue you specify in the block, for whether agents are available, staffed, or online\. Staffed availability could be on call, or after contact work status\.  | 
 |   [Create task](create-task-block.md)   |  Creates a new task, sets the tasks attributes, and initiates a contact flow to start the task\. To learn more about Amazon Connect Tasks, see [Tasks](tasks.md)\.   | 
+|   [Customer profiles](customer-profiles-block.md)   |  Enables you to retrieve, create, and update a customer profile\.  | 
 |  [Disconnect / hang up](disconnect-hang-up.md)  |  Disconnects a contact\.  | 
 |   [Distribute by percentage](distribute-by-percentage.md)   |  Routes customers randomly based on a percentage\.  | 
 |   [End flow / Resume](end-flow-resume.md)   |  Ends the current flow without disconnecting the contact\.  | 
@@ -23,6 +24,7 @@ The following table lists all available contact blocks that you can use\. Choose
 | [Get queue metrics](get-queue-metrics.md) | Retrieves real\-time metrics about queues and agents in your contact center and returns them as attributes\. | 
 |  [Hold customer or agent](hold-customer-agent.md)  |  Places a customer or agent on or off hold\.  | 
 |  [Invoke AWS Lambda function](invoke-lambda-function-block.md)  |  Calls AWS Lambda, optionally returns key\-value pairs\.  | 
+|  [Invoke module ](invoke-module-block.md)  |  Calls a published module\.  | 
 |  [Loop](loop.md)  |  Loops through, or repeats, the **Looping** branch for the number of loops specified\.  | 
 |  [Loop prompts](loop-prompts.md)  |  Loops a sequence of prompts while a customer or agent is on hold or in queue\.   | 
 |   [Play prompt](play.md)  |  Plays an interruptible audio prompt, delivers a text\-to\-speech message, or delivers a chat response\.  | 

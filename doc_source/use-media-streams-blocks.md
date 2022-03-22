@@ -13,7 +13,7 @@ Here's how you can set up a contact flow to test live media streaming:
 
 Customer audio is captured until a **Stop media streaming** block is invoked, even if the contact is passed to another contact flow\.
 
-Use the contact attributes for media streaming in your contact flow so that the CTR includes the attributes\. You can then view the CTR to determine the media streaming data associated with a specific contact\. You can also pass the attributes to an AWS Lambda function\.
+Use the contact attributes for media streaming in your contact flow so that the contact record includes the attributes\. You can then view the contact record to determine the media streaming data associated with a specific contact\. You can also pass the attributes to an AWS Lambda function\.
 
 The following example contact flow shows how you might use media streaming with attributes for testing purposes\. 
 

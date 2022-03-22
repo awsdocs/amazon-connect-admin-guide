@@ -30,7 +30,7 @@ Following is a description of each attribute of the input schema\.
 + `SpeakerEnrollmentRequests`: List of speaker enrollment requests to be fulfilled as part of the job\.
   + `RequestId`: An identifier for this speaker enrollment request\. It must be unique within the input file\. It is used for mapping and identifying entries in the output file\.
   + `SpeakerId`: The client\-provided identifier of the speaker who needs to be enrolled\. You must pass the `CustomerSpeakerId` in this field\. The `GeneratedSpeakerId` is not currently supported\.
-  + `AudioSpecifications`: The list of audio files that Voice ID can use for enrolling this speaker\. Voice ID uses these audio files together to gather required amount of speech for enrollment\. Currently, the maximum number of audio files allowed for an enrollment request is **10**\.
+  + `AudioSpecifications`: The list of audio files that Voice ID can use for enrolling this speaker\. Voice ID uses these audio files together to gather required amount of speech for enrollment\. Currently, the maximum number of audio files allowed for an enrollment request is **10**\. Each file can be a \.wav file up to 20MB, containing audio with 8KHz sample rate and PCM\-16 encoding\.
     + `S3URI`: The Amazon S3 location of the audio file in \.wav format that needs to be used for enrolling the speaker\. 
     + `ChannelId`: The audio channel to be used for enrolling the speaker in a multi\-channel audio file\. Voice ID supports audio files with up to two channels, so this value is restricted to either **0** or **1**\.
 

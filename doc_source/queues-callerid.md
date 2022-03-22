@@ -13,9 +13,14 @@ You set the caller ID name, such as the name of your company, in the queue setti
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callerID-callerName.png)
 
-**If your DID phone number is in the US/CANADA**: The name you use should be the same one that’s registered in the CNAM \(Caller Name\) database provided by Amazon Connect; this is a nationwide resource available in the US/CANADA to provide the name of the calling party on incoming calls if recipients subscribe to CNAM services from their telecom carrier\. 
+**If your DID phone number is in the US:** The name you use should be the same one that's registered in the CNAM \(Caller Name\) database provided by Amazon Connect; this is a nationwide resource available in the US to provide the name of the calling party on incoming calls if recipients subscribe to CNAM services from their telecom carrier\.
 
-Open an AWS Support ticket to register your US/CANADA\-based phone number with your company name in the CNAM database of the Amazon Connect carrier\. We'll handle the registration process for you\.
+Open an AWS Support ticket to register your US based phone number with your company name in the CNAM database of the Amazon Connect carrier\. We'll handle the registration process for you\. **It may take up to 30 days for the caller ID names to propagate through the database\.** 
+
+If you are using CNAM phoning into Canada, the end network may support Caller ID lookups, but this functionality is not guaranteed, as not all receiving networks support this feature\. We are currently unable to provide support for lookups in other locales\.
+
+**Important**  
+CNAM is not supported for custom caller IDs, third\-party numbers, or with the use of whisper flow transfers\.
 
 **Tip**  
 If you want each agent to have their own caller ID name while dialing out \(such as *Example Corp Billing Dept*\), create a queue for each agent/caller ID name\.
@@ -90,7 +95,7 @@ Amazon Connect presents Outbound Caller ID Name correctly via the Calling Line/P
 
 Amazon Connect has contracted with a leading provider of CNAM services for US numbers to provide Calling Name to the extent possible\. This enables outbound calls that show the enrolled Calling Line Identity \(CLI\) to generally avoid reputation\-sensitive labels like "spam" or "telemarketer\."
 
-To enroll your numbers with this CNAM services provider, open a Support ticket\. Our Support team will gather the required information to enroll your numbers\. For instructions on how to access Support, see [Get administrative support for Amazon Connect](get-admin-support.md)\.
+To enroll your numbers with this CNAM services provider, open an AWS Support ticket\. Our support team will gather the required information to enroll your numbers\. For instructions on how to access AWS Support, see [Get administrative support for Amazon Connect](get-admin-support.md)\.
 
 **Note**  
 Only numbers in the 50 US states, Puerto Rico, and Virgin Islands are eligible\.

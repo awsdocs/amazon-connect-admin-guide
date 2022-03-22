@@ -1,6 +1,6 @@
 # Enable Contact Lens for Amazon Connect<a name="enable-analytics"></a>
 
-You can enable Contact Lens in just a few steps\. Just add a [Set recording and analytics behavior](set-recording-behavior.md) block to a flow, and configure it for Contact Lens\.
+You can enable Contact Lens for Amazon Connect in just a few steps\. Just add a [Set recording and analytics behavior](set-recording-behavior.md) block to a flow, and configure it for Contact Lens\.
 
 **To enable Contact Lens in a contact flow**
 
@@ -8,7 +8,7 @@ You can enable Contact Lens in just a few steps\. Just add a [Set recording and 
 
 1. In the contact block, under **Call recording**, choose **On**, **Agent and Customer**\.
 
-   Both agent and customer call recordings are required to use Contact Lens\.  
+   Both agent and customer call recordings are required to use Contact Lens  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior.png)
 
 1. Select **Enable Contact Lens for speech analytics**\.
@@ -35,7 +35,7 @@ You can enable Contact Lens in just a few steps\. Just add a [Set recording and 
 1. If the contact is going to be transferred to another agent or queue, repeat these steps to add another [Set recording and analytics behavior](set-recording-behavior.md) block with **Enable Contact Lens for speech analytics** enabled\. 
 
 **Tip**  
-If you want to continue using Contact Lens to collect data after transferring a contact to another agent or queue, you need to add another [Set recording and analytics behavior](set-recording-behavior.md) block with **Enable analytics** enabled for the flow\. This is because a transfer generates a second contact ID and CTR\. Contact Lens needs to run on that CTR as well\.
+If you want to continue using Contact Lens to collect data after transferring a contact to another agent or queue, you need to add another [Set recording and analytics behavior](set-recording-behavior.md) block with **Enable analytics** enabled for the flow\. This is because a transfer generates a second contact ID and contact record\. Contact Lens needs to run on that contact record as well\.
 
 ## How to enable redaction of sensitive data<a name="enable-redaction"></a>
 

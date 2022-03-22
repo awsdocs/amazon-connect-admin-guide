@@ -1,6 +1,6 @@
 # Enable data streaming for your instance<a name="data-streaming"></a>
 
-You can export contact trace records \(CTRs\) and agent events from Amazon Connect and perform real\-time analysis on contacts\. Data streaming sends data to Amazon Kinesis\.
+You can export contact records and agent events from Amazon Connect and perform real\-time analysis on contacts\. Data streaming sends data to Amazon Kinesis\.
 
 **To enable data streaming for your instance**
 
@@ -13,7 +13,7 @@ You can export contact trace records \(CTRs\) and agent events from Amazon Conne
 
 1. Choose **Enable data streaming**\.
 
-1. For **Contact Trace Records**, do one of the following:
+1. For **Contact records**, do one of the following:
    + Choose **Kinesis Firehose** and select an existing delivery stream, or choose **Create a new Kinesis firehose** to open the Kinesis Firehose console and create the delivery stream\.
    + Choose **Kinesis Stream** and select an existing stream, or choose **Create a Kinesis stream** to open the Kinesis console and create the stream\.
 

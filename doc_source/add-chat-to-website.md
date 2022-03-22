@@ -5,7 +5,7 @@ To support your customers through chat, you can add a chat widget to your websit
 Because Amazon Connect hosts the widget, it ensures that the latest version is always live on your website\. 
 
 **Tip**  
-Use of the chat widget is subject to default Service Quotas, such as the number of characters allowed per message\. Before launching your chat widget into production, make sure that your Service Quotas are set for your organization's needs\. For more information, see [Amazon Connect service quotas](amazon-connect-service-limits.md)\. 
+Use of the chat widget is subject to default service quotas, such as the number of required characters for each message\. Before launching your chat widget into production, make sure that your service quotas are set for your organization's needs\. For more information, see [Amazon Connect service quotas](amazon-connect-service-limits.md)\. 
 
 ## Supported browsers<a name="chat-widget-supported-browsers"></a>
 
@@ -14,6 +14,8 @@ The pre\-built chat widget supports the following browser versions and higher:
 + Safari 13\.1
 + Microsoft Edge version 85
 + Mozilla Firefox 81\.0
+
+The chat widget supports browser notifications for desktop devices\. For more information, see [Browser notifications](browser-notifications-chat.md)\.
 
 ## Step 1: Customize your chat widget<a name="customize-chat-widget"></a>
 
@@ -30,9 +32,9 @@ In this step, you customize the experience of the chat widget for your customers
    As you choose colors, the chat preview updates automatically so that you can see what your widget will look like\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-choose-colors.png)
 
-1. For **Minimize chat icon**, select the colors for the icon that customers will click or tap to minimize the chat widget\. 
+1. For **Minimize chat icon**, select the colors for the icon that customers will choose or tap to minimize the chat widget\. 
 
-1. For **Open chat icon**, select the colors for the icon that customers will click or tap to start a chat with your contact center\. 
+1. For **Open chat icon**, select the colors for the icon that customers will choose or tap to start a chat with your contact center\. 
 
 1. Under **Select contact flow**, choose the inbound flow that initiates when a customer starts a chat\.
 
@@ -77,13 +79,13 @@ In this step, you confirm your selections and copy the code for the chat widget 
 
 ### Security key<a name="chat-widget-security-key"></a>
 
-Use this 44\-character security key to generate JSON web tokens from your web server\. You can also update, or rotate, keys if you need to change them\. When you do this, Amazon Connect provides you with a new key and maintains the old key until you have a chance to replace it\. After you have the new key deployed, you can come back to Amazon Connect and delete the old key\.
+Use this 44\-character security key to generate JSON web tokens from your web server\. You can also update, or rotate, keys if you need to change them\. When you do this, Amazon Connect provides you with a new key and maintains the previous key until you have a chance to replace it\. After you have the new key deployed, you can come back to Amazon Connect and delete the previous key\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-security-key.png)
 
 When your customers interact with the start chat icon on your website, the chat widget requests your web server for a JWT\. When this JWT is provided, the widget will then include it as part of the end customer’s chat request to Amazon Connect\. Amazon Connect then uses the secret key to decrypt the token\. If successful, this confirms that the JWT was issued by your web server and Amazon Connect routes the chat request to your contact center agents\.
 
-#### JSON web token specifics<a name="jwt"></a>
+#### JSON Web Token specifics<a name="jwt"></a>
 + Algorithm: **HS256**
 + Claims: 
   + **sub**: *widgetId*

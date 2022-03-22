@@ -5,7 +5,7 @@ Before you [set up your Amazon Connect instance](amazon-connect-instances.md), y
 If you want to change the option or directory you selected, you can delete the instance and create a new one\. When you delete an instance, however, you lose all configuration settings and metrics data for it\.
 
 Amazon Connect is integrated with AWS Directory Service\. When you create your instance, you'll be prompted to choose from one of the following identity management solutions supported in Amazon Connect:
-+ **Store users with Amazon Connect**—Choose this option if you want to create and manage user accounts within Amazon Connect\. An AWS Directory Service instance will be created in your AWS account\.
++ **Store users with Amazon Connect**—Choose this option if you want to create and manage user accounts within Amazon Connect\. 
 
   When you manage users in Amazon Connect, the user name and password for each user is specific to Amazon Connect\. Users must remember a separate user name and password to log in to Amazon Connect\.
 + **Link to an existing directory**—Choose this option to use an existing Active Directory\. Users will log in to Amazon Connect using their corporate credentials\. 

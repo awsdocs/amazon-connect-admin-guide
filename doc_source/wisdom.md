@@ -28,6 +28,8 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="wisdom-properties"></a>
 
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-block-properties.png)
+
 ## Configuration tips<a name="wisdom-tips"></a>
 + Amazon Connect Wisdom, along with Contact Lens Real\-Time analytics, is used to recommend content that is related to customer issues detected during the current contact\. The [Set recording and analytics behavior](set-recording-behavior.md) block with Contact Lens real\-time enabled must also be set in this flow for Wisdom recommendations to work\. It doesn’t matter where in the flow you add [Set recording and analytics behavior](set-recording-behavior.md)\. 
 
@@ -35,12 +37,4 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 When this block is configured, it looks similar to the following image:
 
-## Sample flows<a name="wisdom-samples"></a>
-
-See these sample flows for scenarios that use this block:
-+ 
-
-## Scenarios<a name="wisdom-scenarios"></a>
-
-See these topics for scenarios that use this block:
-+ 
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-block-configured.png)

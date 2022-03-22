@@ -1,6 +1,6 @@
 # Create and edit a fraudster watchlist<a name="voiceid-fraudster-watchlist"></a>
 
-To create and edit a fraudster watchlist, invoke the [StartFraudsterRegistrationJob](https://docs.aws.amazon.com/voiceid/APIReference/API_StartFraudsterRegistrationJob.html) API for batch enrollment of fraudsters\. 
+To create and edit a fraudster watchlist, invoke the [StartFraudsterRegistrationJob](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_StartFraudsterRegistrationJob.html) API for batch enrollment of fraudsters\. 
 
 To add speakers the fraudster watchlist programmatically, pass the following data to the API:
 
@@ -18,7 +18,7 @@ To add speakers the fraudster watchlist programmatically, pass the following dat
    + `kms:Decrypt` on the KMS key used for input bucket’s default encryption\.
    + `kms:Decrypt` and `kms:GenerateDataKey` on the KMS key provided in the input which will be used for writing output file to the output bucket\.
 
-   You must have `iam:PassRole` permissions when making the call and providing the `dataAccessRole`\. 
+   You must have `iam:PassRole` permissions when making the call and providing the `dataAccessRole`\. To enable confused deputy protection for the `dataAccessRole`, see [Amazon Connect Voice ID cross\-service confused deputy prevention](cross-service-confused-deputy-prevention.md#voiceid-cross-service)\.
 
 1. The threshold for establishing the duplicate status of fraudsters\.
 
@@ -31,4 +31,4 @@ Voice ID updates the fraudster list with successful additions, and return a `Gen
 For quotas for the fraudster list, see [Amazon Connect service quotas](amazon-connect-service-limits.md)\.
 
 **Note**  
-You are charged for adding to the fraudster list\. For more information, see [Amazon Connect Voice ID Pricing](http://aws.amazon.com/connect/pricing/voice-id/)\.
+You are charged for adding to the fraudster list\. For more information, see [Amazon Connect Voice ID Pricing](http://aws.amazon.com/connect/voice-id/)\.

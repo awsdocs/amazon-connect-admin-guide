@@ -5,7 +5,10 @@ You might want to create multiple contact center instances, for example, one as 
 Each instance functions only within the AWS Region in which you create it\.
 
 **Important**  
-There's no way to migrate all resources between virtual contact center instances\. You can migrate some instance resources manually or with the assistance of AWS Support\. Other resources must be recreated\.  
+Most entities in Amazon Connect can be \(re\)created and replicated among instances using the Amazon Connect API\. While doing that keep the following limitations in mind:  
+Service quotas are specific to each instance\.
+Some supporting services, such as User Directory, can be linked to only one Amazon Connect instance at a time\.
+Any additional external and Region\-specific limitations\.
 For more information, see [Can I migrate my Amazon Connect instance from a test environment to a production environment?](https://aws.amazon.com/premiumsupport/knowledge-center/connect-migrate-instance-resources/)
 
 **To create another instance**

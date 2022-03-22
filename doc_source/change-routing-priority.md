@@ -11,7 +11,7 @@ The following table lists how this block routes a contact who is using the speci
 | Channel | Supported? | 
 | --- | --- | 
 | Voice | Yes | 
-| Chat | Yes | 
+| Chat | No | 
 | Task | Yes | 
 
 ## Contact flow types<a name="change-routing-priority-types"></a>

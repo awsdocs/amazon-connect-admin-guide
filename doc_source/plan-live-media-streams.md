@@ -8,11 +8,7 @@ Audio sent to Kinesis uses a sampling rate of 8 Khz\.
 
 When you enable media streaming in Amazon Connect, one Kinesis video stream is used per active call\. By default we allocate 50 streams per instance to your account\. We automatically create additional streams as needed to keep pace with active calls, unless your account reaches the Kinesis Video Streams service quota\.
 
-Check out the [default Kinesis service quota](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/limits.html) for number of streams per account for your region \(see the quota for the **CreateStream** API\)\.
-
-To make sure that there are enough streams available for all calls in your contact center, the value of the **CreateStream** API needs to be greater than the number of the maximum concurrent active calls for your instance\.
-
-If you have more than one instance for your AWS account, your **CreateStream** quota should be a number greater than the concurrent active calls for all of your instances combined\.
+Contact AWS Support to request an increase to **Number of Streams**\.
 
 To request an increase to your service quota, in the AWS Support Center, choose **Create Case** and then choose **Service Quota Increase**\.
 

@@ -29,4 +29,4 @@ To pass a customer display name, implement your callback function in the snippet
 + Only one `customerDisplayName` function can exist at a time\.
 + The customer display name must follow the limitations set by the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html#connect-Type-ParticipantDetails-DisplayName) API\. That is, the name must be a string between 1 and 256 characters\.
 + An empty string, null, or undefined is invalid input for the display name\. To protect against accidentally passing of these inputs, the widget logs an error, `Invalid customerDisplayName provided`, in the browser console, and then starts the chat with the default display name, **Customer**\.
-+ Because the snippet is in the front end of your website, do not pass sensitive data as the display name\. Be sure to follow the best security practices to keep your data safe and protect against attacks and bad actors\.
++ Because the snippet is in the front end of your website, do not pass sensitive data as the display name\. Be sure to follow the appropriate security practices to keep your data safe and protect against attacks and bad actors\.

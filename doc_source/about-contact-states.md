@@ -37,14 +37,17 @@ Here's what the contact state looks like in the agent event stream:
   ]
 ```
 
-## Events in the contact trace record \(CTR\)<a name="ctr-events"></a>
+## Events in the contact record<a name="ctr-events"></a>
 
-A contact trace record \(CTR\) captures events associated with the contact in your contact center\. For example, how long the contact lasted, when it started and stopped\. For a list of all data that's captured in the CTR, see [Contact trace records \(CTR\) data model](ctr-data-model.md)\. 
+A contact record captures events associated with the contact in your contact center\. For example, how long the contact lasted, when it started and stopped\. For a list of all data that's captured in the contact record, see [Contact records data model](ctr-data-model.md)\. 
 
-A CTR is opened for a customer when they are connected to your contact center\. The CTR is completed when the interaction with the contact flow or agent ends \(that is, the agent has completed the ACW and cleared the contact\)\. This means it's possible for a customer to have multiple CTRs\.
+A contact record is opened for a customer when they are connected to your contact center\. The contact record is completed when the interaction with the contact flow or agent ends \(that is, the agent has completed the ACW and cleared the contact\)\. This means it's possible for a customer to have multiple contact records\.
 
-The following diagram shows when a CTR is created for a contact\. 
+The following diagram shows when a contact record is created for a contact\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ctr-diagram.png)
 
-Each time a contact is connected to an agent, a new CTR is created\. The CTRs for a contact are linked together through the contactId fields: original, next, and previous\. 
+Each time a contact is connected to an agent, a new contact record is created\. The contact records for a contact are linked together through the contactId fields: original, next, and previous\. 
+
+**Tip**  
+A contact is considered connected when a contact record is created\. It's possible a contact record can be created before a call is finished ringing for the caller, due to network conditions and PSTN event propagation\.

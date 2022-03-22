@@ -1,6 +1,6 @@
 # Use the Voice ID APIs<a name="voiceid-apis"></a>
 
-To manage Voice ID programmatically, see [Amazon Connect Voice ID APIs](https://docs.aws.amazon.com/voiceid/APIReference/Welcome.html)\. 
+To manage Voice ID programmatically, see [Amazon Connect Voice ID APIs](https://docs.aws.amazon.com/voiceid/latest/APIReference/)\. 
 
 This section explains how to perform common scenarios using the Voice ID APIs\. 
 

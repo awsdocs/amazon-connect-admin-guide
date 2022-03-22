@@ -29,7 +29,7 @@ Use the following steps to upgrade to the latest CCP\.
 
 We highly recommend setting up your network to use [Option 1 \(recommended\): Replace Amazon EC2 and CloudFront IP range requirements with a domain allow list](ccp-networking.md#option1)\. 
 
-Using this option helps Amazon Connect Support to quickly troubleshoot any issues you have\. Specifically, using **\*\.execute\-api\.\{region\}\.amazonaws\.com** passes more metrics to our Support team to help with troubleshooting\. 
+Using this option helps Amazon Connect Support to quickly troubleshoot any issues you have\. Specifically, using **\*\.telemetry\.connect\.\{region\}\.amazonaws\.com** passes more metrics to our Support team to help with troubleshooting\. 
 
 ## Update your SAML URL to ccp\-v2<a name="update-saml-url"></a>
 

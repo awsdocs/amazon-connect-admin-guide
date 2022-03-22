@@ -157,14 +157,14 @@ Amazon Connect security can be divided into three logical layers as illustrated 
    + ANI Fraud detection solutions using [Amazon Connect telephony metadata](connect-attrib-list.md#telephony-call-metadata-attributes) and [partner solutions](http://aws.amazon.com/connect/partners/) can be used to protect against caller ID spoofing\. 
    + [Amazon Connect Voice ID](voice-id.md) and other voice biometric partner solutions can be used to enhance and streamline the authentication process\. Active voice biometric authentication allows contacts the option to speak specific phrases and use those for voice signature authentication\. Passive voice biometrics allow contacts to register their unique voiceprint and use their voiceprint to authenticate with any voice input that meets sufficient length requirements for authentication\.
    + Maintain the [application integration](app-integration.md) section in the Amazon Connect console for adding any third\-party application or integration points to your allow list, and remove unused endpoints\.
-   + Send only the data necessary to meet minimum requirements to external systems that handle sensitive data\. For example, if you have only one business unit using your call recording analytics solution, you can set an AWS Lambda trigger in your S3 bucket to process contact trace records \(CTRs\), check for the business unit’s specific queues in the CTR data, and if it is a queue that belongs to the unit, send only that call recording to the external solution\. With this approach, you only send the data necessary and avoid the cost and overhead associated with processing unnecessary recordings\.
+   + Send only the data necessary to meet minimum requirements to external systems that handle sensitive data\. For example, if you have only one business unit using your call recording analytics solution, you can set an AWS Lambda trigger in your S3 bucket to process contact records, check for the business unit’s specific queues in the contact record data, and if it is a queue that belongs to the unit, send only that call recording to the external solution\. With this approach, you only send the data necessary and avoid the cost and overhead associated with processing unnecessary recordings\.
 
-     For an integration that enables Amazon Connect to communicate with Amazon Kinesis and Amazon Redshift to enable the streaming of contact trace records \(CTRs\), see [Amazon Connect integration: Data streaming](http://aws.amazon.com/quickstart/connect/data-streaming/)\.
+     For an integration that enables Amazon Connect to communicate with Amazon Kinesis and Amazon Redshift to enable the streaming of contact records, see [Amazon Connect integration: Data streaming](http://aws.amazon.com/quickstart/connect/data-streaming/)\.
 
 ## Resources<a name="securityvectors-resources-bp"></a>
 
 **Documentation**
-+ [ AWS Cloud Security](http://aws.amazon.com/security/) 
++ [AWS Cloud Security](http://aws.amazon.com/security/) 
 + [Security in Amazon Connect](security.md)
 + [IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
 + [AWS Compliance](http://aws.amazon.com/compliance/)

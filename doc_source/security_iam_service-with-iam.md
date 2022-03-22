@@ -35,7 +35,7 @@ You can specify multiple actions using wildcards \(\*\)\. For example, to specif
 "Action": "connect:Describe*"
 ```
 
-To see a list of Amazon Connect actions, [Actions, Resources, and Condition Keys for Amazon Connect](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonconnect.html) in the *IAM User Guide*\.
+To see a list of Amazon Connect actions, [Actions, Resources, and Condition Keys for Amazon Connect](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html)\.
 
 ### Resources<a name="security_iam_service-with-iam-id-based-policies-resources"></a>
 
@@ -100,7 +100,7 @@ To specify multiple resources in a single statement, separate the ARNs with comm
       "resource2"
 ```
 
-To see a list of Amazon Connect resource types and their ARNs, see [Actions, Resources, and Condition Keys for Amazon Connect](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonconnect.html) in the *IAM User Guide*\. The same article explains with which actions you can specify the ARN of each resource\.
+To see a list of Amazon Connect resource types and their ARNs, see [Actions, Resources, and Condition Keys for Amazon Connect](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html)\. The same article explains with which actions you can specify the ARN of each resource\.
 
 ### Condition keys<a name="security_iam_service-with-iam-id-based-policies-conditionkeys"></a>
 
@@ -118,7 +118,7 @@ Amazon Connect defines its own set of condition keys and also supports using som
 
 All Amazon EC2 actions support the `aws:RequestedRegion` and `ec2:Region` condition keys\. For more information, see [Example: Restricting Access to a Specific Region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ExamplePolicies_EC2.html#iam-example-region)\. 
 
-To see a list of Amazon Connect condition keys, see [Actions, Resources, and Condition Keys for Amazon Connect](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonconnect.html) in the *IAM User Guide*\. 
+To see a list of Amazon Connect condition keys, see [Actions, Resources, and Condition Keys for Amazon Connect](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html)\.
 
 ### Examples<a name="security_iam_service-with-iam-id-based-policies-examples"></a>
 

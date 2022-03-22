@@ -20,30 +20,16 @@ To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as
 | Domain/URL allow list | AWS Region | Ports | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
 | rtc\*\.connect\-telecom\.\{*region*\}\.amazonaws\.com This is used by ccp\# \(v1\)\. Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-|  **New: additional domains to add to your allow list** \{*myInstanceName*\}\.my\.connect\.aws/ccp\-v2 \{*myInstanceName*\}\.my\.connect\.aws/api \*\.static\.connect\.aws **Current: ** \{*myInstanceName*\}\.awsapps\.com/connect/ccp\-v2 \{*myInstanceName*\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{*myInstanceName*\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \*\.execute\-api\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+|  **\*\.my\.connect\.aws** \{*myInstanceName*\}\.my\.connect\.aws/ccp\-v2 \{*myInstanceName*\}\.my\.connect\.aws/api \*\.static\.connect\.aws \*\.cloudfront\.net **\.awsapps\.com:** \{*myInstanceName*\}\.awsapps\.com/connect/ccp\-v2 \{*myInstanceName*\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{*myInstanceName*\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \*\.telemetry\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | participant\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \*\.transport\.connect\.\{*region*\}\.amazonaws\.com This is used by ccp\-v2\.  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \{*Amazon S3 bucket name*\}\.s3\.\{*region*\}\.amazonaws\.com  | Replace *Amazon S3 bucket name* with the name of the location where you store attachments\. Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com To instead add specific endpoints to your allow list based on Region, see [NLB endpoints](#nlb-endpoints)\.   | Replace \{*region*\} with the location of your Amazon Connect instance | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+| GLOBALACCELERATOR | GLOBAL and Region where your Amazon Connect instance is located \(add GLOBAL AND any region\-specific entry to your allow list\) | 443 \(HTTPS\) and 80 \(HTTP\) | OUTBOUND | SEND/RECEIVE | 
 
 **Note**  
 If you're using SAML Sign\-In to your Amazon Connect instance, add the Global Accelerator domain to your allow list: **\*\.awsglobalaccelerator\.com**\.
-
-**Note**  
-The new region telecom endpoints follow a different format\. Here's a complete list of telecom endpoints:  
-
-
-| Region | Domain/URL | 
-| --- | --- | 
-| us\-east\-1  | rtc\*\.connect\-telecom\.us\-east\-1\.amazonaws\.com | 
-| us\-west\-2  | rtc\*\.connect\-telecom\.us\-west\-2\.amazonaws\.com | 
-| ap\-northeast\-1  | rtc\*\.connect\-telecom\.ap\-northeast\-1\.amazonaws\.com | 
-| ap\-southeast\-1  | rtc\.cell\-1\.prod\.ap\-southeast\-1\.prod\.connect\.aws\.a2z\.com | 
-| ap\-southeast\-2  | rtc\*\.connect\-telecom\.ap\-southeast\-2\.amazonaws\.com | 
-| ca\-central\-1  | rtc\*\.connect\-telecom\.ca\-central\-1\.amazonaws\.com | 
-| eu\-central\-1  | rtc\*\.connect\-telecom\.eu\-central\-1\.amazonaws\.com | 
-| eu\-west\-2  | rtc\.cell\-1\.prod\.eu\-west\-2\.prod\.connect\.aws\.a2z\.com | 
 
 **Tip**  
 When using `rtc*.connect-telecom.{region}.amazonaws.com`, ` *.transport.connect.{region}.amazonaws.com`, and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
@@ -61,6 +47,24 @@ The following table lists the CloudFront domains used for static assets if you w
 | eu\-central\-1  | https://d1n9s7btyr4f0n\.cloudfront\.net/  https://d3tqoc05lsydd3\.cloudfront\.net/  | 
 | eu\-west\-2  | https://dl32tyuy2mmv6\.cloudfront\.net/  https://d2p8ibh10q5exz\.cloudfront\.net/  | 
 
+ca\-central isn't included in the table because we host static contents behind the domain `*.my.connect.aws` so no addition to the allow list is needed\.
+
+If your business does not use SAML, and you have firewall restrictions, you can add the following entries per Region:
+
+
+| Region | CloudFront Domain | 
+| --- | --- | 
+| us\-east\-1  | https://d32i4gd7pg4909\.cloudfront\.net/  | 
+| us\-west\-2  | https://d18af777lco7lp\.cloudfront\.net/  | 
+| eu\-west\-2  | https://d16q6638mh01s7\.cloudfront\.net/  | 
+| ap\-northeast\-1  | https://d2c2t8mxjhq5z1\.cloudfront\.net/  | 
+| ap\-southeast\-1  | https://d3qzmd7y07pz0i\.cloudfront\.net/  | 
+| ap\-southeast\-2  | https://dwcpoxuuza83q\.cloudfront\.net/  | 
+| eu\-central\-1  | https://d1whcm49570jjw\.cloudfront\.net/  | 
+| ca\-central\-1  | https://d2wfbsypmqjmog\.cloudfront\.net/  | 
+| us\-gov\-east\-1:  | hhttps://s3\-us\-gov\-east\-1\.amazonaws\.com/warp\-drive\-console\-static\-content\-prod\-osu/  | 
+| us\-gov\-west\-1:  | https://s3\-us\-gov\-west\-1\.amazonaws\.com/warp\-drive\-console\-static\-content\-prod\-pdt/  | 
+
 ### NLB endpoints<a name="nlb-endpoints"></a>
 
 The following table lists the specific endpoints for the Region the Amazon Connect instance is in\. If you don't want to use the TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com wildcard, you can add these endpoints to your allow list instead\.
@@ -69,13 +73,16 @@ The following table lists the specific endpoints for the Region the Amazon Conne
 | Region | Turn Domain/URL | 
 | --- | --- | 
 | us\-west\-2  | TurnNlb\-8d79b4466d82ad0e\.elb\.us\-west\-2\.amazonaws\.com TurnNlb\-dbc4ebb71307fda2\.elb\.us\-west\-2\.amazonaws\.com | 
-| us\-east\-1  | TurnNlb\-d76454ac48d20c1e\.elb\.us\-east\-1\.amazonaws\.com | 
-| ap\-northeast\-1  | TurnNlb\-3c6ddabcbeb821d8\.elb\.ap\-northeast\-1\.amazonaws\.com | 
+| us\-east\-1  | TurnNlb\-d76454ac48d20c1e\.elb\.us\-east\-1\.amazonaws\.com  TurnNlb\-31a7fe8a79c27929\.elb\.us\-east\-1\.amazonaws\.com TurnNlb\-7a9b8e750cec315a\.elb\.us\-east\-1\.amazonaws\.com  | 
+| af\-south\-1  | TurnNlb\-29b8f2824c2958b8\.elb\.af\-south\-1\.amazonaws\.com | 
+| ap\-northeast\-1  | TurnNlb\-3c6ddabcbeb821d8\.elb\.ap\-northeast\-1\.amazonaws\.com  | 
+| ap\-northeast\-2  | TurnNlb\-a2d59ac3f246f09a\.elb\.ap\-northeast\-2\.amazonaws\.com | 
 | ap\-southeast\-1  | TurnNlb\-261982506d86d300\.elb\.ap\-southeast\-1\.amazonaws\.com | 
 | ap\-southeast\-2  | TurnNlb\-93f2de0c97c4316b\.elb\.ap\-southeast\-2\.amazonaws\.com | 
 | ca\-central\-1  | TurnNlb\-b019de6142240b9f\.elb\.ca\-central\-1\.amazonaws\.com | 
 | eu\-central\-1  | TurnNlb\-ea5316ebe2759cbc\.elb\.eu\-central\-1\.amazonaws\.com | 
 | eu\-west\-2  | TurnNlb\-1dc64a459ead57ea\.elb\.eu\-west\-2\.amazonaws\.com | 
+| us\-gov\-west\-1  | TurnNlb\-d7c623c23f628042\.elb\.us\-gov\-west\-1\.amazonaws\.com | 
 
 ## Option 2 \(not recommended\): Allow IP address ranges<a name="option2"></a>
 
@@ -90,6 +97,9 @@ For more information about this file, see [About Amazon Connect IP address range
 | EC2 | GLOBAL and Region where your Amazon Connect instance is located \(GLOBAL only if a region\-specific entry doesn't exist\) | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | CLOUDFRONT | Global\* | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | GLOBALACCELERATOR | GLOBAL and Region where your Amazon Connect instance is located \(add GLOBAL AND any region\-specific entry to your allow list\) | 443 \(HTTPS\) and 80 \(HTTP\) | OUTBOUND | SEND/RECEIVE | 
+
+**Note**  
+If you're using SAML Sign\-In to your Amazon Connect instance, be sure to add the Global Accelerator domain to your allow list: **\*\.awsglobalaccelerator\.com**\.
 
 \*CloudFront serves static content such as images or javascript from an edge location that has the lowest latency in relation to where your agents are located\. IP range allow lists for CloudFront are global and require all IP ranges associated with **"service": "CLOUDFRONT"** in the ip\-ranges\.json file\. 
 
@@ -159,7 +169,7 @@ Amazon Connect Region selection is contingent upon data governance requirements,
 + **Location of your callers**—Because calls are anchored to your Amazon Connect Region endpoint, they are subject to PSTN latency\. Ideally your callers and transfer endpoints are geographically located as closely as possible to the AWS Region where your Amazon Connect instance is hosted for lowest latency\.
 
   For optimal performance, and to limit the latency for your customers when they call in to your contact center, create your Amazon Connect instance in the Region that is geographically closest to where your customers call from\. You might consider creating multiple Amazon Connect instances, and providing contact information to customers for the number that is closest to where they call from\.
-+ **External transfers**—from Amazon Connect remain anchored to your Amazon Connect Region endpoint for the duration of the call\. Per\-minute usage continues to accrue until the call is disconnected by the recipient of the transferred call\. The call is not recorded after the agent drops or the transfer completes\. The CTR data and associated call recording of a transferred call are generated after the call is terminated\. Whenever possible, don't transfer calls that could be transferred back into Amazon Connect, known as circular transfers, to avoid compounding PSTN latency\.
++ **External transfers**—from Amazon Connect remain anchored to your Amazon Connect Region endpoint for the duration of the call\. Per\-minute usage continues to accrue until the call is disconnected by the recipient of the transferred call\. The call is not recorded after the agent drops or the transfer completes\. The contact record data and associated call recording of a transferred call are generated after the call is terminated\. Whenever possible, don't transfer calls that could be transferred back into Amazon Connect, known as circular transfers, to avoid compounding PSTN latency\.
 
 ## Agents using Amazon Connect remotely<a name="remote-agents"></a>
 

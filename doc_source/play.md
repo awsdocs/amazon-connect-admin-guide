@@ -13,7 +13,7 @@ The following table lists how this block routes a contact who is using the speci
 | --- | --- | 
 | Voice | Yes | 
 | Chat | Yes | 
-| Task | No \- Error branch | 
+| Task | No \- takes the **Okay** branch but it has no effect | 
 
 ## Contact flow types<a name="play-types"></a>
 

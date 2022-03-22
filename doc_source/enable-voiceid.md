@@ -2,13 +2,22 @@
 
 There are two ways you can enable Voice ID for your instance: 
 + Use the Amazon Connect console\. This topic provides instructions\.
-+ Use the Amazon Connect Voice ID API\. For more information, see the [Amazon Connect Voice ID API Reference](https://docs.aws.amazon.com/voiceid/APIReference/Welcome.html)\.
++ Use the Amazon Connect Voice ID API\. For more information, see the [Amazon Connect Voice ID API Reference](https://docs.aws.amazon.com/voiceid/latest/APIReference/)\.
 
 ## Before you begin<a name="enable-voiceid-requirements"></a>
 
-Following is an overview of key concepts and the information that you'll be prompted for during the setup process\. 
+Before you get started, complete the following tasks\.
 
-### How do you want to name your Voice ID domain?<a name="enable-voiceid-domains"></a>
+**Topics**
++ [Grant the required permissions](#enable-voiceid-permissions)
++ [Decide how to name your Voice ID domain](#enable-voiceid-domains)
++ [Create an AWS KMS key to encrypt data stored in the domain](#enable-voiceid-awsmanagedkey)
+
+### Grant the required permissions<a name="enable-voiceid-permissions"></a>
+
+You must grant the required permissions to IAM users, groups, or roles\. For more information, see [AmazonConnectVoiceIDFullAccess](security_iam_awsmanpol.md#amazonconnectvoiceidfullaccesspolicy)\.
+
+### Decide how to name your Voice ID domain<a name="enable-voiceid-domains"></a>
 
 When you enable Voice ID, you are prompted to provide a friendly domain name that's meaningful to you such as your organization name, for example, *Voice ID\-ExampleCorp*\. 
 
@@ -25,7 +34,7 @@ When making calls to Voice ID for anything other than CreateDomain or UpdateDoma
 If you create a domain and associate it with one key, store some data, and then change the KMS key to a different key, the old data is still stored with the old key\. Voice ID doesn't re\-encrypt the old data\. This means in certain scenarios, the user would require access to the previous KMS key associated with the domain\.
 
 **Tip**  
-You can create KMS keys or provide an existing KMS key programmatically\. For more information, see [Amazon Connect Voice ID APIs](https://docs.aws.amazon.com/voiceid/APIReference/Welcome.html)\.
+You can create KMS keys or provide an existing KMS key programmatically\. For more information, see [Amazon Connect Voice ID APIs](https://docs.aws.amazon.com/voiceid/latest/APIReference/)\.
 
 ## Step 1: Create a new Voice ID domain and encryption key<a name="enable-voiceid-step1"></a>
 
@@ -77,7 +86,8 @@ You've enabled Voice ID for your instance\. Next, in Step 2 you configure how yo
 ## Step 2: Configure Voice ID in your contact flow<a name="enable-voiceid-step2"></a>
 
 In this step you add the required blocks to your contact flow and configure how you want Voice ID to work\.
-+ [Set Voice ID](set-voice-id.md): Add this block to the start of a call\. You use this block to start streaming audio to Amazon Connect Voice ID to verify the caller's identity, as soon as the call is connected to a contact flow\. In this block you configure the authentication threshold, response time, and fraud threshold\. 
++ [Play prompt](play.md): Add this block before the [Set Voice ID](set-voice-id.md) block to stream audio properly\. You can edit it to include a simple message such as "Welcome\."
++ [Set Voice ID](set-voice-id.md): After the [Play prompt](play.md) block, add the [Set Voice ID](set-voice-id.md) block\. It should be at the start of a call\. You use this block to start streaming audio to Amazon Connect Voice ID to verify the caller's identity, as soon as the call is connected to a contact flow\. In this block you configure the authentication threshold, response time, and fraud threshold\. 
 + [Set contact attributes](set-contact-attributes.md): Use to pass the `CustomerId` attribute to Voice ID\. The `CustomerId` may be a customer number from your CRM, for example\. You can create a Lambda function to pull the unique customer ID of the caller from your CRM system\. Voice ID uses this attribute as the `CustomerSpeakerId` for the caller\.
 + [Check Voice ID](check-voice-id.md): Use to check the response from Voice ID for enrollment status, voice authentication, and fraud detection, and then branch based on one of the returned statuses\.
 

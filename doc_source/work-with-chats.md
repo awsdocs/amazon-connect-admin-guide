@@ -54,3 +54,20 @@ When you return from break and choose the chat tab, you'll see the missed contac
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/missed-chat-name.png)
 
 You can clear the slots so that chats are routed to you again\. For each missed contact, choose the banner, and then choose **Clear contact**\. 
+
+## How to format messages<a name="format-chats"></a>
+
+When composing a chat message, you have the ability to format your message\. This enables you to add structure and clarity to your support messages\. You can add the following formatting: 
++ Bold
++ Italic
++ Bulleted list
++ Numbered list
++ Hyperlinks
++ Attachments
+
+To get started, highlight the text you want to format, and then select a the formatting options from the toolbar\. You can see exactly what the message looks like before sending it\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chat-rich-messaging-toolbar.png)
+
+**Tip**  
+Developers: Enable this feature from the chat user interface\. For instructions, see [Enable text formatting for your customer's chat experience](enable-text-formatting-chat.md)\.

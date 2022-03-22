@@ -11,6 +11,7 @@ A *contact flow* defines the customer experience with your contact center from s
 + [Copy and paste contact flows](copy-paste-contact-flows.md)
 + [Roll back a contact flow](rollback.md)
 + [Associate a phone number with a contact flow](associate-phone-number.md)
++ [Contact flow modules](contact-flow-modules.md)
 + [Create prompts](prompts.md)
 + [Set up contact transfers](transfer.md)
 + [Set up recording behavior](set-up-recordings.md)

@@ -37,14 +37,14 @@ For example, you can customize your contact flow to say the name of the customer
    });
    ```
 
-   In the payload, you must create a string key `attributes` \(as\-is, all lowercase\), with an object as its value\. That object must have string\-to\-string key/value pairs\. If anything other than a string is passed in any one of the attributes, the chat will fail to start\. 
+   In the payload, you must create a string key `attributes` \(as\-is, all lowercase\), with an object as its value\. That object must have string\-to\-string key\-value pairs\. If anything other than a string is passed in any one of the attributes, the chat will fail to start\. 
 
    The contact attributes must follow the limitations set by the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html#connect-StartChatContact-request-Attributes) API: 
    + Keys must have a minimum length of 1
    + Values can have a minimum length of 0
 
 ## Things you need to know<a name="contact-attributes-chatwidget-important-notes"></a>
-+ The chat widget has a 6144 bytes limit for the entire encoded token\. Since JavaScript uses UTF\-16 encoding, 2 bytes are used per character, so the maximum size of the `encoded_token` should be around 3000 characters\.
++ The chat widget has a 6144 bytes limit for the entire encoded token\. Because JavaScript uses UTF\-16 encoding, 2 bytes are used per character, so the maximum size of the `encoded_token` should be around 3000 characters\.
 + The encoded\_token should be passed in to `callback(data)`\. The `authenticate` snippet does not need any additional changes\. For example:
 
   ```
@@ -56,5 +56,5 @@ For example, you can customize your contact flow to say the name of the customer
     });
   });
   ```
-+ Using a JWT to pass contact attributes ensures the integrity of the data\. As long as you safeguard the shared secret and follow best security practices, you can ensure that the data cannot be manipulated by a bad actor\.
++ Using a JWT to pass contact attributes ensures the integrity of the data\. If you safeguard the shared secret and follow appropriate security practices, you can help ensure that the data cannot be manipulated by a bad actor\.
 + Contact attributes are only encoded in the JWT, not encrypted, so it's possible to decode and read the attributes\. Sensitive data should not be passed in the token\. 

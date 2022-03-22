@@ -14,7 +14,6 @@ API Gateway and Step Functions further enhance the abilities of Lambda\.
 
 For more information, see:
 + [Invoke AWS Lambda functions](connect-lambda-functions.md)
-+ Blog post: [Building a state\-aware workflow with Amazon Connect and AWS Step Functions](http://aws.amazon.com/blogs/contact-center/building-a-state-aware-workflow-with-amazon-connect-and-aws-step-functions/)
 
 ## Storage<a name="storage-services"></a>
 
@@ -22,7 +21,7 @@ Amazon Connect uses Amazon Simple Storage Service \(Amazon S3\) to store recorde
 
 VPC endpoints are not supported\. 
 
-You can also manage the Amazon S3 policies to move data to Amazon S3 Glacier for less expensive long\-term storage\. However, it breaks the link in the contact trace record \(CTR\) in Amazon Connect\. To fix this, use a Lambda function to rename the S3 Glacier object to match the data in the CTR\. 
+You can also manage the Amazon S3 policies to move data to Amazon S3 Glacier for less expensive long\-term storage\. However, it breaks the link in the contact record in Amazon Connect\. To fix this, use a Lambda function to rename the S3 Glacier object to match the data in the contact record\. 
 
 ## Database<a name="database-services"></a>
 
@@ -35,7 +34,7 @@ For more information, see:
 
 ## Analytics<a name="analytics-services"></a>
 
-Amazon Connect tracks all interactions using [contact trace records \(CTRs\)](about-contact-states.md#ctr-events)\. CTRs are used for real\-time and historical metrics reports\. You can also use Amazon Kinesis to stream them to an AWS database like Amazon Redshift or Amazon Athena for BI analysis \(Amazon QuickSight, or a third party such as Tableau\)\. There are AWS CloudFormation templates available to set up this functionality for Amazon Redshift and Athena\. 
+Amazon Connect tracks all interactions using [contact records](about-contact-states.md#ctr-events)\. Contact records are used for real\-time and historical metrics reports\. You can also use Amazon Kinesis to stream them to an AWS database like Amazon Redshift or Amazon Athena for BI analysis \(Amazon QuickSight, or a third party such as Tableau\)\. There are AWS CloudFormation templates available to set up this functionality for Amazon Redshift and Athena\. 
 
 To perform analysis on your contact flow logs, you can set up an Amazon Kinesis stream to stream your contact flow log data from CloudWatch to a data warehouse service, such as Amazon Redshift\. You can combine the contact flow log data with other Amazon Connect data in your warehouse, or run queries to identify trends or common issues with a contact flow\.
 

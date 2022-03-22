@@ -87,7 +87,7 @@ To restrict which functions can be associated with an Amazon Connect instance, y
 
 ## Example 3: Restrict which Amazon Kinesis Data Streams can be associated with an Amazon Connect instance<a name="example3-restrict-kinesis-data-streams"></a>
 
-This example follows a similar model to the Amazon S3 example\. It restricts which specific Kinesis Data Streams may be associated with a given Amazon Connect instance for delivering contact trace records\.
+This example follows a similar model to the Amazon S3 example\. It restricts which specific Kinesis Data Streams may be associated with a given Amazon Connect instance for delivering contact records\.
 
 ```
 {

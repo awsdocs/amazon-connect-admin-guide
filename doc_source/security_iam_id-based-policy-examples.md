@@ -13,6 +13,7 @@ To learn how to create an IAM identity\-based policy using these example JSON po
 + [Create Amazon Connect users based on tags](#connect-access-control-resources-example1)
 + [Create and view Amazon AppIntegrations resources](#appintegration-resources-example1)
 + [Create and view Amazon Connect Wisdom Assistants](#wisdom-resources-example1)
++ [Manage Amazon Connect High\-Volume Outbound Communications resources](#outboundcommunications-policy-example1)
 
 ## Policy best practices<a name="security_iam_service-with-iam-policy-best-practices"></a>
 
@@ -200,10 +201,6 @@ The following sample policy allows event integrations to be created, listed, and
 
 The following sample policy allows Wisdom assistants to be created, listed, fetched, and deleted\.
 
-### Manage Amazon Connect High\-Volume Outbound Communications resources<a name="outboundcommunications-policy-example1"></a>
-
-Onboarding permissions: The following sample policy allows Amazon Connect instances to be onboarded to Amazon Connect High\-Volume Outbound Communications\.
-
 ```
 {
     "Version": "2012-10-17",
@@ -217,6 +214,40 @@ Onboarding permissions: The following sample policy allows Amazon Connect instan
                 "wisdom:DeleteAssistant",
             ],
             "Resource": "*"
+        }
+    ]
+}
+```
+
+## Manage Amazon Connect High\-Volume Outbound Communications resources<a name="outboundcommunications-policy-example1"></a>
+
+Onboarding permissions: The following sample policy allows Amazon Connect instances to be onboarded to Amazon Connect High\-Volume Outbound Communications\.
+
+```
+"Sid": "VisualEditor0",
+             "Effect": "Allow",
+             "Action": [
+                 "connect:DescribeInstance",
+                 "kms:DescribeKey",
+                 "kms:CreateGrant"
+             ],
+             "Resource": [
+                 "arn:aws:kms:region:account-id:key/key-id",
+                 "arn:aws:connect:region:account-id:instance/instance-id"
+             ]
+        },
+        {
+             "Sid": "VisualEditor1",
+             "Effect": "Allow",
+             "Action": [
+                 "events:PutTargets",
+                 "iam:CreateServiceLinkedRole",
+                 "events:PutRule",
+                 "ds:DescribeDirectories",
+                 "iam:PutRolePolicy",
+                 "connect-campaigns:PutConnectInstanceConfig"
+             ],
+             "Resource": "*"
         }
     ]
 }

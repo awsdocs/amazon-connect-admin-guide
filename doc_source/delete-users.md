@@ -4,7 +4,7 @@ When a user is deleted from Amazon Connect, you won't be able to configure their
 
 ## What happens to the user's metrics?<a name="delete-users-metrics"></a>
 
-The user's data in CTRs and reports is retained\. The data is preserved for the consistency of the historical metrics\.
+The user's data in contact records and reports is retained\. The data is preserved for the consistency of the historical metrics\.
 
 In the historical metrics reports, the agent's data will be included in the **Agent performance** metrics report\. However, you won't be able to see an **Agent activity audit** of the deleted agent because their name won't appear in the drop\-down list\. 
 

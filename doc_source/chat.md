@@ -1,7 +1,5 @@
 # Chat<a name="chat"></a>
 
-For an introduction video, check out [Getting Started with Amazon Connect chat](https://www.youtube.com/watch?v=dQ3Y6FWk7q8) on YouTube\. 
-
 Amazon Connect Chat enables your customers to start chatting with contact center agents from any of your business applications, web or mobile\. Interactions are asynchronous, enabling your customers to start a chat with an agent or Amazon Lex bot, step away from it, and then resume the conversation again\. They can even switch devices and continue the chat\.
 
 Agents have a single user interface to help customers using both voice and chat\. This reduces the number of tools that agents have to learn and the number of screens they have to interact with\. Chat activities integrate into your existing contact center flows and the automation that you built for voice\. You build your flows once and reuse them across multiple channels\. Likewise, for metrics collection and the dashboards you built, they automatically benefit from the unified metrics across multiple channels\.
@@ -44,13 +42,13 @@ Here's how you build this scenario:
 
 ## When do chats end?<a name="when-do-chats-end"></a>
 
-The total duration for a chat conversation, including the time spent waiting when the customer isn't active, can't exceed 25 hours\. After that the chat conversation ends\. 
+ By default, the duration for a chat conversation, including the time spent waiting when the customer isn't active, can't exceed 25 hours\. 
 
-During the 25 hours, there's no limit to the number of times a customer can stop and resume chat\.
+ To configure a custom chat duration, call the [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API and add the `ChatDurationInMinutes` parameter\. Using this parameter, you can configure a chat to last from as little as 1 hour \(60 minutes\) to up to 7 days \(10,080 minutes\)\.
 
-To specify wait time a shorter than 25 hours, use the [Wait](wait.md) block\. For example, you might wait 12 hours for the customer to resume the chat\. If the customer tries to resume the chat after 12 hours, in the flow you can have an Amazon Lex bot ask if they're contacting you about the same issue or a different one\. 
+During an ongoing chat session, there's no limit to the number of times a customer can leave and rejoin an existing ongoing chat session\. To accomplish this, use the [Wait](wait.md) block\. For example, you might wait 12 hours for the customer to resume the chat before ending the chat session\. If the customer tries to resume the chat after 12 hours, in the flow you can have an Amazon Lex bot ask if they're contacting you about the same issue or a different one\. 
 
-By specifying a shorter wait time, you help ensure that customers have a good experience\. Otherwise, it's possible for the customer to resume a chat after 24 hours and 58 minutes, and then be cut off after two minutes because the conversation ends automatically at the 25\-hour limit\.
+By specifying a wait time that's significantly shorter than the chat duration, you help ensure that customers have a good experience\. For instance, for a 25\-hour duration chat, it's possible for the customer to resume a chat after 24 hours and 58 minutes, and then be cut off after two minutes because the conversation ends at the 25\-hour limit\.
 
 **Tip**  
 If you're using Amazon Lex with chat, note that the default session timeout for an Amazon Lex session is 5 minutes\. The total duration for a session can't exceed 24 hours\. To change the session timeout, see [Setting the Session Timeout](https://docs.aws.amazon.com/lex/latest/dg/context-mgmt.html#context-mgmt-session-timeoutg) in the *Amazon Lex Developer Guide*\. 

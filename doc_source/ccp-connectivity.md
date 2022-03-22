@@ -13,7 +13,7 @@ When an agent logs in, the CCP attempts to connect to the Amazon EC2 signaling e
 **Transferred calls**
 + When a call is transferred, the transfer event that signals to place an outbound call to the specified transfer destination is sent to Amazon EC2, which then communicates with Amazon Connect to place the call\.
 + When the call is connected, the agent is bridged in, anchoring the call to the agent's existing Amazon Connect endpoint\. Any external transfers or conferences also use this anchor until the call is disconnected\.
-+ If the agent hangs up after the call is bridged, the agent's connection to the call is terminated, but Amazon Connect hangs on to the call at the Amazon Connect anchor point until there is a far side disconnect\. When the call is disconnected, CTRs and associated recordings are generated and made available for the call\.
++ If the agent hangs up after the call is bridged, the agent's connection to the call is terminated, but Amazon Connect hangs on to the call at the Amazon Connect anchor point until there is a far side disconnect\. When the call is disconnected, contact records and associated recordings are generated and made available for the call\.
 
 **Missed calls**
 + If the call is waiting on an agent, customer queue flow logic is used until an agent is available and the call has been successfully routed to that agent\.

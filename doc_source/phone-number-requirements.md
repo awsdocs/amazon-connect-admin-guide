@@ -39,7 +39,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-| Asia Pacific \(Sydney\) Asia Pacific \(Singapore\) Asia Pacific \(Tokyo\)  | 8AM \-12 PM AEST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| Asia Pacific \(Sydney\) Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Tokyo\)  | 8AM \-12 PM AEST Monday\-Friday | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## Austria \(AT\)<a name="austria-regulations"></a>
 
@@ -109,6 +109,23 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | US East US West Canada \(Central\)  EU \(Frankfurt\) EU \(London\) AWS GovCloud \(US\-West\)  | 7 AM to 5 PM CST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
+## Cayman Islands \(KY\)<a name="cayman-islands-regulations"></a>
+
+### For ordering phone numbers<a name="ky-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+### For porting numbers<a name="ky-porting"></a>
+
+
+****  
+
+| Supported Regions | Porting Windows | Required Documents | 
+| --- | --- | --- | 
+| Not supported  | N/A |  N/A  | 
+
 ## Chile \(CL\)<a name="chile-regulations"></a>
 
 ### For ordering phone numbers<a name="cl-ordering"></a>
@@ -117,7 +134,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ca-porting"></a>
+### For porting numbers<a name="cl-porting"></a>
 
 
 ****  
@@ -125,6 +142,26 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
 | Not supported  | N/A | N/A  | 
+
+## Costa Rica \(CR\)<a name="costa-rica-regulations"></a>
+
+### For ordering phone numbers<a name="cr-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West  | Local telephone numbers:  | Yes | Businesses must provide a copy of business registration containing a proof of address as well as an ID of an authorised respresentative\. Valid proofs of address include: third\-party issued bank statements, utility bills \(all issued in the previous 6 months\); government documents \(issued in the previous year\); the proof of ID is a copy of the national identity ID or passport of an authorized representative\.  The business address must be outside of Costa Rica\.  | 
+
+### For porting numbers<a name="cr-porting"></a>
+
+
+****  
+
+| Supported Regions | Porting Windows | Required Documents | 
+| --- | --- | --- | 
+| Not supported  | N/A |  N/A  | 
 
 ## Croatia \(HR\)<a name="croatia-regulations"></a>
 
@@ -194,6 +231,26 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\) EU \(London\)  | 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
+## El Salvador \(SV\)<a name="el-salvador-regulations"></a>
+
+### For ordering phone numbers<a name="sv-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West  | Toll\-free prefixes:  | Yes | Businesses must provide a copy of business registration containing a proof of address\. Valid proofs of address include: third\-party issued bank statements, utility bills \(all issued in the previous 6 months\); government documents \(issued in the previous year\)\. The business address must be outside of El Salvador\.  | 
+
+### For porting numbers<a name="sv-porting"></a>
+
+
+****  
+
+| Supported Regions | Porting Windows | Required Documents | 
+| --- | --- | --- | 
+| Not supported  | N/A |  N/A  | 
+
 ## Estonia \(EE\)<a name="estonia-regulations"></a>
 
 ### For ordering phone numbers<a name="ee-ordering"></a>
@@ -251,10 +308,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 
 
 ****  
-
-| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
-| --- | --- | --- | --- | 
-| EU \(Frankfurt\) EU \(London\) | National prefixes: \+995 70 | No |  | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
 ### For porting numbers<a name="ge-porting"></a>
 
@@ -339,10 +393,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 
 
 ****  
-
-| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
-| --- | --- | --- | --- | 
-| Asia Pacific \(Sydney\) Asia Pacific \(Singapore\) Asia Pacific \(Tokyo\) | Mobile prefixes: \+62 855 | Yes | Proof of business address, a copy of the ID or passport of an authorized representative, and the business registration\. You must also provide a description of how you plan to use the numbers\.  | 
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
 ### For porting numbers<a name="id-porting"></a>
 
@@ -535,7 +586,7 @@ Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-|  Asia Pacific \(Sydney\) Asia Pacific \(Singapore\) Asia Pacific \(Tokyo\)  | 7 AM to 11AM NZST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+|  Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\)  | 7 AM to 11AM NZST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## Netherlands \(NL\)<a name="netherlands-regulations"></a>
 
@@ -553,6 +604,26 @@ Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+## Nigeria \(NG\)<a name="nigeria-regulations"></a>
+
+### For ordering phone numbers<a name="ng-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| Africa \(Cape Town\)  | Local telephone numbers: | Yes | Businesses must provide a copy of business registration containing a proof of address\. Valid proofs of address include: third\-party issued bank statements, utility bills \(all issued in the previous 6 months\); government documents \(issued in the previous year\)\. The business address must be inside Nigeria\.  | 
+
+### For porting numbers<a name="ng-porting"></a>
+
+
+****  
+
+| Supported Regions | Porting Windows | Required Documents | 
+| --- | --- | --- | 
+| Not supported  | N/A |  N/A  | 
 
 ## Norway \(NO\)<a name="norway-regulations"></a>
 
@@ -573,6 +644,26 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
+## Panama \(PA\)<a name="panama-regulations"></a>
+
+### For ordering phone numbers<a name="pa-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+|  US East US West  | Toll\-free prefixes: \+507 800 | Yes | Your business address\. You can have a maximum of 5 Panama toll\-free numbers per business name\. | 
+
+### For porting numbers<a name="pa-porting"></a>
+
+
+****  
+
+| Supported Regions | Porting Windows | Required Documents | 
+| --- | --- | --- | 
+|  Not supported  | N/A | N/A  | 
+
 ## Peru \(PE\)<a name="peru-regulations"></a>
 
 ### For ordering phone numbers<a name="pe-ordering"></a>
@@ -581,7 +672,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="mx-porting"></a>
+### For porting numbers<a name="pe-porting"></a>
 
 
 ****  
@@ -658,6 +749,26 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | 10 AM to 12 PM PST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
+## Serbia \(RS\)<a name="serbia-regulations"></a>
+
+### For ordering phone numbers<a name="rs-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| EU \(Frankfurt\) EU \(London\)  | Local telephone numbers: | Yes | Businesses must provide a copy of business registration containing a proof of address\. Valid proofs of address include: third\-party issued bank statements, utility bills \(all issued in the previous 6 months\); government documents \(issued in the previous year\)\. The business address must be outside Serbia\.  | 
+
+### For porting numbers<a name="rs-porting"></a>
+
+
+****  
+
+| Supported Regions | Porting Windows | Required Documents | 
+| --- | --- | --- | 
+| Not supported  | N/A |  N/A  | 
+
 ## Singapore \(SG\)<a name="singapore-regulations"></a>
 
 ### For ordering phone numbers<a name="sg-ordering"></a>
@@ -673,7 +784,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-|  Asia Pacific \(Singapore\)  | None specified | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+|  Asia Pacific \(Singapore\)  | NA | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## Slovakia \(SK\)<a name="slovakia-regulations"></a>
 
@@ -708,6 +819,31 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+## South Africa \(ZA\)<a name="southafrica-regulations"></a>
+
+### For ordering phone numbers<a name="za-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+## South Korea \(KR\)<a name="southkorea-regulations"></a>
+
+### For ordering phone numbers<a name="kr-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+### For porting numbers<a name="kr-porting"></a>
+
+
+****  
+
+| Supported Regions | Porting Windows | Required Documents | 
+| --- | --- | --- | 
+| Not supported  | N/A |  N/A  | 
 
 ## Spain \(ES\)<a name="spain-regulations"></a>
 
@@ -777,22 +913,16 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  Not supported  | N/A | N/A  | 
 
-## Turkey \(TR\)<a name="turkey-regulations"></a>
+## Uganda \(UG\)<a name="uganda-regulations"></a>
 
-### For ordering phone numbers<a name="tr-ordering"></a>
-
-
-****  
-[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
-
-### For porting numbers<a name="jp-porting"></a>
+### For ordering phone numbers<a name="ug-ordering"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
-| --- | --- | --- | 
-|  EU \(Frankfurt\)  EU \(London\)  | 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+|  Africa \(Cape Town\)  | Local telephone numbers:  | Yes | Businesses must provide a copy of business registration containing a proof of address\.  Valid proofs of address include: third\-party issued bank statements, utility bills \(all issued in the previous 6 months\); government documents \(issued in the previous year\)\.  The business address must be inside of Uganda\. | 
 
 ## United Kingdom \(UK\)<a name="unitedkingdom-regulations"></a>
 
@@ -809,7 +939,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-| US East US West Asia Pacific \(Sydney\) Asia Pacific \(Singapore\) Asia Pacific \(Tokyo\) EU \(Frankfurt\) EU \(London\)  | 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\) EU \(Frankfurt\) EU \(London\)  | 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## United States \(US\)<a name="us-regulations"></a>
 
@@ -826,4 +956,25 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-| US East US West Asia Pacific \(Sydney\) Asia Pacific \(Singapore\) Asia Pacific \(Tokyo\) EU \(Frankfurt\) EU \(London\)  | 7 AM to 5 PM CST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\) EU \(Frankfurt\) EU \(London\)  | 7 AM to 5 PM CST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+## Vietnam \(VN\)<a name="vietnam-regulations"></a>
+
+### For ordering phone numbers<a name="vn-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+**Coverage Limitations**
++  Local : All major networks except minority three networks FPT, CMC and Gtel\.
++ TFN : National reachability only from: VNPT fixed network, Vinaphone Mobile, and SPT network\.
+
+### For porting numbers<a name="vn-porting"></a>
+
+
+****  
+
+| Supported Regions | Porting Windows | Required Documents | 
+| --- | --- | --- | 
+| Not supported  | N/A |  N/A  | 

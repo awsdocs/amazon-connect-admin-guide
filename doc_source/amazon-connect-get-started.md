@@ -14,7 +14,7 @@ Use these steps to set up your contact center\.
 
 1. If you're using chat, we provide several tools to help you enable your customer\-facing app to engage with Amazon Connect chat\. For more information, see [Set up your customer's chat experience](enable-chat-in-app.md)\. 
 
-## Next steps<a name="w463aac10b7"></a>
+## Next steps<a name="w685aac10b7"></a>
 
 There's a lot you can do to optimize your contact center\. Here are a couple of additional steps that you may find useful: 
 

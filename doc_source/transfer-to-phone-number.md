@@ -36,6 +36,9 @@ If you are using Amazon Connect outside of the United States, we recommend choos
 **In Australia**: The caller ID must be an Amazon Connect provided DID \(Direct Inward Dialing\) phone number\. If a toll free number or a number not provided by Amazon Connect is used in the caller ID, local telephony suppliers may reject outbound calls due to local anti\-fraud requirements\.
 + **Caller ID name**: You can set a caller ID name, but there's no guarantee it will appear correctly to the customer\. For more information, see [Why your caller ID might not appear correctly to customers](queues-callerid.md#why-callerid-name-might-not-appear-correctly)\.
 
+**Note**  
+When [Transfer to phone number](#transfer-to-phone-number) block is used without specifying a custom caller ID, the caller ID of the caller is passed as the caller ID\. For example, if you transfer to an external number and no custom caller ID is used to specify that the call is coming from your organization, then the contact's caller ID is displayed to the external party\.
+
 ## Configuration tips<a name="transfer-to-phone-number-tips"></a>
 + [Submit a service quota increase request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) requesting that your business be allowed to make outbound calls to the country you specified\. If your business is not on the allow list for making the call, it will fail\. For more information, see [Countries you can call](amazon-connect-service-limits.md#country-code-allow-list)\.
 + If the country you want to select is not listed, you can submit a request to add countries you want to transfer calls to using the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\.

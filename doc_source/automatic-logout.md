@@ -4,7 +4,7 @@ When using the default Amazon Connect CCP, closing the CCP window doesn't change
 
 To change this behavior, you must create a custom CCP\.
 
-Use the [Amazon Connect Streams API](https://github.com/amazon-connect/amazon-connect-streams) and the [Agent API](https://github.com/amazon-connect/amazon-connect-streams/blob/master/Documentation.md#agent-api) to create a custom CCP for your contact center\. For an example custom CCP setup, see [Perform an external screen pop with Amazon Connect](http://aws.amazon.com/blogs/contact-center/perform-an-external-screen-pop-with-amazon-connect/)\. 
+Use the [Amazon Connect Streams API](https://github.com/amazon-connect/amazon-connect-streams) and the [Agent API](https://github.com/amazon-connect/amazon-connect-streams/blob/master/Documentation.md#agent-api) to create a custom CCP for your contact center\.
 
 Use the following steps to update your CCP so it switches agents to **Offline**  and logs out agents automatically when they close the CCP window\.
 

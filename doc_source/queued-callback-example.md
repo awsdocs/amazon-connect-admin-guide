@@ -1,6 +1,6 @@
 # Example: Metrics for a queued callback<a name="queued-callback-example"></a>
 
-This topic shows an example queued callback flow and reviews how the CTRs and times are set for it\. 
+This topic shows an example queued callback flow and reviews how the contact records and times are set for it\. 
 
 Assume we have set up the following contact flows:
 + **Inbound contact flow** \-\- Runs when the customer calls the customer service number\.
@@ -10,13 +10,13 @@ Assume we have set up the following contact flows:
 
 In this example, John calls customer service\. Here's what happens:
 
-1. Inbound contact flow creates CTR\-1:
+1. Inbound contact flow creates contact record\-1:
 
    1. John calls customer service at 11:35\. The Inbound contact flow runs and puts him in queue at 11:35\. 
 
    1. The Customer queue flow runs\. At 11:37, John chooses to schedule a callback, so Amazon Connect initiates a callback contact at 11:37, before the inbound contact is disconnected\. 
 
-1. Callback contact flow creates CTR\-2:
+1. Callback contact flow creates contact record\-2:
 
    1. The callback contact was initiated at 11:37\.
 
@@ -28,15 +28,15 @@ In this example, John calls customer service\. Here's what happens:
 
    1. When the outbound whisper flow is complete, John is connected to the agent at 11:39:25\. They talk until 11:45, and then John hangs up\. 
 
-This scenario results in two CTRs, which include the following metadata\.
+This scenario results in two contact records, which include the following metadata\.
 
 
-| CTR\-1 | Data | Notes | 
+| Contact record\-1 | Data | Notes | 
 | --- | --- | --- | 
 |  Initiation Method  | Inbound  |   | 
 |  Initiation Timestamp  | 11:35  | The inbound contact is initiated in Amazon Connect\.  | 
 |  ConnectedToSystem Timestamp  | 11:35  | Because this is an inbound contact, InitiationTimestamp = ConnectedToSystemTimestamp\.  | 
-|  Next Contact Id   | points to CTR\-2  |   | 
+|  Next Contact Id   | points to contact record\-2  |   | 
 |  Queue  | InboundQueue  |   | 
 |  Enqueued Timestamp  | 11:35  | The inbound contact is put in queue\.  | 
 |  Dequeued Timestamp  | 11:37  | Because no agent picked up, this is the same as DisconnectedTimestamp\.  | 
@@ -44,9 +44,9 @@ This scenario results in two CTRs, which include the following metadata\.
 |  Disconnected Timestamp  | 11:37:00  | John was disconnected by contact flow\.  | 
 
 
-| CTR\-2 | Data | Notes | 
+| contact record\-2 | Data | Notes | 
 | --- | --- | --- | 
-|  PreviousContactId  | points to CTR\-1  |   | 
+|  PreviousContactId  | points to contact record\-1  |   | 
 |  Initiation Timestamp  | 11:37  | The callback contact is created in Amazon Connect\.  | 
 |  Queue  | CallbackQueue  |   | 
 |  Enqueued Timestamp  | 11:38:39  | The contact was put into the CallbackQueue, after the 99\-second initial delay completes\.  | 

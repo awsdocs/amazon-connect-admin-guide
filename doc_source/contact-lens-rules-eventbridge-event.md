@@ -42,18 +42,18 @@ Following is an example of what the EventBridge payload looks like when **Contac
  "id": "aaaaaaaa-bbbb-cccc-dddd-bf3703467718", // set by EventBridge
  "source": "aws.connect",
  "detail-type": "Contact Lens Post Call Rules Matched", 
- "account": "111122223333",
+ "account": "your AWS account ID",
  "time": "2020-04-27T18:43:48Z",
  "region": "us-east-1", // set by EventBridge
- "resources": ["arn:aws:connect:us-east-1:111122223333:instance/1111111-2222-3333-7c822889931e"],
+ "resources": ["arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN"],
  "detail": {
     "version": "1.0",
     "ruleName": "ACCOUNT_CANCELLATION", // Rule name
     "actionName": "NOTIFY_CUSTOMER_RETENTION",  
-    "instanceArn": "arn:aws:connect:us-east-1:111122223333:instance/11111111-2222-3333-b2f4-7c822889931e",
-    "contactArn": "arn:aws:connect:us-east-1:111122223333:instance/11111111-2222-3333-a9f1-bf3703478654/contact/44444444-3333-4cf7-a9f1-bf3703478654",
-    "agentArn": "arn:aws:connect:us-east-1:111122223333:instance/11111111-2222-3333-a9f1-bf3703478654/agent/44444444-3333-6ty7-ac7j-8u7abg786yju",
-    "queueArn": "arn:aws:connect:us-east-1:111122223333:instance/11111111-2222-3333-a9f1-bf3703478654/queue/44444444-3333-4863-9611-8481a1d08ade",
+    "instanceArn": "arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN",
+    "contactArn": "arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN/contact/contact-ARN",
+    "agentArn": "arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN/agent/agent-ARN",
+    "queueArn": "arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN/queue/queue-ARN",
     }
 }
 ```
@@ -66,18 +66,18 @@ Following is an example of what the payload looks like when **Contact Lens Realt
  "id": "aaaaaaaa-bbbb-cccc-dddd-bf3703467718", // set by EventBridge
  "source": "aws.connect",
  "detail-type": "Contact Lens Realtime Rules Matched", 
- "account": "111122223333",
+ "account": "your AWS account ID",
  "time": "2020-04-27T18:43:48Z",
  "region": "us-east-1", // set by EventBridge
- "resources": ["arn:aws:connect:us-east-1:111122223333:instance/1111111-2222-3333-7c822889931e"],
+ "resources": ["arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN"],
  "detail": {
      "version": "1.0",
      "ruleName": "ACCOUNT_CANCELLATION", // Rule name
      "actionName": "NOTIFY_CUSTOMER_RETENTION",
-      "instanceArn": "arn:aws:connect:us-east-1:111122223333:instance/11111111-2222-3333-b2f4-7c822889931e",
-     "contactArn": "arn:aws:connect:us-east-1:111122223333:instance/11111111-2222-3333-a9f1-bf3703478654/contact/44444444-2222-4cf7-a9f1-bf3703478654",
-     "agentArn": "arn:aws:connect:us-east-1:111122223333:instance/11111111-2222-3333-a9f1-bf3703478654/agent/44444444-2222-6ty7-ac7j-8u7abg786yju",
-     "queueArn": "arn:aws:connect:us-east-1:111122223333:instance/11111111-2222-3333-a9f1-bf3703478654/queue/44444444-2222-4863-9611-8481a1d08ade",
+      "instanceArn": "arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN",
+     "contactArn": "arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN/contact/contact-ARN",
+     "agentArn": "arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN/agent/agent-ARN",
+     "queueArn": "arn:aws:connect:us-east-1:your AWS account ID:instance/instance-ARN/queue/queue-ARN",
       }
 }
 ```

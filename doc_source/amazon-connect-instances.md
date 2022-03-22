@@ -20,7 +20,7 @@ Permissions to access Amazon Connect features and resource are assigned to user 
 1. Choose **Get started**\. If you have previously created an instance, choose **Add an instance** instead\.
 
 1. Choose one of the following options:
-   + **Store users in Amazon Connect** \- Use Amazon Connect to create and manage user accounts\. You cannot share users with ohter applications\.
+   + **Store users in Amazon Connect** \- Use Amazon Connect to create and manage user accounts\. You cannot share users with other applications\.
    + **Link to an existing directory** \- Use an AWS Directory Service directory to manage your users\. You can use each directory with one Amazon Connect instance at a time\.
    + **SAML 2\.0\-based authentication** \- Use an existing identity provider \(IdP\) to federate users with Amazon Connect\.
 
@@ -76,9 +76,11 @@ This bucket and key are used for both recordings of conversations and exported r
 + When a bucket is created to store chat transcripts, chat transcription is enabled at the instance level\. Now all chat transcripts will be stored\. Only if you want to monitor chat conversations do you need to [set up recording behavior in a contact flow](set-up-recordings.md)\.
 + Live media streaming is not enabled by default\.
 
-**Review and copy the location of the S3 bucket and contact flow logs**
+**By default, Amazon Connect creates a Customer Profiles domain**, which stores profiles that combine customer contact history with customer information such as account number, address, billing address, and birth date\. Data is encrypted using AWS Key Management Service\. You can configure Customer Profiles to use your own customer managed key after your instance is set up\. For more information, see [Create a KMS key to be used by Customer Profiles to encrypt data \(required\)](enable-customer-profiles.md#enable-customer-profiles-awsmanagedkey)\. 
 
-1. If desired, copy the location of the S3 bucket where your data encryption is store, and the location of the contact flow logs in CloudWatch\.
+**Review and copy the location of the S3 bucket, contact flow logs, and whether you want to enable Customer Profiles\.**
+
+1. If desired, copy the location of the S3 bucket where your data encryption is stored, and the location of the contact flow logs in CloudWatch\.
 
 1. Choose **Next**\.
 

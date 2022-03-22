@@ -158,15 +158,52 @@ Replacing this Role causes previously federated users to fail at login because i
    `https://region-id.console.aws.amazon.com/connect/federate/instance-id`
 
    Replace the *region\-id* with the Region name where you created your Amazon Connect instance, such as us\-east\-1 for US East \(N\. Virginia\)\. Replace the *instance\-id* with the instance ID for your instance\.
+
+   For a GovCloud instance, the URL is **https://console\.amazonaws\-us\-gov\.com/**:  
+   + https://console\.amazonaws\-us\-gov\.com/connect/federate/instance\-id
 **Note**  
 You can find the instance ID for your instance by choosing the instance alias in the Amazon Connect console\. The instance ID is the set of numbers and letters after '/instance' in the **Instance ARN** displayed on the **Overview** page\. For example, the instance ID in the following Instance ARN is *178c75e4\-b3de\-4839\-a6aa\-e321ab3f3770*\.  
 arn:aws:connect:us\-east\-1:450725743157:instance/*178c75e4\-b3de\-4839\-a6aa\-e321ab3f3770*
 
+## Configurations for regionally isolated SAML sign in<a name="regionally-isolated-saml"></a>
+
+Perform the following steps to use regional SAML endpoints\. These steps are IdP agnostic; they work for any SAML IdP \(for example, Okta, Ping, OneLogin, Shibboleth, ADFS, AzureAD, and more\)\.
+
+1. Update \(or override\) the AssertionConsumerService\. There are two ways you can do this:
+   + **Option 1**: Download the AWS SAML metadata and update the `Location` attribute to the Region of your choice\. Load this new version of the AWS SAML metadata into your IdP\. 
+
+     Following is an example of a revision:
+
+      `<AssertionConsumerService index="1" isDefault="true" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://region-id.signin.aws.amazon.com/saml"/>`
+   + **Option 2**: Override the AssertionConsumerService \(ACS\) URL in your IdP\. For IdPs like Okta that provide prebaked AWS integrations, you can override the ACS URL in the AWS admin console\. Use the same format to override to a Region of your choice \(for example, https://*region\-id*\.signin\.aws\.amazon\.com/saml\)\.
+
+1. Update the associated role trust policy:
+
+   1. This step needs to be done for every role in every account that trusts the given identity provider\.
+
+   1. Edit the trust relationship, and replace the signular `SAML:aud` condition with a multivalued condition\. For example:
+      + Default: "`SAML:aud`": "https://signin\.aws\.amazon\.com/saml"\. 
+      + With modifications: "`SAML:aud`": \[ "https://signin\.aws\.amazon\.com/saml", "https://*region\-id*\.signin\.aws\.amazon\.com/saml" \]
+
+   1. Make these changes to the trust relationships in advance\. They should not be done as part of a plan during an incident\.
+
+1. Configure a relay state for the Region\-specific console page\.
+
+   1. If you don't do this final step, there's no guarantee that the Region\-specific SAML sign in process will forward the user to the console sign in page within the same Region\. This step is most varied per identity provider, but there are a blogs \(for example, [How to Use SAML to Automatically Direct Federated Users to a Specific AWS Management Console Page](http://aws.amazon.com/blogs/security/how-to-use-saml-to-automatically-direct-federated-users-to-a-specific-aws-management-console-page/)\) that show the use of relay state to achieve deep linking\.
+
+   1. Using the technique/parameters appropriate for your IdP, set the relay state to the console endpoint that matches \(for example, https://*region\-id*\.console\.aws\.amazon\.com/connect/federate/*instance\-id*\)\.
+
+**Note**  
+Ensure that STS is not disabled in your additional Regions\.
+Ensure no SCPs are preventing STS actions in your additional Regions\.
+
 ## Use a destination in your relay state URL<a name="destination-relay"></a>
 
 When you configure the relay state for your identity provider, you can use the destination argument in the URL to navigate users to a specific page in your Amazon Connect instance\. For example, use a link to open the CCP directly when an agent logs in\. The user must be assigned a security profile that grants access to that page in the instance\. For example, to send agents to the CCP, use a URL similar to the following for the relay state\. You must use [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding) for the destination value used in the URL:
++ `https://us-east-1.console.aws.amazon.com/connect/federate/instance-id?destination=%2Fconnect%2Fccp-v2`
 
-`https://us-east-1.console.aws.amazon.com/connect/federate/instance-id?destination=%2Fconnect%2Fccp-v2`
+For a GovCloud instance, the URL is **https://console\.amazonaws\-us\-gov\.com/**\. So the address would be: 
++ https://console\.amazonaws\-us\-gov\.com/connect/federate/instance\-id?destination=%2Fconnect%2Fccp\-v2
 
 ## Add users to your Amazon Connect instance<a name="saml-add-users"></a>
 
@@ -183,7 +220,7 @@ You can import your users by adding them to a CSV file\. You can then import the
 
 When you use SAML in Amazon Connect, users must log in to Amazon Connect through your identity provider \(IdP\)\. Your IdP is configured to integrate with AWS\. After authentication, a token for their session is created\. The user is then redirected to your Amazon Connect instance and automatically logged in to Amazon Connect using single sign\-on\.
 
-As a best practice, you should also define a process for your Amazon Connect users to log out when they are finished using Amazon Connect\. They should log out from both Amazon Connect and your identity provider\. If they do not, the next person that logs in to the same computer can log in to Amazon Connect without a password since the token for the previous sessions is still valid for the duration of the session, by default, 10 hours\.
+As a best practice, you should also define a process for your Amazon Connect users to log out when they are finished using Amazon Connect\. They should log out from both Amazon Connect and your identity provider\. If they do not, the next person that logs in to the same computer can log in to Amazon Connect without a password since the token for the previous sessions is still valid for the duration of the session\. It's valid for 10 hours\.
 <a name="session-expire"></a>
 **About session expiration**  
 Amazon Connect sessions expire 10 hours after a user logs in\. After 10 hours, users are automatically logged out, even if they are currently on a call\. If your agents stay logged in for more than 10 hours, they need to refresh the session token before it expires\. To create a new session, agents need to log out of Amazon Connect and your IdP and then log in again\. This resets the session timer set on the token so that agents are not logged out during an active contact with a customer\. When a session expires while a user is logged in, the following message is displayed\. To use Amazon Connect again, the user needs to log in to your identity provider\.

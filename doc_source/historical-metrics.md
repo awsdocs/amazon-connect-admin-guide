@@ -4,9 +4,9 @@ Historical metrics reports include data about past, completed activity and perfo
 
 When creating and analyzing your historical metrics reports, keep in mind that there are two categories of metrics:
 
-**CTR\-driven metrics**  <a name="ctr-driven-metrics"></a>
-These metrics are based on formed CTR records\. For a given interval, CTRs whose disconnect date falls in the interval are selected to calculate metrics\. For example, if a contact starts at 05:23 and ends at 06:15, this contact contributes 52 minutes of metrics for the 06:00\-06:30 interval\.   
-Example CTR\-driven metrics are **Service level**, **Agent interaction time**, and **After contact work time**\. 
+**Contact record\-driven metrics**  <a name="ctr-driven-metrics"></a>
+These metrics are based on formed contact record records\. For a given interval, contact records whose disconnect date falls in the interval are selected to calculate metrics\. For example, if a contact starts at 05:23 and ends at 06:15, this contact contributes 52 minutes of metrics for the 06:00\-06:30 interval\.   
+Example contact record\-driven metrics are **Service level**, **Agent interaction time**, and **After contact work time**\. 
 
 **Agent activity\-driven metrics**  <a name="termdef"></a>
 These metrics are based on agent activities, like agent status changes, agent conversation changes\. The metrics reflect on the actual time the activity happens\. For example, if agent handles a contact from 05:23 to 06:15, the **Agent on contact time** has 7 minutes for the 05:00\-05:30 interval, 30 minutes for the 05:30\-06:00 interval, and 15 minutes for the 06:00\-06:30 interval\.  

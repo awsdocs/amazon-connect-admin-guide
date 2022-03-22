@@ -14,9 +14,9 @@ This topic explains the options that Amazon Connect provides for telephony, whic
 
 ## Telephony architecture<a name="concepts-telephony-architecture"></a>
 
-Amazon Connect provides capabilities to host both toll\-free and direct dial numbers \(DID\) in all AWS Regions supported by Amazon Connect\. You can use both types of numbers in a single instance\. A complete list of supported countries and costs, including the price differences between DID and toll\-free numbers can be found on the [Amazon Connect pricing](http://aws.amazon.com/connect/pricing/) page\.
+Amazon Connect provides capabilities to host both toll\-free and direct dial numbers \(DID\) in all AWS Regions supported by Amazon Connect\. You can use both types of numbers in a single instance\. A complete list of supported countries/regions and costs, including the price differences between DID and toll\-free numbers, is located on the [Amazon Connect pricing](http://aws.amazon.com/connect/pricing/) page\.
 
-AWS manages the connectivity to our network of carriers providing diverse connections to multiple carriers in each region supported by Amazon Connect\. When Amazon Connect is deployed in a Region, we take advantage of the built\-in redundancy of the AWS Availability Zone design to provide multiple carrier interfaces into multiple data centers\. You can see how AWS manages the design of a region [here](https://infrastructure.aws/)\.
+AWS manages the connectivity to our network of carriers providing diverse connections to multiple carriers in each region supported by Amazon Connect\. When Amazon Connect is deployed in a Region, we take advantage of the built\-in redundancy of the AWS Availability Zone design to provide multiple carrier interfaces into multiple data centers\. You can see how AWS manages the design of a Region [here](https://infrastructure.aws/)\.
 
 In addition to the Amazon Connect service being spread across multiple Availability Zones, AWS also has multiple telephony providers\. These providers have multiple links into the data centers in those Availability Zones\. This ensures that if a single or even multiple links fail from a carrier, there are alternate routes available to ensure the service remains available\. 
 
@@ -46,7 +46,7 @@ Amazon Connect provides you the ability to claim both direct dial and toll\-free
 
 ## Porting numbers<a name="concepts-porting-numbers"></a>
 
-Porting of numbers refers to the ability to move an existing telephone number from one carrier to another provided you are the "customer\-of\-record\." In the United States, portability is required and regulated by the Federal Communications Commission\. Laws regarding the requirements for number portability vary greatly between countries\. In the United States and Canada, the process is regulated and well\-defined\. In other countries, some have well\-defined processes while some are dependent on carrier and geography\. 
+Porting of numbers refers to the ability to move an existing telephone number from one carrier to another provided you are the "customer\-of\-record\." In the United States, portability is required and regulated by the Federal Communications Commission\. Laws regarding the requirements for number portability vary greatly between countries/regions\. In the United States and Canada, the process is regulated and well\-defined\. In other countries/regions, some have well\-defined processes while some are dependent on carrier and geography\. 
 
 If you are trying to port a number outside of the United States, follow the [porting process](port-phone-number.md) we've documented, however, the timeline to complete may vary\. If porting is not possible at all, AWS Support will let you know that it's not available\. 
 

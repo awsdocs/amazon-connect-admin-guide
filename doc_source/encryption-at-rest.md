@@ -38,7 +38,7 @@ All user data stored in Amazon Connect Wisdom is encrypted at rest using encrypt
 
 AWS KMS charges apply when using a key that you provide\. For more information about pricing, see [AWS KMS pricing](http://aws.amazon.com/kms/pricing/)\.
 
-### Amazon Connect Voice ID encryption at rest<a name="encryption-at-rest-voiceid"></a>
+## Amazon Connect Voice ID encryption at rest<a name="encryption-at-rest-voiceid"></a>
 
 All user data stored in Amazon Connect Voice ID is encrypted at rest\. When creating a new Voice ID domain, you must provide a customer managed key that the service uses to encrypt your data at rest\. The customer managed key is created, owned, and managed by you\. You have full control over the key\.
 
@@ -54,18 +54,18 @@ Following is a list of data that is encrypted at rest using the customer managed
 
 AWS KMS charges apply for a customer managed key\. For more information about pricing, see [AWS KMS pricing](http://aws.amazon.com/kms/pricing/)\. 
 
-#### How Amazon Connect Voice ID uses grants in AWS KMS<a name="voiceid-uses-grants"></a>
+### How Amazon Connect Voice ID uses grants in AWS KMS<a name="voiceid-uses-grants"></a>
 
-Amazon Connect Voice ID requires a grant to use your customer managed key\. When you create a domain, Voice ID creates a grant on your behalf by sending a `CreateGrant` request to AWS KMS\. The grant is required to use your customer managed key for the following internal operations:
-+ Send `DescribeKey` requests to AWS KMS to verify that the symmetric customer managed key ID provided is valid\. 
-+ Send `GenerateDataKey` requests to KMS key to create data keys with which to encrypt objects\.
-+ Send `Decrypt` requests to AWS KMS to decrypt the encrypted data keys so that they can be used to encrypt your data\. 
-+ Send `ReEncrypt` requests to AWS KMS when the key is updated to re\-encrypt a limited set of data using the new key\.
+Amazon Connect Voice ID requires a grant to use your customer managed key\. When you create a domain, Voice ID creates a grant on your behalf by sending a see [CreateGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateGrant.html) request to AWS KMS\. The grant is required to use your customer managed key for the following internal operations:
++ Send [DescribeKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html) requests to AWS KMS to verify that the symmetric customer managed key ID provided is valid\. 
++ Send [GenerateDataKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateDataKey.html) requests to KMS key to create data keys with which to encrypt objects\.
++ Send [Decrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html) requests to AWS KMS to decrypt the encrypted data keys so that they can be used to encrypt your data\. 
++ Send [ReEncrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_ReEncrypt.html) requests to AWS KMS when the key is updated to re\-encrypt a limited set of data using the new key\.
 + Store files in S3 using the AWS KMS key to encrypt the data\.
 
 You can revoke access to the grant, or remove the service's access to the customer managed key at any time\. If you do, Voice ID won't be able to access any of the data encrypted by the customer managed key, which affects all the operations that are dependent on that data, leading to `AccessDeniedException` errors and failures in the asynchronous workflows\.
 
-#### Customer managed key policy for Voice ID<a name="encryption-at-rest-cmkpolicy-voiceid"></a>
+### Customer managed key policy for Voice ID<a name="encryption-at-rest-cmkpolicy-voiceid"></a>
 
 Key policies control access to your customer managed key\. Every customer managed key must have exactly one key policy, which contains statements that determine who can use the key and how they can use it\. When you create your customer managed key, you can specify a key policy\. For more information, see [Managing access to KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/control-access-overview.html#managing-access) in the *AWS Key Management Service Developer Guide*\.
 
@@ -90,7 +90,7 @@ Following is an example key policy which gives a user the permissions they need 
             "Condition": {
                 "StringEquals": {
                     "kms:ViaService": [
-                        "voiceid.amazonaws.com"
+                        "voiceid.region.amazonaws.com"
                     ]
                 }
             }
@@ -103,13 +103,13 @@ For information about specifying permissions in a policy, see [Specifying KMS ke
 
 For information about troubleshooting key access, see [Troubleshooting key access](https://docs.aws.amazon.com/kms/latest/developerguide/policy-evaluation.html) in the AWS Key Management Service Developer Guide\. 
 
-#### Voice ID encryption context<a name="voiceid-encryption-context"></a>
+### Voice ID encryption context<a name="voiceid-encryption-context"></a>
 
-An *encryption context* is an optional set of key\-value pairs that contain additional contextual information about the data\. AWS KMS uses the encryption context as additional authenticated data to support authenticated encryption\.
+An [encryption context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) is an optional set of key\-value pairs that contain additional contextual information about the data\. AWS KMS uses the encryption context as [ additional authenticated data](https://docs.aws.amazon.com/crypto/latest/userguide/cryptography-concepts.html#term-aad) to support [authenticated encryption](https://docs.aws.amazon.com/crypto/latest/userguide/cryptography-concepts.html#define-authenticated-encryption)\. 
 
 When you include an encryption context in a request to encrypt data, AWS KMS binds the encryption context to the encrypted data\. To decrypt data, you include the same encryption context in the request\. 
 
-Voice ID uses the same encryption context in all AWS KMS cryptographic operations, where the key is `aws:voiceid:domain:arn` and the value is the resource Amazon Resource Name \(ARN\)\. 
+Voice ID uses the same encryption context in all AWS KMS cryptographic operations, where the key is `aws:voiceid:domain:arn` and the value is the resource Amazon Resource Name \(ARN\) [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)\.
 
 ```
 "encryptionContext": {
@@ -119,11 +119,48 @@ Voice ID uses the same encryption context in all AWS KMS cryptographic operation
 
 You can also use the encryption context in audit records and logs to identify how the customer managed key is being used\. The encryption context also appears in logs generated by CloudTrail or Amazon CloudWatch Logs\.
 
-#### Monitoring your encryption keys for Voice ID<a name="monitoring-encryption-keys"></a>
+#### Using encryption context to control access to your customer managed key<a name="encryption-context-customer-managed-key"></a>
 
-When you use an AWS KMS customer managed key with Voice ID, you can use AWS CloudTrail or Amazon CloudWatch Logs to track requests that Voice ID sends to AWS KMS\. 
+You can use the encryption context in key policies and IAM policies as conditions to control access to your symmetric customer managed key\. You can also use encryption context constraints in a grant\.
+
+Amazon Connect Voice ID uses an encryption context constraint in grants to control access to the customer managed key in your account or Region\. The grant constraint requires that the operations that the grant allows use the specified encryption context\.
+
+The following are example key policy statements to grant access to a customer managed key for a specific encryption context\. The condition in this policy statement requires that the grants have an encryption context constraint that specifies the encryption context\.
+
+```
+{
+    "Sid": "Enable DescribeKey",
+    "Effect": "Allow",
+    "Principal": {
+        "AWS": "arn:aws:iam::111122223333:role/ExampleReadOnlyRole"
+     },
+     "Action": "kms:DescribeKey",
+     "Resource": "*"
+},
+{
+     "Sid": "Enable CreateGrant",
+     "Effect": "Allow",
+     "Principal": {
+         "AWS": "arn:aws:iam::111122223333:role/ExampleReadOnlyRole"
+     },
+     "Action": "kms:CreateGrant",
+     "Resource": "*",
+     "Condition": {
+         "StringEquals": {
+             "kms:EncryptionContext:"aws:voiceid:domain:arn": "arn:aws:voiceid:us-west-2:111122223333:domain/sampleDomainId""
+          }
+     }
+}
+```
+
+### Monitoring your encryption keys for Voice ID<a name="monitoring-encryption-keys"></a>
+
+When you use an AWS KMS customer managed key with Voice ID, you can use [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) or [Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html) to track requests that Voice ID sends to AWS KMS\. 
 
 The following examples is a sample AWS CloudTrail event for `CreateGrant` operation called by Voice ID to access data encrypted by your customer managed key: 
+
+------
+#### [ CreateGrant ]
 
 ```
 {
@@ -197,7 +234,178 @@ The following examples is a sample AWS CloudTrail event for `CreateGrant` operat
 }
 ```
 
-### High\-Volume Outbound Communications<a name="encryption-at-rest-outboundcommunications"></a>
+------
+#### [ DescribeKey ]
+
+```
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+      "type": "AWSService",
+      "invokedBy": "voiceid.amazonaws.com"
+    },
+    "eventTime": "2021-10-13T15:12:39Z",
+    "eventSource": "kms.amazonaws.com",
+    "eventName": "DescribeKey",
+    "awsRegion": "us-west-2",
+    "sourceIPAddress": "voiceid.amazonaws.com",
+    "userAgent": "voiceid.amazonaws.com",
+    "requestParameters": {
+        "keyId": "alias/sample-key-alias"
+    },
+    "responseElements": null,
+    "requestID": "ed0fe4ab-305b-4388-8adf-7e8e3a4e80fe",
+    "eventID": "31d0d7c6-ce5b-4caf-901f-025bf71241f6",
+    "readOnly": true,
+    "resources": [{
+        "accountId": "111122223333",
+        "type": "AWS::KMS::Key",
+        "ARN": "arn:aws:kms:us-west-2:111122223333:key/00000000-1111-2222-3333-9999999999999"
+    }],
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "111122223333",
+    "eventCategory": "Management"
+}
+```
+
+------
+#### [ Decrypt ]
+
+```
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "AWSService",
+        "invokedBy": "voiceid.amazonaws.com"
+    },
+    "eventTime": "2021-10-12T23:59:34Z",
+    "eventSource": "kms.amazonaws.com",
+    "eventName": "Decrypt",
+    "awsRegion": "us-west-2",
+    "sourceIPAddress": "voiceid.amazonaws.com",
+    "userAgent": "voiceid.amazonaws.com",
+    "requestParameters": {
+        "encryptionContext": {
+            "keyId": "arn:aws:kms:us-west-2:111122223333:key/44444444-3333-2222-1111-EXAMPLE11111",
+            "encryptionContext": {
+                "aws:voiceid:domain:arn": "arn:aws:voiceid:us-west-2:111122223333:domain/sampleDomainId"
+            },
+            "encryptionAlgorithm": "SYMMETRIC_DEFAULT"
+        },
+        "responseElements": null,
+        "requestID": "ed0fe4ab-305b-4388-8adf-7e8e3a4e80fe",
+        "eventID": "31d0d7c6-ce5b-4caf-901f-025bf71241f6",
+        "readOnly": true,
+        "resources": [{
+            "accountId": "111122223333",
+            "type": "AWS::KMS::Key",
+            "ARN": "arn:aws:kms:us-west-2:111122223333:key/00000000-1111-2222-3333-9999999999999"
+        }],
+        "eventType": "AwsApiCall",
+        "managementEvent": true,
+        "recipientAccountId": "111122223333",
+        "sharedEventID": "35d58aa1-26b2-427a-908f-025bf71241f6",
+        "eventCategory": "Management"
+    }
+```
+
+------
+#### [ GenerateDataKeyWithoutPlaintext ]
+
+```
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "AWSService",
+        "invokedBy": "voiceid.amazonaws.com"
+    },
+    "eventTime": "2021-10-13T00:26:41Z",
+    "eventSource": "kms.amazonaws.com",
+    "eventName": "GenerateDataKeyWithoutPlaintext",
+    "awsRegion": "us-west-2",
+    "sourceIPAddress": "voiceid.amazonaws.com",
+    "userAgent": "voiceid.amazonaws.com",
+    "requestParameters": {
+        "keyId": "arn:aws:kms:us-west-2:111122223333:key/44444444-3333-2222-1111-EXAMPLE11111",
+        "encryptionContext": {
+            "aws:voiceid:domain:arn": "arn:aws:voiceid:us-west-2:111122223333:domain/sampleDomainId"
+        },
+        "keySpec": "AES_256"
+    },
+    "responseElements": null,
+    "requestID": "ed0fe4ab-305b-4388-8adf-7e8e3a4e80fe",
+    "eventID": "31d0d7c6-ce5b-4caf-901f-025bf71241f6",
+    "readOnly": true,
+    "resources": [{
+        "accountId": "111122223333",
+        "type": "AWS::KMS::Key",
+        "ARN": "arn:aws:kms:us-west-2:111122223333:key/00000000-1111-2222-3333-9999999999999"
+    }],
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "111122223333",
+    "sharedEventID": "35d58aa1-26b2-427a-908f-025bf71241f6",
+    "eventCategory": "Management"
+}
+```
+
+------
+#### [ ReEncrypt ]
+
+```
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "AWSService",
+        "invokedBy": "voiceid.amazonaws.com"
+    },
+    "eventTime": "2021-10-13T00:59:05Z",
+    "eventSource": "kms.amazonaws.com",
+    "eventName": "ReEncrypt",
+    "awsRegion": "us-west-2",
+    "sourceIPAddress": "voiceid.amazonaws.com",
+    "userAgent": "voiceid.amazonaws.com",
+    "requestParameters": {
+        "destinationEncryptionContext": {
+            "aws:voiceid:domain:arn": "arn:aws:voiceid:us-west-2:111122223333:domain/sampleDomainId"
+        },
+        "destinationKeyId": "arn:aws:kms:us-west-2:111122223333:key/44444444-3333-2222-1111-EXAMPLE11111",
+        "sourceEncryptionAlgorithm": "SYMMETRIC_DEFAULT",
+        "sourceAAD": "SampleSourceAAAD+JXBmH+ZJNM73BfHE/dwQALXp7Sf44VwvoJOrLj",
+        "destinationAAD": "SampleDestinationAAAD+JXBmH+ZJNM73BfHE/dwQALXp7Sf44VwvoJOrLj",
+        "sourceEncryptionContext": {
+            "aws:voiceid:domain:arn": "arn:aws:voiceid:us-west-2:111122223333:domain/sampleDomainId"
+        },
+        "destinationEncryptionAlgorithm": "SYMMETRIC_DEFAULT",
+        "sourceKeyId": "arn:aws:kms:us-west-2:111122223333:key/55555555-3333-2222-1111-EXAMPLE22222"
+    },
+    "responseElements": null,
+    "requestID": "ed0fe4ab-305b-4388-8adf-7e8e3a4e80fe",
+    "eventID": "31d0d7c6-ce5b-4caf-901f-025bf71241f6",
+    "readOnly": true,
+    "resources": [{
+            "accountId": "111122223333",
+            "type": "AWS::KMS::Key",
+            "ARN": "arn:aws:kms:us-west-2:111122223333:key/00000000-1111-2222-3333-9999999999999"
+        },
+        {
+            "accountId": "111122223333",
+            "type": "AWS::KMS::Key",
+            "ARN": "arn:aws:kms:us-west-2:111122223333:key/00000000-1111-2222-3333-7777777777777"
+        }
+    ],
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "111122223333",
+    "sharedEventID": "35d58aa1-26b2-427a-908f-025bf71241f6",
+    "eventCategory": "Management"
+}
+```
+
+------
+
+## High\-Volume Outbound Communications<a name="encryption-at-rest-outboundcommunications"></a>
 
 For Amazon Connect High\-Volume Outbound Communications, Amazon Pinpoint passes customer phone numbers and relevant attributes to Amazon Connect\. On Amazon Connect, these are always encrypted at rest using either a customer managed key or an AWS owned key\. The Amazon Connect High\-Volume Outbound Communications data is segregated by the Amazon Connect instance ID and are encrypted by instance specific keys\.
 

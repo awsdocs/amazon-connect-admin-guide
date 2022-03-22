@@ -2,6 +2,9 @@
 
 Contact Lens rules allow you to automatically categorize contacts, receive alerts, or generate tasks based on uttered keywords, sentiment scores, customer attributes, and other criteria\. 
 
+**Tip**  
+For a list of rules feature specifications \(for example, how many rules you can create\), see [Amazon Connect Rules feature specifications](amazon-connect-service-limits.md#rules-feature-specs)\.
+
 ## Step 1: Define rule conditions<a name="rule-conditions"></a>
 
 1. On the navigation menu, choose **Rules**\.
@@ -35,7 +38,7 @@ Contact Lens rules allow you to automatically categorize contacts, receive alert
 
 1. Choose **Next**\.
 
-### Step 2: Define rule actions<a name="rule-actions"></a>
+## Step 2: Define rule actions<a name="rule-actions"></a>
 
 1. Under **Assign contact category**, enter a category name\.
 **Note**  

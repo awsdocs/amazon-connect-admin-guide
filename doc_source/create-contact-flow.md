@@ -6,9 +6,7 @@ For descriptions of the available action blocks, see [Contact block definitions]
 
 ## Before you begin: develop a naming convention<a name="before-create-contact-flow"></a>
 
-Chances are you're going to create tens or hundreds of contact flows\. To help you stay organized, it's important to develop a naming convention\. Once you start creating contact flows, we strongly recommend against renaming them\.
-
-**You can't delete a contact flow**\. To get obsolete contact flows out of your way, we recommend appending **zzTrash\_** to their name\. This will also make them easy to find should you want to reuse them in the future\.
+Chances are you're going to create tens or hundreds of contact flows\. To help you stay organized, it's important to develop a naming convention\. After you start creating contact flows, we strongly recommend against renaming them\.
 
 ## Choose a contact flow type<a name="contact-flow-types"></a>
 
@@ -63,6 +61,12 @@ You can move blocks around the canvas so the layout aligns to your preferences\.
 
 **Note**  
 All connectors must be connected to a block in order to successfully publish your contact flow\.
+
+## Delete contact flows<a name="delete-contact-flow"></a>
+
+To delete contact flows use the [DeleteContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteContactFlow.html) API\. 
+
+Currently, there's no way to delete contact flows using the Amazon Connect admin console\.
 
 ## Generate logs<a name="logs"></a>
 

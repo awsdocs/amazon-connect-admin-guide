@@ -8,9 +8,9 @@ Here's how queued callback works:
 
 1. After an agent accepts the callback in the CCP, Amazon Connect calls the customer\.
 
-   If no agents are available to work on callbacks, the callbacks stay in queue for up to 7 days after they are created\. After that, they are automatically removed from the queue\.
+   If no agents are available to work on callbacks, the callbacks can stay in queue for at least 7 days and up to 14 days after they are created before Amazon Connect automatically removes them\.
 **Tip**  
-There's no way to manually remove a callback from the queue\. You can either answer them, or wait 7 days until they are removed automatically\.
+There's no way to manually remove a callback from the queue\. You can either answer them, or wait until Amazon Connect automatically removes them\.
 
 1. If there is no answer when the Amazon Connect calls the customer, it retries based on the number of times you've specified\. 
 
@@ -18,7 +18,7 @@ There's no way to manually remove a callback from the queue\. You can either ans
 
 1. If the customer calls again while in the callback queue, it's treated as a new call and will be handled as usual\. To avoid duplicate callback requests in a callback queue, see this blog: [Preventing duplicate callback requests in Amazon Connect](http://aws.amazon.com/blogs/contact-center/preventing-duplicate-callback-requests-in-amazon-connect/)\. 
 
-## How queued callbacks affect and queue limits<a name="queued-callback-limits"></a>
+## How queued callbacks affect queue limits<a name="queued-callback-limits"></a>
 + Queued callbacks count towards the queue size limit, but they are routed to the error branch\. For example, if you have a queue that handles callbacks and incoming calls, and that queue reaches the size limit:
   + The next callback is routed to the error branch\.
   + The next incoming call gets a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.
@@ -104,7 +104,7 @@ We strongly recommend that you double\-check the number entered in **Maximum num
 
 1. To save and test this flow, configure the other branches and add error handling\. To see an example of how this is done, see [Sample queue configurations](sample-queue-configurations.md)\. For previous instances, see [Sample queued callback](sample-queued-callback.md)\. 
 
-1. For information about how callbacks appear in real\-time metrics reports and CTRs, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
+1. For information about how callbacks appear in real\-time metrics reports and contact records, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 
 ## Learn more about queued callbacks<a name="queued-callback-no-agents-available"></a>
 

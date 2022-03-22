@@ -84,7 +84,11 @@ The first step in testing the task experience is to create a quick connect for t
    Or, if you're testing the chat experience, for example, you can choose the **Task** icon, as shown in the following image\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-chat-task-window.png)
 
-1. Complete the **Create task** page\. For **Assign to**, enter the name of the user you created for the quick connect\. Choose **Create**\.   
+1. Complete the **Create task** page\. When you choose **Assign to**, you can assign only a task to someone or a queue that has quick connect\. 
+
+   To create a scheduled task for the future, use the **Scheduled date/time** box to choose a future date and time\. You can schedule a task up to six days in future\.
+
+   Choose **Create**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-create-task-ccp-2.png)
 
 1. If you chose yourself, the task will be routed to you\. Choose **Accept task**\.  

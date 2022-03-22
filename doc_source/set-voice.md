@@ -29,6 +29,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-properties.png)
 
+**Tip**  
+For voices that support only neural speaking styles but not standard, the **Override speaking style** is automatically selected\. You do not have the option to unselect it\.
+
 ## Use an Amazon Lex V2 bot with Amazon Connect<a name="set-voice-lexv2bot"></a>
 
 If you're using an Amazon Lex V2 bot, your language attribute in Amazon Connect must match the language model used to build your Lex bot\. This is different than Amazon Lex \(Classic\)\. 

@@ -39,15 +39,15 @@ To make it faster for you to find and choose the attributes you want to use, att
 Another way to think about types of contact attributes is to categorize them based on where the value comes from\. The values for contact attributes have three sources: 
 + Amazon Connect provides the value, such as the agent's name, during the contact interaction\. This is known as providing the value at runtime\. 
 + An external process, such as Amazon Lex or AWS Lambda, provides the value\. 
-+ User\-defined\. In the contact flow, you can specify the value for an attribute\. 
++ [User\-defined](connect-attrib-list.md#user-defined-attributes)\. In the contact flow, you can specify the value for an attribute\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-attributes-types.png)
 
-## Contact attributes in the CTR<a name="attributes-in-ctr"></a>
+## Contact attributes in the contact record<a name="attributes-in-ctr"></a>
 
-In Contact Trace Records, contact attributes are shared across all contacts with the same InitialContactId\.
+In contact records, contact attributes are shared across all contacts with the same InitialContactId\.
 
-For example, while carrying out transfers, a contact attribute updated in the transfer flow updates the attribute's value in both CTR's contact attributes \(that is, the Inbound and Transfer contact attributes\)\. 
+For example, while carrying out transfers, a contact attribute updated in the transfer flow updates the attribute's value in the contact attributes of both contact records \(that is, the Inbound and Transfer contact attributes\)\. 
 
 ## "$" is a special character<a name="dollar-sign-special"></a>
 

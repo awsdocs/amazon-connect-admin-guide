@@ -64,11 +64,11 @@ The following image shows what this block looks like when it's configured to che
 
 When you create a contact flow that uses this block, add these blocks in the following order:
 
+1. [Set Voice ID](set-voice-id.md) block\. 
+
 1. [Set contact attributes](set-contact-attributes.md) block: For **Enrollment status** and **Voice authentication**, the [Customer ID](connect-attrib-list.md) system attribute needs to be set in [Set contact attributes](set-contact-attributes.md) block because it is acting on a specific customer\.
 
 1. **Check Voice ID** block\.
-
-1. [Set Voice ID](set-voice-id.md) block\. 
 
 ## Configured block<a name="check-voice-id-configured"></a>
 

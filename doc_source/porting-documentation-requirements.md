@@ -1,6 +1,6 @@
 # Documentation requirements for porting numbers<a name="porting-documentation-requirements"></a>
 
-The Letter of Authorization \(LOA\) is an industry standard document type used by carriers to authorize the transfer of a phone number from one carrier to another\. In many cases, the LOA is specific to the country or region, carrier, or porting relationship between the losing and wining carriers\. If your number can be ported, Amazon Connect support will provide you with an LOA form appropriate for the situation\. 
+The Letter of Authorization \(LOA\) is an industry standard document type used by carriers to authorize the transfer of a phone number from one carrier to another\. In many cases, the LOA is specific to the country or region, carrier, or porting relationship between the losing and winning carriers\. If your number can be ported, Amazon Connect support will provide you with an LOA form appropriate for the situation\. 
 
  For more information, see [How to complete an LOA](about-porting.md#how-to-complete-loa)\. 
 

@@ -14,8 +14,8 @@ For example, you might scan the transcript of the call and see a red sentiment e
 
 1. Use the filters on the page to narrow your search for a contact\. For date, you can search up to 14 days at a time\. For more information about searching for contacts, see [Search for contacts](contact-search.md)\. 
 
-1. Choose the contact ID to view the Contact Trace Record \(CTR\) for the contact\.
+1. Choose the contact ID to view the contact record for the contact\.
 
-1. In the **Recording and transcript** section of the CTR, review what was spoken and when, and their sentiment\.
+1. In the **Recording and transcript** section of the contact record, review what was spoken and when, and their sentiment\.
 
 1. If desired, choose the play prompt to listen to the recording\. Or, download the recording and fast\-forward to only the portion you're interested in\.

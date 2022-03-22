@@ -6,7 +6,7 @@ Managers can review past conversations between agents and customers\. To set thi
 
 **Tip**  
 When call recording is enabled, the recording is placed in your S3 bucket shortly after the contact is disconnected\. Then the recording is available for you to review it using the steps in this article\.   
-You can also access the recording from the customer's [contact trace record \(CTR\)](sample-ctr.md)\. The recording is available in the CTR, however, only after the contact has left the [After Contact Work \(ACW\) state](metrics-agent-status.md#agent-status-acw)\.
+You can also access the recording from the customer's [contact record](sample-ctr.md)\. The recording is available in the contact record, however, only after the contact has left the [After Contact Work \(ACW\) state](metrics-agent-status.md#agent-status-acw)\.
 
 ## Review recordings/transcripts of past conversations<a name="review-recordings-and-transcripts"></a>
 
@@ -31,10 +31,10 @@ We recommend using the **Contact ID **filter to [search for recordings](search-r
 
 ## Pause, rewind, or fast\-foward a recording<a name="pause-rewind-fastforward-recording"></a>
 
-1. Instead of choosing the **Play** icon, choose the contact ID to open the Contact Trace Record\.  
+1. Instead of choosing the **Play** icon, choose the contact ID to open the contact record\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recordings-contactid.png)
 
-1. On the **Contact Trace Record** page, there are more controls to navigate the recording\.  
+1. On the **Contact record** page, there are more controls to navigate the recording\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recording-pause-rewind-fastforward.png)
 
    1. Click or tap to the time you want to investigate\.

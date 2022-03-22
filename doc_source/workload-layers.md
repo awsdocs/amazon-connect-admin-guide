@@ -59,7 +59,7 @@ The agent workstation layer is not managed by AWS\. It consists of any physical 
 
 The metric and reporting layer includes the components responsible for delivering, consuming, monitoring, alerting, or processing real\-time and historical metrics for your agents, contacts, and contact center\. This includes all native and third\-party components responsible for facilitating the processing, transmission, storage, retrieval, and visualization of real\-time or historical contact center metrics, activity audit, and monitoring data\. For example:
 + Call recordings and scheduled reports stored in Amazon Simple Storage Service \(Amazon S3\)\.
-+ Contact Trace Records \(CTRs\) that you can export to AWS database services like Amazon Redshift or your own on\-premises data warehouse with Amazon Kinesis\. 
++ Contact records that you can export to AWS database services like Amazon Redshift or your own on\-premises data warehouse with Amazon Kinesis\. 
 + Real\-time dashboards you create with Amazon OpenSearch Service and Kibana\.
 + Amazon CloudWatch metrics generated that you can use to set alarms based on static thresholds, set up Amazon SNS notifications to alert to your administrators and supervisors, or launch AWS Lambda functions in response to the event\. 
 

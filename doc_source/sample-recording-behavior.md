@@ -1,5 +1,8 @@
 # Sample recording behavior<a name="sample-recording-behavior"></a>
 
+**Note**  
+This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+
 Type: Contact flow \(inbound\)
 
 This contact flow starts by checking the channel of the contact:

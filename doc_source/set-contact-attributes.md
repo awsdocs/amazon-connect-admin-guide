@@ -2,7 +2,7 @@
 
 ## Description<a name="set-contact-attributes-description"></a>
 + Stores key\-value pairs as contact attributes\.
-+ Contact attributes are accessible by other areas of Amazon Connect, such as Contact Trace Records \(CTRs\)\. 
++ Contact attributes are accessible by other areas of Amazon Connect, such as contact records\. 
 
   For more information about how to use contact attributes, see [Use Amazon Connect contact attributes](connect-contact-attributes.md)\. 
 

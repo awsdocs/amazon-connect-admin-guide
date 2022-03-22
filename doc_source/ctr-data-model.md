@@ -1,14 +1,14 @@
-# Contact trace records \(CTR\) data model<a name="ctr-data-model"></a>
+# Contact records data model<a name="ctr-data-model"></a>
 
-This article describes the data model for Amazon Connect contact trace records \(CTRs\)\. CTRs capture the events associated with a contact in your contact center\. Real\-time and historical metrics are based on the data captured in the CTRs\.
+This article describes the data model for Amazon Connect contact records\. Contact records capture the events associated with a contact in your contact center\. Real\-time and historical metrics are based on the data captured in the contact records\.
 
-For the CTR retention period and maximum size of the CTR attributes section, see [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.
+For the contact record retention period and maximum size of the attributes section of a contact record, see [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.
 
-For information about when a CTR is created \(and thus can be exported or used for data reporting\), see [Events in the contact trace record \(CTR\)](about-contact-states.md#ctr-events)\.
+For information about when a contact record is created \(and thus can be exported or used for data reporting\), see [Events in the contact record](about-contact-states.md#ctr-events)\.
 
 **Tip**  
-Amazon Connect delivers CTRs at least once\. CTRs may be delivered again for multiple reasons, such as new information arriving after initial delivery\. For example, when you use [update\-contact\-attributes](https://docs.aws.amazon.com/cli/latest/reference/connect/update-contact-attributes.html) to update a CTR, Amazon Connect delivers a new CTR\. This CTR is available for 24 months from the time the associated contact was initiated\.  
-If you're building a system that consumes CTR export streams, be sure to include logic that checks for duplicate CTRs for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
+Amazon Connect delivers contact records at least once\. Contact records may be delivered again for multiple reasons, such as new information arriving after initial delivery\. For example, when you use [update\-contact\-attributes](https://docs.aws.amazon.com/cli/latest/reference/connect/update-contact-attributes.html) to update a contact record, Amazon Connect delivers a new contact record\. This contact record is available for 24 months from the time the associated contact was initiated\.  
+If you're building a system that consumes contact record export streams, be sure to include logic that checks for duplicate contact records for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
 
 ## Agent<a name="ctr-Agent"></a>
 
@@ -153,10 +153,10 @@ Type: String
 
 **Channel**  
 How the contact reached your contact center\.  
-Valid values: Voice, Chat, Tasks
+Valid values: `Voice`, `Chat`, `Tasks`
 
 **ConnectedToSystemTimestamp**  
-The date and time the customer endpoint connected to Amazon Connect, in UTC time\. For `INBOUND`, this matches `InitiationTimestamp`\. For `OUTBOUND`, `CALLBACK`, and `API`, this is when the customer endpoint answers\.  
+The date and time the customer endpoint connected to Amazon Connect, in UTC time\. For `INBOUND`, this matches InitiationTimestamp\. For `OUTBOUND`, `CALLBACK`, and `API`, this is when the customer endpoint answers\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **ContactId**  
@@ -173,9 +173,9 @@ The date and time that the customer endpoint disconnected from Amazon Connect, i
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **DisconnectReason**  
-Indicates how the contact was terminated\. This data is currently available in the Amazon Connect CTR stream only\.  
-The disconnect reason may not be accurate when there are agent or customer connectivity issues\. For example, if the agent is having connectivity issues, the customer might not be able to hear them \("Are you there?"\) and hang up\. This would be recorded as CUSTOMER\_DISCONNECT and not reflect the connectivity issue\.  
-Type: String   
+Indicates how the contact was terminated\. This data is currently available in the Amazon Connect contact record stream only\.  
+The disconnect reason may not be accurate when there are agent or customer connectivity issues\. For example, if the agent is having connectivity issues, the customer might not be able to hear them \("Are you there?"\) and hang up\. This would be recorded as `CUSTOMER_DISCONNECT` and not reflect the connectivity issue\.  
+Type: String  
 Voice contacts can have the following disconnect reasons:  
 + `CUSTOMER_DISCONNECT`: Customer disconnected first\.
 + `AGENT_DISCONNECT`: Agent disconnected when the contact was still on the call\.
@@ -252,10 +252,14 @@ Type: [RecordingInfo](#ctr-RecordingInfo)
 **Recordings**  
 If recording was enabled, this is information about the recording\.  
 Type: Array of [RecordingsInfo](#ctr-RecordingsInfo)  
-The first recording for a contact will appear in both the Recording and Recordings sections of the CTR\.
+The first recording for a contact will appear in both the Recording and Recordings sections of the contact record\.
+
+**ScheduledTimestamp**  
+The date and time when this contact was scheduled to trigger the flow to run, in UTC time\. This is supported only for the task channel\.  
+Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **SystemEndpoint**  
-The system endpoint\. For `INBOUND`, this is the phone number that the customer dialed\. For `OUTBOUND`, this is the caller ID phone number that Amazon Connect used to dial the customer\.  
+The system endpoint\. For `INBOUND`, this is the phone number that the customer dialed\. For `OUTBOUND`, this is the Outbound caller ID number assigned to the outbound queue that is used to dial the customer\.  
 Type: [Endpoint](#ctr-endpoint)
 
 **TransferCompletedTimestamp**  
@@ -271,7 +275,7 @@ Type: [Endpoint](#ctr-endpoint)
 Information about an endpoint\. In Amazon Connect, an endpoint is the destination for a contact, such as a customer phone number, or a phone number for your contact center\.
 
 **Address**  
-The value for the type of endpoint\. For TELEPHONE\_NUMBER, the value is a phone number in E\.164 format\.  
+The value for the type of endpoint\. For `TELEPHONE_NUMBER`, the value is a phone number in E\.164 format\.  
 Type: String  
 Length: 1\-256
 
@@ -285,7 +289,7 @@ Information about the media stream used during the contact\.
 
 **Type**  
 Type: MediaStreamType  
-Valid value: AUDIO, VIDEO, CHAT
+Valid values: `AUDIO`, `VIDEO`, `CHAT`
 
 ## QueueInfo<a name="ctr-QueueInfo"></a>
 
@@ -358,7 +362,7 @@ Length: 0\-256
 **MediaStreamType**  
 Information about the media stream used during the conversation\.   
 Type: String  
-Valid values: AUDIO, VIDEO, CHAT
+Valid values: `AUDIO`, `VIDEO`, `CHAT`
 
 **ParticipantType**  
 Information about the conversation participant: whether they are an agent or contact\.  
@@ -403,8 +407,94 @@ The name of the routing profile\.
 Type: String  
 Length: 1\-100
 
+## VoiceID<a name="ctr-VoiceID"></a>
+
+The latest Voice ID status\.
+
+**AuthenticationEnabled**  
+Was voice authentication enabled for the call?  
+Type: Boolean
+
+**GeneratedSpeakerId**  
+The speaker identifier generated by Voice ID\.  
+Type: String  
+Length: 25 characters
+
+**AuthenticationThreshold**  
+The minimum authentication score required for a user to be authenticated\.  
+Type: Integer  
+Min value: 0  
+Max value: 100
+
+**AuthenticationMinimumSpeechInSeconds**  
+The number of seconds of speech used to authenticate the user\.  
+Type: Integer  
+Min value: 5  
+Max value: 10
+
+**AuthenticationScore**  
+The output of Voice ID authentication evaluation\.  
+Type: Integer  
+Min value: 0  
+Max value: 100
+
+**AuthenticationResult**  
+The string output of Voice ID authentication evaluation\.  
+Type: String  
+Length: 1\-32  
+Valid values: Authenticated, Not Authenticated, Not Enrolled, Opted Out, Inconclusive, Error
+
+**SpeakerEnrolled**  
+Was the customer enrolled during this contact?  
+Type: Boolean
+
+**SpeakerOptedOut**  
+Did the customer opt out during this contact?  
+Type: Boolean
+
+**FraudDetectionEnabled**  
+Was detection of fraudsters in a watchlist enabled for the contact?  
+Type: Boolean
+
+**FraudDetectionThreshold**  
+The threshold for detection of fraudsters in a watchlist that was set in the contact flow for the contact\.  
+Type: Integer  
+Min value: 0  
+Max value: 100
+
+**FraudDetectionResult**  
+The string output of detection of fraudsters in a watchlist\.  
+Type: String  
+Valid values: High Risk, Low Risk, Inconclusive, Error
+
+**FraudDetectionReasons**  
+Contains one fraud type: Known Fraudster\.  
+Type: List of String  
+Length: 1\-128
+
+**FraudRiskScoreKnownFraudster**  
+The detection of fraudsters in a watchlist score for Known Fraudster category\.  
+Type: Integer  
+Min value: 0  
+Max value: 100
+
+**FraudRiskScoreVoiceSpoofing**  
+The detection of fraudsters in a watchlist score for Voice Spoofing, TTS, Audio Replay categories\.   
+Type: Integer  
+Length: 3
+
+**FraudRiskScoreSyntheticSpeech**  
+The detection of fraudsters in a watchlist score for Synthetic speech using TTS\.  
+Type: Integer  
+Length: 3
+
+**GeneratedFraudsterID**  
+The fraudster ID if the fraud type is Known Fraudster\.  
+Type: String  
+Length: 25 characters
+
 ## How to identify abandoned contacts<a name="abandoned-contact"></a>
 
 An abandoned contact refers to a contact that was disconnected by the customer while in queue\. This means that they weren't connected to an agent\. 
 
-The CTR for an abandoned contact has a **Queue**, and an **Enqueue Timestamp** because it was enqueued\. It won’t have a **ConnectedToAgentTimestamp**, or any of the other fields that populate only after the contact has been connected to an agent\.
+The contact record for an abandoned contact has a **Queue**, and an **Enqueue Timestamp** because it was enqueued\. It won’t have a **ConnectedToAgentTimestamp**, or any of the other fields that populate only after the contact has been connected to an agent\.

@@ -1,5 +1,8 @@
 # Sample disconnect flow<a name="sample-disconnect"></a>
 
+**Note**  
+This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+
 Type: Contact flow \(inbound\)
 
 This sample works with voice, chat, and task contacts\.

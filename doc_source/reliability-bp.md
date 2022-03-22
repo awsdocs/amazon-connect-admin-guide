@@ -16,4 +16,4 @@ Reliability includes the ability of a system to recover from infrastructure or s
 +  [Embracing Failure: Fault\-Injection and Service Reliability](https://www.youtube.com/watch?v=wrY7XoOnysg) 
 
 **Product**
-+ [Trusted advisor](http://aws.amazon.com/                         premiumsupport/technology/trusted-advisor/): An online tool that provides you real\-time guidance to help you provision your resources following AWS best practices\.
++ [Trusted advisor](http://aws.amazon.com/premiumsupport/technology/trusted-advisor/): An online tool that provides you real\-time guidance to help you provision your resources following AWS best practices\.

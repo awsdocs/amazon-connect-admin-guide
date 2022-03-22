@@ -23,6 +23,7 @@ Without **User \- View** permissions, the **Agent** filter is not visible, and s
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search2.png)
 
 ## Key search features<a name="key-search-features"></a>
++ [Search by custom contact attributes](search-custom-attributes.md) Search by custom contact attributes \(user\-defined attributes\)
 + Search a time range up to 8 weeks\.
 + Multi\-select for filters such as agent names, contact queues, contact flows, and more\. 
 
@@ -46,9 +47,9 @@ Before users can search for contacts in Amazon Connect, or access detailed conta
 + **Contact search \- View** \(Required\): Grants access to the **Contact search** page, and the ability to search for contacts\.
 + **Restrict contact access** \(Optional\): Manage a user's access to results on the **Contact search** page based on their agent hierarchy group\.
 
-  For example, agents who are assigned to AgentGroup\-1 can only view contact trace records \(CTRs\) for contacts handled by agents in that hierarchy group, and any groups below them\. \(If they have permissions for **Recorded conversations**, they can also listen to call recordings and view transcripts\.\) Agents assigned to AgentGroup\-2 can only access CTRs for contacts handled by their group, and any groups below them\. 
+  For example, agents who are assigned to AgentGroup\-1 can only view contact records for contacts handled by agents in that hierarchy group, and any groups below them\. \(If they have permissions for **Recorded conversations**, they can also listen to call recordings and view transcripts\.\) Agents assigned to AgentGroup\-2 can only access contact records for contacts handled by their group, and any groups below them\. 
 
-  Managers and others who are in higher level groups can view CTRs for contacts handled by all the groups below them, such as AgentGroup\-1 and 2\.
+  Managers and others who are in higher level groups can view contact records for contacts handled by all the groups below them, such as AgentGroup\-1 and 2\.
 
   For this permission, **All** = **View** since **View** is the only action granted\.
 
@@ -81,7 +82,7 @@ Use the options under **Additional fields** to add columns in your search result
 For example, if you want to include columns for **Agent Name** and **Routing profile** in your search output, choose those columns here\.
 
 **Tip**  
-The **Is transferred out** option indicates whether the contact was transferred to an external number\. For the the date and time \(in UTC time\) when the transfer was connected, see `TransferCompletedTimestamp` in the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord)\. 
+The **Is transferred out** option indicates whether the contact was transferred to an external number\. For the date and time \(in UTC time\) when the transfer was connected, see `TransferCompletedTimestamp` in the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord)\. 
 
 ## Download search results<a name="download-search-results"></a>
 

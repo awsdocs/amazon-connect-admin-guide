@@ -4,13 +4,15 @@ Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with 
 
 1. Create a user name and password for agents to log into the CCP, by [adding agents to your instance](user-management.md)\.
 
-1. [Assign them the **Agent** security profile](assign-security-profile.md)\. This grants them permissions to access the CCP\.
+1. At minimum, [assign them the **Agent** security profile](assign-security-profile.md)\. This grants them permissions to access the CCP, which they use to manage contacts\. 
 
 1. Provide the user name, password, and the CCP website link to your agents so they can log in\. 
 
    The CCP website link is: **https://*instance name*\.my\.connect\.aws/ccp\-v2/**
 
-   We recommend telling agents to bookmark the URL to the CCP so they can access it easily\.
+   We recommend telling agents to bookmark the URL to the CCP so they can readily access it\.
+**Tip**  
+Want your agents to manage contacts, and access customer profiles, cases, and knowledge all in one place? Use the agent application, which is a single web browser interface that hosts the CCP, Customer Profiles, Cases, and Wisdom\. For more information, see [Agent training guide](agent-user-guide.md)\.
 
 1. Train your agents on the CCP:
    + Watch [Training video: How to use the CCPTraining video](ccp-video-training.md)

@@ -4,4 +4,7 @@ Interactions actions have side effects, but they don't require a contact or a pa
 
 **Topics**
 + [CreateCallbackContact](interactions-createcallbackcontact.md)
++ [CreateCustomerProfile](interactions-createcustomerprofile.md)
++ [GetCustomerProfile](interactions-getcustomerprofile.md)
++ [UpdateCustomerProfile](interactions-updatecustomerprofile.md)
 + [InvokeLambdaFunction](interactions-invokelambdafunction.md)

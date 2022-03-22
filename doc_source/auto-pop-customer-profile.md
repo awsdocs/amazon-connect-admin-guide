@@ -19,3 +19,9 @@ If you have defined custom keys in your profile objects, you can search by those
 The following image shows how you might use these attributes in the [Set contact attributes](set-contact-attributes.md) block\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-attributes1.png)
+
+## Automatically associate a customer profile with a contact<a name="cp-automatically-associate-contact"></a>
+
+By default, agents need to manually associate a customer profile with a contact based after they've verified the customer's identity\. To change this behavior to automatically associate contacts with a profile based on the phone number, see [Change behavior of inferred profiles to automatically associate the contact record with one profile found](inferred-profiles-change-behavior.md)\. 
+
+If multiple profiles match a contact's phone number, the multiple matched profiles are shown to the agent\. The agent needs to choose which profile to associate with the contact\.

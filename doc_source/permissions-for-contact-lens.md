@@ -22,7 +22,7 @@ On the **Contact Search** page, you can access additional filters that allow you
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-words-phrases.png)
 
 **Contact Lens \- speech analytics**  
-On the **Contact Trace Record** page for a contact, you can view graphs that summarize speech analytics: customer sentiment trend, sentiment, and talk time\. For example, the following image shows how this information is displays on the CTR page for a contact\.  
+On the **Contact Record** page for a contact, you can view graphs that summarize speech analytics: customer sentiment trend, sentiment, and talk time\. For example, the following image shows how this information is displays on the contact record page for a contact\.  
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-sample-sentiment-graph.png)
 
@@ -30,7 +30,7 @@ On the **Contact Trace Record** page for a contact, you can view graphs that sum
 This permission allows you to view, edit, or create rules for categorizing contacts\. For more information, see [Automatically categorize contacts based on uttered keywords and phrases](rules.md)\.
 
 **Recorded conversations \(redacted\)**  
-On the **Contact Trace Record** page for a contact, this permission allows you to listen to call recording files and view call transcripts in which the sensitive data has been removed\. For more information, see [Example redacted file](contact-lens-example-output-files.md#example-redacted-file)\.
+On the **Contact Record** page for a contact, this permission allows you to listen to call recording files and view call transcripts in which the sensitive data has been removed\. For more information, see [Example redacted file](contact-lens-example-output-files.md#example-redacted-file)\.
 
 **Recorded conversations \(unredacted\)**  
 This permission manages access to unredacted content that contains sensitive data such as name and credit card information\. It manages access to the following unredacted content:   
@@ -38,6 +38,6 @@ This permission manages access to unredacted content that contains sensitive dat
 + Original, unredacted transcripts analyzed by Contact Lens
 + Original, unredacted audio recordings
 You can access this content on the **Contact Trace Record** page for a contact\. For more information, see [Example original, analyzed file](contact-lens-example-output-files.md#example-original-output-file)\.  
-If you have permissions to both **Recorded conversations \(redacted\)** and **Recorded conversations \(unredacted\)**, by default only redacted recordings are made available on the **Contact Trace Records** page\.  
+If you have permissions to both **Recorded conversations \(redacted\)** and **Recorded conversations \(unredacted\)**, by default only redacted recordings are made available on the **Contact Record** page\.  
 You must remove permissions to **Recorded conversations \(redacted\)** to access unredacted conversations\.   
 You can't access redacted and unredacted content at the same time\. 

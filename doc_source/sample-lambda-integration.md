@@ -1,5 +1,8 @@
 # Sample Lambda integration<a name="sample-lambda-integration"></a>
 
+**Note**  
+This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+
 Type: Contact flow \(inbound\)
 
 This contact flow shows you how to invoke a Lambda function and do a data dip, that is, retrieve information about the customer\. The data dip uses the caller's phone number to look up the US state they are calling from\. If the customer is using chat, it returns a fun fact\. Here's how it works:

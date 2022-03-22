@@ -1,6 +1,7 @@
 # How to reference contact attributes<a name="how-to-reference-attributes"></a>
 
 The way you reference contact attributes depends on how they were created and how you are accessing them\. 
++ To reference attributes that contain spaces in their name, such as user defined attributes, place brackets and single quotations around the attribute name\. For example: ` $.Attributes.['user attribute name']`\. 
 + To reference attributes in the same namespace, such as a system attribute, you use the attribute name, or the name you specified as the **Destination key**\.
 + To reference values in a different namespace, such as referencing an external attribute, you specify the JSONPath syntax to the attribute\.
 + To use contact attributes to access other resources, set a user\-defined attribute in your contact flow and use the Amazon Resource Name \(ARN\) of the resource you want to access as the value for the attribute\. 

@@ -58,7 +58,7 @@ Amazon Resource Name for the Amazon Connect instance in which the agent’s user
 Type: ARN
 
 **PreviousAgentSnapshot**  
-Contains agent configuration, such as username, first name, last name, routing profile, hierarchy groups\), contacts, and agent status\. Not applicable to LOGIN or LOGOUT events\.  
+Contains agent configuration, such as username, first name, last name, routing profile, hierarchy groups\), contacts, and agent status\.   
 Type: `AgentSnapshot` object
 
 **Version**  
@@ -152,7 +152,7 @@ Indicates how the contact was initiated\.
 Valid values:  
 +  `INBOUND`: The customer initiated voice \(phone\) contact with your contact center\. 
 +  `OUTBOUND`: An agent initiated voice \(phone\) contact with the customer, by using the CCP to call their number\. This initiation method calls the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API\.
-+  `TRANSFER`: The customer was transferred by an agent to another agent or to a queue, using quick connects in the CCP\. This results in a new CTR being created\.
++  `TRANSFER`: The customer was transferred by an agent to another agent or to a queue, using quick connects in the CCP\. This results in a new contact record being created\.
 +  `CALLBACK`: The customer was contacted as part of a callback flow\. 
 
   For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 

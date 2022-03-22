@@ -1,8 +1,12 @@
 # Use service\-linked roles for Amazon Connect<a name="connect-slr"></a>
 
-Amazon Connect uses AWS Identity and Access Management \(IAM\)[ service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to Amazon Connect\. Service\-linked roles are predefined by Amazon Connect and include all the permissions that the service requires to call other AWS services on your behalf\.
+## What are service\-linked roles \(SLR\) and why are they important?<a name="what-is-slr"></a>
 
-A service\-linked role makes setting up Amazon Connect easier because you don't have to manually add the necessary permissions\. Amazon Connect defines the permissions of its service\-linked roles, and unless defined otherwise, only Amazon Connect can assume its roles\. The defined permissions include the trust policy and the permissions policy, and that permissions policy cannot be attached to any other IAM entity\.
+Amazon Connect uses AWS Identity and Access Management \(IAM\) [service\-linked roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role)\. A service\-linked role is a unique type of IAM role that is linked directly to Amazon Connect\. 
+
+Service\-linked roles are predefined by Amazon Connect and include [all the permissions](#slr-permissions) that Amazon Connect requires to call other AWS services on your behalf\.
+
+You need to enable service\-linked roles so you can use new features in Amazon Connect, such as tagging support, the new user interface in **User management** and **Routing profiles**, and queues with CloudTrail support\.
 
 For information about other services that support service\-linked roles, see [AWS services that work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) and look for the services that have **Yes** in the **Service\-Linked Role** column\. Choose a **Yes** with a link to view the service\-linked role documentation for that service\.
 
@@ -18,11 +22,13 @@ The role permissions policy allows Amazon Connect to complete the following acti
 + Action: Amazon S3 `s3:GetObject`, `s3:GetObjectAcl`, `s3:PutObject`, `s3:PutObjectAcl`, `s3:DeleteObject`, `s3:GetBucketLocation`, and `GetBucketAcl` for the S3 bucket specified for recorded conversations\.
 
   It also grants `s3:PutObject`, `s3:PutObjectAcl`, and `s3:GetObjectAcl` to the bucket specified for exported reports\.
-+ Action: Amazon Kinesis Data Firehose `firehose:DescribeDeliveryStream` and `firehose:PutRecord`, and `firehose:PutRecordBatch` for the delivery stream defined for agent event streams and CTRs\.
-+ Action: Amazon Kinesis Data Streams `kinesis:PutRecord`, `kinesis:PutRecords`, and `kinesis:DescribeStream` for the stream specified for agent event streams and CTRs\.
++ Action: Amazon Connect Customer Profiles `profile:SearchProfiles`, `profile:CreateProfile`, `profile:UpdateProfile`, `profile:AddProfileKey`, `profile:ListProfileObjects`, `profile:ListAccountIntegrations` to use your default Customer Profiles domain with the Amazon Connect contact flows and agent experience applications\.
++ Action: Amazon Kinesis Data Firehose `firehose:DescribeDeliveryStream` and `firehose:PutRecord`, and `firehose:PutRecordBatch` for the delivery stream defined for agent event streams and contact records\.
++ Action: Amazon Kinesis Data Streams `kinesis:PutRecord`, `kinesis:PutRecords`, and `kinesis:DescribeStream` for the stream specified for agent event streams and contact records\.
 + Action: Amazon Lex `lex:PostContent` for the bots added to your instance\.
 + Action: Amazon Lex `lex:ListBots`, `lex:ListBotAliases` for the all bots created in the account across all Regions\.
 + Action: Amazon CloudWatch Logs `logs:CreateLogStream`, `logs:DescribeLogStreams`, and `logs:PutLogEvents` to the CloudWatch Logs group specified for contact flow logging\.
++ Action: Amazon CloudWatch Metrics `cloudwatch:PutMetricData` to publish Amazon Connect usage metrics for an instance to your account\.
 + Action: High\-Volume Outbound Communications
   + `connect-campaigns:CreateCampaign`
   + `connect-campaigns:DeleteCampaign`
@@ -39,13 +45,7 @@ The role permissions policy allows Amazon Connect to complete the following acti
 
 You must configure permissions to allow an IAM entity \(such as a user, group, or role\) to create, edit, or delete a service\-linked role\. For more information, see [Service\-linked role permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#service-linked-role-permissions) in the *IAM User Guide*\.
 
-### Set up instances created before October 2018 to use service\-linked roles<a name="not-using-slr"></a>
-
-If your instance was created before October 2018, you don't have service\-linked roles set up\. 
-
-Add the **connect:\*** policy on the role that is associated with your Amazon Connect instance\. This enables you to access the public API for real\-time transcription, and real\-time transcription page that utilizes the API\.
-
-## Create a srvice\-linked role for Amazon Connect<a name="create-slr"></a>
+## Create a service\-linked role for Amazon Connect<a name="create-slr"></a>
 
 You don't need to manually create a service\-linked role\. When you create a new instance in Amazon Connect in the AWS Management Console, Amazon Connect creates the service\-linked role for you\.
 
@@ -53,13 +53,21 @@ If you delete this service\-linked role, and then need to create it again, you c
 
 You can also use the IAM console to create a service\-linked role with the **Amazon Connect \- Full access** use case\. In the IAM CLI or the IAM API, create a service\-linked role with the `connect.amazonaws.com` service name\. For more information, see [Creating a service\-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) in the *IAM User Guide*\. If you delete this service\-linked role, you can use this same process to create the role again\.
 
+## For instances created before October 2018<a name="migrate-slr"></a>
+
+If your Amazon Connect instance was created before October 2018, you don't have service\-linked roles set up\. To create a service\-linked role, on the **Account overview** page, choose **Create service\-linked role**\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/slr-create-slr.png)
+
+For a list of the IAM permissions required to create the service\-linked role, see [Overview page](security-iam-amazon-connect-permissions.md#overview-page) in the [Required permissions for using custom IAM policies to manage access to the Amazon Connect console](security-iam-amazon-connect-permissions.md) topic\.
+
 ## Edit a service\-linked role for Amazon Connect<a name="edit-slr"></a>
 
 Amazon Connect does not allow you to edit the AmazonConnectServiceLinkedRolePolicy service\-linked role\. After you create a service\-linked role, you cannot change the name of the role because various entities might reference the role\. However, you can edit the description of the role using IAM\. For more information, see [Editing a service\-linked role](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#edit-service-linked-role) in the *IAM User Guide*\.
 
 ## Checking a service\-linked role has permissions for Amazon Lex<a name="check-slr"></a>
 
-1. In the navigation pane of the IAM console, choose Roles\.
+1. In the navigation pane of the IAM console, choose **Roles**\.
 
 1. Choose the name of the role to modify\.
 

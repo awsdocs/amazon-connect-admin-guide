@@ -6,7 +6,7 @@ The following information needs to be in your object type mapping so Customer Pr
 
   When the source data is ingested by Customer Profiles, the indexed fields determine:
   + Which profile a specific object belongs to\.
-  + Which objects are related to each other and should be placed in the same profile\. For example, an account number or a CTR contact ID\. 
+  + Which objects are related to each other and should be placed in the same profile\. For example, an account number or a contact ID in a contact record\. 
   + What values can be used to find a profile\. For example, the contact's name can be indexed\. This would allow agents to find all profiles that belong to customers with a specific name\. 
 
 ## Key requirements<a name="key-requirements"></a>

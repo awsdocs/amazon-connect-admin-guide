@@ -50,7 +50,7 @@ Use the permissions listed in the following table to manage access to this page\
 | --- | --- | 
 | List instance  | connect:ListInstances ds:DescribeDirectories  | 
 | Describe instance: View the details of the instance/ current settings  | connect:DescribeInstance connect:ListLambdaFunctions connect:ListLexBots connect:ListInstanceStorageConfigs connect:ListApprovedOrigins connect:ListSecurityKeys connect:DescribeInstanceAttributes connect:DescribeInstanceStorageConfig ds:DescribeDirectories  | 
-| Create instance  | connect:CreateInstance connect:DescribeInstance connect:ListInstances connect:AssociateInstanceStorageConfig connect:UpdateInstanceAttribute ds:CheckAlias ds:CreateAlias ds:AuthorizeApplication ds:UnauthorizeApplication ds:CreateIdentityPoolDirectory ds:CreateDirectory ds:DescribeDirectories iam:CreateServiceLinkedRole  kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant logs:CreateLogGroup s3:CreateBucket s3:GetBucketLocation s3:ListAllMyBuckets servicequotas:GetServiceQuota  | 
+| Create instance  | connect:CreateInstance connect:DescribeInstance connect:ListInstances connect:AssociateInstanceStorageConfig connect:UpdateInstanceAttribute ds:CheckAlias ds:CreateAlias ds:AuthorizeApplication ds:UnauthorizeApplication ds:CreateIdentityPoolDirectory ds:CreateDirectory ds:DescribeDirectories iam:CreateServiceLinkedRole  kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant logs:CreateLogGroup s3:CreateBucket s3:GetBucketLocation s3:ListAllMyBuckets servicequotas:GetServiceQuota  profile:ListAccountIntegrations profile:GetDomain  profile:ListDomains profile:GetProfileObjectType  profile:ListProfileObjectTypeTemplates  | 
 | Delete instance  |  connect:DescribeInstance connect:DeleteInstance connect:ListInstances ds:DescribeDirectories ds:DeleteDirectory ds:UnauthorizeApplication  | 
 
 ## Detailed instance pages<a name="detail-pages"></a>
@@ -66,7 +66,14 @@ The following tables list the granular permissions for each detailed instance pa
 **Note**  
 To perform **Edit** actions, users also need **List** and **Describe** permissions\.
 
-### Overview and Telephony options pages<a name="telephony-options-page"></a>
+### Overview page<a name="overview-page"></a>
+
+
+| Action/Use case | Permissions needed | 
+| --- | --- | 
+| Create service\-linked role |  connect:DescribeInstance connect:ListInstances connect:DescribeInstanceAttribute connect:UpdateInstanceAttribute connect:ListIntegrationAssociations profile:ListAccountIntegrations ds:DescribeDirectories iam:CreateServiceLinkedRole iam:PutRolePolicy  | 
+
+### Telephony page<a name="telephony-page"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -118,13 +125,13 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 
 ### Data streaming page<a name="data-streaming-page"></a>
 
-#### Contact trace records section<a name="ctr-section"></a>
+#### Contact records section<a name="ctr-section"></a>
 
 
 | Action/Use case | Permissions needed | 
 | --- | --- | 
-| View data streaming \- Contact trace records |  connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
-| Edit contact trace record |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig firehose:ListDeliveryStreams firehose:DescribeDeliveryStream kinesis:ListStreams kinesis:DescribeStream   | 
+| View data streaming \- Contact records |  connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
+| Edit contact record |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig firehose:ListDeliveryStreams firehose:DescribeDeliveryStream kinesis:ListStreams kinesis:DescribeStream   | 
 
 #### Agent events section<a name="agent-events-section"></a>
 
@@ -167,6 +174,14 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | Edit Voice ID integrations | voiceid:DescribeDomain voiceid:ListDomains voiceid:RegisterComplianceConsent voiceid:DescribeComplianceConsent voiceid:UpdateDomain voiceid:CreateDomain connect:ListIntegrationAssociations connect:CreateIntegrationAssociation connect:DeleteIntegrationAssociation events:PutRule events:DeleteRule events:PutTargets events:RemoveTargets  | 
 
 ### Contact flows page<a name="contact-flows-page"></a>
+
+#### Contact flows<a name="contact-flows-section"></a>
+
+
+| Action/Use case | Permissions needed | 
+| --- | --- | 
+| View contact flow security keys | connect:DescribeInstance connect:ListSecurityKeys  | 
+| Add/remove contact flow security keys |  connect:AssociateSecurityKey connect:DisassociateSecurityKey  | 
 
 #### Contact flows security keys section<a name="security-keys-section"></a>
 

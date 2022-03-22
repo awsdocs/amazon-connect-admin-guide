@@ -13,5 +13,3 @@ If your organization is using a customized version of the Contact Control Panel 
 1. Under **Audio devices**, use the dropdown to select your **Speaker**, **Microphone**, and **Ringer**\.
 **Note**  
 If you use Firefox, you can change your **Microphone** device setting\. To change your speaker and ringer, use your computer settings\.
-
-1. Choose **Save**\.

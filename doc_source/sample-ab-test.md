@@ -1,5 +1,8 @@
 # Sample AB test<a name="sample-ab-test"></a>
 
+**Note**  
+This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+
 Type: Contact flow \(inbound\)
 
 This contact flow shows how to perform an A/B call distribution based on a percentage\. Here's how it works: 

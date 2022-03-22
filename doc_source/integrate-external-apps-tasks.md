@@ -4,7 +4,7 @@ You can set up applications for task creation in just a few steps, no coding req
 
 **Tip**  
 If your organization is using custom [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) policies to manage access to the Amazon Connect console, make sure users have the appropriate permissions to set up applications for task creation\. For a list of required permissions, see [Tasks page](security-iam-amazon-connect-permissions.md#tasks-page)\.   
-If your instance was created before October 2018, for information about how to configure your service\-linked roles \(SLR\), see [Set up instances created before October 2018 to use service\-linked roles](connect-slr.md#not-using-slr)\.
+If your instance was created before October 2018, for information about how to configure your service\-linked roles \(SLR\), see [For instances created before October 2018](connect-slr.md#migrate-slr)\.
 
 **Topics**
 + [Set up application integration for Salesforce](integrate-salesforce-tasks.md)

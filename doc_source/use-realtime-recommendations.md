@@ -8,7 +8,7 @@ The following image shows how an article may appear in the agent application whe
 
 1. You're on a call\.
 
-1. The Customer profile tab is available\.
+1. The **Customer profile** tab is available\.
 
 1. You can have multiple articles open at the same time\.
 

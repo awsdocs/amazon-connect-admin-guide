@@ -1,5 +1,8 @@
 # Sample secure input with agent<a name="sample-secure-input-with-agent"></a>
 
+**Note**  
+This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+
 Type: Queue transfer
 
 This contact flow shows you how to allow customers to input sensitive data while putting the agent on hold\. In a production environment, we recommend [using encryption](encrypt-data.md) instead of this solution\. 

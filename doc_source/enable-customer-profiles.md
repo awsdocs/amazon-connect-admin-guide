@@ -42,6 +42,8 @@ When you enable Customer Profiles, you have the option of specifying an Amazon S
 }
 ```
 
+To prevent a confused deputy security issue, see [Amazon Connect Customer Profiles cross\-service confused deputy prevention](cross-service-confused-deputy-prevention.md#customer-profiles-cross-service) for an example policy to apply\.
+
 Step\-by\-step instructions are provided in [Enable Customer Profiles](#enable-customer-profiles-step1)\. For general information, see [Basic examples of Amazon SQS policies](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-basic-examples-of-sqs-policies.html)\.
 
 ### Create a KMS key to be used by Customer Profiles to encrypt data \(required\)<a name="enable-customer-profiles-awsmanagedkey"></a>
@@ -50,7 +52,7 @@ When you enable Customer Profiles, you are prompted to create or provide a AWS K
 
 All data at rest for Customer Profiles is encrypted under the KMS key you choose\. Your customer managed key is created, owned, and managed by you\. You have full control over the KMS key \(AWS KMS charges apply\)\.
 
-If you choose to set up a KMS key where someone else is the administrator, it must have a policy that allows `kms:GenerateDataKey`, `kms:CreateGrant`, and `kms:Decrypt` permissions to the Customer Profiles service principal\. For information about how to change a key policy, see [Changing a key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying.html) in the AWS Key Management Service Developer Guide\.
+If you choose to set up a KMS key where someone else is the administrator, it must have a policy that allows `kms:GenerateDataKey`, `kms:CreateGrant`, and `kms:Decrypt` permissions to the Customer Profiles service principal\. For information about how to change a key policy, see [Changing a key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying.html) in the AWS Key Management Service Developer Guide\. In addition, to prevent cross\-service impersonation, see [Cross\-service confused deputy prevention](cross-service-confused-deputy-prevention.md) for sample policies that you should apply\.
 
 ## Enable Customer Profiles<a name="enable-customer-profiles-step1"></a>
 
@@ -122,6 +124,14 @@ If you choose to set up a KMS key where someone else is the administrator, it mu
 
 You're done\! Amazon Connect Customer Profiles is enabled\. Now with every new contact that comes in, Amazon Connect creates a customer profile record\. It then tracks the contact history for that phone number \(voice\) or email address \(chat\)\.
 
-Your agents can [create new customer profiles](create-new-customer-profile.md) and view contact trace records for your customers\. 
+Your agents can [create new customer profiles](create-new-customer-profile.md) and view contact records for your customers\. 
 
-You can also integrate with external applications that provide customer profile data\. For more information, see [Integrate external applications with Customer Profiles](integrate-external-apps-customer-profiles.md)\.
+## Next steps<a name="cp-setup-nextsteps"></a>
+
+1.  [Make Customer Profiles available through the agent application](customer-profile-access.md)\. 
+
+1.  [Assign agents permissions to access Customer Profiles in the agent application](assign-security-profile-customer-profile.md)\. 
+
+1. [Integrate with external applications that profile customer profile data \(optional\)](integrate-external-apps-customer-profiles.md)\. 
+
+1. [Enable Identity Resolution to identify two or more similar profiles, and consolidate them](use-identity-resolution.md)\. 

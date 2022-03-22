@@ -40,7 +40,7 @@ Images should be uploaded in Amazon S3 and publicly accessible\.
          "imageType":"URL",                       
          "imageData":"https://interactive-msg.s3-us-west-2.amazonaws.com/fruit_34.3kb.jpg",                  
          "imageDescription":"Select a produce to buy",
-         "elements>":[                                   (mandatory, 1-6 items)
+         "elements":[                                   (mandatory, 1-6 items)
             {
                "title":"Apple",                          (mandatory)
                "subtitle":"$1.00"

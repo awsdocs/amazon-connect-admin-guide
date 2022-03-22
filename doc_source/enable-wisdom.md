@@ -4,7 +4,9 @@
 
 There are two ways you can enable Wisdom for your instance: 
 + Use the [new](amazon-connect-release-notes.md#august21-release-notes) Amazon Connect console\. This topic provides instructions\.
-+ Use the Amazon Connect Wisdom API\. You can ingest content using the Amazon Connect Wisdom APIs\. The APIs support the ingestion of HTML and text; plain text files must be in UTF\-8\. For more information, see the [Amazon Connect Wisdom API Reference](https://docs.aws.amazon.com/wisdom/latest/APIReference/Welcome.html)\. 
++ Use the Amazon Connect Wisdom API\. You can ingest content using the Amazon Connect Wisdom APIs\. To learn more, see this blog post: [Ingesting content to power real\-time recommendations and search with Amazon Connect Wisdom](http://aws.amazon.com/blogs/contact-center/ingesting-content-to-power-real-time-recommendations-and-search-with-amazon-connect-wisdom/)\. 
+
+  The APIs support the ingestion of HTML and text; plain text files must be in UTF\-8\. For more information, see the [Amazon Connect Wisdom API Reference](https://docs.aws.amazon.com/wisdom/latest/APIReference/)\. 
 
 Following is an overview of the steps to enable Wisdom:
 

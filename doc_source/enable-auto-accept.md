@@ -10,7 +10,7 @@ There isn't an option for increasing the amount of time before a call is automat
 
 Auto\-Accept Call doesn't work for callbacks\.
 
-## Enable auto\-accept call for existing agents<a name="w463aac27c24c13b7"></a>
+## Enable auto\-accept call for existing agents<a name="w685aac27c25c13b7"></a>
 
 You can't enable Auto\-Accept Call while editing multiple existing users in your Amazon Connect instance\. You must edit existing users individually to enable it\. However, you can configure the setting for multiple new users when you bulk upload new users with the CSV template\. 
 

@@ -12,7 +12,6 @@ This topic describes how to create a high\-volume outbound campaign using Amazon
 ## Before you begin<a name="campaign-prereq"></a>
 
 There are a few things that you need in place before you create a high\-volume outbound campaign:
-+ Use the [Amazon AppIntegrations Service](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html) to enable high\-volume outbound campaigns for your Amazon Connect instance\.
 + Make sure your instance is [enabled for outbound calling](enable-outbound-calls.md)\. 
 + Create a dedicated outbound communications queue to handle any contacts that will be routed to agents as a result of the campaign\.
 + Assign the queue to the agent's routing profile\.

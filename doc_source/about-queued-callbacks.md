@@ -1,6 +1,6 @@
 # About queued callbacks in metrics<a name="about-queued-callbacks"></a>
 
-This topic explains how queued callbacks appear in your real\-time metrics reports and the contact trace record \(CTR\)\.
+This topic explains how queued callbacks appear in your real\-time metrics reports and the contact record\.
 
 **Tip**  
 To see only the number of customers who are waiting for a call back, you need to create a queue that only takes callback contacts\. To learn how to do this, see [Set up routing](connect-queues.md)\. Currently there isn't a way to see the phone numbers of the contacts waiting for callbacks\.
@@ -11,10 +11,10 @@ To see only the number of customers who are waiting for a call back, you need to
 1. The callback is then placed in the queue\. It remains there until an agent is available and can be offered the contact\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-callback-in-queue.png)
 
-1. When the callback is connected to the agent, a new CTR is created for the contact\.  
+1. When the callback is connected to the agent, a new contact record is created for the contact\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ctr-diagram.png)
 
-1. The **Initiation Timestamp** in the callback CTR corresponds to when the [Transfer to queue](transfer-to-queue.md) block transferred the contact to a callback queue, shown in step 1\.  
+1. The **Initiation Timestamp** in the callback contact record corresponds to when the [Transfer to queue](transfer-to-queue.md) block transferred the contact to a callback queue, shown in step 1\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ctr-callback-initiation-timestamp.png)
 
 ## How properties in the Transfer to Queue block affect this flow<a name="transfer-to-queue-properties"></a>

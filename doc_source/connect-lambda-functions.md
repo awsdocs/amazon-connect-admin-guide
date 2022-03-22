@@ -103,7 +103,7 @@ The request is divided into three parts:
 + User attributes—These are attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a contact flow\. This map may be empty if there aren't any saved attributes\.
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\.
 
-### Invocation retry policy<a name="w463aac29c38c13c17"></a>
+### Invocation retry policy<a name="w685aac29c41c13c17"></a>
 
 If your Lambda invocation in a contact flow gets throttled, the request will be retried\. It will also be retried if a general service failure \(500 error\) happens\. 
 
@@ -152,7 +152,7 @@ def lambda_handler(event, context):
     return resultMap
 ```
 
-The output returned from the function must be a flat object of key/value pairs, with values that include only alphanumeric, dash, and underscore characters\. Nested and complex objects are not supported\. The size of the returned data must be less than 32 Kb of UTF\-8 data\.
+The output returned from the function must be a flat object of key/value pairs, with values that include only alphanumeric, dash, and underscore characters\. Nested and complex objects are not supported\. The size of the returned data must be less than 32 KB of UTF\-8 data\.
 
 The following example shows the JSON output from these Lambda functions:
 
@@ -170,7 +170,7 @@ There are two ways to use the function response in your contact flow\. You can e
 
 ### Access variables directly<a name="access-variables"></a>
 
- If you access the variables directly, you can use them in contact flow blocks, but they are not included in contact trace records \(CTR\)\. To access these variables directly in a contact flow block, add the block after the **Invoke AWS Lambda function** block, and then reference the attributes as shown in the following example: 
+ If you access the variables directly, you can use them in contact flow blocks, but they are not included in contact records\. To access these variables directly in a contact flow block, add the block after the **Invoke AWS Lambda function** block, and then reference the attributes as shown in the following example: 
 
 ```
 Name - $.External.Name
@@ -182,7 +182,7 @@ Make sure that the name specified for the source attribute matches the key name 
 
 ### Store variables as contact attributes<a name="store-variables"></a>
 
-If you store the variables as contact attributes, you can use them throughout your contact flow, and they are included in CTRs\.
+If you store the variables as contact attributes, you can use them throughout your contact flow, and they are included in contact records\.
 
 To store the values returned as contact attributes and then reference them, use a **Set contact attributes** block in your contact flow after the **Invoke AWS Lambda function** block\. Choose **External** for the **Type**\. Following the example we're using, set **Destination key** to `returnedContactName`, and set the **Source attribute** to `Name`
 

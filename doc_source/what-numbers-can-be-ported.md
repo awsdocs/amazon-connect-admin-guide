@@ -6,7 +6,7 @@ Not all phone numbers can be ported\. The ability to port a specific phone numbe
 + The type of phone number being ported\.
 + Your service contract with your current service provider\.
 
-To find out if a phone number that you currently own can be ported to Amazon Connect: 
+To find out if a phone number that you currently own—whether local, mobile, or toll\-free—can be ported to Amazon Connect: 
 
 1. See if your country supports number porting: [Region requirements for ordering and porting phone numbers](phone-number-requirements.md)\.
 

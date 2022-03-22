@@ -2,7 +2,7 @@
 
 ## Description<a name="distribute-by-percentage-description"></a>
 + This block is useful for doing A/B testing\. It routes customers randomly based on a percentage\.
-+ Like flipping a coin, contacts are distributed randomly, which doesn't guarantee exact percentage splits\.
++ Contacts are distributed randomly, so exact percentage splits may or may not occur\.
 
 ## Supported channels<a name="distribute-by-percentage-channels"></a>
 

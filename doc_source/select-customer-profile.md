@@ -19,7 +19,7 @@ This next example shows what it might look like after you've accepted and joined
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-choose-profile-example1a.png)
 + If you choose **Associate** by mistake, you can continue to browse other customer profiles, and associate the contact with a different customer profile\. Or, if you have been [assigned Create permission](assign-security-profile-customer-profile.md), you can create a new profile\. 
 
-  You can associate a contact with customer profile multiple times during an interaction, including during After Contact Work \(ACW\) time\. **Only the last association remains, before you clear the contact**\.
+  You can associate a contact with customer profile multiple times during an interaction, including during After Contact Work \(ACW\) time\. Only the most recent association remains, before you clear the contact\.
 
 ## Example 2: Accept incoming contact, no customer profile found<a name="example2-select-customer-profile"></a>
 

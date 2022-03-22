@@ -19,6 +19,8 @@ You will need to update your customer\-facing user interface to support attachme
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/attachments-enable.png)
 
 1. You can change the Amazon S3 bucket location where attachments are stored\. By default, your existing Amazon Connect bucket is used, with a new prefix for attachments\. 
+**Note**  
+Currently, Amazon Connect doesn’t support S3 buckets with [Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) enabled\. 
 
    The attachments feature leverages two Amazon S3 locations: a staging location and a final location\. 
 

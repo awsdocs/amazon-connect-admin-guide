@@ -188,7 +188,7 @@ For more information, see [How to use Lex session attributes](how-to-use-session
   1. Amazon Connect console provided session attributes: Defined in the **Get customer input** block\.
 
   1. Service defaults: These are used only if no attributes are defined\.
-+ You can prompt contacts to end their input with a pound key \# and to cancel it using the star key \*\. When you use a Lex bot, if you don't prompt customers to end their input with \#, they will end up waiting five seconds for Lex to stop waiting for additional key presses\. It's not possible to configure Lex to wait a shorter length of time\. 
++ You can prompt contacts to end their input with a pound key \# and to cancel it using the star key \*\. When you use a Lex bot, if you don't prompt customers to end their input with \#, they will end up waiting five seconds for Lex to stop waiting for additional key presses\. 
 + To control time\-out  functionality, you can use Lex session attributes in this block, or in set them in your Lex Lambda function\. If you choose to set the attributes in a Lex Lambda function, the default values are used until the Lex bot is invoked\. For more information, see [Using Lambda Functions](https://docs.aws.amazon.com/lex/latest/dg/using-lambda.html) in the *Amazon Lex Developer Guide*\. 
 + When you specify one of the session attributes described in this article, you can use wildcards\. They let you set multiple slots for an intent or bots\.
 

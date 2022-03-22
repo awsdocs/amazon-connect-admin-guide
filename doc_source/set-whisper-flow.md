@@ -37,7 +37,7 @@ The following table lists how this block routes a contact who is using the speci
 | --- | --- | 
 | Voice | Yes | 
 | Chat | Yes | 
-| Task | No \- Error branch | 
+| Task | Yes | 
 
 ## Contact flow types<a name="set-whisper-types"></a>
 

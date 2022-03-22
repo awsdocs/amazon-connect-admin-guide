@@ -1,9 +1,9 @@
 # Sample queued callback<a name="sample-queued-callback"></a>
 
-Type: Contact flow \(inbound\)
-
 **Note**  
 This sample flow is available in previous Amazon Connect instances\. In new instances, you can see examples of queued callback in [Sample interruptible queue flow with callback](sample-interruptible-queue.md) and [Sample queue configurations](sample-queue-configurations.md)\.
+
+Type: Contact flow \(inbound\)
 
 This contact flow provides callback queue logic\. Here's how it works: 
 

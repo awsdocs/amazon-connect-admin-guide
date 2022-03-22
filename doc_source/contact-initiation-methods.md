@@ -42,7 +42,7 @@ To summarize, an **Outbound contact flow** type is the only one involved in an o
 
 ## Transfer<a name="transfer-initiation-method"></a>
 
-The contact was transferred by an agent to another agent or to a queue, using quick connects in the CCP\. This results in a new CTR being created\.
+The contact was transferred by an agent to another agent or to a queue, using quick connects in the CCP\. This results in a new contact record being created\.
 
 Before the agent transfers the contact to another agent or queue, all the flows involved in an INBOUND contact are run\.
 + Agent to Agent transfer using Agent Quick Connect
@@ -82,7 +82,7 @@ Before the agent transfers the contact to another agent or queue, all the flows 
 
   To summarize for agent to queue transfer call, the following contact flows are played: 
 
-  1. **Agent transfer flow**
+  1. **Queue transfer flow** 
 
   1. **Agent whisper flow** \(played to the destination agent\) 
 
@@ -103,7 +103,15 @@ To summarize, for callback contacts, the follwoing contact flow types are played
 
 ## API<a name="api-initiation-method"></a>
 
-The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\. 
+ The contact was initiated with Amazon Connect by API\. This could be:
+
+1. An outbound contact you created and queued to an agent using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API\.
+
+1. A live chat that was initiated by the customer with your contact center where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
+
+1. A task that was initiated by calling the [StartTaskConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartTaskContact.html) API\.
+
+Following is an example of an API initiated contact method:
 + After the outbound contact is successfully initiated using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, an [Inbound contact flow](create-contact-flow.md#contact-flow-types) provided in the API request is played to the customer\.
 + Depending on the configuration of the [Inbound contact flow](create-contact-flow.md#contact-flow-types), additional contact flows are played\. For example, an [Inbound contact flow](create-contact-flow.md#contact-flow-types) transfers a customer to an agent for conversation\. In this case, a [Customer queue flow](create-contact-flow.md#contact-flow-types) is played to customer while they waiting in queue for an agent\.
 + When the available agent accepts the call, an [Agent whisper flow](create-contact-flow.md#contact-flow-types) is played to agent\.

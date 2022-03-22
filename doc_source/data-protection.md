@@ -15,3 +15,6 @@ We strongly recommend that you never put confidential or sensitive information, 
 **Topics**
 + [Data handled by Amazon Connect](data-handled-by-connect.md)
 + [Encryption at rest](encryption-at-rest.md)
++ [Encryption in transit](encryption-in-transit.md)
++ [Key management](key-management.md)
++ [VPC endpoints \(AWS PrivateLink\)](vpc-interface-endpoints.md)

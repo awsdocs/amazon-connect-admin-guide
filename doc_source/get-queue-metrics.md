@@ -10,7 +10,7 @@
   + [Agents available](real-time-metrics-definitions.md#available-real-time)
   + [Agents staffed](real-time-metrics-definitions.md#staffed-real-time)
   + [Agents after contact work](real-time-metrics-definitions.md#aftercallwork-real-time)
-  + [Agents busy](real-time-metrics-definitions.md#on-call-real-time)
+  + [Agents busy](real-time-metrics-definitions.md#on-call-real-time): Although this option maps to the **On contact** real\-time metric, note that **On contact** includes ACW but **Agents busy** does not\.
   + [Agents missed](real-time-metrics-definitions.md#agent-non-response-real-time) \(Agent non\-response\)
   + [Agents non\-productive](real-time-metrics-definitions.md#non-productive-time-real-time)
 + You can choose to return metrics by channel, for example, voice or chat\. You can also filter by queue or agent\. These options enable you to know how many chat and voice contacts are in a queue and if you have agents available to handle those contacts\. 

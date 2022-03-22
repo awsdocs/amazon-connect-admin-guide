@@ -1,4 +1,4 @@
-# Enable Customer Profiles<a name="customer-profiles"></a>
+# Use Customer Profiles<a name="customer-profiles"></a>
 
 To help agents deliver more efficient and personalized customer service, Amazon Connect enables you to combine information from external applications, such as Salesforce, with contact history from Amazon Connect\. This creates a customer profile that has all the information agents need during customer interactions in a single place\.
 
@@ -16,4 +16,4 @@ The following image shows an agent's Contact Control Panel \(CCP\); for the purp
 
 1. **More information**: Information that an agent can use to verify the contact, such as cell phone number and shipping address\. 
 
-1. **Actions**: Agents can copy the contact ID, or choose to go directly to the contact's CTR details page\. 
+1. **Actions**: Agents can copy the contact ID, or choose to go directly to the contact's **Contact record details** page\. 

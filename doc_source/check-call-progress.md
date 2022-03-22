@@ -1,5 +1,8 @@
 # Contact block: Check call progress<a name="check-call-progress"></a>
 
+**Important**  
+This block works with [Amazon Connect High\-Volume Outbound Communications](enable-high-volume-outbound-communications.md) only\. It is in public preview and not available in all Regions\.
+
 ## Description<a name="check-call-progress-description"></a>
 + Engages with the output provided by an answering machine, and provides branches to route the contact accordingly\.
 + It supports the following branches:

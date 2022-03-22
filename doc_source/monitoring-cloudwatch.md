@@ -4,6 +4,22 @@ Amazon Connect sends data about your instance to CloudWatch metrics so that you 
 
 When you view the CloudWatch metrics dashboard, you can specify the refresh interval for the data displayed\. The values displayed in the dashboard reflect the values for the refresh interval you define\. For example, if you set the refresh interval to 1 minute, the values displayed are for a minute period\. You can select a refresh interval of 10 seconds, but Amazon Connect does not send data more often than every 1 minute\. Metrics that are sent to CloudWatch are available for two weeks, and then discarded\. To learn more about metrics in CloudWatch, see the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/)\.
 
+**Note**  
+If your Amazon Connect instance was created on or before October 2018, you need to provide Amazon Connect with permission to begin publishing chat metrics to your CloudWatch account\. To do so, create an IAM policy with the following permission and attach it to the Amazon Connect service role\. You can find the Amazon Connect service role on the **Account overview** page for your Amazon Connect instance\.  
+
+```
+{
+  "Effect": "Allow",
+  "Action": "cloudwatch:PutMetricData",
+  "Resource": "*",
+  "Condition": {
+    "StringEquals": {
+      "cloudwatch:namespace": "AWS/Connect"
+    }
+  }
+}
+```
+
 ## Amazon Connect metrics sent to CloudWatch<a name="connect-metrics-cloudwatch"></a>
 
 The `AWS/Connect` namespace includes the following metrics\.
@@ -41,6 +57,35 @@ Unit: Count
 Dimensions:  
 + **InstanceId**: The ID of your instance
 + **MetricGroup**: **VoiceCalls**
+
+**ChatsBreachingActiveChatQuota**  
+The total number of valid requests made to start a chat that exceeded the concurrent active chats quota for the instance\. For the total number of chats requests that breach the quota, take a look at the Sum statistic\.  
+For example, assume your contact center experiences the following volumes, and your service quota is 2500 concurrent active chats:  
++ 0:00 : 2525 concurrent active chats\. This is 25 over the quota\.
++ 0:04 : 2535 concurrent active chats\. This is 35 over the quota\.
++ 0:10 : 2550 concurrent active chats\. This is 50 over the quota\.
+ChatsBreachingActiveChatsQuota = 110: the total number of chats that exceeded the quota between 0:00 and 0:10\.  
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Chats**
+
+**ConcurrentActiveChats**  
+The number of [concurrent active chats](amazon-connect-service-limits.md) in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active chats at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active chats are included, not only active tasks that are connected to agents\.  
+While all statistics are available in CloudWatch for concurrent active chats, you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.   
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Chats**
+
+**ConcurrentActiveChatsPercentage**  
+The percentage of the concurrent active chats service quota used in the instance\. This is calculated by:  
++  ConcurrentActiveChats / ConfiguredConcurrentActiveChatsLimit
+Where ConfiguredConcurrentActiveChatsLimit is the Concurrent active chats per instance configured for your instance\.  
+Unit: Percent \(Output displays as an integer\. For example, 1% of chats is shown as 1, not as 0\.01\.\)  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Chats**
 
 **ConcurrentCalls**  
 The number of concurrent active voice calls in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active calls at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active voice calls are included, not only active calls that are connected to agents\.  
@@ -102,7 +147,7 @@ Dimensions:
 **MissedCalls**  
 The number of voice calls that were missed by agents during the refresh interval selected, such as 1 minute or 5 minutes\. A missed call is one that is not answered by an agent within 20 seconds\.  
 To monitor the total missed calls in a given time period, take a look at the Sum statistic in CloudWatch\.  
-Unit: Seconds  
+Unit: Count  
 Dimensions:  
 + **InstanceId**: The ID of your instance
 + **MetricGroup**: **VoiceCalls**
@@ -136,6 +181,13 @@ Dimensions:
 + **InstanceId**: The ID of your instance
 + **MetricGroup**: **Queue**
 + **QueueName**: The name of your queue
+
+**SuccessfulChatsPerInterval**  
+The number of chats successfully started in the instance for the defined interval\.  
+Unit: Count  
+Dimensions:  
++ **InstanceId**: The ID of your instance
++ **MetricGroup**: **Chats**
 
 **TasksBreachingConcurrencyQuota**  
 The total number of tasks that exceeded the concurrent tasks quota for the instance\. For the total number of tasks that breach the quota, take a look at the Sum statistic\.   
@@ -213,12 +265,16 @@ Filters meta data by instance\. Includes the following metrics:
 + CallsBreachingConcurrencyQuota
 + CallsPerInterval
 + CallRecordingUploadError
++ ChatsBreachingActiveChatQuota
++ ConcurrentActiveChats
++ ConcurrentActiveChatsPercentage
 + ConcurrentCalls
 + ConcurrentCallsPercentage
 + ConcurrentTasks
 + ConcurrentTasksPercentage
 + MisconfiguredPhoneNumbers
 + MissedCalls
++ SuccessfulChatsPerInterval
 + TasksBreachingConcurrencyQuota
 + ThrottledCalls
 
@@ -318,15 +374,24 @@ The Voice ID domain where the enrollment, authentication or registration is cond
 Here's how to calculate your quota for concurrent calls\. 
 
 With calls active in the system, look at **ConcurrentCalls** and **ConcurrentCallsPercentage**\. Calculate the quota: 
-+ \(ConcurrentCalls / ConcurrentCallsPercentage\) \* 100
++ \(ConcurrentCalls / ConcurrentCallsPercentage\)
 
-For example, if **ConcurrentCalls** is 20 and **ConcurrentCallsPercentage** is 50, your quota is calculated as \(20/50\)\*100 = 40\.
+For example, if **ConcurrentCalls** is 20 and **ConcurrentCallsPercentage** is 50, your quota is calculated as \(20/50\) = 40\.
+
+## Use CloudWatch metrics to calculate concurrent active chats quota<a name="connect-cloudwatch-concurrent-chat-quota"></a>
+
+Here's how to calculate your quota for concurrent active chats\. 
+
+With chats active in the system, look at **ConcurrentActiveChats** and **ConcurrentChatsPercentage**\. Calculate the quota: 
++ \(ConcurrentActiveChats / ConcurrentActiveChatsPercentage\) \* 100
+
+For example, if **ConcurrentActiveChats** is 1000 and **ConcurrentActiveChatsPercentage** is 50, your quota is calculated as \(1000/50\)\*100 = 2000\.
 
 ## Use CloudWatch metrics to calculate concurrent task quota<a name="connect-cloudwatch-concurrent-task-quota"></a>
 
 Here's how to calculate your quota for concurrent tasks\. 
 
 With tasks active in the system, look at **ConcurrentTasks** and **ConcurrentTasksPercentage**\. Calculate the quota: 
-+ \(ConcurrentTasks / ConcurrentTasksPercentage\) \* 100
++ \(ConcurrentTasks / ConcurrentTasksPercentage\)\*100
 
-For example, if **ConcurrentTasks** is 20 and **ConcurrentTasksPercentage** is 50, your quota is calculated as \(20/50\)\*100 = 40\.
+For example, if **ConcurrentTasks** is 20 and **ConcurrentTasksPercentage** is 50, your quota is calculated as \(20/50\)\*100= 40\.

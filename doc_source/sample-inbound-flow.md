@@ -1,5 +1,8 @@
 # Sample inbound flow \(first contact experience\)<a name="sample-inbound-flow"></a>
 
+**Note**  
+This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+
 Type: Contact flow \(inbound\)
 
 This sample flow is automatically assigned to the phone number that you claimed when you first set up contact flows\. For more information, see [Get started](amazon-connect-get-started.md)\. 

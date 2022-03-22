@@ -20,6 +20,7 @@ The following table lists how this block routes a contact who is using the speci
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Inbound contact flow
 + Customer Queue flow
++ Outbound whisper flow
 + Transfer to Agent flow
 + Transfer to Queue flow
 
@@ -39,7 +40,7 @@ For information about using this block to enable Contact Lens, see [Enable Conta
 
   For example, you might have a contact flow with **Set recording behavior to record Agent and Customer**\. But if the next **Set recording behavior** block is set to **Agent only**, that block overrides the behavior of the previous block\. 
 + If an agent puts a customer on hold, the agent is still recorded, but the customer is not\.
-+ If you want to transfer a contact to another agent or queue, and you want to continue using Contact Lens to collect data, you need to add to the flow another **Set recording behavior** block with **Enable analytics** turn on\. This is because a transfer generates a second contact ID and CTR\. Contact Lens needs to run on that CTR as well\.
++ If you want to transfer a contact to another agent or queue, and you want to continue using Contact Lens to collect data, you need to add to the flow another **Set recording behavior** block with **Enable analytics** turn on\. This is because a transfer generates a second contact ID and contact record\. Contact Lens needs to run on that contact record as well\.
 
 ## Configured block<a name="set-recording-behavior-configured"></a>
 

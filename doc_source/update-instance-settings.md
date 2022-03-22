@@ -39,13 +39,15 @@ To update the instance settings:
 
 1. To enable file sharing for both agents and customers, next to **Attachments** choose **Edit**, then **Enable Attachments sharing**\. For more information about this option and additional steps, see [Enable attachments to share files using chat](enable-attachments.md)\.
 
+1. To enable a Customer Profiles domain, choose that option\. A domain stores profiles that combine customer contact history with customer information such as account number, address, billing address, and birth date\. Data is encrypted using AWS Key Management Service\. You can configure Customer Profiles to use your own customer managed key after your instance is set up\. For more information, see [Create a KMS key to be used by Customer Profiles to encrypt data \(required\)](enable-customer-profiles.md#enable-customer-profiles-awsmanagedkey)\.
+
 ## Update data streaming options<a name="update-data-streaming-options"></a>
 
 1. In the navigation pane, choose **Data streaming**\.
 
 1. Choose **Enable data streaming**\. For more information, see [Enable data streaming for your instance](data-streaming.md)\.
 
-1. For **Contact Trace Records**, do one of the following:
+1. For **Contact records**, do one of the following:
    + Choose **Kinesis Firehose** and select an existing delivery stream, or choose **Create a new Kinesis Firehose** to open the Kinesis Firehose console and create the delivery stream\.
    + Choose **Kinesis Stream** and select an existing stream, or choose **Create a new Kinesis Firehose** to open the Kinesis console and create the stream\.
 

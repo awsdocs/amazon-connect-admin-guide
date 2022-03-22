@@ -2,6 +2,9 @@
 
 The object type mapping definition has two parts: the field definition and the key definition\. 
 
+**Tip**  
+To learn how to create an object type mapper, see this blog post: [Unify and organize customer information with Amazon Connect Customer Profiles with the pre\-built Amazon S3 connector](http://aws.amazon.com/blogs/contact-center/unify-and-organize-customer-information-with-amazon-connect-customer-profiles-with-the-pre-built-amazon-s3-connector/)\. Or, check out this video on YouTube: [How to Integrate Customer Profile Data into your Contact Center Experiences](https://www.youtube.com/watch?v=LLIEwFel_7c&t=1767s)\.
+
 ## Field definition details<a name="field-definition-details"></a>
 
 The field definition defines the source, destination \(target\), and type of field\. For example:

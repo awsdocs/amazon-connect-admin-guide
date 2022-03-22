@@ -29,6 +29,9 @@ With **Pattern Match** you can specify the following:
 
   *credit\* \[is not within 0 to 1 word apart\] card\**
 
+**Tip**  
+For a list of languages supported by pattern match, see [Pattern match languages](supported-languages.md#supported-languages-contact-lens-pattern-matching)\. 
+
 ## How to use semantic match<a name="semantic-match"></a>
 
 Semantic matching is supported only for post\-call analysis\.

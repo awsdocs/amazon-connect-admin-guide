@@ -24,7 +24,7 @@ After a customer is enrolled in Voice ID, when they call your contact center aga
 
 1. The caller is already enrolled in Voice ID, and their status is **Authenticated**\. You can choose to re\-evaluate authentication using Voice ID\.
 
-1. A message is displayed that Voice ID is evaluating the caller's speech\. It requires 10 seconds of speech \(excluding silence\)\. 
+1. A message is displayed that Voice ID is evaluating the caller's speech\. It requires 10 seconds of speech, not including silence\. 
 
 1. The caller has been authenticated by Voice ID\. This example also shows the caller's **Fraud risk** is lower than the threshold\.
 

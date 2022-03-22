@@ -15,7 +15,9 @@ Managers and agents in training can monitor live conversations between agents an
 
 1. Choose whether to record the conversations you monitor\. 
 
-   Although you need to add the **Set recording behavior** block to your contact flow, you don't need to record voice and/or chat conversations for monitoring to work\. By default when you set up your instance, [Amazon S3 buckets are created](amazon-connect-instances.md#get-started-data-storage) to store call recordings and chat transcripts\. The existence of these buckets enables call recording and chat transcripts at the instance level\. To not record the calls or chats you're monitoring, remove the Amazon S3 buckets\. For instructions, see [Update instance settings](update-instance-settings.md)\.
+   Although you need to add the **Set recording behavior** block to your contact flow, you don't need to record voice and/or chat conversations for monitoring to work\. By default when you set up your instance, [Amazon S3 buckets are created](amazon-connect-instances.md#get-started-data-storage) to store call recordings and chat transcripts\. The existence of these buckets enables call recording and chat transcripts at the instance level\. 
+
+   To not record the calls or chats you're monitoring, disable the Amazon S3 buckets\. For instructions, see [Update instance settings](update-instance-settings.md)\.
 
 ## Assign permissions to monitor live conversations<a name="monitor-conversations-permissions"></a>
 
@@ -49,7 +51,7 @@ For managers to monitor live conversations, you assign them the **CallCenterMana
 
 1. Choose **Save**\. 
 
-## Monitor live conversations with contacts<a name="w463aac49b7c11"></a>
+## Monitor live conversations with contacts<a name="w685aac49b7c11"></a>
 
 **Tip**  
 Call barge\-in is not currently supported\. That is, if you're listening to a conversation, your microphone stays muted\.

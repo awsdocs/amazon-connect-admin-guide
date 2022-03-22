@@ -106,6 +106,10 @@ What causes this number to go down? An agent is considered **unavailable** when:
 
 In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, this metric is `AGENTS_AVAILABLE`\.
 
+## Average API Connecting Time<a name="average-api-connecting-time-real-time"></a>
+
+The average time between when a contact is initiated using an Amazon Connect API, and the agent is connected\.
+
 ## Avg abandon time<a name="average-abandon-time-real-time"></a>
 
 Average time, in seconds, that abandoned contacts were in the queue before being abandoned\.
@@ -343,9 +347,21 @@ Count of contacts transferred into the queue during the specified time range\.
 
 Count of contacts transferred into the queue from another queue during a **Customer queue flow**\.
 
+## Transferred in by agent<a name="transferred-in-by-agent-real-time"></a>
+
+Count of contacts transferred in by an agent using the CCP\.
+
+## Transferred in from queue<a name="transferred-in-from-queue-real-time"></a>
+
+Count of contacts transferred into the queue from another queue during a **Customer queue flow**\.
+
 ## Transferred out<a name="transferred-out-real-time"></a>
 
 Count of contacts transferred out of the queue during the specified time range\.
+
+## Transferred out by agent<a name="transferred-out-by-agent-real-time"></a>
+
+Count of contacts transferred out by an agent using the CCP\.
 
 ## Transferred out from queue<a name="transferred-out-from-queue-real-time"></a>
 

@@ -9,7 +9,7 @@ A standard profile object contains standard fields, such as phone numbers, email
 **Profile object**  <a name="ProfileObject"></a>
 A *profile object* is a single unit of information known about a profile\. For example, the information about a phone call, a ticket, a case, or even a click\-stream record from a web site\.  
 A single profile object can be up to 250 KB and can be any structured JSON document\.   
-+ Every profile object has a type\. For example, the profile object can be Amazon Connect Contact Trace Record \(CTR\), ServiceNow Users, or Marketo Leads\. 
++ Every profile object has a type\. For example, the profile object can be an Amazon Connect contact record, ServiceNow Users, or Marketo Leads\. 
 + The type refers to the object type mapping\.
 + The object type mapping defines how that specific object should be ingested into Customer Profiles\.
 
@@ -22,6 +22,6 @@ The *object type mapping* tells Customer Profiles how to ingest a specific type 
 + What fields should be indexed in the object and how those fields should then be used to assign objects of this type to a specific profile\.
 
 **Mapping template**  <a name="MappingTemplate"></a>
-A *mapping template* is a predefined object type mapping included with the Customer Profile service\.  
-Customer Profiles includes mapping templates for Amazon Connect Contact Trace Records \(CTRs\), Salesforce Accounts, ServiceNow Users, and Marketo Leads\. For a complete list of available mapping templates, use the [ListProfileObjectTypeTemplates](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListProfileObjectTypeTemplates.html) API\.  
+A *mapping template* is a predefined object type mapping included with the Customer Profiles service\.  
+Customer Profiles includes mapping templates for Amazon Connect contact records, Salesforce Accounts, ServiceNow Users, and Marketo Leads\. For a complete list of available mapping templates, use the [ListProfileObjectTypeTemplates](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListProfileObjectTypeTemplates.html) API\.  
 With mapping templates you can quickly ingest data from well known sources without having to specify any additional information\.

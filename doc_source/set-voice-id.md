@@ -3,9 +3,10 @@
 ## Description<a name="set-voice-id-description"></a>
 + Enables audio streaming and sets thresholds for voice authentication and detection of fraudsters in a watchlist\. For more information about this feature, see [Use real\-time caller authentication with Voice ID](voice-id.md)\.
 + Sends audio to Amazon Connect Voice ID to verify the caller's identity and match against fraudsters in watchlist, as soon as the call is connected to a contact flow\.
-+ Use a [Check Voice ID](check-voice-id.md) block after this one to set the customer ID for the caller\.
-+ Use a [Check Voice ID](check-voice-id.md) block after this one to branch based on the results of the enrollment check, authentication, or fraud detection\. 
-+ For information about how to use this block in a contact flow, along with [Check Voice ID](check-voice-id.md) and [Set contact attributes](set-contact-attributes.md), see [Step 2: Configure Voice ID in your contact flow](enable-voiceid.md#enable-voiceid-step2) in [Enable Voice ID](enable-voiceid.md)\. 
++ Use a [Play prompt](play.md) block before **Set Voice ID** to stream audio properly\. You can edit it to include a simple message such as "Welcome\."
++ Use a [Set contact attributes](set-contact-attributes.md) block after **Set Voice ID** to set the customer ID for the caller\.
++ Use a [Check Voice ID](check-voice-id.md) block after **Set Voice ID** to branch based on the results of the enrollment check, authentication, or fraud detection\. 
++ For information about how to use **Set Voice ID** in a contact flow, along with [Check Voice ID](check-voice-id.md) and [Set contact attributes](set-contact-attributes.md), see [Step 2: Configure Voice ID in your contact flow](enable-voiceid.md#enable-voiceid-step2) in [Enable Voice ID](enable-voiceid.md)\. 
 
 ## Supported channels<a name="set-security-channels"></a>
 
