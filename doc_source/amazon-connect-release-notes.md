@@ -3,8 +3,7 @@
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
 **Topics**
-+ [Upcoming change: Faster reload times for the Real\-time metrics page](#upcoming-changes-metrics-rtm-page2021)
-+ [Upcoming change: Fix for agent event stream](#upcoming-changes-agent-eventstream-april21)
++ [April 2022 Updates](#april22-release-notes)
 + [March 2022 Updates](#march22-release-notes)
 + [February 2022 Updates](#feb22-release-notes)
 + [January 2022 Updates](#jan22-release-notes)
@@ -24,19 +23,61 @@ To help you keep track of the ongoing updates and improvements to Amazon Connect
 + [November 2020 Updates](#november20-release-notes)
 + [Earlier Updates](#release-notes-earlier-updates)
 
-## Upcoming change: Faster reload times for the Real\-time metrics page<a name="upcoming-changes-metrics-rtm-page2021"></a>
+## April 2022 Updates<a name="april22-release-notes"></a>
 
-We are upgrading the performance of the **Real\-time metrics** page so reload times are faster\. The page will have the same functionality and user experience as the existing **Real\-time metrics** page\.
+### Telephony: Multi\-party calls<a name="telephony-april22"></a>
 
-## Upcoming change: Fix for agent event stream<a name="upcoming-changes-agent-eventstream-april21"></a>
+You can enable Amazon Connect to allow up to six parties on a call: the agent, the caller, and four more participants\. \(By default, Amazon Connect allows agents to have up to three parties on a call: the agent, and caller, and another participant\.\) For more information, see [Update instance settings](https://docs.aws.amazon.com/connect/latest/adminguide/update-instance-settings.html)\. For more information, see [Host multi\-party calls](multi-party-calls.md)\.
 
-There is currently an issue in the contacts section of Agent Event Stream events where the initiationMethod is **TRANSFER** for both contacts that are initiated by queue\-to\-queue transfer, and contacts that were initiated by agent transfer\. With this fix, the initiationMethod will correctly reflect **QUEUE\_TRANSFER** and **TRANSFER** respectively, to align with the correct behavior in the Contact Trace Record\. 
+For information about new functionality on the existing Connection and Contact API in Amazon Connect Streams, see the [Amazon Connect Streams Readme](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
+
+The following sections describes how managing multi\-party calls differs from managing three\-party calls\.
+
+**Topics**
++ [New behavior with multi\-party calls](#telelphony-new-behavior)
++ [Comparison: Three\-party and multi\-party calls](#comparison-multi-party)
+
+#### New behavior with multi\-party calls<a name="telelphony-new-behavior"></a>
++ All agents see all of the connections in a call\.
++ All agents have exactly the same capabilities as any other agent on the call\. This takes into affect the moment an agent accepts the invitation to join the call\.
++ Before a warm transfer is complete, an agent can start talking to the caller as well as disconnect any other agent on the call\.
+
+#### Comparison: Three\-party and multi\-party calls<a name="comparison-multi-party"></a>
+
+The following table summarizes the differences between the agent's experience using the Contact Control Panel \(CCP\) for three\-party calls and multi\-party calls\.
++ Primary agent: the first agent on the call\.
++ Secondary agent: any agent other than the first agent on the call\.
+
+
+| Three\-party calls | Multi\-party calls | 
+| --- | --- | 
+|  Agent can control hold, resume, and disconnect only the parties they added\.  |  All agents are have the same call control capabilities\.  | 
+|  Agent can add one other participant to an existing call, for a total of three participants \(the agent, the caller, and another participant\)\.  |  Any agent on the call can add additional participants, as long as the total number of participants on the call, including themselves, does not exceed six\.  | 
+|  Agent can put only the party they added on hold\.  |  Any agent on the call can put any party on hold\.  | 
+|  When a primary agent places a secondary agent on hold, the secondary agent can't take themselves off hold\.  |  Any agent on the call can take themselves off hold\.  | 
+|  Secondary agent can talk to the primary agent during hold\.  |  Secondary agents cannot talk to each other until they are taken off hold\.   | 
+|  Primary agent can only mute themselves\. Secondary agent can only mute themselves\.  |  Any agent on the call can mute any other participant on the call\.  | 
+|  When an agent disconnects \(leaves or is disconnected\), call control continues to be available to the remaining agent\(s\) on the call\.  |  When an agent disconnects, control of the call is transferred to the remaining agents\.   | 
+|  Only the primary agent can disconnect a party on the call\. The secondary agent can disconnect the caller only if the primary agent has disconnected\.  |  All agents have the capability to disconnect any other party\.  | 
+|  The primary agent can see two connections \(caller and another party\), while a secondary agent sees only the transfer connection\.  |  All agents can see all connections\.  | 
+|  An agent only sees **internal transfer** for another agent on the call\.  |  An agent sees the quick connect ID for other agents, instead of just **internal transfer**\.  | 
+|  Not applicable\.  |  When an party is being dialed, an agent on a multi\-party call cannot add another party until the prior dial operation is completed \(party added or call leg terminated\)\.  | 
+
+### Play prompts from an Amazon S3 bucket<a name="playprompt-april22"></a>
+
+Added the ability to source prompts from an Amazon S3 bucket\. You can store as many voice prompts as needed in Amazon S3 and access them in real time by using contact attributes in the following contact blocks that play prompts: [Get customer input](get-customer-input.md), [Loop prompts](loop-prompts.md), [Play prompt](play.md), and [Store customer input](store-customer-input.md)\.
+
+For more information, see the [Play prompt](play.md) block\. For information about the policy required for Amazon Connect to access the Amazon S3 bucket, see [Set up prompts to play from an S3 bucket](setup-prompts-s3.md)\.
+
+### CloudTrail support for queues and routing profiles<a name="cloudtrail-april22"></a>
+
+Amazon Connect records all changes made to users, routing profiles, and queues as events in AWS CloudTrail\. For example, you can identify who took which action, what resources were acted upon, and when an event occurred\. For more information, see [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.
 
 ## March 2022 Updates<a name="march22-release-notes"></a>
 
 ### Rich messaging for chat<a name="chat-march22"></a>
 
-Added support for rich messaging for your customer's chat experience\. Agents and customers can use bold, italic, bulleted lists, numbered list, hyperlinks, and attachments\. For more information, see [Enable text formatting for your customer's chat experience](https://docs.aws.amazon.com/connect/latest/adminguide/enable-text-formatting-chat.html)\.
+Added support for rich messaging for your customer's chat experience\. Agents and customers can use bold, italics, bulleted lists, numbered lists, hyperlinks, and attachments\. For more information, see [Enable text formatting for your customer's chat experience](https://docs.aws.amazon.com/connect/latest/adminguide/enable-text-formatting-chat.html)\.
 
 ### Customer Profiles: Object type mapping user interface<a name="customerprofiles-march22"></a>
 
@@ -106,7 +147,7 @@ Added support for searching contacts by custom contact attributes \(also called 
 
 Added the [Customer profiles](https://docs.aws.amazon.com/connect/latest/adminguide/customer-profiles-block) block\. It enables you to retrieve, create, and update a customer profile\.
 
-### Released Contact APIs<a name="tasks-nov21"></a>
+### Released Contact APIs<a name="contact-apis-nov21"></a>
 
 Added APIs so you can get and update contact details programmatically\. For example, you can describe contact details such as queue information, chat attachments, task references, and update contact information such as task name\. For more information, see [DescribeContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeContact.html), [UpdateContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContact.html), and [ListReferences](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListReferences.html) in the *Amazon Connect API Reference*\.
 
@@ -182,7 +223,7 @@ Released for ungated preview new APIs for managing hours of operation and agent 
 
 ### Contact Lens: Build rules that generate tasks and EventBridge events<a name="contact-lens-august21"></a>
 
-Contact Lens rules now allow you to automatically generate tasks and EventBridge events based on uttered keywords, sentiment scores, customer attributes, and other criteria\. For more information, see [Build rules with Contact Lens](build-rules-for-contact-lens.md)\.
+Contact Lens rules now allow you to automatically generate tasks and EventBridge events based on uttered keywords, sentiment scores, customer attributes, and other criteria\. For more information, see [Create rules with Contact Lens](build-rules-for-contact-lens.md)\.
 
 ### Networking: Allow AWS Global Accelerator<a name="august-networking-2021"></a>
 
@@ -729,14 +770,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-### June 2019 Update<a name="w685aac73c45c29"></a>
+### June 2019 Update<a name="w709aac78c43c29"></a>
 
 The following update was released in June 2019:
 
 #### Contact Flows<a name="june19-flows"></a>
 + Added contact flow versioning so you can choose between a saved or published version when you roll back\.
 
-### May 2019 Updates<a name="w685aac73c45c31"></a>
+### May 2019 Updates<a name="w709aac78c43c31"></a>
 
 The following updates were released in May 2019:
 
@@ -748,7 +789,7 @@ The following updates were released in May 2019:
 #### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-### April 2019 Updates<a name="w685aac73c45c33"></a>
+### April 2019 Updates<a name="w709aac78c43c33"></a>
 
 The following updates were released in April 2019:
 
@@ -761,7 +802,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-### March 2019 Update<a name="w685aac73c45c35"></a>
+### March 2019 Update<a name="w709aac78c43c35"></a>
 
 The following updates were released in March 2019:
 

@@ -20,7 +20,7 @@ We recommend that you align your prompts and routing policies with each other to
 
 You can upload a pre\-recorded \.wav file to use for your prompt, or record one in the web application\.
 
-We recommend using 8 KHz \.wav files that are less than 50 MB and less than 5 minutes long\. If you use higher rated audio libraries, such as 16 KHz or 16 bit files, Amazon Connect has to down sample them into 8 KHz samples due to PSTN limitations \(here's a Wikipedia article that provides details: [G\.711](https://en.wikipedia.org/wiki/G.711)\)\. This may result in low quality audio\.
+We recommend using 8 KHz \.wav files that are less than 50 MB and less than 5 minutes long\. If you use higher rated audio libraries, such as 16 KHz or 16 bit files, Amazon Connect has to down sample them into 8 KHz samples because of PSTN limitations\. This may result in low quality audio\. For more information, see the following Wikipedia article: [G\.711](https://en.wikipedia.org/wiki/G.711)\. 
 
 ## Maximum length for prompts<a name="max-length-for-prompts"></a>
 
@@ -28,4 +28,4 @@ Amazon Connect supports prompts that are less than 50 MB and less than 5 minutes
 
 ## Bulk upload of prompts not supported in UI, API, or CLI<a name="bulk-upload-prompts"></a>
 
-Currently bulk upload of prompts is not supported through the Amazon Connect console or programmatically using the API or CLI\.
+Currently, bulk uploading of prompts is not supported through the Amazon Connect console or programmatically using the API or CLI\.

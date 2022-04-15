@@ -1,6 +1,6 @@
 # Make a call while on a chat<a name="call-and-chat"></a>
 
-Let's say you're chatting with a contact and you want to consult with someone else\. While you're on a chat, you can use the updated CCP to make outbound calls using the dial pad and [external quick connects](quick-connects.md#external-quick-connect-type)\. 
+Let's say you're chatting with a contact and you want to consult with someone else\. While you're on a chat, you can use the updated CCP to make outbound calls using the number pad and [external quick connects](quick-connects.md#external-quick-connect-type)\. 
 
 Note the following limitations:
 + You can't access agent quick connects while you're on a chat\.

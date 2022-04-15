@@ -5,7 +5,7 @@ Your AWS account has default quotas, formerly referred to as limits, for each AW
 To request a quota increase, see [Requesting a quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html) in the *Service Quotas User Guide*\. If the quota is not yet available in Service Quotas, use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 
 **Considerations**
-+ You must create your instance because you can submit a service quota increase\.
++ You must create your instance before you can request a service quota increase\.
 + It can take up to a few weeks to increase your service quota\. If you're increasing your quotas as part of a larger project, be sure to add this time to your plan\.
 + Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port your current phone number](port-phone-number.md)\.
 + This documentation describes the default quotas for new accounts as of October 2020\. Because the quotas have been adjusted over time, the default values for your account might be different than the default values described here\.
@@ -108,6 +108,7 @@ Feature specifications cannot be increased\.
 
 | Item | Feature Specification | 
 | --- | --- | 
+| Maximum size of a real\-time metrics report  |  200KB  | 
 | File types supported for chat attachments |  \.csv, \.doc, \.docx, \.jpeg, \.jpg, \.pdf, \.png, \.ppt, \.pptx, \.txt, \.wav, \.xls, \.xlsx   | 
 | Max file size for a chat attachment |  20MB  | 
 | Attachments per chat conversation |  5  | 

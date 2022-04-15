@@ -8,4 +8,3 @@ In addition, check out the [Amazon AppIntegrations Service API Reference](https:
 
 **Topics**
 + [Set up applications for task creation](integrate-external-apps-tasks.md)
-+ [Add rules for task creation](add-rules-task-creation.md)

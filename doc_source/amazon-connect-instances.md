@@ -60,6 +60,8 @@ When early media audio is enabled, for outbound calls your agents can hear pre\-
 
 1. To enable outbound calling from your contact center, choose **Allow outgoing calls**\.
 
+1. To enable multi\-party calls, choose **Enable up to six parties on a call**\.
+
 1. Choose **Next**\.
 
 ## Step 4: Data storage<a name="get-started-data-storage"></a>

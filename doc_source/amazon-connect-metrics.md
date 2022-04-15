@@ -11,14 +11,13 @@ For detailed information about the activity of agents in your contact center, us
 
 **Topics**
 + [What's new in metrics](upcoming-changes.md)
++ [Search for contacts](contact-search.md)
 + [Real\-time metrics reports](real-time-metrics-reports.md)
 + [Historical metrics reports](historical-metrics.md)
 + [Login/Logout reports](login-logout-reports.md)
 + [Amazon Connect agent event streams](agent-event-streams.md)
 + [Amazon Connect contact events](contact-events.md)
 + [Contact records data model](ctr-data-model.md)
-+ [Search for contacts](contact-search.md)
-+ [Search by custom contact attributes](search-custom-attributes.md)
 + [View a contact record in the UI](sample-ctr.md)
 + [About agent status](metrics-agent-status.md)
 + [About contact states](about-contact-states.md)

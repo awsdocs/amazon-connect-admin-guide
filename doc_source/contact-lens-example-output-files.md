@@ -32,11 +32,11 @@ Note the following about the analyzed file:
     "LanguageCode": "en-US",
     "Participants": [
         {
-            "ParticipantId": "the customer's ID",
+            "ParticipantId": "CUSTOMER",
             "ParticipantRole": "CUSTOMER"
         },
         {
-            "ParticipantId": "the agent's ID",
+            "ParticipantId": "AGENT",
             "ParticipantRole": "AGENT"
         }
     ],
@@ -138,7 +138,7 @@ Note the following about the analyzed file:
             "Content": "Okay.",
             "EndOffsetMillis": 90,
             "Id": "the ID of the turn",
-            "ParticipantId": "the agent's ID",
+            "ParticipantId": "AGENT",
             "Sentiment": "NEUTRAL",
             "LoudnessScore": [
                 79.27
@@ -149,7 +149,7 @@ Note the following about the analyzed file:
             "Content": "Just hello. My name is Peter and help.",
             "EndOffsetMillis": 4640,
             "Id": "the ID of the turn",
-            "ParticipantId": "the customer's ID",
+            "ParticipantId": "CUSTOMER",
             "Sentiment": "NEUTRAL",
             "LoudnessScore": [
                 66.56,

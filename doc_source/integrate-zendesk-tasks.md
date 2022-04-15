@@ -21,7 +21,7 @@ If you use custom AWS Identity and Access Management \(IAM\) policies, for a lis
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
+1. On the **Instances** page, choose the instance alias\. The instance alias is also your instance name, which appears in your Amazon Connect URL\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. Choose **Tasks**, and then choose **Add an application**\.  
@@ -64,7 +64,7 @@ If you use custom AWS Identity and Access Management \(IAM\) policies, for a lis
 1. On the **Tasks** page, the new connection is listed\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-establish-connection-final2-zendesk.png)
 
-You're done\! Next, add rules that tell Amazon Connect when to create a task and how to route it\. For instructions, see [Add rules for task creation](add-rules-task-creation.md)\.
+You're done\! Next, add rules that tell Amazon Connect when to create a task and how to route it\. For instructions, see [Create rules that generate tasks for third\-party integrations](add-rules-task-creation.md)\.
 
 ## What to do when is a connection isn't successfully established<a name="fix-connection-not-established-zendesk"></a>
 

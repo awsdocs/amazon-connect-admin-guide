@@ -58,7 +58,7 @@ Following are instructions for how to create a new domain and add an integration
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
+1. On the **Instances** page, choose the instance alias\. The instance alias is also your instance name, which appears in your Amazon Connect URL\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Wisdom**, and then choose **Add domain**\.  
@@ -139,7 +139,8 @@ If you are going to have mutiple integrations from the same source, we recommend
 1. Choose **Next**\.
 
 **Note**  
-Currently Wisdom does not process hard deletes of objects that are completed in SaaS applications\. To remove content from your knowledge base that's also been removed from your SaaS application, you must archive objects in Salesforce and retire articles in ServiceNow\.
+Currently Wisdom does not process hard deletes of objects that are completed in SaaS applications\. To remove content from your knowledge base that's also been removed from your SaaS application, you must archive objects in Salesforce and retire articles in ServiceNow\.   
+For Zendesk, Wisdom does not process hard deletes or archives of articles\. You need to unpublish articles in Zendesk to remove them from your knowledge base\.
 
 ## Step 2: Select object and fields<a name="enable-wisdom-step2"></a>
 

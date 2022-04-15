@@ -14,7 +14,7 @@ Amazon Polly default voices are **free**\. You are charged only for using custom
 
 ## Amazon Polly best sounding voice<a name="amazon-polly-best-sounding-voice"></a>
 
-Amazon Polly periodically releases improved voices and speaking styles\. You can choose to automatically resolve your text\-to\-speech to the most lifelike and natural sounding variant of a voice\. For example, if your contact flows use Joanna, Amazon Connect automatically resolves to Joanna’s Conversational speaking style\. 
+Amazon Polly periodically releases improved voices and speaking styles\. You can choose to automatically resolve your text\-to\-speech to the most lifelike and natural sounding variant of a voice\. For example, if your contact flows use Joanna, Amazon Connect automatically resolves to Joanna’s conversational speaking style\. 
 
 **Note**  
 If no Neural version is available, Amazon Connect defaults to the standard voice\. 

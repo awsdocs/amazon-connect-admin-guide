@@ -7,5 +7,5 @@ You can manage and load\-balance customer contacts using agent hierarchy organiz
 + [Customize agent status](agent-custom.md)
 + [Configure agent settings](configure-agents.md)
 + [Enable auto\-accept call](enable-auto-accept.md)
-+ [Set up automatic agent logout](automatic-logout.md)
++ [CCPv1: Set up automatic agent logout](automatic-logout.md)
 + [Set up agents to assign tasks to themselves](setup-agents-assign-tasks-themselves.md)

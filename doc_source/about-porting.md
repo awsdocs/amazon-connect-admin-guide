@@ -6,18 +6,15 @@ The following steps are for a typical porting request\. This process requires ti
 
 Submit an Amazon Connect support ticket to verify if your phone number can be ported to Amazon Connect\. 
 
-### Premium support plan instructions<a name="premium-support-plan"></a>
+### Premium support plan<a name="premium-support-plan"></a>
 
-1. Log in to the [AWS Management Console](https://console.aws.amazon.com/console) \(https://console\.aws\.amazon\.com/console\) using your AWS account\. 
+1. Open AWS Support Center at [https://console\.aws\.amazon\.com/support/home](https://console.aws.amazon.com/support/home) and sign in using your AWS account\.
 
-1. In the upper right corner of the page, choose **Support**, **Support Center**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/support-dropdown.png)
+1. Choose **Create case**\.
 
-1. On the **AWS Support Center** page, choose **Create case**\.
+1. Choose **Technical support**\.
 
-1. Choose **Technical Support**\.
-
-1. Under **Case classification**, do the following:
+1. For **Case classification**, do the following:
 
    1. Choose service as **Connect \(Contact center\)**\.
 
@@ -35,26 +32,23 @@ Submit an Amazon Connect support ticket to verify if your phone number can be po
 
 1. Choose **Submit**\.
 
-1. The Amazon Connect team reviews your ticket, and gets back to you with next steps\.
+1. The Amazon Connect team will review your ticket and gets back to you\.
 
-### Basic support plan instructions<a name="basic-support-plan"></a>
+### Basic support plan<a name="basic-support-plan"></a>
 
-1. Log in to the [AWS Management Console](https://console.aws.amazon.com/console) \(https://console\.aws\.amazon\.com/console\) using your AWS account\. 
+1. Open AWS Support Center at [https://console\.aws\.amazon\.com/support/home](https://console.aws.amazon.com/support/home) and sign in using your AWS account\.
 
-1. In the upper right corner of the page, choose **Support**, **Support Center**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/support-dropdown.png)
-
-1. On the **AWS Support Center** page, choose **Create case**\.
+1. Choose **Create case**\.
 
 1. Choose **Service limit increase**\.
 
-1. Under **Case details**, do the following:
+1. For **Case details**, do the following:
 
    1. For **Limit type**, choose **Amazon Connect**\.
 
    1. For **Contact Center Instance ARN \- optional**, enter the instance ARN \(also called the instance ID\)\. For instructions on how to find your instance ARN, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.
 
-1. Under **Requests**, **Request 1** do the following:
+1. For **Requests**, **Request 1** do the following:
 
    1. For **Region**, select the Region in which you created your Amazon Connect instance\.
 
@@ -62,15 +56,15 @@ Submit an Amazon Connect support ticket to verify if your phone number can be po
 
    1. For **New limit value**, enter the number of phone numbers to port\.
 
-1. \(Optional\) If you want to port more phone numbers, choose **Add another request**, and then repeat step 6 for each additional request\.
+1. \(Optional\) To port additional phone numbers, choose **Add another request**, and then repeat step 6 for each additional request\.
 
-1. Under **Case description**, **Use case description**, include as much information as possible about your request, including whether the numbers are Direct Inward Dial or toll\-free, your current carrier, and the contact information for the person authorized to make changes to your current phone service\. If you don't know all of these details, you may leave information out\.
+1. For **Case description**, **Use case description**, include as much information as possible about your request, including whether the numbers are Direct Inward Dial or toll\-free, your current carrier, and the contact information for the person authorized to make changes to your current phone service\. If you don't know all of these details, you may leave information out\.
 
 1. Expand **Contact options**, and then choose your **Preferred contact language** and **Contact methods**\.
 
 1. Choose **Submit**\.
 
-1. The Amazon Connect team reviews your ticket, and gets back to you with next steps\.
+1. The Amazon Connect team will review your request and get back to you\.
 
 ## Step 2: Complete Letter of Authorization \(LOA\)<a name="step2-porting"></a>
 

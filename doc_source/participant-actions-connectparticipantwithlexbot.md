@@ -4,7 +4,7 @@ Connects the participant with the specified Amazon Lex bot\. When the interactio
 
 ## Parameter object<a name="connectparticipantwithlexbot-parameter"></a>
 
-Provide either LexBot or LexV2Bot object depending on the Amazon Lex version in thr following format\.
+Provide either LexBot or LexV2Bot object depending on the Amazon Lex version in the following format\.
 
 ------
 #### [ Amazon Lex ]
@@ -14,6 +14,11 @@ Provide either LexBot or LexV2Bot object depending on the Amazon Lex version in 
     "PromptId": [Optional] A prompt ID or prompt ARN to play to the participant along with gathering input. May not be specified if Text or SSML is also specified. Must be specified either statically or as a single valid JSONPath identifier.
     "Text":  An optional string that defines text to send to the participant along with gathering input. May not be specified if PromptId or SSML is also specified. May be specified statically or dynamically.
     "SSML": An optional string that defines SSML to send to the participant along with gathering input. May not be specified if Text or PromptId is also specified May be specified statically or dynamically.
+    "Media": { An optional object that defines an external media source
+        "Uri": Location of the message
+        "SourceType": The source from which the message will be fetched. The only supported type is S3
+        "MediaType": The type of the message to be played. The only supported type is Audio
+    }
     "LexV2Bot": { The details of the LexV2 bot to invoke       
         "AliasArn": The alias ARN of the LexV2 bot to invoke. May be specified statically or dynamically.
     },
@@ -30,6 +35,11 @@ Provide either LexBot or LexV2Bot object depending on the Amazon Lex version in 
     "PromptId": [Optional] A prompt ID or prompt ARN to play to the participant along with gathering input. May not be specified if Text or SSML is also specified. Must be specified either statically or as a single valid JSONPath identifier.
     "Text":  An optional string that defines text to send to the participant along with gathering input. May not be specified if PromptId or SSML is also specified. May be specified statically or dynamically.
     "SSML": An optional string that defines SSML to send to the participant along with gathering input. May not be specified if Text or PromptId is also specified May be specified statically or dynamically.
+    "Media": { An optional object that defines an external media source
+        "Uri": Location of the message
+        "SourceType": The source from which the message will be fetched. The only supported type is S3
+        "MediaType": The type of the message to be played. The only supported type is Audio
+    }
     "LexBot": { The details of the Lex bot to invoke
         "Name": The name of the Lex bot. May be specified statically or dynamically.
         "Region": The region in which this Lex bot exists. May be specified statically or dynamically.

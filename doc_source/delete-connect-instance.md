@@ -1,27 +1,35 @@
-# Delete your instance<a name="delete-connect-instance"></a>
+# Delete your Amazon Connect instance<a name="delete-connect-instance"></a>
 
-If you no longer want to use an instance, you can delete it\. When you delete an instance, the phone number claimed for the instance is released back to inventory\. You lose all settings, data, metrics, and reports associated with the instance\. When customers call the phone number you've released, they'll get a message that it's not a working phone number\.
+If you no longer need your contact center, you can delete your Amazon Connect instance\. When you delete an instance, we release its claimed phone number back to inventory\. When customers call the phone number that you've released, they'll get a message that it's not a working phone number\.
 
 **Important**  
-You cannot undo the deletion of an instance or restore settings or data from the instance after it is deleted\.
+You can't restore a deleted instance or access its settings, data, metrics, and reports\.
 
-**To delete an instance**
+## Delete your instance<a name="delete-cconnect-instance-procedure"></a>
+
+**To delete your Amazon Connect instance**
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. Select the check box for the instance and choose **Delete**\. If you don't see the **Delete** button, you don't have permissions to delete instances\. Contact your AWS administrator for help\.
+1. Select the radio button for the instance\.
 
-1. When prompted, type the name of the instance and choose **Delete**\.
+1. Choose **Delete**\. If you don't see the **Delete** button, you don't have permissions to delete instances\. Contact your AWS administrator for help\.
+
+1. When prompted, enter the name of the instance and then choose **Delete**\.
 
 ## Error message: "Region Unsupported\. Amazon Connect is not available in \[Region\]"<a name="region-unsupported"></a>
 
-If you get this error message, it means you created the Amazon Connect instance in a Region different than the one you're in now, such as US East \(Ohio\), and Amazon Connect isn't available in that Region\. 
+If you get this error message, it means that you selected a Region in the AWS Management Console that is not the Region in which you created the Amazon Connect instance, and Amazon Connect isn't available in that Region\.
 
-**To switch Regions to the Amazon Connect instance**
+**To switch Regions and delete your Amazon Connect instance**
 
-1. At the AWS Management console, switch your Region to US East \(Virginia\) or whichever Region you were in when you created the Amazon Connect instance\.   
+1. From the navigation bar, open the Region selector\. Select the Region in which you created the Amazon Connect instance\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/aws-management-console-region.png)
 
-1. Choose **Amazon Connect** to open the Amazon Connect console\.
+1. From the navigation bar, choose **Amazon Connect** from the list of services to open the Amazon Connect console\. If you don't see the instance, keep selecting from the supported Regions until you find your instance\.
 
-1. You'll see the Amazon Connect instance and can delete it\. If you don’t see the instance, go back to the AWS Management Console and choose another Region, such as US West \(Oregon\), and then do steps 2 and 3\. 
+1. Select the radio button for the instance\.
+
+1. Choose **Delete**\. If you don't see the **Delete** button, you don't have permissions to delete instances\. Contact your AWS administrator for help\.
+
+1. When prompted, enter the name of the instance and then choose **Delete**\.

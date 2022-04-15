@@ -34,9 +34,9 @@ The role permissions policy allows Amazon Connect to complete the following acti
   + `connect-campaigns:DeleteCampaign`
   +  `connect-campaigns:DescribeCampaign`
   + `connect-campaigns:UpdateCampaignName`
-  + `connect-camapigns:GetCamapignState`
-  +  `connect-camapigns:GetCamapignStateBatch`
-  + `connect-camapigns:ListCampaigns`
+  + `connect-campaigns:GetCampaignState`
+  +  `connect-campaigns:GetCampaignStateBatch`
+  + `connect-campaigns:ListCampaigns`
   + `connect-campaigns:UpdateOutboundCallConfig`
   +  `connect-campaigns:UpdateDialerConfig`
   +  `connect-campaigns:PauseCampaign`

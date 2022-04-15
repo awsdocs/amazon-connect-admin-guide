@@ -19,4 +19,3 @@ This section explains concepts that will help you set up your Amazon Connect con
 + [Queue\-based routing](concepts-queue-based-routing.md)
 + [Channels and concurrency](channels-and-concurrency.md)
 + [Contact flows](concepts-contact-flows.md)
-+ [Rules](concepts-rules.md)

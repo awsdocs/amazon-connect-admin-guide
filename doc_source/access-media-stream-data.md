@@ -280,9 +280,9 @@ public class LMSFrameProcessor implements FrameVisitor.FrameProcessor {
             byte[] frameBytes = new byte[frameBuffer.remaining()];
             frameBuffer.get(frameBytes);
             if (Strings.isNullOrEmpty(trackName) || "AUDIO_FROM_CUSTOMER".equals(trackName)) {
-              outputStreamFromCustomer.write(frameBytes);
-            } else if ("AUDIO_FROM_CUSTOMER".equals(trackName)) {
-              outputStreamToCustomer.write(frameBytes);
+            outputStreamFromCustomer.write(frameBytes);
+            } else if ("AUDIO_TO_CUSTOMER".equals(trackName)) {
+            outputStreamToCustomer.write(frameBytes);
             } else {
               // Unknown track name. Not writing to output stream.
             }

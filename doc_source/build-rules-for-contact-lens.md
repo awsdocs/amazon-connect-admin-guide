@@ -1,4 +1,4 @@
-# Build rules with Contact Lens<a name="build-rules-for-contact-lens"></a>
+# Create rules with Contact Lens<a name="build-rules-for-contact-lens"></a>
 
 Contact Lens rules allow you to automatically categorize contacts, receive alerts, or generate tasks based on uttered keywords, sentiment scores, customer attributes, and other criteria\. 
 

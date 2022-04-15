@@ -170,11 +170,11 @@ Amazon Connect security can be divided into three logical layers as illustrated 
 + [AWS Compliance](http://aws.amazon.com/compliance/)
 + [AWS Security blog](http://aws.amazon.com/blogs/security/)
 
-**Whitepaper**
+**Articles**
 + [Security Pillar](https://docs.aws.amazon.com/wellarchitected/latest/security-pillar/welcome.html) 
-+ [AWS Security Overview](https://d0.awsstatic.com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf)
++ [Introduction to AWS Security](https://docs.aws.amazon.com/whitepapers/latest/introduction-aws-security/introduction-aws-security.pdf)
 + [AWS Security Best Practices](http://aws.amazon.com/architecture/security-identity-compliance/) 
 
-**Video**
+**Videos**
 + [AWS Security State of the Union](https://www.youtube.com/watch?v=Wvyc-VEUOns) 
 +  [AWS Compliance \- The Shared Responsibility Model](https://www.youtube.com/watch?v=U632-ND7dKQ) 

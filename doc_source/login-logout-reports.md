@@ -29,7 +29,7 @@ A Login/Logout report includes only login or logout actions by your users that o
 
 **To generate a Login/Logout report**
 
-1. Open your Amazon Connect dashboard\.
+1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
 1. Choose **Metrics and Quality**, **Login/Logout report**\.
 
@@ -50,7 +50,7 @@ After you save your report, you can edit it at any time\. When you open a saved 
 
 **To edit a saved Login/Logout report**
 
-1. Open your Amazon Connect dashboard\.
+1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
 1. Choose **Metrics and quality**, **Saved reports**\.
 
@@ -92,14 +92,18 @@ To make the report available to other people in your organization, you can share
 
 ## Schedule a Login/Logout report<a name="loginlogout-report-schedule"></a>
 
-To generate a report with the same settings on a regular basis, you can schedule the report to run daily or on specific days of the week\. When you schedule a report, it is automatically published to your organization\. Anyone with appropriate permissions can view the report\. Users with all permissions for Login/Logout reports can also edit, schedule, or delete the report\.
+To generate a report with the same settings on a regular basis, you can schedule the report to run daily or on specific days of the week\. Note that *scheduled* Login/Logout reports work differently than Login/Logout reports you [generate](#loginlogout-report-generate) from the user interface for a specified time range\.
 
-When you schedule your report, keep in mind that the report always runs at 12AM on the day you select, in the time zone that you choose\. If you select Wednesday, the report runs at midnight Wednesday and does not include any data for Wednesday\. Scheduled reports are saved as CSV files in your Amazon S3 bucket\. The default time zone is UTC\. To have your report run at 12AM in your local time, choose your time zone instead\. 
+### Important things to know<a name="important-loginlogout-report-schedule"></a>
++ When you schedule a report, it is automatically published to your organization\. Anyone with appropriate permissions can view the report\. Users with all permissions for Login/Logout reports can also edit, schedule, or delete the report\.
++ For scheduled Login/Logout reports, the trailing window value is always the last 24 hours\.
++ A scheduled report always runs at 12AM on the day you select, in the time zone that you choose\. 
 
-**Tip**  
-To email a scheduled report to a list of co\-workers, you need to generate the email manually using your messaging system\. Amazon Connect doesn’t provide an option to email the scheduled report automatically\. 
+  For example, if you select Wednesday, the report runs at midnight Wednesday and does not include any data for Wednesday\.
++ Scheduled reports are saved as CSV files in your Amazon S3 bucket\. The default time zone is UTC\. To have your report run at 12AM in your local time, choose your time zone instead\. 
++ To email a scheduled report to a list of co\-workers, you need to generate the email manually using your messaging system\. Amazon Connect doesn’t provide an option to email the scheduled report automatically\. 
 
-**To schedule a Login/Logout report**
+### How to schedule a Login/Logout report<a name="howto-loginlogout-report-schedule"></a>
 
 1. If you already have a saved report to schedule open, skip to step 4\. Otherwise, in the dashboard, choose **Metrics and quality**, **Saved reports**\.
 

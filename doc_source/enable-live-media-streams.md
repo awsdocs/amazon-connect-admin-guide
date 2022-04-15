@@ -6,7 +6,7 @@ Live media streaming \(customer audio streams\) is not enabled by default\. You 
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.
+1. On the **Instances** page, choose the instance alias\. The instance alias is also your instance name, which appears in your Amazon Connect URL\.
 
 1. In the navigation pane, choose **Data storage**\.
 

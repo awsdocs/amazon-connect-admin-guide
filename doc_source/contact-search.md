@@ -1,10 +1,10 @@
 # Search for contacts<a name="contact-search"></a>
 
-You can search for contacts as far back as two years ago\.
-
-The search results for a given query are limited to the first 10K results returned\.
-
-When you filter by Contact ID, only results for that specific contact will be returned and other criteria are ignored\. For example, say you search for Contact ID 12345 and agent login Jane Doe\. Results for Contact ID 12345 will be returned regardless of whether Jane Doe was the agent\.
+## Important things to know<a name="important-contact-search"></a>
++ You can search for contacts as far back as two years ago\.
++ Amazon Connect returns results for completed contacts\. If an agent is still doing After Contact Work \(ACW\) on a contact, for example, that contact is not considered closed and won't be returned in the search results\.
++ The search results for a given query are limited to the first 10K results returned\.
++ When you filter by Contact ID, only results for that specific contact will be returned and other criteria are ignored\. For example, say you search for Contact ID 12345 and agent login Jane Doe\. Results for Contact ID 12345 will be returned regardless of whether Jane Doe was the agent\.
 
 ## What's new in contact search<a name="new-contact-search-experience"></a>
 
@@ -23,7 +23,7 @@ Without **User \- View** permissions, the **Agent** filter is not visible, and s
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search2.png)
 
 ## Key search features<a name="key-search-features"></a>
-+ [Search by custom contact attributes](search-custom-attributes.md) Search by custom contact attributes \(user\-defined attributes\)
++ [Search by custom contact attributes](search-custom-attributes.md) \(user\-defined attributes\)\.
 + Search a time range up to 8 weeks\.
 + Multi\-select for filters such as agent names, contact queues, contact flows, and more\. 
 

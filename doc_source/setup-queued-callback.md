@@ -10,7 +10,7 @@ Here's how queued callback works:
 
    If no agents are available to work on callbacks, the callbacks can stay in queue for at least 7 days and up to 14 days after they are created before Amazon Connect automatically removes them\.
 **Tip**  
-There's no way to manually remove a callback from the queue\. You can either answer them, or wait until Amazon Connect automatically removes them\.
+To manually remove a callback from the queue, use the [StopContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContact.html) API\.
 
 1. If there is no answer when the Amazon Connect calls the customer, it retries based on the number of times you've specified\. 
 

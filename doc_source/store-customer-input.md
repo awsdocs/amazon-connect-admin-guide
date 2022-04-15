@@ -32,7 +32,10 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input-properties1.png)
 
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input-properties1b.png)
+
 Note the following properties:
++ For information about choosing a prompt from the Amazon Connect library or an S3 bucket, see the [Play prompt](play.md) block\.
 + **Maximum Digits**: Define the maximum number of digits that a customer can enter\. 
 + **Timeout before first entry**: Specify how long to wait for a customer to start entering their reply by voice\. For example, you might enter 20 seconds, to give the customer time to get their credit card\.
 

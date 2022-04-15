@@ -28,7 +28,11 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="get-customer-input-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties.png)
+
+**Note**  
+The **Get Customer Input** block does not currently support using a voice prompt from an S3 bucket with Amazon Lex V2\.  
+For information about choosing a prompt from the Amazon Connect library or an S3 bucket, see the [Play prompt](play.md) block\. 
 
 You can configure this block to accept DTMF input, a chat response, or an Amazon Lex intent\.
 

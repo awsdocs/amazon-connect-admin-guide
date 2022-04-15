@@ -15,7 +15,15 @@ Loops a sequence of prompts while a customer or agent is on hold or in queue\. T
        },
        { 
          "SSML" : An optional string that defines the ssml  
+       },
+       {
+         "Media": { An optional object that defines an external media source
+           "Uri": Location of the message
+           "SourceType": The source from which the message will be fetched. The only supported type is S3
+           "MediaType": The type of the message to be played. The only supported type is Audio
+         }
        }
+       
    ],
    "InterruptFrequencySeconds" : [Optional] Time to elapse before the action completes with "MessagesInterrupted" run result 
 }

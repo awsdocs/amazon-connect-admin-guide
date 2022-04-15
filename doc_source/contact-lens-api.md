@@ -1,6 +1,10 @@
-# Use the real\-time analytics API<a name="contact-lens-api"></a>
+# Use the API for real\-time analytics<a name="contact-lens-api"></a>
 
-Use the Contact Lens API [ListRealtimeContactAnalysisSegments](https://docs.aws.amazon.com/contact-lens/latest/APIReference/API_ListRealtimeContactAnalysisSegments.html) to build solutions that make your contact center more efficient\. Following are two use cases for this API\.
+Use the real\-time analytics API—[ListRealtimeContactAnalysisSegments](https://docs.aws.amazon.com/contact-lens/latest/APIReference/API_ListRealtimeContactAnalysisSegments.html)—to build solutions that make your contact center more efficient\. 
+
+This real\-time analytics API is a polling API, with a standard request/response architecture, where you don't need to integrate with any other service\. However, there are [rate limitations](amazon-connect-service-limits.md#connect-contactlens-api-quotas)\. If needed, you can eliminate these limitations by using the [real\-time streaming API](contact-analysis-segment-streams.md)\. It requires integration with Amazon Kinesis Data Streams\. 
+
+Following are two use cases for the real\-time analytics API\.
 
 ## Better call transfers<a name="contact-lens-api-transfers"></a>
 

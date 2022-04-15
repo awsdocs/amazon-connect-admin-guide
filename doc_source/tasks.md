@@ -23,7 +23,7 @@ Amazon Connect provides different ways for you to create tasks:
 
    For example, you can configure a rule in Amazon Connect to automatically create a task when a new case is created in Salesforce\. 
 
-   For more information, see [Set up applications for task creation](integrate-external-apps-tasks.md) and [Add rules for task creation](add-rules-task-creation.md)\.
+   For more information, see [Set up applications for task creation](integrate-external-apps-tasks.md) and [Create rules that generate tasks for third\-party integrations](add-rules-task-creation.md)\.
 
 1. You can integrate with your homegrown or business\-specific applications to create tasks using Amazon Connect APIs\.
 

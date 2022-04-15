@@ -264,7 +264,7 @@ Management permissions: The following sample policy allows all read and write op
         "connect-campaigns:DeleteCampaign",
         "connect-campaigns:DescribeCampaign",
         "connect-campaigns:UpdateCampaignName",
-        "connect-camapigns:GetCampaignState"
+        "connect-campaigns:GetCampaignState"
         "connect-campaigns:UpdateOutboundCallConfig",
         "connect-campaigns:UpdateDialerConfig",
         "connect-campaigns:PauseCampaign",
@@ -285,7 +285,7 @@ ReadOnly permissions: The following sample policy allows read\-only access to th
     "Effect": "Allow",
     "Action": [
         "connect-campaigns:DescribeCampaign",
-        "connect-camapigns:GetCampaignState",
+        "connect-campaigns:GetCampaignState",
         "connect-campaigns:GetCampaignStateBatch",
         "connect-campaigns:ListCampaigns"
      ],

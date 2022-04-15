@@ -1,6 +1,6 @@
-# Add rules for task creation<a name="add-rules-task-creation"></a>
+# Create rules that generate tasks for third\-party integrations<a name="add-rules-task-creation"></a>
 
-After you set up an external application to generate tasks automatically, you must add rules that tell Amazon Connect when to create tasks, and how to route them\.
+After you set up an external application to generate tasks automatically, you need to build rules that tell Amazon Connect when to create tasks, and how to route them\.
 
 1. Log in to Amazon Connect with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for **Rules** permissions\.
 

@@ -240,7 +240,7 @@ Amazon Connect High\-Volume Outbound Communications uses `connect-campaign` as t
         "connect-campaigns:DeleteCampaign",
         "connect-campaigns:DescribeCampaign",
         "connect-campaigns:UpdateCampaignName",
-        "connect-camapigns:GetCampaignState"
+        "connect-campaigns:GetCampaignState"
         "connect-campaigns:UpdateOutboundCallConfig",
         "connect-campaigns:UpdateDialerConfig",
         "connect-campaigns:PauseCampaign",

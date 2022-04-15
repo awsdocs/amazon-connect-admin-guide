@@ -6,7 +6,7 @@ Historical metrics reports have the following limits:
 + You can get data only for active queues\. A queue is inactive if there are no contacts in the queue and no agents available\.
 
 **Query data for three days at a time, for the past 35 days**
-+ When you create a report that uses intervals \(such as 30 minute intervals\), you can return data for three days at a time, for the past 35 days\.
++ When you create a report that uses 15 minute intervals, you can return data for three days at a time, for the past 35 days\. For 30 minute intervals you can return data for only three days at a time, but the data is available based on the retention period of contact records\. 
 
 **The availability of historical metric data is based on the retention period of contact records**
 + Historical metrics are based contact records\. For the current retention period for contact records, see [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.

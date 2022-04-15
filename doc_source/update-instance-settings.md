@@ -4,7 +4,7 @@ To update the instance settings:
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
+1. On the **Instances** page, choose the instance alias\. The instance alias is also your instance name, which appears in your Amazon Connect URL\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. Complete the following procedures\.
@@ -18,6 +18,8 @@ To update the instance settings:
 1. To enable outbound calling from your contact center, choose **Make outbound calls with Amazon Connect**\.
 
 1. By enabling early media audio, your agents can hear pre\-connection audio such as busy signals, failure\-to\-connect errors, or other informational messages from telephony providers, when making outbound calls\. Choose **Enable early media**\.
+
+1. By default, you can have three participants on a call \(for example, two agents and a customer, or an agent, a customer, and an external party\)\. To enable multi\-party calls with more participants, choose **Enable up to six parties on a call**\. This feature is only available in CCPv2\.
 
 1. Choose **Save**\.
 

@@ -35,7 +35,7 @@ In the following image, the agent searched for **John Doe**\. No matches were fo
 
 ## Example 3: Accept incoming contact, multiple customer profiles found<a name="example3-select-customer-profile"></a>
 
-In some cases, multiple profiles may be returned for the same call or chat\. Use the summary information to verify the customer's identity\. For example, ask the customer to verify their their email address or account number, and then associate the contact with the right customer profile\. 
+In some cases, multiple profiles may be returned for the same call or chat\. Use the summary information to verify the customer's identity\. For example, ask the customer to verify their email address or account number, and then associate the contact with the right customer profile\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-choose-profile-example3.png)
 

@@ -2,6 +2,8 @@
 
 Country or region regulations often require a local office address and specific identification documents to purchase and own a phone number\. The address that you provide can be the business or personal address where the phone numbers are used\. 
 
+For a list of the telephony capabilities that Amazon Connect provides, see the [Amazon Connect Telecoms Country Coverage Guide](https://d1v2gagwb6hfe1.cloudfront.net/Amazon_Connect_Telecoms_Coverage.pdf)\. 
+
 Following is a list of ID Requirements by country or region\. When you [ request an international number](number-request.md), we'll work with you to submit your documents\. 
 
 **Note**  

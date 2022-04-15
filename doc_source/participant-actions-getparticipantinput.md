@@ -9,6 +9,11 @@ Gathers customer input \(a DTMF collection for voice contacts, or an entered str
     "PromptId": [Optional] A prompt ID or prompt ARN to play to the participant along with gathering input. May not be specified if Text or SSML is also specified. Must be either statically defined or a single valid JSONPath identifier.
     "Text":  An optional string that defines text to send to the participant along with gathering input. May not be specified if PromptId or SSML is also specified. May be defined statically or dynamically.
     "SSML": An optional string that defines SSML to send to the participant along with gathering input. May not be specified if Text or PromptId is also specified. May be defined statically or dynamically. 
+    "Media": { An optional object that defines an external media source
+        "Uri": Location of the message
+        "SourceType": The source from which the message will be fetched. The only supported type is S3
+        "MediaType": The type of the message to be played. The only supported type is Audio
+    }
     "InputTimeoutSeconds": The number of seconds to wait for input to be collected before proceeding with a timeout error. For the Voice channel this is the timeout until the *first* DTMF digit is entered. Must be defined statically, and must be a valid integer larger than zero.
     "StoreInput": "True" or "False". Must be statically defined.
     "InputValidation": { An object that defines how to validate customer inputs, required if and only if StoreInput is True

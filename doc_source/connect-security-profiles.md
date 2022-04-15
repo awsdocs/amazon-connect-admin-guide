@@ -7,7 +7,7 @@ Security profiles help you manage who can access the Amazon Connect dashboard an
 **Topics**
 + [Best practices for security profiles](security-profile-best-practices.md)
 + [About inherited permissions](inherited-permissions.md)
-+ [List of all security profile permissions](security-profile-list.md)
++ [List of security profile permissions](security-profile-list.md)
 + [Default security profiles](default-security-profiles.md)
 + [Assign a security profile to a user](assign-security-profile.md)
 + [Create a security profile](create-security-profile.md)

@@ -21,13 +21,13 @@ The chat widget supports browser notifications for desktop devices\. For more in
 
 In this step, you customize the experience of the chat widget for your customers\.
 
-1. Open the Amazon Connect dashboard, and choose **Customize chat widget**\.   
+1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.\. Choose **Customize chat widget**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-customize-chat-window-button.png)
 
-1. On the **Customize chat widget** page, under **Global typeface**, use the dropdown to choose the font for the text that will appear in the chat widget\.  
+1. For **Typeface**, use the dropdown to choose the font for the text in the chat widget\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-choose-font.png)
 
-1. Under **Chat widget**, choose the colors for the widget header, chat message bubbles, and launch and minimize icons by entering hex values \([HTML color codes](https://htmlcolorcodes.com/)\) that align the chat widget with your website branding\. 
+1. For **Chat widget**, choose the colors for the widget header, chat message bubbles, and launch and minimize icons by entering hex values \([HTML color codes](https://htmlcolorcodes.com/)\) that align the chat widget with your website branding\. 
 
    As you choose colors, the chat preview updates automatically so that you can see what your widget will look like\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-choose-colors.png)
@@ -36,7 +36,7 @@ In this step, you customize the experience of the chat widget for your customers
 
 1. For **Open chat icon**, select the colors for the icon that customers will choose or tap to start a chat with your contact center\. 
 
-1. Under **Select contact flow**, choose the inbound flow that initiates when a customer starts a chat\.
+1. For **Select contact flow**, choose the inbound flow that initiates when a customer starts a chat\.
 
 1. Choose **Next**\.
 
