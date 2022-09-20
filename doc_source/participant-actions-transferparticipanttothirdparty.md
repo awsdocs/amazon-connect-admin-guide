@@ -7,7 +7,7 @@ Transfers the participant to a specified phone number\. Optionally continues flo
 ```
 {
     "ThirdPartyPhoneNumber": A phone number, in e.164 format, of the external number to which to transfer the contact. May be defined statically or dynamically. 
-    "ThirdPartyConnectionTimeoutSeconds": An integer, between 0 and 600 (inclusive) representing the number of seconds to wait for the third party to answer before canceling the third party call. Only used if ContinueFlowExecution is not False. Must be defined fully statically or as a single valid JSONPath identifier.
+    "ThirdPartyConnectionTimeLimitSeconds": An integer, between 0 and 600 (inclusive) representing the number of seconds to wait for the third party to answer before canceling the third party call. Only used if ContinueFlowExecution is not False. Must be defined fully statically or as a single valid JSONPath identifier.
     "ContinueFlowExecution": "True" or "False". If not defined or True, the flow continues running after the third party call finishes, if False the flow does not continue, as long as the phone call to the third party succeeds. Must be defined statically. 
     "ThirdPartyDTMFDigits": An optional series of DTMF digits to send to the third party when the call succeeds. Must be defined fully statically or as a single valid JSONPath identifier. Must be 50 or fewer characters chosen from numeric digits, comma, asterisk, and pound sign
     "CallerId": { Optional, an override of the caller ID to present when dialing the third party

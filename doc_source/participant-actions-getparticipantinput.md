@@ -14,7 +14,7 @@ Gathers customer input \(a DTMF collection for voice contacts, or an entered str
         "SourceType": The source from which the message will be fetched. The only supported type is S3
         "MediaType": The type of the message to be played. The only supported type is Audio
     }
-    "InputTimeoutSeconds": The number of seconds to wait for input to be collected before proceeding with a timeout error. For the Voice channel this is the timeout until the *first* DTMF digit is entered. Must be defined statically, and must be a valid integer larger than zero.
+    "InputTimeLimitSeconds": The number of seconds to wait for input to be collected before proceeding with a timeout error. For the Voice channel this is the timeout until the *first* DTMF digit is entered. Must be defined statically, and must be a valid integer larger than zero.
     "StoreInput": "True" or "False". Must be statically defined.
     "InputValidation": { An object that defines how to validate customer inputs, required if and only if StoreInput is True
         "PhoneNumberValidation": { Optional, one of the ways to validate inputs, make sure that it's a valid phone number. May not be specified if CustomValidation is specified.
