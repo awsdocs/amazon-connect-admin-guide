@@ -16,7 +16,7 @@ Before you work with Amazon Connect, verify that your browser is supported using
 
 ## Browsers on mobile devices<a name="browsers-mobile"></a>
 
-The Amazon Connect console and Contact Control Panel \(CCP\) do not work on mobile browsers\. However, your agents can forward the audio portion of the call to their mobile device\. For instructions, see [Forward calls to a mobile device \(iPhone, Android\)](foward-calls-to-mobile-device.md)\.
+The Amazon Connect console and Contact Control Panel \(CCP\) do not work on mobile browsers\. However, your agents can forward the audio portion of the call to their mobile device\. For instructions, see [Forward calls to a mobile device \(iPhone, Android\)](forward-calls-to-mobile-device.md)\.
 
 ## Issue with Firefox version 86<a name="browsers-firefox-issue"></a>
 

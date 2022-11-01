@@ -100,7 +100,7 @@ Following are instructions for how to create a new domain and add an integration
 
 1. In the **Integration name** box, assign a friendly name to the integration, one that is meaningful to you\. 
 **Tip**  
-If you are going to have mutiple integrations from the same source, we recommend you develop a naming convention to make them easy to distinguish\.
+If you are going to have multiple integrations from the same source, we recommend you develop a naming convention to make them easy to distinguish\.
 
 1. Under **Connection with \[Source\]**, choose **Create a new connection**, and then enter a friendly name for the connection that is meaningful to you\.
 

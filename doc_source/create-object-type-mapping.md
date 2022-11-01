@@ -69,27 +69,27 @@ If you choose to add custom attributes, the destination will always have the pre
 ### Step 3: Specify identifiers<a name="step3-how-to-specify-identifiers"></a>
 
 On the **Specify identifiers** page, complete the following sections\. Depending on what data your mapping, it's possible not all of these will appear on your page\.
-+ **Unique identifier**: You must have a unique identifier for your data in order to avoid an error when it is ingested\. This identifier is also known as the unique key\. Customer Profiles uses it to distinquish this data from other data source objects, and to index for search and update data\. 
++ **Unique identifier**: You must have a unique identifier for your data in order to avoid an error when it is ingested\. This identifier is also known as the unique key\. Customer Profiles uses it to distinguish this data from other data source objects, and to index for search and update data\. 
 
   There can be only one unique identifier\.
 + **Customer identifier**: You must have at least one customer identifier for your data in order to avoid an error when it is ingested\. The identifier is also known as the profile key\.
 
   Customer Profiles uses it to determine if the data case be associated to an existing profile or used to create a new profile by searching other profiles for this identifier\.
 
-  You can have mutliple customer identifiers\. 
+  You can have multiple customer identifiers\. 
 + **Product identifier**: You must have at least one product identifier for your data in order to avoid an error when it is ingested\. The identifier is also known as the asset key\.
 
-  Customer Profiles uses it to distinquish this data from other customer product purchase data\. It is also used to determine if the data can be associated to an existing profile or used to create a new profile by searching other profiles for this identifier\.
+  Customer Profiles uses it to distinguish this data from other customer product purchase data\. It is also used to determine if the data can be associated to an existing profile or used to create a new profile by searching other profiles for this identifier\.
 
   You can have multiple product identifiers\.
 + **Case identifier**: You must have at least one case identifier for your data in order to avoid an error when it is ingested\. The identifier is also known as the case key\.
 
-  Customer Profiles uses it to distinquish this data from other customer case data\. It is also used to determine if the data can be associated to an existing profile or used to create a new profile by searching other profiles for this identifier\.
+  Customer Profiles uses it to distinguish this data from other customer case data\. It is also used to determine if the data can be associated to an existing profile or used to create a new profile by searching other profiles for this identifier\.
 
   You can have multiple case identifiers\.
 + **Order identifier**: You must have at least one order identifier for your data in order to avoid an error when it is ingested\. The identifier is also known as the order key\.
 
-  Customer Profiles uses it to distinquish this data from other customer order data\. It is also used to determine if the data can be associated to an existing profile or used to create a new profile by searching other profiles for this identifier\.
+  Customer Profiles uses it to distinguish this data from other customer order data\. It is also used to determine if the data can be associated to an existing profile or used to create a new profile by searching other profiles for this identifier\.
 
   You can have multiple order identifiers\.
 + **Additional search attributes \- optional**: You can choose attributes in your data source object that you want to index to be searchable\. By default, all your identifiers are indexed\.

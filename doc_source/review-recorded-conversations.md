@@ -29,7 +29,7 @@ We recommend using the **Contact ID **filter to [search for recordings](search-r
 1. The following image shows a sample chat transcript\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-chat-transcript.png)
 
-## Pause, rewind, or fast\-foward a recording<a name="pause-rewind-fastforward-recording"></a>
+## Pause, rewind, or fast\-forward a recording<a name="pause-rewind-fastforward-recording"></a>
 
 1. Instead of choosing the **Play** icon, choose the contact ID to open the contact record\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recordings-contactid.png)
@@ -43,6 +43,6 @@ We recommend using the **Contact ID **filter to [search for recordings](search-r
 
    1. Play, pause, skip backwards or forwards in 10 second increments\.
 
-## Troubleshoot problems pausing, rewinding, or fast\-fowarding<a name="problems-pause-rewind-fastforward-recording"></a>
+## Troubleshoot problems pausing, rewinding, or fast\-forwarding<a name="problems-pause-rewind-fastforward-recording"></a>
 
 If you are unable to pause, rewind or fast\-forward recordings on the **Contact search** page, one possible reason could be that your network is blocking HTTP range requests\. See [HTTP range requests]( https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests) on the MDN Web Docs site\. Work with your network administrator to unblock HTTP range requests\.

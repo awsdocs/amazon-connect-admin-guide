@@ -1,6 +1,6 @@
 # Amazon Connect Document history<a name="doc-history"></a>
 
-The following table describes important changes in each release of the Amazon Connect Admininstrator Guide\. For notification about updates to this documentation, you can subscribe to an RSS feed\. 
+The following table describes important changes in each release of the Amazon Connect Administrator Guide\. For notification about updates to this documentation, you can subscribe to an RSS feed\. 
 
 | Change | Description | Date | 
 | --- |--- |--- |

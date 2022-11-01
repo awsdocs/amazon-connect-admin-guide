@@ -196,7 +196,7 @@ The state of the contacts the agent is currently handling\. The state can be: **
 
 For queued callbacks, the contact state can also **Callback incoming** or **Callback dialing**\. 
 
-If a supervisor is using the Manager Monitor feature to monitor a particular agent as they interact with a customer, the superviser’s contact state is Monitoring; the agent’s contact state is Connected\.
+If a supervisor is using the Manager Monitor feature to monitor a particular agent as they interact with a customer, the supervisor’s contact state is Monitoring; the agent’s contact state is Connected\.
 
 ## Duration<a name="duration-real-time"></a>
 
