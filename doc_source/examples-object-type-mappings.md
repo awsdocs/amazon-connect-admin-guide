@@ -109,8 +109,7 @@ Following is one way of mapping this data:
             "ContentType": "EMAIL_ADDRESS"
         },
         "timestamp": {
-            "Source": "_source.timestamp",
-            "Target": "_profile.ShippingAddress.Address1"
+            "Source": "_source.timestamp"
         }
     },
     "Keys": {

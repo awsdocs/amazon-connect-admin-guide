@@ -1,8 +1,8 @@
-# Contact block: Create task<a name="create-task-block"></a>
+# Flow block: Create task<a name="create-task-block"></a>
 
 ## Description<a name="create-task-description"></a>
 
-Creates a new task, sets the tasks attributes, and initiates a contact flow to start the task immediately or schedule it for a future date and time\. For more information about Amazon Connect Tasks, see [Tasks](tasks.md)\. 
+Creates a new task, sets the tasks attributes, and initiates a flow to start the task immediately or schedule it for a future date and time\. For more information about Amazon Connect Tasks, see [Tasks](tasks.md)\. 
 
 **Note**  
 If your Amazon Connect instance was created on or before October 2018, the contact is routed down the error branch\. For the contact to be routed down the success path, create an IAM policy with the following permission and attach it to the Amazon Connect service role\. You can find the Amazon Connect service role on the **Account overview** page for your Amazon Connect instance\.  
@@ -26,7 +26,7 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="create-task-types"></a>
+## Flow types<a name="create-task-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows
@@ -61,7 +61,7 @@ When this block is configured, it looks similar to the following image:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/create-task-configured.png)
 
-## Sample flows<a name="check-staffing-samples"></a>
+## Sample flows<a name="create-task-samples"></a>
 
 See these sample flows for scenarios that use this block:
 + [Sample inbound flow \(first contact experience\)](sample-inbound-flow.md)

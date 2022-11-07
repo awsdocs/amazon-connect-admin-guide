@@ -1,4 +1,4 @@
-# Set the forecast and schedule interval \(Preview\)<a name="set-forecast-scheduling-interval"></a>
+# Set the forecast and schedule interval<a name="set-forecast-scheduling-interval"></a>
 
 You can set the granularity for your short\-term forecasts and your schedules\.
 

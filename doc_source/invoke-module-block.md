@@ -1,10 +1,10 @@
-# Contact block: Invoke module<a name="invoke-module-block"></a>
+# Flow block: Invoke module<a name="invoke-module-block"></a>
 
 ## Description<a name="invoke-module-block-description"></a>
 
 Calls a published module, which enables you create reusable sections of a contact flow\.
 
-For more information, see [Contact flow modules for reusable functions](contact-flow-modules.md)\.
+For more information, see [Flow modules for reusable functions](contact-flow-modules.md)\.
 
 ## Supported channels<a name="invoke-lambda-channels"></a>
 
@@ -17,10 +17,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="invoke-module-block-types"></a>
+## Flow types<a name="invoke-module-block-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 
 ## Properties<a name="invoke-module-block-properties"></a>
 

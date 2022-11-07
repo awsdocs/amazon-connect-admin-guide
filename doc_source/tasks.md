@@ -29,7 +29,7 @@ Amazon Connect provides different ways for you to create tasks:
 
    For more information, see the [StartTaskContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartTaskContact.html) API\.
 
-1. You can add a [Create task](create-task-block.md) block to your contact flows\. This block enables you to create and orchestrate tasks directly from flows based on customer input \(DTMF input\), and contact and tasks information\.
+1. You can add a [Create task](create-task-block.md) block to your flows\. This block enables you to create and orchestrate tasks directly from flows based on customer input \(DTMF input\), and contact and tasks information\.
 
 1. You can enable your agents to create tasks from the Contact Control Panel \(CCP\) without you doing any development work\.
 
@@ -37,31 +37,20 @@ Amazon Connect provides different ways for you to create tasks:
 
    For more information, see [Test voice, chat, and task experiences](chat-testing.md)\.
 
-## Get started with tasks<a name="concepts-set-up-tasks"></a>
+For more information on getting started with tasks, see [Set up tasks](concepts-getting-started-tasks.md)\.
 
-1. [Update your agent's routing profile](routing-profiles.md) so they can manage and create tasks\.
+## Supported contact flow types<a name="concepts-tasks-supported-contact-flow-types"></a>
 
-   When you add tasks to their routing profile, you can specify that up to 10 tasks be assigned to them at a time\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-routing-profile-2.png)
-
-1. [Create quick connects](quick-connects.md) so that agents can create/assign tasks to themselves, or other agents or shared queues\.
-
-1. Update your contact flows to route tasks\.
-
-1. Optionally, [integrate with external applications](integrate-external-apps-tasks.md) and [set up rules to automatically create tasks](add-rules-task-creation.md) based on pre\-defined conditions\.
-
-### Supported contact flow types<a name="concepts-tasks-supported-contact-flow-types"></a>
-
-You can use tasks in the following contact flow types:
-+ Inbound contact flow
+You can use tasks in the following flow types:
++ Inbound flow
 + Customer queue flow
 + Agent whisper flow
-+ Transfer to queue contact flow
++ Transfer to queue flow
 + Transfer to agent flow
 
-### Supported contact blocks<a name="concepts-tasks-supported-contact-blocks"></a>
+## Supported contact blocks<a name="concepts-tasks-supported-contact-blocks"></a>
 
-You can use tasks in the following contact blocks:
+You can use tasks in the following flow blocks:
 + Change routing priority/age
 + Check contact attributes
 + Check hours of operation
@@ -115,7 +104,7 @@ While voice and chats may have short service level times based on seconds or min
 
 The total duration of a task can be up to 7 days\. A task ends when one of the following happens: 
 + An agent completes the task\.
-+ A contact flow runs a [Disconnect / hang up](disconnect-hang-up.md) block, which ends the task\.
++ A flow runs a [Disconnect / hang up](disconnect-hang-up.md) block, which ends the task\.
 + A task reaches the 7 day limit\.
 + You end the task using the [StopContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContact.html) API\.
 
@@ -128,7 +117,7 @@ The following image is an example of what the **Contact Summary** and **Referenc
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-sample-ctr.png)
 
 The following data is appended to the contact record but not stored with it\. The data is included in an export\. 
-+ Contact flow ID
++ Flow ID
 + Potential attributes:
   + [ContactDetails](ctr-data-model.md#ctr-contact-details)
     + Name: the name of the task
@@ -138,7 +127,7 @@ The following data is appended to the contact record but not stored with it\. Th
 When task is scheduled for a future date and time, **Contact Summary** also displays **Scheduled time**\.
 
 ## More information<a name="tasks-more-information"></a>
-+ [Feature specifications](amazon-connect-service-limits.md#feature-limits)
++ [Amazon Connect feature specifications](feature-limits.md)
 + [Accept a task](accept-task.md)
 + [Create a new task](create-task.md)
 + [Transfer a task](transfer-task.md)

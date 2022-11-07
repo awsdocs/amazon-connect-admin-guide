@@ -1,11 +1,11 @@
 # Sample recording behavior<a name="sample-recording-behavior"></a>
 
 **Note**  
-This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+This topic explains a sample flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample flows](contact-flow-samples.md)\. 
 
-Type: Contact flow \(inbound\)
+Type: Flow \(inbound\)
 
-This contact flow starts by checking the channel of the contact:
+This flow starts by checking the channel of the contact:
 + If the contact is a task, it is transferred to the Sample inbound flow\.
 + If the customer is using chat, they get a prompt that the **Set recording block** enables managers to monitor chat conversations\. \(To *record* chats, you only need to specify an Amazon S3 bucket where the conversation will be stored\.\)
 

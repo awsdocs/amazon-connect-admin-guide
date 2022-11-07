@@ -24,4 +24,4 @@ You can customize the report settings to get the view of the data that is most m
 + [Download a historical metrics report](download-historical-metrics-report.md)
 + [Show agent queues in a Queues table](show-agent-queues.md)
 + [How many contacts in queue on a specific date](contacts-in-queue-on-specific-date.md)
-+ [About the agent activity audit report](agent-activity-audit-report.md)
++ [Agent activity audit report](agent-activity-audit-report.md)

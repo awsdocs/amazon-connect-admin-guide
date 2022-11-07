@@ -15,6 +15,9 @@
 1. On the **Telephony Options** page, accept the default settings and choose **Next**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-telephony-defaults.png)
 
+1. On the **Data storage** page, accept the default settings and choose **Next**\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-data-storage.png)
+
 1. On the **Review and create** page, choose **Create instance**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-review-create-instance.png)
 

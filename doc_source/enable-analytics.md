@@ -2,11 +2,11 @@
 
 You can enable Contact Lens for Amazon Connect in just a few steps\. Just add a [Set recording and analytics behavior](set-recording-behavior.md) block to a flow, and configure it for Contact Lens\.
 
-**To enable Contact Lens in a contact flow**
+**To enable Contact Lens in a flow**
 
-1. Add the [Set recording and analytics behavior](set-recording-behavior.md) block to a contact flow\.
+1. Add the [Set recording and analytics behavior](set-recording-behavior.md) block to a flow\.
 
-1. In the contact block, under **Call recording**, choose **On**, **Agent and Customer**\.
+1. In the flow block, under **Call recording**, choose **On**, **Agent and Customer**\.
 
    Both agent and customer call recordings are required to use Contact Lens  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior.png)
@@ -39,7 +39,7 @@ If you want to continue using Contact Lens to collect data after transferring a 
 
 ## How to enable redaction of sensitive data<a name="enable-redaction"></a>
 
-To enable redaction of sensitive data in a contact flow, choose **Redact sensitive data**\. No other configuration is needed\. Contact Lens determines what data can be redacted\.
+To enable redaction of sensitive data in a flow, choose **Redact sensitive data**\. No other configuration is needed\. Contact Lens determines what data can be redacted\.
 
 For more information about using redaction, see [Use sensitive data redaction](sensitive-data-redaction.md)\.
 
@@ -93,3 +93,7 @@ You can set these attributes in the following ways:
 |  Asia Pacific \(Singapore\)  | Yes | \-  | \-  | 
 |  Asia Pacific \(Sydney\)  | Yes  | Yes  | Yes  | 
 |  Asia Pacific \(Tokyo\)  | Yes  | Yes  | Yes  | 
+
+## Multi\-party calls and Contact Lens<a name="multiparty-calls-contactlens"></a>
+
+We do not support multi\-party calls in Contact Lens\. For example, if there are more than two parties \(agent and customer\) on a call, the quality of the transcription and analytics, such as sentiment and categories, is degraded\.

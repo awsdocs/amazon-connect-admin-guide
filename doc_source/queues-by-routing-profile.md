@@ -1,6 +1,6 @@
 # List queues grouped by routing profile<a name="queues-by-routing-profile"></a>
 
-1. Go to **Metrics and quality**, **Real\-time metrics**, **Queues**\.
+1. Go to **Analytics**, **Real\-time metrics**, **Queues**\.
 
 1. Click **Settings**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-settings.png)

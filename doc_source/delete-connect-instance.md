@@ -13,7 +13,8 @@ You can't restore a deleted instance or access its settings, data, metrics, and 
 
 1. Select the radio button for the instance\.
 
-1. Choose **Delete**\. If you don't see the **Delete** button, you don't have permissions to delete instances\. Contact your AWS administrator for help\.
+1. Choose **Delete**\. If you don't see the **Delete** button, you don't have permissions to delete instances\. Contact your AWS administrator for help\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance-delete.png)
 
 1. When prompted, enter the name of the instance and then choose **Delete**\.
 

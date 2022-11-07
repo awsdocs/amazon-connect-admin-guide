@@ -1,6 +1,6 @@
 # Create an object type mapping<a name="create-object-type-mapping"></a>
 
-An object type mapping tells Customer Profiles how to ingest a specific type of data from a source application—such as Salesforce, Zendesk, or S3—into a unified standard profile object\. You can then display data in that object \(for example, customer address and email\) to your agents using the agent application\.
+An object type mapping tells Customer Profiles how to ingest a specific type of data from a source application—such as Salesforce, Zendesk, or S3—into a unified standard profile object\. You can then display data in that object \(for example, customer address and email\) to your agents using the [Connect Agent Application ](https://docs.aws.amazon.com/https://docs.aws.amazon.com/connect/latest/adminguide/customer-profile-access.html)\.
 
 The object type mapping provides Customer Profiles with the following information: 
 + How data should be populated from the object and ingested into the standard profile object\.
@@ -22,7 +22,7 @@ To create a data mapping, you define an object type mapping that describes what 
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the **Instances** page, choose the instance alias\. The instance alias is also your instance name, which appears in your Amazon Connect URL\.  
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Customer profiles**, **Data mappings**\.
@@ -37,7 +37,7 @@ To create a data mapping, you define an object type mapping that describes what 
 
    1. Choose the source object\. This is used for you to build your unified profile\.
 
-   1. In the **Mapping destination** section, choose the data that you want to use to build your unified customer profile\. This information can be surfaced to your contact flows and agents to personalize the interactions with contacts\.
+   1. In the **Mapping destination** section, choose the data that you want to use to build your unified customer profile\. This information can be surfaced to your flows and agents to personalize the interactions with contacts\.
 
       For more information about supported mapping destinations, see [About mapping destinations](about-mapping-destinations.md)\.
 
@@ -64,11 +64,15 @@ You can remove what you don’t want populated in the customer profile, change t
 This mapping uses your data source to populate customer contact information, such as a phone number in the customer profile\. It uses attributes from the standard profile template\.
 
 **Tip**  
-If you choose to add custom attributes, the destination will always have the prefix `Attributes.` added to it\. This enables Amazon Connect to recognize that it is a custom attribute\.
+If you choose to add custom attributes, the destination will always have the prefix `Attributes.` added to it\. This enables Amazon Connect to recognize that it is a custom attribute\.   
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/custom-attribute-cp.png)
+Agents can now view custom attributes in the Connect Agent Application under the **Additional Information** tab sorted in alphabetical order\. You can create the name of your choice for each attribute that will be displayed to agents by using the following format: `/^Attributes\.[a-zA-Z0-9]+(?:[ _\-]+[a-zA-Z0-9]+)*$/`
+All ingested custom attributes will be displayed in the Connect Agent Application\. If you do not wish to show certain information to your agents, do not ingest custom attributes at this time\.
 
 ### Step 3: Specify identifiers<a name="step3-how-to-specify-identifiers"></a>
 
-On the **Specify identifiers** page, complete the following sections\. Depending on what data your mapping, it's possible not all of these will appear on your page\.
+On the **Specify identifiers** page, complete the following sections\. Depending on what data you're mapping, it's possible not all of these will appear on your page\.
 + **Unique identifier**: You must have a unique identifier for your data in order to avoid an error when it is ingested\. This identifier is also known as the unique key\. Customer Profiles uses it to distinguish this data from other data source objects, and to index for search and update data\. 
 
   There can be only one unique identifier\.

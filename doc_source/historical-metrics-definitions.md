@@ -7,7 +7,7 @@ Developers can use the [GetMetricData](https://docs.aws.amazon.com/connect/lates
 
 ## After contact work time<a name="acw-historical"></a>
 
-The total time that an agent spent doing ACW for a contact\. 
+The total time that an agent spent doing ACW for a contact\. In some businesses, also known as Call Wrap Up time\.  
 
 You specify the amount of time an agent has to do ACW in their [ agent configuration settings](configure-agents.md)\. When a conversation with a contact ends, the agent is automatically allocated to do ACW for the contact\. They stop doing ACW for a contact when they indicate they are ready for another contact in the CCP\.
 
@@ -97,10 +97,10 @@ This metric appears as **Contacts missed** in scheduled reports and exported CSV
 
 ## Agent on contact time<a name="agent-on-contact-time-historical"></a>
 
-Total time that an agent spent on a contact, including [Customer Hold Time](#customer-hold-time-historical) and [After Contact Work Time](#acw-historical)\. This does **not** include time spent on a contact while in a custom status or offline status\.
+Total time that an agent spent on a contact, including [Customer Hold Time](#customer-hold-time-historical) and [After Contact Work Time](#acw-historical)\. This does **not** include time spent on a contact while in a custom status or **Offline** status\. \(Custom status = the agent's CCP status is other than **Available** or **Offline**\. For example, Training would be a custom status\.\)
 
 **Tip**  
-If you want to include the time spent in a custom status and offline status, see [Contact handle time](#contact-handle-time-historical)\.
+If you want to include the time spent in a custom status and **Offline** status, see [Contact handle time](#contact-handle-time-historical)\.
 + Type: String \(*hh:mm:ss*\)
 + Category: Agent activity\-driven metric
 
@@ -150,7 +150,7 @@ Category: Agent activity\-driven metric
 
 ## Average agent incoming connecting time<a name="htm-avg-agent-incoming-connecting-time"></a>
 
-The average time between when contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+The average time between when contact is initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. This is the ring time for configurations where the agent is not set to auto\-answer\.
 
 No equivalent to this metric is available in the `GetMetricData` API\. 
 
@@ -187,6 +187,8 @@ Category: Agent activity\-driven metric
 Average time that customers spent on hold while connected to an agent\. This is calculated by averaging [CustomerHoldDuration](ctr-data-model.md#CustomerHoldDuration-CTR) \(from the contact record\)\.
 
 In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is HOLD\_TIME\.
+
+This average only includes contacts that went on hold\.
 + Type: String \(*hh:mm:ss*\)
 + Category: contact record\-driven metric
 
@@ -197,6 +199,8 @@ This metric doesn't apply to tasks so you'll notice a value of 0 on the report f
 The average time, from start to finish, that a contact was connected with an agent \(average handled time\)\. It includes talk time, hold time, and After Contact Work \(ACW\) time\.
 
 AHT is calculated by averaging the amount of time between the contact being answered by an agent and the conversation ending\. It applies to both inbound and outbound calls\.
+
+AHT is different from [Contact handle time](#contact-handle-time-historical)\. AHT does not include any time spent in a custom status; Contact handle time \(CHT\) does include it\.
 
 In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is HANDLE\_TIME\.
 + Type: String \(*hh:mm:ss*\)
@@ -226,7 +230,9 @@ In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/A
 
 ## Average queue answer time<a name="average-queue-answer-time-historical"></a>
 
-Average time that contacts waited in the queue before being answered by an agent\. This is the average of [Duration](ctr-data-model.md#Duration-CTR) \(from the contact record\)\.
+Average time that contacts waited in the queue before being answered by an agent\. In some businesses, this is also known as average speed of answer \(ASA\)\.
+
+This is the average of [Duration](ctr-data-model.md#Duration-CTR) \(from the contact record\)\.
 
 In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is QUEUE\_ANSWER\_TIME\.
 + Type: String \(*hh:mm:ss*\)
@@ -248,15 +254,17 @@ In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/A
 
 ## Contact flow time<a name="contact-flow-time-historical"></a>
 
-Total time a contact spent in a contact flow\.
+Total time a contact spent in a flow\.
 
-Outbound contacts don't start in a contact flow, so outbound contacts aren't included\.
+Outbound contacts don't start in a flow, so outbound contacts aren't included\.
 + Type: String \(*hh:mm:ss*\)
 + Category: contact record\-driven metric
 
 ## Contact handle time<a name="contact-handle-time-historical"></a>
 
-Total time that an agent spent on contacts, including [Customer Hold Time](#customer-hold-time-historical) and [After contact work time](#acw-historical)\. This includes any time spent on contacts while in a custom status\. 
+Total time that an agent spent on contacts, including [Customer Hold Time](#customer-hold-time-historical) and [After contact work time](#acw-historical)\. This includes any time spent on contacts while in a custom status\. \(Custom status = the agent's CCP status is other than **Available** or **Offline**\. For example, Training would be a custom status\.\)
+
+Contact handle time is different from [Average handle time](#average-handle-time-historical)\. Contact handle time includes time spent in a custom status; Average handle time does not include it\.
 
 **Tip**  
 If you want to exclude the amount of time spent in a custom status, see [Agent on contact time](#agent-on-contact-time-historical)\. 
@@ -395,7 +403,7 @@ In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/A
 
 ## Contacts transferred in from queue<a name="contacts-transferred-in-from-queue-historical"></a>
 
-Count of contacts transferred to the queue from another in a **Transfer to queue** contact flow\.
+Count of contacts transferred to the queue from another in a **Transfer to queue** flow\.
 
 In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_TRANSFERRED\_IN\_FROM\_Q\.
 + Type: Integer 
@@ -425,7 +433,7 @@ Count of contacts that an agent transferred from the queue to an external source
 
 ## Contacts transferred out queue<a name="contacts-transferred-out-from-queue-historical"></a>
 
-Count of contacts transferred from the queue to another queue in a **Transfer to queue** contact flow\.
+Count of contacts transferred from the queue to another queue in a **Transfer to queue** flow\.
 
 In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is CONTACTS\_TRANSFERRED\_OUT\_FROM\_QUEUE\.
 + Type: Integer 

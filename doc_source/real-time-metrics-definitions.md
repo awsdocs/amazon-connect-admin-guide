@@ -162,7 +162,7 @@ Avg hold time \+ Avg interaction time
 
 ## Avg queue answer time<a name="average-queue-answer-time-real-time"></a>
 
-Average time, in seconds, that a contact was in the queue before being answered by an agent\. This is calculated using the amount of time that the contact was in the queue, not any time that the contact spent in prior steps of the contact flow, such as listening or responding to prompts\.
+Average time, in seconds, that a contact was in the queue before being answered by an agent\. This is calculated using the amount of time that the contact was in the queue, not any time that the contact spent in prior steps of the flow, such as listening or responding to prompts\.
 
 ## Avg outbound connecting time<a name="rtm-avg-outbound-connecting-time"></a>
 
@@ -196,7 +196,7 @@ The state of the contacts the agent is currently handling\. The state can be: **
 
 For queued callbacks, the contact state can also **Callback incoming** or **Callback dialing**\. 
 
-If a supervisor is using the Manager Monitor feature to monitor a particular agent as they interact with a customer, the supervisor’s contact state is Monitoring; the agent’s contact state is Connected\.
+If a supervisor is using the Manager Monitor feature to monitor a particular agent as they interact with a customer, the supervisor's contact state is Monitoring; the agent’s contact state is Connected\.
 
 ## Duration<a name="duration-real-time"></a>
 

@@ -228,9 +228,9 @@ Amazon Connect Voice ID uses `voiceid` as the prefix for actions instead of conn
 
 Set up a trusted relationship with accountID to domain domainName\.
 
-## Grant access to Amazon Connect High\-Volume Outbound Communications resources<a name="grant-read-only-access-to-outboundcommunications"></a>
+## Grant access to Amazon Connect outbound campaigns resources<a name="grant-read-only-access-to-outboundcommunications"></a>
 
-Amazon Connect High\-Volume Outbound Communications uses `connect-campaign` as the prefix for actions instead of `connect`\. The following policy grants full access to a specific high\-volume outbound campaign\. 
+Outbound campaigns uses `connect-campaign` as the prefix for actions instead of `connect`\. The following policy grants full access to a specific outbound campaign\. 
 
 ```
 {

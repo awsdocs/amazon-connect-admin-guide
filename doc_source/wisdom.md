@@ -1,4 +1,4 @@
-# Contact block: Wisdom<a name="wisdom"></a>
+# Flow block: Wisdom<a name="wisdom"></a>
 
 ## Description<a name="wisdom-description"></a>
 + Associates a Wisdom domain to a contact to enable real\-time recommendations\.
@@ -18,11 +18,12 @@ Nothing happens if a chat or task is sent to this block, however, **you will be 
 | Chat | No | 
 | Task | No | 
 
-## Contact flow types<a name="wisdom-types"></a>
+## Flow types<a name="wisdom-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer Queue flow
++ Outbound whisper flow
 + Transfer to Agent flow
 + Transfer to Queue flow
 

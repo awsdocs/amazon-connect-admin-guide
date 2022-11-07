@@ -42,8 +42,7 @@ Following is an example SCP that can be applied at the AWS Account, Organization
       "Sid": "AmazonConnectInstanceDenyDeletion",
       "Effect": "Deny",
       "Action": [
-        "connect:DeleteInstance",
-        "connect:DestroyInstance"
+        "connect:DeleteInstance"         
       ],
       "Resource": [
         "Amazon Connect instance ARN"
@@ -55,7 +54,7 @@ Following is an example SCP that can be applied at the AWS Account, Organization
 
 ## Amazon Connect Detective Security Best Practices<a name="bp-security-detective"></a>
 
-Logging and monitoring are important for the availability, reliability and, performance of contact center\. You should log relevant information from Amazon Connect contact flows to CloudWatch and build alerts and notifications based on the same\.
+Logging and monitoring are important for the availability, reliability and, performance of contact center\. You should log relevant information from Amazon Connect flows to CloudWatch and build alerts and notifications based on the same\.
 
 Define log retention requirements and lifecycle policies early on, and plan to move log files to cost\-efficient storage locations as soon as practical\. Amazon Connect public APIs log to CloudTrail\. Review and automate actions based on CloudTrail logs\.
 
@@ -63,4 +62,4 @@ We recommend Amazon S3 for long\-term retention and archiving of log data, espec
 
 The AWS Cloud provides flexible infrastructure and tools to support both sophisticated partner offerings and self\-managed centralized\-logging solutions\. This includes solutions such as Amazon OpenSearch Service and Amazon CloudWatch Logs\.
 
-You can implement fraud detection and prevention for incoming contacts by customizing Amazon Connect contact flows per your requirements\. For example, you can check incoming contacts against previous contact activity in Dynamo DB and then take actions such as disconnecting a contact who is on a deny list\. 
+You can implement fraud detection and prevention for incoming contacts by customizing Amazon Connect flows per your requirements\. For example, you can check incoming contacts against previous contact activity in Dynamo DB and then take actions such as disconnecting a contact who is on a deny list\. 

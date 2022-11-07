@@ -10,7 +10,7 @@ Amazon Connect uses routing profiles to allow you to manage your contact center 
 
 ## Default routing profile: Basic routing profile<a name="concepts-default-routing-profile"></a>
 
-Amazon Connect includes a default routing profile named **Basic routing profile**\. Along with the [default contact flows](contact-flow-default.md) and default queue \(named **BasicQueue**\), it powers your contact center so you don't need to do any customization\. This is what enables you to get started quickly\. 
+Amazon Connect includes a default routing profile named **Basic routing profile**\. Along with the [default flows](contact-flow-default.md) and default queue \(named **BasicQueue**\), it powers your contact center so you don't need to do any customization\. This is what enables you to get started quickly\. 
 
 ## Routing Profiles Link Queues and Agents<a name="concepts-routing-profiles-queues"></a>
 

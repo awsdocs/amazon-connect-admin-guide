@@ -6,7 +6,7 @@ After you save a report, you can update it at any time\.
 
 1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
-1. Choose **Metrics and quality**, **Saved reports**\.
+1. Choose **Analytics**, **Saved reports**\.
 
 1. From the **Historical metrics** tab, choose the name of the report\. Choose the gear icon, update the report settings as needed, and choose **Apply**\.
 

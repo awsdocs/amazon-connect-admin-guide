@@ -1,6 +1,6 @@
 # Add text\-to\-speech to prompts<a name="text-to-speech"></a>
 
-You can enter text\-to\-speech prompts in the following contact flow blocks: 
+You can enter text\-to\-speech prompts in the following flow blocks: 
 + [Get customer input](get-customer-input.md) 
 + [Loop prompts](loop-prompts.md)
 + [Play prompt](play.md)
@@ -14,7 +14,7 @@ Amazon Polly default voices are **free**\. You are charged only for using custom
 
 ## Amazon Polly best sounding voice<a name="amazon-polly-best-sounding-voice"></a>
 
-Amazon Polly periodically releases improved voices and speaking styles\. You can choose to automatically resolve your text\-to\-speech to the most lifelike and natural sounding variant of a voice\. For example, if your contact flows use Joanna, Amazon Connect automatically resolves to Joanna’s conversational speaking style\. 
+Amazon Polly periodically releases improved voices and speaking styles\. You can choose to automatically resolve your text\-to\-speech to the most lifelike and natural sounding variant of a voice\. For example, if your flows use Joanna, Amazon Connect automatically resolves to Joanna’s conversational speaking style\. 
 
 **Note**  
 If no Neural version is available, Amazon Connect defaults to the standard voice\. 
@@ -28,13 +28,13 @@ If no Neural version is available, Amazon Connect defaults to the standard voice
 1. Choose the name of the instance from the **Instance alias** column\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
-1. In the navigation pane, choose **Contact flows**\.
+1. In the navigation pane, choose **Flows**\.
 
 1. In the Amazon Polly section, choose **Use the best available voice**\.
 
 ## How to add text\-to\-speech<a name="add-tts"></a>
 
-1. In a contact flow, add the block that will play the prompt\. For example, add a [Play prompt](play.md) block\. 
+1. In a flow, add the block that will play the prompt\. For example, add a [Play prompt](play.md) block\. 
 
 1. In the **Properties**, choose **Text\-to\-speech**\. 
 

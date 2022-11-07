@@ -10,7 +10,7 @@ We recommend using these instructions to set up agent\-to\-agent voice, chat, an
 
 1. On the navigation menu, choose **Routing**, **Quick connects**, **Add a new destination**\.
 
-1. Enter a name for the connect\. Choose the type, and then specify the destination \(such as a phone number or the name of an agent\), contact flow \(if applicable\), and description\.
+1. Enter a name for the connect\. Choose the type, and then specify the destination \(such as a phone number or the name of an agent\), flow \(if applicable\), and description\.
 **Important**  
 A description is required when you create a quick connect\. If you don't add one, you'll get an error when you try to save the quick connect\. 
 
@@ -31,15 +31,15 @@ A description is required when you create a quick connect\. If you don't add one
 **Tip**  
 Agents see all of the quick connects for the queues in their routing profile\.
 
-## Step 2: Set up the "Transfer to agent" contact flow<a name="setup-agent-voice-transfers"></a>
+## Step 2: Set up the "Transfer to agent" flow<a name="setup-agent-voice-transfers"></a>
 
-In this step, you create a contact flow that's type **Transfer to agent** and use a [Set working queue](set-working-queue.md) block to transfer the contact to the agent\. 
+In this step, you create a flow that's type **Transfer to agent** and use a [Set working queue](set-working-queue.md) block to transfer the contact to the agent\. 
 
-1. In the navigation pane, choose **Routing**, **Contact flows**\.
+1. On the navigation menu, choose **Routing**, **Contact flows**\.
 
 1. Use the drop\-down to choose **Create transfer to agent flow**\. 
 
-1. Type a name and a description for your contact flow\.
+1. Type a name and a description for your flow\.
 
 1. In the left navigation menu, expand **Set**, and then drag the **Set working queue** block to the canvas\.
 
@@ -48,16 +48,16 @@ In this step, you create a contact flow that's type **Transfer to agent** and us
 
    1. Choose **By agent**\.
 
-   1. Choose **Use attribute**\.
+   1. Choose **Set dynamically**\.
 
-   1. For **Type**, use the dropdown box to select **Agent**\.
+   1. For **Namespace**, use the dropdown box to select **Agent**\.
 
-   1. For **Attribute**, use the dropdown box to select **User name**\.
+   1. For **Value**, use the dropdown box to select **User name**\.
 
 1. Add a [Transfer to queue](transfer-to-queue.md) block\. You don't need to configure this block\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/agent-to-agent-transfer.png)
 
-1. Save and publish this contact flow\.
+1. Save and publish this flow\.
 
 1. To show your agents how to transfer chats to another agent, see [Transfer chats to another queue](transfer-chats.md)\. 
 

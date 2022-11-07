@@ -1,6 +1,6 @@
 # Plan your identity management in Amazon Connect<a name="connect-identity-management"></a>
 
-Before you [set up your Amazon Connect instance](amazon-connect-instances.md), you should decide how you want to manage your Amazon Connect users\.
+Before you [set up your Amazon Connect instance](amazon-connect-instances.md), you should decide how you want to manage your Amazon Connect users\. A user is anyone who needs an Amazon Connect account: agents, call center managers, analysts, and more\.
 
 **You cannot change the option you select for identity management after you create an instance**\. Instead, you must delete the instance and create a new one\. However, if you delete an instance, you lose its configuration settings and metrics data\.
 

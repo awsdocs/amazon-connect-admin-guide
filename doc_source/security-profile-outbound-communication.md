@@ -4,8 +4,8 @@ To enable agents to make outbound calls, the following **Make outbound calls** p
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/outboundcalls-security-profile-permissions.png)
 
-To enable call center managers to create high\-volume outbound campaign, assign the **High\-Volume Outbound Communications** permissions to their security profile\.
+To enable call center managers to create outbound campaigns, assign the **outbound campaigns** permissions to their security profile\.
 
-For instructions, see [Update security profiles](update-security-profiles.md)\.
+For information about how add more permissions to an existing security profile, see [Update security profiles](update-security-profiles.md)\.
 
 By default, the **Admin** security profile already has permissions to perform all activities\.

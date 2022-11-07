@@ -1,12 +1,12 @@
-# Forecasting in Amazon Connect \(Preview\)<a name="forecasting"></a>
+# Forecasting in Amazon Connect<a name="forecasting"></a>
 
 Forecasting is the starting point for any scheduling and capacity planning activities\. Before you can generate a schedule or capacity plan, you must create a corresponding forecast\. 
 
-A *forecast* attempts to predict future contact volume and handle time\. We use historical metrics to create the forecast\. 
+A *forecast* attempts to predict future contact volume and average handle time\. We use historical metrics to create the forecast\. 
 
-**Short term forecasts are automatically updated every day**\. When you come into work, you can review the forecast that was updated overnight with the most current data\. You can publish the forecast to make it available to schedulers whenever you want\. The **Forecasting** page displays when a forecast was last updated and published\. Use short term forecasts for scheduling\.
+**Short term forecasts are automatically updated every day**\. When you come into work, you can review the forecast that was updated overnight with the most current data\. You can publish the forecast to make it available to schedulers whenever you want\. The **Forecasting** page displays when a forecast was last updated and published\. Use published short term forecasts for scheduling\.
 
-**Long term forecasts are automatically updated every week, based on the day you created the forecast**\. For example, if you created the forecast on a Monday, it is updated every Monday\. Use long term forecasts for hiring\.
+**Long term forecasts are automatically updated every week, based on the day you created the forecast**\. For example, if you created the forecast on a Monday, it is updated every Monday\. Use published long term forecasts for capacity planning\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-lastupdated-date.png)
 
@@ -15,9 +15,9 @@ Only the most current forecast is available\. Because the forecast is updated ev
 
 ## Getting started with forecasting<a name="getting-started-forecasting"></a>
 
-Following is the order of steps for creating a forecast and sharing it with others\.
+Use the following process to create a forecast and share it with others:
 
-1. [Set the forecast and scheduling interval](set-forecast-scheduling-interval.md): This is a one\-time activity typically set up by forecasters\. It cannot be undone\.
+1. [Set the forecast and scheduling interval](set-forecast-scheduling-interval.md): \[This is a one\-time activity typically set up by forecasters\. It cannot be undone\.\]
 
 1. [Create forecast groups](create-forecast-groups.md)
 

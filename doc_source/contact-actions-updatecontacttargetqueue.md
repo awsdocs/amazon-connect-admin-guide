@@ -20,7 +20,7 @@ None\.
 
 ## Restrictions<a name="updatecontacttargetqueue-restrictions"></a>
 
-This action is supported only in contact flows and transfer flows\. It is not supported in whisper flows, hold flows, or customer queue flows\. 
+This action is supported only in inbound contact flows and transfer flows\. It is not supported in whisper flows, hold flows, or customer queue flows\. 
 
 ## Corresponding block in the UI<a name="updatecontacttargetqueue-ui"></a>
 

@@ -9,7 +9,7 @@ You can provide a chat experience to your customers by using one of the followin
 + Interactive messages provide customers with a prompt and pre\-configured display options that they can select from\. These messages are powered by Amazon Lex and configured through Amazon Lex using a Lambda\. For instructions about how to add interactive messages through Amazon Lex, see this blog: [Set up interactive messages for your Amazon Connect chatbot](https://aws.amazon.com/blogs/contact-center/easily-set-up-interactive-messages-for-your-amazon-connect-chatbot/)\.
 
   Amazon Connect supports the following templates: a list picker and a time picker\. For more information, see [Add interactive messages to chat](interactive-messages.md)\. 
-+  [Enable Apple Business Chat](apple-business-chat.md) 
++  [Enable Apple Messages for Business](apple-business-chat.md) 
 +  [Amazon Connect Service API Documentation](https://docs.aws.amazon.com/connect/latest/APIReference), especially the [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
 +  [Amazon Connect Participant Service API](https://docs.aws.amazon.com/connect-participant/latest/APIReference/Welcome.html)\. 
 +  [ Amazon Connect Chat SDK and Sample Implementations](https://github.com/amazon-connect/amazon-connect-chat-ui-examples/) 

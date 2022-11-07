@@ -26,7 +26,7 @@ Toll\-free numbers are telephone numbers with distinct prefix codes that can be 
 
 In the United States, the [Federal Communications Commission](https://www.fcc.gov/consumers/guides/what-toll-free-number-and-how-does-it-work) provides rules for obtaining and using toll\-free numbers\. In other countries, similar governing bodies ensure that toll\-free numbers are managed and distributed in accordance with local laws\.
 
-AWS manages toll\-free numbers as a Responsible Organization, or “RespOrg\.“ When you claim or port a number into Amazon Connect, we register that number with [SOMOS](https://www.somos.com/)\. Once the number is registered, we are able to select multiple carriers to provide BOTH route and carrier redundancy\. This provides the highest level of availability, ensuring the number will remain available even in the event of a complete carrier outage\. This level of service does come at an additional cost, as toll\-free numbers are a higher price than direct dial, but the service reliability and customer experience make this the most attractive option\.
+AWS manages toll\-free numbers as a Responsible Organization, or "RespOrg\." When you claim or port a number into Amazon Connect, we register that number with [SOMOS](https://www.somos.com/)\. Once the number is registered, we are able to select multiple carriers to provide BOTH route and carrier redundancy\. This provides the highest level of availability, ensuring the number will remain available even in the event of a complete carrier outage\. This level of service does come at an additional cost, as toll\-free numbers are a higher price than direct dial, but the service reliability and customer experience make this the most attractive option\.
 
 ## Direct\-in\-dial \(DID\) numbers<a name="concepts-did-numbers"></a>
 
@@ -71,6 +71,6 @@ If you're migrating to Amazon Connect from other platform, we recommend starting
 
 In some cases, you may have more than one Contact Center platform requiring telephony\. Here's an overview of how to configure this:
 + Choose which platform is the initial call\-handling service, and forward to the other platform\. 
-+ If Amazon Connect is the primary call handling platform, you can port or claim numbers\. You will design your contact flows to transfer calls to the other platform on a telephone number you will provide in the contact flow\. 
++ If Amazon Connect is the primary call handling platform, you can port or claim numbers\. You will design your flows to transfer calls to the other platform on a telephone number you will provide in the contact flow\. 
 + If the external platform is the primary call handler, you will need to configure that platform to forward calls to a number you claim in Amazon Connect\. Choose either a toll\-free number, which will give you better redundancy and capacity at an increased cost, or a bank of DID numbers to terminate the call into Amazon Connect\.
 + For the use case, we recommend that you engage AWS Solution Architecture support to ensure your contact center is well\-architected to achieve the best possible outcomes\.

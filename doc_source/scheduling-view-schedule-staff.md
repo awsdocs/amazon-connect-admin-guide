@@ -1,6 +1,8 @@
 # View your schedule<a name="scheduling-view-schedule-staff"></a>
 
-If your organization uses the forecasting, capacity planning, and scheduling features of Amazon Connect you can view your schedule in the agent application\.
+If your organization uses the forecasting, capacity planning, and scheduling features of Amazon Connect you can view your schedule in the agent application, the Contact Control Panel \(CCPv1 or CCPv2\), the Salesforce CTI, or a custom\-built agent desktop\. 
+
+Following are steps you use to view your schedule in the agent application\.
 
 1. Log on to the agent application using the URL that your admin gives you \(for example, **https://\[instance name\]\.my\.connect\.aws/ccp\-v2/**\)\.
 

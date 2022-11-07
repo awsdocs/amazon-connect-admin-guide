@@ -1,6 +1,6 @@
 # How quick connects work<a name="how-quick-connects-work"></a>
 
-This article explains how each type of quick connect works: agent, queue, and external quick connects\. It explains which contact flows are used, and what appears on the agent's Contact Control Panel \(CCP\)\.
+This article explains how each type of quick connect works: agent, queue, and external quick connects\. It explains which flows are used, and what appears on the agent's Contact Control Panel \(CCP\)\.
 
 **Tip**  
 For all three types of quick connects, when the quick connect is invoked, the contact that the agent is working on hears the [Default customer hold](default-customer-hold.md) flow unless you specify a different customer hold flow\. 
@@ -9,7 +9,7 @@ For all three types of quick connects, when the quick connect is invoked, the co
 
 Let's say an agent named John is talking to a customer\. During the conversation he needs to transfer the call to an agent named Maria\. This is an agent quick connect\.
 
-Here's what John and Maria do, and what contact blocks are triggered: 
+Here's what John and Maria do, and what flow blocks are triggered: 
 
 1. John chooses the **Quick Connect** button on his CCP\. \(On the earlier CCP, the button is named **Transfer**\)\. He selects **Maria** from the list of quick connects\. 
 
@@ -48,7 +48,7 @@ Let’s say John is talking to a customer\. The customer needs help resetting hi
 
 Another agent, Maria, is assigned to handle contacts in the PasswordReset queue\. Her status in the CCP is **Available**\. 
 
-Here's what John and Maria do, and what contact blocks are triggered:
+Here's what John and Maria do, and what flow blocks are triggered:
 
 1. John chooses the **Quick Connect** button on his CCP\. \(On the earlier CCP, the button is named **Transfer**\)\. He chooses to transfer the contact to the PasswordReset queue\. As soon as John chooses the PasswordReset quick connect, his CCP banner shows **Connecting**\. 
 **Important**  
@@ -75,6 +75,6 @@ Even though the status of the transferred call \(internal\-transfer\) shows on J
 
 ## External quick connects<a name="external-quick-connects"></a>
 
-There are no contact flows involved in external quick connect\. When an agent invokes an external quick connect, the call is directly connected the destination without invoking any flows\.
+There are no flows involved in external quick connect\. When an agent invokes an external quick connect, the call is directly connected the destination without invoking any flows\.
 
-Because no contact flow is involved in external quick connects, you can't set the outbound caller ID\. Instead, the caller ID that you specified when you [created the queue](create-queue.md) is used\. 
+Because no flow is involved in external quick connects, you can't set the outbound caller ID\. Instead, the caller ID that you specified when you [created the queue](create-queue.md) is used\. 

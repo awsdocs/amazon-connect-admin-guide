@@ -47,12 +47,13 @@ Amazon Connect supports resource\-level permissions \(specifying a resource ARN 
 + Security profile
 + Hierarchy group
 + Queue
-+ Contact flow
++ Flow
 + Hours of operation
 + Phone number
++ Task templates
 + Customer profile domain
 + Customer profile object type
-+ High\-volume outbound campaigns
++ Outbound campaigns
 
 Administrators can use AWS JSON policies to specify who has access to what\. That is, which **principal** can perform **actions** on what **resources**, and under what **conditions**\.
 

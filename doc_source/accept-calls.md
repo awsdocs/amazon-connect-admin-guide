@@ -1,9 +1,11 @@
-# Accept incoming calls<a name="work-with-calls"></a>
+# Accept incoming calls<a name="accept-calls"></a>
 
 1. Whenever you set your status in the CCP to **Available**, Amazon Connect can deliver calls to you, based on the settings in your [routing profile](routing-profiles.md)\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/incoming-call-ccp2.png)
 
 1. When a call arrives, choose the **Accept call** button\. 
+**Note**  
+The **Accept call** button does not appear if your admin has configured your user profile for [Auto\-Accept Call](enable-auto-accept.md)\. 
 
 1. Before you're connected to the contact, Amazon Connect announces the name of the originating queue\. 
 

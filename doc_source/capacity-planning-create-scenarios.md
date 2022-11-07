@@ -1,4 +1,4 @@
-# Create capacity planning scenarios \(Preview\)<a name="capacity-planning-create-scenarios"></a>
+# Create capacity planning scenarios<a name="capacity-planning-create-scenarios"></a>
 
 A scenario has two parts: 
 + Scenario inputs: The maximum occupancy, daily attrition, FTE hours per week\. For example, you might enter data that represent your best case scenarios \(everyone is at work\) or worst case scenarios \(a large number of people are out sick during winter months\)\.

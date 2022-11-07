@@ -1,4 +1,4 @@
-# Contact block: Get queue metrics<a name="get-queue-metrics"></a>
+# Flow block: Get queue metrics<a name="get-queue-metrics"></a>
 
 ## Description<a name="get-queue-metrics-description"></a>
 + Retrieves the following real\-time metrics from a queue so you can make routing decisions\. If there is no current activity in your contact center, nothing is returned for these metrics\. 
@@ -28,7 +28,7 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="get-queue-metrics-types"></a>
+## Flow types<a name="get-queue-metrics-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows

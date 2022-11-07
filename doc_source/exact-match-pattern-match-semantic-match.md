@@ -35,7 +35,7 @@ For a list of languages supported by pattern match, see [Pattern match languages
 ## How to use semantic match<a name="semantic-match"></a>
 
 Semantic matching is supported only for post\-call analysis\.
-+ An “intent” is an example of utterance\. It can be a phrase or a sentence\.
++ An "intent" is an example of utterance\. It can be a phrase or a sentence\.
 + You can enter up to four intents in one card \(group\)\.
 + We recommend using semantically similar intents within one card to get the best results\. For example, there's category for "politeness\." It includes two intents: "greetings" and "goodbye"\. We recommend separating these intents into two cards:
   + Card 1: "How are you today" and "How’s everything going"\. They are semantically similar greetings\.

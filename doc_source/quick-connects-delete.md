@@ -1,9 +1,13 @@
 # Delete quick connects<a name="quick-connects-delete"></a>
 
-Use the [DeleteQuickConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteQuickConnect.html) API to delete quick connects\.
+There are two ways you can delete a quick connect:
++ Use Amazon Connect console\. This topic provides instructions\.
++ Use the [DeleteQuickConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteQuickConnect.html) API\.
 
-At this time you can't delete quick connects using the Amazon Connect admin console\. However, you can reuse them by changing the type, destination, and contact flow on the **Quick connects** page\.
+**To delete a quick connect**
 
-Or, you can remove them from a queue on the **Edit queue** page so that agents can't see them in the Contact Control Panel \(CCP\)\. 
+1. Log in to your Amazon Connect instance \(https://*instance name*\.my\.connect\.aws/\) with an Admin account or a user account that has **Quick connects \- Delete** permissions in its [security profile](connect-security-profiles.md)\. \(To find the name of your instance, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.\)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-flow-transfer-delete-quick-connect.png)
+1. On the navigation menu, choose **Routing**, **Quick connects**\.
+
+1. Select the quick connect, and then choose the **Delete** icon\. 

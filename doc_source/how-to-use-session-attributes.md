@@ -15,7 +15,7 @@ For an example of how to create a Lambda function that processes session attribu
 
 For the structure of the event data that Amazon Lex provides to a Lambda function, see [Lambda Function Input Event and Response Format](https://docs.aws.amazon.com/lex/latest/dg/lambda-input-response-format.html) in the *Amazon Lex Developer Guide*\.
 
-## Contact blocks that support Lex session attributes<a name="blocks-support-lex-session-attributes"></a>
+## Flow blocks that support Lex session attributes<a name="blocks-support-lex-session-attributes"></a>
 
 You can use Lex session attributes in the following blocks when a Lex bot is called:
 + Get customer input

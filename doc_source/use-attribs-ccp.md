@@ -8,4 +8,4 @@ When you use the Amazon Connect Streams API, you can access user\-defined attrib
 
 To access the attribute directly from a Lambda function, use $\.External\.AttributeName\. If the attribute is stored to a user\-defined attribute from a **Set contact attributes** block, use $\.Attributes\.AttributeName\.
 
-For example, included with your Amazon Connect instance, there is a contact flow named “Sample note for screenpop\.” In this contact flow, a **Set contact attributes** block is used to create an attribute from a text string\. The text, as an attribute, can be passed to the CCP to display a note to an agent\.
+For example, included with your Amazon Connect instance, there is a flow named "Sample note for screenpop\." In this flow, a **Set contact attributes** block is used to create an attribute from a text string\. The text, as an attribute, can be passed to the CCP to display a note to an agent\.

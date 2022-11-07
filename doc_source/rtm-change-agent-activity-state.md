@@ -2,13 +2,17 @@
 
 Agents manually set their status in the Contact Control Panel \(CCP\)\. However, on the real\-time metrics report, supervisors can manually change the **Agent Activity** status of an agent\. This overrides what the agent has set in the CCP\.
 
-When you choose the **Agent Activity** column, you can select a status, such as **Offline**, **Available**, or **Break**\. 
+ The value that's displayed in the **Agent Activity** column can be either: 
++ The agent's availability status, such as **Offline**, **Available**, or **Break**\.
++ The contact state, such as **Incoming** or **On contact**\.
+
+When you choose the **Agent Activity** column, you can select and change an agent's *availability status*, such as **Offline**, **Available**, or **Break**\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-change-agent-activity-state.png)
 
 This change appears in the agent event stream\.
 
-You can't select or change any of the contact states that appear in the **Agent Activity** column, such as **Incoming** or **On contact**\. 
+However, when a *contact state* is displayed in the **Agent Activity** column, such as **Incoming** or **On contact**, you cannot change it to **Available** or **Offline**, for example, even though those options are displayed in the dropdown menu\. This means you can't set the agent's next status while they are on a contact\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-change-agent-activity-state-incoming.png)
 

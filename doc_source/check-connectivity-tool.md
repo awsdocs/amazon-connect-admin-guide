@@ -13,22 +13,16 @@ The complete results are available for download as a JSON file\. You can copy th
 
 ## Parameters to customize the Endpoint Test Utility<a name="customize-check-connectivity-tool"></a>
 
-Use the following URL parameters to customize the Endpoint Test Utility:
-+ **lng**: Change the language of the tool\. Currently supported languages are English \(default\), Spanish, and French\. It accepts the following values:
-  + en
+You can use the Endpoint Test Utility as is without any customizations\. However, if you want to customize it, use the following URL parameters:
++ **lng**: Change the language of the tool\. Currently supported languages are English, Spanish, and French\. It accepts the following values:
+  + en \(default\)
   + es
   + fr
 + **autoRun**: Run the tool automatically\. It accepts the following values:
   + true
-  + false
-+ **connectInstanceUrl**: Specify the Amazon Connect instance in the URL\. It must start with **https**\.
+  + false \(default\)
++ **connectInstanceUrl**: Not used by default\. You can specify the Amazon Connect instance in the URL\. It must start with **https**\.
 
 Example customized URL:
 
 `https://a.co/4pBJMng?lng=es&autoRun=true&connectInstanceUrl=https://myinstance.awsapps.com/connect/login` 
-
-## Previous Check Connectivity Tool<a name="previous-check-connectivity-tool"></a>
-
-The previous version of the tool is available here: [Amazon Connect Check Connectivity Tool](https://s3.amazonaws.com/connectivitytest/checkConnectivity.html)\. 
-
-This tool checks which web browser the agent is running, and whether the microphone has required permissions\. Click the **Test** buttons to check the ports and latency\. 

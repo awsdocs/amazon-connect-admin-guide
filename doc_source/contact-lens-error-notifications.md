@@ -1,6 +1,6 @@
 # Error notifications: When Contact Lens can't analyze a contact<a name="contact-lens-error-notifications"></a>
 
-It's possible that Contact Lens can't analyze a contact file, even though analysis is enabled on the contact flow\. When this happens, Contact Lens sends error notifications using Amazon EventBridge events\. 
+It's possible that Contact Lens can't analyze a contact file, even though analysis is enabled on the flow\. When this happens, Contact Lens sends error notifications using Amazon EventBridge events\. 
 
 Events are emitted on a best effort basis\.
 
@@ -44,7 +44,7 @@ The format of a notification looks like the following sample:
 
 | Event reason code | Description | 
 | --- | --- | 
-| INVALID\_ANALYSIS\_CONFIGURATION  | Contact Lens received invalid values when the contact flow was initiated, such as an unsupported or invalid language code, or an unsupported value for redaction behavior\.  | 
+| INVALID\_ANALYSIS\_CONFIGURATION  | Contact Lens received invalid values when the flow was initiated, such as an unsupported or invalid language code, or an unsupported value for redaction behavior\.  | 
 | RECORDING\_FILE\_CANNOT\_BE\_READ  | Contact Lens can't get the recording file\. This might be because file isn't present in the S3 bucket, or there are problems with permissions\.  | 
 | RECORDING\_FILE\_TOO\_SMALL  |  The recording audio file is too small for analysis \(less than 105 ms\)\.  | 
 |  RECORDING\_FILE\_TOO\_LARGE  | The recording file exceeds the duration limit for analysis \(more than 14,400 seconds, or 4 hours\)\.  | 

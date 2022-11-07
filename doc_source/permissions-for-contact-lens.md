@@ -37,7 +37,7 @@ This permission manages access to unredacted content that contains sensitive dat
 + Original, unredacted chat transcripts
 + Original, unredacted transcripts analyzed by Contact Lens
 + Original, unredacted audio recordings
-You can access this content on the **Contact Trace Record** page for a contact\. For more information, see [Example original, analyzed file](contact-lens-example-output-files.md#example-original-output-file)\.  
+You can access this content on the **Contact Record** page for a contact\. For more information, see [Example original, analyzed file](contact-lens-example-output-files.md#example-original-output-file)\.  
 If you have permissions to both **Recorded conversations \(redacted\)** and **Recorded conversations \(unredacted\)**, by default only redacted recordings are made available on the **Contact Record** page\.  
 You must remove permissions to **Recorded conversations \(redacted\)** to access unredacted conversations\.   
 You can't access redacted and unredacted content at the same time\. 

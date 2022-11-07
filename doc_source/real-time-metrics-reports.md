@@ -11,6 +11,7 @@ You can also use the [Amazon Connect Service APIs](https://docs.aws.amazon.com/c
 + [Permissions required to view real\-time metrics reports](rtm-permissions.md)
 + [How often real\-time metrics refresh](rtm-refresh.md)
 + [Use one\-click drill\-downs for Routing profiles and Queues tables](one-click-drill-downs.md)
++ [Visualize: Queue dashboard](visualize-queue-dashboard.md)
 + [View how many contacts are waiting in queue](view-contacts-in-queue.md)
 + [Create a real\-time metrics report](create-real-time-report.md)
 + [No metrics or too few rows in a queues report?](troubleshoot-rtm.md)

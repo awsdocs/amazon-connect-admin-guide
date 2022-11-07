@@ -1,6 +1,6 @@
 # Default customer queue: queue hold message and music<a name="default-customer-queue"></a>
 
-This default contact flow is played when a customer is placed in a queue\. 
+This default flow is played when a customer is placed in a queue\. 
 
 1.  The loop has a one\-time voice prompt:
 
@@ -14,7 +14,7 @@ This default contact flow is played when a customer is placed in a queue\.
 
 The following steps show how to change the default message customers hear when they are put in a queue to wait for the next available agent\.
 
-1. On the navigation menu, choose **Routing**, **Contact flows**\.
+1. On the navigation menu, choose **Routing**, **Flows**\.
 
 1. Choose **Default customer queue**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow1.png)

@@ -10,6 +10,9 @@ Following are examples of what Contact Lens output files look like when they are
 + Redacted audio file
   + /connect\-instance\- bucket/**Analysis/Voice/Redacted**/2020/02/04/*contact's\_ID*\_**call\_recording\_redacted**\_2020\-02\-04T21:14:16Z\.**wav**
 
+**Important**  
+To delete a recording, you must delete the files for both the redacted and unredacted recordings\. 
+
 ## Example original, analyzed file<a name="example-original-output-file"></a>
 
 This section shows an example schema for a conversation that Contact Lens has analyzed\. The example shows loudness, issue detection/call drivers, and what information is going to be redacted\.

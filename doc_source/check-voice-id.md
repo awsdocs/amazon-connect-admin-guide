@@ -1,9 +1,9 @@
-# Contact block: Check Voice ID<a name="check-voice-id"></a>
+# Flow block: Check Voice ID<a name="check-voice-id"></a>
 
 ## Description<a name="check-voice-id-description"></a>
 
 **Note**  
-The [Set Voice ID](set-voice-id.md) block needs to be set in the contact flow before this one\. That block sends audio to [Amazon Connect Voice ID](voice-id.md) to verify the customer's identity, and returns a status\. 
+The [Set Voice ID](set-voice-id.md) block needs to be set in the flow before this one\. That block sends audio to [Amazon Connect Voice ID](voice-id.md) to verify the customer's identity, and returns a status\. 
 
 The **Check Voice ID** block branches based on the results of the voice analysis and the status returned by Voice ID:
 + **Enrollment status**: 
@@ -41,10 +41,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | No \- Error branch | 
 | Task | No \- Error branch | 
 
-## Contact flow types<a name="check-voice-id-types"></a>
+## Flow types<a name="check-voice-id-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer queue flow
 + Customer whisper flow
 + Outbound whisper flow
@@ -62,7 +62,7 @@ The following image shows what this block looks like when it's configured to che
 
 ## Configuration tips<a name="check-voice-id-tips"></a>
 
-When you create a contact flow that uses this block, add these blocks in the following order:
+When you create a flow that uses this block, add these blocks in the following order:
 
 1. [Set Voice ID](set-voice-id.md) block\. 
 

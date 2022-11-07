@@ -3,9 +3,9 @@
 Contacts are routed through your contact center based on these factors: 
 + The routing profile an agent is assigned to\.
 + The hours of operation for a given queue\.
-+ The routing logic you define in your contact flows\.
++ The routing logic you define in your flows\.
 
-For example, you use routing profiles to route specific types of contacts to agents with specific skill sets\. If no agent with the required skill set is available, you can place the contact in the queue defined in the contact flow\. 
+For example, you use routing profiles to route specific types of contacts to agents with specific skill sets\. If no agent with the required skill set is available, you can place the contact in the queue defined in the flow\. 
 
 Here's the logic Amazon Connect uses to route contacts: 
 + Contacts in a queue are automatically prioritized and forwarded to the next available agent \(that is, the agent who has been idle longest\)\.

@@ -62,7 +62,7 @@ If your business does not use SAML, and you have firewall restrictions, you can 
 | ap\-southeast\-2  | https://dwcpoxuuza83q\.cloudfront\.net/  | 
 | eu\-central\-1  | https://d1whcm49570jjw\.cloudfront\.net/  | 
 | ca\-central\-1  | https://d2wfbsypmqjmog\.cloudfront\.net/  | 
-| us\-gov\-east\-1:  | hhttps://s3\-us\-gov\-east\-1\.amazonaws\.com/warp\-drive\-console\-static\-content\-prod\-osu/  | 
+| us\-gov\-east\-1:  | https://s3\-us\-gov\-east\-1\.amazonaws\.com/warp\-drive\-console\-static\-content\-prod\-osu/  | 
 | us\-gov\-west\-1:  | https://s3\-us\-gov\-west\-1\.amazonaws\.com/warp\-drive\-console\-static\-content\-prod\-pdt/  | 
 
 ### NLB endpoints<a name="nlb-endpoints"></a>
@@ -124,7 +124,7 @@ In the AWS ip\-ranges\.json file, you can see the same range listed twice\. For 
                 },
 ```
 
-AWS always publishes any IP range twice: one for the specific service, and one for “AMAZON” service\. There could even be a third listing for a more specific use case within a service\. 
+AWS always publishes any IP range twice: one for the specific service, and one for "AMAZON" service\. There could even be a third listing for a more specific use case within a service\. 
 
 When there are new IP address ranges supported for Amazon Connect, they are added to the publicly available ip\-ranges\.json file\. They are kept for a minimum of 30 days before they are used by the service\. After 30 days, softphone traffic through the new IP address ranges increases over the subsequent two weeks\. After two weeks, traffic is routed through the new ranges equivalent to all available ranges\.
 

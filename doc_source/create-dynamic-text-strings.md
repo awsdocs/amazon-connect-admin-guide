@@ -9,7 +9,7 @@ Alternatively, you could store the attributes returned from the Lambda function 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-attribute.png)
 
-If you are referencing a user\-defined attribute that was previously set as a contact attribute in the contact flow using the API, you can reference the attribute using the $\.Attributes\.nameOfAttribute syntax\. 
+If you are referencing a user\-defined attribute that was previously set as a contact attribute in the flow using the API, you can reference the attribute using the $\.Attributes\.nameOfAttribute syntax\. 
 
 For example, if the contact in question has attributes "FirstName" and "LastName" set previously, reference them as follows:
 + Hello $\.Attributes\.FirstName $\.Attributes\.LastName, thank you for calling\.

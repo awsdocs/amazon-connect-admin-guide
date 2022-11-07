@@ -6,14 +6,14 @@ You can create a real\-time metrics report to view real\-time or near\-real time
 
 1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
-1. Choose **Metrics and Quality**, **Real\-time metrics**\.
+1. Choose **Analytics**, **Real\-time metrics**\.
 
 1. Choose one of the following report types\. They group and order the data in different ways and include different metrics by default\.
    + **Queues**
    + **Agents**
    + **Routing profiles**
 
-1. To add a another report to the page, choose **New table** and then choose a report type\. You can add multiple reports of the same report type\.
+1. To add another report to the page, choose **New table** and then choose a report type\. You can add multiple reports of the same report type\.
 
    There's no limit to the number of tables you can add, but you might start experiencing performance issues if you add a lot of them\.
 
@@ -37,4 +37,4 @@ You can create a real\-time metrics report to view real\-time or near\-real time
 
 1. \(Optional\) To save your report for future reference, choose **Save**, provide a name for the report, and then choose **Save**\.
 
-   To view your saved real\-time metrics reports, choose **Metrics and Quality**, **Saved reports**, and then choose the **Real\-time metrics** tab\.
+   To view your saved real\-time metrics reports, choose **Analytics**, **Saved reports**, and then choose the **Real\-time metrics** tab\.

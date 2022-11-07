@@ -12,7 +12,7 @@ For an agent to be able receive a task, they need a quick connect created for th
 
 1. Under **Destination**, use the dropdown list to choose the user name for the agent\.
 
-1. Under **Contact flow**, choose **Default agent transfer**, or the appropriate contact flow for your contact center\.
+1. Under **Flow**, choose **Default agent transfer**, or the appropriate flow for your contact center\.
 
 1. Under **Description**, enter a description, such as **Jane Doe's quick connect**\.
 

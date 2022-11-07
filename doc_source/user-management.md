@@ -22,7 +22,9 @@ For information about how add more permissions to an existing security profile, 
 
 1. Choose **Create and set up a new user** and then choose **Next**\.
 
-1. Enter the name, email address, and password for the user\.
+1. Enter the name, email address, secondary email address, mobile number, and password for the user\.
+
+   If you provide a secondary email, the user receives email notifications \- other than password reset notifications \- to this email address instead of to their primary email address\.
 
 1. Choose a routing profile and a security profile\.
 
@@ -43,6 +45,24 @@ Use these steps to add several users from a \.csv file such as an Excel spreadsh
 1. Choose **Add new users**\.
 
 1. Choose **Upload my users from a template \(\.csv\)** and then choose **Next**\.
+
+   The \.csv template has the following columns in the first row:
+   + first name
+   + last name
+   + email address
+   + secondary email address
+   + mobile
+   + password
+   + user login
+   + routing profile name
+   + security\_profile\_name\_1\|security\_profile\_name\_2
+   + phone type \(soft/desk\)
+   + phone number
+   + soft phone auto accept yes/no\)
+   + ACW timeout \(seconds\)
+
+   The following image shows a sample of what the \.csv template looks like in an Excel spreadsheet:  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/add-bulk-users.png)
 
 1. Choose **Download template**\. 
 

@@ -10,6 +10,6 @@ Assign the following **Customer profiles** permissions as needed to the agent's 
 + **Edit**: Enables agents to edit details in the customer profile \(for example, change address\)\. They inherit **View** permissions by default\.
 + **Create**: Enables agents to create and save a new profile\. They inherit **View** permissions by default, but don't inherit **Edit** permissions\.
 
-For instructions, see [Update security profiles](update-security-profiles.md)\.
+For information about how add more permissions to an existing security profile, see [Update security profiles](update-security-profiles.md)\.
 
 By default, the **Admin** security profile already has permissions to perform all Customer profiles activities\.

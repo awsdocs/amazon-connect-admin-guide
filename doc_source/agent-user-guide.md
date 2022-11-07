@@ -33,15 +33,16 @@ The following image shows the CCP\.
 
 With the agent application you can access all Amazon Connect features in a single application\. You can:
 + Use the Contact Control Panel \(CCP\) to interact with customer contacts\.
-+ Use Customer Profiles to view customer information\.
-+ Use Amazon Connect Wisdom to obtain the information you need from your company knowledge base\.
++ [Use Customer Profiles](use-customer-profiles.md) to view customer information\.
++ [Use Cases](use-cases.md) to create, edit, and resolve customer cases\.
++ [Use Amazon Connect Wisdom](use-wisdom.md) to obtain the information you need from your company knowledge base\.
 
 To access the agent application use the following URL:
 + https://*instance name*\.my\.connect\.aws/agent\-app\-v2/
 
 Where *instance name* is provided by your IT department or the individuals that set up Amazon Connect for your business\.
 
-The following image shows the agent application with the CCP, Customer Profiles, and Wisdom\.
+The following image shows the agent application with the CCP, Customer Profiles, Cases, and Wisdom\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-intro-agent-app.png)
 
@@ -56,6 +57,8 @@ The following image shows the agent application with the CCP, Customer Profiles,
 1. Based on the channel of the contact that is in focus in your inbox, the appropriate content shows here; for example, when a chat is selected, the chat interface appears\.
 
 1. View customer information for the contact that is in focus in your inbox\.
+
+1. Search and view cases\.
 
 1. Search for knowledge articles to solve customer issues\.
 

@@ -3,7 +3,7 @@
 
 
 There are two ways you can enable Wisdom for your instance: 
-+ Use the [new](amazon-connect-release-notes.md#august21-release-notes) Amazon Connect console\. This topic provides instructions\.
++ Use the [new](amazon-connect-release-notes.md#august21-release-notes) Amazon Connect console\. There are instructions on this page\.
 + Use the Amazon Connect Wisdom API\. You can ingest content using the Amazon Connect Wisdom APIs\. To learn more, see this blog post: [Ingesting content to power real\-time recommendations and search with Amazon Connect Wisdom](http://aws.amazon.com/blogs/contact-center/ingesting-content-to-power-real-time-recommendations-and-search-with-amazon-connect-wisdom/)\. 
 
   The APIs support the ingestion of HTML and text; plain text files must be in UTF\-8\. For more information, see the [Amazon Connect Wisdom API Reference](https://docs.aws.amazon.com/wisdom/latest/APIReference/)\. 
@@ -15,7 +15,7 @@ Following is an overview of the steps to enable Wisdom:
 1. Create an encryption key to encrypt the excerpt that is provided in the recommendations to the agent\.
 
 1. Create a knowledge base using external data:
-   + Add data integrations from [ Salesforce](https://developer.salesforce.com/docs/atlas.en-us.knowledge_dev.meta/knowledge_dev/sforce_api_objects_knowledge__kav.htm) and [ ServiceNow](https://developer.servicenow.com/dev.do#!/reference/api/rome/rest/knowledge-management-api) using prebuilt connectors in the Amazon Connect console\.
+   + Add data integrations from [ Salesforce](https://developer.salesforce.com/docs/atlas.en-us.knowledge_dev.meta/knowledge_dev/sforce_api_objects_knowledge__kav.htm), [ ServiceNow](https://developer.servicenow.com/dev.do#!/reference/api/rome/rest/knowledge-management-api), and ZenDesk using prebuilt connectors in the Amazon Connect console\.
    + Encrypt the content importing from these applications using a KMS key\.
    + Specify the sync frequency\.
 
@@ -26,8 +26,8 @@ Following is an overview of key concepts and the information that you'll be prom
 ### About the Wisdom domain<a name="wisdom-domain"></a>
 
 When you enable Amazon Connect Wisdom, you create a Wisdom domain: an Assistant that is made up of one knowledge base\. Following are guidelines for creating Wisdom domains: 
-+ Each Amazon Connect instance can only be associated with one domain\. 
 + You can create multiple domains, but they don't share external application integrations or customer data between each other\. 
++ Each domain can be associated with one or more Amazon Connect instances, but each Amazon Connect instance can be associated with only one domain\.
 + All the external application integrations you create are at a domain level\. All of the Amazon Connect instances associated with a domain inherit the domain's integrations\. 
 + You can change the association of your Amazon Connect instance from your current domain to a new domain at any time, by choosing a different domain\. 
 
@@ -41,7 +41,7 @@ When you enable Wisdom, you are prompted to provide a friendly domain name that'
 
 1. One for the Wisdom domain, used to encrypt the excerpt provided in the recommendations\. 
 
-1. Another to encrypt the content imported from Salesforce and ServiceNow\. Note that Wisdom search indices are always encrypted at rest using an AWS owned key\.
+1. Another to encrypt the content imported from Salesforce, ServiceNow, and ZenDesk\. Note that Wisdom search indices are always encrypted at rest using an AWS owned key\.
 
 Step\-by\-step instructions for creating these KMS keys are provided in [Step 1: Add integration](#enable-wisdom-step1)\.
 
@@ -49,16 +49,13 @@ Your customer managed key is created, owned, and managed by you\. You have full 
 
 If you choose to set up a KMS key where someone else is the administrator, the key must have a policy that allows `kms:CreateGrant` and `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom\. For information about how to change a key policy, see [Changing a key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policy-modifying.html) in the AWS Key Management Service Developer Guide\.
 
-**Tip**  
-You can create KMS keys or provide an existing KMS key programmatically\. For more information, see 
-
 ## Step 1: Add integration<a name="enable-wisdom-step1"></a>
 
 Following are instructions for how to create a new domain and add an integration\.
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the **Instances** page, choose the instance alias\. The instance alias is also your instance name, which appears in your Amazon Connect URL\.  
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Wisdom**, and then choose **Add domain**\.  
@@ -170,7 +167,7 @@ The URI template is based on your version of Salesforce \(such as Lightning\), a
 
 ## Step 4: Add a Wisdom block to your contact flow<a name="enable-wisdom-step4"></a>
 
-By adding a [Wisdom](wisdom.md) block to your contact flow, you associate a Wisdom domain to the current contact\. This enables you to display information from a specific domain, based on criteria about the contact\.
+By adding a [Wisdom](wisdom.md) block to your flow, you associate a Wisdom domain to the current contact\. This enables you to display information from a specific domain, based on criteria about the contact\.
 
 **Note**  
 Amazon Connect Wisdom, along with Contact Lens Real\-Time analytics, is used to recommend content that is related to customer issues detected during the current contact\. The [Set recording and analytics behavior](set-recording-behavior.md) block with Contact Lens real\-time enabled must also be set in this flow for Wisdom recommendations to work\. It doesn’t matter where in the flow you add [Set recording and analytics behavior](set-recording-behavior.md)\. 

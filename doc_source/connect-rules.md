@@ -1,4 +1,4 @@
-# Create rules<a name="connect-rules"></a>
+# Create Amazon Connect rules<a name="connect-rules"></a>
 
 A rule is an action that Amazon Connect automatically performs, based on conditions you specify\. Contact center managers, supervisors and QA analysts can quickly create rules from the Amazon Connect console\. No coding is required\.
 

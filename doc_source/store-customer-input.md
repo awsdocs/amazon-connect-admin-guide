@@ -1,4 +1,4 @@
-# Contact block: Store customer input<a name="store-customer-input"></a>
+# Flow block: Store customer input<a name="store-customer-input"></a>
 
 ## Description<a name="store-customer-input-description"></a>
 
@@ -20,10 +20,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | No \- Error branch | 
 | Task | No \- Error branch | 
 
-## Contact flow types<a name="store-customer-input-types"></a>
+## Flow types<a name="store-customer-input-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer Queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
@@ -55,11 +55,29 @@ To use a star \(\*\) as part of the terminating keypress, you must also choose *
   + **Local format**: If all of your customers all calling from the same country that your instance is in, choose that country from the dropdown list\. Amazon Connect then auto\-populates the country code for customers so that they don't have to enter it\.
   + **International format**: If you have customers calling from different countries, choose **International format**\. Amazon Connect then requires customers to enter their country code\.
 
+## Problems with DTMF input?<a name="store-customer-input-use-multiple-input-blocks"></a>
+
+Let's say you have the following scenario with two contacts flows, each one capturing DTMF input from customers: 
+
+1. One flow uses the **Get customer input** block to request DTMF input from customers\.
+
+1. After the DTMF input is entered, it uses the **Transfer to flow** block to move the contact to the next contact flow\.
+
+1. In the next flow, there's a **Store customer input** block to get more DTMF input from the customer\.
+
+There's setup time between the first and second flows\. This means if the customer enters DTMF input very quickly for the second flow, some of the DTMF digits might be dropped\.
+
+For example, the customer needs to press 5, then wait for a prompt from the second flow, then type 123\. In this case, 123 is captured without problem\. However, if they don't wait for the prompt and enter 5123 very quickly, the **Store customer input** block may capture only 23 or 3\.
+
+To guarantee the **Store customer input** block in second contact flow captures all of the digits, the customer needs to wait for the prompt to be played, and then enter their type DTMF input\.
+
 ## Configured block<a name="store-customer-input-configured"></a>
 
 When this block is configured, it looks similar to the following image:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input-configured.png)
+
+1. **Invalid number**: What to do if the customer enters an invalid number\.
 
 ## Sample flows<a name="store-customer-input-samples"></a>
 

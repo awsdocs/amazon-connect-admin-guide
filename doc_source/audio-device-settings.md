@@ -13,3 +13,7 @@ If your organization is using a customized version of the Contact Control Panel 
 1. Under **Audio devices**, use the dropdown to select your **Speaker**, **Microphone**, and **Ringer**\.
 **Note**  
 If you use Firefox, you can change your **Microphone** device setting\. To change your speaker and ringer, use your computer settings\.
+
+## Change your ringtone<a name="change-ringtone"></a>
+
+You can change your ringtone if your organization uses a custom CCP\. **Developers**: for more information, see [Amazon Connect Streams](https://github.com/aws/amazon-connect-streams)\.

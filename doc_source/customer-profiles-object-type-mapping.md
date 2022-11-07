@@ -6,6 +6,6 @@
 + [Object type mapping definition details](object-type-mapping-definition-details.md)
 + [Additional properties of object types](additional-properties-object-types.md)
 + [Inferred profiles](inferred-profiles.md)
-+ [Change behavior of inferred profiles to automatically associate the contact record with one profile found](inferred-profiles-change-behavior.md)
++ [Automatically associate the Contact Record with one profile found using the \_phone key](auto-associate-profile-using-phone-profile-key.md)
 + [Examples of object type mappings](examples-object-type-mappings.md)
 + [Implicit profile object types](implicit-profile-object-types.md)

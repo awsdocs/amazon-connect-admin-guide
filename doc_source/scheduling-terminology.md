@@ -1,4 +1,4 @@
-# Scheduling terminology \(Preview\)<a name="scheduling-terminology"></a>
+# Scheduling terminology<a name="scheduling-terminology"></a>
 
 
 

@@ -10,7 +10,7 @@ A piece of data about a contact\. You can use this data to personalize the custo
 
 ## Flow<a name="flow-def"></a>
 
-Flows define the experience your customers have when they interact with your contact center\. These are similar in concept to Interactive Voice Response \(IVR\)\. Contact flows are comprised of blocks, with each block defining a step or interaction in your contact center\. For example, there are blocks to play a prompt, get input from a customer, branch based on customer input, or invoke an Lambda function or Amazon Lex bot\.
+Flows define the experience your customers have when they interact with your contact center\. These are similar in concept to Interactive Voice Response \(IVR\)\. Flows are comprised of blocks, with each block defining a step or interaction in your contact center\. For example, there are blocks to play a prompt, get input from a customer, branch based on customer input, or invoke an Lambda function or Amazon Lex bot\.
 
 ## Instance<a name="instance-def"></a>
 

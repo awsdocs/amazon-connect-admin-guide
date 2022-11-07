@@ -1,4 +1,4 @@
-# Contact block: Set working queue<a name="set-working-queue"></a>
+# Flow block: Set working queue<a name="set-working-queue"></a>
 
 ## Description<a name="set-working-queue-description"></a>
 + This block specifies the queue to be used when **Transfer to queue** is invoked\.
@@ -15,10 +15,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="set-working-queue-types"></a>
+## Flow types<a name="set-working-queue-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Transfer to Agent flow
 + Transfer to Queue flow
 
@@ -27,7 +27,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-working-queue-properties.png)
 
 Note the following properties:
-+ **By queue > Use attribute**\. To set the queue dynamically, you must specify the Amazon Resource Name \(ARN\) for the queue rather than the queue name\. To find the ARN for a queue, open the queue in the queue editor\. The ARN is included as the last part of the URL displayed in the browser address bar after /queue\. For example, `.../queue/aaaaaaaa-bbbb-cccc-dddd-111111111111`\.
++ **By queue > Set dynamically**\. To set the queue dynamically, you must specify the Amazon Resource Name \(ARN\) for the queue rather than the queue name\. To find the ARN for a queue, open the queue in the queue editor\. The ARN is included as the last part of the URL displayed in the browser address bar after /queue\. For example, `.../queue/aaaaaaaa-bbbb-cccc-dddd-111111111111`\.
 
 ## Configured block<a name="set-working-queue-configured"></a>
 

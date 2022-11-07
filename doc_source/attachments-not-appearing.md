@@ -8,6 +8,6 @@ The following issues may cause attachments to not display for your agents using 
 
 ## Attachments are too large, too many, or don't meet file type requirements<a name="check-attachment-size"></a>
 
-Check that the attachments meet the size, number, and file type requirements\. For more information, see [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.
+Check that the attachments meet the size, number, and file type requirements\. For more information, see [Amazon Connect feature specifications](feature-limits.md)\.
 
 To calculate the size of an attachment \(artifactSizeInBytes\), use a third\-party tool such as [ File\.size](https://developer.mozilla.org/en-US/docs/Web/API/File/size)\.

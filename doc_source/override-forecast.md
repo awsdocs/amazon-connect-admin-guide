@@ -1,4 +1,4 @@
-# Override a forecast \(Preview\)<a name="override-forecast"></a>
+# Override a forecast<a name="override-forecast"></a>
 
 You can override the forecast at the queue channel level by uploading a \.csv file\. Override allows you to modify forecasts and make sure the forecasts reflect the contact pattern in special events \(for example, a one\-off marketing event that can increase volume by 10 percent in a given week\)\.
 
@@ -44,7 +44,7 @@ Amazon Connect supports one, which would be the latest, override file per foreca
 If you have never uploaded an override file, your template will contain headings but no data\.
  If you have uploaded override file in the past, your template will be the previously uploaded file\.
 
-   You don't need values in all of the columns, but your csv file must include all column headings\.
+   You don't need values in all of the columns, but your \.csv file must include all column headings\.
 
    If you don't want to override certain data, such as the **AverageHandleTime**, leave that column empty; it won't override the existing values\. However, if you need to make changes to **AverageHandleTime** later on, you must download the last uploaded file, make your changes, and then upload the file\. Amazon Connect only retains the last uploaded file\.
 

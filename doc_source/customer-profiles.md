@@ -6,7 +6,7 @@ With a single view of customer information and contact history, agents can quick
 
 Currently, Amazon Connect Customer Profiles can be used in compliance with [GDPR](http://aws.amazon.com/compliance/gdpr-center) and is pending additional certifications held by Amazon Connect\.
 
-The following image shows an agent's Contact Control Panel \(CCP\); for the purposes of this documentation, Amazon Connect Customer Profiles highlighted in the red box\. The agent's application is optimized for multi\-tasking: working on calls, and multiple chats and tasks, with customer profile information in the same browser window\.
+The following image shows an agent's Contact Control Panel \(CCP\); for the purposes of this documentation, Amazon Connect Customer Profiles is highlighted in the red box\. The agent's application is optimized for multi\-tasking: working on calls, and multiple chats and tasks, with customer profile information in the same browser window\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-concepts-intro3.png)
 
@@ -14,6 +14,6 @@ The following image shows an agent's Contact Control Panel \(CCP\); for the purp
 
 1. **Contact history**: Date, times, and duration when this customer contacted your contact center in the past\. 
 
-1. **More information**: Information that an agent can use to verify the contact, such as cell phone number and shipping address\. 
+1. **More information**: Additional information contained in the customer defined *Attributes* field of [the profile](https://docs.aws.amazon.com/connect/latest/adminguide/standard-profile-definition.html), as well as further profile information such as cell phone number and shipping address\. This information will be sorted alphabetically to help an agent quickly locate the information they need\.
 
 1. **Actions**: Agents can copy the contact ID, or choose to go directly to the contact's **Contact record details** page\. 

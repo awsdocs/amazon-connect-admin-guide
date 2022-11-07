@@ -1,4 +1,4 @@
-# Generate, review, and publish a schedule by using Schedule Manager \(Preview\)<a name="scheduling-publish-schedule"></a>
+# Generate, review, and publish a schedule by using Schedule Manager<a name="scheduling-publish-schedule"></a>
 
 Amazon Connect is designed to generate the least number of shifts for agents based on the forecasted demand pattern and configured constraints to hit the optimization goal\.
 
@@ -6,7 +6,7 @@ After you create shift activities, shift profiles, staffing groups and staffing 
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Scheduling**, **Schedule manager \- Edit**\. 
 
-   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling \(Preview\)](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
 1. On the Amazon Connect navigation menu, select **Users**, **Scheduling**\.
 
@@ -31,23 +31,8 @@ Amazon Connect generates a draft schedule\. It will not visible to agents or sup
 1. To view any warnings and breaches of rules or constraints breaches, choose the warnings icon to learn more\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-scheduling-warnings.png)
 
-1. To view the metrics used in the schedule, choose **Metrics**\. 
-
-   The following sample image shows metrics for interval \(15 or 30 minute\) level staffing\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-scheduling-metrics.png)
-
-   1. Required headcount \(HC\)
-
-   1. Scheduled headcount 
-
-   1. Over/under \(net\) headcount
-
-   1. Forecasted Service Level percent \(SL%\) per channel
-
-   1. Forecasted occupancy percent
-
 1. When the status is **Complete**, choose the draft schedule to view it\. The following image shows a sample schedule:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-scheduling-draft-schedule-fullday.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-scheduling-supervisors-schedule.png)
 
    Schedulers can:
    + View schedules for all agents\.
@@ -59,8 +44,8 @@ Amazon Connect generates a draft schedule\. It will not visible to agents or sup
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-scheduling-publish-confirmation.png)
 
    Staff \(agents\) and supervisors specified in the staffing groups can now view the schedule\. See the following topics to learn about their experience: 
-   + [How supervisors view published schedules \(Preview\)](scheduling-view-schedule-supervisors.md)
-   + [View your schedule](scheduling-view-schedule-staff.md)
+   + [How supervisors view published schedules](scheduling-view-schedule-supervisors.md)
+   + [How agents view their schedule](scheduling-view-schedule-agents.md)
 
 ## Edit a schedule<a name="scheduling-edit-schedule"></a>
 

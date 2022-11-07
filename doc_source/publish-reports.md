@@ -31,6 +31,6 @@ To view published reports, at minimum you need the following permissions in your
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-view-saved-metrics-reports.png)
 
 **To view published reports**
-+ Go to **Metrics and quality**, **Saved reports**\. 
++ Go to **Analytics**, **Saved reports**\. 
 
   Published reports appear in your list automatically\.

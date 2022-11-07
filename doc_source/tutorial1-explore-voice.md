@@ -18,11 +18,11 @@
 1. In the test CCP, set your status to **Available**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-testccp-available.png)
 
-1. Use your mobile phone to call the phone number that you claimed earlier\. If you didn't write down the number, you can find it by going to **Routing**, **Phone numbers**\.
+1. Use your mobile phone to call the phone number that you claimed earlier\. If you didn't write down the number, you can find it by going to **Channels**, **Phone numbers**\.
 
 1. When your call is joined to Amazon Connect you'll hear "Press 1 to be put in queue for an agent, 2 to \.\.\." This is the [Sample inbound flow](sample-inbound-flow.md) that Amazon Connect runs by default\. You're going to change this later in the tutorial\.
 
-1. You can play around with the different options in the Sample inbound contact flow\. To connect to an agent, press **1**, **1**, **1**\.
+1. You can play around with the different options in the Sample inbound flow\. To connect to an agent, press **1**, **1**, **1**\.
 
 1. In the CCP, choose **Accept call**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-accept-call.png)
@@ -35,7 +35,7 @@
    Now the contact is in the After Contact Work \(ACW\) state\. This is when the agent might enter some notes about the contact\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-acw.png)
 
-1. Choose **Clear contact**\. This frees up the agent to take another incoming contact\. 
+1. Choose **Close contact**\. This frees up the agent to take another incoming contact\. 
 
 Well done\! You've handled your first voice contact\! 
 

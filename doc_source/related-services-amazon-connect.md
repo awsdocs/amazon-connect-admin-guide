@@ -36,7 +36,7 @@ For more information, see:
 
 Amazon Connect tracks all interactions using [contact records](about-contact-states.md#ctr-events)\. Contact records are used for real\-time and historical metrics reports\. You can also use Amazon Kinesis to stream them to an AWS database like Amazon Redshift or Amazon Athena for BI analysis \(Amazon QuickSight, or a third party such as Tableau\)\. There are AWS CloudFormation templates available to set up this functionality for Amazon Redshift and Athena\. 
 
-To perform analysis on your contact flow logs, you can set up an Amazon Kinesis stream to stream your contact flow log data from CloudWatch to a data warehouse service, such as Amazon Redshift\. You can combine the contact flow log data with other Amazon Connect data in your warehouse, or run queries to identify trends or common issues with a contact flow\.
+To perform analysis on your flow logs, you can set up an Amazon Kinesis stream to stream your flow log data from CloudWatch to a data warehouse service, such as Amazon Redshift\. You can combine the flow log data with other Amazon Connect data in your warehouse, or run queries to identify trends or common issues with a contact flow\.
 
 For more information, see:
 + [How to access Kinesis Video Streams data](access-media-stream-data.md)
@@ -45,8 +45,8 @@ For more information, see:
 ## Machine Learning \(ML\) and Artificial Intelligence \(AI\)<a name="ai-services"></a>
 
 Amazon Connect uses the following services for ML/AI: 
-+ Amazon Lex—Lets you create a chatbot to use as Interactive Voice Response \(IVR\)\. For more information, see [Add an Amazon Lex bot](amazon-lex.md)\. 
-+ Amazon Polly—Provides text\-to\-speech in all contact flows\. For more information, see [Add text\-to\-speech to prompts](text-to-speech.md) and [SSML tags supported by Amazon Connect](supported-ssml-tags.md)\.
++ Amazon Lex—Lets you create a chatbot to use as Interactive Voice Response \(IVR\)\. For more information, see [Add an Amazon Lex bot to Amazon Connect](amazon-lex.md)\. 
++ Amazon Polly—Provides text\-to\-speech in all flows\. For more information, see [Add text\-to\-speech to prompts](text-to-speech.md) and [SSML tags supported by Amazon Connect](supported-ssml-tags.md)\.
 + Amazon Transcribe—Grabs conversation recordings from Amazon S3, and transcribes them to text so you can review them\.
 + Amazon Comprehend—Takes the transcription of recordings, and applies speech analytics machine learning to the call to identify sentiment, keywords, adherence to company policies, and more\.
 

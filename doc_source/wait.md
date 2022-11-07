@@ -1,8 +1,8 @@
-# Contact block: Wait<a name="wait"></a>
+# Flow block: Wait<a name="wait"></a>
 
 ## Description<a name="wait-description"></a>
 
-This block pauses the contact flow for the specified wait time\. 
+This block pauses the flow for the specified wait time\. 
 
 For example, if a contact stops responding to a chat, the block pauses the contact flow for the specified wait time, then branches accordingly, such as to disconnect\.
 
@@ -17,10 +17,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="wait-types"></a>
+## Flow types<a name="wait-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer Queue flow
 
 ## Properties<a name="wait-properties"></a>
@@ -28,7 +28,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wait-properties.png)
 
 It has two properties: 
-+ **Timeout**: Run this branch if the customer hasn't sent a message after a specified amount of time\. Maximum is 24 hours\.
++ **Timeout**: Run this branch if the customer hasn't sent a message after a specified amount of time\. Maximum is 7 days\.
 + **Customer return**: Run this branch when the customer returns and sends a message\. With this branch you can route the customer to the previous \(same\) agent, previous \(same\) queue, or override and set a new working queue or agent\. 
 
 ## Configuration tips<a name="wait-tips"></a>
@@ -36,7 +36,7 @@ It has two properties:
 You can add multiple **Wait** blocks to your contact flows\. For example: 
 + If the customer comes back in 5 minutes, connect them to the same agent\. This is because that agent has all of the context\.
 + If the customer doesn't come back after 5 minutes, send a text saying "We missed you\." 
-+ If the customer comes back in 12 hours, connect to a contact flow that puts them in a priority queue\. However, it doesn't route them to the same agent\.
++ If the customer comes back in 12 hours, connect to a flow that puts them in a priority queue\. However, it doesn't route them to the same agent\.
 
 ## Configured block<a name="wait-configured"></a>
 

@@ -1,4 +1,4 @@
-# Publish a capacity plan \(Preview\)<a name="publish-capacity-plan"></a>
+# Publish a capacity plan<a name="publish-capacity-plan"></a>
 
 When you are satisfied with the capacity plan outputs, choose **Publish plan** to finalize your plan\. 
 

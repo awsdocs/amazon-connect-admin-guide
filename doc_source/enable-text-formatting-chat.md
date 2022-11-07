@@ -8,6 +8,7 @@ You can provide the following types of formatting on both the chat user interfac
 + Bulleted list
 + Numbered list
 + Hyperlinks
++ Emoji
 + Attachments\. To enable attachments, follow [Enable attachments to share files using chat](enable-attachments.md)\.
 
 ## How to enable message formatting<a name="how-to-enable-message-formatting"></a>
@@ -43,7 +44,7 @@ You can provide the following types of formatting on both the chat user interfac
               "string" : "string" 
           },
           "ClientToken": "string",
-          "ContactFlowId": "your contact flow ID",
+          "ContactFlowId": "your flow ID",
           "InitialMessage": { 
               "Content": "string",
               "ContentType": "string"

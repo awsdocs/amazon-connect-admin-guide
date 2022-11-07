@@ -1,4 +1,4 @@
-# Create forecasts \(Preview\)<a name="create-forecasts"></a>
+# Create forecasts<a name="create-forecasts"></a>
 
 Forecasts are a projection of the workload in your contact center\. Amazon Connect provides long\-term and short\-term forecasts for you to generate capacity plans and agent schedules\. The forecasts include inbound, transfer, and callback contacts in both voice and chat channels\. 
 
@@ -25,8 +25,8 @@ After creating a forecast, you will not need to generate it manually\.
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-create-forecast.png)
 
 1. Choose the forecast type\. Amazon Connect creates a forecast for each type you select\.
-   + **Long term** forecasts are used for capacity planning\. For example, how many agents you need to hire in the next few months, quarter, and year\.
-   + **Short term** forecasts are used for scheduling agents\.
+   + **Long term** forecasts are used for capacity planning\. For example, how many Full Time Equivalent \(FTE\) agents you need to hire in the next few months, quarter, and year\.
+   + **Short term** forecasts are used for scheduling agents and interval level agent headcount estimation\. 
 
 1. Choose **Save**\. If the forecast group has already been included in a forecast, an error message is displayed\. 
 

@@ -1,6 +1,6 @@
 # Step 2: Add permissions to Amazon Lex bot<a name="tutorial1-add-permissions-for-bot"></a>
 
-To use a bot in your contact flow, add it to your Amazon Connect instance\. 
+To use a bot in your flow, add it to your Amazon Connect instance\. 
 
 1. Open the [Amazon Connect console \(https://console\.aws\.amazon\.com/connect/\)\.](https://console.aws.amazon.com/connect/)
 
@@ -10,10 +10,8 @@ To use a bot in your contact flow, add it to your Amazon Connect instance\.
 1. Do not log in on the name page \(this method of logging in is for emergency access only\)\. Rather, choose **Contact flows**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-lex-custom-bot19.png)
 
-1. Under **Amazon Lex**, use the drop\-down arrow to choose **HelpDesk**, and then choose **\+ Add Lex Bot**\.  
+1. Under **Amazon Lex**, use the drop\-down arrow to choose **HelpDesk**\. Under **Alias**, choose **TestBotAlias**, and then choose **\+ Add Lex Bot**, and then choose **Add Amazon Lex Bot**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-lex-custom-bot20.png)
-**Tip**  
-Only published Amazon Lex bots appear in the drop\-down list\.
 
 1. When you're done, choose Amazon Connect to navigate back to instances page\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial-connect-instances2.png)

@@ -16,7 +16,7 @@
   Before assigning security profiles, review the list of inherited permissions\.
 + [Track who accesses recordings](track-who-deleted-recordings.md)\.
 
-   In the **Metrics and quality** permission group, you can enable a download icon for recorded conversations\. When members of this group go to **Metrics and quality**, **Contact search**, and then search contacts, they will see an icon to download recordings\. 
+   In the **Analytics** permission group, you can enable a download icon for recorded conversations\. When members of this group go to **Analytics**, **Contact search**, and then search contacts, they will see an icon to download recordings\. 
 **Important**  
 This setting isn't a security feature\. **Users who don't have this permission can still download recordings using other less\-discoverable ways**\.
 

@@ -1,4 +1,4 @@
-# Contact block: Loop<a name="loop"></a>
+# Flow block: Loop<a name="loop"></a>
 
 ## Description<a name="loop-description"></a>
 + Counts the number of times customers are looped through the **Looping** branch\.
@@ -16,7 +16,7 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="loop-types"></a>
+## Flow types<a name="loop-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows

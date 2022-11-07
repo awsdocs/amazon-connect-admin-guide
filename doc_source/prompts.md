@@ -1,12 +1,12 @@
 # Create prompts<a name="prompts"></a>
 
-Prompts are audio files played in call flows\. For example, hold music is a prompt\. Amazon Connect comes with a set of prompts that you can add to your contact flows\. Or, you can add your own recordings\. 
+Prompts are audio files played in call flows\. For example, hold music is a prompt\. Amazon Connect comes with a set of prompts that you can add to your flows\. Or, you can add your own recordings\. 
 
 We recommend that you align your prompts and routing policies with each other to ensure a smooth call flow for customers\.
 
 **To create a prompt**
 
-1. In the navigation pane, choose **Routing**, **Prompts**\.
+1. On the navigation menu, choose **Routing**, **Prompts**\.
 
 1. On the **Manage voice prompts** page, choose **Create new prompt**\.
 

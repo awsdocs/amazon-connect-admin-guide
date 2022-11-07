@@ -27,29 +27,29 @@ Amazon Connect provides full Unicode support\. You can chat with customers in an
 ## Contact Lens for Amazon Connect<a name="supported-languages-contact-lens"></a>
 
 
-| Post\-call analytics | Post\-call redaction | Real\-time analytics | Real\-time redaction | 
-| --- | --- | --- | --- | 
-|  Arabic \(Gulf\)  |   |  |  | 
-|  English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | 
-|  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  | 
-|  English \(United States\)  |  English \(United States\)  |  English \(United States\)  |  English \(United States\)  | 
-|  English \(India\)  |  English \(India\)  |   |  | 
-|  English \(Ireland\)  |  English \(Ireland\)  |  |  | 
-|  English \(Scotland\)  |  English \(Scotland\)  |  |  | 
-|  English \(Wales\)  |  English \(Wales\)  |  |  | 
-|  French \(Canada\)  |   |  French \(Canada\)  |  | 
-|  French \(France\)  |   |  French \(France\)  |  | 
-|  German \(Germany\)  |   |  German \(Germany\)  |  | 
-|  German \(Switzerland\)  |   |  |  | 
-|  Hindi \(India\)  |   |  |  | 
-|  Italian \(Italy\)  |   |  Italian \(Italy\)  |  | 
-|  Japanese \(Japan\)  |   | Japanese \(Japan\) |  | 
-|  Korean \(South Korea\)  |   |  Korean \(South Korea\)  |  | 
-|  Mandarin \(Mainland China\)  |   |  Mandarin \(Mainland China\)  |  | 
-|  Portuguese \(Brazil\)  |   |  Portuguese \(Brazil\)  |  | 
-|  Portuguese \(Portugal\)  |   |  |  | 
-|  Spanish \(Spain\)  |   |  |  | 
-|  Spanish \(United States\)  |   | Spanish \(United States\) |  | 
+| Post\-call analytics | Post\-call redaction | Real\-time analytics | Real\-time redaction | Call summarization | 
+| --- | --- | --- | --- | --- | 
+|  Arabic \(Gulf\)  |   |  |  |  | 
+|  English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | English \(Australia\) | 
+|  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  | 
+|  English \(United States\)  |  English \(United States\)  |  English \(United States\)  |  English \(United States\)  |  English \(United States\)  | 
+|  English \(India\)  |  English \(India\)  |   |  |  English \(India\)  | 
+|  English \(Ireland\)  |  English \(Ireland\)  |  |  | English \(Ireland\) | 
+|  English \(Scotland\)  |  English \(Scotland\)  |  |  | English \(Scotland\) | 
+|  English \(Wales\)  |  English \(Wales\)  |  |  |  English \(Wales\) | 
+|  French \(Canada\)  |  |  French \(Canada\)  |  |  | 
+|  French \(France\)  |  |  French \(France\)  |  |  | 
+|  German \(Germany\)  |  |  German \(Germany\)  |  |  | 
+|  German \(Switzerland\)  |  |  |  |  | 
+|  Hindi \(India\)  |  |  |  |  | 
+|  Italian \(Italy\)  |  |  Italian \(Italy\)  |  |  | 
+|  Japanese \(Japan\)  |  | Japanese \(Japan\) |  |  | 
+|  Korean \(South Korea\)  |  |  Korean \(South Korea\)  |  |  | 
+|  Mandarin \(Mainland China\)  |  |  Mandarin \(Mainland China\)  |  |  | 
+|  Portuguese \(Brazil\)  |  |  Portuguese \(Brazil\)  |  |  | 
+|  Portuguese \(Portugal\)  |  |  |  |  | 
+|  Spanish \(Spain\)  |  |  |  |  | 
+|  Spanish \(United States\)  |  | Spanish \(United States\) |  |  | 
 
 ## Pattern match languages<a name="supported-languages-contact-lens-pattern-matching"></a>
 

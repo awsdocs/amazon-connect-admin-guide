@@ -1,14 +1,14 @@
-# Contact block: Set disconnect flow<a name="set-disconnect-flow"></a>
+# Flow block: Set disconnect flow<a name="set-disconnect-flow"></a>
 
 ## Description<a name="set-disconnect-flow-description"></a>
-+ Specifies which contact flow to run after a disconnect event during a contact\. 
++ Specifies which flow to run after a disconnect event during a contact\. 
 
   A disconnect event is when:
   + A call, chat, or task is disconnected by an agent\.
   + A task is disconnected as a result of a flow action\.
   + A task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
 
-  When the disconnect event occurs, the corresponding contact flow runs\. 
+  When the disconnect event occurs, the corresponding flow runs\. 
 + Here are examples of when you might use this block:
   + Run post\-call surveys\. For example, the agent asks the customer to remain on the line for a post\-call survey\. The agent hangs up and a disconnect flow is run\. In the disconnect flow, the customer is asked a set of questions using the [Get customer input](get-customer-input.md) block\. Their answers are uploaded using an [Invoke AWS Lambda function](invoke-lambda-function-block.md) block to an external customer feedback database\. The customer is thanked and disconnected\.
 
@@ -27,7 +27,7 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="set-disconnect-flow-types"></a>
+## Flow types<a name="set-disconnect-flow-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows

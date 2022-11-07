@@ -4,6 +4,8 @@ While queues are a 'waiting area' for contacts, a routing profile links queues t
 
 Each agent is assigned to one routing profile\. For more information about routing profiles and queues, see [Routing profiles](concepts-routing.md)\.
 
+**How many routing profiles can I create?** To view your quota of **Routing profiles per instance**, open the Service Quotas console at [https://console\.aws\.amazon\.com/servicequotas/](https://console.aws.amazon.com/servicequotas/)\.
+
 **To create a routing profile**
 
 1. On the navigation menu, choose **Users**, **Routing profiles**, **Add new profile**\.

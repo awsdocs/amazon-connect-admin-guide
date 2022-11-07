@@ -4,7 +4,7 @@ Amazon Connect enables you to create a virtual contact center in the AWS cloud\.
 
 After you create an instance, you can edit its settings, such as telephony, data storage, and data streaming\. After that, you can assign your contact center a phone number or import your own phone number\. You can add agents to your contact center, and assign them permissions appropriate to their roles\. You can set up a single queue for incoming contacts, or set up multiple queues so that you can route contacts to agents with specific skills\. 
 
-A key part of setting up your contact center is to define how your customers experience it\. You do this by creating contact flows\.
+A key part of setting up your contact center is to define how your customers experience it\. You do this by creating flows\.
 
 Finally, you'll need to provide your agents access to the Contact Control Panel \(CCP\), which they will use to interact with contacts\.
 
@@ -15,6 +15,7 @@ Finally, you'll need to provide your agents access to the Contact Control Panel 
 + [Set up outbound communications](outbound-communications.md)
 + [Set up routing](connect-queues.md)
 + [Set up agents](connect-agents.md)
++ [Set up tasks](concepts-getting-started-tasks.md)
 + [Set up your customer's chat experience](enable-chat-in-app.md)
 + [Upgrade to the latest CCP](upgrade-to-latest-ccp.md)
 + [Provide access to the CCP](amazon-connect-contact-control-panel.md)

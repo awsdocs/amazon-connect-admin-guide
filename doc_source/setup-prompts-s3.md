@@ -2,6 +2,13 @@
 
 When you configure prompts on the [Get customer input](get-customer-input.md), [Loop prompts](loop-prompts.md), [Play prompt](play.md), or [Store customer input](store-customer-input.md) blocks, you can choose an S3 bucket as the source location\. You can store as many voice prompts as needed in an S3 bucket and access them in real time by using contact attributes\. For examples, see the [Play prompt](play.md) block\. 
 
+## Requirements<a name="format-prompts-s3"></a>
++ **Supported formats**: Amazon Connect supports \.wav files to use for your prompt\. You must use \.wav files that are 8KHz, and mono channel audio with U\-Law encoding\. Otherwise, the prompt won't play correctly\. You can use publicly available third\-party tools to convert your \.wav files to U\-Law encoding\. After converting the files, upload them to Amazon Connect\.
++ **Size**: Amazon Connect supports prompts that are less than 50MB and less than five minutes long\.
++ **For Regions that are disabled by default** \(also called [opt\-in](https://docs.aws.amazon.com/general/latest/gr/rande-manage.html) Regions\) such as Africa \(Cape Town\), your bucket must be in the same Region\.
+
+## Update the S3 bucket policy<a name="bucket-policy-prompts-s3"></a>
+
 To allow Amazon Connect to play prompts from an S3 bucket, when you set up your S3 bucket, you must update the bucket policy to grant `connect.amazonaws.com` \(the Amazon Connect service principal\) permission to call `s3:ListBucket` and `s3:GetObject`\. 
 
 **To update the S3 bucket policy:**
@@ -26,7 +33,7 @@ To allow Amazon Connect to play prompts from an S3 bucket, when you set up your 
                },
                "Action": [
                    "s3:ListBucket",
-                   "s3:GetObject",
+                   "s3:GetObject"
                ],
                "Resource": [
                    "arn:aws:s3:::customer-prompt-example-bucket",

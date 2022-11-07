@@ -11,7 +11,7 @@ However, if there's an emergency, you can log in from the Amazon Connect console
 
 **To login for emergency access**
 
-1. Make sure you have your AWS account credentials at hand\.
+1. Make sure you have your AWS account credentials at hand and that you have the [required permissions](security-iam-amazon-connect-permissions.md#federations)\.
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 

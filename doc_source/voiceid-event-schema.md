@@ -110,7 +110,7 @@ Emits events on stream start \(after setup\), stream end, and on failures\.
 
 ## Evaluate Session Action<a name="evaluate-session"></a>
 
-Emits events when the session evaluation succeeds or fails\.
+Emits events when the session evaluation succeeds or fails\. Reasons can be KNOWN\_FRAUDSTER or VOICE\_SPOOFING\.
 
 ```
 {...commonfields
@@ -146,7 +146,9 @@ Emits events when the session evaluation succeeds or fails\.
             "riskDetails": 
                 {"knownFraudsterRisk": 
                     {"generatedFraudsterId": String,
-                    "riskScore": Integer}                
+                    "riskScore": Integer},  
+                  "voiceSpoofingRisk": 
+                    {"riskScore": Integer} 
                  }
          }
      },

@@ -1,15 +1,16 @@
-# Contact block definitions<a name="contact-block-definitions"></a>
+# Flow block definitions<a name="contact-block-definitions"></a>
 
-You create contact flows in the contact flow designer using contact blocks\. Drag and drop contact blocks onto a canvas to arrange a contact flow\. 
+You create flows in the flow designer using flow blocks\. Drag and drop flow blocks onto a canvas to arrange a flow\. 
 
-The following table lists all available contact blocks that you can use\. Choose the links in the Block column for more information\. 
+The following table lists all available flow blocks that you can use\. Choose the links in the Block column for more information\. 
 
 
 | Block | Description | 
 | --- | --- | 
 | [Call phone number](call-phone-number.md)  | Initiates an outbound call from an outbound whisper flow\. | 
+| [Amazon Connect Cases](cases-block.md)  | Gets, updates, and creates cases\.  | 
 |  [Change routing priority / age](change-routing-priority.md)   |  Changes the priority of the contact in queue\. You may want to do this, for example, based on the contact's issue or other variable\.  | 
-|  [Check call progress](check-call-progress.md)   |  Engages with the output provided by an answering machine, and provides branches to route the contact accordingly\. This block works with Amazon Connect High\-Volume Outbound Communications only\.  | 
+|  [Check call progress](check-call-progress.md)   |  Engages with the output provided by an answering machine, and provides branches to route the contact accordingly\. This block works with outbound campaigns only\.  | 
 |  [Check contact attributes](check-contact-attributes.md)   |  Checks the values of contact attributes\.  | 
 |   [Check hours of operation](check-hours-of-operation.md)  |  Checks whether the contact is occurring within or outside of the hours of operation defined for the queue\.  | 
 |   [Check queue status](check-queue-status.md)   |  Checks the status of the queue based on specified conditions\.  | 
@@ -32,19 +33,19 @@ The following table lists all available contact blocks that you can use\. Choose
 |   [Set contact attributes](set-contact-attributes.md)   |  Stores key\-value pairs as contact attributes\.  | 
 |  [Set customer queue flow](set-customer-queue-flow.md)  |  Specifies the flow to invoke when a customer is transferred to a queue\.  | 
 |   [Set disconnect flow](set-disconnect-flow.md)   |  Sets the flow to run after a disconnect event\.  | 
-|   [Set hold flow](set-hold-flow.md)   |  Links from one contact flow type to another\.  | 
-|   [Set logging behavior](set-logging-behavior.md)   |  Enables contact flow logs so you can track events as contacts interact with contact flows\.  | 
-|   [Set Voice ID](set-voice-id.md)   |  Sends audio to Amazon Connect Voice ID to verify the caller's identity and match against fraudsters in watchlist, as soon as the call is connected to a contact flow\.   | 
+|   [Set hold flow](set-hold-flow.md)   |  Links from one flow type to another\.  | 
+|   [Set logging behavior](set-logging-behavior.md)   |  Enables flow logs so you can track events as contacts interact with flows\.  | 
+|   [Set Voice ID](set-voice-id.md)   |  Sends audio to Amazon Connect Voice ID to verify the caller's identity and match against fraudsters in watchlist, as soon as the call is connected to a flow\.   | 
 |   [Set recording and analytics behavior](set-recording-behavior.md)  |  Sets options for recording conversations\.  | 
-|  [Set voice](set-voice.md)   |  Sets the text\-to\-speech \(TTS\) language and voice to be used in the contact flow\.  | 
+|  [Set voice](set-voice.md)   |  Sets the text\-to\-speech \(TTS\) language and voice to be used in the flow\.  | 
 |   [Set whisper flow](set-whisper-flow.md)  |  Overrides the default whisper by linking to a whisper flow\.  | 
 |   [Set working queue](set-working-queue.md)   |  Specifies the queue to be used when **Transfer to queue** is invoked\.  | 
 |  [Start media streaming](start-media-streaming.md)  | Starts capturing customer audio for a contact\. | 
 |  [Stop media streaming](stop-media-streaming.md)  | Stops capturing customer audio after it is started with a **Start media streaming** block\. | 
 |   [Store customer input](store-customer-input.md)   |  Stores numerical input to a contact attribute\.  | 
 |   [Transfer to agent \(beta\)](transfer-to-agent-block.md)  |  Transfers the customer to an agent\.  | 
-|   [Transfer to flow](transfer-to-flow.md)  |  Transfers the customer to another contact flow\.  | 
+|   [Transfer to flow](transfer-to-flow.md)  |  Transfers the customer to another flow\.  | 
 |   [Transfer to phone number](transfer-to-phone-number.md)  |  Transfers the customer to a phone number external to your instance\.  | 
-|   [Transfer to queue](transfer-to-queue.md)   |  In most contact flows, this block ends the current contact flow and places the customer in queue\. When used in a customer queue flow, this block transfers a contact already in a queue to another queue\.  | 
-|   [Wait](wait.md)  |  Pauses the contact flow\.  | 
+|   [Transfer to queue](transfer-to-queue.md)   |  In most flows, this block ends the current flow and places the customer in queue\. When used in a customer queue flow, this block transfers a contact already in a queue to another queue\.  | 
+|   [Wait](wait.md)  |  Pauses the flow\.  | 
 |   [Wisdom](wisdom.md)  |  Associates a Wisdom domain to a contact to enable real\-time recommendations\.  | 

@@ -53,3 +53,17 @@ In the agent event stream you'll see the **AgentStatus**, for example:
           "StartTimestamp": "2019-05-25T18:43:59.049Z"
       },
 ```
+
+## "We couldn't find this agent\. Use the agent's user name to identify them\."<a name="agent-status-cannot-find-agent"></a>
+
+On occassion, in the **Contact summary** the **Agent** field may say **"We couldn't find this agent\. Use the agent's user name to identify them\."**
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/agent-status-not-found.png)
+
+This is a generic message for contacts that did not get connected to an agent at the time\. It usually means that the inbound call was not answered by the agent and the customer disconnected the call\. 
+
+To confirm that the caller was never connected to an agent:
++ **Disconnect reason** = **Customer disconnect**\.
++ No recording of the call is found for that contact ID\.
+
+To verify this behavior, call your contact center and disconnect after a period of time without an agent accepting the call\.

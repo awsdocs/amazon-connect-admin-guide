@@ -17,6 +17,8 @@ Since agent hierarchies may include location and skill set data, you also need t
 
 ## Create a new agent hierarchy<a name="new-agent-hierarchy"></a>
 
+**How many hierarchy groups can I create?** To view your quota of **User hierarchy groups per instance**, open the Service Quotas console at [https://console\.aws\.amazon\.com/servicequotas/](https://console.aws.amazon.com/servicequotas/)\.
+
 1. Log in to the Amazon Connect console with an **Admin** account, or an account assigned to a security profile that has permissions to create agent hierarchies\.
 
 1. Choose **Users**, **Agent hierarchy**\.

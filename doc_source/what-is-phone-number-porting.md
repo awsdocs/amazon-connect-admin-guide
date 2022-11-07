@@ -1,12 +1,12 @@
 # What is phone number porting?<a name="what-is-phone-number-porting"></a>
 
-Porting a phone number is the process of moving a phone number from one telephony service provider, or carrier, to another\. Many businesses and organizations already have a phone number that is advertised to their customers, and changing this number would be disruptive\.
+Porting a phone number is the process of moving a phone number from one telephony service provider, or carrier, to another\. Many businesses and organizations already have a phone number that is advertised to their customers, so changing this number would be disruptive\.
 
 If you port a phone number from your current carrier to Amazon Connect, you can keep using the same phone number for your contact center\. This helps to eliminate the need to update your business contact information\.
 
 ## Downtime and service disruption during the porting process<a name="porting-downtime"></a>
 
-The porting process requires the losing carrier to remove your number from their systems, the winning carrier to add your number to their systems, and for number routing to be updated\. Most porting activities complete within 15\-30 minutes, with possible call disruptions\. To ensure that they have engineers available to troubleshoot issues, most losing carriers complete porting actions only during normal business hours\. Carriers typically communicate a two\-hour porting window to accommodate for resolving any issues that could arise\. 
+The porting process requires the losing carrier to remove your number from their systems, the winning carrier to add your number to their systems, and for number routing to be updated\. Most porting activities complete within 15\-30 minutes, with possible call disruptions\. To ensure that they have engineers available to troubleshoot issues, most losing carriers complete porting actions only during normal business hours\. Carriers typically communicate a two\-hour porting window to resolve any issues that could arise\. 
 
 For detailed information about available porting dates and times, see [Region requirements for ordering and porting phone numbers](phone-number-requirements.md) for your country or region\. 
 
@@ -21,4 +21,4 @@ When a phone number is released from your Amazon Connect instance:
 + You cannot reclaim the phone number\.
 + Amazon Connect reserves the right to allow it to be claimed by another customer\.
 
-If you move your contact center away from Amazon Connect, and want to port your phone number away from Amazon Connect, [submit an Amazon Connect support ticket](about-porting.md#step1-porting)\. 
+If you move your contact center away from Amazon Connect, and want to port your phone number away from Amazon Connect, see [Port phone numbers away from Amazon Connect](port-away.md)\. 

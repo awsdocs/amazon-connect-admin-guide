@@ -41,6 +41,6 @@ In some cases, multiple profiles may be returned for the same call or chat\. Use
 
 ## Example 4: Search when not on contact<a name="example4-select-customer-profile"></a>
 
-When there are no incoming contacts, you can search for customer profiles using phone number, name, email address, or account number\. For example, you might want to use this time to search for previous contacts, or completing a profile\.
+When there are no incoming contacts, you can search for customer profiles using phone number, name, email address, or profile ID\. For example, you might want to use this time to search for previous contacts, or completing a profile\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-search-not-connected-example4.png)

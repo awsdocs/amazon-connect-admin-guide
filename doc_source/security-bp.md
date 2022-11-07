@@ -40,7 +40,7 @@ We recommend reviewing each AWS service in your solution against the security re
 ## Data Security in Amazon Connect<a name="datasecurity-bp"></a>
 
 During your security journey, your security teams may require a deeper understanding of how data is handled in Amazon Connect\. See the following resources: 
-+ [Detailed network paths for Amazon ConnectDetailed Network Paths](detailed-network-paths.md)
++ [Detailed network paths for Amazon Connect](detailed-network-paths.md)
 + [Infrastructure security in Amazon Connect](infrastructure-security.md)
 + [Compliance validation in Amazon Connect](compliance-validation.md)
 
@@ -88,13 +88,13 @@ In addition to storing users in Amazon Connect, you can [enable single sign\-on 
 
 ### Access to Integrated Applications<a name="accessintegratedapps"></a>
 
-Steps within your contact flows may need credentials to access information in external applications and systems\. To provide credentials to access other AWS services in a secure way, use IAM roles\. An IAM role is an entity that has its own set of permissions, but that isn't a user or group\. Roles also don't have their own permanent set of credentials and are automatically rotated\. 
+Steps within your flows may need credentials to access information in external applications and systems\. To provide credentials to access other AWS services in a secure way, use IAM roles\. An IAM role is an entity that has its own set of permissions, but that isn't a user or group\. Roles also don't have their own permanent set of credentials and are automatically rotated\. 
 
-Credentials such as API keys should be stored outside of your contact flow application code, where they can be retrieved programmatically\. To accomplish this, you can use AWS Secrets Manager or an existing third\-party solution\. Secrets Manager enables you to replace hardcoded credentials in your code, including passwords, with an API call to Secrets Manager to retrieve the secret programmatically\.
+Credentials such as API keys should be stored outside of your flow application code, where they can be retrieved programmatically\. To accomplish this, you can use AWS Secrets Manager or an existing third\-party solution\. Secrets Manager enables you to replace hardcoded credentials in your code, including passwords, with an API call to Secrets Manager to retrieve the secret programmatically\.
 
 ## Detective controls<a name="detectivecontrols"></a>
 
-Logging and monitoring are important for the availability, reliability and, performance of contact center\. You should log relevant information from Amazon Connect contact flows to Amazon CloudWatch and build alerts and notifications based on the same\. 
+Logging and monitoring are important for the availability, reliability and, performance of contact center\. You should log relevant information from Amazon Connect Flows to Amazon CloudWatch and build alerts and notifications based on the same\. 
 
 You should define log retention requirements and lifecycle policies early on, and plan to move log files to cost\-efficient storage locations as soon as practical\. Amazon Connect public APIs log to AWS CloudTrail\. You should review and automate actions set up based on CloudTrail logs\.
 
@@ -102,7 +102,7 @@ Amazon S3 is the best choice for long\-term retention and archiving of log data,
 
 The AWS cloud provides flexible infrastructure and tools to support both sophisticated in cooperation with offerings and self\-managed centralized\-logging solutions\. This includes solutions such as Amazon OpenSearch Service and Amazon CloudWatch Logs\. 
 
-Fraud detection and prevention for incoming contacts can be implemented by customizing Amazon Connect contact flows per the customer requirements\. As an example, customers can check incoming contacts against previous contact activity in DynamoDB, and then take action, such as disconnecting a contact because they are a blocked contact\.
+Fraud detection and prevention for incoming contacts can be implemented by customizing Amazon Connect Flows per the customer requirements\. As an example, customers can check incoming contacts against previous contact activity in DynamoDB, and then take action, such as disconnecting a contact because they are a blocked contact\.
 
 ## Infrastructure protection<a name="infrastructureprotection"></a>
 
@@ -116,19 +116,19 @@ Customers should analyze the data traversing through and interacting with the co
 + Third party and external data
 + On\-premises data in hybrid Amazon Connect architectures
 
-After analyzing the scope of the data, data classifications should be performed paying attention to identifying sensitive data\. Amazon Connect conforms to the AWS shared security model\. [Data protection in Amazon Connect](data-protection.md) includes best practices like using MFA and TLS and the use of other AWS services, including Amazon Macie\. 
+After analyzing the scope of the data, data classifications should be performed paying attention to identifying sensitive data\. Amazon Connect conforms to the AWS shared responsibility model\. [Data protection in Amazon Connect](data-protection.md) includes best practices like using MFA and TLS and the use of other AWS services, including Amazon Macie\. 
 
-Amazon Connect [handles variety of data related to contact centers](data-handled-by-connect.md)\. This includes phone call media, call recordings, chat transcripts, contact metadata as well as contact flows, routing profiles and queues\. Amazon Connect handles data at rest by segregating data by account ID and instance ID\. All data exchanged with Amazon Connect is protected in transit between the user's web browser and Amazon Connect using open standard TLS encryption\. 
+Amazon Connect [handles variety of data related to contact centers](data-handled-by-connect.md)\. This includes phone call media, call recordings, chat transcripts, contact metadata as well as flows, routing profiles and queues\. Amazon Connect handles data at rest by segregating data by account ID and instance ID\. All data exchanged with Amazon Connect is protected in transit between the user's web browser and Amazon Connect using open standard TLS encryption\. 
 
 You can specify AWS KMS keys to be used for encryption including bring your own key \(BYOK\)\. Additionally, you can use key management options within Amazon S3\.
 
 ### Protecting Data Using Client\-Side Encryption<a name="protectingdata"></a>
 
-Your use case may require encryption of sensitive data that is collected by contact flows\. For example, to gather appropriate personal information to customize the customer experience when they interact with your IVR\. To do this you can use public\-key cryptography with the [AWS Encryption SDK](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/introduction.html)\. The AWS Encryption SDK is a client\-side encryption library designed to make it efficient for everyone to encrypt and decrypt data using open standards and best practices\. 
+Your use case may require encryption of sensitive data that is collected by flows\. For example, to gather appropriate personal information to customize the customer experience when they interact with your IVR\. To do this you can use public\-key cryptography with the [AWS Encryption SDK](https://docs.aws.amazon.com/encryption-sdk/latest/developer-guide/introduction.html)\. The AWS Encryption SDK is a client\-side encryption library designed to make it efficient for everyone to encrypt and decrypt data using open standards and best practices\. 
 
 ### Input validation<a name="inputvalidation"></a>
 
-Perform input validation to ensure that only properly formed data is entering the contact flow\. This should happen as early as possible in the contact flow\. For example, when prompting a customer to say or enter a telephone number, they may or may not include the country code\.
+Perform input validation to ensure that only properly formed data is entering the flow\. This should happen as early as possible in the flow\. For example, when prompting a customer to say or enter a telephone number, they may or may not include the country code\.
 
 ## Amazon Connect security vectors<a name="securityvectors"></a>
 
@@ -140,7 +140,7 @@ Amazon Connect security can be divided into three logical layers as illustrated 
 
    Follow your security best practices for this layer with special attention to the following:
    + Plan identity management keeping in mind best practices noted in [Security Best Practices for Amazon Connect](security-best-practices.md)\.
-   + Mitigate insider threat and compliance risk associated with workloads that handle sensitive information, by creating a secure IVR solution that enables you to bypass agent access to sensitive information\. By encrypting contact input in your contact flows, you’re able to capture information securely without exposing it to your agents, their workstations, or their operating environments\. For more information, see [Encrypt customer input](encrypt-data.md)\.
+   + Mitigate insider threat and compliance risk associated with workloads that handle sensitive information, by creating a secure IVR solution that enables you to bypass agent access to sensitive information\. By encrypting contact input in your flows, you’re able to capture information securely without exposing it to your agents, their workstations, or their operating environments\. For more information, see [Encrypt customer input](encrypt-data.md)\.
    + You are responsible for maintaining the allow list of AWS IP addresses, ports, and protocols needed to use Amazon Connect\. 
 
 1. **AWS**: The AWS layer includes Amazon Connect and AWS integrations including AWS Lambda, Amazon DynamoDB, Amazon API Gateway, Amazon S3, and other services\. Follow the security pillar guidelines for AWS services, with special attention to the following:
@@ -153,7 +153,7 @@ Amazon Connect security can be divided into three logical layers as illustrated 
 1. **External**: The External layer includes contact points including chat, click\-to\-call endpoints, and the PSTN for voice calls, integrations you may have with legacy contact center solutions in a Hybrid contact center architecture, and integrations you may have with other third\-party solutions\. Any entry point or exit point for a third party in your workload is considered the external layer\.
 
    This layer also covers integrations customers may have with other third\-party solutions and applications such as CRM systems, work force management \(WFM\), and reporting and visualization tools and applications, such as Tableau and Kibana\. You should consider the following areas when securing the external layer:
-   + You can [create contact filters for repeat and fraudulent contacts](http://aws.amazon.com/blogs/contact-center/deter-spam-callers-using-amazon-connect/) using AWS Lambda to write contact details to DynamoDB from within your contact flow, including ANI, IP address for click\-to\-dial and chat endpoints, and any other identifying information to track how many contact requests occur during a given period of time\. This approach allows you to query and add contacts to deny lists, automatically disconnecting them if they exceed reasonable levels\. 
+   + You can [create contact filters for repeat and fraudulent contacts](http://aws.amazon.com/blogs/contact-center/deter-spam-callers-using-amazon-connect/) using AWS Lambda to write contact details to DynamoDB from within your flow, including ANI, IP address for click\-to\-dial and chat endpoints, and any other identifying information to track how many contact requests occur during a given period of time\. This approach allows you to query and add contacts to deny lists, automatically disconnecting them if they exceed reasonable levels\. 
    + ANI Fraud detection solutions using [Amazon Connect telephony metadata](connect-attrib-list.md#telephony-call-metadata-attributes) and [partner solutions](http://aws.amazon.com/connect/partners/) can be used to protect against caller ID spoofing\. 
    + [Amazon Connect Voice ID](voice-id.md) and other voice biometric partner solutions can be used to enhance and streamline the authentication process\. Active voice biometric authentication allows contacts the option to speak specific phrases and use those for voice signature authentication\. Passive voice biometrics allow contacts to register their unique voiceprint and use their voiceprint to authenticate with any voice input that meets sufficient length requirements for authentication\.
    + Maintain the [application integration](app-integration.md) section in the Amazon Connect console for adding any third\-party application or integration points to your allow list, and remove unused endpoints\.

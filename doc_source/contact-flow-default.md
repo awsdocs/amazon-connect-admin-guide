@@ -1,13 +1,13 @@
-# Default contact flows<a name="contact-flow-default"></a>
+# Default flows<a name="contact-flow-default"></a>
 
-Amazon Connect includes a set of default contact flows that have already been published\. It uses them to power your contact center\. 
+Amazon Connect includes a set of default flows that have already been published\. It uses them to power your contact center\. 
 
-For example, say you create a contact flow that includes putting the customer on hold, but you don't create a prompt for it\. The default contact flow, **Default agent hold**, will be played automatically\. This is a way to help you get started with your call center quickly\.
+For example, say you create a flow that includes putting the customer on hold, but you don't create a prompt for it\. The default flow, **Default agent hold**, will be played automatically\. This is a way to help you get started with your call center quickly\.
 
 **Tip**  
-If you want to change the behavior of a default contact flow, we recommend creating a new customized flow based on the default\. Then call the new flow intentionally in your contact flows rather than defaulting to it\. This gives you better control over how your contact flows work\.
+If you want to change the behavior of a default flow, we recommend creating a new customized flow based on the default\. Then call the new flow intentionally in your flows rather than defaulting to it\. This gives you better control over how your flows work\.
 
-To see the list of default flows in the Amazon Connect console, go to **Routing**, **Contact Flows**\. They all start with **Default** in their name\. 
+To see the list of default flows in the Amazon Connect console, go to **Routing**, **Flows**\. They all start with **Default** in their name\. 
 
 **Topics**
 + [Change a default contact flow](change-default-contact-flow.md)

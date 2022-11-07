@@ -1,29 +1,175 @@
-# Release notes<a name="amazon-connect-release-notes"></a>
+# Release notes for Amazon Connect<a name="amazon-connect-release-notes"></a>
 
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
-**Topics**
-+ [April 2022 Updates](#april22-release-notes)
-+ [March 2022 Updates](#march22-release-notes)
-+ [February 2022 Updates](#feb22-release-notes)
-+ [January 2022 Updates](#jan22-release-notes)
-+ [December 2021 Updates](#dec21-release-notes)
-+ [November 2021 Updates](#nov21-release-notes)
-+ [October 2021 Updates](#oct21-release-notes)
-+ [September 2021 Updates](#sept21-release-notes)
-+ [August 2021 Updates](#august21-release-notes)
-+ [July 2021 Updates](#july21-release-notes)
-+ [June 2021 Updates](#june21-release-notes)
-+ [May 2021 Updates](#may21-release-notes)
-+ [April 2021 Updates](#april21-release-notes)
-+ [March 2021 Updates](#march21-release-notes)
-+ [February 2021 Updates](#february21-release-notes)
-+ [January 2021 Updates](#january21-release-notes)
-+ [December 2020 Updates](#december20-release-notes)
-+ [November 2020 Updates](#november20-release-notes)
-+ [Earlier Updates](#release-notes-earlier-updates)
+## November 2022 Updates<a name="nov22-release-notes"></a>
+
+### Delete quick connects using the Amazon Connect console<a name="quickconnects-nov-2022"></a>
+
+In addition to deleting quick connects programmatically, you can now delete them using the Amazon Connect console\. For more information, see [Delete quick connects](https://docs.aws.amazon.com/connect/latest/adminguide/quick-connects-delete.html)\. 
+
+### Added DismissUserContact API<a name="dismissusercontact-api-nov-2022"></a>
+
+Added a new API for programmatically clearing the notifications agents receive after they have missed or rejected a contact, making them eligible to be routed new contacts\. This API can also be used to clear similar notifications when an agent encounters an error with accepting the contact or is handling After Contact Work\. For more information, see the [DismissUserContact API reference](https://docs.aws.amazon.com/connect/latest/APIReference/API_DismissUserContact.html)\.
+
+## October 2022 Updates<a name="oct22-release-notes"></a>
+
+### Add secondary email address and mobile number to user accounts<a name="user-management-oct-2022"></a>
+
+For more information, see [Add users to Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/user-management.html)\. 
+
+### Emojis for chat messages<a name="emoji-oct-2022"></a>
+
+Added support for emojis for your customer's chat experience\. Agents and customers can now send emojis when composing a chat message, enabling them to visually convey sentiment or emphasis during a chat conversation\. For more information, see [ Enable text formatting for your customer's chat experience](https://docs.aws.amazon.com/connect/latest/adminguide/enable-text-formatting-chat.html)\.
+
+### Released support for Enhanced 911 \(E911\)<a name="e911-oct-2022"></a>
+
+Enhanced 911 \(E911\) enables location information to be sent to 911 dispatch when a 911 call is placed\. In addition to connecting a user with 911 emergency services, customers in the United States can build E911 capabilities to automatically provide the caller's address information to 911 dispatchers\. For more information, see [Set up US emergency calling in Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/setup-us-emergency-calling.html)\. 
+
+### GA for Amazon Connect Global Resiliency<a name="global-resiliency-oct-2022"></a>
+
+Released Amazon Connect Global Resiliency for General Availability\. Global Resiliency enables you to provide customer service anywhere in the world with the highest reliability, performance, and efficiency, while meeting international regulatory requirements\. For more information, see [Set up Amazon Connect Global Resiliency](https://docs.aws.amazon.com/connect/latest/adminguide/setup-connect-global-resiliency.html)\. 
+
+### Added Ctrl\+Shift\+F to search flow block titles and metadata<a name="flow-designer-oct-2022"></a>
+
+Press **Ctrl\+Shift\+F** to display a search box in the flow designer, and then search the block titles and metadata\. To hide the search box, go to **Settings**, **Toolbar**, and set the toggle\.
+
+The following GIF shows how to use the search box to find flow blocks that have **attributes** in their title\. It also shows how to display or hide the search box using the toggle\. 
+
+![\[Use the Search box in the flow designer to find flow blocks that have attributes in their title. To hide the Search box from your toolbar, turn the toggle to Off.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/Search-Designer.gif)
+
+### Released Amazon Connect Cases for General Availability<a name="cases-oct-2022"></a>
+
+Amazon Connect Cases allows your agents to quickly track and manage customer issues that require multiple interactions, follow\-up tasks, and teams in your contact center\. For more information, see [Amazon Connect Cases](https://docs.aws.amazon.com/connect/latest/adminguide/cases.html) and [Amazon Connect Cases API Reference](https://docs.aws.amazon.com/cases/latest/APIReference/Welcome.html)\.
+
+## September 2022 Updates<a name="sept22-release-notes"></a>
+
+### Searching for a contact? Choose from a list of categories<a name="contact-search-sep-2022"></a>
+
+When you search a contact and filter results by Contact Lens categories, you can pick from a list of categories, rather than manually typing the name of a category\.
+
+### Updated flow designer<a name="flow-designer-sept-2022"></a>
+
+We've released a number of improvements to the flow designer experience to make building and editing flows easier\.
++ Updated look and feel of block dock, blocks, and flow designer canvas\.  
+![\[Access the new flow designer experience by clicking Try now in the banner at the top of the flow designer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/NewOptIn.gif)
++ Import / Export uses a standard flow language so you can interchangeably build flows in APIs or in the UI\. 
+**Important**  
+To copy and paste flows and blocks in the updated flow designer, the flow must be in the new flow language\. To convert a legacy flow into the new format, you have two options:  
+Option 1: In the flow designer user interface, opt in to the updated flow designer\. Your legacy flows are automatically converted\.
+Option 2: Manually [import](contact-flow-import-export.md) a legacy flow using the updated flow designer\.  
+This option is most useful for scenarios where you have stored your flows in JSON offline\. For example, for configuration control, you may have flow configurations in an offline data store\. To copy a part of that flow and paste it into the updated flow designer, you need to import it into the updated flow designer\. The importing process converts it to the new flow language\. After that, you can copy and paste within the updated flow designer\. If you want to keep using your offline data store as a source of truth, update the flow with the new format\.
++ You can use **Search** to filter blocks in the block dock\.  
+![\[.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/FilterBlock.gif)
++ Multi\-line block metadata allows you to click and expand to see block configurations\.  
+![\[.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/Metadata.gif)
++ Color\-coded branches and connectors help you distinguish paths\.  
+![\[\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ColorCodedBranches.gif)
++ Improved zooming\.  
+![\[\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/Zoom.gif)
++ Flow/module metadata appears at the bottom of the block dock\.  
+![\[\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/AdditionalData.gif)
++ New, more intuitive categories \(**Check**, **Analyze**, and **Logic**\) to make it easier to find the blocks you are looking for\.  
+![\[\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/NewCategories.gif)
++ Updated user interface in the block **Property** pages\.  
+![\[\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/Sidepanel.gif)
+
+### Search for Amazon Connect users by first name, last name, login, and more<a name="search-users-sept-2022"></a>
+
+You can search for Amazon Connect users by first name, last name, user login, agent hierarchy, security profile, and routing profile\. For example, you can search for all Amazon Connect users who have the first name "Jane\."
+
+### Queue dashboard<a name="queue-dashboard-sept-2022"></a>
+
+You can visualize historical queue data via time series graphs to help identify patterns, trends, and outliers specifically for **Service Level**, **Contacts Queued**, and **Average Handle Time**\. For more information, see [ Visualize: Queue dashboard](https://docs.aws.amazon.com/connect/latest/adminguide/visualize-queue-dashboard.html)\.
+
+## August 2022 Updates<a name="aug22-release-notes"></a>
+
+### Contact search: Apply "Match any" or "Match all" to Contact Lens category searches<a name="contact-lens-aug-2022"></a>
+
+When you search for contacts, and filter by Contact Lens categories, you can apply **Match any** or **Match all** to the search\. For example, you can search contacts with both "category A" and "category B," or with either one of the two categories\.
+
+### Evaluate calls for voice spoofing<a name="voice-spoofing-2022"></a>
+
+Use Voice ID to evaluate calls for voice spoofing\. For more information, see [Voice spoofing detection](https://docs.aws.amazon.com/connect/latest/adminguide/voice-id.html#voice-spoofing-detection) and the [Amazon Connect Voice ID API Reference](https://docs.aws.amazon.com/voiceid/latest/APIReference/Welcome.html)\.
+
+### Added SearchSecurityProfiles API<a name="searchsecurityprofiles-api-aug22"></a>
+
+Added a new API for programmatically searching security profiles\. For more information, see [https://docs.aws.amazon.com/connect/latest/APIReference/API_SearchSecurityProfiles.html](https://docs.aws.amazon.com/connect/latest/APIReference/API_SearchSecurityProfiles.html)\. 
+
+### Released Schedule Adherence \(Preview\)<a name="schedule-adherence-aug22"></a>
+
+Contact center supervisors or managers track schedule adherence to understand when agents are following the schedule that you have created\. This helps ensure you achieve your service level targets, while improving agent productivity and customer satisfaction\. For more information, see [Schedule Adherence](https://docs.aws.amazon.com/connect/latest/adminguide/schedule-adherence.html)\. 
+
+## July 2022 Updates<a name="july22-release-notes"></a>
+
+### Search for contacts by using the agent's first or last name<a name="contact-search-july22"></a>
+
+**Note**  
+This feature is not available in AWS GovCloud\.
+
+You can search for contacts using the agent's first or last name\. The filter name is **Agent**\. To view an image of this experience, see [Search contacts by agent's first or last name](contact-search.md#search-contacts-agent-name)\.
+
+### Released updates for rich text format rendering<a name="rich-text-formatting-july22"></a>
+
+On the **Contact Search** and **Contact Detail** pages, you can now view chat transcripts that have rich text formatting, such as bold or italic font, bullet points, numbered lists, and hyperlinks\. For more information about getting started with Amazon Connect Chat, see [Set up your customer's chat experience](https://docs.aws.amazon.com/connect/latest/adminguide/enable-chat-in-app.html)\. 
+
+### View call transcript using the CCP or agent application<a name="call-transcript-july22"></a>
+
+Agents can view call unredacted transcripts in the CCP and agent application\. For more information, see [View a call transcript during ACW](https://docs.aws.amazon.com/connect/latest/adminguide/view-call-transcript-ccp.html)\. 
+
+## June 2022 Updates<a name="june22-release-notes"></a>
+
+### Support for Lex intent confidence scores and sentiment analysis<a name="lex-sentiment-scores-june-2022"></a>
+
+You can further personalize the automated self\-service customer experience using Amazon Lex intent confidence scores and sentiment analysis as a branch within your flows\. For more information, see the [Get customer input](https://docs.aws.amazon.com/connect/latest/adminguide/get-customer-input.html) block\. For a list of new contact attributes, see [Amazon Lex contact attributes](https://docs.aws.amazon.com/connect/latest/adminguide/connect-attrib-list.html#attribs-lex-table)\.
+
+### Released Amazon Connect Cases \(Preview\)<a name="cases-preview-june-2022"></a>
+
+Amazon Connect Cases \(Preview\) allows your agents to quickly track and manage customer issues that require multiple interactions, follow\-up tasks, and teams in your contact center\. For more information, see [Amazon Connect Cases \(Preview\)](https://docs.aws.amazon.com/connect/latest/adminguide/cases.html) and [Amazon Connect Cases API Reference \(Preview\)](https://docs.aws.amazon.com/cases/latest/APIReference/Welcome.html)\.
+
+### GA for Amazon Connect outbound campaigns<a name="outbound-communications-june-2022"></a>
+
+Released Amazon Connect outbound campaigns, formerly known as High\-volume outbound communications\. This release includes a set of APIs for creating and managing outbound campaigns\. For more information, see [Enable Amazon Connect outbound campaigns](https://docs.aws.amazon.com/connect/latest/adminguide/outbound-campaigns.html) and [Amazon Connect Outbound Campaigns API Reference](https://docs.aws.amazon.com/connect-outbound/latest/APIReference/Welcome.html.html)\.
+
+### Released GetCurrentUserData API<a name="getcurrentuserdata-june-2022"></a>
+
+Released the [GetCurrentUserData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentUserData.html) API\. It enables you to return the real\-time active user data from the specified Amazon Connect instance\.
+
+### Released task templates<a name="task-templates-june-2022"></a>
+
+You can now create custom task templates, making it easy for agents to consistently capture the relevant and required information to create or complete tasks\. For more information, see [Create task templates](https://docs.aws.amazon.com/connect/latest/adminguide/task-templates.html)\. For information about using the API to programmatically create and manage task templates, see the [Amazon Connect API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html) and the [Amazon Connect Resource Type Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Connect.html) in the *AWS CloudFormation User Guide*\.
+
+### New API to transfer contacts<a name="transfercontact-api-june-2022"></a>
+
+Added a new API that you can use to transfer contacts from one agent or queue to another agent or queue at any point after a contact is created\. You can transfer a contact to another queue by providing the flow which orchestrates the contact to the destination queue\. This gives you more control over contact handling and helps you adhere to the service level agreement \(SLA\) guaranteed to your customers\.
+
+For information, see [TransferContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_TransferContact.html) in the *Amazon Connect API Reference*\. 
+
+## May 2022 Updates<a name="may22-release-notes"></a>
+
+### Updated workflow for outbound campaigns<a name="outbound-communications-may-2022"></a>
+
+Updated the workflow for onboarding to outbound campaigns using the Amazon Connect and Amazon Pinpoint user interface\. For more information, see [Enable outbound campaigns](https://docs.aws.amazon.com/connect/latest/adminguide/outbound-campaigns.html)\.
+
+### Voice ID expires speakers<a name="voiceid-may-2022"></a>
+
+For BIPA Compliance, Amazon Connect Voice ID automatically expires speakers that have not been accessed for enrollment, re\-enrollment, or successful authentication for three years\. You can see a speaker's last access time by looking at the `lastAccessedAt` attribute returned by the [DescribeSpeaker](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_DescribeSpeaker.html) and [ListSpeakers](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_ListSpeakers.html) APIs\. 
+
+For more information, see [What data is stored?](https://docs.aws.amazon.com/connect/latest/adminguide/voice-id.html#voice-id-data-storage) in the [Use real\-time caller authentication with Voice ID](https://docs.aws.amazon.com/connect/latest/adminguide/voice-id.html) topic\.
 
 ## April 2022 Updates<a name="april22-release-notes"></a>
+
+### New API to change an agent's current status<a name="api-april28-2022"></a>
+
+Amazon Connect provides an API to programmatically change the current status of an agent\. [Agent statuses](metrics-agent-status.md) are used to determine when an agent is **Available** to be routed contacts in Amazon Connect, versus when they are set to **Offline** or a custom status such as **Lunch** or **Break** and should not be routed contacts\. For more information, see [PutUserStatus](https://docs.aws.amazon.com/connect/latest/APIReference/API_PutUserStatus.html) in the [Amazon Connect API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\.
+
+### New API to search for users by name, agent hierarchies, and tags<a name="api-april22"></a>
+
+Added API to search for user records in your Amazon Connect instance\. This new API provides a programmatic and flexible way to search for users by first name, last name, username, routing profile, security profile, agent hierarchies or tags\. For example, you can now use this API to search for all users tagged with a Department:key value pair\. You can also quickly find a list of all users assigned to a specific security profile, routing profile, or agent hierarchy\. For more information, see the [Amazon Connect API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\. 
+
+### New APIs to claim and configure phone numbers<a name="api-april22"></a>
+
+Added new APIs to claim new phone numbers and configure them programmatically\. Using these APIs, you can programmatically search for and claim available phone numbers, associate phone numbers to flows, or release phone numbers that are no longer needed\. Additionally, the phone number APIs come with support for AWS CloudFormation\. For more information, see the [Amazon Connect API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html) and the [Amazon Connect Resource Type Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Connect.html) in the *AWS CloudFormation User Guide*\. 
 
 ### Telephony: Multi\-party calls<a name="telephony-april22"></a>
 
@@ -103,141 +249,143 @@ You can configure the maximum chat duration to last up to 7 days\. For more info
 
 Improve the accuracy of speech recognition for product names, brand names, and domain\-specific terminology, by expanding and tailoring the vocabulary of the speech\-to\-text engine in Contact Lens\. For more information, see [Add custom vocabularies](add-custom-vocabulary.md)\. 
 
-## December 2021 Updates<a name="dec21-release-notes"></a>
+## Earlier Updates<a name="release-notes-earlier-updates"></a>
 
-### Chat widget supports browser notifications<a name="chatwidget-dec21"></a>
+### December 2021 Updates<a name="dec21-release-notes"></a>
+
+#### Chat widget supports browser notifications<a name="chatwidget-dec21"></a>
 
 The chat widget supports browser notifications for desktop devices\. For more information, see [Browser notifications](browser-notifications-chat.md)\.
 
-### Ingest data into Customer Profiles from Segment and Shopify<a name="cp-dec21"></a>
+#### Ingest data into Customer Profiles from Segment and Shopify<a name="cp-dec21"></a>
 
 For more information, see [Set up integration for Segment](https://docs.aws.amazon.com/connect/latest/adminguide/integrate-customer-profiles-segment.html) and [Set up integration for Shopify](https://docs.aws.amazon.com/connect/latest/adminguide/integrate-customer-profiles-shopify.html)\.
 
-## November 2021 Updates<a name="nov21-release-notes"></a>
+### November 2021 Updates<a name="nov21-release-notes"></a>
 
-### Released unified agent application<a name="agent-app-nov21"></a>
+#### Released unified agent application<a name="agent-app-nov21"></a>
 
 Amazon Connect released the unified agent application to improve the agent experience and customer interactions\. For more information, see [Agent training guide](https://docs.aws.amazon.com/connect/latest/adminguide/agent-user-guide.html)\.
 
-### Released call summarization<a name="call-summarization-nov21"></a>
+#### Released call summarization<a name="call-summarization-nov21"></a>
 
 Contact Lens for Amazon Connect provides the option for you to view a transcript summary\. The summary shows only those lines where Contact Lens has identified an issue, outcome, or action item in the transcript\. For more information, see [View call summary](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens-call-summarization.html)\.
 
-### Released Identity Resolution to consolidate similar profiles<a name="identity-resolution-nov21"></a>
+#### Released Identity Resolution to consolidate similar profiles<a name="identity-resolution-nov21"></a>
 
 Amazon Connect Customer Profiles offers Identity Resolution, a feature that is designed to automatically detect similar customer profiles by comparing name, email address, phone number, date of birth, and address\. For example, two or more profiles with spelling mistakes, such as "John Doe" and "Jhn Doe," can be detected as belonging to the same customer "John Doe" using clustering and matching machine learning \(ML\) algorithms\. Once a group of profiles are detected to be similar, admins can configure how profiles should be merged together by setting up consolidation rules by using the [Amazon Connect admin console](https://docs.aws.amazon.com/connect/latest/adminguide/use-identity-resolution.html) or [Amazon Connect Customer Profiles APIs](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/Welcome.html)\.
 
-### Amazon Connect Customer Profiles stores contact history at no charge<a name="cp-no-charge-nov21"></a>
+#### Amazon Connect Customer Profiles stores contact history at no charge<a name="cp-no-charge-nov21"></a>
 
 Amazon Connect Customer Profiles now provides contact history and customer information together in unified customer profiles at no charge, helping contact center managers personalize the contact center experience\. In new instances, Customer Profiles is enabled by default\. For more information, see [Step 4: Data Storage](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-instances.html#get-started-data-storage) in the *Create an Amazon Connect instance* topic\.
 
-### Added modular flows to help you create common functions<a name="flow-modules-nov21"></a>
+#### Added modular flows to help you create common functions<a name="flow-modules-nov21"></a>
 
-Contact flow modules are reusable sections of a contact flow\. You can create them to extract repeatable logic across your flows, and create common functions\. For more information, see [Contact flow modules for reusable functions](https://docs.aws.amazon.com/connect/latest/adminguide/contact-flow-modules.html)\.
+Flow modules are reusable sections of a flow\. You can create them to extract repeatable logic across your flows, and create common functions\. For more information, see [Flow modules for reusable functions](https://docs.aws.amazon.com/connect/latest/adminguide/contact-flow-modules.html)\.
 
-### New APIs to archive/unarchive and delete contact flows<a name="flow-apis-nov21"></a>
+#### New APIs to archive/unarchive and delete contact flows<a name="flow-apis-nov21"></a>
 
-Added new APIs that provide a programmatic and flexible way to manage your library of contact flows at scale\. For example, contact flows used only during certain times of the year can be archived when not in use and then unarchived when needed\. You can now also delete a contact flow so it is no longer available for use\. For more information, see the [Amazon Connect API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\.
+Added new APIs that provide a programmatic and flexible way to manage your library of flows at scale\. For example, flows used only during certain times of the year can be archived when not in use and then unarchived when needed\. You can now also delete a flow so it is no longer available for use\. For more information, see the [Amazon Connect API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\.
 
-### Search contacts by custom contact attributes<a name="search-contact-attributes-nov21"></a>
+#### Search contacts by custom contact attributes<a name="search-contact-attributes-nov21"></a>
 
 Added support for searching contacts by custom contact attributes \(also called user\-defined attributes\)\. For more information, see [Search by custom contact attributes](https://docs.aws.amazon.com/connect/latest/adminguide/search-custom-attributes)\.
 
-### Added Customer profiles block<a name="cp-block-nov21"></a>
+#### Added Customer profiles block<a name="cp-block-nov21"></a>
 
 Added the [Customer profiles](https://docs.aws.amazon.com/connect/latest/adminguide/customer-profiles-block) block\. It enables you to retrieve, create, and update a customer profile\.
 
-### Released Contact APIs<a name="contact-apis-nov21"></a>
+#### Released Contact APIs<a name="contact-apis-nov21"></a>
 
 Added APIs so you can get and update contact details programmatically\. For example, you can describe contact details such as queue information, chat attachments, task references, and update contact information such as task name\. For more information, see [DescribeContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeContact.html), [UpdateContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContact.html), and [ListReferences](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListReferences.html) in the *Amazon Connect API Reference*\.
 
-### Released scheduled tasks<a name="tasks-nov21"></a>
+#### Released scheduled tasks<a name="tasks-nov21"></a>
 
 Added the ability to schedule tasks up to six days in the future to follow\-up on customer issues when promised\. You can also update the scheduled date and time using the [UpdateContactSchedule](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactSchedule.html) API\. For more information, see the [Create task](https://docs.aws.amazon.com/connect/latest/adminguide/create-task-block.html) block and the [Create a task](https://docs.aws.amazon.com/connect/latest/adminguide/create-task.html) topic in the *Agent training guide*\. 
 
-### Released security profiles APIs<a name="security-profiles-nov21"></a>
+#### Released security profiles APIs<a name="security-profiles-nov21"></a>
 
 Added APIs so you can create and manage security profiles programmatically\. Security profiles help you manage who can access the Amazon Connect dashboard and Contact Control Panel \(CCP\), and who can perform specific tasks\. For more information, see the [Amazon Connect API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\. 
 
-### Changes to real\-time metrics agent tables<a name="agent-tables-nov21"></a>
+#### Changes to real\-time metrics agent tables<a name="agent-tables-nov21"></a>
 
-We are rolling out a new service to maintain the high availability from metrics that you expect from Amazon Connect\. Due to this change, the agent tables will now be sorted by availability status by default, rather than by agent login\. 
+We are rolling out a new service to maintain the high availability from metrics that you expect from Amazon Connect\. Due to this change, the agent tables are sorted by [agent status](metrics-agent-status.md) instead of by agent login\.
 
- Additionally, the queues and routing profiles table will sort by agents online by default instead of queue or routing profile name\. 
+Additionally, the queues and routing profiles table are sorted by agents online instead of by queue or routing profile name\.
 
-### Added new metrics<a name="metrics-nov21"></a>
+#### Added new metrics<a name="metrics-nov21"></a>
 
 Added following new historical metrics: **Contacts transferred in by agent** and **Contacts transferred out by agent**\. Added new real\-time metrics: T**ransferred in by agent** and **Transferred out by agent**\. For more information, see [Historical metrics definitions](https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html) and [Real\-time metrics definitions](https://docs.aws.amazon.com/connect/latest/adminguide/real-time-metrics-definitions.html)\.
 
-## October 2021 Updates<a name="oct21-release-notes"></a>
+### October 2021 Updates<a name="oct21-release-notes"></a>
 
-### Released real\-time chat message streaming<a name="chat-oct21"></a>
+#### Released real\-time chat message streaming<a name="chat-oct21"></a>
 
 You can subscribe to a real\-time stream of chat messages\. For more information, see [Enable real\-time chat message streaming](https://docs.aws.amazon.com/connect/latest/adminguide/chat-message-streaming.html)\.
 
-### Released `HoursOfOperation` APIs for General Availability<a name="apis-oct21"></a>
+#### Released `HoursOfOperation` APIs for General Availability<a name="apis-oct21"></a>
 
 Released the Amazon Connect `HoursOfOperation` APIs for general availability \(GA\)\. Also launched AWS CloudFormation support for Users, User Hierarchies, and Hours of Operation\. For more information, see the [Amazon Connect API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html) and the [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Connect.html )\.
 
-## September 2021 Updates<a name="sept21-release-notes"></a>
+### September 2021 Updates<a name="sept21-release-notes"></a>
 
-### Released Amazon Connect Wisdom General Availability<a name="wisdom-sept21"></a>
+#### Released Amazon Connect Wisdom General Availability<a name="wisdom-sept21"></a>
 
 For more information, see [Deliver information to agents using Amazon Connect Wisdom](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-wisdom.html) and the [Amazon Connect Wisdom API Reference](https://docs.aws.amazon.com/wisdom/latest/APIReference/Welcome.html)\. 
 
-### Amazon Connect Voice ID \- General Availability<a name="voiceid-sept21"></a>
+#### Amazon Connect Voice ID \- General Availability<a name="voiceid-sept21"></a>
 
 For more information, see [Use real\-time caller authentication with Voice ID](https://docs.aws.amazon.com/connect/latest/adminguide/connect/latest/adminguide/voice-id.html) and the [Amazon Connect Voice ID API Reference](https://docs.aws.amazon.com/voiceid/latest/APIReference/Welcome.html)\. 
 
-### Preview release of Amazon Connect High\-Volume Outbound Communications<a name="outbound-sept21"></a>
+#### Preview release of Amazon Connect outbound campaigns<a name="outbound-sept21"></a>
 
-Added content for the preview release of Amazon Connect High\-Volume Outbound Communications\. By using Amazon Pinpoint Journeys and Amazon Connect, you can now create high\-volume outbound campaigns for voice, SMS, and email\. For more information, see [Enable High\-Volume Outbound Communications](https://docs.aws.amazon.com/connect/latest/adminguide/enable-high-volume-outbound-communications.html)\. 
+Added content for the preview release of outbound campaigns\. By using Amazon Pinpoint Journeys and Amazon Connect, you can now create outbound campaigns for voice, SMS, and email\. For more information, see [Enable outbound campaigns](https://docs.aws.amazon.com/connect/latest/adminguide/outbound-campaigns.html)\. 
 
-### New Amazon AppIntegrations Service APIs<a name="appintegrations-apis"></a>
+#### New Amazon AppIntegrations Service APIs<a name="appintegrations-apis"></a>
 
 New DataIntegration APIs for the Amazon AppIntegrations Service: `CreateDataIntegration`, `DeleteDataIntegration`, `GetDataIntegration`, `ListDataIntegrationAssociations`, `ListDataIntegrations`, `UpdateDataIntegration`\. 
 
 For more information, see [Amazon AppIntegrations Service API Reference](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html)\.
 
-### Display name and contact attributes in chat<a name="chat-sept21"></a>
+#### Display name and contact attributes in chat<a name="chat-sept21"></a>
 
-You can now personalize the chat experience, as you can specify the name of your customer that interacts using the chat user interface\. You can also securely pass the contact attributes to capture information about the contact which can be used in the contact flow to further personalize the experience\. For more information, see [Pass the customer display name when a chat initializes](https://docs.aws.amazon.com/connect/latest/adminguide/pass-display-name-chat.html) and [Pass contact attributes when a chat initializes](https://docs.aws.amazon.com/connect/latest/adminguide/pass-contact-attributes-chat.html)\. 
+You can now personalize the chat experience, as you can specify the name of your customer that interacts using the chat user interface\. You can also securely pass the contact attributes to capture information about the contact which can be used in the flow to further personalize the experience\. For more information, see [Pass the customer display name when a chat initializes](https://docs.aws.amazon.com/connect/latest/adminguide/pass-display-name-chat.html) and [Pass contact attributes when a chat initializes](https://docs.aws.amazon.com/connect/latest/adminguide/pass-contact-attributes-chat.html)\. 
 
-### Preview of agent application<a name="customerprofiles-sept21"></a>
+#### Preview of agent application<a name="customerprofiles-sept21"></a>
 
 Launched an updated UI for the agent application preview that combines Customer Profiles and the Contact Control Panel \(CCP\)\. For more information, see [Access Customer Profiles in the agent application](https://docs.aws.amazon.com/connect/latest/adminguide/customer-profile-access.html)\. 
 
-### Added Create task block<a name="contactblocks-sept21"></a>
+#### Added Create task block<a name="contactblocks-sept21"></a>
 
-Added the **Create task** block\. It creates a new task, sets the tasks attributes, and initiates a contact flow to start the task\. For more information, see [Contact block: Create task](https://docs.aws.amazon.com/connect/latest/adminguide/create-task-block.html)\. 
+Added the **Create task** block\. It creates a new task, sets the tasks attributes, and initiates a flow to start the task\. For more information, see [Flow block: Create task](https://docs.aws.amazon.com/connect/latest/adminguide/create-task-block.html)\. 
 
-## August 2021 Updates<a name="august21-release-notes"></a>
+### August 2021 Updates<a name="august21-release-notes"></a>
 
-### Improved user interface for Amazon Connect console<a name="adminconsole-august21"></a>
+#### Improved user interface for Amazon Connect console<a name="adminconsole-august21"></a>
 
 Released a redesigned and improved user interface for the Amazon Connect console, making it easier and faster to manage Amazon Connect instances\. For more information, see [Create an Amazon Connect instance](amazon-connect-instances.md)\. 
 
-### APIs for Hours of Operation and Agent Status \(Preview\)<a name="apis-august21"></a>
+#### APIs for Hours of Operation and Agent Status \(Preview\)<a name="apis-august21"></a>
 
 Released for ungated preview new APIs for managing hours of operation and agent status\. For more information, see [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\.
 
-### Contact Lens: Build rules that generate tasks and EventBridge events<a name="contact-lens-august21"></a>
+#### Contact Lens: Build rules that generate tasks and EventBridge events<a name="contact-lens-august21"></a>
 
 Contact Lens rules now allow you to automatically generate tasks and EventBridge events based on uttered keywords, sentiment scores, customer attributes, and other criteria\. For more information, see [Create rules with Contact Lens](build-rules-for-contact-lens.md)\.
 
-### Networking: Allow AWS Global Accelerator<a name="august-networking-2021"></a>
+#### Networking: Allow AWS Global Accelerator<a name="august-networking-2021"></a>
 
 When using SAML Sign\-In to your Amazon Connect instance, you now need to add the AWS Global Accelerator domain, **\*\. awsglobalaccelerator\.com**, to your allow list\. For more information, see [Set up your network](ccp-networking.md)\.
 
-## July 2021 Updates<a name="july21-release-notes"></a>
+### July 2021 Updates<a name="july21-release-notes"></a>
 
-### "Next status" feature for the CCP<a name="next-status-2021"></a>
+#### "Next status" feature for the CCP<a name="next-status-2021"></a>
 
 In busy contact centers, it can be difficult for agents to take a break or go offline when contacts are being quickly routed to them\. To help agents manage their time, we have released a feature that lets agents pause new contacts being routed to them while they finish their current contacts\. When all their slots are cleared, Amazon Connect automatically sets agents to the next status, such as **Lunch**\.
 
 For details about how agents use this feature, see [Set your "Next status"](set-next-status.md)\.
 
-#### Metrics: No changes due to "Next status"<a name="next-status-metrics"></a>
+##### Metrics: No changes due to "Next status"<a name="next-status-metrics"></a>
 
 When an agent is in **Next status**, their metrics are the same as when their status is **Available**\.
 
@@ -247,7 +395,7 @@ For example, an agent is handling one contact and chooses **Next status**\. Here
 
 **Non\-productive time** \(NPT\) is not incremented when an agent is in **Next status** because the agent is still **Available**\. NPT increments only when the agent actually enters the non\-productive status, such as **Lunch**\.
 
-#### Agent event stream has new NextAgentStatus field<a name="agent-event-stream-next-status"></a>
+##### Agent event stream has new NextAgentStatus field<a name="agent-event-stream-next-status"></a>
 
 When an agent sets their status to **Next status**, Amazon Connect populates a new `NextAgentStatus ` field with the next status selected by the agent\. 
 
@@ -284,7 +432,7 @@ When an agent has not selected a **Next status**, the field is `null`, as shown 
 }
 ```
 
-#### Amazon Connect Streams API and "Next status"<a name="streams-next-status"></a>
+##### Amazon Connect Streams API and "Next status"<a name="streams-next-status"></a>
 
 The feature has the following effect:
 + If you integrate with Amazon Connect Streams API and your agents interact directly with the native CCP user interface, your agents will start using this new feature immediately\.
@@ -292,7 +440,7 @@ The feature has the following effect:
 
   If you are handling state change logic yourself from Amazon Connect Streams, you will need to make additional changes explained in the [Amazon Connect Streams README](https://github.com/amazon-connect/amazon-connect-streams/blob/master/README.md)\. 
 
-### Contact search: To search contacts by Agent login requires Users \- View permissions in your security profile<a name="contact-search-july21"></a>
+#### Contact search: To search contacts by Agent login requires Users \- View permissions in your security profile<a name="contact-search-july21"></a>
 
 To use the **Agent** filter on the **Contact search** page, in your Amazon Connect security profile you must have **Users \- View** permissions, as shown in the following image: 
 
@@ -306,31 +454,31 @@ Without **User \- View** permissions, the **Agent** filter is not visible, and s
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search2.png)
 
-## June 2021 Updates<a name="june21-release-notes"></a>
+### June 2021 Updates<a name="june21-release-notes"></a>
 
-### Apple Business Chat GA<a name="apple-business-chat-june2021"></a>
+#### Apple Messages for Business GA<a name="apple-business-chat-june2021"></a>
 
-Released Apple Business Chat for general availability \(GA\)\. For more information, see [Enable Apple Business Chat](apple-business-chat.md)\.
+Released Apple Messages for Business for general availability \(GA\)\. For more information, see [Enable Apple Messages for Business](apple-business-chat.md)\.
 
-### Quick connects management API GA<a name="quickconnects-api-june2021"></a>
+#### Quick connects management API GA<a name="quickconnects-api-june2021"></a>
 
 Released Amazon Connect quick connects management API for general availability \(GA\)\. For more information, see [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\. The quick connects API also supports AWS CloudFormation\. For more information, see [Amazon Connect Resource Type Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Connect.html) in the AWS CloudFormation User Guide\.
 
-### Support for Amazon Lex V2 console and APIs<a name="lexv2-june2021"></a>
+#### Support for Amazon Lex V2 console and APIs<a name="lexv2-june2021"></a>
 
 For more information on using the Amazon Lex V2 console with Amazon Connect, see [Add an Amazon Lex bot](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-lex)\. Added these three APIs: AssociateLexBot, DisassociateLexBot, and ListLexBots\. See the [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\. 
 
-### Chat: Increase to chat agent concurrency<a name="chat-june2021"></a>
+#### Chat: Increase to chat agent concurrency<a name="chat-june2021"></a>
 
 Chat agents can now handle up to 10 concurrent chat contacts\. For more information, see [Create a routing profile](https://docs.aws.amazon.com/connect/latest/adminguide/routing-profiles)\. 
 
-## May 2021 Updates<a name="may21-release-notes"></a>
+### May 2021 Updates<a name="may21-release-notes"></a>
 
-### Added contact events<a name="contact-events-may2021"></a>
+#### Added contact events<a name="contact-events-may2021"></a>
 
 Subscribe to a near real\-time stream of contact events \(for example, call is queued\) in your Amazon Connect contact center\. For more information, see [Amazon Connect contact events](contact-events.md)\.
 
-### Contact search<a name="contact-search-may21"></a>
+#### Contact search<a name="contact-search-may21"></a>
 
 The following changes were release for Contact search:
 + Download increase: You are able to download 3,000 rows of search results to a CSV file, instead of 1,000 rows\. This increase applies to contacts that occurred after Dec 01, 2020\. 
@@ -345,17 +493,17 @@ The following changes were release for Contact search:
   The following image shows how you add **Disconnect reason** as a column to your search results\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-disconnectreason-additionfields.png)
 
-## April 2021 Updates<a name="april21-release-notes"></a>
+### April 2021 Updates<a name="april21-release-notes"></a>
 
-### Customer Profiles: Identity resolution<a name="customer-profiles-april2021-"></a>
+#### Customer Profiles: Identity resolution<a name="customer-profiles-april2021-"></a>
 
 Added identity resolution APIs to Customer Profiles\. For more information, see the [GetMatches](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html) and [MergeProfiles](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_MergeProfiles.html) APIs in the Amazon Connect Customer Profiles API reference\.
 
-### Contact Lens: Use category tags to navigate transcript<a name="contact-lens-april2021-"></a>
+#### Contact Lens: Use category tags to navigate transcript<a name="contact-lens-april2021-"></a>
 
 For more information, see [Tap or click category tags to navigate through transcript](turn-by-turn-transcript.md#category-navigation)\.
 
-### Fixes for chat metrics<a name="chat-metrics-april2021"></a>
+#### Fixes for chat metrics<a name="chat-metrics-april2021"></a>
 
 We released fixes for the following issues identified in chat metrics:
 + Amazon Connect incorrectly reported that chat contacts that were created from disconnect flows were created from transfer flows\.
@@ -373,13 +521,13 @@ In addition, note the following fixes for contact records and the agent event st
 + Contact records: There was an issue in the Attributes section of a chat contact record where the initiation method is **API** for both disconnect and transfer contacts\. With this fix, the initiation method correctly reflects **Disconnect** and **Transfer**, respectively\. 
 + Agent event stream: Chat contacts created from disconnect flows now have **Disconnect** as the initiation method\. 
 
-## March 2021 Updates<a name="march21-release-notes"></a>
+### March 2021 Updates<a name="march21-release-notes"></a>
 
-### Amazon Connect is now available in the Canada \(Central\) Region<a name="new-domain"></a>
+#### Amazon Connect is now available in the Canada \(Central\) Region<a name="new-domain"></a>
 
 Amazon Connect is now available in the Canada \(Central\) Region\. You can claim toll\-free and local telephone numbers from Canadian telephony suppliers\. For a list of countries were the Canada \(Central\) Region is supported, see [Region requirements for phone numbers](https://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)\. For a list of Contact Lens features available in the Canada \(Central\) Region, see [Availability of Contact Lens features by Region](https://docs.aws.amazon.com/connect/latest/adminguide/enable-analytics.html#regions-contactlens)\. 
 
-### Domain for new Amazon Connect instances is "my\.connect\.aws"<a name="new-domain"></a>
+#### Domain for new Amazon Connect instances is "my\.connect\.aws"<a name="new-domain"></a>
 
 The domain for the Amazon Connect access URL has changed to **my\.connect\.aws**\.
 
@@ -387,7 +535,7 @@ For example:
 + Current: https://\[*instance name*\]\.**awsapps\.com**/connect/
 + New: https://\[*instance name*\]\.**my\.connect\.aws**/
 
-#### How does this change impact logging in to Amazon Connect?<a name="new-domain-login"></a>
+##### How does this change impact logging in to Amazon Connect?<a name="new-domain-login"></a>
 
 The current access URL continues to work for Amazon Connect instances created before the release of the **my\.connect\.aws** domain\. Any Amazon Connect instances created after the release automatically use the new domain\. 
 
@@ -405,59 +553,59 @@ Also, if you create new Amazon Connect instances after the release of the new do
 
 For more information, see [Set up your network](ccp-networking.md)\.
 
-#### Schedule for domain change<a name="new-domain-schedule"></a>
+##### Schedule for domain change<a name="new-domain-schedule"></a>
 
 The change has been rolled out to all Regions\.
 
-### Chat: Add a chat user interface your website<a name="march21-chat"></a>
+#### Chat: Add a chat user interface your website<a name="march21-chat"></a>
 
 Added a chat widget that you can customize and secure so it can only be launched from your widget\. For more information, see [Set up your customer's chat experience](enable-chat-in-app.md)\.
 
 Provided an open source example\. For more information, see [Download and customize our open source example](download-chat-example.md)\.
 
-### Amazon Connect Endpoint Test Utility<a name="march21-troubleshoot"></a>
+#### Amazon Connect Endpoint Test Utility<a name="march21-troubleshoot"></a>
 
 To help you validate connectivity to Amazon Connect, or troubleshoot when your agents are experiencing problems with the Contact Control Panel \(CCP\), we've added the Amazon Connect Endpoint Test Utility\. For more information, see [Use the Endpoint Test Utility](check-connectivity-tool.md)\.
 
-## February 2021 Updates<a name="february21-release-notes"></a>
+### February 2021 Updates<a name="february21-release-notes"></a>
 
-### Contact Lens: Availability of real\-time analytics<a name="february21-contact-lens"></a>
+#### Contact Lens: Availability of real\-time analytics<a name="february21-contact-lens"></a>
 
 Content Lens real\-time analytics is available in Europe \(London\), Europe \(Frankfurt\), and Asia \(Tokyo\)\. For more information, see [Availability of Contact Lens features by Region](enable-analytics.md#regions-contactlens)\.
 
-### Ingest data into Customer Profiles using Amazon S3<a name="february21-customer-profiles"></a>
+#### Ingest data into Customer Profiles using Amazon S3<a name="february21-customer-profiles"></a>
 
 Added the ability to create and ingest data from Amazon S3\. For more information, see [Create and ingest customer data into Customer Profiles by using Amazon S3](customer-profiles-object-type-mappings.md)\.
 
-### Disconnect reason in contact record stream<a name="february21-metrics"></a>
+#### Disconnect reason in contact record stream<a name="february21-metrics"></a>
 
 The Amazon Connect contact records stream now includes **DisconnectReason** for voice calls and tasks\. **DisconnectReason** indicates whether an agent or customer disconnected the call, or whether a telecom or network issue caused a call to disconnect\. You can also determine whether a task was completed by an agent or an automatic flow, or it expired\. For more information, see [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord)\.
 
-### Custom service levels<a name="february21-metrics"></a>
+#### Custom service levels<a name="february21-metrics"></a>
 
 Added the ability to create custom service levels\. For details, see [New metric groupings and categories](upcoming-changes.md#metrics-changes-custom-service-levels)\.
 
-## January 2021 Updates<a name="january21-release-notes"></a>
+### January 2021 Updates<a name="january21-release-notes"></a>
 
-### CCP: Change your audio settings<a name="january21-audio-settings"></a>
+#### CCP: Change your audio settings<a name="january21-audio-settings"></a>
 
 Added the ability to change audio settings from the Contact Control Panel \(CCP\)\. This applies to organizations using a customized CCP\. For more information, see [Change your audio device settings](audio-device-settings.md)\.
 
-### Queue APIs \(Preview\)<a name="january21-queue-apis"></a>
+#### Queue APIs \(Preview\)<a name="january21-queue-apis"></a>
 
 Added APIs so you can programmatically create and manage queues\. For more information, see [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\.
 
-### Amazon AppIntegrations APIs \- GA<a name="january21-appintegrations"></a>
+#### Amazon AppIntegrations APIs \- GA<a name="january21-appintegrations"></a>
 
 Released Amazon AppIntegrations APIs for general availability \(GA\)\. For more information, see [Amazon AppIntegrations Service API Reference](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html)\.
 
-## December 2020 Updates<a name="december20-release-notes"></a>
+### December 2020 Updates<a name="december20-release-notes"></a>
 
-### Quick Connect APIs \(Preview\)<a name="december20-quickconnects"></a>
+#### Quick Connect APIs \(Preview\)<a name="december20-quickconnects"></a>
 
 Added APIs so you can programmatically create and manage quick connects\. For more information, see [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\.
 
-### Chat: Support for attachments<a name="december20-chat"></a>
+#### Chat: Support for attachments<a name="december20-chat"></a>
 
 Added support for chat attachments\. For more information, see [Enable attachments to share files using chat](enable-attachments.md)\. 
 
@@ -466,15 +614,15 @@ Added the following APIs:
 + [GetAttachment](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_GetAttachment.html)
 + [StartAttachmentUpload](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html)
 
-### Configurable DTMF timeouts for Lex bots<a name="december20-confdtmf"></a>
+#### Configurable DTMF timeouts for Lex bots<a name="december20-confdtmf"></a>
 
 For more information, see [Configurable fields for DTMF input](get-customer-input.md#get-customer-input-configurable-dtmf)\. 
 
-### Tasks<a name="december20-tasks"></a>
+#### Tasks<a name="december20-tasks"></a>
 
 Added support for tasks, allowing you to prioritize, assign, track, and even automate tasks across the disparate tools agents use to support customers\. For more information, see [Tasks](tasks.md)\. 
 
-### Amazon Connect APIs<a name="december20-connectapis"></a>
+#### Amazon Connect APIs<a name="december20-connectapis"></a>
 
 Added an Amazon Connect API that provides the ability to create tasks \(`StartTaskContact`\), and a set of preview APIs\. 
 
@@ -486,47 +634,47 @@ Added an Amazon Connect API that provides the ability to create tasks \(`StartTa
 + `DeleteUseCase`
 + `ListUseCases`
 
-### Amazon AppIntegrations APIs \(Preview\)<a name="december20-appintegrations"></a>
+#### Amazon AppIntegrations APIs \(Preview\)<a name="december20-appintegrations"></a>
 
 Added the Amazon AppIntegrations APIs \(Preview\), which enables you to configure and reuse connections to external applications\. For more information, see [Amazon AppIntegrations Service API Reference \(Preview\)](https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html)\. 
 
-### Customer Profiles<a name="december20-customerprofiles"></a>
+#### Customer Profiles<a name="december20-customerprofiles"></a>
 
 Added Amazon Connect Customer Profiles, enabling agents to create a customer profile for every new contact that comes in\. You can also integrate with external applications that provide customer profile data\. For more information, see [Use Customer Profiles](customer-profiles.md) and the [Amazon Connect Customer Profiles API Reference](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/Welcome.html)\.
 
-### Real\-time analytics using Contact Lens<a name="december20-contactlens"></a>
+#### Real\-time analytics using Contact Lens<a name="december20-contactlens"></a>
 
 Added real\-time analytics for Contact Lens so you can detect and resolve customer issues more proactively while the call is in progress\. For more information, see [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md) and the [Amazon Connect Contact Lens API Reference](https://docs.aws.amazon.com/contact-lens/latest/APIReference/Welcome.html)\. 
 
-### Amazon Connect Voice ID \(Preview\)<a name="december20-voiceid"></a>
+#### Amazon Connect Voice ID \(Preview\)<a name="december20-voiceid"></a>
 
 Added Amazon Connect Voice ID \(Preview\), which provides for real\-time caller authentication\. For more information, see [Use real\-time caller authentication with Voice ID](voice-id.md)\. 
 
-### Amazon Connect Wisdom \(Preview\)<a name="december20-wisdom"></a>
+#### Amazon Connect Wisdom \(Preview\)<a name="december20-wisdom"></a>
 
 Added Amazon Connect Wisdom \(Preview\), which enables agents to search and find content across multiple repositories, such as frequently asked questions \(FAQs\), wikis, articles, and step\-by\-step instructions for handling different customer issues\. For more information, see [Deliver information to agents using Amazon Connect Wisdom](amazon-connect-wisdom.md)\. 
 
-### Amazon Connect with Apple Business Chat \(Preview\)<a name="december20-applebusinesschat"></a>
+#### Amazon Connect with Apple Messages for Business \(Preview\)<a name="december20-applebusinesschat"></a>
 
-Added support for using Amazon Connect with Apple Business Chat\. For more information, see [Enable Apple Business Chat](apple-business-chat.md)\. 
+Added support for using Amazon Connect with Apple Messages for Business\. For more information, see [Enable Apple Messages for Business](apple-business-chat.md)\. 
 
-## November 2020 Updates<a name="november20-release-notes"></a>
+### November 2020 Updates<a name="november20-release-notes"></a>
 
-### Contact search<a name="november20-contact-search"></a>
+#### Contact search<a name="november20-contact-search"></a>
 + Made several improvements to contact search\. For more information, see [What's new in contact search](contact-search.md#new-contact-search-experience)\.
 
-### Telephony call metadata attributes<a name="november20-telephony"></a>
+#### Telephony call metadata attributes<a name="november20-telephony"></a>
 + Added call attributes to improve fraud detection and routing\. For more information, see [Telephony call metadata attributes \(call attributes\)](connect-attrib-list.md#telephony-call-metadata-attributes)\.
 
-### View historical changes<a name="november20-view-historical-changes"></a>
+#### View historical changes<a name="november20-view-historical-changes"></a>
 + The ability to **View historical changes** on the resource configuration pages is now available for the London Region\. The following differences appear as the changes are rolled out to other Regions\. 
   + Total results: The number feature in the **View historical changes** search page, and page numbers, are replaced with **Previous** and **Next** icons\. 
   + The Username filter requires the entire login name\.
 
-### Chat<a name="november20-chat"></a>
+#### Chat<a name="november20-chat"></a>
 + Added interactive message templates\. For more information, see [Add interactive messages to chat](interactive-messages.md)\.
 
-### APIs<a name="november20-apis"></a>
+#### APIs<a name="november20-apis"></a>
 + Added APIs so you can programmatically manage your agent hierarchies and agent groups\. For more information, see [Amazon Connect Service API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/Welcome.html)\.
 + Added the following APIs \(in an ungated preview release\):
   + CreateInstance
@@ -536,14 +684,12 @@ Added support for using Amazon Connect with Apple Business Chat\. For more infor
   + UpdateInstanceAttribute
   + UpdateInstanceStorageConfig
 
-## Earlier Updates<a name="release-notes-earlier-updates"></a>
-
 ### October 2020 Updates<a name="october20-release-notes"></a>
 
 The following updates were released in October 2020:
 
 #### Contact flows<a name="october20-contact-flows"></a>
-+ Added chat support for whisper flows\. For more information, see [Contact block: Set whisper flow](set-whisper-flow.md)\.
++ Added chat support for whisper flows\. For more information, see [Flow block: Set whisper flow](set-whisper-flow.md)\.
 
 #### Metrics<a name="october20-metrics"></a>
 + Released the following real\-time metrics:
@@ -605,7 +751,7 @@ The following updates were released in August 2020:
 
 #### Contact flows<a name="august20-contact-flows"></a>
 + Added the ability to automatically use the best sounding voice available from Amazon Polly for text\-to\-speech\. For more information, see [Amazon Polly best sounding voice](text-to-speech.md#amazon-polly-best-sounding-voice)\. 
-+ Added the ability to select, cut, copy, and paste contact flows\. For more information, see [Copy and paste contact flows](copy-paste-contact-flows.md)\. 
++ Added the ability to select, cut, copy, and paste flows\. For more information, see [Copy and paste contact flows](copy-paste-contact-flows.md)\. 
 
 #### Telephony<a name="august20-early-media"></a>
 + Added the ability for all customers to enable/disable media support for outbound phone calls\. For more information, see [Step 3: Set telephony](amazon-connect-instances.md#get-started-telephony) in the [Create an Amazon Connect instance](amazon-connect-instances.md) topic\. 
@@ -621,7 +767,7 @@ The following updates were released in August 2020:
 The following updates were released in July 2020:
 
 #### Contact flows<a name="july20-contact-flows"></a>
-+ The **Set voice** block supports speaking styles with neural text\-to\-speech \(TTS\) voices\. For more information, see [Contact block: Set voice](set-voice.md)\.
++ The **Set voice** block supports speaking styles with neural text\-to\-speech \(TTS\) voices\. For more information, see [Flow block: Set voice](set-voice.md)\.
 
 #### APIs<a name="july20-apis"></a>
 + Added [StartContactRecording](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactRecording.html), [StopContactRecording](https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContactRecording.html), [SuspendContactRecording](https://docs.aws.amazon.com/connect/latest/APIReference/API_SuspendContactRecording.html), [ResumeContactRecording](https://docs.aws.amazon.com/connect/latest/APIReference/API_ResumeContactRecording.html) to the Amazon Connect Service API\.
@@ -653,19 +799,19 @@ The following updates were released in June 2020:
   + Resolved an issue where quick connects sometimes did not appear on a page, even after an agent refreshed it\.
   + Improved the experience when a manager "listens in" to multiple chat conversations\. Updated the unread message count on the CCP to include messages sent by the customer and those sent by the agent\. Previously, the unread message count only included messages sent by the customer\.
 + Published instructions for upgrading to the latest CCP\. For more information, see [Upgrade to the latest CCP](upgrade-to-latest-ccp.md)\.
-+ Published a training video that explains how to use the CCP\. For more information, see [Training video: How to use the CCPTraining video](ccp-video-training.md)\.
++ Published a training video that explains how to use the CCP\. For more information, see [Training video: How to use the CCP](ccp-video-training.md)\.
 
 #### Contact flows<a name="june20-contact-flows"></a>
-+ The **Set disconnect flow** block supports voice conversations\. For more information, see [Contact block: Set disconnect flow](set-disconnect-flow.md)\.
-+ The **Set Voice** block supports Amazon Polly Neural Text\-to\-Speech \(NTTS\) voices\. For more information, see [Contact block: Set voice](set-voice.md)\.
-+ The **Get queue metrics** block can return metrics by channel, for example, by voice or chat\. For more information, see [Contact block: Get queue metrics](get-queue-metrics.md)\.
++ The **Set disconnect flow** block supports voice conversations\. For more information, see [Flow block: Set disconnect flow](set-disconnect-flow.md)\.
++ The **Set Voice** block supports Amazon Polly Neural Text\-to\-Speech \(NTTS\) voices\. For more information, see [Flow block: Set voice](set-voice.md)\.
++ The **Get queue metrics** block can return metrics by channel, for example, by voice or chat\. For more information, see [Flow block: Get queue metrics](get-queue-metrics.md)\.
 
 ### May 2020 Update<a name="may20-release-notes"></a>
 
 The following updates were released in May 2020:
 
 #### Contact flows<a name="may20-contact-flows"></a>
-+ Added the ability to select multiple blocks at the same time and rearrange them as a group within a contact flow\. For more information, see [Create an inbound contact flow](create-contact-flow.md#create-inbound-contact-flow)\.
++ Added the ability to select multiple blocks at the same time and rearrange them as a group within a flow\. For more information, see [Create an inbound flow](create-contact-flow.md#create-inbound-contact-flow)\.
 
 ### April 2020 Update<a name="april20-release-notes"></a>
 
@@ -739,14 +885,14 @@ The following updates were released in November 2019:
 #### Contact Flows<a name="nov19-contact-flows"></a>
 
 Added the following contact flow blocks:
-+ [Contact block: Wait](wait.md)
-+ [Contact block: Set disconnect flow](set-disconnect-flow.md) 
++ [Flow block: Wait](wait.md)
++ [Flow block: Set disconnect flow](set-disconnect-flow.md) 
 
 Updated the following contact flow blocks for chat:
-+ [Contact block: Play prompt](play.md)
-+ [Contact block: Get customer input](get-customer-input.md)
-+ [Contact block: Store customer input](store-customer-input.md)
-+ [Contact block: Set recording and analytics behavior](set-recording-behavior.md)
++ [Flow block: Play prompt](play.md)
++ [Flow block: Get customer input](get-customer-input.md)
++ [Flow block: Store customer input](store-customer-input.md)
++ [Flow block: Set recording and analytics behavior](set-recording-behavior.md)
 
 #### User Management<a name="nov19-users"></a>
 + Added that you can use AWS Identity and Access Management \(IAM\) with Amazon Connect\. For more information, see [Identity and access management for Amazon Connect](security-iam.md)\.
@@ -770,14 +916,14 @@ The following update was released in October 2019:
 
   This metric is available in the Queues tables and Routing Profile tables on the **Real time metrics** page\. It's also returned by the `GetCurrentMetricData` API as `AGENTS_ON_CALL`\. 
 
-### June 2019 Update<a name="w709aac78c43c29"></a>
+### June 2019 Update<a name="June19-release-notes"></a>
 
 The following update was released in June 2019:
 
 #### Contact Flows<a name="june19-flows"></a>
-+ Added contact flow versioning so you can choose between a saved or published version when you roll back\.
++ Added flow versioning so you can choose between a saved or published version when you roll back\.
 
-### May 2019 Updates<a name="w709aac78c43c31"></a>
+### May 2019 Updates<a name="may19-release-notes"></a>
 
 The following updates were released in May 2019:
 
@@ -789,7 +935,7 @@ The following updates were released in May 2019:
 #### Contact Control Panel<a name="may19-ccp"></a>
 + Resolved an issue where calling a destroy action \(such as `connection.destroy`\) using the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) resulted in different behavior depending on which leg of the conversation it was called from: the agent or the customer\. Now calling a destroy action results in the same behavior for both: a busy conversation is moved to After Call Work \(ACW\) and a conversation in any other state is cleared\. If you used the native Contact Control Panel instead of the Amazon Connect Streams API, you weren't impacted by this issue\.
 
-### April 2019 Updates<a name="w709aac78c43c33"></a>
+### April 2019 Updates<a name="april19-release-notes"></a>
 
 The following updates were released in April 2019:
 
@@ -802,7 +948,7 @@ The following updates were released in April 2019:
   However, taking the customer off hold worked as expected and no other impact occurred\.
 + Resolved an issue where the [Amazon Connect Streams API](https://github.com/aws/amazon-connect-streams/blob/master/Documentation.md) returned `softphoneAutoAccept = FALSE` even though **Auto\-Accept Call** was enabled for the agent\. 
 
-### March 2019 Update<a name="w709aac78c43c35"></a>
+### March 2019 Update<a name="March19-release-notes"></a>
 
 The following updates were released in March 2019:
 
@@ -855,7 +1001,7 @@ The following updates were released in January 2019:
 
 #### Contact Flows<a name="jan19-flows"></a>
 + Resolved an issue where agent transfers were failing\.
-+ Resolved an issue that resulted in periodic delays in publishing contact flow logs\.
++ Resolved an issue that resulted in periodic delays in publishing flow logs\.
 
 #### Metrics and Reporting<a name="jan19-metrics"></a>
 + Resolved an issue in real\-time metrics reports where the page showed the wrong calculation for **Avg queue answer time**\.
@@ -894,7 +1040,7 @@ The following updates were released in November 2018:
 + Resolved an issue that sometimes resulted in newly created agents not being able to log in correctly if the log in attempt occurred immediately after user account was created\.
 
 #### Contact Flows<a name="nov18-flows"></a>
-+ Added the new Loop block, which lets you loop through segments of a contact flow, such as requesting customer information additional times if valid data is not entered\.
++ Added the new Loop block, which lets you loop through segments of a flow, such as requesting customer information additional times if valid data is not entered\.
 
 #### Metrics and Reporting<a name="nov18-metrics"></a>
 + Resolved an issue where callbacks handled were included in the count for incoming contacts in historical reports, but not counted in scheduled reports\. Callbacks handled are no longer included in the count for Incoming contacts handled in historical reports\.
@@ -966,12 +1112,12 @@ The following updates were released in July 2018:
 
 #### New Features<a name="july18-features"></a>
 + [Caller ID number: Set in the queue or Call phone number block](queues-callerid.md#using-call-number-block)
-+ [Add an Amazon Lex bot](amazon-lex.md)
++ [Add an Amazon Lex bot to Amazon Connect](amazon-lex.md)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
 + [Manage contacts in a queue](queue-to-queue-transfer.md)
 
 #### General<a name="july18-general"></a>
-+ Added an error message when attempting to create an admin user during instance creation using “Administrator” as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.
++ Added an error message when attempting to create an admin user during instance creation using "Administrator" as the user name\. The user name Administrator is reserved for internal use, and cannot be used to create a user account in Amazon Connect\.
 + Added support for directory user names that include consecutive dashes\.
 + Added pagination when displaying security profiles in your instance so that more than 25 security profiles can be displayed\.
 + Performance optimizations to reduce latency when using the `StartOutboundVoiceContact` API\.
@@ -1002,7 +1148,7 @@ The following updates were released in June 2018:
 
 #### Contact Flows<a name="june18-contact-flows"></a>
 + Renamed the **Set queue** block to **Set working queue**\.
-+ Added a **Copy to clipboard** button next to the ARN of a contact flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the contact flow in the designer to display the ARN\.
++ Added a **Copy to clipboard** button next to the ARN of a flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the flow in the designer to display the ARN\.
 + Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Caller ID number: Set in the queue or Call phone number block](queues-callerid.md#using-call-number-block)\.
 + Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Route based on number of contacts in a queue](attrib-system-metrics.md)\.
 
@@ -1037,7 +1183,7 @@ The following updates were released in April and May 2018:
 + Reduced latency for the contact control panel, improving the agent user experience\.
 
 #### Contact Flows<a name="may18-contact-flows"></a>
-+ Resolved an issue with publishing a contact flow in the case where an **AWS Lambda function block** is used in a contact flow, and the input type for a parameter was changed from **Send attribute** with a **System** attribute is changed to **Send text**\. These contact flows now publish successfully\.
++ Resolved an issue with publishing a flow in the case where an **AWS Lambda function block** is used in a flow, and the input type for a parameter was changed from **Send attribute** with a **System** attribute is changed to **Send text**\. These flows now publish successfully\.
 + Agent and customer whispers are now maintained with queued callbacks\.
 + Attributes now correctly persist with queue callbacks\.
 + Contact attributes are now maintained when using a **Loop prompt** block in a queue flow\.

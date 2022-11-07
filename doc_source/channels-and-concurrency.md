@@ -6,4 +6,4 @@ Suppose an agent is configured in their routing profile for voice, up to 10 chat
 
 If the agent accepts a chat first, up to 10 chats will be routed to them, but no voice calls or tasks\. Once they are done with the chats, they're available for the next contact, which can be voice, chat, or tasks\. To learn more, see [How routing works](about-routing.md)\.
 
-To learn more about what the agent experiences in the Contact Control Panel when handling multiple chats, see [Chat with contacts](work-with-chats.md)\.
+To learn more about what the agent experiences in the Contact Control Panel when handling multiple chats, see [Work with chats](work-with-chats.md)\.

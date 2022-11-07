@@ -18,9 +18,9 @@ For example, here are a couple of key\-value pairs for the customer name:
 | firstname  | Jane  | 
 | lastname  | Doe  | 
 
-The advantage of contact attributes is that they enable you to store temporary information about the contact so you can use it in the contact flow\.
+The advantage of contact attributes is that they enable you to store temporary information about the contact so you can use it in the flow\.
 
-For example, in your welcome messages, you can say their name or thank them for being a member\. To do this, you need a way of retrieving data about that specific customer and using it in a contact flow\.
+For example, in your welcome messages, you can say their name or thank them for being a member\. To do this, you need a way of retrieving data about that specific customer and using it in a flow\.
 
 ## Common use cases<a name="contact-attribute-scenarios"></a>
 
@@ -34,12 +34,12 @@ Here are some common use cases for where contact attributes are used:
 
 ## Types of contact attributes<a name="types-of-contact-attributes"></a>
 
-To make it faster for you to find and choose the attributes you want to use, attributes are grouped into **types**\. For each contact block, we only surface those types of attributes that work with it\. 
+To make it faster for you to find and choose the attributes you want to use, attributes are grouped into **types**\. For each flow block, we only surface those types of attributes that work with it\. 
 
 Another way to think about types of contact attributes is to categorize them based on where the value comes from\. The values for contact attributes have three sources: 
 + Amazon Connect provides the value, such as the agent's name, during the contact interaction\. This is known as providing the value at runtime\. 
 + An external process, such as Amazon Lex or AWS Lambda, provides the value\. 
-+ [User\-defined](connect-attrib-list.md#user-defined-attributes)\. In the contact flow, you can specify the value for an attribute\. 
++ [User\-defined](connect-attrib-list.md#user-defined-attributes)\. In the flow, you can specify the value for an attribute\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-attributes-types.png)
 

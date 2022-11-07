@@ -11,10 +11,10 @@ When a phone number is released from your Amazon Connect instance:
 
 1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\. To find the name of your instance, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.
 
-1. On the navigation menu, choose **Routing**, **Phone numbers**\.
+1. On the navigation menu, choose **Channels**, **Phone numbers**\.
 
 1. Choose the phone number you want to release, and then choose **Release**\.
 
-If the phone number is associated with a contact flow, that flow will be deactivated until another number is associated with it\.
+If the phone number is associated with a flow, that flow will be deactivated until another number is associated with it\.
 
 When customers call the phone number you have released, they will get a message that it is not a working phone number\. 

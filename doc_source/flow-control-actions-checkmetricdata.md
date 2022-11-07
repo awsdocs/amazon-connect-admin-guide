@@ -22,7 +22,7 @@ A number, representing the value of the metric that was requested\. This can be 
 
 ## Restrictions<a name="checkmetricdata-restrictions"></a>
 
-This action is only usable in contact flows, queue and agent transfers, and customer queue flows\. It is not available in any type of whisper or hold flows\. 
+This action is only usable in flows, queue and agent transfers, and customer queue flows\. It is not available in any type of whisper or hold flows\. 
 
 ## Corresponding block in the UI<a name="compare-ui"></a>
 

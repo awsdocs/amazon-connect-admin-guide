@@ -29,7 +29,7 @@ In **Name** and **Description**, use \[ \] to choose from a menu of dynamic valu
 
    1. **Additional Reference name**: Max length: 4096 characters\. You can add up to 25 references\.
 
-   1. **Select a contact flow**: Choose the contact flow that is designed to route the task to the appropriate owner of the task\. The contact flow must be saved and published for it to appear in your list of options in the dropdown\.
+   1. **Select a flow**: Choose the contact flow that is designed to route the task to the appropriate owner of the task\. The flow must be saved and published for it to appear in your list of options in the dropdown\.
 
 1. The following image shows an example of how this information appears in the agent's CCP:  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-tasks-ccp.png)
@@ -62,8 +62,8 @@ The Rules engine generates a task\. In the contact record for the task, the voic
 
 ## About dynamic values for ContactId, AgentId, QueueId, RuleName<a name="rules-task-attributes"></a>
 
-The dynamic values in brackets \[ \] are called [contact attributes](what-is-a-contact-attribute.md)\. Contact attributes enable you to store temporary information about the contact so you can use it in a contact flow\.
+The dynamic values in brackets \[ \] are called [contact attributes](what-is-a-contact-attribute.md)\. Contact attributes enable you to store temporary information about the contact so you can use it in a flow\.
 
-When you add contact attributes in brackets \[ \] — such as ContactId, AgentId, QueueId, or RuleName — the value is passed from one contact record to another\. You can use contact attributes in your contact flow to branch and route the contact accordingly\.
+When you add contact attributes in brackets \[ \] — such as ContactId, AgentId, QueueId, or RuleName — the value is passed from one contact record to another\. You can use contact attributes in your flow to branch and route the contact accordingly\.
 
 For more information, see [Use Amazon Connect contact attributes](connect-contact-attributes.md)\.

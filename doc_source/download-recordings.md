@@ -4,7 +4,7 @@ These are the steps that a manager does to download past recordings/transcripts 
 
 1. Log in to Amazon Connect with a user account that has [permissions to access recordings](assign-permssions-to-review-recordings.md)\.
 
-1. In Amazon Connect choose **Metrics and quality**, **Contact search**\. 
+1. In Amazon Connect choose **Analytics**, **Contact search**\. 
 
 1. Filter the list of contacts by date, agent login, phone number, or other criteria\. Choose **Search**\.
 
@@ -18,3 +18,6 @@ These are the steps that a manager does to download past recordings/transcripts 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/downloaded-wav-files.png)
 
    The name of the file is the contact ID\. 
+
+**Tip**  
+You may hear only the agent, only the customer, or both the agent and customer in the recording\. This is determined by how the [Set recording and analytics behavior](set-recording-behavior.md) block is [configured](set-up-recordings.md#how-to-set-up-recording-behavior)\. 

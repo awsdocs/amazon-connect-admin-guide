@@ -18,8 +18,8 @@ The following image shows features that enable you to quickly navigate transcrip
 
 It can be time\-consuming to review contact transcripts that are hundreds of lines long\. To make this process faster and more efficient, Contact Lens provides the option for you to view a transcript summary\. The summary shows only those lines where Contact Lens has identified an issue, outcome, or action item in the transcript\. 
 + **Issue** represents the call driver\. For example, "I'm thinking of upgrading to your online subscription plan\." 
-+ **Outcome** represent sthe likely conclusion or outcome of the contact\. For example, "Based on your current plan I would recommend the online essentials plans that we have\."
-+ **Action item** represent sthe action item the agent takes\. For example, "Please keep an eye out for an email with a price quote\. I will send it to you shortly\."
++ **Outcome** represents the likely conclusion or outcome of the contact\. For example, "Based on your current plan I would recommend the online essentials plans that we have\."
++ **Action item** represents the action item the agent takes\. For example, "Please keep an eye out for an email with a price quote\. I will send it to you shortly\."
 
 Each contact has no more than one issue, one outcome, and one action item\. Not all contacts will have all three\. 
 

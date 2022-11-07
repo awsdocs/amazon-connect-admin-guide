@@ -1,6 +1,8 @@
 # Amazon Connect service quotas<a name="amazon-connect-service-limits"></a>
 
-Your AWS account has default quotas, formerly referred to as limits, for each AWS service\. All service quotas for Amazon Connect can be adjusted unless otherwise noted\.
+**All service quotas can be adjusted/increased unless otherwise noted\.**
+
+Your AWS account has default quotas, formerly referred to as limits, for each AWS service\. 
 
 To request a quota increase, see [Requesting a quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html) in the *Service Quotas User Guide*\. If the quota is not yet available in Service Quotas, use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 
@@ -8,7 +10,7 @@ To request a quota increase, see [Requesting a quota increase](https://docs.aws.
 + You must create your instance before you can request a service quota increase\.
 + It can take up to a few weeks to increase your service quota\. If you're increasing your quotas as part of a larger project, be sure to add this time to your plan\.
 + Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port your current phone number](port-phone-number.md)\.
-+ This documentation describes the default quotas for new accounts as of October 2020\. Because the quotas have been adjusted over time, the default values for your account might be different than the default values described here\.
++ This documentation describes the default quotas for new accounts\. Because the quotas have been adjusted over time, the default values for your account might be different than the default values described here\.
 
 ## Amazon Connect quotas<a name="connect-quotas"></a>
 
@@ -18,16 +20,16 @@ To request a quota increase, see [Requesting a quota increase](https://docs.aws.
 |  AWS Lambda functions per instance  |  35  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-E3D2F503) | 
 |  Agent status per instance  |  50  | No | 
 |  Amazon Connect instances per account  |  2  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-AA17A6B9) | 
-|  Amazon Lex bots per instance  |  50  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-B93A6612) | 
-|  Amazon Lex V2 bot aliases per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-CCEA7427) | 
+|  Amazon Lex bots per instance  |  70  | No  | 
+|  Amazon Lex V2 bot aliases per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-12AB7C57)  | 
 |  Concurrent active calls per instance   |  10 For more information, see [How contacts are counted](#contact-counting-criteria)\.  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-12AB7C57) | 
-|  Concurrent active chats per instance  |  100 This includes chats that are waiting\. If this quota is exceeded, the API call fails with a quota exceeded error\. By default [Maximum contacts in queue](set-maximum-queue-limit.md) is set to your **Concurrent calls per instance** quota\. If you plan to have more chats than that in a queue, submit a request to increase the **Active chats per instance** quota, and then increase the [Maximum contacts in queue](set-maximum-queue-limit.md) setting\.   | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-D4BA6F6E) | 
-|  Concurrent active tasks per instance  |  2500 concurrent active tasks All tasks that have not yet ended are considered active and are counted as concurrent tasks: tasks that are being routed in flows, waiting in a queue for an agent, being handled by agents, or being run in After Contact Work \(ACW\)\. By default [Maximum contacts in queue](set-maximum-queue-limit.md) is set to your **Concurrent calls per instance** quota\. If you plan to have more tasks than that in a queue, submit a request to increase the **Active tasks per instance** quota, and then increase the [Maximum contacts in queue](set-maximum-queue-limit.md) setting\.   | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-60553137) | 
-|  Contact flows per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-22922690) | 
+|  Concurrent active chats per instance  |  100 This includes chats that are waiting\. If this quota is exceeded, the API call fails with a quota exceeded error\.  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-D4BA6F6E) | 
+|  Concurrent active tasks per instance  |  2500 concurrent active tasks All tasks that have not yet ended are considered active and are counted as concurrent tasks: tasks that are being routed in flows, waiting in a queue for an agent, being handled by agents, or being run in After Contact Work \(ACW\)\.   | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-60553137) | 
+|  Flows per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-22922690) | 
 |  Hours of operation per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-20CD02F7) | 
 |  Maximum duration that a task can be scheduled in future  |  6 days  | No | 
 |  Modules per instance  |  200  | No | 
-|  Phone numbers per instance  |  5  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-8F812903) | 
+|  Phone numbers per instance  |  5 It's possible to get an error message that "You've reached the limit of Phone Numbers," even if it's the first time you've claimed a phone number\. All the issues that cause this error message require help from AWS Support to resolve\.  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-8F812903) | 
 |  Prompts per instance  |  500  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-0865B754) | 
 |  Queues per instance  |  50  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-19A87C94) | 
 |  Queues per routing profile per instance  |  50 This quota refers to number of queue/channel combinations per routing profile\. For example, in the following image there are two queues, but there are three queue\-channel combinations: Escalation queue Voice, Escalation queue Chat, and BasicQueue Voice\. This counts three towards the service limit of 50\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/routing-profile-queue-channel-combinations.png)  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-516BC0EB) | 
@@ -37,8 +39,33 @@ To request a quota increase, see [Requesting a quota increase](https://docs.aws.
 |  Routing profiles per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-D3E7BE26) | 
 |  Scheduled reports per instance  |  50  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-986AE5E3) | 
 |  Security profiles per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-F325A715) | 
+|  Task templates per instance  |  50  | No | 
+|  Task template customized fields per instance  |  50  | No | 
 |  User hierarchy groups per instance  |  500 This quota applies to the total number of hierarchy groups you have, across all levels\. There is no feature limit for how many hierarchy groups you can have for each level\. For example, one level could have 500 hierarchy groups, which would reach the quota for your instance\.  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-D68AAAE4) | 
 |  Users per instance  |  500  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-9A46857E) | 
+
+## Amazon Connect AppIntegrations service quotas<a name="app-integration-quotas"></a>
+
+
+| Name | Default | Adjustable | 
+| --- | --- | --- | 
+|  Data integration associations per data integration  |  10  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-6603B252) | 
+|  Data integrations per Region  |  10  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-E3D2F503) | 
+|  Event integration associations per event integration  |  10  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-3217D1F1) | 
+|  Event integrations per Region  |  10  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-4A5ECB8E) | 
+
+## Amazon Connect Cases service quotas<a name="cases-quotas"></a>
+
+
+| Name | Default | Adjustable | 
+| --- | --- | --- | 
+|  Cases domains per AWS account  |  2  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
+|  Fields in a Cases domain  |  50  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
+|  Field options per single\-select field in the Cases domain  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
+|  Layouts in a Cases domain  |  25  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
+|  Templates in a Cases domain  |  25  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
+|  Related items that can be attached to a case  |  50  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
+|  Case fields per case template  |  30  | No | 
 
 ## Amazon Connect Customer Profiles service quotas<a name="customer-profiles-quotas"></a>
 
@@ -57,13 +84,20 @@ To request a quota increase, see [Requesting a quota increase](https://docs.aws.
 |  Maximum number of consolidation rules in an Identity Resolution Job  |  10  | No | 
 |  Maximum number of attributes in each consolidation rule  |  20  | No | 
 
+## Outbound campaigns quotas<a name="outbound-communications-quotas"></a>
+
+
+| Name | Default | Adjustable | 
+| --- | --- | --- | 
+|  Amazon Connect campaigns  |  25  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect-campaigns/quotas/L-7F7B4C39) | 
+
 ## Amazon Connect Voice ID service quotas<a name="voiceid-quotas"></a>
 
 
 | Item | Default quotas  | 
 | --- | --- | 
 |  Domains  |  3 This quota applies per account\.  | 
-|  Concurrent active sessions per domain  |  50 See the following table for information about how to derive your **Concurrent active sessions** quota based on your Amazon Connect call volume\.  | 
+|  Concurrent active sessions per domain  |  50 See the following [table](#voiceid-concurrent-active-sessions) for information about how to derive your **Concurrent active sessions** quota based on your Amazon Connect call volume\.  | 
 |  Maximum number of fraudsters per domain  |  500  | 
 |  Maximum number of speakers per domain  |  100,000  | 
 |  Active Batch Speaker Enrollment Jobs per domain  |  1  | 
@@ -89,76 +123,19 @@ Use the information in the following table to derive your quota for Voice ID **C
 ## Amazon Connect Wisdom service quotas<a name="wisdom-quotas"></a>
 
 
-| Item | Default quotas  | 
-| --- | --- | 
-|  Assistants  |  5  | 
+| Item | Default quotas  | Adjustable | 
+| --- | --- | --- | 
+|  Assistants  |  5  | No | 
 |  Knowledge bases  |  10  | 
 |  Maximum size of a knowledge base  |  5GB per knowledge base  | 
-|  Content per knowledge base  |  10,000  | 
+|  Content per knowledge base  |  5,000 Examples of content are frequently asked questions \(FAQs\), wikis, articles, and step\-by\-step instructions for handling different customer issues\.  | 
 |  Maximum size per document  |  1MB  | 
 |  RateLimit for all APIs  |  50TPS  | 
-
-## Feature specifications<a name="feature-limits"></a>
-
-The following table lists feature specifications\.
-
-**Note**  
-Feature specifications cannot be increased\.
-
-
-| Item | Feature Specification | 
-| --- | --- | 
-| Maximum size of a real\-time metrics report  |  200KB  | 
-| File types supported for chat attachments |  \.csv, \.doc, \.docx, \.jpeg, \.jpg, \.pdf, \.png, \.ppt, \.pptx, \.txt, \.wav, \.xls, \.xlsx   | 
-| Max file size for a chat attachment |  20MB  | 
-| Attachments per chat conversation |  5  | 
-| People who can listen in on the same agent call at the same time  |  5 For example, you can have a group of 5 people listen in to a call at the same time, and then a different group of 5 people listen in to a different call at the same time, and so on\.   | 
-| Quick connects you can assign to a queue |  700  | 
-| Participants on a conference call |  3 The three participants are the customer, agent, and a third person who can be either another agent or an external third\-party\.  | 
-|  Contact record retention  |  24 months from the time the associated contact was initiated\.  You can choose to stream contact records to Kinesis so you can manage retention and perform advanced analysis\.  | 
-|  Max size of the contact record attributes section  |  32KB   | 
-|  Active chats per agent  |  10  | 
-|  Total duration per chat  |  Up to 7 days, including wait time [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html)  | 
-|  Characters per chat message  |  1024  | 
-|  Open websocket connections per chat participant  |  5  | 
-|  Chat Amazon Lex bot integration timeout  |  6 seconds The maximum time within which the Amazon Lex bot must respond to the chat customer's prompt\.  | 
-|  Maximum duration of a task  |  7 days  | 
-|  Maximum number of transfers for a task  |  11 transfers  | 
-|  Maximum number of linked tasks on an existing contact  |  11  | 
-|  Limit on creating and deleting instances  | 100 instances can be created or deleted in 30 days Amazon Connect enforces a limit on the **total** number of instances that you can create and delete in 30 days\. If you exceed this limit, you will get an error message indicating there has been an excessive number of attempts at creating or deleting instances\. You must wait 30 days before you can restart creating and deleting instances in your account\. For example, if you create 80 instances and delete 20 over the course of 30 days, you must wait an additional 30 days before you can create or delete any more instances\. If you create and delete the same instance 100 times in 30 days, the limit also applies\.   | 
-
-## Amazon Connect Rules feature specifications<a name="rules-feature-specs"></a>
-
-The following table lists feature specifications\.
-
-**Note**  
-Feature specifications cannot be increased\.
-
-
-| Item | Feature Specification | 
-| --- | --- | 
-| Published rules per instance |  200  | 
-| Draft rules per instance |  50  | 
-| Conditions in a rule |  20  | 
-
-
-| Condition type | Number of entries or selections | Post\-call | Real\-time | 
-| --- | --- | --- | --- | 
-| Words or phrases \- Exact match |  100  |  Yes  |  Yes  | 
-| Words or phrases \- Semantic match |  4  |  Yes  |  Not supported  | 
-| Words or phrases \- Pattern match |  100  |  Yes  |  Yes  | 
-| Queue condition |  100  |  Yes  |  Yes  | 
-| Agent condition |  100  |  Yes  |  Yes  | 
-| Custom attributes |  5  |  Yes  |  Yes  | 
-| Sentiment \- Time period |  5  |  Yes  |  Yes  | 
-| Sentiment \- Entire contact |  5  |  Yes  |  Not supported  | 
-| Interruptions |  5  |  Yes  |  Not supported  | 
-| Non\-talk time |  5  |  Yes  |  Not supported  | 
 
 ## How contacts are counted<a name="contact-counting-criteria"></a>
 
 The following contacts are counted:
-+ Handled by a contact flow
++ Handled by a flow
 + Waiting in queue
 + Handled by an agent
 + Outbound call
@@ -175,71 +152,9 @@ If you're only taking calls you can also determine your concurrent calls quota b
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/concurrent-call-quota.png)
 
-## Countries you can call<a name="country-code-allow-list"></a>
+## API throttling quotas<a name="api-throttling-quotas"></a>
 
-The Region where your instance is created determines which countries you can call by default\.
-
- [Submit a service quota increase request](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) to allow calling to additional countries, or to limit the countries that you can call from\. You must be signed in to your AWS account to access the form\.
-
-For a list of all the countries available for outbound calling, see [Amazon Connect pricing](http://aws.amazon.com/connect/pricing/)\. 
-
-If you already have an instance, the countries that you are allowed to call may be different that those listed in the following sections because we have changed the service quotas over time\.
-
-### Instances created in US East, US West, Canada \(Central\) and AWS GovCloud \(US\-West\)<a name="country-allow-list-us-canada-govcloud"></a>
-
-You can call the following countries by default:
-+ United States
-+ Canada
-+ Mexico
-+ Puerto Rico
-+ United Kingdom: See [Prefixes that are not allowed by default](#prefixes-not-allowed)
-
-### Instances created in EU \(Frankfurt\) and EU \(London\)<a name="country-allow-list-eu"></a>
-
-You can call the following countries by default:
-+ United Kingdom: See [Prefixes that are not allowed by default](#prefixes-not-allowed)
-+ Italy
-+ France
-+ Ireland
-+ United States
-
-### Instances created in Asia Pacific \(Tokyo\)<a name="country-allow-list-nrt"></a>
-
-You can call the following countries by default:
-+ Japan: See [Prefixes that are not allowed by default](#prefixes-not-allowed)
-+ Vietnam
-+ United States
-
-### Instances created in Asia Pacific \(Singapore\)<a name="country-allow-list-sin"></a>
-
-You can call the following countries by default:
-+ Singapore
-+ Australia
-+ Hong Kong
-+ United States
-+ United Kingdom: See [Prefixes that are not allowed by default](#prefixes-not-allowed)
-
-### Instances created in Asia Pacific \(Sydney\)<a name="country-allow-list-syd"></a>
-
-You can call the following countries by default:
-+ Australia
-+ New Zealand
-+ Philippines
-+ United States
-
-### Prefixes that are not allowed by default<a name="prefixes-not-allowed"></a>
-
-**UK** numbers with the following prefixes are not allowed by default:
-+ \+447 \+44111 \+44118 \+44119 \+448 \+44826 \+449 
-
-Before you can dial these UK mobile numbers, you must submit a service quota increase request\.
-
-**Japan** mobile numbers with the following prefixes are not allowed by default:
-+ \+8170, 8180, and 8190
-
-Before you can dial these Japan mobile numbers, you must submit a service quota increase request\.
-
-## Amazon Connect API throttling quotas<a name="connect-api-quotas"></a>
+### Amazon Connect API throttling quotas<a name="connect-api-quotas"></a>
 
 Amazon Connect throttling quotas are by account, and per Region, not by user and not by instance\. For example: 
 + If different IAM users from the same account make requests, they are sharing a throttle bucket\. 
@@ -252,7 +167,7 @@ The rate limit cannot be increased for GetMetricData and GetCurrentMetricData\.
 + For [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html), [StartContactStreaming](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactStreaming.html), [StopContactStreaming](https://docs.aws.amazon.com/connect/latest/APIReference/API_StopContactStreaming.html), a RateLimit of 5 requests per second, and a BurstLimit of 8 requests per second\.
 + For all other operations, a RateLimit of 2 requests per second, and a BurstLimit of 5 requests per second\.
 
-## Amazon Connect Participant Service API throttling quotas<a name="connect-participant-api-quotas"></a>
+### Amazon Connect Participant Service API throttling quotas<a name="connect-participant-api-quotas"></a>
 
 For the Amazon Connect Participant Service, the quotas are by instance\.
 
@@ -265,7 +180,7 @@ For the Amazon Connect Participant Service, the quotas are by instance\.
 +  [CompleteAttachmentUpload](https://docs.aws.amazon.com/connect/latest/APIReference/API_CompleteAttachmentUpload.html): a RateLimit of 2 requests per second, and a BurstLimit of 5 requests per second\.
 +  [GetAttachment](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetAttachment.html): a RateLimit of 8 requests per second, and a BurstLimit of 12 requests per second\.
 
-## Amazon Connect Contact Lens Service API throttling quotas<a name="connect-contactlens-api-quotas"></a>
+### Amazon Connect Contact Lens Service API throttling quotas<a name="connect-contactlens-api-quotas"></a>
 
 Amazon Connect Contact Lens throttling quotas are by account, not by user and not by instance\. For example:
 + If different IAM users from the same account make requests, they are sharing a throttle bucket\.
@@ -274,7 +189,19 @@ Amazon Connect Contact Lens throttling quotas are by account, not by user and no
 When you use the [Amazon Connect Contact Lens API](https://docs.aws.amazon.com/contact-lens/latest/APIReference/Welcome.html), the number of requests per second is limited to the following:
 + [ListRealtimeContactAnalysisSegments](https://docs.aws.amazon.com/contact-lens/latest/APIReference/ListRealtimeContactAnalysisSegments.html): a RateLimit of 1 request per second, and a BurstLimit of 2 requests per second\.
 
-## Amazon Connect Voice ID Service API throttling quotas<a name="voiceid-api-quotas"></a>
+### Amazon Connect Cases API throttling quotas<a name="cases-api-quotas"></a>
+
+
+| API | Default TPS throttling limits | 
+| --- | --- | 
+|  CreateCase, SearchCases, UpdateCase, AssociateContact, ListTemplates, CreateRelatedItem, SearchRelatedItems  |  10  | 
+|  CreateField, ListFields, CreateDomain, GetDomain,CreateTemplate, BatchPutFieldOptions, CreateLayout, UpdateLayout, UpdateTemplate, UpdateField  |  5  | 
+|  BatchGetField  |  25  | 
+|  GetCase  |  15  | 
+|  GetTemplate, GetLayout  |  20  | 
+|  ListFieldOptions  |  15  | 
+
+### Amazon Connect Voice ID Service API throttling quotas<a name="voiceid-api-quotas"></a>
 
 
 | API | Default TPS throttling limits | 

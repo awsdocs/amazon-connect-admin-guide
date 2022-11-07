@@ -2,7 +2,7 @@
 
 You can personalize the customer's experience based on the channel that they use to contact you\. Here's what you do: 
 
-1. Add a **Check contact attributes** block to the beginning of your contact flow\.
+1. Add a **Check contact attributes** block to the beginning of your flow\.
 
 1. Configure the block as shown in the following image:  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/channel-attribute.png)

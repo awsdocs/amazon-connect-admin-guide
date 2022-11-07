@@ -4,7 +4,7 @@ In Amazon Connect, you can capture customer audio during an interaction with you
 + What the customer hears, including what the agent says and system prompts\.
 + What the customer says, including when they are on hold\.
 
-The customer audio streams also include interactions with an Amazon Lex bot, if you're using one in your contact flow\. 
+The customer audio streams also include interactions with an Amazon Lex bot, if you're using one in your flow\. 
 
 You can perform analysis on the audio streams to determine customer sentiment, use the audio for training purposes, or to later review the audio to identify and flag abusive callers\.
 

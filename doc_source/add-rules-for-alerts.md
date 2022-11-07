@@ -1,6 +1,6 @@
 # Alert supervisors in real\-time based on keywords and phrases<a name="add-rules-for-alerts"></a>
 
-After you [enable real\-time analytics](enable-analytics.md) in your contact flow, you can add rules that automatically alert supervisors when a customer experience issue occurs\. 
+After you [enable real\-time analytics](enable-analytics.md) in your flow, you can add rules that automatically alert supervisors when a customer experience issue occurs\. 
 
 For example, Contact Lens can automatically send an alert when certain keywords or phrases are uttered during the conversation, or when it detects other criteria\. The supervisor sees the alert on the real\-time metrics dashboard\. From there, supervisors can listen in to the live call, and provide guidance to the agent over chat to help them resolve the issue faster\.
 
@@ -52,11 +52,11 @@ Semantic Match isn't available for real\-time analysis\.
    + When contact attributes have certain values
    + When sentiment scores have certain values
 
-   For example, the following image shows a rule that applies when an agent is working the BasicQueue or Billing and Payments queues, the customer is for autoinsurance, and the agent is located in Seattle\.  
+   For example, the following image shows a rule that applies when an agent is working the BasicQueue or Billing and Payments queues, the customer is for auto insurance, and the agent is located in Seattle\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-3.png)
 
-1. When done, choose **Save**\. 
+1. When done, choose **Next**\. 
 
-1. After you add rules, they are applied to new contacts that occur after the rule was added\. Rules are applied when Contact Lens analyzes conversations\.
+1. In the **Assign contact category** box, add a name for the category\. For example, **Compliant** or **Not\_Compliant**\.
 
-   You cannot apply rules to past, stored conversations\. 
+1. Choose **Next**, then choose **Save and publish**\.

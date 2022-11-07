@@ -25,7 +25,7 @@ To enroll customers programmatically, pass the following data to the API:
 
    You must have `iam:PassRole` permissions when making the call and providing the `dataAccessRole`\. To enable confused deputy protection for the `dataAccessRole`, see [Amazon Connect Voice ID cross\-service confused deputy prevention](cross-service-confused-deputy-prevention.md#voiceid-cross-service)\.
 
-1. Optionally, a fraud check skip flag in case you want to skip fraud checking on the enrollment audio\.
+1. Optionally, a fraud check skip flag in case you want to skip checks for fraud and voice spoofing on the enrollment audio\.
 
 1. Optionally, the fraud threshold in case you want to raise or lower the risk\.
 

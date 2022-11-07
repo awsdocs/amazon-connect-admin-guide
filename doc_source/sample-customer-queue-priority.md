@@ -3,7 +3,7 @@
 **Note**  
 This sample flow is available in previous Amazon Connect instances\. In new instances, you can see this functionality in [Sample queue configurations](sample-queue-configurations.md)\. 
 
-Type: Contact flow \(inbound\)
+Type: Flow \(inbound\)
 
 By default the priority for new contacts is 5\. Lower values raise the priority of the contact\. For example, a contact assigned a priority of 1 is routed first\.
 

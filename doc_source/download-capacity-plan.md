@@ -1,4 +1,4 @@
-# Download a capacity plan \(Preview\)<a name="download-capacity-plan"></a>
+# Download a capacity plan<a name="download-capacity-plan"></a>
 
 When you download a capacity plan file, it downloads as a \.csv file type with multiple tabs\. It's helpful to open this file using Excel\.
 
@@ -14,7 +14,7 @@ Following is a description of each tab:
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Capacity planning \- Edit**\. 
 
-   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling \(Preview\)](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
 1. On the Amazon Connect navigation menu, select **Analytics**, **Capacity Planning**\.
 

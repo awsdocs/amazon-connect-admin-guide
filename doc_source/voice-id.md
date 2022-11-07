@@ -7,6 +7,7 @@ With Amazon Connect Voice ID you can:
 + Migrate customers into Voice ID by enrolling them in batch\.
 + Verify the enrolled customer's identity by analyzing their unique voice characteristics\.
 + Detect fraudsters from a watchlist that you have created\.
++ Detect voice spoofing\.
 
 ## How Voice ID works<a name="how-voice-id-works"></a>
 
@@ -48,8 +49,24 @@ For more information, see [Batch enrollment using audio data from prior calls](v
 
 1. When a fraudster from the watchlist calls in, Voice ID analyzes the call audio to return a risk score and outcome to indicate how closely the caller's voiceprint matches the fraudsters voiceprint that is created from audio recordings from your S3 bucket\.
 
+## Voice spoofing detection<a name="voice-spoofing-detection"></a>
+
+1. When a prospective fraudster tries to spoof caller audio using audio playback or synthesized speech, Voice ID returns a risk score and outcome to indicate the how likely it is that the voice is spoofed\.
+
+1. By enabling fraud detection in contact flows, you also enable checks for known fraudster risks and voice spoofing risks\. 
+
 ## What data is stored?<a name="voice-id-data-storage"></a>
 
 Voice ID stores audio files of the speaker's voice, voiceprints, and speaker identifiers\. This data is encrypted using a KMS key that you provide\.
 
 If you enable detection of fraudsters in a watchlist, Voice ID also stores the fraudster audio and voiceprints\. For more information, see [Data handled by Amazon Connect](data-handled-by-connect.md)\.
+
+### Expired speakers<a name="voice-id-expired-speakers"></a>
+
+For BIPA compliance, Voice ID automatically expires speakers that have not been accessed for enrollment, re\-enrollment, or successful authentication for three years\.
+
+To view a speaker’s last access, look at the `lastAccessedAt` attribute that is returned by the `DescribeSpeaker` and `ListSpeakers` APIs\. 
+
+If you try to use the `EvaluateSesssion` API to authenticate an expired speaker, a `SPEAKER_EXPIRED` authentication decision is returned\. 
+
+To use the expired speaker again, they must be re\-enrolled\.

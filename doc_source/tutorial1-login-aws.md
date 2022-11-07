@@ -1,6 +1,6 @@
 # Step 1: Launch Amazon Connect<a name="tutorial1-login-aws"></a>
 
-This step walks you through finding Amazon Connect in the AWS console, and opening the Amazon Connect console\. 
+In step walks you through finding Amazon Connect in the AWS console, and opening the Amazon Connect console\. 
 
 1. Log in to the [AWS Management Console](https://console.aws.amazon.com/console) \(https://console\.aws\.amazon\.com/console\) using your AWS account\. 
 

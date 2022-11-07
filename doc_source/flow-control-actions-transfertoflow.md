@@ -6,7 +6,7 @@ Execution jumps to a different flow, and continues running at that flow's beginn
 
 ```
 {
-    "ContactFlowId": A contact flow ID or contact flow ARN. *Must be either fully static or a single valid JSONPath identifier*
+    "ContactFlowId": A flow ID or flow ARN. *Must be either fully static or a single valid JSONPath identifier*
 }
 ```
 

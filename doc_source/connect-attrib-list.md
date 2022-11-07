@@ -8,7 +8,7 @@ The JSONPath reference for each attribute is provided so you can [create dynamic
 
 These are predefined attributes in Amazon Connect\. You can reference system attributes, but you cannot create them\. 
 
-Not all blocks in a contact flow support using System attributes\. For example, you cannot use a System attribute to store customer input\. Instead, use a [ user\-defined attribute](#user-defined-attributes) to store the data input by a customer\.
+Not all blocks in a flow support using System attributes\. For example, you cannot use a System attribute to store customer input\. Instead, use a [ user\-defined attribute](#user-defined-attributes) to store the data input by a customer\.
 
 
 | Attribute | Description | Type | JSONPath Reference | 
@@ -20,12 +20,12 @@ Not all blocks in a contact flow support using System attributes\. For example, 
 | Stored customer input | An attribute created from the most recent invocation of a **Store customer input** block\. The attribute values created from the most recent Store customer input block invocation\. This attribute is not included in contact records, and is not accessible in Lambda input\. You can copy the attribute to a user\-defined attribute with the Set contact attribute block, which is included in contact records\. You can also pass this attribute as a Lambda input parameter in an Invoke AWS Lambda function block,  | System | not applicable | 
 | Queue name | The name of the queue\. | System | $\.Queue\.Name | 
 | Queue ARN | The ARN for the queue\. | System | $\.Queue\.ARN | 
-| Queue outbound number | The Outbound caller ID number for the selected queue\. This attribute is only available in outbound whisper contact flows\. | System |  | 
+| Queue outbound number | The Outbound caller ID number for the selected queue\. This attribute is only available in outbound whisper flows\. | System |  | 
 | Text to speech voice | The name of the Amazon Polly voice to use for text\-to\-speech in a contact flow\. | System | $\.TextToSpeechVoiceId | 
 | Contact id | The unique identifier of the contact\. | System | $\.ContactId | 
-| Initial Contact id | The unique identifier for the contact associated with the first interaction between the customer and your contact center\. Use the initial contact ID to track contacts between contact flows\.  | System | $\.InitialContactId | 
-| Task Contact id | The unique identifier for the task contact\. Use the task contact ID to track tasks between contact flows\.  | System | $\.Task\.ContactId | 
-| Previous Contact id | The unique identifier for the contact before it was transferred\. Use the previous contact ID to trace contacts between contact flows\. | System | $\.PreviousContactId | 
+| Initial Contact id | The unique identifier for the contact associated with the first interaction between the customer and your contact center\. Use the initial contact ID to track contacts between flows\.  | System | $\.InitialContactId | 
+| Task Contact id | The unique identifier for the task contact\. Use the task contact ID to track tasks between flows\.  | System | $\.Task\.ContactId | 
+| Previous Contact id | The unique identifier for the contact before it was transferred\. Use the previous contact ID to trace contacts between flows\. | System | $\.PreviousContactId | 
 | Channel | The method used to contact your contact center: VOICE, CHAT, TASK\.   | System | $\.Channel | 
 | Instance ARN | The ARN for your Amazon Connect instance\. | System | $\.InstanceARN | 
 | Initiation method | How the contact was initiated\. Valid values include: INBOUND, OUTBOUND, TRANSFER, CALLBACK, QUEUE\_TRANSFER, DISCONNECT, and API\. Initiation method doesn't work in Agent whisper flows or Customer whisper flows\. | System | $\.InitiationMethod | 
@@ -53,7 +53,7 @@ The following table lists the agent attributes available in Amazon Connect\.
 **Note**  
 When you use an agent contact attribute in a **Transfer to agent** flow, the agent attributes reflect the target agent, not the one who initiated the transfer\.
 
-Agent attributes are available only in the following types of contact flows:
+Agent attributes are available only in the following types of flows:
 + Agent whisper
 + Customer whisper
 + Agent hold
@@ -61,14 +61,14 @@ Agent attributes are available only in the following types of contact flows:
 + Outbound whisper
 + Transfer to agent\. In this case, the agent attributes reflect the target agent, not the one who initiated the transfer\.
 
-Agent attributes are not available in the following contact flow types:
+Agent attributes are not available in the following flow types:
 + Customer queue
 + Transfer to queue
-+ Inbound contact flow
++ Inbound flow
 
 ## Queue attributes<a name="attribs-system-metrics-table"></a>
 
-These system attributes are returned when you use a **Get queue metrics** block in your contact flow\.
+These system attributes are returned when you use a **Get queue metrics** block in your flow\.
 
 If there is no current activity in your contact center, null values are returned for these attributes\.
 
@@ -129,10 +129,32 @@ The following table lists the attributes that are returned from Amazon Lex bots\
 
 | Attribute | Description | Type | JSONPath Reference | 
 | --- | --- | --- | --- | 
-| Dialog state | The last dialog state returned from an Amazon Lex bot\. The value is 'Fulfilled' if an intent was returned to the contact flow\. | N/A \(no type appears in the UI\) | $\.Lex\.DialogState | 
-| Intent name | The user intent returned by Amazon Lex\. | System | $\.Lex\.IntentName | 
-| Slots | Map of intent slots \(key/value pairs\) Amazon Lex detected from the user input during the interaction\.   | Lex Slots | $\.Lex\.Slots\.slotName | 
-| Session attributes |   Map of key\-value pairs representing the session\-specific context information\.   | Lex Attributes | $\.Lex\.SessionAttributes\.attributeKey | 
+| Alternate Intents | List of alternate intents available from Amazon Lex\. Each intent has a corresponding confidence score and slots to fill\. | Lex | $\.Lex\.AlternateIntents\.x\.IntentName $\.Lex\.AlternateIntents\.x\.IntentConfidence $\.Lex\.AlternateIntents\.x\.Slots $\.Lex\.AlternateIntents\.y\.IntentName $\.Lex\.AlternateIntents\.y\.IntentConfidence $\.Lex\.AlternateIntents\.y\.Slots $\.Lex\.AlternateIntents\.z\.IntentName $\.Lex\.AlternateIntents\.z\.IntentConfidence  $\.Lex\.AlternateIntents\.z\.Slots  | 
+| Intent Confidence Score | The intent confidence score returned by Amazon Lex\. | Lex | $\.Lex\.IntentConfidence\.Score | 
+| Intent name | The user intent returned by Amazon Lex\. | Lex | $\.Lex\.IntentName | 
+| Sentiment Label |  The inferred sentiment that Amazon Comprehend has the highest confidence in\.   | Lex | $\.Lex\.SentimentResponse\.Label  | 
+| Sentiment scores |  The likelihood that the sentiment was correctly inferred\.   | Lex | $\.Lex\.SentimentResponse\.Scores\.Positive $\.Lex\.SentimentResponse\.Scores\.Negative $\.Lex\.SentimentResponse\.Scores\.Mixed $\.Lex\.SentimentResponse\.Scores\.Neutral | 
+| Session attributes |   Map of key\-value pairs representing the session\-specific context information\.   | Lex | $\.Lex\.SessionAttributes\.attributeKey | 
+| Slots | Map of intent slots \(key/value pairs\) Amazon Lex detected from the user input during the interaction\.   | Lex | $\.Lex\.Slots\.slotName | 
+| Dialog state | The last dialog state returned from an Amazon Lex bot\. The value is 'Fulfilled' if an intent was returned to the flow\. | N/A \(no type appears in the UI\) | $\.Lex\.DialogState | 
+
+## Case contact attributes<a name="attribs-case-table"></a>
+
+The following table lists the attributes that are used with Amazon Connect Cases\.
+
+
+| Attribute | Description | Type | JSONPath Reference | Where the data comes from | 
+| --- | --- | --- | --- | --- | 
+|  Case ID  | Unique Identifier of the case in UUID format \(for example, 689b0bea\-aa29\-4340\-896d\-4ca3ce9b6226\) | text |  $\.Case\.case\_id  | Amazon Connect | 
+|  Case Reason  | The reason for opening the case |  single\-select  | $\.Case\.case\_reason | Agent | 
+|  Customer  | The API is a customer profile ID\. On the Cases: Fields page, the customer's name is displayed\. |  text  | $\.Case\.customer\_id | Amazon Connect | 
+|  Date/Time Closed  | The date and time the case was last closed\. It does not guarantee that a case is closed\. If a case is reopened, this field contains the date/time stamp of the last time the status was changed to closed\. |  date\-time  | $\.Case\.last\_closed\_datetime  | Amazon Connect | 
+|  Date/Time Opened  | The date and time the case was opened\. |  date\-time  | $\.Case\.created\_datetime | Amazon Connect | 
+|  Date/Time Updated  | The date and time the case was last updated\. |  date\-time   | $\.Case\.last\_updated\_datetime | Amazon Connect | 
+|  Reference number  | A friendly number for the case in 8\-digit numeric format\. Reference numbers \(unlike the Case ID\) are not guaranteed to be unique\. We recommend that you identify the customer and then collect the reference number to correctly find the right case\.  |  text  | $\.Case\.reference\_number | Agent | 
+|  Status  | Current status of the case  |  text  | $\.Case\.status | Agent | 
+|  Summary  | Summary of the case  |  text  | $\.Case\.summary | Agent | 
+|  Title  | Title of the case  |  text  | $\.Case\.title | Agent | 
 
 ## Lambda contact attributes<a name="attribs-lambda-table"></a>
 
@@ -156,7 +178,7 @@ These attributes are not included in contact records, not passed to the next Lam
 
 For all other attributes Amazon Connect defines the key and value\. For user\-defined attributes, however, you provide a name for the key and the value\.
 
-Use user\-defined attributes in situations where you want to store values in a contact flow, and then refer to those values later\. For example, if you integrate Amazon Connect and a CRM or other system, you might want to get input from the customer such as their member number\. Then you can use that member number retrieve information about the member from the CRM, and/or use the member number throughout the contact flow, etc\.
+Use user\-defined attributes in situations where you want to store values in a contact flow, and then refer to those values later\. For example, if you integrate Amazon Connect and a CRM or other system, you might want to get input from the customer such as their member number\. Then you can use that member number retrieve information about the member from the CRM, and/or use the member number throughout the flow, etc\.
 
 
 | Attribute | Description | Type | JSONPath Reference | 
@@ -165,9 +187,9 @@ Use user\-defined attributes in situations where you want to store values in a c
 
 To create user\-defined attributes, use the [Set contact attributes](set-contact-attributes.md) block\. 
 
-## Apple Business Chat attributes<a name="apple-business-chat-attributes"></a>
+## Apple Messages for Business attributes<a name="apple-business-chat-attributes"></a>
 
-Use the following contact attributes to route Apple Business Chat customers\. For example, if you have different lines of business using Apple Business Chat, you can branch to different contact flows based on the AppleBusinessChatGroup contact attribute\. Or, if you want to route Apple Business Chat messages differently from other chat messages, you can branch based on MessagingPlatform\. 
+Use the following contact attributes to route Apple Business Chat customers\. For example, if you have different lines of business using Apple Business Chat, you can branch to different flows based on the AppleBusinessChatGroup contact attribute\. Or, if you want to route Apple Business Chat messages differently from other chat messages, you can branch based on MessagingPlatform\. 
 
 
 | Attribute | Description | Type | JSON | 

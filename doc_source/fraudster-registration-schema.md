@@ -28,7 +28,7 @@ Following is a description of each attribute of the input schema\.
 + `Version`: The version of the schema document\. Currently, this should be `1.0`\.
 + `FraudsterRegistrationRequests`: List of fraudster registration requests to be fulfilled as part of the job\.
   + `RequestId`: An identifier for this fraudster registration request\. It must be unique within the input file\. It is used for mapping and identifying entries in the output file\.
-  + `AudioSpecifications`: The list of audio files that Voice ID can use for registering this fraudster\. Voice ID uses these audio files together to gather required amount of speech for registration\. Currently, the maximum number of audio files allowed for a registration request is **10**\.
+  + `AudioSpecifications`: The list of audio files that Voice ID can use for registering this fraudster\. Voice ID uses these audio files together to gather required amount of speech for registration\. Currently, the maximum number of audio files allowed for a registration request is **10**\. Each file can be a \.wav file up to 20MB, containing audio with 8KHz sample rate and PCM\-16 encoding\.
     + `S3URI`: The Amazon S3 location of the audio file in \.wav format that needs to be used for registering the fraudster\. 
     + `ChannelId`: The audio channel to be used for registering the fraudster in a multi\-channel audio file\. Voice ID supports audio files with up to two channels, so this value is restricted to either **0** or **1**\.
 

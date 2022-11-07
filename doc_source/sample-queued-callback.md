@@ -3,9 +3,9 @@
 **Note**  
 This sample flow is available in previous Amazon Connect instances\. In new instances, you can see examples of queued callback in [Sample interruptible queue flow with callback](sample-interruptible-queue.md) and [Sample queue configurations](sample-queue-configurations.md)\.
 
-Type: Contact flow \(inbound\)
+Type: Flow \(inbound\)
 
-This contact flow provides callback queue logic\. Here's how it works: 
+This flow provides callback queue logic\. Here's how it works: 
 
 1. After a voice prompt, a working queue is selected and its queue status is checked\.
 
@@ -17,5 +17,5 @@ This contact flow provides callback queue logic\. Here's how it works:
 
 For information about queued callbacks, see the following topics:
 + [Set up queued callback](setup-queued-callback.md) 
-+ [Contact block: Transfer to queue](transfer-to-queue.md) 
++ [Flow block: Transfer to queue](transfer-to-queue.md) 
 + [About queued callbacks in metrics](about-queued-callbacks.md) 

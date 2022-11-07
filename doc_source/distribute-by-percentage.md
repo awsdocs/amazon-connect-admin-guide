@@ -1,4 +1,4 @@
-# Contact block: Distribute by percentage<a name="distribute-by-percentage"></a>
+# Flow block: Distribute by percentage<a name="distribute-by-percentage"></a>
 
 ## Description<a name="distribute-by-percentage-description"></a>
 + This block is useful for doing A/B testing\. It routes customers randomly based on a percentage\.
@@ -15,10 +15,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="distribute-by-percentage-types"></a>
+## Flow types<a name="distribute-by-percentage-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer queue flow
 + Outbound Whisper flow
 + Transfer to Agent flow

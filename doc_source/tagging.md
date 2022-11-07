@@ -4,9 +4,6 @@ A *tag* is a custom metadata label that you can add to a resource in order to ma
 
 A *tag key* typically represents a larger category, while a tag value represents a subset of that category\. For example you could have *tag key=Color *and *tag value=Blue*, which would produce the key:value pair `Color:Blue`\. Note that you can set the value of a tag to an empty string, but you can't set the value of a tag to null\. Omitting the tag value is the same as using an empty string\.
 
-**Tip**  
-AWS Billing and Cost Management can use tags to separate your bills into dynamic categories\. For example, if you add tags to represent different departments within your company, such as `Department:Sales` or `Department:Legal`, AWS can provide you with your cost distribution per department\.
-
 
 
 Tag keys can be up to 128 characters in length and tag values can be up to 256 characters in length; both are case sensitive\. For more information, see:
@@ -19,6 +16,37 @@ Amazon Connect services support up to 50 tags per resource\. For a given resourc
 
 **Note**  
 Your tags cannot begin with `aws:` because AWS reserves this prefix for system\-generated tags\. You cannot add, modify, or delete `aws:*` tags, and they don't count against your tags\-per\-resource limit\.
+
+The following table describes the Amazon Connect resources that can be tagged using the AWS CLI or an AWS SDK\.
+
+
+**Tagging support for Amazon Connect resources**  
+
+| Resource | Supports tags | Supports tagging on creation | 
+| --- | --- | --- | 
+|  Agent  |  Yes  |  Yes  | 
+|  Agent group  |  Yes  | Yes | 
+|  Agent group level  |  No  | No | 
+|  Agent state  |  Yes  |  Yes  | 
+| Task template | Yes | No | 
+|  Contact  |  No  |  No  | 
+|  Flow  |  Yes  |  Yes  | 
+|  Flow module  |  Yes  | Yes | 
+|  Instance  | No | No | 
+|  Integration association  |  Yes  | Yes | 
+|  Operating hours  |  Yes  | Yes | 
+| Phone number | Yes | Yes | 
+|  Prompt  |  No  | No | 
+|  Queue  |  Yes  | Yes | 
+|  Queue agent  |  No  |  No  | 
+|  Routing Profile  |  Yes  |  Yes  | 
+|  Security profile  |  Yes  |  Yes  | 
+|  Transfer destination  |  Yes  |  Yes  | 
+|  Use case  |  Yes  |  Yes  | 
+|  Vocabulary  |  Yes  | Yes | 
+
+**Note**  
+Tagging of Amazon Connect resources is currently only available using the AWS CLI or an AWS SDK\.
 
 To learn more about tagging, including best practices, see [Tagging AWS resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General Reference*\. 
 

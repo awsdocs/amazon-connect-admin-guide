@@ -1,25 +1,22 @@
-# Step 4: Create a contact flow<a name="tutorial1-create-contact-flow"></a>
+# Step 4: Create a flow<a name="tutorial1-create-contact-flow"></a>
 
-Although Amazon Connect comes with a set of [built\-in contact flows](contact-flow-default.md), you can create your own contact flows to determine how a customer experiences your contact center\. The contact flows contain the prompts that customers hear or see, and they transfer them to the right queue or agent, among other things\.
+Although Amazon Connect comes with a set of [built\-in flows](contact-flow-default.md), you can create your own flows to determine how a customer experiences your contact center\. The flows contain the prompts that customers hear or see, and they transfer them to the right queue or agent, among other things\.
 
-In this step, create a contact flow that's specific to the IT Help Desk experience that you're creating\.
+In this step, create a flow that's specific to the IT Help Desk experience that you're creating\.
 
-1. On the navigation menu, go to **Routing**, **Contact flows**\.  
+1. On the navigation menu, go to **Routing**, **Flows**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-routing-contact-flows.png)
 
-1. Choose **Create contact flow**\.  
+1. Choose **Create flow**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-create-contact-flow.png)
 
-1. The contact flow designer opens\. Enter a name for the contact flow, such as **Test contact flow**\.  
+1. The flow designer opens\. Enter a name for the flow, such as **Test flow**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-name-contact-flow.png)
 
-1. Choose the drop\-down arrows to expand the sections to access the blocks in them\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-expand-contact-flow.png)
-
-1. Drag the following blocks onto the grid: [Set logging behavior](set-logging-behavior.md) \(in the **Set** group\), [Set voice](set-voice.md) \(in the **Set** group\), and [Play prompt](play.md) \(in the **Interact** group\)\.   
+1. Use the search box to search for the following block, and drag them onto the grid: [Set logging behavior](set-logging-behavior.md), [Set voice](set-voice.md), and [Play prompt](play.md)\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-add-blocks1.png)
 
-1. Use your mouse to drag an arrow from the **Start** block to the **Set logging behavior** block\.   
+1. Use your mouse to drag an arrow from the **Entry** block to the **Set logging behavior** block\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-connect-blocks1.png)
 
 1. Connect the remaining blocks, as shown in the following image\.   
@@ -49,46 +46,34 @@ In this step, create a contact flow that's specific to the IT Help Desk experien
 
 1. Choose **Save**\.
 
-1. Add a **Play prompt** block \(from the **Interact** group\) and connect it to the **PasswordReset** branch\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-play-prompt2.png)
+1. Add a **Play prompt** block and connect it to the **PasswordReset** branch\. 
 
-1. Choose the **Play prompt** title to open its properties page\. Configure the **Play prompt** block with the message *We’re putting you in a queue to help you with password reset\.* Choose **Save**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-play-prompt3.png)
+1. Choose the **Play prompt** title to open its properties page\. Configure the **Play prompt** block with the message *We’re putting you in a queue to help you with password reset\.* Choose **Save**\.
 
-1. Add a second **Play prompt** block and connect it to the **NetworkIssue** branch\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-play-prompt4.png)
+1. Add a second **Play prompt** block and connect it to the **NetworkIssue** branch\.
 
 1. Choose the **Play prompt** title to open its properties page\. Configure the **Play prompt** block with the message *We’re putting you in a queue to help you with your network issues\.* Choose **Save**\.
 
-1. Add a [Disconnect / hang up](disconnect-hang-up.md) block \(from the **Terminate/Transfer** group\) to the grid\. Connect the **Default** and **Error** branches to it\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-disconnect1.png)
+1. Add a [Disconnect / hang up](disconnect-hang-up.md) block to the grid\. Connect the **Default** and **Error** branches to it\.
 
-1. Add a [Set working queue](set-working-queue.md) block \(from the **Set** group\) to the grid\. Connect the **Play prompt**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-set-working-queue1.png)
+1. Add a [Set working queue](set-working-queue.md) block to the grid\. Connect the **Play prompt**\.
 
-1. Choose the **Set working queue** title to open its properties page\. Configure the **Set working queue** block by using the drop\-down arrow to choose the **PasswordReset** queue\. Choose **Save**  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-set-working-queue2.png)
+1. Choose the **Set working queue** title to open its properties page\. Configure the **Set working queue** block by using the drop\-down arrow to choose the **PasswordReset** queue\. Choose **Save**
 
-1. Add a **Set working queue** block for NetworkIssue, and configure it with the NetworkIssue queue\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-set-working-queue3.png)
+1. Add a **Set working queue** block for NetworkIssue, and configure it with the NetworkIssue queue\.
 
 1. Drag two **Transfer to queue** blocks \(from the **Terminate/Transfer** group\) onto the grid\.
 
-1. Connect each of the **Set working queue** blocks to a **Transfer to queue** block, as shown in the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-transfer-to-queue.png)
+1. Connect each of the **Set working queue** blocks to a **Transfer to queue** block\.
 
-1. Drag another **Disconnect/hang up** block onto the grid\. Connect all of the remaining **Error** and **At capacity** branches to it\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-disconnect2.png)
-
-1. The completed contact flow looks similar to the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-contact-flow-finished.png)
+1. Drag another **Disconnect/hang up** block onto the grid\. Connect all of the remaining **Error** and **At capacity** branches to it\.
 
 1. Choose **Save**, and then choose **Publish**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-save-publish.png)
 **Tip**  
 Any blocks that aren't connected or configured correctly generate an error\. If this happens, double\-check that all branches are connected\.
 
-1. When the contact flow publishes, it displays the message that it saved successfully\.  
+1. When the flow publishes, it displays the message that it saved successfully\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-contact-flow-published.png)
 
-   If the contact flow doesn't save, double\-check that all the branches are connected to blocks\. That's the most common reason contact flows don't publish\. 
+   If the flow doesn't save, double\-check that all the branches are connected to blocks\. That's the most common reason flows don't publish\. 

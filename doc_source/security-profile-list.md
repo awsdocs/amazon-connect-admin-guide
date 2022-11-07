@@ -1,120 +1,179 @@
 # List of security profile permissions<a name="security-profile-list"></a>
 
 The security profile permissions in Amazon Connect allow users access to perform particular tasks in Amazon Connect\.
-+ AccessMetrics
-+ AgentGrouping\.Create
-+ AgentGrouping\.Edit
-+ AgentGrouping\.EnableAndDisable
-+ AgentGrouping\.View
-+ AgentStates\.Create
-+ AgentStates\.Edit
-+ AgentStates\.EnableAndDisable
-+ AgentStates\.View
-+ AgentTimeCard\.View
-+ Audio\.View
-+ BasicAgentAccess
-+ Campaigns\.Create
-+ Campaigns\.Delete
-+ Campaigns\.Edit
-+ Campaigns\.Manage
-+ Campaigns\.View
-+ ChatTestMode
-+ ContactAttributes\.View
-+ ContactFlowModules\.Create
-+ ContactFlowModules\.Delete
-+ ContactFlowModules\.Edit
-+ ContactFlowModules\.Publish
-+ ContactFlowModules\.View
-+ ContactFlows\.Create
-+ ContactFlows\.Delete
-+ ContactFlows\.Edit
-+ ContactFlows\.Publish
-+ ContactFlows\.View
-+ ContactLensCustomVocabulary\.Edit
-+ ContactLensCustomVocabulary\.View
-+ ContactRecording\.Access
-+ ContactSearch\.View
-+ ContactSearchQuickViewWidget\.Create
-+ ContactSearchQuickViewWidget\.Delete
-+ ContactSearchQuickViewWidget\.Edit
-+ ContactSearchQuickViewWidget\.View
-+ ContactSearchWithCharacteristics\.Access
-+ ContactSearchWithCharacteristics\.View
-+ ContactSearchWithKeywords\.Access
-+ ContactSearchWithKeywords\.View
-+ CustomerProfiles\.Create
-+ CustomerProfiles\.Edit
-+ CustomerProfiles\.View
-+ DeleteCallRecordings
-+ DownloadCallRecordings
-+ GraphTrends\.View
-+ HistoricalChanges\.View
-+ HoursOfOperation\.Create
-+ HoursOfOperation\.Delete
-+ HoursOfOperation\.Edit
-+ HoursOfOperation\.View
-+ ListenCallRecordings
-+ ManagerListenIn
-+ MetricsReports\.Create
-+ MetricsReports\.Delete
-+ MetricsReports\.Edit
-+ MetricsReports\.Publish
-+ MetricsReports\.Schedule
-+ MetricsReports\.Share
-+ MetricsReports\.View
-+ OutboundCallAccess
-+ PhoneNumbers\.Claim
-+ PhoneNumbers\.Edit
-+ PhoneNumbers\.Release
-+ PhoneNumbers\.View
-+ Prompts\.Create
-+ Prompts\.Delete
-+ Prompts\.Edit
-+ Prompts\.View
-+ Queues\.Create
-+ Queues\.Edit
-+ Queues\.EnableAndDisable
-+ Queues\.Purge
-+ Queues\.View
-+ RealtimeContactLens\.View
-+ RedactedData\.View
-+ ReportsAdmin\.Access
-+ ReportsAdmin\.Delete
-+ ReportsAdmin\.Publish
-+ ReportsAdmin\.Schedule
-+ ReportsAdmin\.View
-+ ReportSchedules\.Create
-+ ReportSchedules\.Delete
-+ ReportSchedules\.Edit
-+ ReportSchedules\.View
-+ RestrictContactAccessByHierarchy\.View
-+ RoutingPolicies\.Create
-+ RoutingPolicies\.Edit
-+ RoutingPolicies\.View
-+ Rules\.Create
-+ Rules\.Delete
-+ Rules\.Edit
-+ Rules\.View
-+ SecurityProfiles\.Create
-+ SecurityProfiles\.Delete
-+ SecurityProfiles\.Edit
-+ SecurityProfiles\.View
-+ TaskTemplates\.Create
-+ TaskTemplates\.Delete
-+ TaskTemplates\.Edit
-+ TaskTemplates\.View
-+ Transcript\.View
-+ TransferDestinations\.Create
-+ TransferDestinations\.Delete
-+ TransferDestinations\.Edit
-+ TransferDestinations\.View
-+ UnredactedData\.View
-+ Users\.Create
-+ Users\.Delete
-+ Users\.Edit
-+ Users\.EditPermission
-+ Users\.EnableAndDisable
-+ Users\.View
-+ VoiceId\.Access
-+ VoiceIdAttributesAndSearch\.View
-+ Wisdom\.View
+
+The following tables list: 
++ **UI name**: The name of the permission as it appears on the **Security profiles** page in Amazon Connect\.
++ **API name**: The name of the permission when it is returned by the [ListSecurityProfilePermissions](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListSecurityProfilePermissions.html) API\.
++ **Use**: The functionality granted by the permission\.
+
+## Routing<a name="routing-permissions-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Routing profiles \- Create  |  RoutingPolicies\.Create  | [Create routing profiles](routing-profiles.md)\.  | 
+| Routing profiles \- Edit  |  RoutingPolicies\.Edit  | Edit routing profiles\.  | 
+| Routing profiles \- View  |  RoutingPolicies\.View  | View routing profiles\.  | 
+| Quick connects \- Create  |  TransferDestinations\.Create  | [Create quick connects](quick-connects.md)\.  | 
+| Quick connects \- Delete  |  TransferDestinations\.Delete  | [Delete quick connects](quick-connects-delete.md)\.  | 
+| Quick connects \- Edit  |  TransferDestinations\.Edit  | Edit quick connects\.  | 
+| Quick connects \- View  |  TransferDestinations\.View  | View quick connects\. Agents need this permission so they can view quick connects in the agent application to transfer calls\.  | 
+| Hours of operation \- Create  |  HoursOfOperation\.Create  | [Set hours of operation and timezone for a queue](set-hours-operation.md)\.   | 
+| HoursOfOperation \- Delete  |  HoursOfOperation\.Delete  | Delete hours of operation and timezone for a queue\.  | 
+| HoursOfOperation \- Edit  |  HoursOfOperation\.Edit  | Edit hours of operation and timezone for a queue\.  | 
+| HoursOfOperation \- View  |  HoursOfOperation\.View  | View hours of operation and timezone for a queue\.  | 
+| Queues \- Create  |  Queues\.Create  | [Create queues](create-queue.md)\.  | 
+| Queues \- Edit  |  Queues\.Edit  | Edit information for a queue, such as name, description, and hours of operation\.  | 
+| Queues \- Enable / Disable  |  Queues\.EnableAndDisable  | [Enable and disable queues](disable-a-queue.md) to quickly control the flow of contacts to queues temporarily\.  | 
+| Queues \- View  |  Queues\.View  | View a list of queues in your Amazon Connect instance\.  | 
+| Task templates \- Create  |  TaskTemplates\.Create  | [Create task templates](task-templates.md)\.  | 
+| Task templates \- Delete  |  TaskTemplates\.Delete  | Delete task templates\.  | 
+| Task templates \- Edit  |  TaskTemplates\.Edit  | Edit task templates\.  | 
+| Task templates \- View  |  Task templates\.View  | View task templates\.  | 
+
+## Numbers and flows<a name="numbers-flows-permissions-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Prompts \- Create |  Prompts\.Create  | [Create prompts](prompts.md)\.  | 
+| Prompts \- Delete |  Prompts\.Delete  | Delete prompts\.  | 
+| Prompts \- Edit |  Prompts\.Edit  | Edit prompts\.  | 
+| Prompts \- View |  Prompts\.View  | View a list of available prompts\.  | 
+| ContactFlows \- Create |  ContactFlows\.Create  | [Create flows](create-contact-flow.md)\.  | 
+| ContactFlows \- Delete |  ContactFlows\.Delete  | [Delete flows](create-contact-flow.md#delete-contact-flow)\.  | 
+| ContactFlows \- Edit |  ContactFlows\.Edit  | Edit flows\.  | 
+| ContactFlows \- Publish |  ContactFlows\.Publish  | Publish flows\.  | 
+| ContactFlows \- View |  ContactFlows\.View  | View flows\.  | 
+| Contact flow modules \- Create |  ContactFlowModules\.Create  | [Create flow modules for reusable functions](contact-flow-modules.md)\.   | 
+| Contact flow modules \- Delete |  ContactFlowModules\.Delete  | Delete flow modules\.  | 
+| Contact flow modules \- Edit |  ContactFlowModules\.Edit  | Edit flow modules\.  | 
+| Contact flow modules \- Publish |  ContactFlowModules\.Publish  | Publish flow modules\.  | 
+| Contact flow modules \- View |  ContactFlowModules\.View  | View flow modules\.  | 
+| Phone numbers \- Claim |  PhoneNumbers\.Claim  | [Claim phone numbers](claim-phone-number.md)\.  | 
+| Phone numbers \- Edit |  PhoneNumbers\.Edit  | Edit phone numbers\. [Attach a claimed or ported phone number to a flow](associate-claimed-ported-phone-number-to-flow.md)\.   | 
+| Phone numbers \- Release |  PhoneNumbers\.Release  | [Release phone numbers back to inventory](release-phone-number.md)\.  | 
+| Phone numbers \- View |  PhoneNumbers\.View  | View a list of phone numbers that have been claimed or ported to your Amazon Connect instance\.  | 
+| Chat test mode \- Enable/Disable |  ChatTestMode  | Access a simulated web page so users can [test the chat experience](chat-testing.md#test-chat)\. Also grants them the permission to view a list of flows, which is exposed through the **Test settings** option\.  | 
+
+## Users and permissions<a name="users-permissions-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Users \- Create |  Users\.Create  | [Add users to Amazon Connect](user-management.md)\. We recommend you limit who has these permissions\. They pose a risk to your contact center because they can do the following: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security-profile-list.html) Doing these things would enable someone to lock out those who need to access Amazon Connect, and allow in others who can steal customer data and damage your business\.   | 
+| Users \- Delete |  Users\.Delete  | [Delete users from Amazon Connect](delete-users.md)\.  | 
+| Users \- Edit |  Users\.Edit  | View and edit user records\. As with **Users \- Create**, limit who has these permissions because they pose a risk to your contact center\.  | 
+| Users \- Edit permission |  Users\.EditPermission  | View and edit user records\. As with **Users \- Create**, limit who has these permissions because they pose a risk to your contact center\.  | 
+| Users \- View |  Users\.View  | View user records\.  | 
+| Agent hierarchy \- Create |  AgentGrouping\.Create  | [Create agent hierarchies](agent-hierarchy.md)\. Add groups, teams, and agents\.  | 
+| Agent hierarchy \- Edit |  AgentGrouping\.Edit  | Edit agent hierarchies\.   | 
+| Agent hierarchy \- Enable/Disable |  AgentGrouping\.EnableAndDisable  | View or edit agent hierarchy information\.  | 
+| Agent hierarchy \- View |  AgentGrouping\.View  | View the agent's hierarchy information in a real\-time metrics report, which can include their location and skill set data\.  | 
+| Security profiles \- Create |  SecurityProfiles\.Create  | [Create security profiles](create-security-profile.md)\.  | 
+| Security profiles \- Delete |  SecurityProfiles\.Delete  | Delete security profiles\.  | 
+| Security profiles \- Edit |  SecurityProfiles\.Edit  | [Update security profiles](update-security-profiles.md)\.  | 
+| Security profiles \- View |  SecurityProfiles\.View  | View security profiles\.  | 
+| Agent status \- Create |  AgentStates\.Create  | [Create an custom agent status](agent-custom.md)\. The status appears in the Contact Control Panel \(CCP\), such as Break, Lunch, or Training\.   | 
+| Agent status \- Edit |  AgentStates\.Edit  | Edit a custom agent status\.  | 
+| Agent status \- Enable/Disable |  AgentStates\.EnableAndDisable  | View and edit custom agent states\.  | 
+| Agent status \- View |  AgentStates\.View  | [View an agent's status in the real\-time metrics report](rtm-change-agent-activity-state.md) and historical metrics report\. For example, if they are **Available**, **Offline**, or in a custom state\. View their status in the [Agent activity report](agent-activity-audit-report.md)\.  | 
+
+## Contact Control Panel \(CCP\)<a name="ccp-permissions-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Access Contact Control Panel |  BasicAgentAccess  | Manages access to the Contact Control Panel \(CCP\)\. Assign this permission to agents as well as managers who need to monitor live conversations\.  | 
+| Contact Lens data |  RealtimeContactLens\.View  | Enables users to view real\-time analytics provided by Contact Lens\.  | 
+| Make outbound calls |  OutboundCallAccess  | Grants users permissions to make outbound calls\. For more information about setting up outbound calling, see [Set up outbound communications](outbound-communications.md)\.  | 
+| Voice ID |  VoiceId\.Access  | Enables controls in the Contact Control Panel so agents can: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security-profile-list.html)  | 
+| Restrict task creation |  RestrictTaskCreation\.Access  | Block agents from being able to create tasks\.   | 
+| Audio device settings |  Audio\.View  | [Choose your preferred device for speaker, microphone, and ringer in the Contact Control Panel \(CCP\)](audio-device-settings.md)\.   | 
+
+## Analytics<a name="analytics-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Access metrics |  AccessMetrics  | [Manage access to real\-time and historical metrics reports](rtm-permissions.md)\.  | 
+| Contact Search |  ContactSearch\.View  | Access the **Contact search** page, which is where users can [search for contacts](contact-search.md) and see results on the **Contact details** page\.  | 
+| Search contacts by conversation characteristics |  ContactSearchWithCharacteristics\.Access  | Access to the Contact Lens filters that enable users to search by sentiment scores, non\-talk time, and category\.  | 
+| Search contacts by conversation characteristics \- View |  ContactSearchWithCharacteristics\.View  | View the Contact Lens filters that enable users to search by sentiment scores, non\-talk time, and category\.   | 
+| Search contacts by keywords |  ContactSearchWithKeywords\.Access  | Search for contacts by keyword\. On the **Contact Search** page, users can access additional filters that allow them to search Contact Lens transcripts by keywords or phrases, such as "thank you for your business\."  | 
+| Search contacts by keywords \- View |  ContactSearchWithKeywords\.View  | Search for contacts by keyword\. On the **Contact Search** page, users can access additional filters that allow them to search Contact Lens transcripts by keywords or phrases, such as "thank you for your business\."  | 
+| Configure searchable contact attributes \- View |  ConfigureContactAttributes\.View  | Determine what custom attribute data will be searchable \(by people who have the **Contact attributes** permission\)\. It allows them to access the **Searchable custom contact attributes** page\. For more information, see [Search by custom contact attributes](search-custom-attributes.md)\.  | 
+| Restrict contact access |  ContactRecording\.Access  | If your organization isn't using Contact Lens for Amazon Connect, use this permission to manage who can listen to recordings, access the corresponding URLs that are generated in S3, and delete recordings\. For more information, see [Assign permissions to review recordings of past conversations](assign-permssions-to-review-recordings.md)\. Checking this box limits a user's access to contacts based on their agent hierarchy\. The user will only have access to contacts handled by agent within their own hierarchy\.  | 
+| Restrict contact access |  RestrictContactAccessByHierarchy\.View  | Manage a user's access to results on the **Contact search** page based on their agent hierarchy group\. For more information, see [Manage who can search for contacts and access detailed information](contact-search.md#required-permissions-search-contacts)\.  | 
+| Contact attributes |  ContactAttributes\.View  | View contact attributes\. Also controls access to the search filters based on contact attributes\. For more information, see [Search by custom contact attributes](search-custom-attributes.md)\.  | 
+| Contact Lens speech analytics \- View |  GraphTrends\.View  | On the **Contact Details** page for a contact, users can view graphs that summarize speech analytics, such as customer sentiment trend, sentiment, and talk time\.  | 
+| Contact Lens \- custom vocabularies \- Edit |  ContactLensCustomVocabulary\.Edit  | [Add custom vocabularies](add-custom-vocabulary.md)\.   | 
+| Contact Lens \- custom vocabularies \- View |  ContactLensCustomVocabulary\.View  | [Download and view custom vocabularies](add-custom-vocabulary.md#view-custom-vocabulary)\.  | 
+| Rules \- Create |  Rules\.Create  | [Create rules](connect-rules.md)\.   | 
+| Rules \- Delete |  Rules\.Delete  | Delete rules\.   | 
+| Rules \- Edit |  Rules\.Edit  | Edit rules\.   | 
+| Rules \- View |  Rules\.View  | View rules\.   | 
+| Recorded conversations \(redacted\) |  RedactedData\.View  | On the **Contact Record** page for a contact, listen to call recording files and view call transcripts in which the sensitive data has been removed\.  | 
+| Recorded conversations \(unredacted\) \- View |  ListenCallRecordings  | View unredacted content that contains sensitive data such as name and credit card information\. Users can view the following unredacted content: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security-profile-list.html) Users can access this content on the **Contact Record** page for a contact\.  | 
+| Recorded conversations \(unredacted\) \- Access |  ListenCallRecordings  | View the Play icon so they can listen to call recordings by using the Amazon Connect user interface\.  | 
+| Recorded conversations \(unredacted\) \- Enable download button |  DownloadCallRecordings  | [Download call recordings](download-recordings.md)\. By default, the **Enable download button** permission is granted too so the user can download recordings through the user interface\.  | 
+| Recorded conversations \(unredacted\) \- Delete |  DeleteCallRecordings  | Delete call recordings\. By default, the **Enable download button** permission is granted too so the user can delete recordings through the user interface\.  | 
+| Login/Logout report \- View |  AgentTimeCard\.View  |  [View Login/Logout reports](login-logout-reports.md)\.   | 
+| Manager monitor \- Enable/Disable |  ManagerListenIn  | [Monitor live conversations](monitor-conversations.md) and [listen to recordings of past conversations](review-recorded-conversations.md)\. Be sure to assign managers to the Agent security profile so they can access the Contact Control Panel \(CCP\)\. This enables them to monitor the conversation through the CCP\.  | 
+| Saved reports \- View |  MetricsReports\.View  | [View a shared report](view-a-shared-report.md)\.  | 
+| Saved reports \- Create |  MetricsReports\.Create MetricsReports\.Share  | [Create and share reports](share-reports.md)\.  | 
+| Saved reports \- Edit |  MetricsReports\.Edit  | Edit save reports\.  | 
+| Saved reports \- Delete |  MetricsReports\.Delete  | Delete saved reports\.  | 
+| Saved reports \- Publish |  MetricsReports\.Publish  | [Publish reports](publish-reports.md)\.  | 
+| Saved reports \- Schedule |  MetricsReports\.Schedule MetricsReports\.Publish ReportSchedules\.Create ReportSchedules\.Delete ReportSchedules\.Edit ReportSchedules\.View  | [Schedule a saved report](schedule-historical-metrics-report.md)\. By default, the user gets permission to create, delete, edit, and view a saved report\.  | 
+| Voice ID \- attributes and search |  VoiceIdAttributesAndSearch\.View  | Search for and view Voice ID results on the **Contact detail** page\.  | 
+
+## Historical changes<a name="historical-changes-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| View historical changes |  HistoricalChanges\.View  | On the **User management** page, view historical changes to user records\.  | 
+
+## Customer Profiles<a name="customerprofiles-permissions-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Customer profiles \- Create |  CustomerProfiles\.Create  | [Create customer profiles in the agent application](create-new-customer-profile.md)\.  | 
+| Customer profiles \- Edit |  CustomerProfiles\.Edit  | Edit customer profiles in the agent application\.  | 
+| Customer profiles \- View |  CustomerProfiles\.View  | Edit customer profiles in the agent application\.  | 
+
+## Agent Applications<a name="agentapplications-permissions-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Wisdom \- View |  Wisdom\.View  | [View real\-time recommendations in the agent application](use-realtime-recommendations.md)\.  | 
+
+## Cases<a name="cases-permissions-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Cases \- Create |  Cases\.Create  | [Create cases in the agent application](create-cases.md)\.   | 
+| Cases \- View |  Cases\.View  | View cases in the agent application\.  | 
+| Cases \- Edit |  Cases\.Edit  | Edit cases in the agent application\.  | 
+| Case Fields \- Create |  CaseFields\.Create  | [Create case fields](case-fields.md)\.   | 
+| Case Fields \- View |  CaseFields\.View  | View case fields\.  | 
+| Case Fields \- Edit |  CaseFields\.Edit  | Edit case fields\.  | 
+| Case Templates \- Create |  CaseTemplates\.Create  | [Create case templates](case-templates.md)\.   | 
+| Case Templates \- View |  CaseTemplates\.View  | View case templates\.  | 
+| Case Templates \- Edit |  CaseTemplates\.Edit  | Edit case templates\.  | 
+
+## Campaigns<a name="campaigns-permissions-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Campaigns \- Create |  Campaigns\.Create  | [Create outbound campaigns](how-to-create-campaigns.md)\.  | 
+| Campaigns \- Delete |  Campaigns\.Delete  | Delete outbound campaigns\.  | 
+| Campaigns \- Edit |  Campaigns\.Edit  | Edit outbound campaigns\.  | 
+| Campaigns \- Manage |  Campaigns\.Delete  | Manage outbound campaigns\.  | 
+| Campaigns \- View |     | View outbound campaigns\.  | 

@@ -4,7 +4,7 @@ For chat conversations, you need to include a **Set whisper flow** block for def
 
 For example, to set the default whisper flow for chats that use the [Sample inbound flow](sample-inbound-flow.md):
 
-1. Go to **Routing**, **Contact flows**, and choose the Sample inbound flow\. 
+1. Go to **Routing**, **Flows**, and choose the Sample inbound flow\. 
 
 1. Add a **Set whisper flow** block after the chat channel has branched, as shown in the following image:  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-whisper-flow-default-chat-sample.png)

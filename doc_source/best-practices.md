@@ -1,21 +1,21 @@
 # Best practices for Amazon Connect<a name="best-practices"></a>
 
-This list of best practices can help you get the maximum benefit from Amazon Connect\. These best practices are for contact flows, Lambda, chat, Amazon Lex, and the Contact Control Panel \(CCP\)\.
+This list of best practices can help you get the maximum benefit from Amazon Connect\. These best practices are for flows, Lambda, chat, Amazon Lex, and the Contact Control Panel \(CCP\)\.
 
 We also recommend reviewing [Security Best Practices for Amazon Connect](security-best-practices.md)\. 
 
-## Contact flows<a name="bp-contact-flows"></a>
+## Flows<a name="bp-contact-flows"></a>
 + Use consistent attribute naming conventions across all AWS services\. Use camel case for yourAttributeNames to avoid confusion when passing and referencing variables\. 
 + Use standard naming conventions for attribute names\. Don't use spaces or special characters that could impact downstream reporting processes such as AWS Glue crawlers\. 
-+ Create modular contact flows\. Make the flows as small as possible, and then combine modular flows into an end\-to\-end contact experience\. This helps to keep your flows manageable, and you won't require numerous regression testing cycles\.
++ Create modular flows\. Make the flows as small as possible, and then combine modular flows into an end\-to\-end contact experience\. This helps to keep your flows manageable, and you won't require numerous regression testing cycles\.
 + When you set **User Defined** or **External** values in dynamic attribute fields, use only alphanumeric characters \(A\-Z, 0–9\) and periods\. No other characters are allowed\.
 + Ensure all error branches are routed to a block that effectively handles the error or terminates the contact\.
-+ Use a **Set logging behavior** block to enable or disable logging for segments of the contact flow where sensitive information is collected and can't be stored in CloudWatch\.
-+ Use **Set recording behavior** block in your contact flow to disable and enable recordings according to your use case\. Keep in mind that Amazon Connect records conversations with agents only\. It doesn't record IVR interactions\.
-+ Ensure that attributes used in the flow are set and referenced correctly\. If there are periods prepended to the attribute names, you are likely using JSONPath \($\.\) format while also selecting a variable type from the pick list\. For example:, using:
++ Use a **Set logging behavior** block to enable or disable logging for segments of the flow where sensitive information is collected and can't be stored in CloudWatch\.
++ Use **Set recording behavior** block in your flow to disable and enable recordings according to your use case\. Keep in mind that Amazon Connect records conversations with agents only\. It doesn't record IVR interactions\.
++ Ensure that attributes used in the flow are set and referenced correctly\. If there are periods prepended to the attribute names, you are likely using JSONPath \($\.\) format while also selecting a variable type from the pick list\. For example, using:
   + **Save text as attribute** and value `$.External.variableName` works as expected\.
-  + `Use attribute` and value `variableName` works as expected\.
-  + **Use attribute** and `$.External.variableName` results in a prepended period\. 
+  + `Set dynamically` and value `variableName` works as expected\.
+  + **Set dynamically** and `$.External.variableName` results in a prepended period\. 
 + Before transferring a call to agent and putting that call in a queue, ensure that **Check hours of operation** and **Check staffing** blocks are used\. They verify that the call is within working hours and that agents are staffed to service\.
 + Ensure that callbacks are offered before and after queue transfer by using **Check queue status** blocks\. Include a condition for **Queue capacity** that is greater than X, where X is a number representing your expected queue capacity\.
   + If queue capacity exceeds the expected capacity, use a **Get Customer Input** block to offer a callback\. This retains the caller's position in the queue and calls them back when an agent is available\.
@@ -24,7 +24,7 @@ We also recommend reviewing [Security Best Practices for Amazon Connect](securit
 + Use a **Loop prompts** block in your Customer queue flow to interrupt with a queued callback and external transfer option at regular intervals\. 
 + Ensure that all countries referenced in external transfers or used for outbound dialing are added to the service quota for your account/instance\.
 + Ensure that all numbers referenced in external transfers are in E\.164 format\. Drop the national trunk prefix that you use when calling locally\. This prefix would be the leading 0 for most of Europe, 1 for the US\. The prefix is replaced by the country code\. For example, the UK mobile number **07911 123456** in E\.164 format is **\+44 7911 123456 \(tel:\+447911123456\)**\.
-+ Ensure that there are no infinite loops in the contact flow logic\. Also ensure that for each call, the contact flow connects the caller to an agent, bot, or transferred externally for further assistance\.
++ Ensure that there are no infinite loops in the flow logic\. Also ensure that for each call, the flow connects the caller to an agent, bot, or transferred externally for further assistance\.
 
 ## Lambda<a name="bp-lambda"></a>
 + Amazon Connect limits the duration of a sequence of Lambda functions to 20 seconds\. It times out with an error message when the total execution time exceeds this threshold\. Because customers hear silence while a Lambda function runs, we recommend adding a **Play prompt** block between functions to keep them engaged during the long interaction\. 

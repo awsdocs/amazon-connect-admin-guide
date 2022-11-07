@@ -1,6 +1,6 @@
 # List agents grouped by routing profile<a name="agents-grouped-by-routing-profile"></a>
 
-1. Go to **Metrics and quality**, **Real\-time metrics**, **Queues**\.
+1. Go to **Analytics**, **Real\-time metrics**, **Queues**\.
 
 1. Choose **New table**, **Agents**\.
 

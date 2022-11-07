@@ -1,4 +1,4 @@
-# Contact block: Check contact attributes<a name="check-contact-attributes"></a>
+# Flow block: Check contact attributes<a name="check-contact-attributes"></a>
 
 ## Description<a name="check-contact-attributes-description"></a>
 + Branches based on a comparison to the value of a contact attribute\.
@@ -15,7 +15,7 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="check-contact-attributes-types"></a>
+## Flow types<a name="check-contact-attributes-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows
@@ -30,6 +30,33 @@ You can check conditions like the following:
 + $\.Attributes\.verificationCode
 
 To check for a NULL value, you need to use a Lambda\. 
+
+### Amazon Lex attributes<a name="check-lex-attributes"></a>
+
+You can set attributes that are **Type** = **Lex** as follows: 
++ **Alternative Intents**: Usually you configure flows to branch on the winning Lex intent\. However, in some situations, you might want to branch on an alternate intent\. That is, what the customer might have meant\. 
+
+  For example, the following alternative intent indicates that if Amazon Lex is more than 70% confident the customer meant *fraud*, the flow should branch accordingly\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-contact-attributes-alternate-intents.png)
+
+  1. **Intent name** is the name of an alternate intent in Lex\. It's case sensitive and must match what's in Lex exactly\.
+
+  1. **Intent Attribute** is what Amazon Connect is going to check\. In this example, it's going to check the **Intent Confidence Score**\.
+
+  1. **Conditions to check**: If Lex is 70% certain the customer meant the alternate intent instead of the winning intent, branch\.
++ **Intent Confidence Score**: How confident is the bot that it understands the customer's intent\. For example, if the customer says "I want to update an appointment," *update* can mean *reschedule* or *cancel*\. Amazon Lex provides the confidence score on a scale of 0 to 1:
+  + 0 = not at all confident
+  + \.5 = 50% confident
+  + 1 = 100% confident
++ **Intent Name**: The user intent returned by Amazon Lex\.
++ **Sentiment Label**: What is the winning sentiment, the one with the highest score\. You can branch on POSITIVE, NEGATIVE, MIXED, or NEUTRAL\.
++ **Sentiment Score**: Amazon Lex integrates with Amazon Comprehend to determine the sentiment expressed in an utterance:
+  + Positive
+  + Negative
+  + Mixed: The utterance expresses both positive and negative sentiments\.
+  + Neutral: The utterance does not express either positive or negative sentiments\.
++ **Session Attributes**: Map of key\-value pairs representing the session\-specific context information\.
++ **Slots**: Map of intent slots \(key/value pairs\) Amazon Lex detected from the user input during the interaction\.
 
 ## Configuration tips<a name="check-contact-attributes-tips"></a>
 + If you have multiple conditions to compare, Amazon Connect checks them in the order they are listed\. 

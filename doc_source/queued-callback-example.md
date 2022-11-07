@@ -2,21 +2,21 @@
 
 This topic shows an example queued callback flow and reviews how the contact records and times are set for it\. 
 
-Assume we have set up the following contact flows:
-+ **Inbound contact flow** \-\- Runs when the customer calls the customer service number\.
-+ **Customer queue flow** – Runs when the customer is waiting in queue\. In this example, we build a flow that offers a callback to the customer\. If the customer selects yes, this contact flow executes the **Transfer to queue** block to transfer the contact to the callback queue named CallbackQueue, with an initial delay of 99 seconds, and then hangs up\.
+Assume we have set up the following flows:
++ **Inbound flow** \-\- Runs when the customer calls the customer service number\.
++ **Customer queue flow** – Runs when the customer is waiting in queue\. In this example, we build a flow that offers a callback to the customer\. If the customer selects yes, this flow executes the **Transfer to queue** block to transfer the contact to the callback queue named CallbackQueue, with an initial delay of 99 seconds, and then hangs up\.
 + **Outbound whisper flow** \-\- When a queued callback is placed, the customer hears this after they pick up and before they connect to the agent\. For example, "Hello, this is your scheduled callback\.\.\."
 + **Agent whisper flow** \-\- The agent hears this right after they accept the contact, before they are joined to the customer\. For example, "You are about to be connected to Customer John, who requested a refund for\.\.\."
 
 In this example, John calls customer service\. Here's what happens:
 
-1. Inbound contact flow creates contact record\-1:
+1. Inbound flow creates contact record\-1:
 
-   1. John calls customer service at 11:35\. The Inbound contact flow runs and puts him in queue at 11:35\. 
+   1. John calls customer service at 11:35\. The Inbound flow runs and puts him in queue at 11:35\. 
 
    1. The Customer queue flow runs\. At 11:37, John chooses to schedule a callback, so Amazon Connect initiates a callback contact at 11:37, before the inbound contact is disconnected\. 
 
-1. Callback contact flow creates contact record\-2:
+1. Callback flow creates contact record\-2:
 
    1. The callback contact was initiated at 11:37\.
 
@@ -41,7 +41,7 @@ This scenario results in two contact records, which include the following metada
 |  Enqueued Timestamp  | 11:35  | The inbound contact is put in queue\.  | 
 |  Dequeued Timestamp  | 11:37  | Because no agent picked up, this is the same as DisconnectedTimestamp\.  | 
 |  ConnectedToAgent Timestamp  | N/A  | John scheduled a callback before any agent could pick up\.  | 
-|  Disconnected Timestamp  | 11:37:00  | John was disconnected by contact flow\.  | 
+|  Disconnected Timestamp  | 11:37:00  | John was disconnected by flow\.  | 
 
 
 | contact record\-2 | Data | Notes | 

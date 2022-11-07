@@ -1,4 +1,4 @@
-# Contact block: End flow / Resume<a name="end-flow-resume"></a>
+# Flow block: End flow / Resume<a name="end-flow-resume"></a>
 
 ## Description<a name="end-flow-resume-description"></a>
 + Ends the current flow without disconnecting the contact\.
@@ -16,7 +16,7 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="end-flow-resume-types"></a>
+## Flow types<a name="end-flow-resume-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + Customer queue flow

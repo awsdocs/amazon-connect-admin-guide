@@ -1,6 +1,6 @@
-# Create capacity plans using forecasts and scenarios \(Preview\)<a name="capacity-planning-use-forecast"></a>
+# Create capacity plans using forecasts and scenarios<a name="capacity-planning-use-forecast"></a>
 
-Before you can create a capacity plan, you must create a planning scenario and publish a long\-term forecast\. Amazon Connect uses the forecasts and planning scenarios as inputs for creating the capacity plan\. If you haven't yet created a forecast and planning scenario, see [Getting started with forecasting](forecasting.md#getting-started-forecasting) and [Create capacity planning scenarios \(Preview\)](capacity-planning-create-scenarios.md)\. 
+Before you can create a capacity plan, you must create a planning scenario and publish a long\-term forecast\. Amazon Connect uses the forecasts and planning scenarios as inputs for creating the capacity plan\. If you haven't yet created a forecast and planning scenario, see [Getting started with forecasting](forecasting.md#getting-started-forecasting) and [Create capacity planning scenarios](capacity-planning-create-scenarios.md)\. 
 
 ## How to create a capacity plan<a name="how-to-create-capacity-plan"></a>
 

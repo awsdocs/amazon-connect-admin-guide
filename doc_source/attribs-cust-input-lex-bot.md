@@ -1,12 +1,12 @@
 # Use Amazon Lex and attributes<a name="attribs-cust-input-lex-bot"></a>
 
-When you reference attributes in a **Get customer input** block, and choose Amazon Lex as the method of collecting the input, the attribute values are retrieved and stored from the output from the customer interaction with the Amazon Lex bot\. You can use an attribute for each intent or slot used in the Amazon Lex bot, as well as the sessions attributes associated with the bot\. An output branch is added to the block for each intent you include\. When a customer chooses an intent when interacting with the bot, the branch associated with that intent is followed in the contact flow\.
+When you reference attributes in a **Get customer input** block, and choose Amazon Lex as the method of collecting the input, the attribute values are retrieved and stored from the output from the customer interaction with the Amazon Lex bot\. You can use an attribute for each intent or slot used in the Amazon Lex bot, as well as the sessions attributes associated with the bot\. An output branch is added to the block for each intent you include\. When a customer chooses an intent when interacting with the bot, the branch associated with that intent is followed in the flow\.
 
-For a list of Amazon Lex attributes you can use, see [Amazon Lex contact attributes](connect-attrib-list.md#attribs-lex-table)\.
+For a list of Amazon Lex attributes you can use and receive back from the Lex bot, see [Amazon Lex contact attributes](connect-attrib-list.md#attribs-lex-table)\.
 
 # Using an Amazon Lex bot to get customer input
 
-1. Open an existing or create a new contact flow\.
+1. Open an existing or create a new flow\.
 
 1. Under **Interact**, drag a **Get customer input** block to the designer\.
 

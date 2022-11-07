@@ -10,7 +10,7 @@ For example, you might scan the transcript of the call and see a red sentiment e
 
 1. Log in to Amazon Connect with a user account that has **Contact search** and **Contact Lens \- speech analytics** permissions in the security profile\.
 
-1. In Amazon Connect, choose **Metrics and quality**, **Contact search**\.
+1. In Amazon Connect, choose **Analytics**, **Contact search**\.
 
 1. Use the filters on the page to narrow your search for a contact\. For date, you can search up to 14 days at a time\. For more information about searching for contacts, see [Search for contacts](contact-search.md)\. 
 

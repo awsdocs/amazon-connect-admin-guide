@@ -1,11 +1,11 @@
 # Sample queue configurations<a name="sample-queue-configurations"></a>
 
 **Note**  
-This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+This topic explains a sample flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample flows](contact-flow-samples.md)\. 
 
-Type: Contact flow \(inbound\)
+Type: Flow \(inbound\)
 
-This contact flow shows different ways you can put a customer in queue: you can change the priority of the customer, determine the wait time in queue, and give them an option for a callback\. Here's how it works: 
+This flow shows different ways you can put a customer in queue: you can change the priority of the customer, determine the wait time in queue, and give them an option for a callback\. Here's how it works: 
 
 1. The customer is put in the BasicQueue\.
 
@@ -55,5 +55,5 @@ These next steps apply to customers who were routed down the voice/**No Match** 
 
 For information about queued callbacks, see the following topics:
 + [Set up queued callback](setup-queued-callback.md) 
-+ [Contact block: Transfer to queue](transfer-to-queue.md) 
++ [Flow block: Transfer to queue](transfer-to-queue.md) 
 + [About queued callbacks in metrics](about-queued-callbacks.md) 

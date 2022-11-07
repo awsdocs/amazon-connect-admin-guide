@@ -1,4 +1,4 @@
-# Review capacity plan output \(Preview\)<a name="capacity-planning-review-output"></a>
+# Review capacity plan output<a name="capacity-planning-review-output"></a>
 
 To review capacity plan output, choose the hyperlink for the plan you generated\. The first half of the page summarizes the input you used in scenario and capacity plan generation\. 
 
@@ -10,6 +10,7 @@ Following is a description of the metrics in the plan output:
 + **Forecasting Inputs**
   + **Forecasted Contact Volume**: This metric is a sum of both voice and chat volume for the selected forecast group\. 
   + **Forecasted Average Handling Time \(AHT\), seconds**: This metric shows the aggregated AHT for the selected forecast group\.
+  + The forecasted contact volume and AHT in the plan output table reflects only the values from the selected forecast group\. After there are newly published forecasts, consider re\-running the capacity plan to reflect the latest published contact volume and AHT\.
 + **Outputs**
   + **Required FTEs \(without Shrinkage\)**: How many full\-time equivalent agents need to be hired to meet the defined business goals \(such as service level target\), without considering shrinkage\. 
   + **Forecasted Occupancy %**: How much occupancy is for the agents\.

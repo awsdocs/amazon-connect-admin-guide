@@ -2,17 +2,39 @@
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you an overview of the improvements\. 
 
-## Upcoming changes to Saved reports<a name="saved-report-changes"></a>
+## September 2022<a name="new-queue-dashboard-hmr-sept2022"></a>
 
-We are in the process of rolling out a new service to improve saved report limits\. With this launch, tables in your real\-time metrics reports may default to 10 rows per page instead of what you previously saved\. To solve this issue, select the desired table size, re\-save your report, and it will persist the table size\.
+The following updates were released in September 2022\.
 
-## Upcoming improvements to agent metrics on the Real\-Time Metrics page<a name="improvements-agent-metrics"></a>
+**Queue Dashboard**
 
-We are making improvements to the near real\-time Agent Metrics\. Previously, agent metrics, such as **Occupancy**, refreshed every 5 minutes\. With this change, these metrics will update in real\-time after every event, such as when agent answers a call\. 
+You can now visualize historical queue data via time series graphs to help identify patterns, trends and outliers specifically for Service Level, Contacts Queued, and Average Handle Time\. To visualize your queue data, select **View queue graphs** from the queue dropdown\. Once selected, you will be directed to the queue visualization dashboard where you can configure *Time* range \(up to 24 hours\) and *Channel*\. You also have the ability to customize the service level thresholds\.
 
-Additionally, we fixed an issue where, if an agent was handling multiple channels, metrics such as **Agent Non\-Response** were incremented in the wrong channel\.
+**Navigate to Queue dashboard**
 
-Finally, with this change, if an agent is handling multiple channels we now calculate **Occupancy** for each channel\. However, this metric is directional\. To ensure you have an accurate view of **Occupancy** for multi\-channel agents, we recommend leveraging the **Historical metrics** page to review **Occupancy** at the agent level\. There is no impact if agents handle a single channel\. 
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-queue-dashboard-ui.png)
+
+**Queue dashboard experience**
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-queue-dashboard-exp.png)
+
+## June 2022<a name="new-15-minute-historical-schedules-hmr-june2022"></a>
+
+The following updates were released in June 2022\.
+
+**15 minute scheduled reports**
+
+You can now schedule historical metrics to refresh every 15 minutes\. To select 15\-minute schedules, select generate this report **Hourly** every \.25 hours \(this is the top most option in the second dropdown\), for the previous \.25 hours\. The following image shows the values that you need to select\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-15-minute-scheduled-reports.png)
+
+## <a name="new-real-time-metrics-agent-table-by-agent-june2022"></a>
+
+**Filter Real\-Time Metrics Agent Table by Agent**
+
+You can now filter the agent table on the Real\-Time Metrics page by agent\. This filter functions the same as the existing queues, routing profiles, and agent hierarchy filters\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-rtm-agent-filtering.png)
 
 ## New contact transferred related metrics<a name="contact-transferred-whats-new"></a>
 
@@ -20,23 +42,13 @@ We are upgrading the existing [Contacts transferred in](historical-metrics-defin
 
 ## Changes to real\-time metrics agent tables<a name="agent-tables-rtm-page"></a>
 
-We are rolling out a new service to maintain the high availability from metrics that you expect from Amazon Connect\. Due to this change, the agent tables will now be sorted by availability status by default, rather than by agent login\. 
+We are rolling out a new service to maintain the high availability from metrics that you expect from Amazon Connect\. Due to this change, the agent tables are sorted by [agent status](metrics-agent-status.md) instead of by agent login\.
 
-Additionally, the queues and routing profiles table will sort by agents online by default instead of queue or routing profile name\. 
+Additionally, the queues and routing profiles table are sorted by agents online instead of by queue or routing profile name\.
 
 ## Faster reload times for the Real\-time metrics page<a name="upgrading-rtm-page"></a>
 
 We are upgrading the performance of the **Real\-time metrics** page so reload times are faster\. The page will have the same functionality and user experience as the existing **Real\-time metrics** page\.
-
-## Upcoming changes: Download the Agent activity audit report<a name="upcoming-changes-reports"></a>
-
-The following changes will be released in the future:
-+ After you generate a report, you will now be able to download it using the **Download CSV** button\.
-+ If you don’t generate a report, the **Download CSV** button will be inactive\. 
-
-The following image shows an example where the first report has been generated and can be downloaded, the second report hasn't:
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/agent-activity-report.png)
 
 ## April 2021<a name="metrics-changes-chat-metrics-april2021"></a>
 
@@ -131,7 +143,7 @@ The maximum duration for a custom service level is 7 days\. That's because in Am
 
 **To group by channel on historical metrics reports**
 
-1. On the navigation menu, choose **Metrics and quality**, **Historical metrics**, and then choose a report\. 
+1. On the navigation menu, choose **Analytics**, **Historical metrics**, and then choose a report\. 
 
 1. Choose **Settings**\. 
 
@@ -172,7 +184,7 @@ For more information, see [Use one\-click drill\-downs for Routing profiles and 
 
 **To group queues or routing profiles by channel on real\-time metrics reports**
 
-1. On the navigation menu, choose **Metrics and quality**, **Real\-time metrics**, and then select either **Queues** or **Routing profiles**\.   
+1. On the navigation menu, choose **Analytics**, **Real\-time metrics**, and then select either **Queues** or **Routing profiles**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-queues-or-routing-profiles.png)
 
 1. Choose **Settings**\.   

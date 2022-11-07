@@ -13,17 +13,17 @@ You set the caller ID name, such as the name of your company, in the queue setti
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callerID-callerName.png)
 
-**If your DID phone number is in the US:** The name you use should be the same one that's registered in the CNAM \(Caller Name\) database provided by Amazon Connect; this is a nationwide resource available in the US to provide the name of the calling party on incoming calls if recipients subscribe to CNAM services from their telecom carrier\.
+**If your DID/TFN phone number is in the US/CANADA:** The name you use should be the same one that's registered in the CNAM \(Caller Name\) database provided by Amazon Connect; this is a nationwide resource available in the US/CANADA to provide the name of the calling party on incoming calls if recipients subscribe to CNAM services from their telecom carrier\.
 
 Open an AWS Support ticket to register your US based phone number with your company name in the CNAM database of the Amazon Connect carrier\. We'll handle the registration process for you\. **It may take up to 30 days for the caller ID names to propagate through the database\.** 
 
-If you are using CNAM phoning into Canada, the end network may support Caller ID lookups, but this functionality is not guaranteed, as not all receiving networks support this feature\. We are currently unable to provide support for lookups in other locales\.
+**If you are using CNAM phoning into CANADA**, the end network may support Caller ID lookups, but this functionality is not guaranteed, as not all receiving networks support this feature\. We are currently unable to provide support for lookups in other locales\.
 
 **Important**  
 CNAM is not supported for custom caller IDs, third\-party numbers, or with the use of whisper flow transfers\.
 
 **Tip**  
-If you want each agent to have their own caller ID name while dialing out \(such as *Example Corp Billing Dept*\), create a queue for each agent/caller ID name\.
+If you want each agent to have their own caller ID name while calling out \(such as *Example Corp Billing Dept*\), create a queue for each agent/caller ID name\.
 
 ## Caller ID number: Set in the queue or Call phone number block<a name="using-call-number-block"></a>
 
@@ -32,7 +32,7 @@ Only phone numbers that you've [claimed](claim-phone-number.md) or [ported to Am
 To use an external phone number as your outbound caller ID number, contact AWS Support to see if it's possible\. You'll need to provide [proof of ownership](phone-number-requirements.md)\.
 
 You can set the caller ID number as follows:
-+ **[Call phone number](call-phone-number.md) block**: Use this block in an outbound whisper flow to initiate an outbound call to a customer and, optionally, specify a custom caller ID number that is displayed to call recipients\.
++ **[Call phone number](call-phone-number.md) block**: Use this block in an [Outbound whisper flow](create-contact-flow.md#contact-flow-types) to initiate an outbound call to a customer and, optionally, specify a custom caller ID number that is displayed to call recipients\.
 
   This block is useful when you have multiple telephone numbers used to make outbound calls, but want to consistently display the same company phone number for the caller ID for calls made from your contact center\. 
 
@@ -44,12 +44,12 @@ You can set the caller ID number as follows:
 
 ## Setting the caller ID dynamically<a name="using-dynamic-caller-id"></a>
 
-Use an attribute in the [Call phone number](call-phone-number.md) block to set the caller ID number dynamically during the contact flow\. 
+Use an attribute in the [Call phone number](call-phone-number.md) block to set the caller ID number dynamically during the flow\. 
 
-The attribute can be one you define in the [Set contact attributes](set-contact-attributes.md) block in the contact flow\. Or, it can be an external attribute returned from an AWS Lambda function\.
+The attribute can be one you define in the [Set contact attributes](set-contact-attributes.md) block in the flow\. Or, it can be an external attribute returned from an AWS Lambda function\.
 
 The value of the attribute must be a phone number from your instance in [ E\.164](https://www.itu.int/rec/T-REC-E.164/en) format\. 
-+ If the number is not in E\.164 format, the number from the queue associated with the outbound whisper flow is used for the caller ID number\.
++ If the number is not in E\.164 format, the number from the queue associated with the [Outbound whisper flow](create-contact-flow.md#contact-flow-types) is used for the caller ID number\.
 + If no number is set for the outbound caller ID number for the queue, the call attempt will fail\.
 
 For more information about setting the caller ID dynamically, see this AWS Support Knowledge Center article: [How can I set my Amazon Connect outbound caller ID dynamically based on country?](https://aws.amazon.com/premiumsupport/knowledge-center/connect-dynamic-outbound-caller-id/) 
@@ -69,13 +69,13 @@ When you place calls from the CCP using Amazon Connect the CCP provides the corr
 
 ## How to specify a custom caller ID number using a [Call phone number](call-phone-number.md) block<a name="call-number-block-how-it-works"></a>
 
-1. On the navigation menu, choose **Routing**, **Contact flows**\.
+1. On the left navigation menu, choose **Routing**, **Flows**\.
 
-1. Choose the down arrow next to **Create contact flow**, and then choose **Create outbound whisper flow**\.
+1. Choose the down arrow next to **Create flow**, and then choose **Create outbound whisper flow**\.
 
 1. Add a [Call phone number](call-phone-number.md) block to the flow, and connect the **Entry point** block to it\.
 
-   The [Call phone number](call-phone-number.md) block must be placed before a **Play prompt** block if one is included in your contact flow\.
+   The [Call phone number](call-phone-number.md) block must be placed before a **Play prompt** block if one is included in your flow\.
 
 1. Select the [Call phone number](call-phone-number.md) block, and then select **Caller ID number to display**\.
 
@@ -83,9 +83,9 @@ When you place calls from the CCP using Amazon Connect the CCP provides the corr
    + To use a number from your instance, choose **Select a number from your instance**, and then search for or select the number to use from the drop\-down\.
    + Choose **Use attribute** to use a contact attribute to provide the value for the caller ID number\. You can use either a **User Defined** attribute you create using a [Set contact attributes](set-contact-attributes.md) block, or an **External** attribute returned from an AWS Lambda function\. The value of any attribute you use must be a phone number claimed for your instance and be in E\.164 format\. If the number used from an attribute is not in E\.164 format, the number set for the **Outbound caller ID number** for the queue is used\.
 
-1. Add any additional blocks to complete your contact flow, and connect the **Success** branch of the [Call phone number](call-phone-number.md) block to the next block in the flow\. 
+1. Add any additional blocks to complete your flow, and connect the **Success** branch of the [Call phone number](call-phone-number.md) block to the next block in the flow\. 
 
-   There is no error branch for the block\. If a call is not successfully initiated, the contact flow ends and the agent is placed in an **AfterContactWork** \(ACW\) state\.
+   There is no error branch for the block\. If a call is not successfully initiated, the flow ends and the agent is placed in an **AfterContactWork** \(ACW\) state\.
 
 ## Why your caller ID might not appear correctly to customers<a name="why-callerid-name-might-not-appear-correctly"></a>
 
@@ -99,3 +99,12 @@ To enroll your numbers with this CNAM services provider, open an AWS Support tic
 
 **Note**  
 Only numbers in the 50 US states, Puerto Rico, and Virgin Islands are eligible\.
+
+## Toll\-free numbers for caller ID<a name="tfn-callerid"></a>
+
+Using toll\-free numbers for outbound communications have a number of limitations\. For example, using a toll\-free number to dial other toll\-free numbers in the United States can result in the number being filtered, blocked, or not properly routed to the destination by carriers\. Toll\-free numbers may be terminated at a higher than expected rate\. If you know you need to call toll\-free numbers in the United States you must use DIDs to make the calls to be guaranteed call delivery\.
+
+If you're using toll\-free numbers outside of the US, refer to the [Amazon Connect Telecoms Country Coverage Guide](https://d1v2gagwb6hfe1.cloudfront.net/Amazon_Connect_Telecoms_Coverage.pdf) to see which countries support toll\-free numbers as outbound\. For example, for Australia the guide shows it's not permitted to use toll\-free numbers due to local regulations; the **National Outbound** column indicates that toll\-free numbers are not supported\. 
+
+**Important**  
+Toll\-free products are designed to be national products and phoned within the country\. We do not guarantee international reachability of any of these services as access to the numbers is controlled by the caller's network access\. 

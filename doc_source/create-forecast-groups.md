@@ -1,4 +1,4 @@
-# Create forecast groups \(Preview\)<a name="create-forecast-groups"></a>
+# Create forecast groups<a name="create-forecast-groups"></a>
 
 Forecast groups are a way for you to combine different queues into one forecast\. This enables you to create a forecast from aggregated data from multiple queues, instead of from just one queue\. 
 
@@ -9,7 +9,7 @@ Forecast groups are a way for you to combine different queues into one forecast\
 + We strongly recommend that you create all forecast groups before creating any forecast\. 
 
   Amazon Connect uses historical data for queues included in all forecast groups to train your forecasting model\. By creating forecasts after all forecast groups are created, you ensure historical data of all relevant queues are included in the training\.
-+ If a queue is associated with a forecast group and is later disabled, it does not change the forecast group\. The queue will still be included by the forecast group and the historical data associated with it will be included in the forecast\. Over time, because no contact reaches the disabled queue, it stops impacting the forecast\.
++ If a queue is associated with a forecast group and is later disabled, you don't have to remove this queue from the forecast group\. This is because: Although the queue is included by the forecast group and the historical data associated with it is included in the forecast, over time, no contact reaches the disabled queue, and thus stops impacting the forecast\. Only the active queues contribute to the forecast\.
 
 ## How to create forecast groups<a name="howto-create-forecast-groups"></a>
 
@@ -29,7 +29,11 @@ Forecast groups are a way for you to combine different queues into one forecast\
 1. Choose **Save**\. The new forecasting group appears, along with the number of queues in the group and the date it was last changed\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-group.png)
 
-1. After creating a forecast group, you can add or remove queues\. However, doing so might initiate an immediate change in associated forecasts\. It will also impact downstream capacity plans and schedules that are created based on the forecast group\.
+1. After creating a forecast group, you can add or remove queues\. However, doing so might initiate an immediate change in associated forecasts\. For example, if you made a change for forecast group today, Amazon Connect automatically computes the new short\-term and long\-term forecasts tomorrow\. Your change to the forecast group also impacts downstream capacity plans and schedules that are created based on the forecast group\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forcasting-create-forecast-group.png)
+
+1. You can remove the forecast group by using the **Remove** function\. First delete the forecasts that are associated with the forecast group you want to delete\. For example, a forecast group named *Network\_Issues* cannot be deleted because this forecast group was used to create forecasts\. Therefore, go to **Forecasts** tab to first delete those associated forecasts and then you can delete this forecast group\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-delete-forecast-group.png)
 
 ## Next steps<a name="nextsteps-create-forecast-groups"></a>
 

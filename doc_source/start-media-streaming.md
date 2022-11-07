@@ -1,4 +1,4 @@
-# Contact block: Start media streaming<a name="start-media-streaming"></a>
+# Flow block: Start media streaming<a name="start-media-streaming"></a>
 
 ## Description<a name="start-media-streaming-description"></a>
 
@@ -18,10 +18,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | No \- Error branch | 
 | Task | No \- Error branch | 
 
-## Contact flow types<a name="start-media-streaming-types"></a>
+## Flow types<a name="start-media-streaming-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer Queue flow
 + Customer Whisper flow
 + Outbound Whisper flow
@@ -35,8 +35,8 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Configuration tips<a name="start-media-streaming-tips"></a>
 + You must enable live media streaming in your instance to successfully capture customer audio\. For instructions, see [Capture customer audio: live media streaming](customer-voice-streams.md)\.
-+ When selecting the stream to start, only choose one option\. Selecting both options results in an inaudible media stream\.
-+ Customer audio is captured until a **Stop media streaming** block is invoked, even if the contact is passed to another contact flow\.
++ When selecting the stream to start, only choose one option\. 
++ Customer audio is captured until a **Stop media streaming** block is invoked, even if the contact is passed to another flow\.
 + You must use a **Stop media streaming** block to stop media streaming\.
 + If this block is triggered during a chat conversation, the contact is routed down the **Error** branch\.
 
@@ -48,4 +48,4 @@ When this block is configured, it looks similar to the following image:
 
 ## Sample flows<a name="start-media-streaming-samples"></a>
 
-[Example contact flow for testing live media streaming](use-media-streams-blocks.md) 
+[Example flow for testing live media streaming](use-media-streams-blocks.md) 

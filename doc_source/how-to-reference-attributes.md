@@ -4,7 +4,7 @@ The way you reference contact attributes depends on how they were created and ho
 + To reference attributes that contain spaces in their name, such as user defined attributes, place brackets and single quotations around the attribute name\. For example: ` $.Attributes.['user attribute name']`\. 
 + To reference attributes in the same namespace, such as a system attribute, you use the attribute name, or the name you specified as the **Destination key**\.
 + To reference values in a different namespace, such as referencing an external attribute, you specify the JSONPath syntax to the attribute\.
-+ To use contact attributes to access other resources, set a user\-defined attribute in your contact flow and use the Amazon Resource Name \(ARN\) of the resource you want to access as the value for the attribute\. 
++ To use contact attributes to access other resources, set a user\-defined attribute in your flow and use the Amazon Resource Name \(ARN\) of the resource you want to access as the value for the attribute\. 
 
 ## Lambda examples<a name="lambda-examples"></a>
 + To reference a customer name from a Lambda function lookup, use $\.External\.AttributeKey, replacing AttributeKey with the key \(or name\) of the attribute returned from the Lambda function\.
@@ -16,13 +16,13 @@ The way you reference contact attributes depends on how they were created and ho
 
 ## Set contact attribute example<a name="set-contact-attribute-example"></a>
 
-Use a [Set contact attributes](set-contact-attributes.md) block to set a value that is later referenced in a contact flow\. For example, create a personalized greeting for customers routed to a queue based on the type of customer account\. You could also define an attribute for a company name or line of business to include in the text to speech strings said to a customer\. The **Set contact attributes** block is useful for copying attributes retrieved from external sources to user\-defined attributes\.
+Use a [Set contact attributes](set-contact-attributes.md) block to set a value that is later referenced in a flow\. For example, create a personalized greeting for customers routed to a queue based on the type of customer account\. You could also define an attribute for a company name or line of business to include in the text to speech strings said to a customer\. The **Set contact attributes** block is useful for copying attributes retrieved from external sources to user\-defined attributes\.
 
 **To set a contact attribute with a [Set contact attributes](set-contact-attributes.md) block**
 
 1. In Amazon Connect, choose **Routing**, **Contact flows**\.
 
-1. Select an existing contact flow, or create a new one\.
+1. Select an existing flow, or create a new one\.
 
 1. Add a **Set contact attributes** block\.
 

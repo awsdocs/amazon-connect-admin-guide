@@ -1,11 +1,11 @@
-# Contact block: Get customer input<a name="get-customer-input"></a>
+# Flow block: Get customer input<a name="get-customer-input"></a>
 
 ## Description<a name="get-customer-input-description"></a>
 + It plays a prompt to get a response from the customer\. For example, "For Sales, press one\. For Support, press two\." 
 + When customers enter DTMF input \(touch\-tone keypad or telephone input\), the prompt is interruptible\. 
 + When an Amazon Lex bot plays a voice prompt, customers can interrupt it with their voice\. To set this up, use the `barge-in-enabled` session attribute\.
 + It then branches based on the customer's input\.
-+ This block works for chat only when Amazon Lex is used\.
++ This block works for chat only when Amazon Lex is used\. It gathers customer input only, not agent input\. 
 
 ## Supported channels<a name="get-customer-input-channels"></a>
 
@@ -18,10 +18,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes when Amazon Lex is used Otherwise, No \- Error branch | 
 | Task | Yes | 
 
-## Contact flow types<a name="get-customer-input-types"></a>
+## Flow types<a name="get-customer-input-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow
@@ -34,7 +34,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 The **Get Customer Input** block does not currently support using a voice prompt from an S3 bucket with Amazon Lex V2\.  
 For information about choosing a prompt from the Amazon Connect library or an S3 bucket, see the [Play prompt](play.md) block\. 
 
-You can configure this block to accept DTMF input, a chat response, or an Amazon Lex intent\.
+You can configure this block to accept DTMF input or a chat response\. You can also configure it work with Amazon Lex; for example, a contact can be routed based on their utterance\. To learn how to set up a Lex bot, see [Tutorial 3: Create an IT help desk](tutorial1-create-helpdesk.md)\. 
 
 ### DTMF tab properties<a name="get-customer-input-dtmf"></a>
 + **Audio prompt**: Select from a list of default audio prompts, or upload your own audio prompt\. 
@@ -53,6 +53,16 @@ Your language attribute in Amazon Connect must match the language model used to 
 In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime Service Quotas](https://docs.aws.amazon.com/lexv2/latest/dg/gl-limits.html#gl-limits-runtime) or [Runtime Service Quotas \(Amazon Lex Classic\)](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
 + **Session attributes**: Specify attributes that apply to the current contact's session only\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties3.png)
++ **Use sentiment override**: Branch based on sentiment score, before the Amazon Lex intent\. 
+
+  The sentiment score is based on the last utterance of the customer\. It is not based on the entire conversation\.
+
+  For example, a customer calls and they have an angry tone because their preferred appointment time isn't available\. You can branch the flow based on their negative sentiment score, for example, if their negative sentiment is more than 80%\. Or, a customer calls and has a positive sentiment of more than 80%, you can branch to upsell them on services\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties5.png)
+
+  If you add both negative and positive sentiment scores, the negative score is always evaluated first\. 
+
+  For information about how to use sentiment score, alternative intents, and sentiment label with contact attributes, see [Check contact attributes](check-contact-attributes.md)\.
 
 ------
 #### [ Amazon Lex \(Classic\) ]
@@ -184,7 +194,7 @@ For more information, see [How to use Lex session attributes](how-to-use-session
 
 ## Configuration tips<a name="get-customer-input-tips"></a>
 + When you use text, either for text\-to\-speech or chat, you can use a maximum of 3,000 billed characters \(6,000 total characters\)\.
-+ Amazon Lex bots support both spoken utterances and keypad input when used in a contact flow\.
++ Amazon Lex bots support both spoken utterances and keypad input when used in a flow\.
 + For both voice and DTMF, there can be only one set of session attributes per conversation\. Following is the order of precedence: 
 
   1. Lambda provided session attributes: Overrides to session attributes during customer Lambda invocation\.
@@ -208,9 +218,9 @@ For more information, see [How to use Lex session attributes](how-to-use-session
 
     Value = 4000
 
-  Wildcards apply across bots but not across blocks in a contact flow\. 
+  Wildcards apply across bots but not across blocks in a flow\. 
 
-  For example, you have a Get\_Account\_Number bot\. In the contact flow, you have two **Get customer input** blocks\. The first block sets the session attribute with a wildcard\. The second one doesn't set the attribute\. In this scenario, the change in behavior for the bot applies only to the first **Get customer input** block, where the session attribute is set\. 
+  For example, you have a Get\_Account\_Number bot\. In the flow, you have two **Get customer input** blocks\. The first block sets the session attribute with a wildcard\. The second one doesn't set the attribute\. In this scenario, the change in behavior for the bot applies only to the first **Get customer input** block, where the session attribute is set\. 
 + Because you can specify that session attributes apply to the intent and slot level, you can specify that the attribute is set only when you're collecting a certain type of input\. For example, you can specify a longer **Start Silence Threshold** when you're collecting an account number than when you're collecting a date\. 
 + If DTMF input is provided to a Lex bot using Amazon Connect, the customer input is made available as a [Lex request attribute](https://docs.aws.amazon.com/lex/latest/dg/context-mgmt-request-attribs.html)\. The attribute name is `x-amz-lex:dtmf-transcript` and the value can be a maximum of 1024 characters\. 
 
@@ -220,6 +230,22 @@ For more information, see [How to use Lex session attributes](how-to-use-session
   Where: 
   + \[DEL\] = Deletion character \(Default is **\*** \)
   + \[END\] = End character \(Default is **\#** \)
+
+## Problems with DTMF input?<a name="use-multiple-input-blocks"></a>
+
+Let's say you have the following scenario with two contacts flows, each one capturing DTMF input from customers: 
+
+1. One flow uses the **Get customer input** block to request DTMF input from customers\.
+
+1. After the DTMF input is entered, it uses the **Transfer to flow** block to move the contact to the next contact flow\.
+
+1. In the next flow, there's a **Store customer input** block to get more DTMF input from the customer\.
+
+There's setup time between the first and second flows\. This means if the customer enters DTMF input very quickly for the second flow, some of the DTMF digits might be dropped\.
+
+For example, the customer needs to press 5, then wait for a prompt from the second flow, then type 123\. In this case, 123 is captured without problem\. However, if they don't wait for the prompt and enter 5123 very quickly, the **Store customer input** block may capture only 23 or 3\.
+
+To guarantee the **Store customer input** block in second contact flow captures all of the digits, the customer needs to wait for the prompt to be played, and then enter their type DTMF input\.
 
 ## Configured block<a name="get-customer-input-configured"></a>
 
@@ -242,6 +268,6 @@ See these sample flows for scenarios that use this block:
 ## Scenarios<a name="get-customer-input-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Add an Amazon Lex bot](amazon-lex.md)
++ [Add an Amazon Lex bot to Amazon Connect](amazon-lex.md)
 + [How to use the same bot for voice and chat](one-bot-voice-chat.md)
 + [Add text\-to\-speech to prompts](text-to-speech.md)

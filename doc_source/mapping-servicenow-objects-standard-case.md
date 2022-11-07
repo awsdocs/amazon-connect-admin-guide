@@ -83,7 +83,7 @@ The following table lists which fields can be mapped from the Servicenow\-task o
 | Servicenow\-task source field | Standard case target field | 
 | --- | --- | 
 |  sys\_id  | Attributes\.ServiceNowTaskId  | 
-|  opened\_by\.link  | Attributes\.ServiceNowUserId  | 
+|  opened\_by\.link  | Attributes\.ServiceNowSystemUserId  | 
 |  short\_description  | Title  | 
 |  description  | Summary  | 
 |  status  | Status  | 

@@ -2,6 +2,8 @@
 
 Quick connects are a way for you to create a list of destinations for common transfers\. For example, you might create a quick connect for Tier 2 support\. If agents in Tier 1 support can't solve the issue, they will transfer the contact to Tier 2\. 
 
+**How many quick connects can I create?** To view your quota of **Quick connects per instance**, open the Service Quotas console at [https://console\.aws\.amazon\.com/servicequotas/](https://console.aws.amazon.com/servicequotas/)\.
+
 ## Types of quick connects<a name="quick-connect-types"></a>
 
 The type of a quick connect specifies the destination\. You can specify one of the following destinations\.
@@ -12,14 +14,14 @@ Contacts are transferred to an external number \(such as an on\-call pager\)\.
 
 ### Agent quick connect<a name="agent-quick-connect-type"></a>
 
-Contacts are transferred to a specific agent as part of a contact flow\.
+Contacts are transferred to a specific agent as part of a flow\.
 
 **Important**  
 Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
 
 ### Queue quick connect<a name="queue-quick-connect-type"></a>
 
-Contacts are transferred to a queue as part of a contact flow\.
+Contacts are transferred to a queue as part of a flow\.
 
 **Important**  
 Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
@@ -28,15 +30,27 @@ Agent and Queue quick connects only appear in the CCP when an agent goes to tran
 
  Following are the instructions to add quick connects manually using the Amazon Connect console\. To add quick connects programmatically, use the [CreateQuickConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateQuickConnect.html) API\.
 
-**To create a quick connect**
+**To add quick connects**
 
-1. On the navigation menu, choose **Routing**, **Quick connects**, **Add new**\.
+1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\. To find the name of your instance, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.
 
-1. Enter a name for the connect\. Choose the type, and then specify the destination \(such as a phone number or the name of an agent\), contact flow \(if applicable\), and description\.
+1. On the navigation menu, choose **Routing**, **Quick connects**\.
 
-1. To add more quick connects, choose **Add new**\.
+1. For each quick connect, do the following:
 
-1. Choose **Save**\.
+   1. Choose **Add new**\.
+
+   1. Enter a name\.
+
+   1. Choose a type\.
+
+   1. Enter the destination \(for example, a phone number, the name of an agent, or the name of a queue\)\.
+
+   1. Enter a flow, if applicable\.
+
+   1. Enter a description\.
+
+1. When you're finished adding quick connects, choose **Save**\.
 
 ## Step 2: Enable agents to see quick connects<a name="step2-enable-agents-to-see-quick-connects"></a>
 

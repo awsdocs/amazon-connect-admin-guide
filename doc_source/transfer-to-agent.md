@@ -11,7 +11,7 @@ A queue is created for all users in your Amazon Connect instance, but only users
 
 1. In Amazon Connect, choose **Routing**, **Contact flows**\.
 
-1. In the contact flow designer, open an existing contact flow, or create a new one\.
+1. In the flow designer, open an existing flow, or create a new one\.
 
 1. Add a block in which you can select a queue to transfer a contact to, such as a **Set working queue** block\.
 
@@ -23,17 +23,25 @@ A queue is created for all users in your Amazon Connect instance, but only users
 
 1. Choose **Save**\.
 
-1. Connect the **Success** branch to the next block in your contact flow\.
+1. Connect the **Success** branch to the next block in your flow\.
 
 You can also choose to use an attribute to select the queue created for the agent user account\. To do so, after you choose **By agent**, choose **Use attribute**\.
 
 ## Use contact attributes to route contacts to a specific agent<a name="use-attribs-agent-queue"></a>
 
-When you use contact attributes in a contact flow to route calls to an agent, the attribute value must be either the agent's user name, or the agent's user ID\.
+When you use contact attributes in a flow to route calls to an agent, the attribute value must be either the agent's user name, or the agent's user ID\.
 
-To determine the user ID for an agent so that you can use the value as an attribute, use the [ListUsers](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListUsers.html) operation to retrieve the users from your instance\. The agent's user ID is returned with the results from the operation as the value of the `Id` in the [UserSummary](https://docs.aws.amazon.com/connect/latest/APIReference/API_UserSummary.html) object\.
+To determine the user ID for an agent so that you can use the value as an attribute, use one of these options: 
++ Use the **Network** tab of the browser debugger to retrieve the agent ID\. For example:
 
-You can also find the user ID for an agent by using [Amazon Connect agent event streams](agent-event-streams.md)\. The agent events, which are included in the agent event data stream, include the agent ARN\. The user ID is included in the agent ARN after **`agent/`**\. 
+  1. In a Chrome browser, press F12 and go to the **Network** tab\. 
+
+  1. In Amazon Connect, in the navigation menu, choose **Users**, **User management**, and then select an agent\. Monitor the content of the **Network** tab\. In the **Name** list, choose the GUID\. 
+
+  1. Choose the **Preview** tab\. The agent ID is displayed next to the `Id` field\. The following image shows an example\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/find-agent-id.png)
++ Use the [ListUsers](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListUsers.html) operation to retrieve the users from your instance\. The agent's user ID is returned with the results from the operation as the value of the `Id` in the [UserSummary](https://docs.aws.amazon.com/connect/latest/APIReference/API_UserSummary.html) object\.
++ Find the user ID for an agent by using [Amazon Connect agent event streams](agent-event-streams.md)\. The agent events, which are included in the agent event data stream, include the agent ARN\. The user ID is included in the agent ARN after **`agent/`**\. 
 
 In the following agent event data, the agent ID is **87654321\-4321\-4321\-4321\-123456789012**\.
 

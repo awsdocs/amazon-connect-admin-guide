@@ -1,4 +1,4 @@
-# Contact block: Disconnect / hang up<a name="disconnect-hang-up"></a>
+# Flow block: Disconnect / hang up<a name="disconnect-hang-up"></a>
 
 ## Description<a name="disconnect-hang-up-description"></a>
 + Disconnects the contact\.
@@ -14,10 +14,10 @@ The following table lists how this block routes a contact that is using the spec
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="disconnect-hang-up-types"></a>
+## Flow types<a name="disconnect-hang-up-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow

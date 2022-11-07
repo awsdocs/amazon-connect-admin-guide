@@ -13,7 +13,7 @@ There are different events that can appear in the lifecycle of a contact\. Each 
 + MISSED \- The contact was missed by the agent\.
 + ERROR \- This appears when, for example, the customer abandons the call during outbound whisper\.  
 + ENDED \- The conversation has ended, and the agent has started doing ACW for that contact\.
-+ REJECTED \- The contact was rejected by the agent\. This applies to chat and tasks\.
++ REJECTED \- The contact was rejected by the agent or the customer abandoned the contact when it is connecting to the agent\. This applies to chat and tasks\. 
 
 Here's what the contact state looks like in the agent event stream:
 
@@ -41,7 +41,7 @@ Here's what the contact state looks like in the agent event stream:
 
 A contact record captures events associated with the contact in your contact center\. For example, how long the contact lasted, when it started and stopped\. For a list of all data that's captured in the contact record, see [Contact records data model](ctr-data-model.md)\. 
 
-A contact record is opened for a customer when they are connected to your contact center\. The contact record is completed when the interaction with the contact flow or agent ends \(that is, the agent has completed the ACW and cleared the contact\)\. This means it's possible for a customer to have multiple contact records\.
+A contact record is opened for a customer when they are connected to your contact center\. The contact record is completed when the interaction with the flow or agent ends \(that is, the agent has completed the ACW and cleared the contact\)\. This means it's possible for a customer to have multiple contact records\.
 
 The following diagram shows when a contact record is created for a contact\. 
 

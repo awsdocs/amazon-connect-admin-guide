@@ -83,3 +83,7 @@ associate().then(r => console.log('Done'));
 ## Step 4: Enable Contact Lens for your Amazon Connect instance<a name="enable-segment-streams-step4"></a>
 
 For instructions, see [Enable Contact Lens for Amazon Connect](enable-analytics.md)\.
+
+## Step 5 \(Optional\): Review a sample segment stream<a name="enable-segment-streams-step5"></a>
+
+We recommend you review a sample segment stream to familiarize yourself with what it looks like\. See [Sample real\-time contact analysis segment stream](sample-real-time-contact-analysis-segment-stream.md)\.

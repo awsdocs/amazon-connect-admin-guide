@@ -1,12 +1,16 @@
-# Contact block: Set Voice ID<a name="set-voice-id"></a>
+# Flow block: Set Voice ID<a name="set-voice-id"></a>
 
 ## Description<a name="set-voice-id-description"></a>
 + Enables audio streaming and sets thresholds for voice authentication and detection of fraudsters in a watchlist\. For more information about this feature, see [Use real\-time caller authentication with Voice ID](voice-id.md)\.
-+ Sends audio to Amazon Connect Voice ID to verify the caller's identity and match against fraudsters in watchlist, as soon as the call is connected to a contact flow\.
++ Sends audio to Amazon Connect Voice ID to verify the caller's identity and match against fraudsters in watchlist, as soon as the call is connected to a flow\.
 + Use a [Play prompt](play.md) block before **Set Voice ID** to stream audio properly\. You can edit it to include a simple message such as "Welcome\."
 + Use a [Set contact attributes](set-contact-attributes.md) block after **Set Voice ID** to set the customer ID for the caller\.
+
+  The `CustomerId` may be a customer number from your CRM, for example\. You can create a Lambda function to pull the unique customer ID of the caller from your CRM system\. Voice ID uses this attribute as the `CustomerSpeakerId` for the caller\.
+
+  `CustomerId` can be an alphanumeric value\. It supports only \_ and \- \(underscore and hyphen\) special characters\. It does not need to be UUID\. For more information, see `CustomerSpeakerId` in the [Speaker](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_Speaker.html) data type\.
 + Use a [Check Voice ID](check-voice-id.md) block after **Set Voice ID** to branch based on the results of the enrollment check, authentication, or fraud detection\. 
-+ For information about how to use **Set Voice ID** in a contact flow, along with [Check Voice ID](check-voice-id.md) and [Set contact attributes](set-contact-attributes.md), see [Step 2: Configure Voice ID in your contact flow](enable-voiceid.md#enable-voiceid-step2) in [Enable Voice ID](enable-voiceid.md)\. 
++ For information about how to use **Set Voice ID** in a flow, along with [Check Voice ID](check-voice-id.md) and [Set contact attributes](set-contact-attributes.md), see [Step 2: Create a new Voice ID domain and encryption key](enable-voiceid.md#enable-voiceid-step2) in [Enable Voice ID](enable-voiceid.md)\. 
 
 ## Supported channels<a name="set-security-channels"></a>
 
@@ -19,10 +23,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | No \- Error branch | 
 | Task | No \- Error branch | 
 
-## Contact flow types<a name="set-voice-id-types"></a>
+## Flow types<a name="set-voice-id-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer queue flow
 + Customer whisper flow
 + Outbound whisper flow
@@ -38,7 +42,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 When this option is selected, Amazon Connect begins streaming audio from the customer's channel to Voice ID\.
 
-You can add this block several places in a contact flow, but after **Start streaming audio** is selected, it cannot be disabled, even if later in the flow there are other **Set Voice ID** blocks that do not have it enabled\.
+You can add this block several places in a flow, but after **Start streaming audio** is selected, it cannot be disabled, even if later in the flow there are other **Set Voice ID** blocks that do not have it enabled\.
 
 ### Voice authentication<a name="set-voice-id-properties-voice-authentication"></a>
 
@@ -54,7 +58,7 @@ You can set the authentication response time between 5 and 10 seconds, which det
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-properties2.png)
 
-Use attributes to set the authentication threshold dynamically\. For example, you may want to raise the threshold based on the membership level of the customer, or the type of transaction or information they are calling about\.
+Choose **Set dynamically** to set the authentication threshold based on certain criteria\. For example, you may want to raise the threshold based on the membership level of the customer, or the type of transaction or information they are calling about\.
 
 ### Fraud detection<a name="set-voice-id-properties-fraud-detection"></a>
 
@@ -62,7 +66,7 @@ The threshold you set for fraud detection is used to measure risk\. Scores highe
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-properties3.png)
 
-Use attributes to set the fraud threshold dynamically\. For example, you may want to lower the threshold for high wealth customers, or the type of transaction or information they are calling about\.
+Choose **Set dynamically**to set the fraud threshold based on certain criteria\. For example, you may want to lower the threshold for high wealth customers, or the type of transaction or information they are calling about\.
 
 ## Configuration tips<a name="set-voice-id-tips"></a>
 + For the **Authentication threshold**, we recommend that you start with the default of 90 and adjust until you find a good balance for your business\.
@@ -73,7 +77,7 @@ Use attributes to set the fraud threshold dynamically\. For example, you may wan
     For example, if you set it too high, such as greater than 95, agents will need to verify every customer's identity\.
   + The lower the threshold, the greater the false acceptance rate \(FAR\), that is, the likelihood that Voice ID will incorrectly accept an access attempt by an unauthorized caller\.
 + When Voice ID verifies that the voice belongs to the enrolled customer, it returns a status of **Authenticated**\. Add a [Check Voice ID](check-voice-id.md) block to you flow branch based on the returned status\.
-+ For the **Fraud threshold**, we recommend that you start with the default of 20 and adjust until you find a good balance for your business\.
++ For the **Fraud threshold**, we recommend that you start with the default of 50 and adjust until you find a good balance for your business\.
 
   If the caller's score is above the threshold, it indicates there's a higher risk for fraud in that call\.
 
@@ -87,5 +91,5 @@ When this block is configured, it looks similar to the following image:
 
 See the following topic for more information about this block:
 + [Use real\-time caller authentication with Voice ID](voice-id.md)
-+ [Contact block: Check Voice ID](check-voice-id.md)
++ [Flow block: Check Voice ID](check-voice-id.md)
 + [Use Voice ID](use-voiceid.md)

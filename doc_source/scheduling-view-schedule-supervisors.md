@@ -1,4 +1,4 @@
-# How supervisors view published schedules \(Preview\)<a name="scheduling-view-schedule-supervisors"></a>
+# How supervisors view published schedules<a name="scheduling-view-schedule-supervisors"></a>
 
 After a scheduler publishes a schedule, it's official\. Agents can now view their individual scheduling using their agent application\. Supervisors can also view their agents schedules using the Amazon Connect console\.
 

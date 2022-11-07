@@ -1,6 +1,8 @@
 # Multi\-party calls: Add additional participants to an ongoing call<a name="multi-party-calls"></a>
 
-You can add up to four additional participants to an ongoing customer service call, for a total of six participants\. By using quick connects or your number pad, you can add other agents, supervisors, or external participants\.
+You can add up to **4** additional participants to an ongoing customer service call, for a total of **6** participants\. 
+
+By using quick connects or your number pad, you can add other agents, supervisors, or external participants\.
 
 For example, to help close a mortgage transaction, an agent at a financial services company can add a mortgage broker, the customer's spouse, a translator, and a supervisor to the call to help resolve any issues quickly\. 
 
@@ -8,9 +10,10 @@ For information about how multi\-party calls differs from the default three\-par
 
 ## Important things to know<a name="important-things-multi-party-calls"></a>
 + This feature is only available in CCPv2 and custom CCP using Amazon Connect Streams\.js\.
-  + **IT administrators**: By default, there can be three participants on a call \(for example, two agents and a caller, or an agent, a caller, and an external party\)\. Before enabling multi\-party calling, see [Comparison: Three\-party and multi\-party calls](amazon-connect-release-notes.md#comparison-multi-party.title)\. To enable agents to connect up to six parties on a call, see [Update telephony options](update-instance-settings.md#update-telephony-options)\.
-  + **Developers**: In custom CCPs, use the updated Amazon Connect Streams API to enable multi\-party calling, up to six parties\. See the [Amazon Connect Streams](https://github.com/amazon-connect/amazon-connect-streams/blob/master/Documentation.md#connectcoreinitccp) documentation on GitHub\. Before enabling multi\-party calling, see [Comparison: Three\-party and multi\-party calls](amazon-connect-release-notes.md#comparison-multi-party.title)\.
-+ With multi\-party calls, using manager monitor to listen in to agents is not fully supported\. If you plan to use manager monitor, contact your account team before you enable multi\-party calls\.
+  + **IT administrators**: 
+    + Before enabling the multi\-party calls feature, if you are using Contact Lens or planning to do so in the future, see [Multi\-party calls and Contact Lens](enable-analytics.md#multiparty-calls-contactlens)\.
+    + By default, there can be three participants on a call \(for example, two agents and a caller, or an agent, a caller, and an external party\)\. Before enabling multi\-party calling, see [Comparison: Three\-party and multi\-party calls](amazon-connect-release-notes.md#comparison-multi-party)\. To enable agents to connect up to six parties on a call, see [Update telephony options](update-instance-settings.md#update-telephony-options)\.
+  + **Developers**: In custom CCPs, use the updated Amazon Connect Streams API to enable multi\-party calling, up to six parties\. See the [Amazon Connect Streams](https://github.com/amazon-connect/amazon-connect-streams/blob/master/Documentation.md#connectcoreinitccp) documentation on GitHub\. Before enabling multi\-party calling, see [Comparison: Three\-party and multi\-party calls](amazon-connect-release-notes.md#comparison-multi-party)\.
 + **AWS GovCloud \(US\-West\)**: You can't enable this feature using the console user interface\. Instead, use the [UpdateInstanceAttribute](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateInstanceAttribute.html) API or contact AWS Support\.
 
 ## How to add participants to a multi\-party call<a name="add-participants-multi-party-calls"></a>
@@ -47,6 +50,6 @@ Choose the **More** button to open the number pad and to create a task:
 
 ## When do multi\-party calls end?<a name="end-multi-party-calls"></a>
 
-A multi\-party call stays up as long as the caller is on the call\. For example, add an external party to a call and then you disconnect\. The caller and external party continue the call\. 
+A multi\-party call stays up as long as the caller or the agent is on the call\. For example, add an external party to a call and then you disconnect\. The caller and external party continue the call\. 
 
 If only third\-parties are left on the line, the contact is terminated\. However, as the agent you can choose to disconnect and allow only the caller and the third\-party participants to remain on the call\. 

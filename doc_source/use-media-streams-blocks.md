@@ -1,6 +1,6 @@
-# Example contact flow for testing live media streaming<a name="use-media-streams-blocks"></a>
+# Example flow for testing live media streaming<a name="use-media-streams-blocks"></a>
 
-Here's how you can set up a contact flow to test live media streaming: 
+Here's how you can set up a flow to test live media streaming: 
 
 1. Add a **Start media streaming** block at the point where you want to enable customer audio streaming\.
 
@@ -11,11 +11,11 @@ Here's how you can set up a contact flow to test live media streaming:
 1. Configure both blocks to specify what you want to stream: **From the customer** and/or **To the customer**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/start-media-streaming.png)
 
-Customer audio is captured until a **Stop media streaming** block is invoked, even if the contact is passed to another contact flow\.
+Customer audio is captured until a **Stop media streaming** block is invoked, even if the contact is passed to another flow\.
 
-Use the contact attributes for media streaming in your contact flow so that the contact record includes the attributes\. You can then view the contact record to determine the media streaming data associated with a specific contact\. You can also pass the attributes to an AWS Lambda function\.
+Use the contact attributes for media streaming in your flow so that the contact record includes the attributes\. You can then view the contact record to determine the media streaming data associated with a specific contact\. You can also pass the attributes to an AWS Lambda function\.
 
-The following example contact flow shows how you might use media streaming with attributes for testing purposes\. 
+The following example flow shows how you might use media streaming with attributes for testing purposes\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/media-streaming-flow.png)
 

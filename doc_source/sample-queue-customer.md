@@ -1,11 +1,11 @@
 # Sample queue customer<a name="sample-queue-customer"></a>
 
 **Note**  
-This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+This topic explains a sample flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample flows](contact-flow-samples.md)\. 
 
-Type: Contact flow \(inbound\)
+Type: Flow \(inbound\)
 
-This contact flow performs checks before placing customer into a queue\. Here's how it works:
+This flow performs checks before placing customer into a queue\. Here's how it works:
 
 1. The **Set working queue** block determines which queue to transfer the customer to\.
 

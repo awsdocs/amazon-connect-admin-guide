@@ -1,10 +1,10 @@
 # Encrypt customer input<a name="encrypt-data"></a>
 
-You can encrypt sensitive data that is collected by contact flows\. To do this, you need to use public\-key cryptography\. 
+You can encrypt sensitive data that is collected by flows\. To do this, you need to use public\-key cryptography\. 
 
 When configuring Amazon Connect, you first provide the public key\. This is the key used when encrypting data\. Later, you provide the X\.509 certificate, which includes a signature that proves you possess the private key\. 
 
-In a contact flow that collects data, you provide an X\.509 certificate to encrypt data that's captured using the **Stored customer input** system attribute\. You must upload the key in `.pem` format to use this feature\. The encryption key is used to verify the signature of the certificate used within the contact flow\. 
+In a flow that collects data, you provide an X\.509 certificate to encrypt data that's captured using the **Stored customer input** system attribute\. You must upload the key in `.pem` format to use this feature\. The encryption key is used to verify the signature of the certificate used within the flow\. 
 
 **Note**  
 You can have up to two encryption keys active at one time to facilitate rotation\.
@@ -57,13 +57,13 @@ public class AmazonConnectDecryptionSample {
      * To use, provide the following command line arguments: [path-to-private-key] [key-id] [cyphertext]
      * Where:
      *  path-to-private-key is a file containing the PEM encoded private key to use for decryption
-     *  key-id is the key-id specified during encryption in your contact flow
+     *  key-id is the key-id specified during encryption in your flow
      *  cyphertext is the result of the encryption operation from Amazon Connect
      */
     public static void main(String[] args) throws IOException, GeneralSecurityException {
         String privateKeyFile = args[0]; // path to PEM encoded private key to use for decryption
-        String keyId = args[1]; // this is the id used for key in your contact flow
-        String cypherText = args[2]; // the result from contact flow
+        String keyId = args[1]; // this is the id used for key in your flow
+        String cypherText = args[2]; // the result from flow
  
         Security.addProvider(new BouncyCastleProvider());
  

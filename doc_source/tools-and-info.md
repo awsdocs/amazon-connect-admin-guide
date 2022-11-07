@@ -42,7 +42,7 @@ The following example disposition keys are listed by symptom, scenario, and seve
 
 **Examples**
 + 5:45PM agentName LT2 \(latency on a three\-way call with medium impact\)\.
-+ 6:05PM agentName DO3 \(disconnected three\-way call with large impact\)\.
++ 6:05PM agentName DO3 \(disconnected outbound call with large impact\)\.
 + 6:34PM agentName MI3 \(missed inbound call with large impact\)\.
 
 ## Analyzing the Data<a name="analyze-data"></a>

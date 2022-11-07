@@ -104,13 +104,13 @@ After you have submitted all required documentation, the Amazon Connect team sub
 **Note**  
 Most carriers require that portings are completed during normal business hours\. For country\-specific business hours, see [Region requirements for ordering and porting phone numbers](phone-number-requirements.md)\. 
 
-## Step 4: Assign the phone number to the contact flow, request service quota increases<a name="step4-porting"></a>
+## Step 4: Assign the phone number to the flow, request service quota increases<a name="step4-porting"></a>
 
 About 3\-4 days before the mutually agreed date and time, the Amazon Connect support team loads the phone number that will be ported into the instance ARN you have provided, and then notifies you\. Now it's time for you to perform the following steps:
 
-1. [Associate the phone number to the desired contact flow](associate-phone-number.md) so the phone number will be ready to receive phone calls after the porting is completed\. If you require assistance assigning multiple phone numbers to contact flows, let us know in your support request\. 
+1. [Associate the phone number to the desired flow](associate-claimed-ported-phone-number-to-flow.md) so the phone number will be ready to receive phone calls after the porting is completed\. If you require assistance assigning multiple phone numbers to contact flows, let us know in your support request\. 
 **Important**  
-If you do not assign the phone number to the contact flow, calls will not arrive successfully to your Amazon Connect contact center\. 
+If you do not assign the phone number to the flow, calls will not arrive successfully to your Amazon Connect contact center\. 
 
 1. [Submit a service quota request](amazon-connect-service-limits.md) at least five days in advance of the mutually agreed date for any changes to your service quotas required to support your use case\. For example, you may need to increase the number of concurrent calls per instance, or enable countries for outbound calling\. 
 
@@ -127,7 +127,7 @@ On the mutually agreed port date, perform the following steps:
 
   1. Verify that any required service quota increases or changes for your Amazon Connect instance were implemented\. For example, increase the number of concurrent calls per instance, or enable countries for outbound calling\.
 + Monitor call traffic from your existing contact center to confirm that incoming traffic has stopped\.
-+ Place test calls to your Amazon Connect instance to verify calls are being routed to the correct contact flows\.
++ Place test calls to your Amazon Connect instance to verify calls are being routed to the correct flows\.
 + Ensure agents are logged in to the Contact Control Panel \(CCP\) and can answer calls as they are received\.
 + Monitor call traffic to your Amazon Connect instance to confirm that you are receiving the expected levels of traffic\.
 

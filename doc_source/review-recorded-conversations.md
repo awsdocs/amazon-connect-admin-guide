@@ -8,13 +8,15 @@ Managers can review past conversations between agents and customers\. To set thi
 When call recording is enabled, the recording is placed in your S3 bucket shortly after the contact is disconnected\. Then the recording is available for you to review it using the steps in this article\.   
 You can also access the recording from the customer's [contact record](sample-ctr.md)\. The recording is available in the contact record, however, only after the contact has left the [After Contact Work \(ACW\) state](metrics-agent-status.md#agent-status-acw)\.
 
+**How do I manage access to recordings?** Use the **Recorded conversations \(unredacted\)** security profile permission to manage who can listen to recordings, and access the corresponding URLs that are generated in S3\. For more information about this permission, see [Assign permissions to review recordings of past conversations](assign-permssions-to-review-recordings.md)\.
+
 ## Review recordings/transcripts of past conversations<a name="review-recordings-and-transcripts"></a>
 
 These are the steps that a manager does to review past recordings/transcripts of conversations\.
 
 1. Log in to Amazon Connect with a user account that has [permissions to access recordings](assign-permssions-to-review-recordings.md)\.
 
-1. In Amazon Connect choose **Metrics and quality**, **Contact search**\. 
+1. In Amazon Connect choose **Analytics**, **Contact search**\. 
 
 1. Filter the list of contacts by date, agent login, phone number, or other criteria\. Choose **Search**\.
 **Tip**  

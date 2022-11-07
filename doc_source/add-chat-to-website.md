@@ -36,7 +36,7 @@ In this step, you customize the experience of the chat widget for your customers
 
 1. For **Open chat icon**, select the colors for the icon that customers will choose or tap to start a chat with your contact center\. 
 
-1. For **Select contact flow**, choose the inbound flow that initiates when a customer starts a chat\.
+1. For **Select flow**, choose the inbound flow that initiates when a customer starts a chat\.
 
 1. Choose **Next**\.
 

@@ -10,6 +10,6 @@ The knowledge documents used by Amazon Connect Wisdom are encrypted by an AWS KM
 
  For using Amazon Connect Voice ID, it is mandatory to provide a customer managed key KMS key \(BYOK\) while creating a Amazon Connect Voice ID domain, which is used to encrypt all the customer data at rest\. 
 
-Amazon Connect High\-Volume Outbound Communications encrypts all sensitive data using an AWS owned key or a customer managed key\. As the customer managed key is created, owned, and managed by the you, you have full control over the customer managed key \(AWS KMS charges apply\)\.
+Outbound campaigns encrypts all sensitive data using an AWS owned key or a customer managed key\. As the customer managed key is created, owned, and managed by the you, you have full control over the customer managed key \(AWS KMS charges apply\)\.
 
 For information about AWS KMS keys see [What is AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.

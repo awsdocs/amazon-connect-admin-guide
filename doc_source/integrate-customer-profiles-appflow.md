@@ -1,6 +1,6 @@
-# Set up integration for Salesforce, ServiceNow, Marketo, or Zendesk<a name="integrate-customer-profiles-appflow"></a>
+# Set up integration for featured applications in Amazon Connect<a name="integrate-customer-profiles-appflow"></a>
 
-These integrations use Amazon AppFlow to provide periodic updates to Amazon Connect Customer Profiles\.
+These integrations use Amazon Connect featured applications to provide periodic updates to Amazon Connect Customer Profiles\.
 
 ## Before you begin<a name="before-you-begin-cp-integration"></a>
 
@@ -23,39 +23,6 @@ For Salesforce, Marketo, and ServiceNow, Customer Profiles helps improve the his
 The role created in the console is only useable by the domain it was created on\. This is because Amazon Connect limits the access of the role to only the KMS key used by the domain\. 
 
 For more information, see [Grant least privilege access to your Customer Profiles execution role](#grant-least-privilege-cp)\.
-
-## Integration setup steps<a name="steps-integrate-cp-salesforce-servicenow"></a>
-
-1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
-
-1. On the **Instances** page, choose the instance alias\. The instance alias is also your instance name, which appears in your Amazon Connect URL\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
-
-1. In the navigation pane, choose **Customer profiles**\.
-
-1. On the **Customer profiles configuration** page, choose **Add integration**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-enable-addintegration.png)
-
-1. On the **Select source** page, choose which external application you want to get customer profiles data from: Salesforce, Zendesk, ServiceNow, or Marketo\. Select **I’ve read the integration requirements** to indicate you understand the connection requirements for your application\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-enable-choose-app.png)
-
-1. On the **Establish connection** page, choose one of the following: 
-   + **Use existing connection**: This allows you to reuse existing Amazon AppFlow resources you may have created in your AWS account\.\.
-   + **Create new connection**: Enter the information required by the external application\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-enable-establish-connection.png)
-
-1. On the **Integration options** page, choose which source objects you want to ingest and select their object type\. 
-
-   Object types store your ingested data\. They also define how objects from your integrations are mapped to profiles when they are ingested\. Customer Profiles provides default object type templates you can use that define how attributes in your source objects are mapped to the standard objects in Customer Profiles\. You can also use the object mappings that you’ve created from the [PutProfileObjectType](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_PutProfileObjectType.html)\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-integration-options.png)
-
-1. For the **Ingestion start date**, Customer Profiles starts ingesting records created after this date\. By default, the date for importing records is set at 30 days prior\.
-
-1. On the **Review and integrate** page, check that the **Connection status** says **Connected**, and then choose **Create integration**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-enable-review-and-integrate.png)
-
-1. After the integration is set up, back on the **Customer profiles configuration** page, choose **View objects** to see what data is being batched and sent\. Currently, this process ingests records that were created or modified in the last 30 days\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-enable-objects.png)
 
 ## Grant least privilege access to your Customer Profiles execution role<a name="grant-least-privilege-cp"></a>
 

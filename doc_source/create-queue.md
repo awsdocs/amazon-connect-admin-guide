@@ -1,5 +1,7 @@
 # Create a queue<a name="create-queue"></a>
 
+**How many queues can I create?** To view your quota of **Queues per instance**, open the Service Quotas console at [https://console\.aws\.amazon\.com/servicequotas/](https://console.aws.amazon.com/servicequotas/)\.
+
 1. On the navigation menu, choose **Routing**, **Queues**, **Add new queue**\.
 
 1. Add the appropriate information about your queue and choose **Add new queue**\.  

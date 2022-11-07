@@ -1,7 +1,7 @@
 # Copy and paste contact flows<a name="copy-paste-contact-flows"></a>
 
 You can select, cut, copy, and paste a complete flow or multiple blocks within or across flows\. The following information is copied:
-+ All configured settings in the selected contact blocks\.
++ All configured settings in the selected flow blocks\.
 + The layout arrangements\.
 + The connections\.
 

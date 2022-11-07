@@ -2,13 +2,13 @@
 
 This article describes the data model for Amazon Connect contact records\. Contact records capture the events associated with a contact in your contact center\. Real\-time and historical metrics are based on the data captured in the contact records\.
 
-For the contact record retention period and maximum size of the attributes section of a contact record, see [Feature specifications](amazon-connect-service-limits.md#feature-limits)\.
+## Important things to know<a name="important-things-to-know-ctr-data-model"></a>
++ We continually release new features that result in the addition of new fields to the contact records data model\. Any changes we make to the data model are backward compatible\. When you develop applications, we recommend that you build them to ignore the addition of new fields in the contact records data model\. This will help ensure your applications are resilient\.
++ Amazon Connect delivers contact records at least once\. Contact records may be delivered again for multiple reasons, such as new information arriving after initial delivery\. For example, when you use [update\-contact\-attributes](https://docs.aws.amazon.com/cli/latest/reference/connect/update-contact-attributes.html) to update a contact record, Amazon Connect delivers a new contact record\. This contact record is available for 24 months from the time the associated contact was initiated\.
 
-For information about when a contact record is created \(and thus can be exported or used for data reporting\), see [Events in the contact record](about-contact-states.md#ctr-events)\.
-
-**Tip**  
-Amazon Connect delivers contact records at least once\. Contact records may be delivered again for multiple reasons, such as new information arriving after initial delivery\. For example, when you use [update\-contact\-attributes](https://docs.aws.amazon.com/cli/latest/reference/connect/update-contact-attributes.html) to update a contact record, Amazon Connect delivers a new contact record\. This contact record is available for 24 months from the time the associated contact was initiated\.  
-If you're building a system that consumes contact record export streams, be sure to include logic that checks for duplicate contact records for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
+  If you're building a system that consumes contact record export streams, be sure to include logic that checks for duplicate contact records for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
++ For the contact record retention period and maximum size of the attributes section of a contact record, see [Amazon Connect feature specifications](feature-limits.md)\.
++ For information about when a contact record is created \(and thus can be exported or used for data reporting\), see [Events in the contact record](about-contact-states.md#ctr-events)\.
 
 ## Agent<a name="ctr-Agent"></a>
 
@@ -107,7 +107,9 @@ Type: [AgentHierarchyGroup](#ctr-AgentHierarchyGroup)
 
 ## ContactDetails<a name="ctr-contact-details"></a>
 
-Contains user\-defined attributes which are lightly typed within the contact\.
+Contains user\-defined attributes which are lightly typed within the contact\. 
+
+This object is used only for task contacts\. For voice or chat contacts, or for tasks that have contact attributes set with the flow block, check the [ContactTraceRecord](#ctr-ContactTraceRecord) Attributes object\. 
 
 **ContactDetailsName**  
 Type: String  
@@ -153,7 +155,7 @@ Type: String
 
 **Channel**  
 How the contact reached your contact center\.  
-Valid values: `Voice`, `Chat`, `Tasks`
+Valid values: `VOICE`, `CHAT`, `TASK`
 
 **ConnectedToSystemTimestamp**  
 The date and time the customer endpoint connected to Amazon Connect, in UTC time\. For `INBOUND`, this matches InitiationTimestamp\. For `OUTBOUND`, `CALLBACK`, and `API`, this is when the customer endpoint answers\.  
@@ -205,8 +207,8 @@ Valid values:
 
   For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 +  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
-+  `QUEUE_TRANSFER`: While the customer was in one queue \(listening to Customer queue flow\), they were transferred into another queue using a contact flow block\.
-+  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which contact flow to run after a disconnect event during a contact\. 
++  `QUEUE_TRANSFER`: While the customer was in one queue \(listening to Customer queue flow\), they were transferred into another queue using a flow block\.
++  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which flow to run after a disconnect event during a contact\. 
 
   A disconnect event is when:
   + A call, chat, or task is disconnected by an agent\.
@@ -383,7 +385,7 @@ Type: String *\(yyyy\-mm\-ddThh:mm:ssZ\)*
 **StorageType**  
 Where the recording/transcript is stored\.  
 Type: String  
-Valid values: Amazon S3`` 
+Valid values: Amazon S3 \| `KINESIS_VIDEO_STREAM` 
 
 ## References<a name="ctr-contact-references"></a>
 
@@ -457,7 +459,7 @@ Was detection of fraudsters in a watchlist enabled for the contact?
 Type: Boolean
 
 **FraudDetectionThreshold**  
-The threshold for detection of fraudsters in a watchlist that was set in the contact flow for the contact\.  
+The threshold for detection of fraudsters in a watchlist that was set in the flow for the contact\.  
 Type: Integer  
 Min value: 0  
 Max value: 100
@@ -468,7 +470,7 @@ Type: String
 Valid values: High Risk, Low Risk, Inconclusive, Error
 
 **FraudDetectionReasons**  
-Contains one fraud type: Known Fraudster\.  
+Contains fraud types: Known Fraudster and Voice Spoofing\.  
 Type: List of String  
 Length: 1\-128
 
@@ -479,12 +481,12 @@ Min value: 0
 Max value: 100
 
 **FraudRiskScoreVoiceSpoofing**  
-The detection of fraudsters in a watchlist score for Voice Spoofing, TTS, Audio Replay categories\.   
+The fraud risk score based on Voice Spoofing, such as playback of audio from Text\-to\-Speech systems recorded audio\.  
 Type: Integer  
 Length: 3
 
-**FraudRiskScoreSyntheticSpeech**  
-The detection of fraudsters in a watchlist score for Synthetic speech using TTS\.  
+**FraudRiskScoreSyntheticSpeech \(unused\)**  
+This field is unused\. This score is presented as a combined risk score for Voice Spoofing\.   
 Type: Integer  
 Length: 3
 

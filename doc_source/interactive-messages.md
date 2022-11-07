@@ -5,7 +5,7 @@ Interactive messages are rich messages that present a prompt and pre\-configured
 **Tip**  
 For step\-by\-step instructions on how to add interactive messages through Amazon Lex and Lambda, see this blog: [Set up interactive messages for your Amazon Connect chatbot](https://aws.amazon.com/blogs/contact-center/easily-set-up-interactive-messages-for-your-amazon-connect-chatbot/)\.
 
-Amazon Connect provides two message display templates: a list picker and a time picker\. These templates define how the information is going to render, and what information is surfaced in the chat interface\. When interactive messages are sent through chat, contact flows validate that the message format follows one of these templates\.
+Amazon Connect provides two message display templates: a list picker and a time picker\. These templates define how the information is going to render, and what information is surfaced in the chat interface\. When interactive messages are sent through chat, flows validate that the message format follows one of these templates\.
 
 This topic provides details about these interactive message templates\.
 

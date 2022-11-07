@@ -1,6 +1,8 @@
 # Set the hours of operation and timezone for a queue<a name="set-hours-operation"></a>
 
-The first thing you need to do when you set up a queue is to specify the hours of operation and timezone\. The hours may be referenced in contact flows\. For example, when routing contacts to agents, you might use the [Check hours of operation](check-hours-of-operation.md) block first, and then route the contact to the appropriate queue\. 
+The first thing you need to do when you set up a queue is to specify the hours of operation and timezone\. The hours may be referenced in flows\. For example, when routing contacts to agents, you might use the [Check hours of operation](check-hours-of-operation.md) block first, and then route the contact to the appropriate queue\. 
+
+**How many hours of operation can I create?** To view your quota of **Hours of operation per instance**, open the Service Quotas console at [https://console\.aws\.amazon\.com/servicequotas/](https://console.aws.amazon.com/servicequotas/)\.
 
 **To set the hours of operation and timezone for a queue**
 
@@ -58,10 +60,15 @@ For more information, see these topics:
 + [About agent status](metrics-agent-status.md)
 + [Change the "Agent activity" status in a real\-time metrics report ](rtm-change-agent-activity-state.md)
 
-## What happens during daylight savings time<a name="daylight-savings-time"></a>
+## What happens during daylight saving time<a name="daylight-savings-time"></a>
 
-Amazon Connect uses the timezone to determine whether daylight savings time is in effect for the queues, and adjusts automatically\. When a contact comes in, Amazon Connect looks at the hours and timezone to determine whether the contact can be routed to the given queue\. 
+Amazon Connect uses the timezone to determine whether daylight saving time is in effect for the queues, and adjusts automatically for all timezones that observe daylight saving time\. When a contact comes in, Amazon Connect looks at the hours and timezone to determine whether the contact can be routed to the given queue\. 
+
+**Important**  
+ [Eastern Standard Time \(EST\)](https://en.wikipedia.org/wiki/Eastern_Time_Zone) is used when observing standard time\. It is five hours behind Coordinated Universal Time \(UTC\)\.  
+ [Eastern Daylight Time \(EDT\)](https://en.wikipedia.org/wiki/Eastern_Time_Zone) is used when observing daylight saving time\. It is four hours behind Coordinated Universal Time \(UTC\)\.  
+Unlike EST, [Central European Time \(CET\)](https://en.wikipedia.org/wiki/Central_European_Time) observes daylight savings time\.
 
 ## Use the Check Hours of Operation block<a name="use-check-hours-of-operation-block"></a>
 
-At the start of your contact flows, use the [Check hours of operation](check-hours-of-operation.md) block to determine whether your contact center is open, and to branch accordingly\. 
+At the start of your flows, use the [Check hours of operation](check-hours-of-operation.md) block to determine whether your contact center is open, and to branch accordingly\. 

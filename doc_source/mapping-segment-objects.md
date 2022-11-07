@@ -8,7 +8,7 @@ Following is a list of all the fields in a Segment\-Identify object\.
 + userId
 + common fields \- see [Spec: Common Fields](https://segment.com/docs/connections/spec/common/) in the Segment documentation
 + Segment reserved traits \- see [Traits](https://segment.com/docs/connections/spec/identify/#traits) in the Segment documentation
-+  traits\.address\.street 
++ traits\.address\.street 
 + traits\.address\.city
 + traits\.address\.state
 + traits\.address\.postalCode

@@ -1,6 +1,6 @@
 # Amazon Connect workload layers<a name="workload-layers"></a>
 
-You can separate Amazon Connect workloads into the following layers: telephony, Amazon Connect interface/API, agent workstation, and metric and reporting\. 
+You can separate Amazon Connect workloads into the following layers: telephony, Amazon Connect interface/API, flows/IVR, agent workstation, and metric and reporting\. 
 
 ## Telephony<a name="workload-layers-telephony"></a>
 
@@ -10,7 +10,7 @@ You can separate Amazon Connect workloads into the following layers: telephony, 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/telephony2.png)
 
-When a voice call is placed to an Amazon Connect instance, the telephony layer is responsible for controlling the endpoint that your customer calls into through their carrier, across the PSTN and into Amazon Connect\. This layer represents the audio path established between Amazon Connect and the customer\. Through the Amazon Connect interface layer, you can configure things like outbound caller ID, assign contact flow/IVRs to phone numbers, enable live media streaming, enable call recording, and the ability to claim phone numbers without any prior traditional telephony knowledge or experience\. Additionally, when migrating workloads to Amazon Connect, you have the option to port your existing phone numbers by opening a support case in your AWS Management Console\. You can also forward your existing phone numbers to numbers that you’ve claimed in your Amazon Connect instance until you are fully migrated\.
+When a voice call is placed to an Amazon Connect instance, the telephony layer is responsible for controlling the endpoint that your customer calls into through their carrier, across the PSTN and into Amazon Connect\. This layer represents the audio path established between Amazon Connect and the customer\. Through the Amazon Connect interface layer, you can configure things like outbound caller ID, assign flow/IVRs to phone numbers, enable live media streaming, enable call recording, and the ability to claim phone numbers without any prior traditional telephony knowledge or experience\. Additionally, when migrating workloads to Amazon Connect, you have the option to port your existing phone numbers by opening a support case in your AWS Management Console\. You can also forward your existing phone numbers to numbers that you’ve claimed in your Amazon Connect instance until you are fully migrated\.
 
 ## Amazon Connect Interface/API<a name="connectinterface-api"></a>
 
@@ -25,18 +25,18 @@ Anything your agents, managers, supervisors, or contacts use to access, configur
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/connectinterface.png)
 
-### Contact flow / IVR<a name="contactflowivr"></a>
+### Flow / IVR<a name="contactflowivr"></a>
 
-The Contact Flow/IVR layer is the primary architectural vehicle for Amazon Connect and serves as the point of entry and first line of communication with customers reaching out to your contact center\. After a customer contacts your Amazon Connect instance, a contact flow controls the interaction between Amazon Connect, the contact, and the agent, allowing you to:
+The Flow/IVR layer is the primary architectural vehicle for Amazon Connect and serves as the point of entry and first line of communication with customers reaching out to your contact center\. After a customer contacts your Amazon Connect instance, a flow controls the interaction between Amazon Connect, the contact, and the agent, allowing you to:
 + Dynamically invoke AWS Lambda functions to make API calls\.
 + Send real\-time IVR and voice data to third\-party endpoints through Amazon Kinesis\.
 + Access resources inside your VPC and behind your VPN\.
 + Call other AWS services like Amazon Pinpoint to send SMS messages from the IVR\.
 + Perform data dips to database like Amazon DynamoDB to service your contacts\.
-+ Call Amazon Lex directly from the contact flow to invoke a Lex bot for Natural Language Understanding \(NLU\) and Automatic Speech Recognition \(ASR\)\.
++ Call Amazon Lex directly from the flow to invoke a Lex bot for Natural Language Understanding \(NLU\) and Automatic Speech Recognition \(ASR\)\.
 + Play dynamic and natural Text\-to\-Speech through Amazon Polly, and use SSML and Neural Text\-to\-Speech \(NTTS\) to achieve the most natural and human\-like text\-to\-speech voices possible\.
 
-Contact flows enable you to dynamically prompt contacts, collect and store contact attributes, and route appropriately\. You can assign a contact flow to multiple phone numbers, and manage and configure it through Amazon Connect\.
+Flows enable you to dynamically prompt contacts, collect and store contact attributes, and route appropriately\. You can assign a flow to multiple phone numbers, and manage and configure it through Amazon Connect\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/contactflowivr.png)
 

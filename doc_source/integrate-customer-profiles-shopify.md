@@ -6,7 +6,7 @@ To provide periodic updates to Amazon Connect Customer Profiles, you can integra
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the **Instances** page, choose the instance alias\. The instance alias is also your instance name, which appears in your Amazon Connect URL\.  
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Customer profiles**\.
@@ -15,7 +15,7 @@ To provide periodic updates to Amazon Connect Customer Profiles, you can integra
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-enable-addintegration.png)
 
 1. On the **Select source** page, choose **Shopify**\. Review the application requirements that are listed on the **Select application** page\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-enable-choose-shopify.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-cp-shopify-source.png)
 
 1. On the **Establish connection** page, choose one of the following: 
    + **Use existing connection**: This allows you to reuse existing Amazon EventBridge resources that you may have created in your AWS account\.

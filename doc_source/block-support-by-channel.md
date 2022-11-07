@@ -1,11 +1,12 @@
-# Supported channels for contact blocks<a name="block-support-by-channel"></a>
+# Supported channels for flow blocks<a name="block-support-by-channel"></a>
 
-The following table lists all available contact blocks, and whether they support routing a contact through the specified channels\. 
+The following table lists all available flow blocks, and whether they support routing a contact through the specified channels\. 
 
 
 | Block | Voice | Chat | Task | 
 | --- | --- | --- | --- | 
 | [Call phone number](call-phone-number.md)  | Yes | No \- Error branch | No \- Error branch | 
+| [Cases](cases-block.md)  | Yes | Yes | Yes | 
 |  [Change routing priority / age](change-routing-priority.md)   | Yes | No | Yes | 
 |  [Check call progress](check-call-progress.md)   | Yes | No \- Error branch | No \- Error branch | 
 |  [Check contact attributes](check-contact-attributes.md)   | Yes | Yes | Yes | 

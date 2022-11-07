@@ -1,4 +1,4 @@
-# Scheduling in Amazon Connect \(Preview\)<a name="scheduling"></a>
+# Scheduling in Amazon Connect<a name="scheduling"></a>
 
 Contact center schedulers or managers need to create agent schedules for day\-to\-day workloads that are flexible and meet business and compliance requirements\. Amazon Connect helps you create efficient schedules that are optimized for per\-channel Service Level or Average speed of answer targets\. You can generate and manage agent schedules based on the following: 
 + A short\-term published forecast
@@ -17,14 +17,14 @@ Following is the order of steps for creating a schedule and publishing it so sup
 
 1. Double\-check with your Amazon Connect admin that users have the required security profile permissions to access scheduling features\. The required permissions are described [here](required-optimization-permissions.md)\.
 
-1. [Create staff scheduling rules \(Preview\)](scheduling-create-staff-rules.md)
+1. [Create staff scheduling rules](scheduling-create-staff-rules.md)
 
-1. [Create shift activities \(Preview\)](scheduling-create-shift-activities.md)
+1. [Create shift activities](scheduling-create-shift-activities.md)
 
-1. [Create shift profiles \(Preview\)](scheduling-create-shift-profiles.md)
+1. [Create shift profiles](scheduling-create-shift-profiles.md)
 
-1. [Create staffing groups and rules \(Preview\)](scheduling-create-staffing-groups.md)
+1. [Create staffing groups and rules](scheduling-create-staffing-groups.md)
 
-1. [Generate, review, and publish a schedule by using Schedule Manager \(Preview\)](scheduling-publish-schedule.md)
+1. [Generate, review, and publish a schedule by using Schedule Manager](scheduling-publish-schedule.md)
 
-To learn how supervisors and agents view scheduled, see [How supervisors view published schedules \(Preview\)](scheduling-view-schedule-supervisors.md) and [View your schedule](scheduling-view-schedule-staff.md)\. 
+To learn how supervisors and agents view schedules, see [How supervisors view published schedules](scheduling-view-schedule-supervisors.md) and [How agents view their schedule](scheduling-view-schedule-staff.md)\. 

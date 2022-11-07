@@ -14,6 +14,8 @@ Agent event streams are created in JavaScript Object Notation \(JSON\) format\. 
     + Agent hierarchy group
     + Language preference setting in the CCP
 + HEART\_BEAT—This event is published every 120 seconds if there are no other events published during that interval\.
+**Note**  
+These events continue to be published up to an hour after an agent has logged off\. 
 
 **Topics**
 + [AgentEvent](#AgentEvent)
@@ -47,14 +49,14 @@ Type: String
 
 **EventTimestamp**  
 A time stamp for the event, in ISO 8601 standard format\.  
-Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
+Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*\.*sss*Z\)
 
 **EventType**  
 The type of event\.   
 Valid values: `STATE_CHANGE` \| `HEART_BEAT` \| `LOGIN` \| `LOGOUT` 
 
 **InstanceARN**  
-Amazon Resource Name for the Amazon Connect instance in which the agent’s user account is created\.  
+Amazon Resource Name for the Amazon Connect instance in which the agent's user account is created\.  
 Type: ARN
 
 **PreviousAgentSnapshot**  
@@ -77,7 +79,8 @@ Agent status data, including:
   For example, their status might be **Available**, which means that they are ready for inbound contacts to be routed to them\. Or it might be a custom status, such as Break or Training, which means that inbound contacts can't be routed to them BUT they can still make outbound calls\.
 + StartTimestamp—The timestamp in ISO 8601 standard format for the time at which the agent entered the status\.
 
-  Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
+  Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*\.*sss*Z\)
++ Type—ROUTABLE, CUSTOM, or OFFLINE
 Type: `AgentStatus` object\.
 
 **NextAgentStatus**  
@@ -86,7 +89,7 @@ If the agent set a next agent status, the data appears here\.
 + Name—This is the name of the agent status that the agent has set as their next status\.
 + EnqueueTimestamp—The timestamp in ISO 8601 standard format for the time at which the agent set their next status and paused routing of incoming contacts\.
 
-  Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
+  Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*\.*sss*Z\)
 Type: `NextAgentStatus` object\.
 
 **Configuration**  
@@ -100,7 +103,7 @@ Type: `Configuration` object
 
 **Contacts**  
 The contacts  
-Type: `ContactList` object
+Type: `List of Contact Objects` object
 
 ## Configuration<a name="Configuration"></a>
 
@@ -157,8 +160,8 @@ Valid values:
 
   For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 +  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
-+  `QUEUE_TRANSFER`: While the customer was in one queue \(listening to Customer queue flow\), they were transferred into another queue using a contact flow block\.
-+  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which contact flow to run after a disconnect event during a contact\. 
++  `QUEUE_TRANSFER`: While the customer was in one queue \(listening to Customer queue flow\), they were transferred into another queue using a flow block\.
++  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which flow to run after a disconnect event during a contact\. 
 
   A disconnect event is when:
   + A call, chat, or task is disconnected by an agent\.
@@ -174,15 +177,15 @@ The `REJECTED` state does not apply to voice contacts\. Rejected voice contacts 
 
 **StateStartTimestamp**  
 The time at which the contact entered the current state\.  
-Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
+Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*\.*sss*Z\)
 
 **ConnectedToAgentTimestamp**  
 The time at which the contact was connected to an agent\.  
-Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
+Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*\.*sss*Z\)
 
 **QueueTimestamp**  
 The time at which the contact was put into a queue\.  
-Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*:*sss*Z\)
+Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*\.*sss*Z\)
 
 **Queue**  
 The queue the contact was placed in\.  
@@ -236,6 +239,10 @@ Type: String
 The name of the queue\.  
 Type: String
 
+**Channels**  
+The type of communication channel\.  
+Type: List of Channel objects
+
 ## RoutingProfile object<a name="routingprofile"></a>
 
 The `RoutingProfile` object includes the following properties:
@@ -255,3 +262,6 @@ Type: List of `Queue` object
 **DefaultOutboundQueue**  
 The default outbound queue for the agent's routing profile\.  
 Type: `Queue` object
+
+**Concurrency**  
+A list of concurrency information\. Concurrency information objects have AvailableSlots \(number\), Channel \(a channel object\), and MaximumSlots \(number\) values\.

@@ -16,7 +16,7 @@ It is common to have separate vendors and infrastructure requirements for local 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/traditionalcontactcenter.png)
 
-A typical Amazon Connect deployment solves or reduces many of the challenges associated with versioning, compatibility, licensing, contact center telephony infrastructure, and maintenance\. It gives you the flexibility to create instances in new locations in minutes and migrate components individually, or in parallel, to best meet your individual business objectives\. You can use contact flows for your IVR/ACD, have voice and data delivered through a supported web browser to your agent’s softphone, port your existing phone numbers, redirect softphone audio to an existing desk phone, invoke an Amazon Lex bot natively within your contact flow for ASR and NLP, and use the same contact flow for chat and voice\. You can use Amazon Contact Lens to automatically generate voice transcriptions, perform key word identification and sentiment analysis, and categorize contacts\. For agent CTI data and real\-time voice streaming, you can use Amazon Connect Agent Event Streams and Kinesis Video Streams\. You can also create multi\-stage development, quality assurance, and test environments at no additional cost and only pay for what you use\.
+A typical Amazon Connect deployment solves or reduces many of the challenges associated with versioning, compatibility, licensing, contact center telephony infrastructure, and maintenance\. It gives you the flexibility to create instances in new locations in minutes and migrate components individually, or in parallel, to best meet your individual business objectives\. You can use flows for your IVR/ACD, have voice and data delivered through a supported web browser to your agent’s softphone, port your existing phone numbers, redirect softphone audio to an existing desk phone, invoke an Amazon Lex bot natively within your flow for ASR and NLP, and use the same flow for chat and voice\. You can use Amazon Contact Lens to automatically generate voice transcriptions, perform key word identification and sentiment analysis, and categorize contacts\. For agent CTI data and real\-time voice streaming, you can use Amazon Connect Agent Event Streams and Kinesis Video Streams\. You can also create multi\-stage development, quality assurance, and test environments at no additional cost and only pay for what you use\.
 
 ## Inbound<a name="inbound"></a>
 
@@ -24,19 +24,19 @@ Inbound is a contact center term used to describe a communication request initia
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/inbound.png)
 
-When a phone call is placed to a number claimed in or ported to your Amazon Connect instance, the contact flow associated with the called number will be invoked\. You can define the contact flow using contact blocks that can be configured with no coding knowledge required\. The contact flow determines how the contact should be processed and routed, optionally prompting the contact for additional information to assist in routing decisions, storing those attributes to the contact details, and, if necessary, routing that contact to an agent with all of the call details and transcripts gathered along the way\. Through the contact flow, you can invoke AWS Lambda functions to query customer information, call other AWS services like Amazon Pinpoint to send SMS text messages, and use native AWS service integrations including Amazon Lex for NLU/NLP and Kinesis Video Streams for real\-time streaming of voice calls\. 
+When a phone call is placed to a number claimed in or ported to your Amazon Connect instance, the flow associated with the called number will be invoked\. You can define the flow using flow blocks that can be configured with no coding knowledge required\. The flow determines how the contact should be processed and routed, optionally prompting the contact for additional information to assist in routing decisions, storing those attributes to the contact details, and, if necessary, routing that contact to an agent with all of the call details and transcripts gathered along the way\. Through the flow, you can invoke AWS Lambda functions to query customer information, call other AWS services like Amazon Pinpoint to send SMS text messages, and use native AWS service integrations including Amazon Lex for NLU/NLP and Kinesis Video Streams for real\-time streaming of voice calls\. 
 
 If an inbound contact needs to reach an agent, the contact is put into a queue and routed to an agent when they change their status to Available, according to your routing configuration\. When the available agent’s contact is accepted manually or through auto\-accept configuration, Amazon Connect connects the contact with the agent\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/inbound2.png)
 
- When an inbound contact comes from a browser or mobile app request for a chat session, the request is routed to a web service or Amazon API Gateway endpoint that calls the Amazon Connect chat API to invoke the contact flow configured in your request\. You can use the same contact flows for chat and voice, where the experience is managed and routed dynamically, based on the logic defined in the contact flow\.
+ When an inbound contact comes from a browser or mobile app request for a chat session, the request is routed to a web service or Amazon API Gateway endpoint that calls the Amazon Connect chat API to invoke the flow configured in your request\. You can use the same flows for chat and voice, where the experience is managed and routed dynamically, based on the logic defined in the flow\.
 
 ## Outbound<a name="outbound"></a>
 
 Amazon Connect allows you the ability to programmatically make outbound contact attempts to local and international endpoints, reduce agent set\-up time between contacts, and improve agent productivity\. By using the [Amazon Connect Streams](https://github.com/aws/amazon-connect-streams) API and [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html), you can develop your own outbound solution or take advantage of existing partner integrations that work with your CRM data to create dynamic, personalized experiences for your contacts and empowering your agents with the tools and resources they need to service those contacts\. 
 
-Outbound campaigns are typically driven by contact data exported from CRMs and separated into contact lists\. Those contacts are prioritized and either delivered to the agents to initiate after a period of preview or programmatically contacted via Amazon Connect Outbound API, driven by your contact flow logic, and connecting to agents as needed\. Typical outbound contact center use cases include fraud and service alerts, collections, and appointment confirmations\.
+Outbound campaigns are typically driven by contact data exported from CRMs and separated into contact lists\. Those contacts are prioritized and either delivered to the agents to initiate after a period of preview or programmatically contacted via Amazon Connect Outbound API, driven by your flow logic, and connecting to agents as needed\. Typical outbound contact center use cases include fraud and service alerts, collections, and appointment confirmations\.
 
 ## Hybrid<a name="hybrid"></a>
 
@@ -46,7 +46,7 @@ Hybrid architectures require you to claim as many phone numbers as your expected
 
 ### IVR\-only<a name="ivr-only"></a>
 
-You may choose to use Amazon Connect to drive the contact’s IVR experience while your agent population remains on your legacy contact center platform\. With this approach, you can use Amazon Connect contact flows to drive self\-service and routing logic, and, if necessary, transfer the contact to the target agent or agent queue on your legacy contact center platform\. 
+You may choose to use Amazon Connect to drive the contact’s IVR experience while your agent population remains on your legacy contact center platform\. With this approach, you can use Amazon Connect flows to drive self\-service and routing logic, and, if necessary, transfer the contact to the target agent or agent queue on your legacy contact center platform\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/hybridivr.png)
 
@@ -76,7 +76,7 @@ You may decrease risk associated with changes to existing business units and inc
 
 ### IVR First<a name="ivr-first"></a>
 
-You may choose to use Amazon Connect to drive the contact’s IVR experience while your agent population remains on your legacy contact center platform\. With this approach, you can use Amazon Connect Contact flows to drive self\-service and routing logic, and, if necessary, transfer the contact to the target agent or agent queue on your legacy contact center platform\. 
+You may choose to use Amazon Connect to drive the contact’s IVR experience while your agent population remains on your legacy contact center platform\. With this approach, you can use Amazon Connect Flows to drive self\-service and routing logic, and, if necessary, transfer the contact to the target agent or agent queue on your legacy contact center platform\. 
 
 ### IVR Last<a name="ivr-last"></a>
 

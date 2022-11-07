@@ -1,8 +1,9 @@
-# Contact block: Invoke AWS Lambda function<a name="invoke-lambda-function-block"></a>
+# Flow block: Invoke AWS Lambda function<a name="invoke-lambda-function-block"></a>
 
 ## Description<a name="invoke-lambda-function-block-description"></a>
 + Calls AWS Lambda, and optionally returns key\-value pairs\.
 + The returned key\-value pairs can be used to set contact attributes\.
++ For an example, see [Tutorial: Create a Lambda function and invoke in a flow](connect-lambda-functions.md#tutorial-invokelambda)\.
 
 ## Supported channels<a name="invoke-lambda-channels"></a>
 
@@ -15,10 +16,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="invoke-lambda-function-block-types"></a>
+## Flow types<a name="invoke-lambda-function-block-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer Queue flow
 + Customer Hold flow
 + Customer Whisper flow
@@ -39,8 +40,8 @@ Note the following properties:
   When a synchronous invocation returns an error, Amazon Connect retries up to three times, for a maximum of 8 seconds\. At that point, the contact is routed down the **Error** branch\.
 
 ## Configuration tips<a name="invoke-lambda-function-block-tips"></a>
-+ To use an AWS Lambda function in a contact flow, first add the function to your instance\. For more information, see [Add a Lambda function to your Amazon Connect instance](connect-lambda-functions.md#add-lambda-function), 
-+ After you add the function to your instance, you can select the function from the **Select a function** drop\-down list in the block to use it in the contact flow\.
++ To use an AWS Lambda function in a flow, first add the function to your instance\. For more information, see [Add a Lambda function to your Amazon Connect instance](connect-lambda-functions.md#add-lambda-function), 
++ After you add the function to your instance, you can select the function from the **Select a function** drop\-down list in the block to use it in the flow\.
 
 ## Configured block<a name="invoke-lambda-function-block-configured"></a>
 

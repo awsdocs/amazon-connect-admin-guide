@@ -7,7 +7,7 @@ Here's an overview of the steps to set up queue\-based routing:
   + Specify the queues: the channel, priority, and delay\.
 + [Configure agent settings](configure-agents.md) to assign the routing profiles to them\.
 
-When you [create your contact flows](create-contact-flow.md), you'll add the queues to them\. If a contact chooses to speak to an agent in Spanish, for example, they will be routed to the Spanish Reservations queue\. 
+When you [create your flows](create-contact-flow.md), you'll add the queues to them\. If a contact chooses to speak to an agent in Spanish, for example, they will be routed to the Spanish Reservations queue\. 
 
 For information about how routing works, and queue\-based routing, see these topics:
 + [How routing works with multiple channels](about-routing.md#routing-profile-channels-works)

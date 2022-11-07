@@ -12,7 +12,7 @@ Before you work with Amazon Connect, verify that your browser is supported using
 |  Mozilla Firefox  |  Latest three versions  | Open Firefox\. On the menu, choose the Help icon and then choose **About Firefox**\. The version number is listed underneath the Firefox name\. Please see [Issue with Firefox version 86](#browsers-firefox-issue)\.  | 
 |  Microsoft Edge and Edge Chromium  |  Not supported  |   | 
 
- For more requirements, see [Agent headset and workstation requirements for the CCPHeadset and workstation requirements](ccp-agent-hardware.md)\.
+ For more requirements, see [Agent headset and workstation requirements for the CCP](ccp-agent-hardware.md)\.
 
 ## Browsers on mobile devices<a name="browsers-mobile"></a>
 

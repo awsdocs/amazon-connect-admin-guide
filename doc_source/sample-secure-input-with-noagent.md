@@ -1,11 +1,11 @@
 # Sample secure input with no agent<a name="sample-secure-input-with-noagent"></a>
 
 **Note**  
-This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+This topic explains a sample flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample flows](contact-flow-samples.md)\. 
 
-Type: Contact flow \(inbound\)
+Type: Flow \(inbound\)
 
-This contact flow shows you how to capture sensitive customer data and encrypt it using a key\. Here's how it works:
+This flow shows you how to capture sensitive customer data and encrypt it using a key\. Here's how it works:
 
 1. It begins by checking the contact's channel\. If they are using chat, a prompt is played that this doesn't work with chat, and they are transferred to [Sample inbound flow](sample-inbound-flow.md)\.
 

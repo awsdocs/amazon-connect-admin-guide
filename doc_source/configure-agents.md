@@ -13,7 +13,7 @@ You can't configure how long an available agent has to connect with a contact be
 
 **To configure agent settings**
 
-1. In the navigation pane, go to **Users, User management**\.
+1. On the left navigation menu, go to **Users, User management**\.
 
 1. Choose the user you want to configure, then choose **Edit**\.
 

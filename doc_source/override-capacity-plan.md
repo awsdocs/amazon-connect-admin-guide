@@ -1,4 +1,4 @@
-# Override a capacity plan \(Preview\)<a name="override-capacity-plan"></a>
+# Override a capacity plan<a name="override-capacity-plan"></a>
 
 You can upload a \.csv file that overrides the **Required FTEs \(without Shrinkage\)** data in the **Plan outputs** section of a capacity plan\. This section is shown in the following image\. 
 
@@ -8,7 +8,7 @@ You might want to do this, for example, to give your team of agents a buffer\.
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Capacity planning \- Edit**\. 
 
-   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling \(Preview\)](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
 1. On the Amazon Connect navigation menu, select **Analytics**, **Capacity Planning**\.
 

@@ -1,8 +1,8 @@
-# Example contact flow in Amazon Connect Flow language<a name="flow-language-example"></a>
+# Example flow in Amazon Connect Flow language<a name="flow-language-example"></a>
 
-The following example shows a simple contact flow that plays a prompt using static text and disconnects\. 
+The following example shows a simple flow that plays a prompt using static text and disconnects\. 
 
-To learn how to get block identifiers, we recommend creating a new contact flow in Amazon Connect console, and then calling the [DescribeContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeContactFlow.html) API for it\.
+To learn how to get block identifiers, we recommend creating a new flow in Amazon Connect console, and then calling the [DescribeContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeContactFlow.html) API for it\.
 
 ```
 {

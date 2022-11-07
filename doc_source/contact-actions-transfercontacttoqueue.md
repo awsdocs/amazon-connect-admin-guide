@@ -16,7 +16,7 @@ None\.
 
 ## Restrictions<a name="transfercontacttoqueue-restrictions"></a>
 
-This action is supported in contact flows and transfer flows\. It is not supported in whisper flows, customer queue flows, or hold flows\. 
+This action is supported in inbound contact flows and transfer flows\. It is not supported in whisper flows, customer queue flows, or hold flows\. 
 
 ## Corresponding block in the UI<a name="transfercontacttoqueue-ui"></a>
 

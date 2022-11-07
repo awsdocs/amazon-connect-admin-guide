@@ -1,9 +1,9 @@
 # Sample disconnect flow<a name="sample-disconnect"></a>
 
 **Note**  
-This topic explains a sample contact flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample contact flows](contact-flow-samples.md)\. 
+This topic explains a sample flow that is included with Amazon Connect\. For information about locating the sample flows in your instance, see [Sample flows](contact-flow-samples.md)\. 
 
-Type: Contact flow \(inbound\)
+Type: Flow \(inbound\)
 
 This sample works with voice, chat, and task contacts\.
 
@@ -30,3 +30,5 @@ This sample works with voice, chat, and task contacts\.
 1. Transfers to agent's queue\.
 
 1. If at capacity, disconnects\.
+
+For a list and description of all the disconnect reasons, see **DisconnectReason** in the [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord)\. 

@@ -1,4 +1,4 @@
-# Download a forecast \(Preview\)<a name="download-forecasts"></a>
+# Download a forecast<a name="download-forecasts"></a>
 
 You can download a forecast so you can inspect it offline\. A forecast is downloaded as a \.csv file of the forecast data\. It has the queue name, channel type, timestamp, incoming contact volume and average handle time data\.
 

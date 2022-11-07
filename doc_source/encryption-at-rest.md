@@ -4,7 +4,7 @@ Contact data classified as PII, or data that represents customer content being s
 
 Amazon S3 server\-side encryption is used to encrypt conversation recordings \(voice and chat\) and knowledge documents at rest with a AWS Key Management Service data key unique per customer account\. Amazon AppIntegrations configuration data is encrypted the same way\. For information about AWS KMS keys, see [What is AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
 
-Amazon Connect Voice ID stores customer voiceprints which cannot be reverse\-engineered to obtain the enrolled customer’s speech or identify a customer\. These are encrypted using a service\-owned AWS KMS key\.
+Amazon Connect Voice ID stores customer voiceprints which cannot be reverse\-engineered to obtain the enrolled customer's speech or identify a customer\. These are encrypted using a customer managed key\.
 
 Integration configuration data is encrypted at rest using a key that is time\-limited and specific to the user account\.
 
@@ -42,7 +42,9 @@ AWS KMS charges apply when using a key that you provide\. For more information a
 
 All user data stored in Amazon Connect Voice ID is encrypted at rest\. When creating a new Voice ID domain, you must provide a customer managed key that the service uses to encrypt your data at rest\. The customer managed key is created, owned, and managed by you\. You have full control over the key\.
 
-You can update the KMS key in the Voice ID domain by using the update\-domain command in AWS Command Line Interface \(AWS CLI\), or the [UpdateDomain](https://docs.aws.amazon.com/voiceid/APIReference/API_UpdateDomain.html) Voice ID API\. Note that updating the KMS key changes the key used to encrypt new data added after updating the key, and not the key that was used to encrypt the old data\.
+You can update the KMS key in the Voice ID domain by using the `update-domain` command in AWS Command Line Interface \(AWS CLI\), or the [UpdateDomain](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_UpdateDomain.html) Voice ID API\. 
+
+When you change the KMS key, an asynchronous process will be triggered to re\-encrypt the old data with the new KMS key\. After this process completes, all of your domain's data will be encrypted under the new KMS key, and you may safely retire the old key\. For more information, see [UpdateDomain](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_UpdateDomain.html)\.
 
 Voice ID creates a grant to the customer managed key that grants it access to the key\. For more information, see [How Amazon Connect Voice ID uses grants in AWS KMS](#voiceid-uses-grants)\. 
 
@@ -405,14 +407,14 @@ The following examples is a sample AWS CloudTrail event for `CreateGrant` operat
 
 ------
 
-## High\-Volume Outbound Communications<a name="encryption-at-rest-outboundcommunications"></a>
+## Outbound campaigns<a name="encryption-at-rest-outboundcommunications"></a>
 
-For Amazon Connect High\-Volume Outbound Communications, Amazon Pinpoint passes customer phone numbers and relevant attributes to Amazon Connect\. On Amazon Connect, these are always encrypted at rest using either a customer managed key or an AWS owned key\. The Amazon Connect High\-Volume Outbound Communications data is segregated by the Amazon Connect instance ID and are encrypted by instance specific keys\.
+For outbound campaigns, Amazon Pinpoint passes customer phone numbers and relevant attributes to Amazon Connect\. On Amazon Connect, these are always encrypted at rest using either a customer managed key or an AWS owned key\. The outbound campaigns data is segregated by the Amazon Connect instance ID and are encrypted by instance specific keys\.
 
-You can provide your own customer managed key when onboarding to Amazon Connect High\-Volume Outbound Communications\.
+You can provide your own customer managed key when onboarding to outbound campaigns\.
 
 The service use this customer managed key to encrypt sensitive data at rest\. The customer managed key is created, owned, and managed by you\. You have full control over the customer managed key 
 
-If you do not provide your own customer managed key, then Amazon Connect High\-Volume Outbound Communications encrypts sensitive data at rest using a AWS owned key specific to your Amazon Connect instance\.
+If you do not provide your own customer managed key, then outbound campaigns encrypts sensitive data at rest using a AWS owned key specific to your Amazon Connect instance\.
 
 AWS KMS charges apply for a customer managed key\. For more information about pricing, see [AWS KMS pricing](http://aws.amazon.com/kms/pricing/)\. 

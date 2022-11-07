@@ -15,7 +15,7 @@ Returns a random number between 1 and 100 \(inclusive\) as its result, allowing 
 A number between 1 and 100, inclusive, chosen randomly\. Comparisons are supported, but they must be a chain of NumericLessThan comparisons, with each subsequent comparison checking the previous value, plus the percentage that is desired to go down this next action, and no Comparison comparing a value larger than 100\.
 
 ## Errors<a name="distributebypercentage-errors"></a>
-+ NoMatchingCondition if no Condition matches\. This is the default option in the contact flow editor\.
++ NoMatchingCondition if no Condition matches\. This is the default option in the flow editor\.
 
 ## Restrictions<a name="distributebypercentage-restrictions"></a>
 

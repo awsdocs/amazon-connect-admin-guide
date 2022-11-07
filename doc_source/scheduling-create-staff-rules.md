@@ -1,4 +1,4 @@
-# Create staff scheduling rules \(Preview\)<a name="scheduling-create-staff-rules"></a>
+# Create staff scheduling rules<a name="scheduling-create-staff-rules"></a>
 
 Use staff rules to specify details for individual agents and supervisors, such as their local time zone, start and end dates, and contract details\. The individual staff rules you specify here override any staffing group rules when their schedule is generated\.
 

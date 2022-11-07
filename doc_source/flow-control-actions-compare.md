@@ -6,7 +6,7 @@ Allows comparisons against the specified value\.
 
 ```
 {
-  "ComparisonValue": Any **single** JSONPath identifier that is valid for the contact flow data object
+  "ComparisonValue": Any **single** JSONPath identifier that is valid for the flow data object
 }
 ```
 

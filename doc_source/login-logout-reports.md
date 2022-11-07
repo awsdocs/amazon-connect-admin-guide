@@ -31,7 +31,7 @@ A Login/Logout report includes only login or logout actions by your users that o
 
 1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
-1. Choose **Metrics and Quality**, **Login/Logout report**\.
+1. Choose **Analytics**, **Login/Logout report**\.
 
 1. On the **Login/Logout report** page, choose the **Time range** for the records to include in the report\. Choose **Custom time range** to specify a range up to 7 days\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/login-logout-report.png)
@@ -52,7 +52,7 @@ After you save your report, you can edit it at any time\. When you open a saved 
 
 1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
-1. Choose **Metrics and quality**, **Saved reports**\.
+1. Choose **Analytics**, **Saved reports**\.
 
 1. Choose **Login/Logout report** and select the report to edit\.
 
@@ -105,7 +105,7 @@ To generate a report with the same settings on a regular basis, you can schedule
 
 ### How to schedule a Login/Logout report<a name="howto-loginlogout-report-schedule"></a>
 
-1. If you already have a saved report to schedule open, skip to step 4\. Otherwise, in the dashboard, choose **Metrics and quality**, **Saved reports**\.
+1. If you already have a saved report to schedule open, skip to step 4\. Otherwise, in the dashboard, choose **Analytics**, **Saved reports**\.
 
 1. Choose **Login/Logout report**\.
 
@@ -141,7 +141,7 @@ Too many reports in your report library? If you no longer want to use a saved re
 
 1. Open your Amazon Connect dashboard\.
 
-1. Choose **Metrics and quality**, **Saved reports**\.
+1. Choose **Analytics**, **Saved reports**\.
 
 1. Hover over the row for the report to delete, and choose the **Delete** icon\.
 

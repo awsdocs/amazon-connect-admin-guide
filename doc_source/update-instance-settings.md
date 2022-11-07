@@ -4,7 +4,7 @@ To update the instance settings:
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the **Instances** page, choose the instance alias\. The instance alias is also your instance name, which appears in your Amazon Connect URL\.  
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. Complete the following procedures\.
@@ -16,6 +16,8 @@ To update the instance settings:
 1. To enable customers to call into your contact center, choose **Receive inbound calls with Amazon Connect**\.
 
 1. To enable outbound calling from your contact center, choose **Make outbound calls with Amazon Connect**\.
+
+1. To enable outbound campaigns, choose **Enable outbound campaigns**\.
 
 1. By enabling early media audio, your agents can hear pre\-connection audio such as busy signals, failure\-to\-connect errors, or other informational messages from telephony providers, when making outbound calls\. Choose **Enable early media**\.
 
@@ -41,7 +43,9 @@ To update the instance settings:
 
 1. To enable file sharing for both agents and customers, next to **Attachments** choose **Edit**, then **Enable Attachments sharing**\. For more information about this option and additional steps, see [Enable attachments to share files using chat](enable-attachments.md)\.
 
-1. To enable a Customer Profiles domain, choose that option\. A domain stores profiles that combine customer contact history with customer information such as account number, address, billing address, and birth date\. Data is encrypted using AWS Key Management Service\. You can configure Customer Profiles to use your own customer managed key after your instance is set up\. For more information, see [Create a KMS key to be used by Customer Profiles to encrypt data \(required\)](enable-customer-profiles.md#enable-customer-profiles-awsmanagedkey)\.
+1. To enable a **Customer Profiles domain**, choose that option\.
+
+   A Customer Profiles domain stores profiles that combine customer contact history with customer information such as account number, address, billing address, and birth date\. Data is encrypted using AWS Key Management Service\. You can configure Customer Profiles to use your own customer managed key after your instance is set up\. For more information, see [Create a KMS key to be used by Customer Profiles to encrypt data \(required\)](enable-customer-profiles.md#enable-customer-profiles-awsmanagedkey)\.
 
 ## Update data streaming options<a name="update-data-streaming-options"></a>
 
@@ -65,17 +69,17 @@ To update the instance settings:
 
 1. Choose **Save**\.
 
-## Update contact flow settings<a name="update-contact-flow-settings"></a>
+## Update flow settings<a name="update-contact-flow-settings"></a>
 
-1. In the navigation pane, choose **Contact flows**\.
+1. In the navigation pane, choose **Flows**\.
 
-1. \(Optional\) To add a signing key for use in contact flows, choose **Add key**\. For more information, see [Encrypt customer input](encrypt-data.md)\.
+1. \(Optional\) To add a signing key for use in flows, choose **Add key**\. For more information, see [Encrypt customer input](encrypt-data.md)\.
 
-1. \(Optional\) To integrate with Amazon Lex, select a Lex bot\. For more information, see [Add an Amazon Lex bot](amazon-lex.md)\.
+1. \(Optional\) To integrate with Amazon Lex, select a Lex bot\. For more information, see [Add an Amazon Lex bot to Amazon Connect](amazon-lex.md)\.
 
 1. \(Optional\) To integrate with AWS Lambda, select a Lambda function\. For more information, see [Invoke AWS Lambda functions](connect-lambda-functions.md)\.
 
-1. \(Optional\) To enable contact flow logs, choose **Enable Contact flow logs**\. For more information, see [Track events as customers interact with contact flows](about-contact-flow-logs.md)\.
+1. \(Optional\) To enable flow logs, choose **Enable flow logs**\. For more information, see [Track events as customers interact with flows](about-contact-flow-logs.md)\.
 
 1. \(Optional\) To use the best available voice from Amazon Polly, choose **Use the best available voice**\. For more information, see [Amazon Polly best sounding voice](text-to-speech.md#amazon-polly-best-sounding-voice)\.
 

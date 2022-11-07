@@ -1,4 +1,4 @@
-# Create staffing groups and rules \(Preview\)<a name="scheduling-create-staffing-groups"></a>
+# Create staffing groups and rules<a name="scheduling-create-staffing-groups"></a>
 
 A *staffing group* is a group or team of agents who are skilled to take specific types of contacts\. You add agents who need a schedule generated for them, and supervisors who manage agent schedules\. You can also add rules that apply at the staffing group level, such as the minimum staff required and the minimum working hours per day or week for the group\.
 
@@ -18,7 +18,7 @@ For example, you might create one staffing group named General Enquiry, and anot
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Scheduling**, **Schedule manager \- Edit**\. 
 
-   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling \(Preview\)](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
 1. On the Amazon Connect navigation menu, select **Users**, **Scheduling**\.
 
@@ -43,4 +43,4 @@ For example, your contact center opens at 9AM but the forecast says no contacts 
 + In the **Rules** section, choose **\+** and then use the dropdown to choose the type of rule to create for the staffing group\. For example, you can specify:
   + **Minimum Staff Required**: Specify the minimum number of agents that should be available, despite what the forecast indicates\. For example, if the forecast says that you do not need any agents in the first half hour that your contact center opens, you can ensure that there is a minimum of one agent during this time\. 
   + **Shift Start Time: Same Start Time**: This creates schedules with the same shift start time for all agents\.
-  + **Working Hours**: Specify the group's minimum and maximum working hours per day or week\. This setting applies to all staff in the staffing group\. You can override this setting for individual staff\. For instructions, see [Create staff scheduling rules \(Preview\)](scheduling-create-staff-rules.md)\. 
+  + **Working Hours**: Specify the group's minimum and maximum working hours per day or week\. This setting applies to all staff in the staffing group\. You can override this setting for individual staff\. For instructions, see [Create staff scheduling rules](scheduling-create-staff-rules.md)\. 

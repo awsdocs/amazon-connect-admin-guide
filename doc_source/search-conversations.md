@@ -36,7 +36,7 @@ If you enter *"thank you for your business", two, "CANCELLED Flights"*, the sear
 
 1. In Amazon Connect, log in with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for the **Search contacts by keywords** permission\.
 
-1. Choose **Metrics and quality**, **Contact search**\.
+1. Choose **Analytics**, **Contact search**\.
 
 1. In the **Filter** section, specify the time period that you want to search\. Include other information to narrow your search\. For instructions, see [Search for contacts](contact-search.md)\.
 **Tip**  

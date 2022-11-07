@@ -1,4 +1,4 @@
-# Data requirements for forecasting \(Preview\)<a name="data-requirements-for-forecasting"></a>
+# Data requirements for forecasting<a name="data-requirements-for-forecasting"></a>
 
 Amazon Connect generates forecasts using a machine\-learning model tailored for contact center operations\. It requires a sufficient amount of recent contact data to ensure the model is trained with relevant data and is able to generate high\-quality forecasts\.
 

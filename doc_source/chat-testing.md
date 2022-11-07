@@ -4,9 +4,9 @@ To learn what the voice, chat, and task experiences are like for your agents and
 
 ## Test voice<a name="test-voice"></a>
 
-After you claim a number you can immediately call it to hear what the experience will be like for your customers\. Amazon Connect uses the [default contact flows](contact-flow-default.md) to power your initial experience\. 
+After you claim a number you can immediately call it to hear what the experience will be like for your customers\. Amazon Connect uses the [default flows](contact-flow-default.md) to power your initial experience\. 
 
-To test a customized contact flow, [assign a phone number](associate-phone-number.md) to it and then call that number\.
+To test a customized flow, [assign a phone number](associate-claimed-ported-phone-number-to-flow.md) to it and then call that number\.
 
 ## Test chat<a name="test-chat"></a>
 
@@ -21,7 +21,11 @@ Amazon Connect includes a simulated web page that shows how your customers can i
 
 1. On the **Test Chat** page, choose **Test Settings**\.
 
-1. Under **System Settings**, choose the contact flow you want to test with chat, and then click **Apply**\. By default, it runs the [Sample inbound flow](sample-inbound-flow.md)\.
+1. Under **System Settings**, choose the flow you want to test with chat, and then click **Apply**\. By default, it runs the [Sample inbound flow](sample-inbound-flow.md)\.
+**Tip**  
+If you want to test a chat and use contact attributes, note that the key and value pair must be enclosed in quotes, as shown in the following image:  
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-chat-contact-attributes.png)
 
 1. In the chat window, click the icon as shown below\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-chat-icon.png)
@@ -32,7 +36,7 @@ Amazon Connect includes a simulated web page that shows how your customers can i
 **Tip**  
 The test environment uses the BasicQueue and Basic Routing Profile\. The Basic Routing Profile is set up for 2 chats\. If you want to test what it's like to have more than two chats, change the Basic Routing Profile to 5 chats\. For instructions, see [Create a routing profile](routing-profiles.md)\. 
 
-   To learn more about what the agent experiences when managing chat conversations, see [Chat with contacts](work-with-chats.md)\. 
+   To learn more about what the agent experiences when managing chat conversations, see [Work with chats](work-with-chats.md)\. 
 
 ## Test tasks<a name="test-tasks"></a>
 
@@ -48,7 +52,7 @@ The first step in testing the task experience is to create a quick connect for t
 
 1. Under **Destination**, use the dropdown list to choose a queue you set up for yourself \(assuming you want to assign the test task to yourself\)\.
 
-1. Under **Contact flow**, choose **Default queue transfer**\.
+1. Under **flow**, choose **Default queue transfer**\.
 
 1. Under **Description**, enter something like **Test quick connect**\.
 
@@ -101,7 +105,7 @@ The first step in testing the task experience is to create a quick connect for t
 
 When you're testing the voice, chat, and task experiences, you may also want to explore metrics\.
 
-1. On the left navigation menu, choose **Metrics and quality**, **Real\-time metrics**, **Queues**\.
+1. On the left navigation menu, choose **Analytics**, **Real\-time metrics**, **Queues**\.
 
 1. You can review the real\-time metrics as you test the different channels\.
 

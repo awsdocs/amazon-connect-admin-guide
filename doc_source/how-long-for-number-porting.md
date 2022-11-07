@@ -3,7 +3,7 @@
 **Important**  
 Open a porting request as far in advance of your pending go\-live date as possible\.
 
-The amount of time that it takes to port numbers depends on the country, complexity of the request, the type and quantity of numbers being ported, and your current carrier\. Telecom carriers also may implement porting block days because of holidays and network maintenance\. Because of this, we require porting requests to be open several months before pending go\-live dates\.
+The amount of time that it takes to port numbers depends on the country, complexity of the request, the type and quantity of numbers being ported, and your current carrier\. Telecom carriers also may implement porting block days because of holidays and network maintenance\. Because of this, Amazon Connect requires porting requests to be open several months before pending go\-live dates\.
 
 ## Inside the US and Canada<a name="how-long-porting-us"></a>
 

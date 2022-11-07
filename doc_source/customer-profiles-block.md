@@ -1,4 +1,4 @@
-# Contact block: Customer profiles<a name="customer-profiles-block"></a>
+# Flow block: Customer profiles<a name="customer-profiles-block"></a>
 
 ## Description<a name="customer-profiles-block-description"></a>
 + Enables you to retrieve, create, and update a customer profile\.
@@ -20,7 +20,7 @@ The following table lists how this block routes a contact that is using the spec
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="customer-profiles-block-types"></a>
+## Flow types<a name="customer-profiles-block-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flow types

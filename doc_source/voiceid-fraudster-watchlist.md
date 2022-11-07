@@ -1,6 +1,6 @@
 # Create and edit a fraudster watchlist<a name="voiceid-fraudster-watchlist"></a>
 
-To create and edit a fraudster watchlist, invoke the [StartFraudsterRegistrationJob](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_StartFraudsterRegistrationJob.html) API for batch enrollment of fraudsters\. 
+To create and edit a fraudster watchlist, invoke the [StartFraudsterRegistrationJob](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_StartFraudsterRegistrationJob.html) API for batch registration of fraudsters\. 
 
 To add speakers the fraudster watchlist programmatically, pass the following data to the API:
 

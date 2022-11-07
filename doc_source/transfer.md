@@ -10,14 +10,14 @@ Amazon Connect enables you to set up different kinds of transfers:
 
 **To set up call transfers and quick connects**
 
-1. Choose a contact flow type based on what you want to do: Transfer to agent or Transfer to queue\. External transfers do not require a specific type of contact flow\.
+1. Choose a flow type based on what you want to do: Transfer to agent or Transfer to queue\. External transfers do not require a specific type of contact flow\.
 
-1. Create and publish the contact flow\. 
+1. Create and publish the flow\. 
 
 1. Create a quick connect for the type of transfer to enable: **Agent**, **Queue**, or **External**\.
 
-   When you create the **Agent** or **Queue** quick connect, select a contact flow that matches the type of transfer to enable\. **External** quick connects require only a phone number, and do not allow you to set a queue or contact flow\.
+   When you create the **Agent** or **Queue** quick connect, select a flow that matches the type of transfer to enable\. **External** quick connects require only a phone number, and do not allow you to set a queue or flow\.
 
-1. Add the quick connect that you created to any queue used in a contact flow for which to enable contact transfer, such as the queue used in the contact flow for incoming contacts\.
+1. Add the quick connect that you created to any queue used in a flow for which to enable contact transfer, such as the queue used in the flow for incoming contacts\.
 
 1. Make sure the queue is in a routing profile assigned to the agents who transfers contacts\. 

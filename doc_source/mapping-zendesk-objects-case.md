@@ -55,9 +55,6 @@ A subset of the fields in the Zendesk\-tickets object map to the standard case i
 |  requester\_id  | CreatedBy  | 
 |  created\_at  | CreatedDate  | 
 |  updated\_at  | UpdatedDate  | 
-|  Price  | Price  | 
-|  Quantity  | Quantity  | 
-|  Description  | Description  | 
 
 The Zendesk\-tickets customer data from the Zendesk object is associated with a Amazon Connect standard case using the following indexes\. 
 

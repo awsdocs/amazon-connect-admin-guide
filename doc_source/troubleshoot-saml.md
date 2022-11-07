@@ -11,6 +11,7 @@ This article explains how to troubleshoot and resolve some of the most common is
 This error means that the user has successfully authenticated via SAML into the AWS SAML login endpoint\. However, the user could not be matched/found inside Amazon Connect\. This usually indicates one of the following: 
 + The username in Amazon Connect doesn't match the `RoleSessionName` SAML attribute specified in the SAML response returned by the identity provider\.
 + The user doesn't exist in Amazon Connect\.
++ The user has two separate profiles assigned to them with SSO\.
 
 ### Resolution<a name="troubleshoot-saml-access-denied-resolution"></a>
 

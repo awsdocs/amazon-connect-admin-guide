@@ -10,6 +10,17 @@
 
 Thanks to your feedback, we've made the following changes to contact search\.
 
+### Search contacts by agent's first or last name<a name="search-contacts-agent-name"></a>
+
+**Note**  
+This feature is not available in AWS GovCloud\.
+
+The following image shows the Agent filter, and the option to choose agents by name\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-agent-name.png)
+
+### Required permissions to "Agent" search filter<a name="users-view-permissions-contact-search"></a>
+
 To use the **Agent** filter on the **Contact search** page, in your Amazon Connect security profile you must have **Users \- View** permissions, as shown in the following image: 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search.png)
@@ -28,7 +39,7 @@ Without **User \- View** permissions, the **Agent** filter is not visible, and s
 + Multi\-select for filters such as agent names, contact queues, contact flows, and more\. 
 
   This feature is available only for searches with a date range that starts November 2, 2020, or later, when the feature was released\. If you search for contacts that occurred before November 2, 2020, you will be prompted to ensure only one value is selected for each filter mentioned above\. 
-+ Filters for [Contact Lens for Amazon Connect](analyze-conversations.md)\. You can [search for Contact categories](search-conversations.md#contact-category-search) by specifying the full category name\.
++ Filters for [Contact Lens for Amazon Connect](analyze-conversations.md)\. You can [search for Contact categories](search-conversations.md#contact-category-search) by specifying the full category name\. Choose to search using **Match any** or **Match all**\. For example, you can search contacts with both "category A" and "category B," or with either one of the two categories\.
 
   In the **Add filter** drop\-down box, the Contact Lens filters have **CL** next to them\. You can apply these filters only if your organization has enabled Contact Lens\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-contact-category-1.png)
@@ -37,12 +48,12 @@ Without **User \- View** permissions, the **Agent** filter is not visible, and s
   + **Search contacts by conversation**: This controls access to the sentiment scores, non\-talk time, and category searches\.
   +  **Search contacts by keywords**: This controls access to the keywords search\.
   +  **Contact Lens \- speech analytics**: On the Contact Trace Record page, this displays graphs that summarize speech analytics\.
++ Filters for [Voice ID](voice-id.md)\. You can search for the Voice ID authentication and fraud detection status of contacts, if your organization has enabled Voice ID\. To access this functionality, on your security profile, you need **Analytics**, **Voice ID \- attributes and search** \- **View** permission\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-search-filters.png)
 
 ## Manage who can search for contacts and access detailed information<a name="required-permissions-search-contacts"></a>
 
-Before users can search for contacts in Amazon Connect, or access detailed contact information, they need to be assigned to the **CallCenterManager** security profile, or have the following permissions:
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-required-permissions.png)
+Before users can search for contacts in Amazon Connect, or access detailed contact information, they need to be assigned to the **CallCenterManager** security profile, or have the following **Analytics** permissions:
 + **Access metrics \- Access** \(Required\): Grants access to metrics data\.
 + **Contact search \- View** \(Required\): Grants access to the **Contact search** page, and the ability to search for contacts\.
 + **Restrict contact access** \(Optional\): Manage a user's access to results on the **Contact search** page based on their agent hierarchy group\.
@@ -56,9 +67,11 @@ Before users can search for contacts in Amazon Connect, or access detailed conta
   For more information about hierarchy groups, see [Set up agent hierarchies](agent-hierarchy.md)\.
 **Note**  
 When you change a user's hierarchy group, it may take a couple of minutes for their contact search results to reflect their new permissions\.
-+ **Contact Lens \- speech analytics**: On the Contact Trace Record page for a contact, you can view graphs that summarize speech analytics: customer sentiment trend, sentiment, and non\-talk time\. 
++ **Contact Lens \- speech analytics**: On the Contact Record page for a contact, you can view graphs that summarize speech analytics: customer sentiment trend, sentiment, and non\-talk time\. 
 + **Recorded conversations \(redacted\)**: If your organization uses Contact Lens for Amazon Connect, you can assign this permission so agents access only those call recordings and transcripts in which sensitive data has been removed\.
 + **Recorded conversations \(unredacted\)**: If your organization isn't using Contact Lens, agents need **Recorded conversations \(unredacted\)** to listen to call recordings or view transcripts\. If desired, you can use **Restrict contact access** to ensure they only have access to detailed information for those contacts handled by their hierarchy group\. 
++ **Voice ID \- attributes and search**: If your organization uses Voice ID, users with this permission can search for and view Voice ID results in the **Contact detail** page\. 
++ **Users \- View** permission: You must have this permission to use the **Agent** filter on the **Contact search** page\.
 
 By default, the Amazon Connect **Admin** and **CallCenterManager** security profiles have these permissions\.
 
@@ -68,7 +81,7 @@ For information about how add more permissions to an existing security profile, 
 
 1. Log in to Amazon Connect with a user account that has [permissions to access contact records](#required-permissions-search-contacts)\.
 
-1. In Amazon Connect choose **Metrics and quality**, **Contact search**\.
+1. In Amazon Connect choose **Analytics**, **Contact search**\.
 
 1. Use the filters on the page to narrow your search\. For date, you can search up to 8 weeks at a time\.
 

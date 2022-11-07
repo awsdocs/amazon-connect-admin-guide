@@ -33,7 +33,7 @@ When you customize a report, you can add filters to control which data is includ
 
 1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
-1. Choose **Metrics and quality**, **Historical metrics**\.
+1. Choose **Analytics**, **Historical metrics**\.
 
 1. Choose one of the following report types, which group and order the data in different ways, and include different metrics:
    + **Queues**
@@ -41,6 +41,7 @@ When you customize a report, you can add filters to control which data is includ
      + **Agent metrics**
    + **Agents**
      + **Agent performance**
+     + [Agent activity audit report](agent-activity-audit-report.md) 
    + **Phone numbers**
      + **Contact metrics**
 

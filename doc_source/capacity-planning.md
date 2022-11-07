@@ -1,4 +1,4 @@
-# Capacity planning in Amazon Connect \(Preview\)<a name="capacity-planning"></a>
+# Capacity planning in Amazon Connect<a name="capacity-planning"></a>
 
 A capacity plan helps you estimate the long\-term FTE \(full\-time equivalent\) requirements for your contact center, up to 18 months\. It specifies how many FTE agents are required to meet the service level target for a certain period of time\.
 
@@ -14,7 +14,7 @@ Following is the order of steps for creating a capacity plan and sharing it with
 
 1. [Create capacity planning scenarios](capacity-planning-create-scenarios.md)
 
-1. [](upload-estimated-future-shrinkage.md): This is an optional step but it can improve the accuracy of your capacity plan\.
+1. [Import estimated future shrinkage and available full\-time employees](upload-estimated-future-shrinkage.md): This is an optional step but it can improve the accuracy of your capacity plan\.
 
 1. [Create capacity plans using forecasts and scenarios](capacity-planning-use-forecast.md)
 

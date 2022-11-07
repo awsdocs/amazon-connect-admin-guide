@@ -1,6 +1,6 @@
 # Set up recording behavior<a name="set-up-recordings"></a>
 
-Managers can monitor live conversations, and review and download recordings of past agent conversations\. To set this up, you need to add the [Set recording and analytics behavior](set-recording-behavior.md) block to your contact flows, assign managers the appropriate permissions, and show them how to monitor live conversations and access past recordings in Amazon Connect\.
+Managers can monitor live conversations, and review and download recordings of past agent conversations\. To set this up, you need to add the [Set recording and analytics behavior](set-recording-behavior.md) block to your flows, assign managers the appropriate permissions, and show them how to monitor live conversations and access past recordings in Amazon Connect\.
 
 ## When is a conversation recorded?<a name="when-conversation-recorded"></a>
 
@@ -23,7 +23,7 @@ Encryption is enabled by default for all call recordings using Amazon S3 server\
 You shouldn't disable encryption\.
 
 **Important**  
-For voice conversations to be stored in an Amazon S3 bucket, you need to enable recording in the contact flow block using the [Set recording and analytics behavior](set-recording-behavior.md) block\.
+For voice conversations to be stored in an Amazon S3 bucket, you need to enable recording in the flow block using the [Set recording and analytics behavior](set-recording-behavior.md) block\.
 For chat conversations, if there's an S3 bucket for storing chat transcripts, then all chats are recorded and stored there\. If no bucket exists, then no chats are recorded\. However, if you want to monitor chat conversations, you still need to add the [Set recording and analytics behavior](set-recording-behavior.md) block to the flow\.
 
 **Tip**  
@@ -39,30 +39,33 @@ You can also access the recording from the customer's [contact record](sample-ct
 
 ## How to set up recording behavior<a name="how-to-set-up-recording-behavior"></a>
 
-To view a sample contact flow with the **Set recording behavior** block configured, see [Sample recording behavior](sample-recording-behavior.md)\.
+To view a sample flow with the **Set recording behavior** block configured, see [Sample recording behavior](sample-recording-behavior.md)\.
 
-**To set up recording behavior in your contact flows**
+**To set up recording behavior in your flows**
 
-1. Log in to your Amazon Connect instance using an account that has permissions to edit contact flows\.
+1. Log in to your Amazon Connect instance using an account that has permissions to edit flows\.
 
-1. Choose **Routing**, **Contact flows**, and then open the contact flow that handles customer contacts you want to monitor\. 
+1. On the navigation menu, choose **Routing**, **Contact flows**\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/menu-contact-flows.png)
 
-1. Before the contact is connected to an agent, add a [Set recording and analytics behavior](set-recording-behavior.md) block to the contact flow\.
+1. Open the flow that handles customer contacts you want to monitor\.
+
+1. In the flow, before the contact is connected to an agent, add a [Set recording and analytics behavior](set-recording-behavior.md) block to the contact flow\.
 
 1. To configure the [Set recording and analytics behavior](set-recording-behavior.md) block, choose from the following: 
    + To record voice conversations, choose what you want to record: **Agent and Customer**, **Agent only**, or **Customer only**\.
    + To record chat conversations, you need to choose **Agent and Customer**\.
    + To enable monitoring of voice and/or chat conversations, you need to choose **Agent and Customer**\.
 
-1. Choose **Save** and then **Publish** to publish the updated contact flow\.
+1. Choose **Save** and then **Publish** to publish the updated flow\.
 
 **To set up recording behavior for outbound calls**
 
-1. Create a contact flow, using the outbound whisper flow type\.
+1. Create a flow, using the outbound whisper flow type\.
 
 1. Add a [Set recording and analytics behavior](set-recording-behavior.md) block to that contact flow\.
 
-1. Set up a queue that will be used for making outbound calls\. In the **Outbound whisper flow** box, choose the contact flow that has [Set recording and analytics behavior](set-recording-behavior.md) in it\. 
+1. Set up a queue that will be used for making outbound calls\. In the **Outbound whisper flow** box, choose the flow that has [Set recording and analytics behavior](set-recording-behavior.md) in it\. 
 
 ## How to set up users to monitor conversations or review recordings<a name="overview-setup-managers-review-recordings"></a>
 

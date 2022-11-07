@@ -1,8 +1,11 @@
 # Claim phone numbers for Amazon Connect in the Asia Pacific \(Tokyo\) Region<a name="connect-tokyo-region"></a>
 
-To claim a phone number for an Amazon Connect instance you create in the Asia Pacific \(Tokyo\) Region, open an AWS support case and provide documentation that your business is located in Japan\. For a list of the required documentation, see [Japan \(JP\)](phone-number-requirements.md#japan-regulations), in the [Region requirements for ordering and porting phone numbers](phone-number-requirements.md) topic\. 
+To claim a phone number for an Amazon Connect instance you create in the Asia Pacific \(Tokyo\) Region, open an AWS support case and provide documentation that your business is located in Japan\. 
 
-Numbers can be claimed for business use only, not for personal use\. 
+**Important**  
+You must provide three pieces of required documentation\. For a list of acceptable identification, see [Japan \(JP\)](phone-number-requirements.md#japan-regulations), in the [Region requirements for ordering and porting phone numbers](phone-number-requirements.md) topic\. 
+
+You cannot claim numbers for personal use, only for business use\. 
 
 Amazon Connect supports claiming the following phone numbers for instances created in the Asia Pacific \(Tokyo\) Region\.
 + **Direct Inward Dialing \(DID\) numbers**—DID numbers are also referred to as local numbers\.

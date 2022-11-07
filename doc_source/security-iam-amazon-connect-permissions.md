@@ -80,6 +80,8 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | --- | --- | 
 | View telephony options | connect:DescribeInstance | 
 | Enable/Disable telephony options   |  connect:UpdateInstanceAttribute  | 
+| View outbound campaigns  |  connect\-campaigns:GetConnectInstanceConfig  connect\-campaigns:GetInstanceOnboardingJobStatus connect:DescribeInstance connect:DescribeInstanceAttribute kms:DescribeKey  | 
+| Enable/disable outbound campaigns  |  connect\-campaigns:GetConnectInstanceConfig  connect\-campaigns:GetInstanceOnboardingJobStatus connect\-campaigns:StartInstanceOnboardingJob connect\-campaigns:DeleteInstanceOnboardingJob connect\-campaigns:DeleteConnectInstanceConfig connect:DescribeInstance connect:DescribeInstanceAttribute connect:UpdateInstanceAttribute iam:CreateServiceLinkedRole  iam:DeleteServiceLinkedRole  iam:AttachRolePolicy  iam:PutRolePolicy  iam:DeleteRolePolicy  events:PutRule  events:PutTargets  events:DeleteRule  events:RemoveTargets events:DescribeRule events:ListTargetsByRule  ds:DescribeDirectories  kms:DescribeKey kms:ListKeys  kms:CreateGrant  kms:RetireGrant  | 
 
 ### Data storage page<a name="data-storage-page"></a>
 
@@ -173,23 +175,15 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View Voice ID integrations | voiceid:DescribeDomain voiceid:ListDomains voiceid:RegisterComplianceConsent voiceid:DescribeComplianceConsent connect:ListIntegrationAssociations  | 
 | Edit Voice ID integrations | voiceid:DescribeDomain voiceid:ListDomains voiceid:RegisterComplianceConsent voiceid:DescribeComplianceConsent voiceid:UpdateDomain voiceid:CreateDomain connect:ListIntegrationAssociations connect:CreateIntegrationAssociation connect:DeleteIntegrationAssociation events:PutRule events:DeleteRule events:PutTargets events:RemoveTargets  | 
 
-### Contact flows page<a name="contact-flows-page"></a>
+### Flows page<a name="contact-flows-page"></a>
 
-#### Contact flows<a name="contact-flows-section"></a>
-
-
-| Action/Use case | Permissions needed | 
-| --- | --- | 
-| View contact flow security keys | connect:DescribeInstance connect:ListSecurityKeys  | 
-| Add/remove contact flow security keys |  connect:AssociateSecurityKey connect:DisassociateSecurityKey  | 
-
-#### Contact flows security keys section<a name="security-keys-section"></a>
+#### Flows security keys section<a name="security-keys-section"></a>
 
 
 | Action/Use case | Permissions needed | 
 | --- | --- | 
-| View contact flow security keys | connect:DescribeInstance connect:ListSecurityKeys  | 
-| Add/remove contact flow security keys |  connect:AssociateSecurityKey connect:DisassociateSecurityKey  | 
+| View flow security keys | connect:DescribeInstance connect:ListSecurityKeys  | 
+| Add/remove flow security keys |  connect:AssociateSecurityKey connect:DisassociateSecurityKey  | 
 
 #### Lex bots section<a name="lex-bots-section"></a>
 
@@ -207,13 +201,13 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View Lambda functions | connect:ListLambdaFunctions  | 
 | Add/remove Lambda functions |  connect:ListLambdaFunctions connect:AssociateLambdaFunction connect:DisassociateLambdaFunction lambda:ListFunctions lambda:AddPermission lambda:RemovePermission  | 
 
-#### Contact flow logs section<a name="contact-flow-logs-section"></a>
+#### Flow logs section<a name="contact-flow-logs-section"></a>
 
 
 | Action/Use case | Permissions needed | 
 | --- | --- | 
-| View contact flow log config | connect:DescribeInstance connect:DescribeInstanceAttribute  | 
-| Enable/disable contact flow log |  logs:CreateLogGroup   | 
+| View flow log config | connect:DescribeInstance connect:DescribeInstanceAttribute  | 
+| Enable/disable flow log |  logs:CreateLogGroup   | 
 
 #### Amazon Polly section<a name="amazon-polly-section"></a>
 

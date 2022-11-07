@@ -73,16 +73,16 @@ When you create an instance, by default we create an Amazon S3 bucket\. Data, su
 
 This bucket and key are used for both recordings of conversations and exported reports\. Alternatively, you can specify separate buckets and keys for recordings of conversations and exported reports\. For instructions, see [Update instance settings](update-instance-settings.md)\.
 
-**By default, Amazon Connect creates buckets for storing call recordings, chat transcripts, exported reports, and contact flow logs\. **
+**By default, Amazon Connect creates buckets for storing call recordings, chat transcripts, exported reports, and flow logs\. **
 + When a bucket is created to store call recordings, call recording is enabled at the instance level\. The next step for setting up this functionality is to [set up recording behavior in a contact flow](set-up-recordings.md)\.
 + When a bucket is created to store chat transcripts, chat transcription is enabled at the instance level\. Now all chat transcripts will be stored\. Only if you want to monitor chat conversations do you need to [set up recording behavior in a contact flow](set-up-recordings.md)\.
 + Live media streaming is not enabled by default\.
 
 **By default, Amazon Connect creates a Customer Profiles domain**, which stores profiles that combine customer contact history with customer information such as account number, address, billing address, and birth date\. Data is encrypted using AWS Key Management Service\. You can configure Customer Profiles to use your own customer managed key after your instance is set up\. For more information, see [Create a KMS key to be used by Customer Profiles to encrypt data \(required\)](enable-customer-profiles.md#enable-customer-profiles-awsmanagedkey)\. 
 
-**Review and copy the location of the S3 bucket, contact flow logs, and whether you want to enable Customer Profiles\.**
+**Review and copy the location of the S3 bucket, flow logs, and whether you want to enable Customer Profiles\.**
 
-1. If desired, copy the location of the S3 bucket where your data encryption is stored, and the location of the contact flow logs in CloudWatch\.
+1. If desired, copy the location of the S3 bucket where your data encryption is stored, and the location of the flow logs in CloudWatch\.
 
 1. Choose **Next**\.
 

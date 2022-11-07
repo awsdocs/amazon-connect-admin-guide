@@ -1,4 +1,4 @@
-# Chat<a name="chat"></a>
+# Chat capabilities for Amazon Connect<a name="chat"></a>
 
 Amazon Connect Chat enables your customers to start chatting with contact center agents from any of your business applications, web or mobile\. Interactions are asynchronous, enabling your customers to start a chat with an agent or Amazon Lex bot, step away from it, and then resume the conversation again\. They can even switch devices and continue the chat\.
 
@@ -18,9 +18,9 @@ Amazon Connect provides several resources to help you add chat to your website\.
 
 ## Example chat scenario<a name="example-chat-scenario"></a>
 
-A customer and agent are chatting\. The customer stops responding to the agent\. The agent asks "Are you there?" and doesn't get a reply\. The agent leaves the chat\. Now the chat is no longer associated with an agent\. Your contact flow determines what happens next\. 
+A customer and agent are chatting\. The customer stops responding to the agent\. The agent asks "Are you there?" and doesn't get a reply\. The agent leaves the chat\. Now the chat is no longer associated with an agent\. Your flow determines what happens next\. 
 
-In this scenario, the customer eventually sends another message \("Hey, I'm back"\) and the chat resumes\. Depending on the logic that you define in the contact flow, the chat can be assigned to the original agent, or a different agent or queue\.
+In this scenario, the customer eventually sends another message \("Hey, I'm back"\) and the chat resumes\. Depending on the logic that you define in the flow, the chat can be assigned to the original agent, or a different agent or queue\.
 
 Here's how you build this scenario:
 
@@ -33,7 +33,7 @@ Here's how you build this scenario:
       For example, for this branch you might just want to run a **Disconnect** block and end the chat\. 
    +  **Customer return**: Run this branch when the customer returns and sends a message\. With this branch, you can route the customer to the previous agent, previous queue, or set a new working queue or agent\. 
 
-1.  In your inbound contact flow, add the [Set Disconnect Flow](set-disconnect-flow.md) block\. Use it to specify that when the agent or Amazon Lex bot has disconnected from the chat and only the customer remains, the set disconnect flow should run\. 
+1.  In your inbound flow, add the [Set Disconnect Flow](set-disconnect-flow.md) block\. Use it to specify that when the agent or Amazon Lex bot has disconnected from the chat and only the customer remains, the set disconnect flow should run\. 
 
     In the following block, for example, we specified that the **Sample disconnect flow** should run\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-disconnect-flow.png)
@@ -42,9 +42,7 @@ Here's how you build this scenario:
 
 ## When do chats end?<a name="when-do-chats-end"></a>
 
- By default, the duration for a chat conversation, including the time spent waiting when the customer isn't active, can't exceed 25 hours\. 
-
- To configure a custom chat duration, call the [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API and add the `ChatDurationInMinutes` parameter\. Using this parameter, you can configure a chat to last from as little as 1 hour \(60 minutes\) to up to 7 days \(10,080 minutes\)\.
+ By default, the duration for a chat conversation, including the time spent waiting when the customer isn't active, can't exceed 25 hours\. However, you can change this default duration and instead configure a custom chat duration\. You can configure a chat to last from a minimum of 1 hour \(60 minutes\) to up to 7 days \(10,080 minutes\)\. To configure a custom chat duration, call the [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API and add the `ChatDurationInMinutes` parameter\. 
 
 During an ongoing chat session, there's no limit to the number of times a customer can leave and rejoin an existing ongoing chat session\. To accomplish this, use the [Wait](wait.md) block\. For example, you might wait 12 hours for the customer to resume the chat before ending the chat session\. If the customer tries to resume the chat after 12 hours, in the flow you can have an Amazon Lex bot ask if they're contacting you about the same issue or a different one\. 
 

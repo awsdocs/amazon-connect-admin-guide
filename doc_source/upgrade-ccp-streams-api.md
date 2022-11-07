@@ -21,7 +21,7 @@ Use the following steps to upgrade to the latest CCP\.
    1. Choose **Application integration**, and then choose **Add origin**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/upgradeccp-application-integration.png)
 
-   1. Enter your domain URL\. All domains that embed the CCP for a particular instance to be explicitly added\. For more information, see [this article](https://github.com/amazon-connect/amazon-connect-streams#whitelisting) on GitHub\. 
+   1. Enter your domain URL\. All domains that embed the CCP for a particular instance to be explicitly added\. For more information, see [this article](https://github.com/amazon-connect/amazon-connect-streams/blob/master/Documentation.md#allowlisting) on GitHub\. 
 
       If you use Salesforce, you need to add the Salesforce domains to your allow list to prevent any issues with the CTI Adapter CCP functionality\. For detailed instructions, see the  [Amazon Connect CTI Adapter for Salesforce Lightning installation guide](https://amazon-connect.github.io/amazon-connect-salesforce-cti/docs/lightning/notices/) or the [Amazon Connect CTI Adapter for Salesforce Classic installation guide](https://amazon-connect.github.io/amazon-connect-salesforce-cti/docs/classic/notices/)\. 
 

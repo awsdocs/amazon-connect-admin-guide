@@ -4,7 +4,7 @@ There are two types of queues:
 + **Standard queues**: This is where contacts wait before they are routed to and accepted by agents\.
 + **Agent queues**: These queues are created automatically when you add an agent to your contact center\.
 
-  Contacts are only routed to agent queues when explicitly sent there as part of a contact flow\. For example, you might route contacts to a specific agent who's responsible for certain customer issues, such as billing or premium support\. Or you might use agent queues to route to an agent's voice\-mail\. 
+  Contacts are only routed to agent queues when explicitly sent there as part of a flow\. For example, you might route contacts to a specific agent who's responsible for certain customer issues, such as billing or premium support\. Or you might use agent queues to route to an agent's voice\-mail\. 
 
 Contacts waiting in agent queues are higher priority than contacts waiting in standard queues\. Contacts in agent queues have the highest priority and zero delay: 
 + Highest priority: If there's another contact in the basic queue, Amazon Connect chooses to give the agent the contact from the agent queue first\.
@@ -27,4 +27,4 @@ The metrics APIs don't support agent queues\.
 
 ## Default queue: BasicQueue<a name="concepts-default-queue"></a>
 
-Amazon Connect includes a default queue named **BasicQueue**\. Along with the [default contact flows](contact-flow-default.md) and default routing profile \(named **Basic routing profile**\), it powers your contact center so you don't need to do any customization\. This is what enables you to get started quickly\. 
+Amazon Connect includes a default queue named **BasicQueue**\. Along with the [default flows](contact-flow-default.md) and default routing profile \(named **Basic routing profile**\), it powers your contact center so you don't need to do any customization\. This is what enables you to get started quickly\. 

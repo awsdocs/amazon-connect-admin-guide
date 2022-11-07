@@ -11,12 +11,24 @@ Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with 
    The CCP website link is: **https://*instance name*\.my\.connect\.aws/ccp\-v2/**
 
    We recommend telling agents to bookmark the URL to the CCP so they can readily access it\.
-**Tip**  
-Want your agents to manage contacts, and access customer profiles, cases, and knowledge all in one place? Use the agent application, which is a single web browser interface that hosts the CCP, Customer Profiles, Cases, and Wisdom\. For more information, see [Agent training guide](agent-user-guide.md)\.
 
 1. Train your agents on the CCP:
-   + Watch [Training video: How to use the CCPTraining video](ccp-video-training.md)
+   + Watch [Training video: How to use the CCP](ccp-video-training.md)
    + [Download a quick start cheat sheet](https://connectivitytest.s3.amazonaws.com/CCP_Agent_QuickStart_20200615.pptx)\.
+
+## Agent application: Everything in one place<a name="use-agent-application"></a>
+
+Want your agents to manage contacts, and access customer profiles, cases, and knowledge all in one place? Use the [agent application](agent-user-guide.md)\! 
+
+The [agent application](agent-user-guide.md) is a single web browser interface that hosts the CCP, [Customer Profiles](use-customer-profiles.md), [Cases](use-cases.md), and [Wisdom](use-wisdom.md)\.
+
+If you're using the CCP that is provided with Amazon Connect, after you enable Customer Profiles, Cases, or Wisdom, share the following URL with your agents so they can access it:
++ **https://*instance name*\.my\.connect\.aws/agent\-app\-v2/**
+
+If you access your instance using the **awsapps\.com** domain, use the following URL: 
++ **https://*instance name*\.awsapps\.com/connect/agent\-app\-v2/**
+
+For help finding your instance name, see [Find your Amazon Connect instance name](find-instance-name.md)\.
 
 ## Grant microphone access in Chrome or Firefox<a name="accessing-microphone"></a>
 

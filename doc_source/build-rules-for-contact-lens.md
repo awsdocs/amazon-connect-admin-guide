@@ -3,7 +3,7 @@
 Contact Lens rules allow you to automatically categorize contacts, receive alerts, or generate tasks based on uttered keywords, sentiment scores, customer attributes, and other criteria\. 
 
 **Tip**  
-For a list of rules feature specifications \(for example, how many rules you can create\), see [Amazon Connect Rules feature specifications](amazon-connect-service-limits.md#rules-feature-specs)\.
+For a list of rules feature specifications \(for example, how many rules you can create\), see [Amazon Connect Rules feature specifications](feature-limits.md#rules-feature-specs)\.
 
 ## Step 1: Define rule conditions<a name="rule-conditions"></a>
 
@@ -47,7 +47,7 @@ In this step, you are naming a required rule action: **Assign Contact Category**
 1. Choose **Add action**\. Since you already named **Assign Contact Category**, it's not available\. You can choose the following:
    + [Generate an EventBridge event](contact-lens-rules-eventbridge-event.md)
    + [Create task](contact-lens-rules-create-task.md)  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-action.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-action-no-wisdom.png)
 
 1. Choose **Next**\.
 

@@ -1,6 +1,6 @@
 # Standard profile definition<a name="standard-profile-definition"></a>
 
-The following table lists all the fields in the Customer Profiles standard profile\. object\.
+The following table lists all the fields in the Customer Profiles standard profile object\.
 
 
 | Standard profile field | Data type | Description | 

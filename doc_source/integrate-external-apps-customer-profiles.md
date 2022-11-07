@@ -6,8 +6,12 @@ You can also use Customer Profiles in Amazon AppFlow\. Amazon AppFlow supports `
 
 Before you begin, make sure you are using a customer managed key\. For more information about configuring KMS keys, see [Create a KMS key to be used by Customer Profiles to encrypt data \(required\)](enable-customer-profiles.md#enable-customer-profiles-awsmanagedkey)\. 
 
+## Set up integrations<a name="setup-integrations-title-menu"></a>
+
+You can setup an integration using either featured applications in Amazon Connect or external applications using Amazon AppFlow by choosing the method that best fits your use\-case below\. For more detailed information on the integration of ServiceNow and Slack, see the blog post [Combine data from multiple sources using Amazon AppFlow and build a unified Amazon Connect Customer profile for contact center agents](http://aws.amazon.com/blogs/contact-center/unified-customer-data/)\.
+
 **Topics**
-+ [Set up integration for Salesforce, ServiceNow, Marketo, or Zendesk](integrate-customer-profiles-appflow.md)
-+ [Set up integration for Segment](integrate-customer-profiles-segment.md)
-+ [Set up integration for Shopify](integrate-customer-profiles-shopify.md)
++ [Set up integrations](#setup-integrations-title-menu)
++ [Set up integration for featured applications in Amazon Connect](integrate-customer-profiles-appflow.md)
++ [Set up integration for external applications using Amazon AppFlow](integrate-external-applications-appflow.md)
 + [Delete/stop Customer Profiles integrations](delete-customer-profile-connection.md)

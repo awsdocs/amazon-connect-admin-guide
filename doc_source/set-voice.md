@@ -1,4 +1,4 @@
-# Contact block: Set voice<a name="set-voice"></a>
+# Flow block: Set voice<a name="set-voice"></a>
 
 ## Description<a name="set-voice-description"></a>
 + Sets the text\-to\-speech \(TTS\) language and voice to use for the contact flow\.
@@ -20,7 +20,7 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | No \- Success branch | 
 | Task | No \- Success branch | 
 
-## Contact flow types<a name="set-voice-types"></a>
+## Flow types<a name="set-voice-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows
@@ -30,7 +30,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-properties.png)
 
 **Tip**  
-For voices that support only neural speaking styles but not standard, the **Override speaking style** is automatically selected\. You do not have the option to unselect it\.
+For voices that support only neural speaking styles but not standard, the **Override speaking style** is automatically selected\. You do not have the option to clear it\.
 
 ## Use an Amazon Lex V2 bot with Amazon Connect<a name="set-voice-lexv2bot"></a>
 

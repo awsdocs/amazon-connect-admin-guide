@@ -1,4 +1,4 @@
-# Contact block: Set contact attributes<a name="set-contact-attributes"></a>
+# Flow block: Set contact attributes<a name="set-contact-attributes"></a>
 
 ## Description<a name="set-contact-attributes-description"></a>
 + Stores key\-value pairs as contact attributes\.
@@ -17,7 +17,7 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="set-contact-attributes-types"></a>
+## Flow types<a name="set-contact-attributes-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
 + All flows

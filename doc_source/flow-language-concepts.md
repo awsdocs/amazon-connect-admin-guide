@@ -4,11 +4,11 @@ The following terms are used in the Flow language\.
 
 ## Contact<a name="flow-language-concepts-contact"></a>
 
-Flows can be run in context of a contact\. In this case, they are referred to as *contact flows*\.
+Flows can be run in context of a contact\. In this case, they are referred to as *flows*\.
 
 ## Participant<a name="flow-language-concepts-participant"></a>
 
-Contact flows can additionally be run in a participant context\. This allows participant actions—such as playing prompts or getting customer input—to be run\. Certain types of contact flows, such as "No participants remaining" disconnect flows and Workitem contact flows, don't have a participant associated\.
+Flows can additionally be run in a participant context\. This allows participant actions—such as playing prompts or getting customer input—to be run\. Certain types of flows, such as "No participants remaining" disconnect flows and Workitem flows, don't have a participant associated\.
 
 ## Action types<a name="flow-language-concepts-action-types"></a>
 

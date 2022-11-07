@@ -1,6 +1,6 @@
 # Search by custom contact attributes<a name="search-custom-attributes"></a>
 
-You can create search filters based on custom contact attributes \(also called [user\-defined contact attributes](connect-attrib-list.md#user-defined-attributes)\)\. For example, if you add `AgentLocation` and `InsurancePlanType` to your contact records \(CTR\) as custom attributes, you can search for contacts with specific values in these attributes, such as calls handled by agents located in Seattle, or calls made by customers who purchased homeowners insurance\.
+You can create search filters based on custom contact attributes \(also called [user\-defined contact attributes](connect-attrib-list.md#user-defined-attributes)\)\. For example, if you add `AgentLocation` and `InsurancePlanType` to your contact records as custom attributes, you can search for contacts with specific values in these attributes, such as calls handled by agents located in Seattle, or calls made by customers who purchased homeowners insurance\.
 
 ## Required permissions to configure searchable contact attributes<a name="permissions-search-custom-attributes"></a>
 

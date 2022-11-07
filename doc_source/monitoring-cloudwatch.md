@@ -24,218 +24,34 @@ If your Amazon Connect instance was created on or before October 2018, you need 
 
 The `AWS/Connect` namespace includes the following metrics\.
 
-**CallsBreachingConcurrencyQuota**  
-The total number of voice calls that exceeded the concurrent calls quota for the instance\. For the total number of calls that breach the quota, take a look at the Sum statistic\.  
-For example, assume your contact center experiences the following volumes, and your service quota is 100 concurrent calls:  
-+ 0:00 : 125 concurrent calls\. This is 25 over the quota\. 
-+ 0:04 : 135 concurrent calls\. This is 35 over the quota\. 
-+ 0:10 : 150 concurrent calls\. This is 50 over the quota\. 
-CallsBreachingConcurrencyQuota = 110: the total number of voice calls that exceeded the quota between 0:00 and 0:10\.  
-Unit: Count  
-Dimension:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **VoiceCalls**
 
-**CallBackNotDialableNumber**  
-The number of times a queued callback to a customer could not be dialed because the customer's number is in a country for which outbound calls are not allowed for the instance\. The countries allowed for an instance are defined by the service quotas\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId** The ID of your instance
-+ **MetricGroup**: **ContactFlow**
-+ **ContactFlowName**: The name of your contact flow
-
-**CallRecordingUploadError**  
-The number of call recordings that failed to upload to the Amazon S3 bucket configured for your instance\. This is the bucket specified in **Data Storage** > **Call Recordings** settings for the instance\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **CallRecordings**
-
-**CallsPerInterval**  
-The number of voice calls, both inbound and outbound, received or placed per second in the instance\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **VoiceCalls**
-
-**ChatsBreachingActiveChatQuota**  
-The total number of valid requests made to start a chat that exceeded the concurrent active chats quota for the instance\. For the total number of chats requests that breach the quota, take a look at the Sum statistic\.  
-For example, assume your contact center experiences the following volumes, and your service quota is 2500 concurrent active chats:  
-+ 0:00 : 2525 concurrent active chats\. This is 25 over the quota\.
-+ 0:04 : 2535 concurrent active chats\. This is 35 over the quota\.
-+ 0:10 : 2550 concurrent active chats\. This is 50 over the quota\.
-ChatsBreachingActiveChatsQuota = 110: the total number of chats that exceeded the quota between 0:00 and 0:10\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Chats**
-
-**ConcurrentActiveChats**  
-The number of [concurrent active chats](amazon-connect-service-limits.md) in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active chats at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active chats are included, not only active tasks that are connected to agents\.  
-While all statistics are available in CloudWatch for concurrent active chats, you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.   
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Chats**
-
-**ConcurrentActiveChatsPercentage**  
-The percentage of the concurrent active chats service quota used in the instance\. This is calculated by:  
-+  ConcurrentActiveChats / ConfiguredConcurrentActiveChatsLimit
-Where ConfiguredConcurrentActiveChatsLimit is the Concurrent active chats per instance configured for your instance\.  
-Unit: Percent \(Output displays as an integer\. For example, 1% of chats is shown as 1, not as 0\.01\.\)  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Chats**
-
-**ConcurrentCalls**  
-The number of concurrent active voice calls in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active calls at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active voice calls are included, not only active calls that are connected to agents\.  
-While all statistics are available in CloudWatch for concurrent voice calls you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.   
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **VoiceCalls**
-
-**ConcurrentCallsPercentage**  
-The percentage of the concurrent active voice calls service quota used in the instance\. This is calculated by:  
-+ ConcurrentCalls / ConfiguredConcurrentCallsLimit
-Unit: Percent \(output displays as a decimal\)  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **VoiceCalls**
-
-**ConcurrentTasks**  
-The number of concurrent active tasks in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active tasks at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active tasks are included, not only active tasks that are connected to agents\.  
-While all statistics are available in CloudWatch for concurrent tasks you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.   
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Tasks**
-
-**ConcurrentTasksPercentage**  
-The percentage of the concurrent active tasks service quota used in the instance\. This is calculated by:   
-+ ConcurrentTasks / ConfiguredConcurrentTasksLimit 
-Where ConfiguredConcurrentTasksLimit is the [Concurrent tasks per instance](amazon-connect-service-limits.md) configured for your instance\.   
-Unit: Percent \(output displays as a decimal\)  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Tasks**
-
-**ContactFlowErrors**  
-The number of times the error branch for a contact flow was run\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **ContactFlow**
-+ **ContactFlowName**: The name of your contact flow
-
-**ContactFlowFatalErrors**  
-The number of times a contact flow failed to execute due to a system error\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **ContactFlow**
-+ **ContactFlowName**: The name of your contact flow
-
-**LongestQueueWaitTime**  
-The longest amount of time, in seconds, that a contact waited in a queue\. This is the length of time a contact waited in a queue during the refresh interval selected in the CloudWatch dashboard, such as 1 minute or 5 minutes\.  
-Unit: Seconds  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Queue**
-+ **QueueName**: The name of your queue
-
-**MissedCalls**  
-The number of voice calls that were missed by agents during the refresh interval selected, such as 1 minute or 5 minutes\. A missed call is one that is not answered by an agent within 20 seconds\.  
-To monitor the total missed calls in a given time period, take a look at the Sum statistic in CloudWatch\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **VoiceCalls**
-
-**MisconfiguredPhoneNumbers**  
-The number of calls that failed because the phone number is not associated with a contact flow\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **VoiceCalls**
-
-**PublicSigningKeyUsage**  
-The number of times a contact flow security key \(public signing key\) was used to encrypt customer input in a contact flow\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **SigningKeyId**: The ID of your signing key
-
-**QueueCapacityExceededError**  
-The number of calls that were rejected because the queue was full\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Queue**
-+ **QueueName**: The name of your queue
-
-**QueueSize**  
-The number of contacts in the queue\. The value reflects the number of contacts in the queue at the time the dashboard is accessed, not for the duration of the reporting interval\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Queue**
-+ **QueueName**: The name of your queue
-
-**SuccessfulChatsPerInterval**  
-The number of chats successfully started in the instance for the defined interval\.  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Chats**
-
-**TasksBreachingConcurrencyQuota**  
-The total number of tasks that exceeded the concurrent tasks quota for the instance\. For the total number of tasks that breach the quota, take a look at the Sum statistic\.   
-For example, assume your contact center experiences the following volumes, and your service quota is 2500 concurrent tasks:   
-+ 0:00 : 2525 concurrent tasks\. This is 25 over the quota\.
-+ 0:04 : 2535 concurrent tasks\. This is 35 over the quota\.
-+ 0:10 : 2550 concurrent tasks\. This is 50 over the quota\.
- TasksBreachingConcurrencyQuota = 110: the total number of tasks that exceeded the quota between 0:00 and 0:10\.   
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Tasks**
-
-**TasksExpired**  
- Tasks which have expired after being active for 7 days\.   
-To monitor the total number of tasks that have expired in a given time period, take a look at the Sum statistic in CloudWatch\.   
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Tasks**
-+ **ContactId**: The ID of the task contact
-
-**TasksExpiryWarningReached**  
-Tasks that have been active for 6 days 22 hours and reached expiry warning limit\.   
-To monitor the total number of tasks that have reached expiry warning limit in a given time period, take a look at the Sum statistic in CloudWatch\.   
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **Tasks**
-+ **ContactId**: The ID of the task contact
-
-**ThrottledCalls**  
-The number of voice calls that were rejected because the rate of calls per second exceeded the maximum supported quota\. To increase the supported rate of calls, request an increase in the service quota for concurrent active calls per instance\.  
-To monitor the total throttled calls in a given time period, take a look at the Sum statistic in CloudWatch\.  
-Unit: Seconds  
-Unit: Count  
-Dimensions:  
-+ **InstanceId**: The ID of your instance
-+ **MetricGroup**: **VoiceCalls**
-
-**ToInstancePacketLossRate**  
-The ratio of packet loss for calls in the instance, reported every 10 seconds\. Each data point is between 0 and 1, which represents the ratio of packets lost for the instance\.  
-Unit: Percent  
-Dimensions:  
-+ **Participant**: **Agent**
-+ **Type of Connection**: **WebRTC**
-+ **Instance ID**: The ID of your instance
-+ **Stream Type**: **Voice**
+| Metric | Description | 
+| --- | --- | 
+| CallsBreachingConcurrencyQuota |  The total number of voice calls that exceeded the concurrent calls quota for the instance\. For the total number of calls that breach the quota, take a look at the Sum statistic\. For example, assume your contact center experiences the following volumes, and your service quota is 100 concurrent calls: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html) CallsBreachingConcurrencyQuota = 110: the total number of voice calls that exceeded the quota between 0:00 and 0:10\. Unit: Count Dimension: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| CallBackNotDialableNumber |  The number of times a queued callback to a customer could not be dialed because the customer's number is in a country for which outbound calls are not allowed for the instance\. The countries allowed for an instance are defined by the service quotas\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| CallRecordingUploadError |  The number of call recordings that failed to upload to the Amazon S3 bucket configured for your instance\. This is the bucket specified in **Data Storage** > **Call Recordings** settings for the instance\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| CallsPerInterval |  The number of voice calls, both inbound and outbound, received or placed per second in the instance\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ChatsBreachingActiveChatQuota |  The total number of valid requests made to start a chat that exceeded the concurrent active chats quota for the instance\. For the total number of chats requests that breach the quota, take a look at the Sum statistic\. For example, assume your contact center experiences the following volumes, and your service quota is 2500 concurrent active chats: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html) ChatsBreachingActiveChatsQuota = 110: the total number of chats that exceeded the quota between 0:00 and 0:10\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ConcurrentActiveChats |  The number of [concurrent active chats](amazon-connect-service-limits.md) in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active chats at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active chats are included, not only active tasks that are connected to agents\. While all statistics are available in CloudWatch for concurrent active chats, you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.  Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ConcurrentActiveChatsPercentage |  The percentage of the concurrent active chats service quota used in the instance\. This is calculated by: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html) Where ConfiguredConcurrentActiveChatsLimit is the Concurrent active chats per instance configured for your instance\. Unit: Percent \(Output displays as an integer\. For example, 1% of chats is shown as 1, not as 0\.01\.\) Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ConcurrentCalls |  The number of concurrent active voice calls in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active calls at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active voice calls are included, not only active calls that are connected to agents\. While all statistics are available in CloudWatch for concurrent voice calls you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.  Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ConcurrentCallsPercentage |  The percentage of the concurrent active voice calls service quota used in the instance\. This is calculated by: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  Unit: Percent \(output displays as a decimal\) Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ConcurrentTasks |  The number of concurrent active tasks in the instance at the time the data is displayed in the dashboard\. The value displayed for this metric is the number of concurrent active tasks at the time the dashboard is displayed, and not a sum for the entire interval of the refresh interval set\. All active tasks are included, not only active tasks that are connected to agents\. While all statistics are available in CloudWatch for concurrent tasks you might be most interested in looking at the Maximum/Average statistic\. The Sum statistic isn't as useful here\.  Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ConcurrentTasksPercentage |  The percentage of the concurrent active tasks service quota used in the instance\. This is calculated by:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html) Where ConfiguredConcurrentTasksLimit is the [Concurrent tasks per instance](amazon-connect-service-limits.md) configured for your instance\.  Unit: Percent \(output displays as a decimal\) Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ContactFlowErrors |  The number of times the error branch for a flow was run\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ContactFlowFatalErrors |  The number of times a flow failed to execute due to a system error\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| LongestQueueWaitTime |  The longest amount of time, in seconds, that a contact waited in a queue\. This is the length of time a contact waited in a queue during the refresh interval selected in the CloudWatch dashboard, such as 1 minute or 5 minutes\. Unit: Seconds Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| MissedCalls |  The number of voice calls that were missed by agents during the refresh interval selected, such as 1 minute or 5 minutes\. A missed call is one that is not answered by an agent within 20 seconds\. To monitor the total missed calls in a given time period, take a look at the Sum statistic in CloudWatch\. Unit: Count  Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| MisconfiguredPhoneNumbers |  The number of calls that failed because the phone number is not associated with a flow\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| PublicSigningKeyUsage |  The number of times a flow security key \(public signing key\) was used to encrypt customer input in a flow\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| QueueCapacityExceededError |  The number of calls that were rejected because the queue was full\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| QueueSize |  The number of contacts in the queue\. The value reflects the number of contacts in the queue at the time the dashboard is accessed, not for the duration of the reporting interval\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| SuccessfulChatsPerInterval |  The number of chats successfully started in the instance for the defined interval\. Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| TasksBreachingConcurrencyQuota |  The total number of tasks that exceeded the concurrent tasks quota for the instance\. For the total number of tasks that breach the quota, take a look at the Sum statistic\.  For example, assume your contact center experiences the following volumes, and your service quota is 2500 concurrent tasks:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  TasksBreachingConcurrencyQuota = 110: the total number of tasks that exceeded the quota between 0:00 and 0:10\.  Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| TasksExpired |   Tasks which have expired after being active for 7 days\.  To monitor the total number of tasks that have expired in a given time period, take a look at the Sum statistic in CloudWatch\.  Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| TasksExpiryWarningReached |  Tasks that have been active for 6 days 22 hours and reached expiry warning limit\.  To monitor the total number of tasks that have reached expiry warning limit in a given time period, take a look at the Sum statistic in CloudWatch\.  Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ThrottledCalls |  The number of voice calls that were rejected because the rate of calls per second exceeded the maximum supported quota\. To increase the supported rate of calls, request an increase in the service quota for concurrent active calls per instance\. To monitor the total throttled calls in a given time period, take a look at the Sum statistic in CloudWatch\. Unit: Seconds Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ToInstancePacketLossRate |  The ratio of packet loss for calls in the instance, reported every 10 seconds\. Each data point is between 0 and 1, which represents the ratio of packets lost for the instance\. Unit: Percent Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
 
 ## Amazon Connect CloudWatch metrics dimensions<a name="connect-cloudwatch-dimensions"></a>
 
@@ -243,12 +59,12 @@ In CloudWatch, a dimension is a name/value pair that uniquely identifies a metri
 
 The following dimensions are used in the CloudWatch dashboard for Amazon Connect metrics\. 
 
-### Contact flow metrics dimension<a name="contact-flow-dimension"></a>
+### Flow metrics dimension<a name="contact-flow-dimension"></a>
 
 **Note**  
-If a contact flow has a dimension name in non\-ASCII characters, you won't be able to see it in CloudWatch\. 
+If a flow has a dimension name in non\-ASCII characters, you won't be able to see it in CloudWatch\. 
 
-Filters metric data by contact flow\. Includes the following metrics:
+Filters metric data by flow\. Includes the following metrics:
 + ContactFlowErrors
 + ContactFlowFatalErrors
 + PublicSigningKeyUsage
@@ -369,6 +185,77 @@ This dimension limits the data to one of the following Voice ID operations:
 
 The Voice ID domain where the enrollment, authentication or registration is conducted\. 
 
+## Amazon AppIntegrations metrics sent to CloudWatch<a name="appintegrations-metrics-cloudwatch"></a>
+
+The `AWS/AppIntegrations` namespace includes the following metrics\.
+
+**RecordsDownloaded**  
+The number of records that were successfully downloaded as part of an AppFlow flow execution for a data integration\.  
+Frequency: 1 minute  
+Unit: Count  
+Valid Statistics: Maximum, Sum, Minimum, Average
+
+**RecordsFailed**  
+The number of records that failed to download as part of an AppFlow flow execution for a data integration\.  
+Frequency: 1 minute  
+Unit: Count  
+Valid Statistics: Maximum, Sum, Minimum, Average
+
+**DataDownloaded**  
+The number of bytes that were successfully downloaded as part of an AppFlow flow execution for a data integration\.  
+Frequency: 1 minute  
+Unit: Bytes  
+Valid Statistics: Maximum, Sum, Minimum, Average
+
+**DataProcessingDuration**  
+The time it took to process and download data as part of a single AppFlow flow execution for a data integration\.  
+Frequency: 1 minute  
+Unit: Milliseconds  
+Valid Statistics: Maximum, Sum, Minimum, Average
+
+**EventsReceived**  
+The number of events that were successfully emitted from your third\-party source application \(Salesforce, Zendesk\) and received on your event bus\.  
+Frequency: 1 minute  
+Unit: Count  
+Valid Statistics: Maximum, Sum, Minimum, Average
+
+**EventsProcessed**  
+The number of events that were successfully processed and forwarded to be evaluated against the rules you configured on an event integration\.  
+Frequency: 1 minute  
+Unit: Count  
+Valid Statistics: Maximum, Sum, Minimum, Average
+
+**EventsThrottled**  
+The number of events that were throttled because the rate of emitting events exceeded the maximum supported quota\.   
+Frequency: 1 minute  
+Unit: Bytes  
+Valid Statistics: Maximum, Sum, Minimum, Average
+
+**EventsFailed**  
+The number of events that failed to process due to malformed or unsupported third\-party events, and other processing errors \.  
+Frequency: 1 minute  
+Unit: Bytes  
+Valid Statistics: Maximum, Sum, Minimum, Average
+
+**EventProcessingDuration**  
+The time it took to successfully process and forward an event to be evaluated against the rules you configured on an event integration\.  
+Frequency: 1 minute  
+Unit: Milliseconds  
+Valid Statistics: Maximum, Sum, Minimum, Average
+
+## Amazon AppIntegrations metric dimensions<a name="appintegrations-dimensions-cloudwatch"></a>
+
+You can use the following dimensions to refine AppIntegrations metrics listed above\.
+
+
+| Dimension | Description | 
+| --- | --- | 
+| AccountId |  AWS account ID  | 
+| ClientId |  Service principal of the client  | 
+| IntegrationARN |  ARN of the event or data integration  | 
+| IntegrationType |  DataIntegration or EventIntegration  | 
+| Region |  Region of the data or event integration  | 
+
 ## Use CloudWatch metrics to calculate concurrent call quota<a name="connect-cloudwatch-concurrent-call-quota"></a>
 
 Here's how to calculate your quota for concurrent calls\. 
@@ -376,7 +263,7 @@ Here's how to calculate your quota for concurrent calls\.
 With calls active in the system, look at **ConcurrentCalls** and **ConcurrentCallsPercentage**\. Calculate the quota: 
 + \(ConcurrentCalls / ConcurrentCallsPercentage\)
 
-For example, if **ConcurrentCalls** is 20 and **ConcurrentCallsPercentage** is 50, your quota is calculated as \(20/50\) = 40\.
+For example, if **ConcurrentCalls** is 20 and **ConcurrentCallsPercentage** is 50, your quota is calculated as \(20/50\) = 0\.40 which is 40%\.
 
 ## Use CloudWatch metrics to calculate concurrent active chats quota<a name="connect-cloudwatch-concurrent-chat-quota"></a>
 

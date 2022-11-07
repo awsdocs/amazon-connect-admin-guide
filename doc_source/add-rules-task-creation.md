@@ -33,7 +33,7 @@ After you set up an external application to generate tasks automatically, you ne
 
 1. Go the external application and create the event that initiates the action\. For example, in Zendesk, create a ticket that's type **Question**\. 
 
-1. Go to **Metrics and quality**, **Contact search**\. 
+1. Go to **Analytics**, **Contact search**\. 
 
 1. Under **Channel**, choose **Task**, and then choose **Search**\.
 

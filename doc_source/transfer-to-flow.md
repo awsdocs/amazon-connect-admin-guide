@@ -1,7 +1,7 @@
-# Contact block: Transfer to flow<a name="transfer-to-flow"></a>
+# Flow block: Transfer to flow<a name="transfer-to-flow"></a>
 
 ## Description<a name="transfer-to-flow-description"></a>
-+ Ends the current contact flow and transfers the customer to a different contact flow\.
++ Ends the current flow and transfers the customer to a different flow\.
 
 ## Supported channels<a name="transfer-to-flow-channels"></a>
 
@@ -14,10 +14,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | Yes | 
 
-## Contact flow types<a name="transfer-to-flow-types"></a>
+## Flow types<a name="transfer-to-flow-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Transfer to Agent flow
 + Transfer to Queue flow
 

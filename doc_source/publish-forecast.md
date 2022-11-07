@@ -1,4 +1,4 @@
-# Publish a forecast \(Preview\)<a name="publish-forecast"></a>
+# Publish a forecast<a name="publish-forecast"></a>
 
 When you publish a forecast, you make it visible to other users, such as capacity planners and schedulers, so that they can use the forecasts for capacity planning and scheduling\.
 

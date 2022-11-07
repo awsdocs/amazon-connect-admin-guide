@@ -1,4 +1,4 @@
-# Contact block: Play prompt<a name="play"></a>
+# Flow block: Play prompt<a name="play"></a>
 
 ## Description<a name="play-description"></a>
 + This block can play an interruptible audio prompt, play a text\-to\-speech message, or send a chat response\.
@@ -10,9 +10,9 @@
     For example, based on a customer's preferred language, you can dynamically play a voice prompt with a local accent that greets them and thanks them for being a loyal member\. You can even concatenate multiple attributes, such as line of business or language preference to create personalized interactions; for example, reservations \+ Spanish language\.
 
 ## Requirements<a name="requirements"></a>
-+ Amazon Connect supports \.wav files to use for your prompt\. You must use \.wav files that are 8KHz, and mono channel audio with U\-Law encoding\. Otherwise, the prompt won't play correctly\. You can use publicly available third\-party tools to convert your \.wav files to U\-Law encoding\. After converting the files, upload them to Amazon Connect\.
-+ Amazon Connect supports prompts that are less than 50MB and less than five minutes long\.
-+ When storing prompts in an S3 bucket: for Regions that are disabled by default \(also called [opt\-in](https://docs.aws.amazon.com/general/latest/gr/rande-manage.html) Regions\) such as US West \(Oregon\), Africa \(Cape Town\), and AWS GovCloud \(US\-West\), your bucket must be in the same Region\.
++ **Supported formats**: Amazon Connect supports \.wav files to use for your prompt\. You must use \.wav files that are 8KHz, and mono channel audio with U\-Law encoding\. Otherwise, the prompt won't play correctly\. You can use publicly available third\-party tools to convert your \.wav files to U\-Law encoding\. After converting the files, upload them to Amazon Connect\.
++ **Size**: Amazon Connect supports prompts that are less than 50MB and less than five minutes long\.
++ **When storing prompts in an S3 bucket:** For Regions that are disabled by default \(also called [opt\-in](https://docs.aws.amazon.com/general/latest/gr/rande-manage.html) Regions\) such as Africa \(Cape Town\), your bucket must be in the same Region\.
 
 ## Supported channels<a name="play-channels"></a>
 
@@ -25,10 +25,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | Yes | 
 | Task | No \- takes the **Okay** branch but it has no effect | 
 
-## Contact flow types<a name="play-types"></a>
+## Flow types<a name="play-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer Queue flow
 + Customer Whisper flow\. You can play prompts from the Amazon Connect library but not prompts stored in Amazon S3\. 
 + Agent Whisper flow: You can play prompts from the Amazon Connect library but not prompts stored in Amazon S3\. 
@@ -85,6 +85,7 @@ For more information, see [Add text\-to\-speech to prompts](text-to-speech.md)\.
 + For step\-by\-step instructions about how to set up a dynamic prompt using contact attributes, see [Dynamically select which prompts to play](dynamically-select-prompts.md)\.
 + When playing prompts from an S3 bucket, for best performance we recommend creating the bucket in the same Region as your Amazon Connect instance\.
 + When you use text, either for text\-to\-speech or chat, you can use a maximum of 3,000 billed characters, which is 6,000 characters total\. You can also specify text in a flow using a contact attribute\.
++ Some existing flows have a version of the **Play prompt** block that doesn't have an **Error** branch\. In this case, the **Okay** branch will always be taken at runtime\. If you update the configuration of a **Play prompt** block that doesn't have an **Error** branch, an **Error** branch will be added to the block automatically in the editor\.
 + A contact is routed down the **Error** branch in the following situations:
   + Amazon Connect is unable to download the prompt from S3\. This may be due to an incorrect file path, or the S3 bucket policy is not set up correctly and Amazon Connect does not have access\. For instructions about how to apply the policy, and a template you can use, see [Set up prompts to play from an S3 bucket](setup-prompts-s3.md)\.
   + Incorrect audio file format\. Only \.wav files are supported\.

@@ -1,6 +1,6 @@
 # Set up queued callback<a name="setup-queued-callback"></a>
 
-You can create contact flows that provide the ability for customers to leave their phone number and get a callback from an agent\. 
+You can create flows that provide the ability for customers to leave their phone number and get a callback from an agent\. 
 
 Here's how queued callback works: 
 
@@ -30,12 +30,12 @@ Use the steps provided in the following overview to set up queued callback\.
 + [Set up a queue](create-queue.md) specifically for callbacks\. In your real\-time metrics reports, you can look at that queue and see how many customers are waiting for callbacks\.
 + [Set up caller ID](queues-callerid.md)\. When setting your callback queue, specify the caller ID name and phone number that appears to customers when you call back\. 
 + [Add the callback queue to a routing profile](routing-profiles.md)\. Set this up so that contacts waiting for a call are routed to agents\. 
-+ [Create a contact flow for queued callbacks](#queued-callback-contact-flow)\. You offer the option for a callback to the customer\. 
-+ [Associate a phone number with the inbound contact flow](associate-phone-number.md)\. 
++ [Create a flow for queued callbacks](#queued-callback-contact-flow)\. You offer the option for a callback to the customer\. 
++ [Associate a phone number with the inbound flow](associate-claimed-ported-phone-number-to-flow.md)\. 
 + \(Optional\) Create an outbound whisper flow\. When a queued call is placed, the customer hears this message after they pick up and before they connect to the agent\. For example, "Hello, this is your scheduled callback\.\.\."
 + \(Optional\) Create an agent whisper flow\. This is what the agent hears right after they accept the contact, before they are joined to the customer\. For example, "You're about to be connected to Customer John, who requested a refund for\.\.\."
 
-## Create a contact flow for queued callbacks<a name="queued-callback-contact-flow"></a>
+## Create a flow for queued callbacks<a name="queued-callback-contact-flow"></a>
 
 To see what a flow looks like with queued callback, in new Amazon Connect instances see [Sample queue configurations](sample-queue-configurations.md)\. In previous instances, see [Sample queued callback](sample-queued-callback.md)\.
 
@@ -51,13 +51,13 @@ At the basic level, here's what this queued callback flow looks like, without an
 
 Following are the steps to create this flow\.
 
-**To create a contact flow for queued callbacks**
+**To create a flow for queued callbacks**
 
 1. In Amazon Connect, choose **Routing**, **Contact flows**\.
 
-1. Select an existing contact flow, or choose **Create contact flow** to create a new one\.
+1. Select an existing flow, or choose **Create contact flow** to create a new one\.
 **Tip**  
-You can create this flow using different contact flow types: Customer queue flow, Transfer to agent, Transfer to queue\. 
+You can create this flow using different flow types: Customer queue flow, Transfer to agent, Transfer to queue\. 
 
 1. Add a [Get customer input](get-customer-input.md) block\.
 
@@ -69,14 +69,14 @@ You can create this flow using different contact flow types: Customer queue flow
 
 1. Add a [Store customer input](store-customer-input.md) block\.
 
-1. Configure the block to prompt customers for their callback number, such as “Please enter your phone number\.”  
+1. Configure the block to prompt customers for their callback number, such as "Please enter your phone number\."  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input.png)
 
 1. In the **Customer input** section, select **Phone number**, and then choose one of the following: 
    + **Local format**: Your customers are calling from phone numbers that are in the same country as the AWS Region where you created your Amazon Connect instance\.
    + **International format/Enforce E\.164**: Your customers are calling from phone numbers in countries or regions other than the one where you created your instance\.
 
-1. Add a [Set callback number](set-callback-number.md) block to your contact flow\.
+1. Add a [Set callback number](set-callback-number.md) block to your flow\.
 
 1. Configure the block to set **Type** to **System**\. For **Attribute**, choose **Store customer input**\. This attribute stores the customer's phone number\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callback-number2.png)
@@ -87,7 +87,7 @@ You can create this flow using different contact flow types: Customer queue flow
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-callback-queue-tab.png)
 
    The following properties are available:
-   + **Initial delay**: Specify how much time has to pass between a callback contact being initiated in the contact flow, and the customer is put in queue for the next available agent\. In the previous example, the time is 99 seconds\.
+   + **Initial delay**: Specify how much time has to pass between a callback contact being initiated in the flow, and the customer is put in queue for the next available agent\. In the previous example, the time is 99 seconds\.
    + **Maximum number of retries**: If this is set to 2, then Amazon Connect tries to call back the customer a maximum of three times: the initial callback, and two retries\. 
 
      A retry only happens if it rings but there's no answer\. If the callback goes to voicemail, it's considered connected and Amazon Connect does not retry again\.

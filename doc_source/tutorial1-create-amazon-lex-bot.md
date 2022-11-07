@@ -9,6 +9,4 @@ This step has five parts to it\.
 **Topics**
 + [Part 1: Create an Amazon Lex bot](tutorial1-create-amazon-lex-bot-step1.md)
 + [Part 2: Add intents](tutorial-lex-bot-intents.md)
-+ [Part 3: Add utterances](tutorial1-add-sample-utterances.md)
-+ [Part 4: Build and test](tutorial-lex-bot-build.md)
-+ [Part 5: Publish the Amazon Lex bot](tutorial1-lex-bot-publish.md)
++ [Part 3: Build and test](tutorial-lex-bot-build.md)

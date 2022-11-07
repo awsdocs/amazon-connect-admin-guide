@@ -19,7 +19,7 @@ The following table lists all the fields in the Customer Profiles standard order
 | AdditionalInformation | String | Any additional information relevant to the order\. | 
 | Gateway | String | The order's payment gateway\. | 
 | Status | String | The order's status\. | 
-| StatusCode | String | The order's status code\.Valid values: DRAFT \| ACTIVATED | 
+| StatusCode | String | The order's status code\. Valid values: DRAFT \| ACTIVATED | 
 | StatusUrl | String | The order's status URL\. | 
 | CreditCardNumber | String | The customer's credit card last four digits\. | 
 | CreditCardCompany | String | The customer's credit card company\. | 

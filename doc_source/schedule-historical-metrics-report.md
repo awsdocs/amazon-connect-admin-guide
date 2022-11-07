@@ -46,7 +46,7 @@ To get to the page where you can delete a scheduled report, you need to create a
 
 1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
 
-1. On the navigation menu, choose **Metrics and quality**, **Saved reports**\. 
+1. On the navigation menu, choose **Analytics**, **Saved reports**\. 
 
 1. On the **View reports** page, choose the **Historical metrics** tab\.
 

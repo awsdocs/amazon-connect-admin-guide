@@ -1,4 +1,4 @@
-# Contact block: Set callback number<a name="set-callback-number"></a>
+# Flow block: Set callback number<a name="set-callback-number"></a>
 
 ## Description<a name="set-callback-number-description"></a>
 + Specify the attribute to set the callback number\.
@@ -14,10 +14,10 @@ The following table lists how this block routes a contact who is using the speci
 | Chat | No \- Error branch | 
 | Task | No \- Error branch | 
 
-## Contact flow types<a name="set-callback-number-types"></a>
+## Flow types<a name="set-callback-number-types"></a>
 
 You can use this block in the following [contact flow types](create-contact-flow.md#contact-flow-types):
-+ Inbound contact flow
++ Inbound flow
 + Customer Queue flow
 + Transfer to Agent flow
 + Transfer to Queue flow

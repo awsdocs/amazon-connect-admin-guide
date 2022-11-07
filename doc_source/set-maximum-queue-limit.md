@@ -5,7 +5,7 @@ To determine how many contacts can be in a [standard queue](concepts-queues-stan
 This setting applies to all the contacts that are in the standard queue, across all channels\. For example, you set **Maximum contacts in queue** to 100 and configure the queue for calls, chats, and tasks\. This means the limit is set to a total of 100 concurrent calls AND chats AND active tasks in the queue\. 
 
 **Important**  
-By default you cannot set **Maximum contacts in queue** to be greater than your **Concurrent calls per instance** service quota\. If you increase the service quotas for **Active tasks per instance** or **Concurrent chats per instance**, you must update **Maximum contacts in queue** so there's enough capacity for those channels in the queue\.  
+By default you cannot set **Maximum contacts in queue** to be greater than your **Concurrent calls per instance** service quota\.  
 For information about default service quotas and how to request an increase, see [Amazon Connect service quotas](amazon-connect-service-limits.md)\.
 
 **To set Maximum contacts in queue**
