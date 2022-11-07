@@ -97,7 +97,7 @@ The customer is contacted as part of a callback flow\.
 + After the customer accepts the callback call, an [Outbound whisper flow](create-contact-flow.md#contact-flow-types) is played to customer\.
 + After these two flows are played, the agent and customer are connected and can interact\. 
 
-To summarize, for callback contacts, the follwoing contact flow types are played:
+To summarize, for callback contacts, the following contact flow types are played:
 + **Agent whisper flow**
 + **Outbound whisper flow**
 

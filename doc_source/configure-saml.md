@@ -181,7 +181,7 @@ Perform the following steps to use regional SAML endpoints\. These steps are IdP
 
    1. This step needs to be done for every role in every account that trusts the given identity provider\.
 
-   1. Edit the trust relationship, and replace the signular `SAML:aud` condition with a multivalued condition\. For example:
+   1. Edit the trust relationship, and replace the singular `SAML:aud` condition with a multivalued condition\. For example:
       + Default: "`SAML:aud`": "https://signin\.aws\.amazon\.com/saml"\. 
       + With modifications: "`SAML:aud`": \[ "https://signin\.aws\.amazon\.com/saml", "https://*region\-id*\.signin\.aws\.amazon\.com/saml" \]
 
