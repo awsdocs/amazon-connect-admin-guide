@@ -1,10 +1,10 @@
 # Create forecasts<a name="create-forecasts"></a>
 
-Forecasts are a projection of the workload in your contact center\. Amazon Connect provides long\-term and short\-term forecasts for you to generate capacity plans and agent schedules\. The forecasts include inbound, transfer, and callback contacts in both voice and chat channels\. 
+Forecasts are a projection of the workload in your contact center\. Amazon Connect provides long\-term and short\-term forecasts for you to generate capacity plans and agent schedules\. The forecasts include inbound, transfer, and callback contacts in both voice and chat channels\.
 
 After creating a forecast, you will not need to generate it manually\.
 + Short\-term forecasts are scheduled to run automatically every day\.
-+ Long\-term forecasts are scheduled to run automatically every week, starting from the day of onboarding\. For example, if you enable Amazon Connect forecasting on Monday, long\-term forecasts will be computed on the day of onboarding and automatically re\-computed every Monday\. 
++ Long\-term forecasts are automatically updated every week, based on the day you created the forecast\. For example, if you created the forecast on a Monday, it is updated every Monday\.
 + Every forecast is computed using the most current contact data\.
 + The models for short\-term and long\-term forecasts are retrained on a weekly and monthly basis respectively to incorporate the latest contact pattern\.
 + You can delete forecasts\. Downstream capacity plans and schedules created based on the forecasts will be impacted\.
@@ -15,9 +15,9 @@ After creating a forecast, you will not need to generate it manually\.
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Forecasting \- Edit**\. 
 
-   For more information, see [Required permissions](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, select **Analytics**, **Forecasting**\.
+1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Forecasting**\.
 
 1. Select the **Forecast** tab, and then choose **Create Forecast**\.
 

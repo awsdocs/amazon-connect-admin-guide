@@ -20,7 +20,7 @@ To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as
 | Domain/URL allow list | AWS Region | Ports | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
 | rtc\*\.connect\-telecom\.\{*region*\}\.amazonaws\.com This is used by ccp\# \(v1\)\. Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-|  **\*\.my\.connect\.aws** \{*myInstanceName*\}\.my\.connect\.aws/ccp\-v2 \{*myInstanceName*\}\.my\.connect\.aws/api \*\.static\.connect\.aws \*\.cloudfront\.net **\.awsapps\.com:** \{*myInstanceName*\}\.awsapps\.com/connect/ccp\-v2 \{*myInstanceName*\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{*myInstanceName*\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+|  **\*\.my\.connect\.aws** \{*myInstanceName*\}\.my\.connect\.aws/ccp\-v2 \{*myInstanceName*\}\.my\.connect\.aws/api \*\.static\.connect\.aws \*\.cloudfront\.net **\*\.awsapps\.com** \{*myInstanceName*\}\.awsapps\.com/connect/ccp\-v2 \{*myInstanceName*\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{*myInstanceName*\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \*\.telemetry\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | participant\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
 | \*\.transport\.connect\.\{*region*\}\.amazonaws\.com This is used by ccp\-v2\.  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
@@ -42,12 +42,14 @@ The following table lists the CloudFront domains used for static assets if you w
 | us\-east\-1  | https://dd401jc05x2yk\.cloudfront\.net/  https://d1f0uslncy85vb\.cloudfront\.net/  | 
 | us\-west\-2  | https://d38fzyjx9jg8fj\.cloudfront\.net/  https://d366s8lxuwna4d\.cloudfront\.net/  | 
 | ap\-northeast\-1  | https://d3h58onr8hrozw\.cloudfront\.net/  https://d13ljas036gz6c\.cloudfront\.net/  | 
+| ap\-northeast\-2  | https://d11ouwvqpq1ads\.cloudfront\.net/  | 
 | ap\-southeast\-1  | https://d2g7up6vqvaq2o\.cloudfront\.net/  https://d12o1dl1h4w0xc\.cloudfront\.net/  | 
 | ap\-southeast\-2  | https://d2190hliw27bb8\.cloudfront\.net/  https://d3mgrlqzmisce5\.cloudfront\.net/  | 
 | eu\-central\-1  | https://d1n9s7btyr4f0n\.cloudfront\.net/  https://d3tqoc05lsydd3\.cloudfront\.net/  | 
 | eu\-west\-2  | https://dl32tyuy2mmv6\.cloudfront\.net/  https://d2p8ibh10q5exz\.cloudfront\.net/  | 
 
-ca\-central isn't included in the table because we host static contents behind the domain `*.my.connect.aws` so no addition to the allow list is needed\.
+**Note**  
+ca\-central isn't included in the table because we host static contents behind the domain `*.my.connect.aws`\.
 
 If your business does not use SAML, and you have firewall restrictions, you can add the following entries per Region:
 
@@ -58,6 +60,7 @@ If your business does not use SAML, and you have firewall restrictions, you can 
 | us\-west\-2  | https://d18af777lco7lp\.cloudfront\.net/  | 
 | eu\-west\-2  | https://d16q6638mh01s7\.cloudfront\.net/  | 
 | ap\-northeast\-1  | https://d2c2t8mxjhq5z1\.cloudfront\.net/  | 
+| ap\-northeast\-2  | https://d9j3u8qaxidxi\.cloudfront\.net/  | 
 | ap\-southeast\-1  | https://d3qzmd7y07pz0i\.cloudfront\.net/  | 
 | ap\-southeast\-2  | https://dwcpoxuuza83q\.cloudfront\.net/  | 
 | eu\-central\-1  | https://d1whcm49570jjw\.cloudfront\.net/  | 
@@ -137,7 +140,7 @@ If you're using a stateless firewall for both options, use the requirements desc
 
 | IP\-Range entry | Port | Direction | Traffic | 
 | --- | --- | --- | --- | 
-| AMAZON\_CONNECT | 49152\-65535 \(UDP\) | INBOUND | SEND/RECEIVE | 
+| AMAZON\_CONNECT | For a Windows environment: 49152\-65535 \(UDP\) For a Linux environment: 32768 \- 61000 | INBOUND | SEND/RECEIVE | 
 
 ## Allow DNS resolution for softphones<a name="allow-dns-resolution"></a>
 

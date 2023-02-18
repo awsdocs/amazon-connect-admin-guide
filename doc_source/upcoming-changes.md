@@ -2,6 +2,16 @@
 
 Thanks to your feedback, we've made changes to Amazon Connect metrics\. This topic gives you an overview of the improvements\. 
 
+## November 2022<a name="new-queue-dashboard-hmr-nov2022"></a>
+
+The following updates were released in November 2022\.
+
+**Manage saved reports \(admin\)**
+
+You can view and delete all saved reports in your instance, including reports that were not created by you or that are not currently published\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-queue-dashboard-saved-reports.png)
+
 ## September 2022<a name="new-queue-dashboard-hmr-sept2022"></a>
 
 The following updates were released in September 2022\.
@@ -143,7 +153,7 @@ The maximum duration for a custom service level is 7 days\. That's because in Am
 
 **To group by channel on historical metrics reports**
 
-1. On the navigation menu, choose **Analytics**, **Historical metrics**, and then choose a report\. 
+1. On the navigation menu, choose **Analytics and optimization**, **Historical metrics**, and then choose a report\. 
 
 1. Choose **Settings**\. 
 
@@ -184,7 +194,7 @@ For more information, see [Use one\-click drill\-downs for Routing profiles and 
 
 **To group queues or routing profiles by channel on real\-time metrics reports**
 
-1. On the navigation menu, choose **Analytics**, **Real\-time metrics**, and then select either **Queues** or **Routing profiles**\.   
+1. On the navigation menu, choose **Analytics and optimization**, **Real\-time metrics**, and then select either **Queues** or **Routing profiles**\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-queues-or-routing-profiles.png)
 
 1. Choose **Settings**\.   

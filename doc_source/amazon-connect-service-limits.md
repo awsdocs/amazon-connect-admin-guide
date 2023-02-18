@@ -6,10 +6,11 @@ Your AWS account has default quotas, formerly referred to as limits, for each AW
 
 To request a quota increase, see [Requesting a quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html) in the *Service Quotas User Guide*\. If the quota is not yet available in Service Quotas, use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 
-**Considerations**
+**Important things to know**
 + You must create your instance before you can request a service quota increase\.
 + It can take up to a few weeks to increase your service quota\. If you're increasing your quotas as part of a larger project, be sure to add this time to your plan\.
 + Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port your current phone number](port-phone-number.md)\.
++ The quotas apply per [AWS Region](https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html#intro_getting-started)\. You can have multiple Amazon Connect instances in each Region\.  It's possible to raise quotas for all instances in a Region\.
 + This documentation describes the default quotas for new accounts\. Because the quotas have been adjusted over time, the default values for your account might be different than the default values described here\.
 
 ## Amazon Connect quotas<a name="connect-quotas"></a>
@@ -59,13 +60,40 @@ To request a quota increase, see [Requesting a quota increase](https://docs.aws.
 
 | Name | Default | Adjustable | 
 | --- | --- | --- | 
-|  Cases domains per AWS account  |  2  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
+|  Cases domains per AWS account  |  5  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
 |  Fields in a Cases domain  |  50  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
 |  Field options per single\-select field in the Cases domain  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
 |  Layouts in a Cases domain  |  25  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
 |  Templates in a Cases domain  |  25  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
 |  Related items that can be attached to a case  |  50  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-14092FF4) | 
 |  Case fields per case template  |  30  | No | 
+
+## Contact Lens service quotas<a name="contactlens-quotas"></a>
+
+
+| Name | Default | Adjustable | 
+| --- | --- | --- | 
+|  Concurrent real\-time calls with analytics  |  50 100 for US East \(N\. Virginia\)  | Yes | 
+|  Concurrent post\-call analytics jobs  |  200  See [Derive Concurrent post\-call analytics jobs based on your Amazon Connect call volume](#contactlens-concurrent-analytics-jobs)\.   | Yes | 
+|  Concurrent post\-chat analytics jobs  |  200  | Yes | 
+
+### Derive Concurrent post\-call analytics jobs based on your Amazon Connect call volume<a name="contactlens-concurrent-analytics-jobs"></a>
+
+A post\-contact \(call or chat\) analytics job is kicked off after the completion of each contact with Contact Lens enabled\.  The time to complete a post\-contact analytics job is about 40% of the call length\. To calculate concurrent post\-call analytics jobs, use the following formula: 
+
+`(average call duration in minutes) * (0.4) * (calls per hour) / (60)`
+
+The following table shows some examples\.
+
+
+| Average call duration \(in minutes\) | Calls per hour\* | Approximate Concurrent post\-call jobs | 
+| --- | --- | --- | 
+|  5  |  1000  | 33 | 
+|  10  |  500  | 33 | 
+|  10  |  1000  | 67 | 
+|  10  |  3000  | 200 | 
+
+\*For the calculations in the preceding table, we assume a fairly uniform distribution of calls during the hour\. If you have more complex traffic patterns, [contact AWS Support](https://console.aws.amazon.com/support/home) with details about your anticipated traffic pattern\.
 
 ## Amazon Connect Customer Profiles service quotas<a name="customer-profiles-quotas"></a>
 
@@ -157,7 +185,7 @@ If you're only taking calls you can also determine your concurrent calls quota b
 ### Amazon Connect API throttling quotas<a name="connect-api-quotas"></a>
 
 Amazon Connect throttling quotas are by account, and per Region, not by user and not by instance\. For example: 
-+ If different IAM users from the same account make requests, they are sharing a throttle bucket\. 
++ If different users from the same account make requests, they are sharing a throttle bucket\. 
 + If multiple requests are sent from different instances from the same account, they are also sharing a throttle bucket\. 
 
  When you use the [Amazon Connect Service API ](https://docs.aws.amazon.com/connect/latest/APIReference/welcome.html), the number of requests per second is limited to the following:
@@ -183,7 +211,7 @@ For the Amazon Connect Participant Service, the quotas are by instance\.
 ### Amazon Connect Contact Lens Service API throttling quotas<a name="connect-contactlens-api-quotas"></a>
 
 Amazon Connect Contact Lens throttling quotas are by account, not by user and not by instance\. For example:
-+ If different IAM users from the same account make requests, they are sharing a throttle bucket\.
++ If different users from the same account make requests, they are sharing a throttle bucket\.
 + If multiple requests are sent from different instances from the same account, they are also sharing a throttle bucket\. 
 
 When you use the [Amazon Connect Contact Lens API](https://docs.aws.amazon.com/contact-lens/latest/APIReference/Welcome.html), the number of requests per second is limited to the following:

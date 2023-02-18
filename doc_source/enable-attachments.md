@@ -62,9 +62,8 @@ To allow customers and agents to upload and download files, update your cross\-o
                  "GET"            
              ],
              "AllowedOrigins": [
-                 "http://www.example1.com",   //List the endpoints from where attachments will be sent and received, 
-                 "http://www.example2.com"    //such as the name of your business web site. 
-            ],
+                 "http://www.example1.com", 
+                 "http://www.example2.com"    
             "AllowedHeaders": [
                  "*"
             ]

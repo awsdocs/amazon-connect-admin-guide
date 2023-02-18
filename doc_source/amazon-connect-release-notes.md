@@ -2,7 +2,140 @@
 
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
+## February 2023 Updates<a name="feb23-release-notes"></a>
+
+### Added support for more granular access controls \(using resource tags\) to view real\-time metrics for agents, queues, and routing profiles<a name="tag-based-access-control-real-time-metrics-feb23"></a>
+
+You can enable more granular access controls for real\-time metrics by configuring resource tags and access control tags within security profiles in the Amazon Connect admin website\. For more information, see [Real\-time tag\-based access control](https://docs.aws.amazon.com/connect/latest/adminguide/rtm-tag-based-access-control.html) and [Tag based access control in Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/tag-based-access-control.html)\.
+
+### Added support to provide more granular permissions to metrics reports, including new permissions for real\-time metrics, historical metrics, and agent activity audit<a name="rtm-granular-permissions-metric-reports-feb23"></a>
+
+You can configure more granular permissions to metrics and reports from within security profiles in the Amazon Connect admin website\. For more information, see [Permissions required to view real\-time metrics reports](https://docs.aws.amazon.com/connect/latest/adminguide/rtm-permissions.html) and [Agent activity audit permissions](https://docs.aws.amazon.com/connect/latest/adminguide/agent-activity-audit-permissions.html)\.
+
+### Added support to provide visibility into an agent’s next activity<a name="agent-activity-visability-feb23"></a>
+
+You can view an agent’s next activity in the real\-time metrics agent table in the Amazon Connect real\-time metrics UI and by using the public API\. For more information, see the [NextStatus API reference](http://amazonaws.com/connect/latest/APIReference/API_UserData.html#connect-Type-UserData-NextStatus)\.
+
+### Apply S3 Object Lock for the call recordings bucket<a name="objectlock-feb23"></a>
+
+You can use Amazon S3 Object Lock in combination with your call recording bucket to help prevent call recordings from being deleted or overwritten for a fixed amount of time, or indefinitely\. For more information, see [How to set up S3 Object Lock for immutable call recordings](https://docs.aws.amazon.com/connect/latest/adminguide/set-up-recordings.html#s3-object-lock-call-recordings)\.
+
+### CloudFormation templates for instance management<a name="cfn-feb23"></a>
+
+You can use CloudFormation templates to manage Amazon Connect instances for associating Amazon Lex and Lex V2 bots, Lambda functions, security keys, and approved origins—along with the rest of your AWS infrastructure—in a secure, efficient, and repeatable way\. For more information, see [Amazon Connect resource type reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Connect.html) in the *AWS CloudFormation User Guide*\.
+
+## January 2023 Updates<a name="jan23-release-notes"></a>
+
+### Added long lasting, persistent chat experiences<a name="chat-jan23"></a>
+
+Amazon Connect makes it easier for you to deliver long lasting, persistent chat experiences for your customers\. Persistent chats enable customers to resume previous conversations with the context, metadata, and transcripts carried over, eliminating the need for customers to repeat themselves and allowing agents to provide personalized service with access to the entire conversation history\. To set up persistent chat experiences, provide a previous contact ID when calling the [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API to create a new chat contact\.
+
+For more information, see [Enable persistent chat](https://docs.aws.amazon.com/connect/latest/adminguide/chat-persistence.html)\. Also see changes to [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) in the *Amazon Connect API Reference Guide*, and see the new `RelatedContactId` parameter in the [GetTranscript](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_GetTranscript.html) API in the *Amazon Connect Participant Service API Reference Guide*\.
+
+## December 2022 Updates<a name="dec22-release-notes"></a>
+
+### Added message receipts feature for chat messages<a name="messages-dec-2022"></a>
+
+The message receipts feature allows customers to receive *Message delivered* and *Read* receipts after they send a chat message\. For more information, see [Enable message Delivered and Read receipts in your chat user interface](https://docs.aws.amazon.com/connect/latest/adminguide/message-receipts.html)\. Also see the [SendEvent](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_SendEvent.html) action, and the [Item](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_Item.html), [MessageMetadata](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_MessageMetadata.html), and [Receipt](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_Receipt.html) data types in the *Amazon Connect Participant Service API Reference Guide*\. 
+
+### Updates to GetCurrentMetricData and GetCurrentUserData<a name="getcurrentmetricdata-dec-2022"></a>
+
+For the [GetCurrentMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentMetricData.html) API, added support for routing profile filter, sort criteria, and grouping by routing profiles\. For the [GetCurrentUserData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCurrentUserData.html) API, added support for routing profiles, user hierarchy groups, and agents as filters, and next status and agent status name\. For both APIs, added ApproximateTotalCount\.
+
+### Added chat timeouts for chat participants<a name="chat-timeouts-dec-2022"></a>
+
+When a chat conversation between an agent and a customer has been inactive \(no messages sent\) for a certain amount of time, you may want to consider a chat participant to be idle, and you may even want to automatically disconnect an agent from the chat\. To set up chat timeout timers, see [Set up chat timeouts for chat participants](https://docs.aws.amazon.com/connect/latest/adminguide/setup-chat-timeouts.html)\. 
+
+### Microsoft Edge Chromium support<a name="edge-dec-2022"></a>
+
+Amazon Connect now supports Microsoft Edge Chromium\. For more information about supported browsers, see [Browsers supported by Amazon Connect\.](https://docs.aws.amazon.com/connect/latest/adminguide/browsers.html) 
+
+### Amazon Connect supports JSON as a content type for chat messages<a name="jsoncontenttype-dec-2022"></a>
+
+By supporting JSON as a content type, Amazon Connect provides you with a way to pass additional information over chat to provide rich personalized experiences\. For example, rendering updates to a custom UI, customer\-built interactive messages, language translation capabilities, and passing customer metadata to a third party bot\. For more information, see [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) in the *Amazon Connect API Reference Guide*, and [SendMessage](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_SendMessage.html) in the *Amazon Connect Participant Service API Reference Guide*\. 
+
+### Added topic on Amazon Connect availability by Region<a name="regions-dec-2022"></a>
+
+For more information, see [Availability of Amazon Connect services by Region](https://docs.aws.amazon.com/connect/latest/adminguide/regions.html)\. 
+
+### Contact Lens granular data redaction<a name="contactlens-redaction-dec-2022"></a>
+
+When you set up Contact Lens sensitive data redaction, you can choose which entities you want to redact, and how you want the redaction to appear in the transcript\. For more information, see [Enable redaction of sensitive data](https://docs.aws.amazon.com/connect/latest/adminguide/enable-analytics.html#enable-redaction)\. 
+
+### Additional Contact Lens language support and Region availability<a name="contactlens-regions-dec-2022"></a>
+
+Contact Lens now [supports the following languages](https://docs.aws.amazon.com/connect/latest/adminguide/supported-languages.html#supported-languages-contact-lens): English \- New Zealand, English \- South Africa\. It is also [available in the following Regions](https://docs.aws.amazon.com/connect/latest/adminguide/enable-analytics.html#regions-contactlens): Africa \(Cape Town\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\)\. 
+
+### Released Barge to allow contact center managers to join ongoing calls<a name="monitor-barge-dec-2022"></a>
+
+Barge allows managers to join and participate in an ongoing customer service call between a contact center agent and customer\. After joining the call, a manager can speak with the customer, add participants, and even choose to remove an agent if needed\. For more information, see [Barge live conversations](https://docs.aws.amazon.com/connect/latest/adminguide/monitor-barge.html)\.
+
+### Added user hierarchy to bulk user upload<a name="bulk-userupload-dec-2022"></a>
+
+You can assign the user hierarchy in the \.csv file when you add users in bulk\. For more information, see [Add users in bulk](https://docs.aws.amazon.com/connect/latest/adminguide/user-management.html)\.
+
+### Granular access controls using resource tags for users, security profiles, routing profiles, and queues<a name="tag-based-access-control-dec-2022"></a>
+
+You can now enable more granular access controls for security profiles, users, routing profiles, and queues by configuring resource tags within the Amazon Connect console\. You can add resource tags to filter and organize these resources logically, and configure access control tags within security profiles to enforce granular permissions\. For more information, see [Tagging resources in Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/tagging.html) and [Tag based access controls in Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/tag-based-access-control.html)\.
+
+### Bulk user import now includes agent hierarchy and tags<a name="bulk-user-import-tags-dec-2022"></a>
+
+Amazon Connect now allows you to configure hierarchies and resource tags for users in bulk\. You can now assign agent hierarchies and resource tags to each agent using the CSV bulk upload template which is available on the user management page\. For more information, see [Tagging resources in Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/user-management.html)\.
+
+### Released Rules Function language<a name="rules-language-dec-2022"></a>
+
+The Rules Function language is a JSON\-based representation of a series of rule conditions\. Use it to programmatically add conditions to rules\. For more information, see [Amazon Connect Rules Function language](https://docs.aws.amazon.com/connect/latest/APIReference/connect-rules-language.html) in the *Amazon Connect API Reference Guide*\.
+
+### GA for Rules APIs<a name="rules-api-ga-dec-2022"></a>
+
+Released a set of Rules APIs that enable you to programmatically create and manage rules\. For more information, see [Rules actions](https://docs.aws.amazon.com/connect/latest/APIReference/rules-api.html) in the *Amazon Connect API Reference*\.
+
+### Search contacts by agent's first or last name is available in AWS GovCloud<a name="search-contacts-dec-2022"></a>
+
+For more information, see [Search contacts by agent's first or last name](https://docs.aws.amazon.com/connect/latest/adminguide/search-contacts-agent-name.html)\.
+
 ## November 2022 Updates<a name="nov22-release-notes"></a>
+
+### Create step\-by\-step guides for your agents<a name="step-by-step-guides-nov-2022"></a>
+
+Inside the out\-of\-the\-box Connect agent workspace, you can now create workflows that walk agents through custom UI pages that suggest what to do at a given moment during a customer interaction\. You can create guides that help agents identify customer issues and recommend subsequent actions, as well as surface screen\-pops and forms for submitting transactions and disposition codes\. For more information, see [Agent Workspace guided experience](https://docs.aws.amazon.com/connect/latest/adminguide/step-by-step-guided-experiences.html)\.
+
+### GA for Forecasting, capacity planning, and scheduling<a name="forecasting-nov-2022"></a>
+
+Amazon Connect provides a set of services powered by machine learning that help you optimize your contact center by offering the following:
++ Forecasting\. Analyze and predict contact volume based on historical data\.
++ Scheduling\. Generate agent schedules for day\-to\-day workloads that are flexible, and meet business and compliance requirements\.
++ Capacity planning\. Predict how many agents your contact center will require\. 
+
+For more information, see [Forecasting, capacity planning, and scheduling](https://docs.aws.amazon.com/connect/latest/adminguide/forecasting-capacity-planning-scheduling.html)\. 
+
+### Released Contact Lens evaluation forms for preview<a name="contactlens-chat-nov-2022"></a>
+
+You can create evaluation forms, and then make them available to managers to review conversations alongside contact details, recordings, transcripts, and summaries, without the need to switch applications\. Conversational analytics automatically pre\-populates evaluation scores for criteria like script adherence, sensitive data collection, and customer greetings\. For more information, see [Evaluate performance \(Preview\)](https://docs.aws.amazon.com/connect/latest/adminguide/evaluations.html)\. 
+
+### Released Contact Lens conversational analytics capabilities for Amazon Connect chat<a name="contactlens-chat-nov-2022"></a>
+
+Contact Lens for Amazon Connect provides conversational analytics capabilities for Amazon Connect chat, extending the machine learning powered analytics to better assess chat contacts\. For more information, see [Analyze conversations using Contact Lens for Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/analyze-conversations.html)\. 
+
+### Added configurable Lex timeouts in chat<a name="lextimeouts-nov-2022"></a>
+
+You can configure how long to wait for a response from a customer in a chatbot conversation before the session expires\. For more information, see *Configurable time\-outs for chat input* in the [Get customer input](https://docs.aws.amazon.com/connect/latest/adminguide/get-customer-input.html) topic\. 
+
+### Create rules that send email notifications<a name="rules-nov-2022"></a>
+
+You can create Contact Lens rules that send email notifications to people in your organization\. For more information, see [Create Contact Lens rules that send email notifications](https://docs.aws.amazon.com/connect/latest/adminguide/contact-lens-rules-email.html)\. 
+
+### Added MonitorContact API<a name="monitor-contact-api-nov-2022"></a>
+
+Added a new API for programmatically initiating monitoring of ongoing contacts\. For more information, see [MonitorContact API](https://docs.aws.amazon.com/connect/latest/APIReference/API_MonitorContact.html)\. 
+
+### Manage saved reports \(admin\)<a name="managed-saved-reports-nov-2022"></a>
+
+You can view and delete all saved reports in your instance, including reports that were not created by you or that are not currently published\. For more information, see [Manage saved reports \(admin\)](https://docs.aws.amazon.com/connect/latest/adminguide/manage-saved-reports-admin.html)\. 
+
+### Search for profiles using multiple search keys<a name="multi-key-search-nov-2022"></a>
+
+In addition to searching for profiles with a single search key \(i\.e\., a key\-values\(s\) pair\), the SearchProfiles API has been enhanced to support searching for profiles using multiple keys and logical operators\. This new functionality allows you to use between 1 and 5 search keys with `AND` or `OR` logic to find profiles with attributes that match the search criteria\. For more information, see the [SearchProfiles API reference](https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_SearchProfiles.html)\. 
 
 ### Delete quick connects using the Amazon Connect console<a name="quickconnects-nov-2022"></a>
 
@@ -103,9 +236,6 @@ Contact center supervisors or managers track schedule adherence to understand wh
 ## July 2022 Updates<a name="july22-release-notes"></a>
 
 ### Search for contacts by using the agent's first or last name<a name="contact-search-july22"></a>
-
-**Note**  
-This feature is not available in AWS GovCloud\.
 
 You can search for contacts using the agent's first or last name\. The filter name is **Agent**\. To view an image of this experience, see [Search contacts by agent's first or last name](contact-search.md#search-contacts-agent-name)\.
 
@@ -571,7 +701,7 @@ To help you validate connectivity to Amazon Connect, or troubleshoot when your a
 
 #### Contact Lens: Availability of real\-time analytics<a name="february21-contact-lens"></a>
 
-Content Lens real\-time analytics is available in Europe \(London\), Europe \(Frankfurt\), and Asia \(Tokyo\)\. For more information, see [Availability of Contact Lens features by Region](enable-analytics.md#regions-contactlens)\.
+Content Lens real\-time analytics is available in Europe \(London\), Europe \(Frankfurt\), and Asia \(Tokyo\)\. For more information, see [Contact Lens features by Region](regions.md#regions-contactlens)\.
 
 #### Ingest data into Customer Profiles using Amazon S3<a name="february21-customer-profiles"></a>
 
@@ -589,7 +719,7 @@ Added the ability to create custom service levels\. For details, see [New metric
 
 #### CCP: Change your audio settings<a name="january21-audio-settings"></a>
 
-Added the ability to change audio settings from the Contact Control Panel \(CCP\)\. This applies to organizations using a customized CCP\. For more information, see [Change your audio device settings](audio-device-settings.md)\.
+Added the ability to change audio settings from the Contact Control Panel \(CCP\)\. This applies to organizations using a customized CCP\. For more information, see [Change your audio device settings in the CCP](audio-device-settings.md)\.
 
 #### Queue APIs \(Preview\)<a name="january21-queue-apis"></a>
 
@@ -721,7 +851,7 @@ The following updates were released in September 2020:
   + [GetTranscript](amazon-connect-service-limits.md#connect-participant-api-quotas) 
 
 #### Contact flows<a name="september20-contact-flows"></a>
-+ Added the Amazon Connect Flow language, a JSON\-based representation of a series of flow actions, and the criteria for moving between them\. For more information, see [Amazon Connect Flow language](flow-language.md)\. 
++ Added the Amazon Connect Flow language, a JSON\-based representation of a series of flow actions, and the criteria for moving between them\. For more information, see [Flow language](https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html)\. 
 
 #### APIs<a name="september20-apis"></a>
 
@@ -737,7 +867,6 @@ Added the following API to list prompts:
 Added the following APIs for routing profiles:
 + [AssociateRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_AssociateRoutingProfileQueues.html)
 + [CreateRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateRoutingProfile.html) 
-+ [DeleteRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteRoutingProfile.html)
 + [DescribeRoutingProfile](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeRoutingProfile.html)
 + [DisassociateRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_DisassociateRoutingProfileQueues.html)
 + [ListRoutingProfileQueues](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListRoutingProfileQueues.html)
@@ -855,7 +984,7 @@ The following updates were released in January 2020:
 #### Contact Control Panel \(CCP\)<a name="jan20-ccp"></a>
 
 The following updates were made to the updated Contact Control Panel \(ccp\-v2\):
-+ Agents can now transfer a contact by double\-clicking a quick connect\. For more information, see [Transfer calls to a quick connect or external number](transfers.md)\.
++ Agents can now transfer a contact by double\-clicking a quick connect\. For more information, see [Transfer calls to a quick connect or external phone number](transfers.md)\.
 + The number pad now retains the previously selected country flag so agents don't need to select it every time\.
 + All strings in the CCP user interface are now localized in available languages\.
 + Resolved an issue where the color of the call status bar incorrectly displayed as green during a conference call when the call was in the Joined state\. It is now blue\.

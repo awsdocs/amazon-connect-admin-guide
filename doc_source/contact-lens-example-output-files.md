@@ -1,31 +1,18 @@
-# Example Contact Lens output files<a name="contact-lens-example-output-files"></a>
+# Example Contact Lens output files for a call<a name="contact-lens-example-output-files"></a>
 
-## Example output locations<a name="example-contact-lens-output-locations"></a>
+## Example original, analyzed file for a call<a name="example-original-output-file"></a>
 
-Following are examples of what Contact Lens output files look like when they are stored in the Amazon S3 bucket for your instance\. 
-+ Original analyzed transcript file \(JSON\)
-  + /connect\-instance\- bucket/**Analysis/Voice**/2020/02/04/*contact's\_ID*\_**analysis**\_2020\-02\-04T21:14:16Z\.json
-+ Redacted analyzed transcript file in \(JSON\)
-  + /connect\-instance\- bucket/**Analysis/Voice/Redacted**/2020/02/04/*contact's\_ID*\_**analysis\_redacted**\_2020\-02\-04T21:14:16Z\.json
-+ Redacted audio file
-  + /connect\-instance\- bucket/**Analysis/Voice/Redacted**/2020/02/04/*contact's\_ID*\_**call\_recording\_redacted**\_2020\-02\-04T21:14:16Z\.**wav**
-
-**Important**  
-To delete a recording, you must delete the files for both the redacted and unredacted recordings\. 
-
-## Example original, analyzed file<a name="example-original-output-file"></a>
-
-This section shows an example schema for a conversation that Contact Lens has analyzed\. The example shows loudness, issue detection/call drivers, and what information is going to be redacted\.
+This section shows an example schema for a call that Contact Lens has analyzed\. The example shows loudness, issue detection/call drivers, and what information is going to be redacted\.
 
 Note the following about the analyzed file:
 + It doesn't indicate what sensitive data was redacted\. All data are referred to as PII \(personally identifiable information\)\.
-+ Each turn includes a `Redacted` section only if it includes PII\.
-+ If a `Redacted` section exists, it includes the offset in milliseconds\. In a \.wav file, the redacted portion will be silence\. If desired, you can use the offset to replace the silence with something else, such as a beep\. 
++ Each turn includes a `Redaction` section only if it includes PII\.
++ If a `Redaction` section exists, it includes the offset in milliseconds\. In a \.wav file, the redacted portion will be silence\. If desired, you can use the offset to replace the silence with something else, such as a beep\. 
 + If two or more PII redactions exist in a turn, the first offset applies to the first PII, the second offset applies to the second PII, and so on\.
 
 ```
 {
-    "Version": "1.1.0",
+    "Version": "VOICE-2022-11-30",    
     "AccountId": "your AWS account ID",
     "Channel": "VOICE",
     "ContentMetadata": {
@@ -323,19 +310,25 @@ Note the following about the analyzed file:
 }
 ```
 
-## Example redacted file<a name="example-redacted-file"></a>
+## Example redacted file for a call<a name="example-redacted-file"></a>
 
-This section shows an example redacted file\. It's a twin of the original analyzed file\. The only difference is that sensitive data are redacted\. 
+This section shows an example redacted file for a call\. It's a twin of the original analyzed file\. The only difference is that sensitive data are redacted\. In this example, three entities were selected for redaction: "`CREDIT_DEBIT_NUMBER`", "`NAME`", "`USERNAME`"\.
+
+In this example, `RedactionMaskMode` is set to PII\. When an entity is redacted, Contact Lens replaces it with `[PII]`\. If it were set to `ENTITY_TYPE`, Contact Lens would replace the data with the name of the entity, for example, `[CREDIT_DEBIT_NUMBER]`\.
 
 ```
 {
-    "Version": "1.1.0",
+    "Version": "VOICE-2022-11-30", 
     "AccountId": "your AWS account ID",
     "ContentMetadata": {
-        "RedactionTypes": [
-            "PII"
-        ],
-        "Output": "Redacted"
+        "Output": "Redacted",
+        "RedactionTypes": ["PII"],
+        "RedactionTypesMetadata": {
+            "PII": {
+                "RedactionEntitiesRequested": ["CREDIT_DEBIT_NUMBER", "NAME", "USERNAME"],
+                "RedactionMaskMode": "PII" // if you were to choose ENTITY_TYPE instead, the redaction would say, for example, [NAME]
+            }
+        }
     },
     "Channel": "VOICE",
     "JobStatus": "COMPLETED",
@@ -456,7 +449,7 @@ This section shows an example redacted file\. It's a twin of the original analyz
         },
         {
             "BeginOffsetMillis": 160,
-            "Content": "Just hello. My name is [PII] and help.",
+            "Content": "Just hello. My name is [PII] and help.",  
             "EndOffsetMillis": 4640,
             "Id": "the ID of the turn",
             "ParticipantId": "CUSTOMER",

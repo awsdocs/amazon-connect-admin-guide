@@ -36,11 +36,11 @@ For information about choosing a prompt from the Amazon Connect library or an S3
 
 You can configure this block to accept DTMF input or a chat response\. You can also configure it work with Amazon Lex; for example, a contact can be routed based on their utterance\. To learn how to set up a Lex bot, see [Tutorial 3: Create an IT help desk](tutorial1-create-helpdesk.md)\. 
 
-### DTMF tab properties<a name="get-customer-input-dtmf"></a>
+## DTMF tab properties<a name="get-customer-input-dtmf"></a>
 + **Audio prompt**: Select from a list of default audio prompts, or upload your own audio prompt\. 
 + **Set timeout**: Specify how long to wait while the user decides how they want to respond to the prompt\. The maximum timeout you can set is 179 seconds\.
 
-### Amazon Lex tab properties<a name="get-customer-input-lex-tab-properties"></a>
+## Amazon Lex tab properties<a name="get-customer-input-lex-tab-properties"></a>
 
 ------
 #### [ Amazon Lex ]
@@ -50,14 +50,14 @@ Your language attribute in Amazon Connect must match the language model used to 
 + **Lex bot properties**: After you create your Lex bot, enter the name and alias of the bot here\. Only built bots appear in the drop\-down list\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties2.png)
 **Important**  
-In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime Service Quotas](https://docs.aws.amazon.com/lexv2/latest/dg/gl-limits.html#gl-limits-runtime) or [Runtime Service Quotas \(Amazon Lex Classic\)](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
+In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime quotas](https://docs.aws.amazon.com/lexv2/latest/dg/quotas.html#quotas-service) or [Runtime Service Quotas \(Amazon Lex Classic\)](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
 + **Session attributes**: Specify attributes that apply to the current contact's session only\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties3.png)
 + **Use sentiment override**: Branch based on sentiment score, before the Amazon Lex intent\. 
 
   The sentiment score is based on the last utterance of the customer\. It is not based on the entire conversation\.
 
-  For example, a customer calls and they have an angry tone because their preferred appointment time isn't available\. You can branch the flow based on their negative sentiment score, for example, if their negative sentiment is more than 80%\. Or, a customer calls and has a positive sentiment of more than 80%, you can branch to upsell them on services\.  
+  For example, a customer calls and they have a negative sentiment because their preferred appointment time isn't available\. You can branch the flow based on their negative sentiment score, for example, if their negative sentiment is more than 80%\. Or, a customer calls and has a positive sentiment of more than 80%, you can branch to upsell them on services\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties5.png)
 
   If you add both negative and positive sentiment scores, the negative score is always evaluated first\. 
@@ -69,13 +69,13 @@ In a production environment, always use a different alias than **TestBotAlias** 
 + **Lex bot properties**: After you create your Lex bot, enter the name and alias of the bot here\. Only published bots appear in the drop\-down list\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties2.png)
 **Important**  
-In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime Service Quotas](https://docs.aws.amazon.com/lexv2/latest/dg/gl-limits.html#gl-limits-runtime) or [Runtime Service Quotas \(Amazon Lex Classic\)](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
+In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime quotas](https://docs.aws.amazon.com/lexv2/latest/dg/quotas.html#quotas-service) or [Runtime Service Quotas \(Amazon Lex Classic\)](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
 + **Session attributes**: Specify attributes that apply to the current contact's session only\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties3.png)
 
 ------
 
-### Configurable time\-outs for voice input<a name="get-customer-input-configurable-timeouts"></a>
+## Configurable time\-outs for voice input<a name="get-customer-input-configurable-timeouts"></a>
 
 To configure time\-out values for voice contacts, use the following session attributes in the **Get customer input** block that calls your Lex bot\. These attributes allow you to specify how long to wait for the customer to finish speaking before Amazon Lex collects speech input from callers, such as answering a yes/no question, or providing a date or credit card number\. 
 
@@ -87,7 +87,7 @@ To configure time\-out values for voice contacts, use the following session attr
 
   How long the customer speaks before the input is truncated and returned to Amazon Connect\. You can increase the time when a lot of input is expected or you want to give customers more time to provide information\. 
 
-  Default = 13000 milliseconds \(13 seconds\)\. The maximum allowed value is 15000 milliseconds\. 
+  Default = 12000 milliseconds \(12 seconds\)\. The maximum allowed value is 15000 milliseconds\. 
 **Important**  
 If you set **Max Speech Duration** to more than 15000 milliseconds, the contact is routed down the **Error** branch\. 
 + **Start Silence Threshold**
@@ -96,7 +96,7 @@ If you set **Max Speech Duration** to more than 15000 milliseconds, the contact 
 
   How long to wait before assuming that the customer isn't going to speak\. You can increase the allotted time in situations where you'd like to allow the customer more time to find or recall information before speaking\. For example, you might want to give customers more time to get out their credit card so they can enter the number\. 
 
-  Default = 4000 milliseconds \(4 seconds\)\.
+  Default = 3000 milliseconds \(3 seconds\)\.
 + **End Silence Threshold**
 
   `x-amz-lex:audio:end-timeout-ms:[intentName]:[slotToElicit] ` 
@@ -113,7 +113,7 @@ If you set **Max Speech Duration** to more than 15000 milliseconds, the contact 
 
   How long the customer speaks before the input is truncated and returned to Amazon Connect\. You can increase the time when a lot of input is expected or you want to give customers more time to provide information\. 
 
-  Default = 13000 milliseconds \(13 seconds\)\. The maximum allowed value is 15000 milliseconds\. 
+  Default = 12000 milliseconds \(12 seconds\)\. The maximum allowed value is 15000 milliseconds\. 
 **Important**  
 If you set **Max Speech Duration** to more than 15000 milliseconds, the contact is routed down the **Error** branch\. 
 + **Start Silence Threshold**
@@ -122,7 +122,7 @@ If you set **Max Speech Duration** to more than 15000 milliseconds, the contact 
 
   How long to wait before assuming that the customer isn't going to speak\. You can increase the allotted time in situations where you'd like to allow the customer more time to find or recall information before speaking\. For example, you might want to give customers more time to get out their credit card so they can enter the number\. 
 
-  Default = 4000 milliseconds \(4 seconds\)\.
+  Default = 3000 milliseconds \(3 seconds\)\.
 + **End Silence Threshold**
 
   `x-amz-lex:end-silence-threshold-ms:[intentName]:[slotToElicit]` 
@@ -133,7 +133,17 @@ If you set **Max Speech Duration** to more than 15000 milliseconds, the contact 
 
 ------
 
-### Barge\-in configuration and usage for Amazon Lex<a name="get-customer-input-bargein"></a>
+## Configurable time\-outs for chat input during a Lex interaction<a name="get-customer-input-configurable-timeouts-chat"></a>
+
+Use the **Chat timeout** field under **Intents** to configure timeouts for chat input\. Enter how long until inactive customers timeout in a Lex interaction\.
++ Minimum: 1 minute
++ Maximum: 7 days
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-chattimeout.png)
+
+For information about setting up chat timeouts when all participants are human, see [Set up chat timeouts for chat participants](setup-chat-timeouts.md)\. 
+
+## Barge\-in configuration and usage for Amazon Lex<a name="get-customer-input-bargein"></a>
 
 You can allow customers to interrupt the Amazon Lex bot mid\-sentence using their voice, without waiting for it to finishing speaking\. Customers familiar with choosing from a menu of options, for example, can now do so without having to listen to the entire prompt\.
 
@@ -141,7 +151,7 @@ You can allow customers to interrupt the Amazon Lex bot mid\-sentence using thei
 #### [ Amazon Lex ]
 + **Barge\-in**
 
-  Barge\-in is enabled globally by default\. You can disable it in the Amazon Lex console\. For more information, see [Enabling your bot to be interrupted by your user](https://docs.aws.amazon.com/lexv2/latest/dg/interrupt-bot.html)\.
+  Barge\-in is enabled globally by default\. You can disable it in the Amazon Lex console\. For more information, see [Enabling your bot to be interrupted by your user](https://docs.aws.amazon.com/lexv2/latest/dg/interrupt-bot.html)\. Additionally, you can modify barge\-in behavior, by using the `allow-interrupt` session attribute\. For more information, see [ Configuring timeouts for capturing user input](https://docs.aws.amazon.com/lexv2/latest/dg/session-attribs-speech.html)\.
 
 ------
 #### [ Amazon Lex \(Classic\) ]
@@ -154,7 +164,7 @@ You can allow customers to interrupt the Amazon Lex bot mid\-sentence using thei
 
 ------
 
-### Configurable fields for DTMF input<a name="get-customer-input-configurable-dtmf"></a>
+## Configurable fields for DTMF input<a name="get-customer-input-configurable-dtmf"></a>
 
 Use the following session attributes to specify how your Lex bot responds to DTMF input\. 
 + **End character**
@@ -188,11 +198,12 @@ Use the following session attributes to specify how your Lex bot responds to DTM
 
 For more information, see [How to use Lex session attributes](how-to-use-session-attributes.md)\.
 
-### Intents<a name="get-customer-input-intents"></a>
+## Intents<a name="get-customer-input-intents"></a>
 + Enter the intents you created in Amazon Lex\. They are case sensitive\!  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-configure-get-customer-input3.png)
 
 ## Configuration tips<a name="get-customer-input-tips"></a>
++ This topic explains some of the session attributes available for the integration with Amazon Lex\. For a list of all the available Amazon Lex session attributes, see [Configuring timeouts for capturing user input](https://docs.aws.amazon.com/lexv2/latest/dg/session-attribs-speech)\. 
 + When you use text, either for text\-to\-speech or chat, you can use a maximum of 3,000 billed characters \(6,000 total characters\)\.
 + Amazon Lex bots support both spoken utterances and keypad input when used in a flow\.
 + For both voice and DTMF, there can be only one set of session attributes per conversation\. Following is the order of precedence: 
@@ -253,7 +264,7 @@ When this block is configured, it looks similar to the following image:
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-configured.png)
 
-1. **Timeout**: What to do when the time in the **Set timeout** property has elapsed\. This branch appears only if you're using DTMF properties since that's where the **Set timeout** property is available\. It doesn't appear if you're using Amazon Lex properties\.
+1. **Timeout**: What to do when the time in the **Set timeout** property has elapsed\.
 
 1. **Default**: What to do if a customer enters a value other than 1 or 2\.
 

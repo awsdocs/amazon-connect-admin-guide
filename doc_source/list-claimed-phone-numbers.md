@@ -4,7 +4,7 @@ You can list the phone numbers claimed to your Amazon Connect instance by using 
 
 **To list phone numbers by using the Amazon Connect console**
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
 1. On the navigation menu, choose **Channels**, **Phone numbers**\.
 

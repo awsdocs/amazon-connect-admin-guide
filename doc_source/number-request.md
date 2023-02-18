@@ -40,7 +40,7 @@ Submit an Amazon Connect support ticket to verify if your phone number can be po
 
 1. Choose **Submit**\.
 
-1. The Amazon Connect team will review your ticket and gets back to you\.
+1. The Amazon Connect team will review your ticket and get back to you\.
 
 We'll contact you to help with your request\. 
 

@@ -15,9 +15,9 @@ Forecast groups are a way for you to combine different queues into one forecast\
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Forecasting \- Edit**\. 
 
-   For more information, see [Required permissions](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, select **Analytics**, **Forecasting**\.
+1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Forecasting**\.
 
 1. Select the **Forecast groups** tab, and then choose **Create forecast group**\.
 

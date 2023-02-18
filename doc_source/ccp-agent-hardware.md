@@ -19,14 +19,14 @@ For instructions on verifying the sample rate of the agent's headset and browser
 Under\-powered workstations can make it difficult for agents to access the tools and resources they need to service contacts\. Also, keep in mind the resource requirements when scoping workstations to ensure that they can perform under load while appropriately multitasking for the use case\. 
 
 Following are the minimum system requirements for the workstations using the CCP only\. You'll need to scope additional memory, bandwidth, and CPU for the operating system and anything else running on the workstation to avoid resource contention\.
-+ **Browser**—The latest three versions of Google Chrome or Mozilla Firefox
++ **Browser**—For a list of all supported browsers, see [Browsers supported by Amazon Connect](browsers.md)\. 
 + **Network**—100 Kbps bandwidth per connected workstation
 + **Memory**—2 GB RAM
 + **Processor \(CPU\)**—2 GHz
 
 ## iPhone and other mobile devices are not supported<a name="ccp-iphone"></a>
 
-The Amazon Connect console and Contact Control Panel \(CCP\) do not work on mobile browsers\.
+The Amazon Connect console, Contact Control Panel \(CCP\), and agent workspace do not support mobile browsers\.
 
 ## How to determine whether a workstation is the source of problems<a name="monitor-workstation"></a>
 

@@ -20,6 +20,10 @@ Amazon AppIntegrations requires the grant to use the customer managed key for th
 + Send `GenerateDataKeyRequest` to AWS KMS to generate data keys encrypted by your customer managed key\.
 + Send `Decrypt` requests to AWS KMS to decrypt encrypted data keys so that they can be used to encrypt your data\.
 
+## Amazon Connect Cases encryption at rest<a name="encryption-at-rest-cases"></a>
+
+All customer provided data in case fields, case comments, descriptions of the fields and templates stored by Amazon Connect Cases is encrypted at rest using encryption keys stored in AWS Key Management Service \(AWS KMS\)\. Amazon Connect Cases service owns, manages, monitors, and rotates the encryption keys \(that is, AWS owned keys\) to meet the high security standards\. Payload of the case event streams is temporarily \(typically for a few seconds\) stored in Amazon EventBridge before it is made available through the default\-bus in customers account\. EventBridge also encrypts the entire payload at rest using AWS owned keys\.
+
 ## Amazon Connect Customer Profiles encryption at rest<a name="encryption-at-rest-customer-profiles"></a>
 
 All user data stored in Amazon Connect Customer Profiles is encrypted at rest\. Amazon Connect Customer Profiles encryption at rest provides enhanced security by encrypting all your data at rest using encryption keys stored in AWS Key Management Service \(AWS KMS\)\. This functionality helps reduce the operational burden and complexity involved in protecting sensitive data\. With encryption at rest, you can build security\-sensitive applications that meet strict encryption compliance and regulatory requirements\.

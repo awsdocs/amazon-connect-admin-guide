@@ -4,7 +4,7 @@ Each Amazon Connect instance is associated with an IAM [ service\-linked role](h
 
 For the set of IAM actions defined by Amazon Connect, see [Actions defined by Amazon Connect](https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html#amazonconnect-actions-as-permissions)\.
 
-Following are some examples of how to restrict access to other resources that may be associated with an Amazon Connect instance\. They should be applied to the IAM User or Role that is interacting with Amazon Connect APIs or the Amazon Connect console\. 
+Following are some examples of how to restrict access to other resources that may be associated with an Amazon Connect instance\. They should be applied to the User or Role that is interacting with Amazon Connect APIs or the Amazon Connect console\. 
 
 **Note**  
 A policy with an explicit `Deny` would override the `Allow` policy in these examples\.

@@ -12,3 +12,4 @@ Security profiles help you manage who can access the Amazon Connect dashboard an
 + [Assign a security profile to a user](assign-security-profile.md)
 + [Create a security profile](create-security-profile.md)
 + [Update security profiles](update-security-profiles.md)
++ [Tag based access control](tag-based-access-control.md)

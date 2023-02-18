@@ -4,7 +4,7 @@ You can download the data included in a report as a comma\-separated value \(CSV
 
 **To download a historical metrics report as a CSV file**
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
 1. Create a new report or open a saved report\.
 

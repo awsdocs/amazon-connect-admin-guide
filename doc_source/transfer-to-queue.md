@@ -63,11 +63,11 @@ If you want to specify the **Set working queue** property, you need to add a **S
 
 When this block is configured to **transfer to queue**, it looks similar to the following image\. If a contact is routed down the **At capacity** branch, it remains in the current working queue\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-configured1.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-configured.png)
 
 When this block is configured to **transfer to callback queue**, it looks similar to the following image\. If a contact is routed down the **Success** branch, it's transferred to the specified queue\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-configured.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-configured1.png)
 
 ## Scenarios<a name="transfer-to-queue-scenarios"></a>
 

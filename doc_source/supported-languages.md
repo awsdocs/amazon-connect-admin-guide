@@ -27,11 +27,13 @@ Amazon Connect provides full Unicode support\. You can chat with customers in an
 ## Contact Lens for Amazon Connect<a name="supported-languages-contact-lens"></a>
 
 
-| Post\-call analytics | Post\-call redaction | Real\-time analytics | Real\-time redaction | Call summarization | 
+| Post\-call/chat analytics | Post\-call/chat redaction | Real\-time call analytics | Real\-time redaction | Contact summarization | 
 | --- | --- | --- | --- | --- | 
 |  Arabic \(Gulf\)  |   |  |  |  | 
 |  English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | English \(Australia\)  | English \(Australia\) | 
 |  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  |  English \(Great Britain\)  | 
+|  English \(New Zealand\)  |  English \(New Zealand\)  |    |    |  English \(New Zealand\)  | 
+|  English \(South Africa\)  |  English \(South Africa\)  |    |    |  English \(South Africa\)  | 
 |  English \(United States\)  |  English \(United States\)  |  English \(United States\)  |  English \(United States\)  |  English \(United States\)  | 
 |  English \(India\)  |  English \(India\)  |   |  |  English \(India\)  | 
 |  English \(Ireland\)  |  English \(Ireland\)  |  |  | English \(Ireland\) | 
@@ -66,6 +68,9 @@ In Contact Lens, the pattern match feature supports the following languages:
 + Portuguese
 + Spanish \(Spain\)
 
+## Amazon Connect Forecasting, capacity planning, and scheduling<a name="supported-languages-forecasting"></a>
++ English \(United States\)
+
 ## Amazon Connect Wisdom<a name="supported-languages-wisdom"></a>
 + English \(Australia\)
 + English \(Great Britain\)
@@ -73,7 +78,7 @@ In Contact Lens, the pattern match feature supports the following languages:
 
 ## Amazon Lex<a name="supported-languages-lex"></a>
 
-See [Languages Supported in Amazon Lex](https://docs.aws.amazon.com/lex/latest/dg/how-it-works-language.html#supported-languages-and-locales) in the *Amazon Lex Developer Guide*\. 
+See [Languages and locales supported by Amazon Lex V2](https://docs.aws.amazon.com/lexv2/latest/dg/how-languages.html) in the *Amazon Lex V2 Developer's Guide*\. 
 
 ## Amazon Polly<a name="supported-languages-polly"></a>
 

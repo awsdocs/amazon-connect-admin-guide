@@ -30,4 +30,8 @@ The following diagram illustrates this process:
 
 1. An agent's browser chooses from at least two servers across multiple AZs, based on reachability\.
 
-1. An agent's browser uses a WebSocket connection through ELB\.
+## More resources<a name="more-resources-resiliency"></a>
+
+To learn more about resiliency for Amazon Connect, the following resources from AWS Workshop Studio are highly recommended:
++ [Amazon Connect Global Resiliency Best Practices](https://catalog.workshops.aws/amazon-connect-global-resiliency/en-US/connectbestpractices) 
++ [Amazon Connect Global Resiliency and AWS Services Multi\-Region Best Practices](https://catalog.workshops.aws/amazon-connect-global-resiliency/en-US/awsservicesbestpractices) 

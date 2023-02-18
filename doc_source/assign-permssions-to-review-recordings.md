@@ -6,8 +6,6 @@ Assign the **CallCenterManager** security profile so a user can listen to call r
 
 Or, assign the following individual permissions\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recordings-assign-permissions.png)
-
 1. **Contact search**: This permission is required so users can access the **Contact search** page, which is where they can search contacts so they can listen to recordings and review transcripts\. 
 
 1. **Restrict contact access**: Manage access to results on the **Contact search** page based on their agent hierarchy group\. 
@@ -30,11 +28,11 @@ When you change a the hierarchy group of a user, it may take a couple of minutes
 **Tip**  
 Be sure to assign managers to the **Agent** security profile so they can access the Contact Control Panel \(CCP\)\. This enables them can monitor the conversation through the CCP\.
 
-1. **Recorded conversations \(unredacted\)**: If your organization isn't using Contact Lens for Amazon Connect, use this permission to manage who can listen to recordings, access the corresponding URLs that are generated in S3, and delete recordings\. 
+1. **Recorded conversations \(unredacted\)**: If your organization isn't using Contact Lens for Amazon Connect, use this permission to manage who can access recordings on the **Details** page, through corresponding URLs that are generated in S3\. From there, these users can delete recordings\. 
 
    Note the following:
-   + To restrict access to recordings, ensure users do not have **Analytics** \- **Recorded conversations \(unredacted\) \- Access** permissions, as shown in the following image\.   
+   + To restrict access to recordings, ensure users do not have **Analytics and Optimization** \- **Recorded conversations \(unredacted\) \- Access** permissions, as shown in the following image\.   
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recording-permissions-access.png)
-   + If users do not have **Recorded conversations** permission—or they're not logged in to Amazon Connect—they cannot listen to the call recording or access the URL in S3, even if they know how the URL is formed\.
+   + If users do not have **Recorded conversations** permission—or they're not logged in to Amazon Connect—they cannot listen to the call recording or view the chat transcript, or access the URL in S3, even if they know how the URL is formed\.
    + The **Enable download button** permission controls only whether the download button appears in the user interface\. It does not control access to the recording\. 
    + To enable a user to delete recordings, choose the **Delete** permission\. By default, the **Enable download button** permission is granted too so the user can delete recordings through the user interface\. 

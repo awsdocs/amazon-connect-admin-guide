@@ -33,3 +33,5 @@ Outbound telephony charges occur when using a desk phone to answer inbound calls
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/acw-timeout.png)
 
 1. Under **Agent Hierarchy** select any groups the agent should be part of\.
+
+1. Under **Tags**, add resource tags to identify, organize, search for, filter and control who can access this user\.

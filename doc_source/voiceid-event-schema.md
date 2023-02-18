@@ -6,7 +6,7 @@ You can create an analytics pipeline for Voice ID authentication outcomes and de
 
  For example, you may want near real\-time tracking of Voice ID analysis\. To do that, you can pull all the `Evaluate-Session` events, and get the `authenticationResult` and `fraudDetectionResult`\.
 
-Events are emitted on a best effort basis\.
+Events are emitted on a [best effort](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html) basis\.
 
 ## Common fields in the event<a name="voiceid-event-common-fields"></a>
 + `version` \- The version of the event data\. 

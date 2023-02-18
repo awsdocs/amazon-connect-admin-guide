@@ -105,7 +105,7 @@ The first step in testing the task experience is to create a quick connect for t
 
 When you're testing the voice, chat, and task experiences, you may also want to explore metrics\.
 
-1. On the left navigation menu, choose **Analytics**, **Real\-time metrics**, **Queues**\.
+1. On the left navigation menu, choose **Analytics and optimization**, **Real\-time metrics**, **Queues**\.
 
 1. You can review the real\-time metrics as you test the different channels\.
 

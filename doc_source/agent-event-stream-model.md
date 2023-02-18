@@ -87,7 +87,7 @@ Type: `AgentStatus` object\.
 If the agent set a next agent status, the data appears here\.  
 + ARN—The ARN of the agent status that the agent has set as their next status\.
 + Name—This is the name of the agent status that the agent has set as their next status\.
-+ EnqueueTimestamp—The timestamp in ISO 8601 standard format for the time at which the agent set their next status and paused routing of incoming contacts\.
++ EnqueuedTimestamp—The timestamp in ISO 8601 standard format for the time at which the agent set their next status and paused routing of incoming contacts\.
 
   Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*\.*sss*Z\)
 Type: `NextAgentStatus` object\.
@@ -161,10 +161,12 @@ Valid values:
   For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 +  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
 +  `QUEUE_TRANSFER`: While the customer was in one queue \(listening to Customer queue flow\), they were transferred into another queue using a flow block\.
++  `MONITOR`: A supervisor initiated monitor on an agent\. The supervisor can silently monitor the agent and customer, or barge the conversation\.
 +  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which flow to run after a disconnect event during a contact\. 
 
   A disconnect event is when:
-  + A call, chat, or task is disconnected by an agent\.
+  + A call, chat, or task is disconnected\.
+  + A call is disconnected by a customer, agent, third party, supervisor, flow, telecom problem, API, or any other reason\.
   + A task is disconnected as a result of a flow action\.
   + A task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
 

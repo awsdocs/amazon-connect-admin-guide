@@ -8,7 +8,6 @@ Troubleshooting Contact Control Panel \(CCP\) issues requires support from your 
 + [Download CCP logs](download-ccp-logs.md)
 + [Troubleshooting Tools and Information](tools-and-info.md)
 + [Mobile phones \(iPhone, Android\) and iPads are not supported](mobile-devices-not-supported.md)
-+ [Microsoft Edge is not supported](microsoft-edge-not-supported.md)
 + [Can't make an outbound call from the CCP](cant-make-outbound-call.md)
 + [Attachments are not appearing in chats](attachments-not-appearing.md)
 + [Humming sound in headset: Verify the headset and browser sample rates](verify-sample-rate.md)

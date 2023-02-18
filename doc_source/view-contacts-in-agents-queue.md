@@ -6,7 +6,7 @@ To see how many contacts are in an agent's personal queue, add an **Agent queues
 
 Use the following procedure\. 
 
-1. Go to **Analytics**, **Real\-time metrics**, **Queues\.**
+1. Go to **Analytics and optimization**, **Real\-time metrics**, **Queues\.**
 
 1. Choose **New table**, **Agent queues**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-agent-queues.png)

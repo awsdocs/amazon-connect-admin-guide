@@ -1,4 +1,4 @@
-# Security profile permissions for forecasting, capacity planning, and scheduling<a name="required-optimization-permissions"></a>
+# Security profile permissions for Forecasting, capacity planning, and scheduling<a name="required-optimization-permissions"></a>
 
 The following images show you the security profile permissions that apply to forecasting, capacity planning, and scheduling\.
 

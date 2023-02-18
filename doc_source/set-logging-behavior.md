@@ -2,6 +2,7 @@
 
 ## Description<a name="set-logging-behavior-description"></a>
 + Enables flow logs so you can track events as contacts interact with flows\.
++ Flow logs are stored in Amazon CloudWatch\. For more information, see [Flow logs stored in an Amazon CloudWatch log group](contact-flow-logs-stored-in-cloudwatch.md)\.
 
 ## Supported channels<a name="set-logging-channels"></a>
 

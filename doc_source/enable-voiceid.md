@@ -11,7 +11,7 @@ Before you get started, complete the following tasks\.
 
 ### Grant the required permissions<a name="enable-voiceid-permissions"></a>
 
-You must grant the required permissions to IAM users, groups, or roles\. For more information, see [AmazonConnectVoiceIDFullAccess](security_iam_awsmanpol.md#amazonconnectvoiceidfullaccesspolicy)\.
+You must grant the required permissions to users, groups, or roles\. For more information, see [AmazonConnectVoiceIDFullAccess](security_iam_awsmanpol.md#amazonconnectvoiceidfullaccesspolicy)\.
 
 Access to Voice ID APIs using the Contact Control Panel \(CCP\) is disabled by default\.
 

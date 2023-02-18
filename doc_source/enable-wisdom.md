@@ -6,7 +6,14 @@ There are two ways you can enable Wisdom for your instance:
 + Use the [new](amazon-connect-release-notes.md#august21-release-notes) Amazon Connect console\. There are instructions on this page\.
 + Use the Amazon Connect Wisdom API\. You can ingest content using the Amazon Connect Wisdom APIs\. To learn more, see this blog post: [Ingesting content to power real\-time recommendations and search with Amazon Connect Wisdom](http://aws.amazon.com/blogs/contact-center/ingesting-content-to-power-real-time-recommendations-and-search-with-amazon-connect-wisdom/)\. 
 
-  The APIs support the ingestion of HTML and text; plain text files must be in UTF\-8\. For more information, see the [Amazon Connect Wisdom API Reference](https://docs.aws.amazon.com/wisdom/latest/APIReference/)\. 
+  The APIs support the ingestion of HTML, Word, PDF, and text\. 
+  + Plain text files must be in UTF\-8\.
+  + Word documents must be in DOCX format\.
+  + Word documents are automatically converted to a simplified HTML view and will not retain the source document’s font family, size, color, highlighting, alignment, or other formatting features such as background colors, headers or footers\.
+  + PDF files cannot be encrypted or password protected\.
+  + Actions and scripts embedded into PDF files are not supported\.
+
+  For more information, see the [Amazon Connect Wisdom API Reference](https://docs.aws.amazon.com/wisdom/latest/APIReference/)\. 
 
 Following is an overview of the steps to enable Wisdom:
 

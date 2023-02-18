@@ -31,7 +31,7 @@ To switch the KMS key that is associated with outbound campaigns, first you need
 
 1. In the navigation pane, choose **Telephony**\.
 
-1. To enable outbound campaigns, choose **Enable outbound campaigns**\.
+1. To enable outbound campaigns, choose **Enable outbound campaigns**\. If you don't see this option, then check whether [ outbound campaigns is available in your AWS Region](regions.md#campaigns_region)\. 
 
 1. Under **Encryption settings**, enter your own AWS KMS key or choose **Create an AWS KMS key**\.
 

@@ -2,7 +2,7 @@
 
 You can have up to 5 contact attributes in a rule\.
 
-You can design flows to use the contact attributes you specify in a rule, and then route the task accordingly\. For example, a call arrives in your contact center\. When Contact Lens analyzes the call, it gets a hit on the **Compliance** rule\. The contact record that's created for the call includes information similar to the following image: 
+You can design flows to use the contact attributes you specify in a rule, and then route the task accordingly\. For example, a call or chat arrives in your contact center\. When Contact Lens analyzes the call or chat, it gets a hit on the **Compliance** rule\. The contact record that's created for the call, for example, includes information similar to the following image: 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-attributes-example1.png)
 

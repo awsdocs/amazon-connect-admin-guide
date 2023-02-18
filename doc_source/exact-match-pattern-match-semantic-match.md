@@ -16,7 +16,7 @@ With **Pattern Match** you can specify the following:
   Then in your list of values you would add the cities: Beijing, London, New York, Paris, Tokyo\. 
 
   The advantage of using values is that you can create one expression, instead of multiple\. This reduces the number of cards that you need to create\.
-+ **Number**: This option is used most frequently in compliance scripts, or if your looking for a context when you know somewhere in between there's a number\. This way you can put all of your criteria into one expression instead of two\. For example, an agent compliance script might say:
++ **Number**: This option is used most frequently in compliance scripts, or if you're looking for a context when you know somewhere in between there's a number\. This way you can put all of your criteria into one expression instead of two\. For example, an agent compliance script might say:
 
   *I have been in this industry for \[num\] years and would like to discuss this topic with you\.*
 
@@ -34,7 +34,7 @@ For a list of languages supported by pattern match, see [Pattern match languages
 
 ## How to use semantic match<a name="semantic-match"></a>
 
-Semantic matching is supported only for post\-call analysis\.
+Semantic matching is supported only for post\-call/chat analysis\.
 + An "intent" is an example of utterance\. It can be a phrase or a sentence\.
 + You can enter up to four intents in one card \(group\)\.
 + We recommend using semantically similar intents within one card to get the best results\. For example, there's category for "politeness\." It includes two intents: "greetings" and "goodbye"\. We recommend separating these intents into two cards:

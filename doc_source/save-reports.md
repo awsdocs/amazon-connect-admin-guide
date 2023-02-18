@@ -29,12 +29,12 @@ If your organization needs to delete reports because you've reached the service 
 **Tip**  
 We recommend establishing a naming convention for reports in your organization, especially published reports\. This will help everyone identify who the owner is\. For example, use the team name or owner alias as the report suffix: Agent Performance \- *team name*\.
 
-1. To view to the report at a later time, go to **Analytics**, **Saved reports**\.  
+1. To view to the report at a later time, go to **Analytics and optimization**, **Saved reports**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/view-saved-reports.png)
 
 ## How to delete saved reports<a name="how-to-delete-saved-reports"></a>
 
-1. On the navigation menu, choose **Analytics**, **Saved reports**\.
+1. On the navigation menu, choose **Analytics and optimization**, **Saved reports**\.
 
 1. Choose the **Historical metrics** tab\. 
 

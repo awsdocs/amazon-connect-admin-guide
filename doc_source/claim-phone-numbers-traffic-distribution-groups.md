@@ -4,7 +4,7 @@
 This feature is available only for Amazon Connect instances created in the US East \(N\. Virginia\) and US West \(Oregon\) Regions\.   
 To obtain access to this feature, contact your Amazon Connect Solutions Architect or Technical Account Manager\.
 
-After your traffic distribution group is created successfully \(`Status` is `ACTIVE`\), you can claim available phone numbers to it by using the [ClaimPhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_ClaimPhoneNumber.html) API\. 
+ After your traffic distribution group is created successfully \(`Status` is `ACTIVE`\), you can use [SearchAvailablePhoneNumbers](https://docs.aws.amazon.com/connect/latest/APIReference/API_SearchAvailablePhoneNumbers.html) to search for available phone numbers and [ClaimPhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_ClaimPhoneNumber.html) to claim them\. 
 
 Before you claim a phone number to your traffic distribution group, we recommend using the [DescribeTrafficDistributionGroup](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeTrafficDistributionGroup.html) API to verify the status of the traffic distribution group is `ACTIVE`\. Assigning a phone number to a traffic distribution group that isn't `ACTIVE` results in `ResourceNotFoundException`\. 
 

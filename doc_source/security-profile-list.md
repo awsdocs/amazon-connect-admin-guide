@@ -1,6 +1,6 @@
 # List of security profile permissions<a name="security-profile-list"></a>
 
-The security profile permissions in Amazon Connect allow users access to perform particular tasks in Amazon Connect\.
+The security profile permissions in Amazon Connect allow users access to perform specific tasks in Amazon Connect\.
 
 The following tables list: 
 + **UI name**: The name of the permission as it appears on the **Security profiles** page in Amazon Connect\.
@@ -90,7 +90,6 @@ The following tables list:
 | Make outbound calls |  OutboundCallAccess  | Grants users permissions to make outbound calls\. For more information about setting up outbound calling, see [Set up outbound communications](outbound-communications.md)\.  | 
 | Voice ID |  VoiceId\.Access  | Enables controls in the Contact Control Panel so agents can: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security-profile-list.html)  | 
 | Restrict task creation |  RestrictTaskCreation\.Access  | Block agents from being able to create tasks\.   | 
-| Audio device settings |  Audio\.View  | [Choose your preferred device for speaker, microphone, and ringer in the Contact Control Panel \(CCP\)](audio-device-settings.md)\.   | 
 
 ## Analytics<a name="analytics-list"></a>
 
@@ -114,8 +113,8 @@ The following tables list:
 | Rules \- Delete |  Rules\.Delete  | Delete rules\.   | 
 | Rules \- Edit |  Rules\.Edit  | Edit rules\.   | 
 | Rules \- View |  Rules\.View  | View rules\.   | 
-| Recorded conversations \(redacted\) |  RedactedData\.View  | On the **Contact Record** page for a contact, listen to call recording files and view call transcripts in which the sensitive data has been removed\.  | 
-| Recorded conversations \(unredacted\) \- View |  ListenCallRecordings  | View unredacted content that contains sensitive data such as name and credit card information\. Users can view the following unredacted content: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security-profile-list.html) Users can access this content on the **Contact Record** page for a contact\.  | 
+| Recorded conversations \(redacted\) |  RedactedData\.View  | On the **Contact details** and **Contact search** pages for a contact, listen to call recording files and view call transcripts in which the sensitive data has been removed\.  | 
+| Recorded conversations \(unredacted\) \- View |  ListenCallRecordings  | On the **Contact details** and **Contact search** pages for a contact, view unredacted content that contains sensitive data, such as name and credit card information\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security-profile-list.html) If you have permissions to both **Recorded conversations \(redacted\)** and **Recorded conversations \(unredacted\)**, note the following behavior:    By default only redacted recordings and transcripts are made available on the **Contact details** and **Contact search** pages\.   When no redacted content exists for the contact, or when redacted content cannot be shown to the user, then unredacted content is displayed on the **Contact details** and **Contact search** pages\.   To access unredacted conversations, remove permissions to **Recorded conversations \(redacted\)**\. This leaves the user with only **Recorded conversations \(unredacted\)** permissions\. You cannot access both the redacted and unredacted version of a conversation at the same time\.   | 
 | Recorded conversations \(unredacted\) \- Access |  ListenCallRecordings  | View the Play icon so they can listen to call recordings by using the Amazon Connect user interface\.  | 
 | Recorded conversations \(unredacted\) \- Enable download button |  DownloadCallRecordings  | [Download call recordings](download-recordings.md)\. By default, the **Enable download button** permission is granted too so the user can download recordings through the user interface\.  | 
 | Recorded conversations \(unredacted\) \- Delete |  DeleteCallRecordings  | Delete call recordings\. By default, the **Enable download button** permission is granted too so the user can delete recordings through the user interface\.  | 
@@ -127,6 +126,8 @@ The following tables list:
 | Saved reports \- Delete |  MetricsReports\.Delete  | Delete saved reports\.  | 
 | Saved reports \- Publish |  MetricsReports\.Publish  | [Publish reports](publish-reports.md)\.  | 
 | Saved reports \- Schedule |  MetricsReports\.Schedule MetricsReports\.Publish ReportSchedules\.Create ReportSchedules\.Delete ReportSchedules\.Edit ReportSchedules\.View  | [Schedule a saved report](schedule-historical-metrics-report.md)\. By default, the user gets permission to create, delete, edit, and view a saved report\.  | 
+| Evaluation forms \- perform evaluations |   Evaluation\.Create Evaluation\.View  Evaluation\.Edit Evaluation\.Delete  | [Evaluate performance](evaluations.md)\.   | 
+| Evaluation forms \- manage form definitions |  EvaluationForms\.Create EvaluationForms\.View  EvaluationForms\.Edit EvaluationForms\.Delete  | [Create and manage evaluation forms](create-evaluation-forms.md)\.   | 
 | Voice ID \- attributes and search |  VoiceIdAttributesAndSearch\.View  | Search for and view Voice ID results on the **Contact detail** page\.  | 
 
 ## Historical changes<a name="historical-changes-list"></a>

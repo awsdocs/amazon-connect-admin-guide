@@ -72,6 +72,6 @@ Amazon Connect uses the following services for added security:
 Amazon Connect uses the following services for monitoring usage: 
 + Amazon CloudWatch—Collects logs, service metrics, performance metrics for Amazon Connect\. For more information, see [Monitoring your instance using CloudWatch](monitoring-cloudwatch.md)\. 
 + AWS CloudFormation—Amazon Connect does not support this directly for creating instances\. However, it does support AWS CloudFormation templates for associated services, like integrations, database export, and so on\.
-+ AWS CloudTrail—Provides a record of Amazon Connect API calls\. This is especially useful for [tracking who accessed recorded conversations](track-who-deleted-recordings.md)\.
++ AWS CloudTrail—Provides a record of Amazon Connect API calls\. 
 
   For more information about Amazon Connect and AWS CloudTrail, see [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)\.

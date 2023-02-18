@@ -82,6 +82,9 @@ When you place calls from the CCP using Amazon Connect the CCP provides the corr
 1. Do one of the following:
    + To use a number from your instance, choose **Select a number from your instance**, and then search for or select the number to use from the drop\-down\.
    + Choose **Use attribute** to use a contact attribute to provide the value for the caller ID number\. You can use either a **User Defined** attribute you create using a [Set contact attributes](set-contact-attributes.md) block, or an **External** attribute returned from an AWS Lambda function\. The value of any attribute you use must be a phone number claimed for your instance and be in E\.164 format\. If the number used from an attribute is not in E\.164 format, the number set for the **Outbound caller ID number** for the queue is used\.
+**Important**  
+The value of any attribute you use must be a phone number claimed for your instance\. The number must be in E\.164 format\. If the number used from an attribute is not in E\.164 format, calls may be terminated by the destination networks\. 
+It is your responsibility to ensure the numbers you are using are legally permissible\. Certain numbers, such as \+44870 numbers in the UK, are not legally permissible\. You must ensure you're not using them\. 
 
 1. Add any additional blocks to complete your flow, and connect the **Success** branch of the [Call phone number](call-phone-number.md) block to the next block in the flow\. 
 

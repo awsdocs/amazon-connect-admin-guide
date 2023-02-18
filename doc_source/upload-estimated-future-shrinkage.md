@@ -6,9 +6,9 @@ You can increase capacity planning accuracy by providing estimated future data \
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Capacity planning \- Edit**\. 
 
-   For more information, see [Required permissions](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, select **Analytics**, **Capacity Planning**\.
+1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Capacity Planning**\.
 
 1. On the **Import Data** tab, choose **Upload data**\.
 
@@ -20,7 +20,7 @@ You can increase capacity planning accuracy by providing estimated future data \
 It usually between 2 \- 5 minutes for the \.csv file to upload\. If the upload fails, check if the `FORECAST_GROUP` name in the \.csv file matches the name of the forecast group that you created\.
 
 ## Important things to know about your \.csv file<a name="important-things-about-import-shrinkage-data"></a>
-+ FORECAST\_GROUP: Enter the EXACT name of the forecast group you created\. You can add multiple forecast groups in this csv file\. 
++ FORECAST\_GROUP: Enter the EXACT name of the forecast group you created\. You can add multiple forecast groups in this `.csv` file\. 
 + Date: Each row is one day\. In the previous image, row 2 is January 1, row 3 is January 2, row 4 is January 3, and so on\. Use ISO 8601 format ending with Z\.
 + AVAILABLE\_FTE: Based on your estimation, how many full\-time agents will be available for working that day\. For example, your contact center currently has 100 FTEs and you expect this number to be the same next year\.
 

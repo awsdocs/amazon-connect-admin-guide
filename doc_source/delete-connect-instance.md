@@ -18,6 +18,9 @@ You can't restore a deleted instance or access its settings, data, metrics, and 
 
 1. When prompted, enter the name of the instance and then choose **Delete**\.
 
+**Tip**  
+We recommend checking your CloudWatch log groups related to the Amazon Connect instance, and deleting them if they are no longer needed\. For more information, see [Delete a CloudWatch Logs log group using an AWS SDK](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/example_cloudwatch-logs_DeleteLogGroup_section.html)\. 
+
 ## Error message: "Region Unsupported\. Amazon Connect is not available in \[Region\]"<a name="region-unsupported"></a>
 
 If you get this error message, it means that you selected a Region in the AWS Management Console that is not the Region in which you created the Amazon Connect instance, and Amazon Connect isn't available in that Region\.

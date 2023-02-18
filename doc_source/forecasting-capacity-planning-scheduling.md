@@ -8,6 +8,8 @@ Amazon Connect provides a set of services powered by machine learning that help 
   + [Schedule Adherence](schedule-adherence.md)\. Enable contact center supervisors to monitor schedule adherence and improve agent productivity\. Schedule adherence metrics are available after the agent schedules are published\.
 + [Capacity planning](capacity-planning.md)\. Predict how many agents your contact center will require\. Optimize plans by scenarios, service level goals, and metrics, such as shrinkage\.
 
+Amazon Connect Forecasting, capacity planning, and scheduling is generally available in four AWS Regions: US East \(N\. Virginia\), US West \(Oregon\), Asia Pacific \(Sydney\), and Europe \(London\)\.
+
 The following diagram shows a typical end\-to\-end optimization workflow by persona: Amazon Connect administrator, forecaster, scheduler, capacity planner, and agent\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-workflow-overview.png)

@@ -22,4 +22,3 @@ A *flow* defines the customer experience with your contact center from start to 
 + [Track events in flows](about-contact-flow-logs.md)
 + [Use contact attributes](connect-contact-attributes.md)
 + [Migrate flows](migrate-contact-flows.md)
-+ [Flow language](flow-language.md)

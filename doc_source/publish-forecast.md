@@ -7,9 +7,9 @@ Amazon Connect retains only the last published forecast\. We strongly advise you
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Forecasting \- View**\. 
 
-   For more information, see [Required permissions](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, select **Analytics**, **Forecasting**\.
+1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Forecasting**\.
 
 1. On the **Forecasts** tab, choose the forecast\. 
 
@@ -23,9 +23,9 @@ Amazon Connect retains only the last published forecast\. We strongly advise you
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Forecasting \- View**\. 
 
-   For more information, see [Required permissions](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, select **Analytics**, **Forecasting**\.
+1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Forecasting**\.
 
 1. On the **Forecasts** tab, choose the forecast\. 
 

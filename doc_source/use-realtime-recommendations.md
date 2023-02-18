@@ -2,7 +2,7 @@
 
 If your organization uses Contact Lens for Amazon Connect, you may get real\-time recommendations that point you to information related to the current conversation with the customer\. 
 
-The following image shows how an article may appear in the agent application when you're on a call\. 
+The following image shows how an article may appear in the agent workspace when you're on a call\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro2.png)
 

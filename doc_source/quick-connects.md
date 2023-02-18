@@ -8,9 +8,9 @@ Quick connects are a way for you to create a list of destinations for common tra
 
 The type of a quick connect specifies the destination\. You can specify one of the following destinations\.
 
-### External quick connect<a name="external-quick-connect-type"></a>
+### Phone number quick connect<a name="external-quick-connect-type"></a>
 
-Contacts are transferred to an external number \(such as an on\-call pager\)\. 
+Contacts are transferred to a phone number \(such as an on\-call pager\)\. 
 
 ### Agent quick connect<a name="agent-quick-connect-type"></a>
 
@@ -32,7 +32,7 @@ Agent and Queue quick connects only appear in the CCP when an agent goes to tran
 
 **To add quick connects**
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\. To find the name of your instance, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\. To find the name of your instance, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.
 
 1. On the navigation menu, choose **Routing**, **Quick connects**\.
 
@@ -65,9 +65,9 @@ Agent and Queue quick connects only appear in the CCP when an agent goes to tran
 **Tip**  
 Agents see all of the quick connects for the queues associated with their routing profile\.
 
-## Example: Create an external quick connect to a mobile phone<a name="example-create-external-quick-connect"></a>
+## Example: Create a phone number quick connect to a mobile phone<a name="example-create-external-quick-connect"></a>
 
-In this example, you create an external quick connect to a person's mobile phone\. This might be for a supervisor, for example, so agents can call them if needed\.
+In this example, you create a phone number quick connect to a person's mobile phone\. This might be for a supervisor, for example, so agents can call them if needed\.
 
 **Create a quick connect for a person's mobile phone number**
 
@@ -75,7 +75,7 @@ In this example, you create an external quick connect to a person's mobile phone
 
 1. Enter a name for the quick connect, for example, **John Doe's cell phone**\.
 
-1. For **Type**, select **External**\.
+1. For **Type**, select **Phone number**\.
 
 1. For **Destination**, enter the mobile phone number, starting with the country code\. In the US, the country code is 1, as shown in the following image\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/quick-connect-johndoe.png)

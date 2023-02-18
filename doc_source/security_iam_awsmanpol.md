@@ -24,7 +24,7 @@ To allow full read/write access to Amazon Connect, you must attach two policies 
 }
 ```
 
-To allow an IAM user to create an instance, ensure that they have the permissions granted by the `AmazonConnect_FullAccess` policy\.
+To allow a user to create an instance, ensure that they have the permissions granted by the `AmazonConnect_FullAccess` policy\.
 
 When you use `AmazonConnect_FullAccess` policy, note the following:
 + The `iam:PutRolePolicy` allows the user who gets that policy to configure any resource in the account to work with the Amazon Connect instance\. Because it grants such broad permissions, only assign it when necessary\. Instead, create the service\-linked role with access to the necessary resources and let the user have access to pass the service\-linked role to Amazon Connect \(which is granted by the `AmazonConnect_FullAccess` policy\)\. 
@@ -40,7 +40,7 @@ To allow read\-only access, you need to attach only the `AmazonConnectReadOnlyAc
 
 ## AWS managed policy: AmazonConnectVoiceIDFullAccess<a name="amazonconnectvoiceidfullaccesspolicy"></a>
 
-To allow full access to Amazon Connect Voice ID, you must attach two policies to your IAM users, groups, or roles\. Attach the `AmazonConnectVoiceIDFullAccess` policy and the following custom policy contents to access Voice ID through the Amazon Connect console: 
+To allow full access to Amazon Connect Voice ID, you must attach two policies to your users, groups, or roles\. Attach the `AmazonConnectVoiceIDFullAccess` policy and the following custom policy contents to access Voice ID through the Amazon Connect console: 
 
 ```
 { 

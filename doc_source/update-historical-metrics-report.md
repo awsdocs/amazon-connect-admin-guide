@@ -4,9 +4,9 @@ After you save a report, you can update it at any time\.
 
 **To update a historical metrics report**
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
-1. Choose **Analytics**, **Saved reports**\.
+1. Choose **Analytics and optimization**, **Saved reports**\.
 
 1. From the **Historical metrics** tab, choose the name of the report\. Choose the gear icon, update the report settings as needed, and choose **Apply**\.
 

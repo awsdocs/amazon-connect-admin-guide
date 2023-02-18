@@ -1,6 +1,6 @@
 # Search and review Voice ID results<a name="voiceid-ctr-fields"></a>
 
-Use the [Contact search](contact-search.md) page to search for and review the results of enrollment status, voice authentication, and detection of fraudsters in a watchlist\. With the required [ security profile permissions](contact-search.md#required-permissions-search-contacts) \(**Analytics** \- **Voice ID \- attributes and search \- View**\), you can search for Voice ID results using the following filters:
+Use the [Contact search](contact-search.md) page to search for and review the results of enrollment status, voice authentication, and detection of fraudsters in a watchlist\. With the required [ security profile permissions](contact-search.md#required-permissions-search-contacts) \(**Analytics and Optimization** \- **Voice ID \- attributes and search \- View**\), you can search for Voice ID results using the following filters:
 + **Speaker actions**: Use this filter to search for contacts where the caller was enrolled into Voice ID or chose to opt\-out of Voice ID altogether\.
 + **Authentication result**: Use this filter to search for contacts where Voice ID authentication returned the following results: 
   + Authenticated

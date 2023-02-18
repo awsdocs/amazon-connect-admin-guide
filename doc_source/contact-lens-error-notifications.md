@@ -2,7 +2,7 @@
 
 It's possible that Contact Lens can't analyze a contact file, even though analysis is enabled on the flow\. When this happens, Contact Lens sends error notifications using Amazon EventBridge events\. 
 
-Events are emitted on a best effort basis\.
+Events are emitted on a [best effort](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html) basis\.
 
 ## Subscribe to EventBridge notifications<a name="contact-lens-error-notifications-subscribe"></a>
 
@@ -46,9 +46,9 @@ The format of a notification looks like the following sample:
 | --- | --- | 
 | INVALID\_ANALYSIS\_CONFIGURATION  | Contact Lens received invalid values when the flow was initiated, such as an unsupported or invalid language code, or an unsupported value for redaction behavior\.  | 
 | RECORDING\_FILE\_CANNOT\_BE\_READ  | Contact Lens can't get the recording file\. This might be because file isn't present in the S3 bucket, or there are problems with permissions\.  | 
-| RECORDING\_FILE\_TOO\_SMALL  |  The recording audio file is too small for analysis \(less than 105 ms\)\.  | 
-|  RECORDING\_FILE\_TOO\_LARGE  | The recording file exceeds the duration limit for analysis \(more than 14,400 seconds, or 4 hours\)\.  | 
-|  RECORDING\_FILE\_INVALID  | The audio file is invalid\.  | 
-|  RECORDING\_FILE\_CANNOT\_BE\_READ  | An error occurred when Contact Lens tried to read the audio file\.  | 
-|  RECORDING\_FILE\_EMPTY  | The audio file is empty\.  | 
+| RECORDING\_FILE\_TOO\_SMALL  |  The recording file is too small for analysis \(less than 105 ms\)\. If file doesn’t have expected format, an INVALID error occurs\. Empty JSON is also an unexpected object\.  | 
+|  RECORDING\_FILE\_TOO\_LARGE  | The recording file exceeds the duration limit for analysis\.  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/contact-lens-error-notifications.html)  | 
+|  RECORDING\_FILE\_INVALID  | The recording file is invalid\.  | 
+|  RECORDING\_FILE\_CANNOT\_BE\_READ  | An error occurred when Contact Lens tried to read the recording file\.  | 
+|  RECORDING\_FILE\_EMPTY  | The recording file is empty\.  | 
 |  RECORDING\_SAMPLE\_RATE\_NOT\_SUPPORTED  | The sample rate of the audio file is not supported\. Contact Lens currently supports audio files with an 8kHz sample rate\. That is the sample rate for Amazon Connect recordings\.  | 

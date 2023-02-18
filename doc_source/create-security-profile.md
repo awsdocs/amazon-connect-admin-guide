@@ -16,7 +16,7 @@ By default, the Amazon Connect **Admin** security profile has these permissions\
 
 ## How to create security profiles<a name="how-to-security-profiles-required-permissions"></a>
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
 1. Choose **Users**, **Security profiles**\.
 
@@ -27,3 +27,36 @@ By default, the Amazon Connect **Admin** security profile has these permissions\
 1. Choose the appropriate permissions for the security profile from each permission group\. For each permission type, choose one or more actions\. Selecting some actions results in other actions being selected\. For example, selecting **Edit** also selects **View** for the resource and any dependent resources\.
 
 1. Choose **Save**\.
+
+## Tag Based Access Controls<a name="security-profile-tag-based-access-controls"></a>
+
+Optionally, you can create a security profile with access control tags\. Use these steps to create a security profile that will enforce tag based access controls\.
+
+1. Chose **Show advanced settings** at the bottom of the security profile\.
+
+1. Select the resources that should be restricted using tags\.
+
+1. Enter the **Key** and **Value** combination for the resource tags that you would like to restrict access to\.
+
+1. Ensure that you have enabled *View* permissions for the resources that you have selected\.
+
+1. Choose **Save**\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tag-access-control-sp.png)
+
+**Note**  
+It is mandatory to specify both a resource type and an access control tag when configuring tag based access controls\. As a best practice, ensure that you have matching resource tags on a security profile that has tag based access controls configured\. To learn more about tag based access controls in Amazon Connect, see [Tag based access control](tag-based-access-control.md)\.
+
+## Tag Security Profiles<a name="security-profile-tagging"></a>
+
+Optionally, you can also create a new security profile with resource tags\. Use these steps to add a resource tag to a security profile\.
+
+1. Chose **Show advanced settings** at the bottom of the security profile\.
+
+1. Enter a **Key** and **Value** combination to tag the resource\.
+
+1. Choose **Save**\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tag-securit-profiles-sp.png)
+
+To learn more about tagging resources, see [Tagging resources in Amazon Connect](tagging.md)\.

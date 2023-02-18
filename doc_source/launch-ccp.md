@@ -19,4 +19,4 @@ To provide agents the ability to launch the CCP from their desktop and start han
 
 We recommend telling agents to bookmark the URL to the CCP for more convenient access\.
 
-Agents can use the CCP with a softphone on their computer, or a deskphone\. If they're using a softphone, they must use Chrome or Firefox for their web browser\. For more information, see [Grant microphone access in Chrome or Firefox](amazon-connect-contact-control-panel.md#accessing-microphone)\. 
+Agents can use the CCP with a softphone on their computer, or a deskphone\. If they're using a softphone, they must use Chrome, Edge, or Firefox for their web browser\. For more information, see [Grant microphone access in Chrome, Firefox, or Edge](amazon-connect-contact-control-panel.md#accessing-microphone)\. 

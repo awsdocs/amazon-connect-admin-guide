@@ -4,9 +4,9 @@ You can download a forecast so you can inspect it offline\. A forecast is downlo
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Forecasting \- Edit**\. 
 
-   For more information, see [Required permissions](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, choose **Analytics**, **Forecasting**\.
+1. On the Amazon Connect navigation menu, choose **Analytics and optimization**, **Forecasting**\.
 
 1. On the **Forecasts** tab, choose the forecast\. 
 

@@ -1,6 +1,6 @@
 # Create a Contact Lens rule that generates an EventBridge event<a name="contact-lens-rules-eventbridge-event"></a>
 
-In real\-time or post\-call, you can get events and use them to trigger subsequent notifications or alerts, or aggregate reports outside of Amazon Connect\. There's a lot you can do with this data\. For example: 
+In real\-time or post\-call/chat, you can get events and use them to trigger subsequent notifications or alerts, or aggregate reports outside of Amazon Connect\. There's a lot you can do with this data\. For example: 
 + Get real\-time alerts in a QuickSight dashboard\.
 + Create aggregated reported outside of Amazon Connect\.
 + Join data with your CRM\.
@@ -28,7 +28,7 @@ The value you assign for **Action name** is visible in the EventBridge payload\.
 
 To subscribe to EventBridge event types, create a custom EventBridge rule that matches the following:
 + "source" = "aws\.connect"
-+ "detail\-type" = "Contact Lens Analysis State Change" \(or **Contact Lens Post Call Rules Matched** or **Contact Lens Realtime Rules Matched**\)
++ "detail\-type" = "Contact Lens Analysis State Change" \(or **Contact Lens Post Call Rules Matched**, **Contact Lens Realtime Rules Matched**, or **Contact Lens Post Chat Rules Matched**\)
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-eb-rules-events.png)
 

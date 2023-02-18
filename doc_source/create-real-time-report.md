@@ -4,9 +4,9 @@ You can create a real\-time metrics report to view real\-time or near\-real time
 
 **To create a real\-time metrics report**
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
-1. Choose **Analytics**, **Real\-time metrics**\.
+1. Choose **Analytics and optimization**, **Real\-time metrics**\.
 
 1. Choose one of the following report types\. They group and order the data in different ways and include different metrics by default\.
    + **Queues**
@@ -37,4 +37,4 @@ You can create a real\-time metrics report to view real\-time or near\-real time
 
 1. \(Optional\) To save your report for future reference, choose **Save**, provide a name for the report, and then choose **Save**\.
 
-   To view your saved real\-time metrics reports, choose **Analytics**, **Saved reports**, and then choose the **Real\-time metrics** tab\.
+   To view your saved real\-time metrics reports, choose **Analytics and optimization**, **Saved reports**, and then choose the **Real\-time metrics** tab\.

@@ -1,4 +1,4 @@
-# Transfer calls to a quick connect or external number<a name="transfers"></a>
+# Transfer calls to a quick connect or external phone number<a name="transfers"></a>
 
 You can transfer calls to people in a predefined list, called quick connects\. You can also transfer calls to external phone numbers that you enter\. 
 

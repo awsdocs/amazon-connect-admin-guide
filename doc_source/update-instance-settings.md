@@ -26,26 +26,19 @@ To update the instance settings:
 1. Choose **Save**\.
 
 ## Update data storage<a name="update-data-storage-options"></a>
++ In the navigation pane, choose **Data storage**\. Choose the following:
+  + **Call recordings**: Choose **Edit**, specify the bucket and KMS key for recordings of voice conversations, and then choose **Save**\. 
 
-1. In the navigation pane, choose **Data storage**\.
+    When this bucket is created, call recording is enabled at the instance level\. The next step for setting up this functionality is to [set up recording behavior in a contact flow](set-up-recordings.md)\.
+  + **Chat transcripts**: Choose **Edit**, specify the bucket and KMS key for recordings \(transcripts\) of chat conversations, and then choose **Save**\. 
 
-1. To specify the bucket and KMS key for recordings of voice conversations, choose **Call recordings**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\. 
+    When this bucket is created, chat transcripts are enabled at the instance level\. Now all chat transcripts will be stored here\.
+  + **Live media streaming**: Choose **Edit** to enable live media streaming, choose **Edit**\. For more information, see [Capture customer audio: live media streaming](customer-voice-streams.md)\.
+  + **Exported reports**: Choose **Edit**, specify the bucket and KMS key for exported reports, and then choose **Save**\. 
+  + **Attachments**: Choose **Edit**, then **Enable Attachments sharing** to enable file sharing for both agents and customers\. For more information about this option and additional steps, see [Enable attachments to share files using chat](enable-attachments.md)\. 
+  + **Contact evaluations**: Choose **Edit**, specify the bucket and KMS key for performance evaluations, and then choose **Save**\. 
 
-   When this bucket is created, call recording is enabled at the instance level\. The next step for setting up this functionality is to [set up recording behavior in a contact flow](set-up-recordings.md)\.
-
-1. To specify the bucket and KMS key for recordings \(transcripts\) of chat conversations, choose **Chat transcripts**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\. 
-
-   When this bucket is created, chat transcripts are enabled at the instance level\. Now all chat transcripts will be stored here\.
-
-1. To enable live media streaming, choose **Live media streaming**, **Edit**\. For more information, see [Capture customer audio: live media streaming](customer-voice-streams.md)\.
-
-1. To specify the bucket and KMS key for exported reports, choose **Exported reports**, **Edit**, specify the bucket name and prefix, select the KMS key by name, and then choose **Save**\.
-
-1. To enable file sharing for both agents and customers, next to **Attachments** choose **Edit**, then **Enable Attachments sharing**\. For more information about this option and additional steps, see [Enable attachments to share files using chat](enable-attachments.md)\.
-
-1. To enable a **Customer Profiles domain**, choose that option\.
-
-   A Customer Profiles domain stores profiles that combine customer contact history with customer information such as account number, address, billing address, and birth date\. Data is encrypted using AWS Key Management Service\. You can configure Customer Profiles to use your own customer managed key after your instance is set up\. For more information, see [Create a KMS key to be used by Customer Profiles to encrypt data \(required\)](enable-customer-profiles.md#enable-customer-profiles-awsmanagedkey)\.
+    When this bucket is created, evaluations are enabled at the instance level\. The next step for setting up this feature is to [create an evaluation form](create-evaluation-forms.md)\.
 
 ## Update data streaming options<a name="update-data-streaming-options"></a>
 

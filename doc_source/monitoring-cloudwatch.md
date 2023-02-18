@@ -51,7 +51,7 @@ The `AWS/Connect` namespace includes the following metrics\.
 | TasksExpired |   Tasks which have expired after being active for 7 days\.  To monitor the total number of tasks that have expired in a given time period, take a look at the Sum statistic in CloudWatch\.  Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
 | TasksExpiryWarningReached |  Tasks that have been active for 6 days 22 hours and reached expiry warning limit\.  To monitor the total number of tasks that have reached expiry warning limit in a given time period, take a look at the Sum statistic in CloudWatch\.  Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
 | ThrottledCalls |  The number of voice calls that were rejected because the rate of calls per second exceeded the maximum supported quota\. To increase the supported rate of calls, request an increase in the service quota for concurrent active calls per instance\. To monitor the total throttled calls in a given time period, take a look at the Sum statistic in CloudWatch\. Unit: Seconds Unit: Count Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
-| ToInstancePacketLossRate |  The ratio of packet loss for calls in the instance, reported every 10 seconds\. Each data point is between 0 and 1, which represents the ratio of packets lost for the instance\. Unit: Percent Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
+| ToInstancePacketLossRate |  The ratio of packet loss for calls in the instance, reported every 10 seconds\. Each data point is between 0 and 100, which represents the ratio of packets lost for the instance\. Unit: Percent Dimensions: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/monitoring-cloudwatch.html)  | 
 
 ## Amazon Connect CloudWatch metrics dimensions<a name="connect-cloudwatch-dimensions"></a>
 
@@ -258,12 +258,18 @@ You can use the following dimensions to refine AppIntegrations metrics listed ab
 
 ## Use CloudWatch metrics to calculate concurrent call quota<a name="connect-cloudwatch-concurrent-call-quota"></a>
 
-Here's how to calculate your quota for concurrent calls\. 
+**Important**  
+The **ConcurrentCallsPercentage** calculation information is not the same as **ConcurrentTasksPercentage** and **ConcurrentChatPercentage**\.  
+The metrics emitted for **ConcurrentCallsPercentage** are in decimal and not multiplied by 100\. The metric represents a percentage of your total quota\.
+For **ConcurrentTasksPercentage** and **ConcurrentChatPercentage** the value is multiplied by 100\. That gives you your total quota\.
+The metrics emitted are correct and there is no discrepancy in data\. 
 
-With calls active in the system, look at **ConcurrentCalls** and **ConcurrentCallsPercentage**\. Calculate the quota: 
+Here's how to calculate your quota usage for concurrent calls\. 
+
+With calls active in the system, look at **ConcurrentCalls** and **ConcurrentCallsPercentage**\. Calculate how much of your quota has been used: 
 + \(ConcurrentCalls / ConcurrentCallsPercentage\)
 
-For example, if **ConcurrentCalls** is 20 and **ConcurrentCallsPercentage** is 50, your quota is calculated as \(20/50\) = 0\.40 which is 40%\.
+For example, if **ConcurrentCalls** is 20 and **ConcurrentCallsPercentage** is 50, your quota usage is calculated as \(20/50\) = 0\.40, which is **40% of your total quota**\.
 
 ## Use CloudWatch metrics to calculate concurrent active chats quota<a name="connect-cloudwatch-concurrent-chat-quota"></a>
 
@@ -272,7 +278,7 @@ Here's how to calculate your quota for concurrent active chats\.
 With chats active in the system, look at **ConcurrentActiveChats** and **ConcurrentChatsPercentage**\. Calculate the quota: 
 + \(ConcurrentActiveChats / ConcurrentActiveChatsPercentage\) \* 100
 
-For example, if **ConcurrentActiveChats** is 1000 and **ConcurrentActiveChatsPercentage** is 50, your quota is calculated as \(1000/50\)\*100 = 2000\.
+For example, if **ConcurrentActiveChats** is 1000 and **ConcurrentActiveChatsPercentage** is 50, your quota is calculated as \(1000/50\)\*100 = 2000\. Your total quota is 2000 chats\. 
 
 ## Use CloudWatch metrics to calculate concurrent task quota<a name="connect-cloudwatch-concurrent-task-quota"></a>
 
@@ -281,4 +287,4 @@ Here's how to calculate your quota for concurrent tasks\.
 With tasks active in the system, look at **ConcurrentTasks** and **ConcurrentTasksPercentage**\. Calculate the quota: 
 + \(ConcurrentTasks / ConcurrentTasksPercentage\)\*100
 
-For example, if **ConcurrentTasks** is 20 and **ConcurrentTasksPercentage** is 50, your quota is calculated as \(20/50\)\*100= 40\.
+For example, if **ConcurrentTasks** is 20 and **ConcurrentTasksPercentage** is 50, your total quota is calculated as \(20/50\)\*100= 40\. Your total quota is 40 tasks\.

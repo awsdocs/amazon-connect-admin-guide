@@ -3,7 +3,7 @@
 To claim a phone number for an Amazon Connect instance you create in the Asia Pacific \(Tokyo\) Region, open an AWS support case and provide documentation that your business is located in Japan\. 
 
 **Important**  
-You must provide three pieces of required documentation\. For a list of acceptable identification, see [Japan \(JP\)](phone-number-requirements.md#japan-regulations), in the [Region requirements for ordering and porting phone numbers](phone-number-requirements.md) topic\. 
+You must provide three pieces of required documentation\. For a list of acceptable identification, see [Japan \(JP\)](phone-number-requirements.md#japan-requirements), in the [Region requirements for ordering and porting phone numbers](phone-number-requirements.md) topic\. 
 
 You cannot claim numbers for personal use, only for business use\. 
 

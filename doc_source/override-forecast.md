@@ -30,9 +30,9 @@ The following table provides an example:
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Forecasting \- Edit**\. 
 
-   For more information, see [Required permissions](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, select **Analytics**, **Forecasting**, and then choose the **Forecast** tab\.
+1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Forecasting**, and then choose the **Forecast** tab\.
 
 1. Choose the forecast\.
 

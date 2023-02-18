@@ -2,13 +2,19 @@
 
 You can set up Contact Lens to track issues that you know exist in your contact center \("known knowns"\), and monitor any changes over time\. 
 
-You can label your contacts with predefined criteria you set up, that is, keywords and phrases you want to detect\. Through categorization, each contact is analyzed for these criteria, and labeled\. 
+You can label your contacts based on predefined criteria you set up, that is, keywords and phrases you want to detect\. Through categorization, each contact is analyzed for these criteria, and labeled\. 
 
-This is useful to do when, for example, you want to ensure that agents are speaking certain words or phrases for compliance reasons\. Or, for example, you want to investigate when customers use certain words and have a negative sentiment\. 
+This is useful to do when, for example, you want to ensure that agents are using certain words or phrases in calls or chats, for compliance reasons\. Or, for example, you want to investigate when customers use certain words and have a negative sentiment\. 
 
 To set up this feature, add rules that contain the words or phrases that you want to highlight\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-overview.png)
+In a **Contact details** page for a chat, categories appear above the transcript, as shown in the following image\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-overview-chat2.png)
+
+The following image shows what a **Contact details** page looks like with a category for a call\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-overview2.png)
 
 ## Add rules to categorize contacts<a name="add-category-rules"></a>
 
@@ -16,13 +22,14 @@ To set up this feature, add rules that contain the words or phrases that you wan
 
 1. Log in to Amazon Connect with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for **Rules** permissions\.
 
-1. On the navigation menu, choose **Rules**\. 
+1. On the navigation menu, choose **Analytics and optimization**, **Rules**\. 
 
 1. Select **Create a rule**, **Contact Lens**\. 
 
 1. Assign a name to the rule\.
 
-1. Under **When**, use the dropdown list to choose **post\-call analysis** or **real\-time analysis**\.
+1. Under **When**, use the dropdown list to choose **post\-call analysis**, **real\-time analysis**, or **post\-chat analysis**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rule-define-conditions.png)
 
 1. Choose **Add condition**, and then choose the type of match: 
    + **Exact Match**: Finds only the exact words or phrases\. Enter the words or phrases, separated by a comma\.
@@ -66,7 +73,9 @@ In addition to categorizing a contact, you can define what actions Amazon Connec
 
 1. [Generate an EventBridge event](contact-lens-rules-eventbridge-event.md)
 
-1. [Create task](contact-lens-rules-create-task.md)
+1. [Create Task](contact-lens-rules-create-task.md)
+
+1. [Send email notifications](contact-lens-rules-email.md)
 
 ### Step 3: Review and save<a name="add-category-rules-review-save"></a>
 

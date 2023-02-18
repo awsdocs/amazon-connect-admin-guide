@@ -22,31 +22,28 @@ The following table describes the Amazon Connect resources that can be tagged us
 
 **Tagging support for Amazon Connect resources**  
 
-| Resource | Supports tags | Supports tagging on creation | 
-| --- | --- | --- | 
-|  Agent  |  Yes  |  Yes  | 
-|  Agent group  |  Yes  | Yes | 
-|  Agent group level  |  No  | No | 
-|  Agent state  |  Yes  |  Yes  | 
-| Task template | Yes | No | 
-|  Contact  |  No  |  No  | 
-|  Flow  |  Yes  |  Yes  | 
-|  Flow module  |  Yes  | Yes | 
-|  Instance  | No | No | 
-|  Integration association  |  Yes  | Yes | 
-|  Operating hours  |  Yes  | Yes | 
-| Phone number | Yes | Yes | 
-|  Prompt  |  No  | No | 
-|  Queue  |  Yes  | Yes | 
-|  Queue agent  |  No  |  No  | 
-|  Routing Profile  |  Yes  |  Yes  | 
-|  Security profile  |  Yes  |  Yes  | 
-|  Transfer destination  |  Yes  |  Yes  | 
-|  Use case  |  Yes  |  Yes  | 
-|  Vocabulary  |  Yes  | Yes | 
-
-**Note**  
-Tagging of Amazon Connect resources is currently only available using the AWS CLI or an AWS SDK\.
+| Resource | Supports tagging using the Amazon Connect console | Supports tagging using the CLI/SDK | Supports tagging on creation | 
+| --- | --- | --- | --- | 
+|  Agent  |  Yes  |  Yes  |  Yes  | 
+|  Agent group  |  No  | Yes |  Yes  | 
+|  Agent group level  |  No  | No |  Yes  | 
+|  Agent state  |  No  |  Yes  |  Yes  | 
+| Task template | No | No |  Yes  | 
+|  Contact  |  No  |  No  |  No  | 
+|  Flow  |  No  |  Yes  |  Yes  | 
+|  Flow module  |  No  | Yes |  Yes  | 
+|  Instance  | No | No |  Yes  | 
+|  Integration association  |  No  | Yes |  Yes  | 
+|  Operating hours  |  No  | Yes |  Yes  | 
+| Phone number | No | Yes |  Yes  | 
+|  Prompt  |  No  | No |  Yes  | 
+|  Queues  |  Yes  | Yes |  Yes  | 
+|  Queue agent  |  No  |  No  |  Yes  | 
+|  Routing Profile  |  Yes  |  Yes  |  Yes  | 
+|  Security profile  |  Yes  |  Yes  |  Yes  | 
+|  Transfer destination  |  No  |  Yes  |  Yes  | 
+|  Use case  |  No  |  Yes  |  Yes  | 
+|  Vocabulary  |  No  | Yes |  Yes  | 
 
 To learn more about tagging, including best practices, see [Tagging AWS resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General Reference*\. 
 
@@ -54,4 +51,6 @@ To learn more about tagging, including best practices, see [Tagging AWS resource
 
 To use tags to control access to resources within your AWS accounts, you need to provide tag information in the condition element of an IAM policy\. For example, to control access to your Voice ID domain based on the tags you've assigned to it, use the `aws:ResourceTag/key-name` condition key to specify which tag key:value pair must be attached to the domain, in order to allow given actions for it\.
 
-For more detailed information on tag\-based access control, see [Controlling access to AWS resources using tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html) in the *IAM User Guide* 
+For more detailed information on tag\-based access control in the Amazon Connect console, see [Tag based access control](tag-based-access-control.md)\.
+
+For more detailed information on tag\-based access control in IAM, see [Controlling access to AWS resources using tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html) in the *IAM User Guide* 

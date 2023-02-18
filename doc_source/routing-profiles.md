@@ -16,6 +16,8 @@ Each agent is assigned to one routing profile\. For more information about routi
 1. Under **Routing profile queues**, enter the following information:    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/routing-profiles.html)
 
+1. Add Tags to identify, organize, search for, filter and control who can access routing profiles\. For more information, see [Tagging resources in Amazon Connect](tagging.md)\.
+
 1. Choose **Add new profile**\.
 
 ## Tips for setting up channels and concurrency<a name="routing-profile-concurrency"></a>

@@ -10,7 +10,37 @@ Following is a list of ID Requirements by country or region\. When you [ request
 Addresses that can be claimed without presence, such as PO Box addresses, are not valid in any country\.
 After your numbers are ordered or ported, the exact number of requested phone numbers appear in your Amazon Connect console for you to claim\. You won't have access to all available numbers in that country\.
 
-## Argentina \(AR\)<a name="argentina-regulations"></a>
+## Anguilla \(AI\)<a name="anguilla-requirements"></a>
+
+### For ordering phone numbers<a name="ai-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers:  | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="ai-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Antigua and Barbuda \(AG\)<a name="antigua-requirements"></a>
+
+### For ordering phone numbers<a name="ag-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+1 268 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="ai-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Argentina \(AR\)<a name="argentina-requirements"></a>
 
 ### For ordering phone numbers<a name="ar-ordering"></a>
 
@@ -25,9 +55,9 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-| Not supported  | N/A  | N/A | 
+| US East US West  | Monday\-Friday 2AM\-4AM or 10AM\-12PM or 3PM\-5PM UTC\-3 Buenos Aires time  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) | 
 
-## Australia \(AU\)<a name="australia-regulations"></a>
+## Australia \(AU\)<a name="australia-requirements"></a>
 
 ### For ordering phone numbers<a name="au-ordering"></a>
 
@@ -44,7 +74,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | Asia Pacific \(Sydney\) Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Tokyo\)  | Monday\-Friday 8 AM \-12 PM AEST  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Austria \(AT\)<a name="austria-regulations"></a>
+## Austria \(AT\)<a name="austria-requirements"></a>
 
 ### For ordering phone numbers<a name="at-ordering"></a>
 
@@ -61,7 +91,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Belgium \(BE\)<a name="belgium-regulations"></a>
+## Belgium \(BE\)<a name="belgium-requirements"></a>
 
 ### For ordering phone numbers<a name="be-ordering"></a>
 
@@ -78,7 +108,94 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Canada \(CA\)<a name="canada-regulations"></a>
+## Bahamas \(BS\)<a name="bahamas-requirements"></a>
+
+### For ordering phone numbers<a name="bs-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+1 242 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="bs-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Barbados \(BB\)<a name="barbados-requirements"></a>
+
+### For ordering phone numbers<a name="bb-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+1 246 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="bb-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Bolivia \(BO\)<a name="bolivia-requirements"></a>
+
+### For ordering phone numbers<a name="bo-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | National prefixes: \+591 50 | No |   | 
+
+### For porting numbers<a name="bo-porting"></a>
+
+Porting is not supported\.
+
+## Bonaire \(BQ\)<a name="bonaire-requirements"></a>
+
+### For ordering phone numbers<a name="bq-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+599 7 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="bq-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Brazil \(BR\)<a name="brazil-requirements"></a>
+
+### For ordering phone numbers<a name="br-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+### For porting numbers<a name="br-porting"></a>
++ Work with Embratel for your number porting\.
++ At least 5 days before your scheduled porting date with Embratel, open an AWS Support ticket for your numbers to be added to your Amazon Connect instance\.
+
+## Brunei \(\)<a name="brunei-requirements"></a>
+
+### For ordering phone numbers<a name="brunei-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| EU \(Frankfurt\) EU \(London\) | Toll\-free prefixes: | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="brunei-porting"></a>
+
+Porting is not supported\.
+
+## Canada \(CA\)<a name="canada-requirements"></a>
 
 ### For ordering phone numbers<a name="ca-ordering"></a>
 
@@ -95,7 +212,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | US East US West Canada \(Central\)  EU \(Frankfurt\) EU \(London\) AWS GovCloud \(US\-West\)  | Monday\-Friday 7 AM to 5 PM CST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Chile \(CL\)<a name="chile-regulations"></a>
+## Chile \(CL\)<a name="chile-requirements"></a>
 
 ### For ordering phone numbers<a name="cl-ordering"></a>
 
@@ -112,7 +229,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | US East US West  | Monday\-Friday 9 PM to 3 AM PST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Colombia \(CO\)<a name="colombia-regulations"></a>
+## Colombia \(CO\)<a name="colombia-requirements"></a>
 
 ### For ordering phone numbers<a name="co-ordering"></a>
 
@@ -129,7 +246,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 
 
-## Costa Rica \(CR\)<a name="costa-rica-regulations"></a>
+## Costa Rica \(CR\)<a name="costa-rica-requirements"></a>
 
 ### For ordering phone numbers<a name="cr-ordering"></a>
 
@@ -146,7 +263,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 
 
-## Croatia \(HR\)<a name="croatia-regulations"></a>
+## Croatia \(HR\)<a name="croatia-requirements"></a>
 
 ### For ordering phone numbers<a name="hr-ordering"></a>
 
@@ -163,7 +280,22 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Cyprus \(CY\)<a name="cyprus-regulations"></a>
+## Curaçao \(CW\)<a name="curaçao-requirements"></a>
+
+### For ordering phone numbers<a name="cw-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+599 9 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="cw-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Cyprus \(CY\)<a name="cyprus-requirements"></a>
 
 ### For ordering phone numbers<a name="cy-ordering"></a>
 
@@ -180,7 +312,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Czech Republic \(CZ\)<a name="czech-republic-regulations"></a>
+## Czech Republic \(CZ\)<a name="czech-republic-requirements"></a>
 
 ### For ordering phone numbers<a name="cz-ordering"></a>
 
@@ -197,7 +329,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 3 PM to 4 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Denmark \(DK\)<a name="denmark-regulations"></a>
+## Denmark \(DK\)<a name="denmark-requirements"></a>
 
 ### For ordering phone numbers<a name="dk-ordering"></a>
 
@@ -214,7 +346,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## El Salvador \(SV\)<a name="el-salvador-regulations"></a>
+## El Salvador \(SV\)<a name="el-salvador-requirements"></a>
 
 ### For ordering phone numbers<a name="sv-ordering"></a>
 
@@ -231,7 +363,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 
 
-## Estonia \(EE\)<a name="estonia-regulations"></a>
+## Estonia \(EE\)<a name="estonia-requirements"></a>
 
 ### For ordering phone numbers<a name="ee-ordering"></a>
 
@@ -248,7 +380,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 |  EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Finland \(FI\)<a name="finland-regulations"></a>
+## Finland \(FI\)<a name="finland-requirements"></a>
 
 ### For ordering phone numbers<a name="fi-ordering"></a>
 
@@ -265,7 +397,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## France \(FR\)<a name="france-regulations"></a>
+## France \(FR\)<a name="france-requirements"></a>
 
 ### For ordering phone numbers<a name="fr-ordering"></a>
 
@@ -275,14 +407,9 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 
 ### For porting numbers<a name="fi-porting"></a>
 
+Porting is temporarily unavailable due to the industry impact of January 1, 2023, regulatory changes in France\. It will be re\-enabled when industry\-wide issues with number portability in France have been resolved\. 
 
-****  
-
-| Supported Regions | Porting Windows | Required Documents | 
-| --- | --- | --- | 
-|  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
-
-## Georgia \(GE\)<a name="georgia-regulations"></a>
+## Georgia \(GE\)<a name="georgia-requirements"></a>
 
 ### For ordering phone numbers<a name="ge-ordering"></a>
 
@@ -299,7 +426,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 |  Not supported  | N/A | N/A  | 
 
-## Germany \(DE\)<a name="germany-regulations"></a>
+## Germany \(DE\)<a name="germany-requirements"></a>
 
 ### For ordering phone numbers<a name="de-ordering"></a>
 
@@ -316,7 +443,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Greece \(GR\)<a name="greece-regulations"></a>
+## Greece \(GR\)<a name="greece-requirements"></a>
 
 ### For ordering phone numbers<a name="gr-ordering"></a>
 
@@ -333,7 +460,19 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Hong Kong \(HK\)<a name="hongkong-regulations"></a>
+## Guatemala \(GT\)<a name="guatemala-requirements"></a>
+
+### For ordering phone numbers<a name="guatemala-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+### For porting numbers<a name="guatemala-porting"></a>
+
+Porting is not supported\.
+
+## Hong Kong \(HK\)<a name="hongkong-requirements"></a>
 
 ### For ordering phone numbers<a name="hk-ordering"></a>
 
@@ -350,7 +489,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 |  Not support  | N/A | N/A  | 
 
-## Hungary \(HU\)<a name="hungary-regulations"></a>
+## Hungary \(HU\)<a name="hungary-requirements"></a>
 
 ### For ordering phone numbers<a name="hu-ordering"></a>
 
@@ -367,7 +506,19 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 |  EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Indonesia \(ID\)<a name="indonesia-regulations"></a>
+## Iceland \(\)<a name="iceland-requirements"></a>
+
+### For ordering phone numbers<a name="iceland-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+### For porting numbers<a name="iceland-porting"></a>
+
+Porting is not supported\.
+
+## Indonesia \(ID\)<a name="indonesia-requirements"></a>
 
 ### For ordering phone numbers<a name="id-ordering"></a>
 
@@ -384,7 +535,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 | Not supported  | N/A  | N/A | 
 
-## Ireland \(IE\)<a name="ireland-regulations"></a>
+## Ireland \(IE\)<a name="ireland-requirements"></a>
 
 ### For ordering phone numbers<a name="ie-ordering"></a>
 
@@ -401,7 +552,7 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Italy \(IT\)<a name="italy-regulations"></a>
+## Italy \(IT\)<a name="italy-requirements"></a>
 
 ### For ordering phone numbers<a name="it-ordering"></a>
 
@@ -418,7 +569,22 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Japan \(JP\)<a name="japan-regulations"></a>
+## Jamaica \(JM\)<a name="jamaica-requirements"></a>
+
+### For ordering phone numbers<a name="jm-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers:  | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="jm-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Japan \(JP\)<a name="japan-requirements"></a>
 
 ### For ordering phone numbers<a name="jp-ordering"></a>
 
@@ -428,17 +594,14 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 
 ### For porting numbers<a name="jp-porting"></a>
 
-**Note**  
-Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported\.
-
 
 ****  
 
 | Supported Regions | Porting Windows | Required Documents | 
 | --- | --- | --- | 
-|  Asia Pacific \(Tokyo\)  | Toll\-free prefixes: \+81 120, \+81 800 | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+|  Asia Pacific \(Tokyo\)  |  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) Submit an AWS Support ticket to verify the portability of your number\(s\)\.  | 
 
-## Latvia \(LV\)<a name="latvia-regulations"></a>
+## Latvia \(LV\)<a name="latvia-requirements"></a>
 
 ### For ordering phone numbers<a name="lv-ordering"></a>
 
@@ -455,7 +618,7 @@ Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Lithuania \(LT\)<a name="lithuania-regulations"></a>
+## Lithuania \(LT\)<a name="lithuania-requirements"></a>
 
 ### For ordering phone numbers<a name="lt-ordering"></a>
 
@@ -472,7 +635,7 @@ Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Luxembourg \(LU\)<a name="luxembourg-regulations"></a>
+## Luxembourg \(LU\)<a name="luxembourg-requirements"></a>
 
 ### For ordering phone numbers<a name="lu-ordering"></a>
 
@@ -489,7 +652,7 @@ Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Malaysia \(MY\)<a name="malaysia-regulations"></a>
+## Malaysia \(MY\)<a name="malaysia-requirements"></a>
 
 ### For ordering phone numbers<a name="my-ordering"></a>
 
@@ -514,27 +677,7 @@ Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported
 | --- | --- | --- | 
 |  Not supported  | N/A | N/A  | 
 
-## Malta \(MT\)<a name="malta-regulations"></a>
-
-### For ordering phone numbers<a name="mt-ordering"></a>
-
-
-****  
-
-| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
-| --- | --- | --- | --- | 
-| EU \(Frankfurt\) EU \(London\) | National prefixes: \+356 | Yes | Your business name, address, a copy of the ID/business registration and a proof of address \(issued in the past 6 months\)\. Valid forms of proof are: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
-
-### For porting numbers<a name="mt-porting"></a>
-
-
-****  
-
-| Supported Regions | Porting Windows | Required Documents | 
-| --- | --- | --- | 
-|  Not supported  | N/A | N/A  | 
-
-## Mexico \(MX\)<a name="mexico-regulations"></a>
+## Mexico \(MX\)<a name="mexico-requirements"></a>
 
 ### For ordering phone numbers<a name="mx-ordering"></a>
 
@@ -551,7 +694,7 @@ Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported
 | --- | --- | --- | 
 |  US East US West  | Monday\-Friday 10 AM to 12 PM CET or 2 PM to 4 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## New Zealand \(NZ\)<a name="new-zealand-regulations"></a>
+## New Zealand \(NZ\)<a name="new-zealand-requirements"></a>
 
 ### For ordering phone numbers<a name="nz-ordering"></a>
 
@@ -568,7 +711,7 @@ Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported
 | --- | --- | --- | 
 |  Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\)  | Monday\-Friday 7 AM to 11 AM NZST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Netherlands \(NL\)<a name="netherlands-regulations"></a>
+## Netherlands \(NL\)<a name="netherlands-requirements"></a>
 
 ### For ordering phone numbers<a name="nl-ordering"></a>
 
@@ -585,7 +728,19 @@ Local telephone numbers cannot be ported\. Only toll\-free numbers can be ported
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Norway \(NO\)<a name="norway-regulations"></a>
+## Nicaragua \(NI\)<a name="nicaragua-requirements"></a>
+
+### For ordering phone numbers<a name="nicaragua-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+### For porting numbers<a name="nicaragua-porting"></a>
+
+Porting is not supported\.
+
+## Norway \(NO\)<a name="norway-requirements"></a>
 
 ### For ordering phone numbers<a name="no-ordering"></a>
 
@@ -604,7 +759,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Panama \(PA\)<a name="panama-regulations"></a>
+## Panama \(PA\)<a name="panama-requirements"></a>
 
 ### For ordering phone numbers<a name="pa-ordering"></a>
 
@@ -624,7 +779,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  US East US West  | Monday\-Friday 12 AM to 2 AM PST | **For porting local numbers**: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) **For porting toll\-free numbers**: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Peru \(PE\)<a name="peru-regulations"></a>
+## Peru \(PE\)<a name="peru-requirements"></a>
 
 ### For ordering phone numbers<a name="pe-ordering"></a>
 
@@ -641,7 +796,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  US East US West  | Monday\-Friday 10 PM to 4 AM PST |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Poland \(PL\)<a name="poland-regulations"></a>
+## Poland \(PL\)<a name="poland-requirements"></a>
 
 ### For ordering phone numbers<a name="pl-ordering"></a>
 
@@ -658,7 +813,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Portugal \(PT\)<a name="portugal-regulations"></a>
+## Portugal \(PT\)<a name="portugal-requirements"></a>
 
 ### For ordering phone numbers<a name="pt-ordering"></a>
 
@@ -675,7 +830,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Puerto Rico \(PR\)<a name="puerto-rico-regulations"></a>
+## Puerto Rico \(PR\)<a name="puerto-rico-requirements"></a>
 
 ### For ordering phone numbers<a name="pr-ordering"></a>
 
@@ -692,7 +847,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  US East US West  | Monday\-Friday 10 AM to 12 PM PST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Romania \(RO\)<a name="romania-regulations"></a>
+## Romania \(RO\)<a name="romania-requirements"></a>
 
 ### For ordering phone numbers<a name="ro-ordering"></a>
 
@@ -709,16 +864,28 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM PST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Serbia \(RS\)<a name="serbia-regulations"></a>
+## Saba \(BQ\)<a name="saba-requirements"></a>
 
-### For ordering phone numbers<a name="rs-ordering"></a>
+### For ordering phone numbers<a name="bq-ordering"></a>
 
 
 ****  
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| EU \(Frankfurt\) EU \(London\)  | Local telephone numbers: | Yes | Businesses must provide a copy of business registration containing a proof of address\. Valid proofs of address include: third\-party issued bank statements, utility bills \(all issued in the previous 6 months\); government documents \(issued in the previous year\)\. The business address must be outside Serbia\.  | 
+| US East US West | Local telephone numbers: \+599 4 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="bq-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Serbia \(RS\)<a name="serbia-requirements"></a>
+
+### For ordering phone numbers<a name="rs-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
 ### For porting numbers<a name="rs-porting"></a>
 
@@ -729,7 +896,37 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 
 
-## Singapore \(SG\)<a name="singapore-regulations"></a>
+## Saint Lucia \(LC\)<a name="saintmartin-requirements"></a>
+
+### For ordering phone numbers<a name="mf-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers:  | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="jm-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Saint Martin \(MF\)<a name="saintlucia-requirements"></a>
+
+### For ordering phone numbers<a name="mf-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+1 758 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="mf-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Singapore \(SG\)<a name="singapore-requirements"></a>
 
 ### For ordering phone numbers<a name="sg-ordering"></a>
 
@@ -746,7 +943,37 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  Asia Pacific \(Singapore\)  | NA | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Slovakia \(SK\)<a name="slovakia-regulations"></a>
+## Sint Eustatius \(BQ\)<a name="sinteustatius-requirements"></a>
+
+### For ordering phone numbers<a name="bq-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+599 3 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="bq-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Sint Maarten \(SX\)<a name="sintmaarten-requirements"></a>
+
+### For ordering phone numbers<a name="sx-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+1 721 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="sx-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Slovakia \(SK\)<a name="slovakia-requirements"></a>
 
 ### For ordering phone numbers<a name="sk-ordering"></a>
 
@@ -763,7 +990,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Slovenia \(SI\)<a name="slovenia-regulations"></a>
+## Slovenia \(SI\)<a name="slovenia-requirements"></a>
 
 ### For ordering phone numbers<a name="si-ordering"></a>
 
@@ -780,7 +1007,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## South Africa \(ZA\)<a name="southafrica-regulations"></a>
+## South Africa \(ZA\)<a name="southafrica-requirements"></a>
 
 ### For ordering phone numbers<a name="za-ordering"></a>
 
@@ -788,7 +1015,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-## South Korea \(KR\)<a name="southkorea-regulations"></a>
+## South Korea \(KR\)<a name="southkorea-requirements"></a>
 
 ### For ordering phone numbers<a name="kr-ordering"></a>
 
@@ -805,7 +1032,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 
 
-## Spain \(ES\)<a name="spain-regulations"></a>
+## Spain \(ES\)<a name="spain-requirements"></a>
 
 ### For ordering phone numbers<a name="es-ordering"></a>
 
@@ -822,7 +1049,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Sweden \(SE\)<a name="sweden-regulations"></a>
+## Sweden \(SE\)<a name="sweden-requirements"></a>
 
 ### For ordering phone numbers<a name="se-ordering"></a>
 
@@ -839,7 +1066,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Switzerland \(CH\)<a name="switzerland-regulations"></a>
+## Switzerland \(CH\)<a name="switzerland-requirements"></a>
 
 ### For ordering phone numbers<a name="ch-ordering"></a>
 
@@ -856,7 +1083,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Thailand \(TH\)<a name="thailand-regulations"></a>
+## Thailand \(TH\)<a name="thailand-requirements"></a>
 
 ### For ordering phone numbers<a name="th-ordering"></a>
 
@@ -873,7 +1100,37 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  Not supported  | N/A | N/A  | 
 
-## Uganda \(UG\)<a name="uganda-regulations"></a>
+## Trinidad and Tobago \(TT\)<a name="trinidad-requirements"></a>
+
+### For ordering phone numbers<a name="tt-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+1 868 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="tt-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Turks and Caicos \(TC\)<a name="turks-requirements"></a>
+
+### For ordering phone numbers<a name="tc-ordering"></a>
+
+
+****  
+
+| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
+| --- | --- | --- | --- | 
+| US East US West | Local telephone numbers: \+1 649 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+### For porting numbers<a name="tc-porting"></a>
+
+Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
+
+## Uganda \(UG\)<a name="uganda-requirements"></a>
 
 ### For ordering phone numbers<a name="ug-ordering"></a>
 
@@ -893,7 +1150,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 |  Not supported  | N/A | N/A  | 
 
-## United Kingdom \(GB\)<a name="unitedkingdom-regulations"></a>
+## United Kingdom \(GB\)<a name="unitedkingdom-requirements"></a>
 
 ### For ordering phone numbers<a name="gb-ordering"></a>
 
@@ -910,7 +1167,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 | US East US West Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\) EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## United States \(US\)<a name="us-regulations"></a>
+## United States \(US\)<a name="us-requirements"></a>
 
 ### For ordering phone numbers<a name="us-ordering"></a>
 
@@ -927,7 +1184,7 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 | --- | --- | --- | 
 | US East US West Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\) EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 7 AM to 5 PM CST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Vietnam \(VN\)<a name="vietnam-regulations"></a>
+## Vietnam \(VN\)<a name="vietnam-requirements"></a>
 
 ### For ordering phone numbers<a name="vn-ordering"></a>
 

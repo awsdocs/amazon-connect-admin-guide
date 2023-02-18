@@ -12,9 +12,6 @@ Thanks to your feedback, we've made the following changes to contact search\.
 
 ### Search contacts by agent's first or last name<a name="search-contacts-agent-name"></a>
 
-**Note**  
-This feature is not available in AWS GovCloud\.
-
 The following image shows the Agent filter, and the option to choose agents by name\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-agent-name.png)
@@ -27,7 +24,7 @@ To use the **Agent** filter on the **Contact search** page, in your Amazon Conne
 
 When you have **Users \- View** permissions, on the **Contact search** page the **Agent** filter appears, as shown in the following image:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search1.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search3.png)
 
 Without **User \- View** permissions, the **Agent** filter is not visible, and searching contacts by Agent login is not supported, as shown in the following image:
 
@@ -48,12 +45,12 @@ Without **User \- View** permissions, the **Agent** filter is not visible, and s
   + **Search contacts by conversation**: This controls access to the sentiment scores, non\-talk time, and category searches\.
   +  **Search contacts by keywords**: This controls access to the keywords search\.
   +  **Contact Lens \- speech analytics**: On the Contact Trace Record page, this displays graphs that summarize speech analytics\.
-+ Filters for [Voice ID](voice-id.md)\. You can search for the Voice ID authentication and fraud detection status of contacts, if your organization has enabled Voice ID\. To access this functionality, on your security profile, you need **Analytics**, **Voice ID \- attributes and search** \- **View** permission\.  
++ Filters for [Voice ID](voice-id.md)\. You can search for the Voice ID authentication and fraud detection status of contacts, if your organization has enabled Voice ID\. To access this functionality, on your security profile, you need **Analytics and Optimization**, **Voice ID \- attributes and search** \- **View** permission\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-search-filters.png)
 
 ## Manage who can search for contacts and access detailed information<a name="required-permissions-search-contacts"></a>
 
-Before users can search for contacts in Amazon Connect, or access detailed contact information, they need to be assigned to the **CallCenterManager** security profile, or have the following **Analytics** permissions:
+Before users can search for contacts in Amazon Connect, or access detailed contact information, they need to be assigned to the **CallCenterManager** security profile, or have the following **Analytics and Optimization** permissions:
 + **Access metrics \- Access** \(Required\): Grants access to metrics data\.
 + **Contact search \- View** \(Required\): Grants access to the **Contact search** page, and the ability to search for contacts\.
 + **Restrict contact access** \(Optional\): Manage a user's access to results on the **Contact search** page based on their agent hierarchy group\.
@@ -81,7 +78,7 @@ For information about how add more permissions to an existing security profile, 
 
 1. Log in to Amazon Connect with a user account that has [permissions to access contact records](#required-permissions-search-contacts)\.
 
-1. In Amazon Connect choose **Analytics**, **Contact search**\.
+1. In Amazon Connect choose **Analytics and optimization**, **Contact search**\.
 
 1. Use the filters on the page to narrow your search\. For date, you can search up to 8 weeks at a time\.
 

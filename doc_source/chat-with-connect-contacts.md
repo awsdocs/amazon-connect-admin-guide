@@ -35,7 +35,7 @@ Chat conversations must be accepted manually\. There's no auto\-accept for these
 
 When you're in a chat conversation with a contact, you'll see two timers at the top of the chat tab\. These timers tell you: 
 + How long the contact has been connected to your contact center\. This includes the time spent with the bot, if you're using one\.
-+ How long since the last text was sent\. This can be either from the customer to the agent, or from the agent to the customer\. the timer is reset with each text message\. 
++ How long since the last text was sent\. This can be either from the customer to the agent, or from the agent to the customer\. The timer is reset with texts message between the two\. It is not reset with each consecutive text message sent from a participant\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chat-timers.png)
 

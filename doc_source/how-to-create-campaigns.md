@@ -8,7 +8,7 @@ There are two ways you can create an outbound campaign:
 
 ## How to create an outbound campaign<a name="create-campaigns"></a>
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
 1. On the left navigation menu, choose **High\-volume outbound communication**, and then choose **Create campaign**\.
 

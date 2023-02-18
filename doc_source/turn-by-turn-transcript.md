@@ -1,18 +1,18 @@
 # Quickly navigate transcripts and audio<a name="turn-by-turn-transcript"></a>
 
-Supervisors are often required to review many agents calls for quality assurance purposes\. The turn\-by\-turn transcript and sentiment data helps you quickly identify and navigate to the portion of the recording that is of interest to you\. 
+Supervisors are often required to review the contacts for many agents, for quality assurance purposes\. The turn\-by\-turn transcript and sentiment data helps you quickly identify and navigate to the portion of the recording that is of interest to you\. 
 
-The following image shows features that enable you to quickly navigate transcripts and audio to find areas that need your attention\. 
+The following image shows features that enable you to quickly navigate transcripts and audio to find areas that need your attention\. While the image shows a voice contact, the same features apply to chat contacts\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-navigate-transcripts2.png)
 
 1. Use [Show transcript summary](#contact-lens-contact-summarization) to review only the issue, outcome, and/or action item\.
 
-1. Use [Autoscroll](#autoscroll) to jump around the audio or transcript\. The two always stay in sync\.
+1. Use [Autoscroll](#autoscroll) for voice contacts, to jump around the audio or transcript\. The two always stay in sync\.
 
-1. Scan for [sentiment emojis](#sentiment-emojis) to quickly identify a part for the transcript you want to listen to\.
+1. Scan for [sentiment emojis](#sentiment-emojis) to quickly identify a part for the transcript you want to read or listen to\.
 
-1. Choose the timestamp to jump to that part of the audio recording\.
+1. Choose the timestamp to jump to that part of the audio recording or transcript\.
 
 ## Show transcript summary<a name="contact-lens-contact-summarization"></a>
 
@@ -26,11 +26,11 @@ Each contact has no more than one issue, one outcome, and one action item\. Not 
 **Note**  
 If Contact Lens displays the message **There is no summary information for this transcript**, it means no issue, outcome, or action item was identified\.
 
-You don't need to configure call summarization\. It works out\-of\-the\-box without any training of the machine learning model\. 
+You don't need to configure contact summarization\. It works out\-of\-the\-box without any training of the machine learning model\. 
 
 ## Turn on autoscroll to synchronize the transcript and audio<a name="autoscroll"></a>
 
-Autoscroll enables you to jump around the audio or transcript, and the two always stay in sync\. For example:
+For voice contacts, use **Autoscroll** to jump around the audio or transcript, and the two always stay in sync\. For example:
 + When you listen to a conversation, the transcript moves along with it, showing you sentiment emojis and any detected issue\.
 + You can scroll through the transcript, and choose the timestamp for the turn to listen to that specific point in the recording\.
 
@@ -42,10 +42,12 @@ Because the audio and transcript are aligned, the transcript can help you unders
 
 Sentiment emojis help you quickly scan a transcript so you can listen to that part of the conversation\.
 
-For example, where you see red emojis for customer turns and then a green emoji, you might choose the timestamp to jump to that specific point of the recording to hear how that agent helped the customer\.
+For example, where you see red emojis for customer turns and then a green emoji, you might choose the timestamp to jump to that specific point of the conversation to check how that agent helped the customer\.
 
 ## Tap or click category tags to navigate through transcript<a name="category-navigation"></a>
 
-When you tap or click on the category tags, Contact Lens auto\-navigates to the corresponding point\-of\-interests in the transcript\. There are also category markers in the recording playback visualization to indicate which part of the audio file has utterances related to the category\. 
+When you tap or click on the category tags, Contact Lens auto\-navigates to the corresponding point\-of\-interests in the transcript\. There are also category markers in the visualization of the interaction to indicate which part of the recording file has utterances related to the category\. 
+
+The following image shows part of a **Contact details** page for a chat\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-tag-navigation.png)

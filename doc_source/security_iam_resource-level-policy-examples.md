@@ -1,6 +1,6 @@
 # Amazon Connect resource\-level policy examples<a name="security_iam_resource-level-policy-examples"></a>
 
-Amazon Connect supports resource\-level permissions for IAM users, so you can specify actions for them for an instance, as shown in the following policies\.
+Amazon Connect supports resource\-level permissions for users, so you can specify actions for them for an instance, as shown in the following policies\.
 
 ## Deny the "delete" and "update" actions<a name="connect-access-control-resources-example2"></a>
 

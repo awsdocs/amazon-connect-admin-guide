@@ -37,38 +37,20 @@ The address must be attached as a JSON string against the key `CivicAddress`, as
 The following table shows a complete list of keys\.
 
 
-| Attribute name | Description | Example | 
-| --- | --- | --- | 
-|  country  | The country is identified by the two\-letter ISO 3166 code\.  | US  | 
-|  A1  | National subdivisions \(state, region, province, prefecture\)  | WA  | 
-|  A2  | County, parish, gun \(JP\), district \(IN\)  | King county  | 
-|  A3  | City, township, shi \(JP\)  | New York  | 
-|  A4  | City division, borough, city district, ward, chou \(JP\)  | Manhattan  | 
-|  A5  | Neighborhood, block  | Morningside Heights  | 
-|  A6  | Street  | Broadway  | 
-|  PRD  | Leading street direction  | N, W  | 
-|  POD  | Trailing street suffix  | SW  | 
-|  STS  | Street suffix  | Avenue, Platz  | 
-|  HNO  | House number \(numeric part only\)  | 2121  | 
-|  HNS  | House number suffix  | A, 1/2  | 
-|  LMK  | Landmark or vanity address  | Low Library  | 
-|  LOC  | Additional location information  | Room 543  | 
-|  FLR  | Floor  | 5  | 
-|  NAM  | Name \(residence, business or office occupant\)  | Example Corp  | 
-|  PC  | Postal code  | 10027\-0401  | 
-|  BLD  | Building \(structure\)  | Example Theater  | 
-|  UNIT  | Unit \(apartment, suite\)  | 12a  | 
-|  ROOM  | Room  | 450F  | 
-|  PLC  | Place\-type  | Office  | 
-|  PCN  | Postal community name  | Leonia  | 
-|  ADDCODE  | Additional code  | 13203000003  | 
-|  SEAT  | Seat \(desk, cubicle, workstation\)  | WS 181  | 
-|  RD  | Primary road or street  | Broadway  | 
-|  RDSEC  | Road section  | 14  | 
-|  RDBR  | Road branch  | Lane 7  | 
-|  RDSUBBR  | Road sub\-branch  | Alley 8  | 
-|  PRM  | Road pre\-modifier  | Old  | 
-|  POM  | Road post\-modifier  | Extended  | 
+| Attribute name | Description | Example | Required | Character limit | Recommended character limit | 
+| --- | --- | --- | --- | --- | --- | 
+|  country  | The country is identified by the two\-letter ISO 3166 code\.  | US  | Required  | 2  |   | 
+|  A1  | National subdivisions \(state, region, province, prefecture\)  | NY  | Required  | 2  |   | 
+|  A3  | City, township, shi \(JP\)  | New York  | Required  | 32  |   | 
+|  PRD  | Leading street direction  | N, W  | Required only if applicable to address  | 2  |   | 
+|  POD  | Trailing street suffix  | SW  | Required only if applicable to address  | 2  |   | 
+|  STS  | Street suffix  | Avenue, Platz  | Required only if applicable to address  | 5  |   | 
+|  HNO  | House number \(numeric part only\)  | 2121  | Required  | 10  |   | 
+|  HNS  | House number suffix  | A, 1/2  | Required only if applicable to address  | 4  |   | 
+|  LOC  | Additional location information  | Room 543  | Optional  | 60  | 20 or less  | 
+|  NAM  | Name \(residence, business or office occupant\)  | Example Corp  | Optional  | 32  |   | 
+|  PC  | Postal code  | 10027  | Required  | 5  |   | 
+|  RD  | Primary road or street  | Broadway  | Required  | 40  |   | 
 
 **Note**  
 It is your responsibility to validate the address against a standard repository such as the Master Street Address Guide \(MSAG\)\.

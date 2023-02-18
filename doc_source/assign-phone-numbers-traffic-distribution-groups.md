@@ -31,6 +31,12 @@ Following is an example workflow to assign claimed phone numbers to your traffic
 
       1. A list of flow ARNs is returned\. Use these flow ARNs to associate a flow to a phone number; call the [AssociatePhoneNumberContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_AssociatePhoneNumberContactFlow.html) API\. 
 
+## Why an AssociatePhoneNumberContactFlow call fails<a name="why-associatephonenumbercontactflow-fails"></a>
+
+If the number is claimed to a traffic distribution group, and you are calling [AssociatePhoneNumberContactFlow](https://docs.aws.amazon.com/connect/latest/APIReference/API_AssociatePhoneNumberContactFlow.html) using an instance in the AWS Region where the traffic distribution group was created, you can use either a full phone number ARN or UUID value for the `PhoneNumberId` URI request parameter\. 
+
+However, if the number is claimed to a traffic distribution group and you are calling this API using an instance in the replica AWS Region associated with the traffic distribution group, you must provide a full phone number ARN\. If a UUID is provided in this scenario, you will receive a `ResourceNotFoundException`\.
+
 ## Why an UpdatePhoneNumber call fails<a name="why-updatephonenumber-fails"></a>
 
 Your [UpdatePhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdatePhoneNumber.html) API call will fail with a `ResourceNotFoundException` in the following case:

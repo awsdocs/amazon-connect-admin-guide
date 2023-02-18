@@ -208,3 +208,10 @@ Use the following contact attributes to autopopulate customer profiles in the ag
 | Attribute | Description | Type | JSONPath Reference | 
 | --- | --- | --- | --- | 
 | profileSearchKey | A user\-defined attribute that has two parts: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/connect-attrib-list.html)  | User\-defined | $\.Attributes\.*name\_of\_your\_destination\_key* | 
+
+## Outbound campaign attributes<a name="campaign-attributes"></a>
+
+You can use data in Amazon Pinpoint [segments](https://docs.aws.amazon.com/pinpoint/latest/userguide/segments-building.html) list to customize experiences in Amazon Connect flows\. To reference data in a segment list, use **Attributes\_*ColumnName***\. For more information, see [Adding personalized content to message templates](https://docs.aws.amazon.com/pinpoint/latest/userguide/message-templates-personalizing.html)\.
+
+**Note**  
+Do not use **$\.**Attributes to reference these attributes\.

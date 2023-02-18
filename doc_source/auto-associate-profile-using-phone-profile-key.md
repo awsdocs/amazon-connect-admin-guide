@@ -28,4 +28,4 @@ To use the CTR\-NoInferred template to replace the default CTR template, run the
 
 To revert to the default behavior, run the following command on the CLI:
 
-`aws customer-profiles put-profile-object-type --domain-name {domain} --object-type-name CTR --description "No inferred contact record profiles" --template-id CTR`
+`aws customer-profiles put-profile-object-type --domain-name {domain} --object-type-name CTR --description "Revert to inferred contact record profiles" --template-id CTR`

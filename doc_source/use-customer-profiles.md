@@ -1,4 +1,4 @@
-# Use Customer Profiles in the agent application<a name="use-customer-profiles"></a>
+# Use Customer Profiles in the agent workspace<a name="use-customer-profiles"></a>
 
 To help you deliver more efficient and personalized customer service, Amazon Connect enables you to combine information from external applications, such as Salesforce, with contact history from Amazon Connect\. This creates a customer profile that has all the information you need during customer interactions in a single place\.
 

@@ -10,7 +10,7 @@ Certain pages on the Amazon Connect console, such as [Tasks](#tasks-page) and [C
 
 ## AmazonConnect\_FullAccess policy<a name="amazonconnectfullaccesspolicy"></a>
 
-To allow full read/write access to Amazon Connect, you must attach two policies to your IAM users, groups, or roles\. Attach the **AmazonConnect\_FullAccess** policy and a custom policy with the following contents:
+To allow full read/write access to Amazon Connect, you must attach two policies to your users, groups, or roles\. Attach the **AmazonConnect\_FullAccess** policy and a custom policy with the following contents:
 
 ```
 { 
@@ -26,7 +26,7 @@ To allow full read/write access to Amazon Connect, you must attach two policies 
 }
 ```
 
-To allow an IAM user to create an instance, ensure that they have the permissions granted by the AmazonConnect\_FullAccess policy\.
+To allow a user to create an instance, ensure that they have the permissions granted by the AmazonConnect\_FullAccess policy\.
 
 When you use AmazonConnect\_FullAccess policy, note the following:
 + Additional privileges are required to create a Amazon S3 bucket with a name of your choosing, or use an existing bucket while creating or updating an instance from the Amazon Connect console\. If you choose default storage locations for your call recordings, chat transcripts, call transcripts, etc, they are now prefixed with "amazon\-connect\-"\.
@@ -151,6 +151,14 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View approved origins | connect:DescribeInstance connect:ListApprovedOrigins  | 
 | Edit approved origins |  connect: AssociateApprovedOrigin connect:ListApprovedOrigins connect:DisassociateApprovedOrigin  | 
 
+### Customer Profiles page<a name="customer-profiles-page"></a>
+
+
+| Action/Use case | Permissions needed | 
+| --- | --- | 
+| View customer profiles | appflow:DescribeFlow appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:ListConnectorProfiles kms:ListKeys profile:ListDomains profile:ListAccountIntegrations sqs:ListQueues  | 
+| Edit customer profiles | appflow:CreateFlow appflow:CreateConnectorProfile appflow:DescribeFlow appflow:DeleteFlow appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:ListConnectorProfiles appflow:StartFlow appflow:StopFlow kms:ListKeys profile:CreateDomain profile:DeleteIntegration profile:DeleteDomain profile:ListDomains profile:ListAccountIntegrations profile:PutIntegration profile:UpdateDomain kms:ListGrants kms:DescribeKey kms:ListAliases kms:ListKeys sqs:ListQueues  | 
+
 ### Tasks page<a name="tasks-page"></a>
 
 
@@ -159,13 +167,13 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View Tasks integrations | app\-integrations:GetEventIntegration connect:ListIntegrationAssociations  | 
 | Edit Tasks integrations | app\-integrations:CreateEventIntegration app\-integrations:GetEventIntegration app\-integrations:ListEventIntegrations app\-integrations:DeleteEventIntegrationAssociation app\-integrations:CreateEventIntegrationAssociation appflow:CreateFlow appflow:CreateConnectorProfile appflow:DescribeFlow appflow:DeleteFlow appflow:DeleteConnectorProfile appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:StartFlow connect:ListIntegrationAssociations connect:DeleteIntegrationAssociation connect:ListUseCases connect:DeleteUseCase events:ActivateEventSource events:CreateEventBus events:DescribeEventBus events:DescribeEventSource events:ListEventSources events:ListTargetsByRule events:PutRule events:PutTargets events:DeleteRule events:RemoveTargets kms:CreateGrant kms:DescribeKey kms:ListAliases kms:ListKeys kms:ListGrants  | 
 
-### Customer profiles page<a name="customer-profiles-page"></a>
+### Cases page<a name="cases-page"></a>
 
 
 | Action/Use case | Permissions needed | 
 | --- | --- | 
-| View customer profiles | appflow:DescribeFlow appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:ListConnectorProfiles kms:ListKeys profile:ListDomains profile:ListAccountIntegrations sqs:ListQueues  | 
-| Edit customer profiles | appflow:CreateFlow appflow:CreateConnectorProfile appflow:DescribeFlow appflow:DeleteFlow appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:ListConnectorProfiles appflow:StartFlow appflow:StopFlow kms:ListKeys profile:CreateDomain profile:DeleteIntegration profile:DeleteDomain profile:ListDomains profile:ListAccountIntegrations profile:PutIntegration profile:UpdateDomain kms:ListGrants kms:DescribeKey kms:ListAliases kms:ListKeys sqs:ListQueues  | 
+| View Cases domain details | connect:ListInstances ds:DescribeDirectories connect:ListIntegrationAssociations cases:GetDomain  | 
+| Onboard to Cases | connect:ListInstances connect:ListIntegrationAssociations cases:GetDomain cases:CreateDomain connect:CreateIntegrationAssociation connect:DescribeInstance iam:PutRolePolicy  | 
 
 ### Voice ID page<a name="voiceid-page"></a>
 

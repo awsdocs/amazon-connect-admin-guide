@@ -16,7 +16,10 @@ Live media streaming \(customer audio streams\) is not enabled by default\. You 
 
 1. Choose the KMS key to use to encrypt the data sent to Kinesis\. The KMS key must be in the same Region as the instance\. 
 
-1. Specify a number and unit for the **Data retention period**\. If you select **No data retention**, data is not retained and can be used only for immediate consumption\.
+1. Specify a number and unit for the **Data retention period**\.
+**Important**  
+If you select **No data retention**, data is not retained and is available to be consumed for only 24 hours\. This is the default minimum time that Kinesis retains data\.  
+Because Amazon Connect uses Kinesis for streaming, [Kinesis quotas](https://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html) apply\.
 
 1. Choose **Save** under **Live media streaming**, and then choose **Save** at the bottom of the page\.
 

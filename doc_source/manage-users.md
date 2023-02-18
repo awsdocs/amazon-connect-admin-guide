@@ -4,6 +4,8 @@ As the admin one of your key responsibilities is to manage users, add users to A
 
 **Topics**
 + [Add users](user-management.md)
++ [Edit users in bulk](edit-users-in-bulk.md)
++ [Download user accounts](download-user-records.md)
 + [Delete users](delete-users.md)
 + [Reset passwords](password-reset.md)
 + [Security profiles](connect-security-profiles.md)

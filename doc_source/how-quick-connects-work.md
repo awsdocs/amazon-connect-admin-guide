@@ -1,6 +1,6 @@
 # How quick connects work<a name="how-quick-connects-work"></a>
 
-This article explains how each type of quick connect works: agent, queue, and external quick connects\. It explains which flows are used, and what appears on the agent's Contact Control Panel \(CCP\)\.
+This article explains how each type of quick connect works: agent, queue, and phone number quick connects\. It explains which flows are used, and what appears on the agent's Contact Control Panel \(CCP\)\.
 
 **Tip**  
 For all three types of quick connects, when the quick connect is invoked, the contact that the agent is working on hears the [Default customer hold](default-customer-hold.md) flow unless you specify a different customer hold flow\. 
@@ -73,8 +73,8 @@ Even though the status of the transferred call \(internal\-transfer\) shows on J
    + Put Maria on hold, so he only talks to the customer\.
    + Choose **End call**\. He leaves the call but Maria and the customer are directly connected and continue talking\.
 
-## External quick connects<a name="external-quick-connects"></a>
+## Phone number quick connects<a name="external-quick-connects"></a>
 
-There are no flows involved in external quick connect\. When an agent invokes an external quick connect, the call is directly connected the destination without invoking any flows\.
+There are no flows involved in a phone number quick connect\. When an agent invokes an phone number quick connect, the call is directly connected the destination without invoking any flows\.
 
-Because no flow is involved in external quick connects, you can't set the outbound caller ID\. Instead, the caller ID that you specified when you [created the queue](create-queue.md) is used\. 
+Because no flow is involved in phone number quick connects, you can't set the outbound caller ID\. Instead, the caller ID that you specified when you [created the queue](create-queue.md) is used\. 

@@ -1,6 +1,6 @@
 # Use streaming for real\-time contact analysis<a name="contact-analysis-segment-streams"></a>
 
-Real\-time contact analysis segment streams enable you to access Contact Lens analytics in near real\-time\. Real\-time streaming overcomes the scaling limitations of existing [real\-time analytics API](contact-lens-api.md)\. It also provides access to a data segment called `Utterance` that allows you to access partial transcripts\. This enables you to meet ultra\-low latency requirements to assist agents on live calls\. 
+Real\-time contact analysis segment streams enable you to access Contact Lens analytics in near real\-time\. Real\-time streaming overcomes the scaling limitations of existing [real\-time call analytics API](contact-lens-api.md)\. It also provides access to a data segment called `Utterance` that allows you to access partial transcripts\. This enables you to meet ultra\-low latency requirements to assist agents on live calls\. 
 
 This section explains how to integrate with Amazon Kinesis Data Streams for real\-time streaming\.
 

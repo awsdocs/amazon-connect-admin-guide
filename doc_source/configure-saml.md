@@ -8,6 +8,8 @@ Before you begin, note the following:
 + Choosing SAML 2\.0\-based authentication as the identity management method for your Amazon Connect instance requires the configuration of [AWS Identity and Access Management federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-saml.html)\. 
 + The user name in Amazon Connect must match the RoleSessionName SAML attribute specified in the SAML response returned by the identity provider\.
 + An Amazon Connect user can only be associated with a single AWS IAM Role\. Changing the AWS IAM Role used for federation will cause previously federated users to fail on login\. For more information about Identity and Access Management user and role management, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)\. 
++ Amazon Connect does not support reverse federation\. That is, you can't to login into Amazon Connect directly\. If you tried, you'd get a *Session Expired* message\. The authentication should be done from the Identity Provider \(IdP\) and not the Service Provider \(SP\) \(Amazon Connect\)\. 
++ All Amazon Connect usernames are case sensitive, even when using SAML\.
 
 ## Overview of using SAML with Amazon Connect<a name="saml-overview"></a>
 

@@ -19,7 +19,7 @@ For how many chats and tasks an agent can take concurrently, see [Amazon Connect
      "NextAgentStatus": {
             "Name": "Lunch", //They set their next status, which pauses new contacts being routed to them while they finish their current contacts.
             "ARN": "example-ARN2",  //The ARN of the agent status that the agent has set as their next status. 
-            "EnqueueTimestamp": "2019-08-13T20:58:00.004Z",   //When the agent set their next status and paused routing of incoming contacts.
+            "EnqueuedTimestamp": "2019-08-13T20:58:00.004Z",   //When the agent set their next status and paused routing of incoming contacts.
         }
       } ,
         "Configuration": {

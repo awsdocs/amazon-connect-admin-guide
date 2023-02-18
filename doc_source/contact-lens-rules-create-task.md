@@ -1,4 +1,4 @@
-# Create a task when a contact is categorized in real\-time or post\-call<a name="contact-lens-rules-create-task"></a>
+# Create a task when a contact is categorized in real\-time or post\-call/chat<a name="contact-lens-rules-create-task"></a>
 
 An especially powerful use of Content Lens rules is to build rules that generate tasks\. This helps you identify issues in your contact center for you to follow up, and creates traceable actions with owners\. Following are some examples:
 + Create a task to review a contact when the customer is fraudulent\. For example, you can create a follow\-up task when a customer utters words or phrases that makes them appear potentially fraudulent\.
@@ -19,13 +19,13 @@ An especially powerful use of Content Lens rules is to build rules that generate
 
    1. **Description**: The description appears in the agent's Contact Control Panel \(CCP\)\. Max length: 4096 characters\.
 **Tip**  
-In **Name** and **Description**, use \[ \] to choose from a menu of dynamic values\. For more information, see [Create a task when a contact is categorized in real\-time or post\-call](#contact-lens-rules-create-task)\.   
+In **Name** and **Description**, use \[ \] to choose from a menu of dynamic values\. For more information, see [Create a task when a contact is categorized in real\-time or post\-call/chat](#contact-lens-rules-create-task)\.   
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-tasks-brackets.png)
 
    1. **Task reference name**: This is a default reference that automatically appears in the agent's CCP\.
       + For real\-time rules, the task reference links to the Real\-time details page\. 
-      + For post\-call rules, the task reference links to the **Contact record details** page\. 
+      + For post\-call/chat rules, the task reference links to the **Contact details** page\. 
 
    1. **Additional Reference name**: Max length: 4096 characters\. You can add up to 25 references\.
 
@@ -50,7 +50,7 @@ In **Name** and **Description**, use \[ \] to choose from a menu of dynamic valu
 
 ## Voice and task contact records are linked<a name="rules-voice-task-ctrs"></a>
 
-When a rule creates a task, a contact record is automatically generated for the task\. It's linked to the contact record of the voice call that met the criteria for the rule to create the task\.
+When a rule creates a task, a contact record is automatically generated for the task\. It's linked to the contact record of the voice call or chat that met the criteria for the rule to create the task\.
 
 For example, a call comes into your contact center and generates CTR1:
 

@@ -9,11 +9,12 @@ By default when you create a new Amazon Connect instance, an Amazon CloudWatch l
 
 Use the following procedure to check that logging is enabled for your instance\.
 
-1. Open the Amazon Connect console\.
+1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. Choose the instance alias for your instance\.
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
-1. Choose **Flows**\.
+1. In the navigation pane, choose **Flows**\.
 
 1. Select **Enable Flow logs** and choose **Save**\.
 
@@ -27,7 +28,7 @@ When you use a **Set logging behavior** block to enable or disable logging for a
 
 **To enable or disable flow logs for a flow**
 
-1. Add a [Set logging behavior](set-logging-behavior.md) block and connect it to another block in the flow\.
+1. In the flow designer, add a [Set logging behavior](set-logging-behavior.md) block and connect it to another block in the flow\.
 
 1. Open the properties for the block\. Choose **Enable** or **Disable**\.
 

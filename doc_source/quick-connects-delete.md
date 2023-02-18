@@ -11,3 +11,8 @@ There are two ways you can delete a quick connect:
 1. On the navigation menu, choose **Routing**, **Quick connects**\.
 
 1. Select the quick connect, and then choose the **Delete** icon\. 
+
+   If you don't see the delete option, check the following:
+   + You are using the latest Amazon Connect console interface\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/quick-connect-newinterface.png)
+   + You have **Quick connects \- Delete** permission in your security profile\.

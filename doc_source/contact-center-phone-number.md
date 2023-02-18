@@ -15,4 +15,5 @@ If you want to keep a phone number you already have, you can port the phone numb
 + [Request numbers or international numbers](number-request.md)
 + [Move a phone number across instances](move-phone-number-across-instances.md)
 + [Release a phone number](release-phone-number.md)
-+ [Telecoms regulations](telecoms-regulations.md)
++ [Third\-party numbers](third-party-numbers.md)
++ [Region requirements for ordering and porting phone numbers](phone-number-requirements.md)

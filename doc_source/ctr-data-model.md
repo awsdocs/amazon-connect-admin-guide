@@ -7,8 +7,10 @@ This article describes the data model for Amazon Connect contact records\. Conta
 + Amazon Connect delivers contact records at least once\. Contact records may be delivered again for multiple reasons, such as new information arriving after initial delivery\. For example, when you use [update\-contact\-attributes](https://docs.aws.amazon.com/cli/latest/reference/connect/update-contact-attributes.html) to update a contact record, Amazon Connect delivers a new contact record\. This contact record is available for 24 months from the time the associated contact was initiated\.
 
   If you're building a system that consumes contact record export streams, be sure to include logic that checks for duplicate contact records for a contact\. Use the **LastUpdateTimestamp** property to determine if a copy contains new data than previous copies\. Then use the **ContactId** property for deduplication\. 
++ Every action taken on a unique contact generates an event\. These events appear as a field or an attribute on the contact record\. If the number of actions for a contact exceeds a threshold, such as an internal storage limit, then any actions that follow will not appear on that contact record\.
 + For the contact record retention period and maximum size of the attributes section of a contact record, see [Amazon Connect feature specifications](feature-limits.md)\.
 + For information about when a contact record is created \(and thus can be exported or used for data reporting\), see [Events in the contact record](about-contact-states.md#ctr-events)\.
++ For a list of all contact attributes, including telephony call and case attributes, see [List of available contact attributes and their JSONPath reference](connect-attrib-list.md)\.
 
 ## Agent<a name="ctr-Agent"></a>
 
@@ -67,6 +69,10 @@ Type: [RoutingProfile](#ctr-RoutingProfile)
 The username of the agent\.  
 Type: String  
 Length: 1\-100
+
+**stateTransitions**  
+The state transitions of a supervisor\.  
+Type: Array of [stateTransitions](#ctr-stateTransitions)\.
 
 ## AgentHierarchyGroup<a name="ctr-AgentHierarchyGroup"></a>
 
@@ -175,7 +181,7 @@ The date and time that the customer endpoint disconnected from Amazon Connect, i
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **DisconnectReason**  
-Indicates how the contact was terminated\. This data is currently available in the Amazon Connect contact record stream only\.  
+Indicates how the contact was terminated\. This data is currently available in the Amazon Connect contact record stream and **Contact details** page\.  
 The disconnect reason may not be accurate when there are agent or customer connectivity issues\. For example, if the agent is having connectivity issues, the customer might not be able to hear them \("Are you there?"\) and hang up\. This would be recorded as `CUSTOMER_DISCONNECT` and not reflect the connectivity issue\.  
 Type: String  
 Voice contacts can have the following disconnect reasons:  
@@ -183,8 +189,14 @@ Voice contacts can have the following disconnect reasons:
 + `AGENT_DISCONNECT`: Agent disconnected when the contact was still on the call\.
 + `THIRD_PARTY_DISCONNECT`: In a third\-party call, after the agent has left, the third\-party disconnected the call while the contact was still on the call\.
 + `TELECOM_PROBLEM`: Disconnected due to an issue with connecting the call from the carrier, network congestion, network error, etc\.
++ `BARGED`: Supervisor disconnected the agent from the call\.
 + `CONTACT_FLOW_DISCONNECT`: Call was disconnected in a flow\.
 + `OTHER`: This includes any reason not explicitly covered by the previous codes\. For example, the contact was disconnected by an API\.
+Chats can have the following disconnect reasons:  
++ `AGENT_DISCONNECT`: Agent explicitly disconnects or rejects a chat\.
++ `CUSTOMER_DISCONNECT`: Customer explicitly disconnects\.
++ `OTHER`: Used only for error states such as message transport issues\.
+For many contacts, such as contacts ended by flows or APIs, there will not be any disconnect reason\. In the contact record it will appear as `null`\.  
 Tasks can have the following disconnect reasons:  
 + `AGENT_DISCONNECT`: Agent marked the task as complete\.
 + `EXPIRED`: Task expired automatically because it was not assigned or completed within 7 days\.
@@ -193,7 +205,7 @@ Tasks can have the following disconnect reasons:
 + `OTHER`: This includes any reason not explicitly covered by the previous codes\.
 
 **InitialContactId**  
-If this contact is related to other contacts, this is the ID of the initial contact\.  
+The identifier of the initial contact\.  
 Type: String  
 Length: 1\-256
 
@@ -208,10 +220,12 @@ Valid values:
   For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 +  `API`: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatConnect](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API\.
 +  `QUEUE_TRANSFER`: While the customer was in one queue \(listening to Customer queue flow\), they were transferred into another queue using a flow block\.
++  `MONITOR`: A supervisor initiated monitor on an agent\. The supervisor can silently monitor the agent and customer, or barge the conversation\.
 +  `DISCONNECT`: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which flow to run after a disconnect event during a contact\. 
 
   A disconnect event is when:
-  + A call, chat, or task is disconnected by an agent\.
+  + A call, chat, or task is disconnected\.
+  + A call is disconnected by a customer, agent, third party, supervisor, flow, telecom problem, API, or any other reason\.
   + A task is disconnected as a result of a flow action\.
   + A task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
 
@@ -256,12 +270,17 @@ If recording was enabled, this is information about the recording\.
 Type: Array of [RecordingsInfo](#ctr-RecordingsInfo)  
 The first recording for a contact will appear in both the Recording and Recordings sections of the contact record\.
 
+**RelatedContactId**  
+If this contact is associated with another contact, this is the identifier of the related contact\.  
+Type: String  
+Length: 1\-256\.
+
 **ScheduledTimestamp**  
 The date and time when this contact was scheduled to trigger the flow to run, in UTC time\. This is supported only for the task channel\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **SystemEndpoint**  
-The system endpoint\. For `INBOUND`, this is the phone number that the customer dialed\. For `OUTBOUND`, this is the Outbound caller ID number assigned to the outbound queue that is used to dial the customer\.  
+The system endpoint\. For `INBOUND`, this is the phone number that the customer dialed\. For `OUTBOUND`, this is the outbound caller ID number assigned to the outbound queue that is used to dial the customer\. For callback, this shows up as `Softphone` for calls handled by agents with softphone\.  
 Type: [Endpoint](#ctr-endpoint)
 
 **TransferCompletedTimestamp**  
@@ -302,7 +321,7 @@ The Amazon Resource Name of the queue\.
 Type: ARN
 
 **DequeueTimestamp**  <a name="DequeueTimestamp-CTR"></a>
-The date and time the contact was removed from the queue, in UTC time\. Either the customer disconnected or the contact was connected to an agent\.  
+The date and time the contact was removed from the queue, in UTC time\. Either the customer disconnected or the agent started interacting with the customer\.  
 Type: String \(*yyyy*\-*mm*\-*dd*T*hh*:*mm*:*ss*Z\)
 
 **Duration**  <a name="Duration-CTR"></a>
@@ -409,42 +428,37 @@ The name of the routing profile\.
 Type: String  
 Length: 1\-100
 
-## VoiceID<a name="ctr-VoiceID"></a>
+## stateTransitions<a name="ctr-stateTransitions"></a>
+
+Information about the state transitions of a supervisor\.
+
+**stateStartTimestamp**  
+The date and time when the state started in UTC time\.  
+Type: String \(yyyy\-mm\-ddThh:mm:ssZ\)
+
+**stateEndTimestamp**  
+The date and time when the state ended in UTC time\.  
+Type: String \(yyyy\-mm\-ddThh:mm:ssZ\)
+
+**state**  
+Valid values: `SILENT_MONITOR | BARGE`\.
+
+## VoiceIdResult<a name="ctr-VoiceID"></a>
 
 The latest Voice ID status\.
 
-**AuthenticationEnabled**  
-Was voice authentication enabled for the call?  
-Type: Boolean
+**Authentication**  
+The voice authentication information for the call\.  
+Type: Authentication
+
+**FraudDetection**  
+The fraud detection information for the call\.  
+Type: FraudDetection
 
 **GeneratedSpeakerId**  
 The speaker identifier generated by Voice ID\.  
 Type: String  
 Length: 25 characters
-
-**AuthenticationThreshold**  
-The minimum authentication score required for a user to be authenticated\.  
-Type: Integer  
-Min value: 0  
-Max value: 100
-
-**AuthenticationMinimumSpeechInSeconds**  
-The number of seconds of speech used to authenticate the user\.  
-Type: Integer  
-Min value: 5  
-Max value: 10
-
-**AuthenticationScore**  
-The output of Voice ID authentication evaluation\.  
-Type: Integer  
-Min value: 0  
-Max value: 100
-
-**AuthenticationResult**  
-The string output of Voice ID authentication evaluation\.  
-Type: String  
-Length: 1\-32  
-Valid values: Authenticated, Not Authenticated, Not Enrolled, Opted Out, Inconclusive, Error
 
 **SpeakerEnrolled**  
 Was the customer enrolled during this contact?  
@@ -454,38 +468,66 @@ Type: Boolean
 Did the customer opt out during this contact?  
 Type: Boolean
 
-**FraudDetectionEnabled**  
-Was detection of fraudsters in a watchlist enabled for the contact?  
-Type: Boolean
+## Authentication<a name="ctr-Authentication"></a>
 
-**FraudDetectionThreshold**  
+Information about Voice ID authentication for a call\.
+
+**ScoreThreshold**  
+The minimum authentication score required for a user to be authenticated\.  
+Type: Integer  
+Min value: 0  
+Max value: 100
+
+**MinimumSpeechInSeconds**  
+The number of seconds of speech used to authenticate the user\.  
+Type: Integer  
+Min value: 5  
+Max value: 10
+
+**Score**  
+The output of Voice ID authentication evaluation\.  
+Type: Integer  
+Min value: 0  
+Max value: 100
+
+**Result**  
+The string output of Voice ID authentication evaluation\.  
+Type: String  
+Length: 1\-32  
+Valid values: `Authenticated` \| `Not Authenticated`\| `Not Enrolled` \| `Opted Out` \| `Inconclusive` \| `Error`
+
+## FraudDetection<a name="ctr-FraudDetection"></a>
+
+Information about Voice ID fraud detection for a call\.
+
+**ScoreThreshold**  
 The threshold for detection of fraudsters in a watchlist that was set in the flow for the contact\.  
 Type: Integer  
 Min value: 0  
 Max value: 100
 
-**FraudDetectionResult**  
+**Result**  
 The string output of detection of fraudsters in a watchlist\.  
 Type: String  
-Valid values: High Risk, Low Risk, Inconclusive, Error
+Valid values: `High Risk` \| `Low Risk` \| `Inconclusive` \| `Error`
 
-**FraudDetectionReasons**  
+**Reasons**  
 Contains fraud types: Known Fraudster and Voice Spoofing\.  
 Type: List of String  
 Length: 1\-128
 
-**FraudRiskScoreKnownFraudster**  
+**RiskScoreKnownFraudster**  
 The detection of fraudsters in a watchlist score for Known Fraudster category\.  
 Type: Integer  
 Min value: 0  
 Max value: 100
 
-**FraudRiskScoreVoiceSpoofing**  
+**RiskScoreVoiceSpoofing**  
 The fraud risk score based on Voice Spoofing, such as playback of audio from Text\-to\-Speech systems recorded audio\.  
 Type: Integer  
 Length: 3
 
-**FraudRiskScoreSyntheticSpeech \(unused\)**  
+**RiskScoreSyntheticSpeech \(unused\)**  
 This field is unused\. This score is presented as a combined risk score for Voice Spoofing\.   
 Type: Integer  
 Length: 3

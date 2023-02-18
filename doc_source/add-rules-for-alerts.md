@@ -1,6 +1,6 @@
 # Alert supervisors in real\-time based on keywords and phrases<a name="add-rules-for-alerts"></a>
 
-After you [enable real\-time analytics](enable-analytics.md) in your flow, you can add rules that automatically alert supervisors when a customer experience issue occurs\. 
+After you [enable real\-time analytics](enable-analytics.md) in your flow, you can add rules that automatically alert supervisors when a customer experience issue occurs\. This feature is not available for chat contacts\.
 
 For example, Contact Lens can automatically send an alert when certain keywords or phrases are uttered during the conversation, or when it detects other criteria\. The supervisor sees the alert on the real\-time metrics dashboard\. From there, supervisors can listen in to the live call, and provide guidance to the agent over chat to help them resolve the issue faster\.
 
@@ -16,7 +16,7 @@ When the supervisor listens in to a live call, Contact Lens provides them with a
 
 1. Log in to Amazon Connect with a user account that is assigned the **CallCenterManager** security profile, or that is enabled for **Rules** permissions\.
 
-1. On the navigation menu, choose **Rules**\. 
+1. On the navigation menu, choose **Analytics and optimization**, **Rules**\. 
 
 1. Select **Create a rule**, **Contact Lens**\. 
 

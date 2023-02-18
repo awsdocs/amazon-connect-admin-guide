@@ -12,7 +12,7 @@ By default, the Amazon Connect **Admin** security profile has these permissions\
 
 1. Review [Best practices for security profiles](security-profile-best-practices.md)\.
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
 1. Choose **Users**, **User management**\.
 

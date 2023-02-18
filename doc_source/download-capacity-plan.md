@@ -14,9 +14,9 @@ Following is a description of each tab:
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Capacity planning \- Edit**\. 
 
-   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, select **Analytics**, **Capacity Planning**\.
+1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Capacity Planning**\.
 
 1. On the **Capacity Plans** tab, choose the plan\. 
 

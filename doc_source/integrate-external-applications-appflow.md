@@ -2,7 +2,7 @@
 
 These integrations use Amazon AppFlow to provide periodic updates to Amazon Connect Customer Profiles\. The below steps provide guidance on configuring a connector of your choosing using Amazon AppFlow, configure data mappings, and configure integrations to ingest your customer data\.
 
-For more information on Amazon AppFlow pricing, see Amazon AppFlow [pricing](https://docs.aws.amazon.com/appflow/pricing/)\.
+For more information on Amazon AppFlow pricing, see Amazon AppFlow [pricing](http://aws.amazon.com/appflow/pricing/)\.
 
 For more information on Amazon AppFlow supported connectors see [Supported source and destination applications](https://docs.aws.amazon.com/appflow/latest/userguide/app-specific.html)\.
 
@@ -120,9 +120,7 @@ Once the data mapping set up is done for an external application, you will set u
 
 ### View the unified customer profile in Amazon Connect Customer Profile Agent CCP<a name="integrate-ea-appflow-view"></a>
 
-Your agents will now be able to view customer data that has been imported from an external application by logging in to the Amazon Connect Agent CCP using the following URL\.
-
-`https://instance_name.my.connect.aws/ccp-v2/`
+Your agents will now be able to view customer data that has been imported from an external application by logging in to the Amazon Connect Agent CCP\. For more information on connecting to the Amazon Connect Agent CCP, see [Agent application: Everything in one place](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-contact-control-panel.html#use-agent-application)\.
 
 Your agent will need to have the appropriate security profile permissions in order to view Customer Profiles and will be able to perform searches using a key name and value in the profiles search bar\.
 

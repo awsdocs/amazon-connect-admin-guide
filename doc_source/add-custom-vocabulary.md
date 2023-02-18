@@ -12,10 +12,11 @@ This topic explains how to add custom vocabularies using the Amazon Connect cons
 + Transcription is a one\-time event\. A newly uploaded vocabulary isn't applied retroactively to existing transcriptions\.
 + Your text file must be in LF format\. If you use any other format, such CRLF format, your custom vocabulary is not accepted by Amazon Transcribe\.
 + For limits to the size of a vocabulary file and other requirements, see [Custom vocabularies](https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html) in the *Amazon Transcribe Developer Guide*\.
++ Custom vocabularies apply to speech analytics only\. They do not apply to chat conversations because the transcripts already exist\. 
 
 ## Required permissions<a name="add-custom-vocabulary-permissions"></a>
 
-Before you can add custom vocabularies to Amazon Connect, you need the **Analytics**, **Contact Lens \- custom vocabularies** permission assigned to your security profile\.
+Before you can add custom vocabularies to Amazon Connect, you need the **Analytics and Optimization**, **Contact Lens \- custom vocabularies** permission assigned to your security profile\.
 
 By default, in new instances of Amazon Connect the **Admin** and **CallCenterManager** security profiles have this permission\.
 
@@ -25,7 +26,7 @@ For information about how add more permissions to an existing security profile, 
 
 1. Log in to Amazon Connect with a user account that has the required permissions to add custom vocabularies\.
 
-1. Navigate to **Analytics**, **Custom vocabularies**\.
+1. Navigate to **Analytics and optimization**, **Custom vocabularies**\.
 
 1. Choose **Add custom vocabulary**\.
 
@@ -53,7 +54,7 @@ If you attempt to upload a vocabulary that does not validate, it results in a **
 
 To view a custom vocabulary that has been uploaded, you download and open the file\. Only files in the **Ready** state can be downloaded and viewed\.
 
-1. Navigate to **Analytics**, **Custom vocabularies**\.
+1. Navigate to **Analytics and optimization**, **Custom vocabularies**\.
 
 1. Choose **More**, **Download**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-custom-vocab-download.png)

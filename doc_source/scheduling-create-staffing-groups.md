@@ -1,10 +1,12 @@
 # Create staffing groups and rules<a name="scheduling-create-staffing-groups"></a>
 
-A *staffing group* is a group or team of agents who are skilled to take specific types of contacts\. You add agents who need a schedule generated for them, and supervisors who manage agent schedules\. You can also add rules that apply at the staffing group level, such as the minimum staff required and the minimum working hours per day or week for the group\.
+A *staffing group* is a group or team of agents who are skilled to take specific types of contacts\. You add agents who need a schedule generated for them, and supervisors who manage agent schedules\. You can also add rules that apply at the staffing group level, such as the minimum staff required and the minimum working hours per day or week for the group\. If a user meeds to view published agent schedules from the **Published** calendar view, then the user must be added as a supervisor within the specific staffing group\.
 
 For example, say your contact center opens at 9AM but the forecast says no contacts arrive between 9\-9:30AM\. You can add a rule that says, despite what the forecast predicts, there should be a minimum of one agent during this time\. 
 
 If you don't have a shift start time rule, then the schedule is built using the predictions from the forecast\.
+
+For a list of staffing group limits, see [Forecasting, capacity planning, and scheduling feature specifications](feature-limits.md#forecasting-cap-planning-scheduling-specs)\.
 
 ## Example<a name="example-staffing-groups"></a>
 
@@ -18,9 +20,9 @@ For example, you might create one staffing group named General Enquiry, and anot
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Scheduling**, **Schedule manager \- Edit**\. 
 
-   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, select **Users**, **Scheduling**\.
+1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Scheduling**\.
 
 1. Choose the **Staffing Groups** tab, and then choose **Create staffing group**\.
 

@@ -16,4 +16,4 @@ To migrate hundreds of flows, you need developer skills\. You use the following 
 
 You must also build an ARN\-to\-ARN mapping for queues, flows, and prompts between the source and target Amazon Connect instances, and replace every ARN in the source flow with the corresponding ARN from the target instance\. Otherwise UpdateContactFlowContent fails with `InvalidContactFlow` error\. 
 
-You can update the information in the flows that you migrate\. For more information, see [Amazon Connect Flow Language](flow-language.md)\. 
+You can update the information in the flows that you migrate\. For more information, see [Flow language](https://docs.aws.amazon.com/connect/latest/APIReference/flow-language.html) in the *Amazon Connect API Reference Guide*\. 

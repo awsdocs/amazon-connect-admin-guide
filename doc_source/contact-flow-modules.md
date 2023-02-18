@@ -27,6 +27,10 @@ The following types of flows do not support modules: **Customer queue**, **Custo
   + Stored customer input
 + Modules do not allow invoking another module\.
 
+To pass any data to a module, or to get any data from a module, you need to pass and retrieve attributes\.
+
+For example, you want data that is written from Lambda \(an External attribute\) and pass it to the module so you can make a decision\. Your Lambda identifies whether the customer is a VIP member\. You need that information inside the module because if they are a VIP member, you want to play a prompt thanking them for their membership\. Since default Lambda is not available inside a module, you use attributes to pass and retrieve data\.  
+
 ## Security profile permissions for modules<a name="module-permissions"></a>
 
 Before you can add modules to Inbound flows, you must have permissions in your security profile\. By default, the **Admin** and **CallCenterManager** security profiles have these permissions\.

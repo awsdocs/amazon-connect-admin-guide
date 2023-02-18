@@ -3,7 +3,10 @@
 Before you schedule a historical metrics report, here are a few things you need to know:
 
 **Others can access the report**
-+ Scheduling a report makes the report accessible by any other users in your contact center who have permissions to view saved reports\. Any user with permission to edit saved reports can also modify your scheduled reports\. 
++ Scheduling a report makes the report accessible by any other users in your contact center who have permissions to view saved reports\. 
+
+**Anyone with Schedule permissions can create, edit, or delete the schedule of your report**
++ After you publish a report, any user with **Saved reports \- Schedule** permissions in their security profile can create, edit, or delete the schedule of your report\. They cannot delete the actual report\.
 
 **Scheduled reports are located in an Amazon S3 bucket**
 + Scheduled reports are saved as CSV files in the Amazon S3 bucket specified for reports for your contact center\. When you set up the scheduled report, you can add a prefix to the location in Amazon S3 for the report files\.
@@ -28,7 +31,7 @@ Before you schedule a historical metrics report, here are a few things you need 
 
 ## How to schedule a historical metrics report<a name="howto-schedule-historical-metrics-report"></a>
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
 1. Create a new report and save it, or open a saved report\.
 
@@ -44,9 +47,9 @@ Before you schedule a historical metrics report, here are a few things you need 
 
 To get to the page where you can delete a scheduled report, you need to create another temporary scheduled report\.
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
-1. On the navigation menu, choose **Analytics**, **Saved reports**\. 
+1. On the navigation menu, choose **Analytics and optimization**, **Saved reports**\. 
 
 1. On the **View reports** page, choose the **Historical metrics** tab\.
 

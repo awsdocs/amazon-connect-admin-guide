@@ -14,7 +14,7 @@ Amazon Connect provides a number of security features to consider as you develop
 
 ### Use Service Control Policies \(SCPs\)<a name="use-scp"></a>
 
-Service control policies \(SCPs\) are a type of organization policy that you can use to manage permissions in your organization\. An SCP defines a guardrail, or sets limits, on the actions that the account's administrator can delegate to the IAM users and roles in the affected accounts\. You can use SCPs to protect critical resources associated with your Amazon Connect workload\.
+Service control policies \(SCPs\) are a type of organization policy that you can use to manage permissions in your organization\. An SCP defines a guardrail, or sets limits, on the actions that the account's administrator can delegate to users and roles in the affected accounts\. You can use SCPs to protect critical resources associated with your Amazon Connect workload\.
 
 #### Set a Service Control Policy to prevent the deletion critical resources<a name="set-scp"></a>
 

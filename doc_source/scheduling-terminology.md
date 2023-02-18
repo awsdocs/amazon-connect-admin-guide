@@ -8,9 +8,10 @@ A collection of schedules for all agents in a set of staffing groups that the sc
 
 Only schedulers can view and adjust draft schedules\. Agents or their supervisors cannot view these schedules until published\.
 
-## Overtime / Voluntary time off<a name="overtime-voluntary-time-off-defined"></a>
-+ Requesting overtime to agents allows your contact center to handle a contact surge or agent shortages without hiring more employees\. Requesting voluntary time off to agents allows your business to handle contacts without paying employees to be idle\. 
-+  Requesting voluntary time off to agents allows your business to handle contacts without paying employees to be idle\. 
+## Overtime / Time off / Voluntary time off<a name="overtime-voluntary-time-off-defined"></a>
++ Requesting overtime to agents allows your contact center to handle a contact surge or agent shortages without hiring more employees\. 
++ Requesting time off to agents allows your business to handle contacts while paying employees\.
++  Requesting voluntary time off to agents allows your business to handle contacts without paying employees to be idle\.
 
 ## Publish a schedule<a name="publish-schedule-defined"></a>
 
@@ -35,10 +36,6 @@ Daily activities that the agent does during their shift\. For example, meetings,
 ## Shift profiles<a name="shift-profiles-defined"></a>
 
 The base structure of a shift, schedule window, daily shift activities that go into it\.
-
-## Shift swap<a name="shift-swap-defined"></a>
-
-Peer shift swap is a workflow for agents to have flexibility over their work hours by swapping shifts with each other\.
 
 ## Staffing groups<a name="staffing-groups-defined"></a>
 

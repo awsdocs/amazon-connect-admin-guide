@@ -2,6 +2,9 @@
 
 Amazon Connect is integrated with AWS CloudTrail, a service that provides a record of the Amazon Connect API calls that a user, role, or AWS service makes\. CloudTrail captures Amazon Connect API calls as events\. All public Amazon Connect APIs support CloudTrail\. 
 
+**Note**  
+Creating or updating Amazon Connect resources such as quick connects, queues, and agents by using the Amazon Connect console doesn't provide CloudTrail logging\. It is only supported when using the AWS CLI or public APIs\.
+
 Using the information that CloudTrail collects, you can identify a specific request to an Amazon Connect API, the IP address of the requester, the requester's identity, the date and time of the request, and so on\. If you configure a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket\. If you don't configure a trail, you can view the most recent events in **Event History** in the CloudTrail console\.
 
 For more information about CloudTrail, including how to configure and enable it, see [Creating a Trail For Your AWS Account](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-create-and-update-a-trail.html) and [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)\.
@@ -18,7 +21,7 @@ For an ongoing record of events in your AWS account, including events for Amazon
 + [Receiving CloudTrail log files from multiple accounts](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-receive-logs-from-multiple-accounts.html)
 
 Every event or log entry contains information about who generated the request\. The identity information helps you determine the following: 
-+ Whether the request was made with root or AWS Identity and Access Management \(IAM\) user credentials\.
++ Whether the request was made with root or AWS Identity and Access Management \(IAM\) credentials\.
 + Whether the request was made with temporary security credentials for a role or federated user\.
 + Whether the request was made by another AWS service\.
 

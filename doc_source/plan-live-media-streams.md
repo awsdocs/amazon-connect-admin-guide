@@ -6,7 +6,7 @@ Audio sent to Kinesis uses a sampling rate of 8 Khz\.
 
 ## Do you need to increase your service quotas?<a name="create-streams-service-limit"></a>
 
-When you enable media streaming in Amazon Connect, one Kinesis video stream is used per active call\. By default we allocate 50 streams per instance to your account\. We automatically create additional streams as needed to keep pace with active calls, unless your account reaches the Kinesis Video Streams service quota\.
+When you enable media streaming in Amazon Connect, one Kinesis video stream is used per active call\. By default we allocate 50 streams per instance to your account\. We automatically create additional streams as needed to keep pace with active calls, unless your account reaches the [Kinesis Video Streams service quota](https://docs.aws.amazon.com/streams/latest/dev/service-sizes-and-limits.html)\.
 
 Contact AWS Support to request an increase to **Number of Streams**\.
 
@@ -28,4 +28,4 @@ We recommend that you refrain from modifying the streams\. Doing so can cause un
 
 ## Who requires IAM permissions to retrieve data?<a name="perms-audio-streams"></a>
 
-If your business is using IAM policies and permissions, the IAM admin will need to grant permissions to people who are going to retrieve data from Kinesis Video Streams\. They'll need to grant them full access permissions for Kinesis Video Streams and AWS Key Management Service\.
+If your business is using IAM permissions, your AWS admin will need to grant permissions to people who are going to retrieve data from Kinesis Video Streams\. They'll need to grant them full access permissions for Kinesis Video Streams and AWS Key Management Service\.

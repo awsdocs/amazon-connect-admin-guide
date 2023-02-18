@@ -1,11 +1,9 @@
 # Permissions required to view real\-time metrics reports<a name="rtm-permissions"></a>
 
-To view real\-time metrics reports, you need to be assigned to a security profile that has **Access metrics** permission\. 
-
-To create, share, and publish saved reports, you need the **Saved reports**, **Create** permission\. 
+To view real\-time metrics reports, you need to be assigned to a security profile that either has Access checked for **Access metrics** or **Real\-time metrics**\. When **Access metrics** is selected, the **Real\-time metrics, Historical metrics**, and **Agent activity audit** are automatically checked\. If you have **Access metrics** checked, you have access to all real\-time and historical reports\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports.png)
 
-To view the agent's hierarchy information in a real\-time metrics report, which can include their location and skill set data, you need the **View \- Agent hierarchy** permission: 
+If you only have **Real\-time metrics** checked, you only have access to real\-time metrics and no other analytics pages or reports\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permission-agent-hierarchy.png)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports-2.png)

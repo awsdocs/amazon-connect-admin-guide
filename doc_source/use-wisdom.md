@@ -2,7 +2,7 @@
 
 With Amazon Connect Wisdom, you can search and find content across multiple repositories, such as frequently asked questions \(FAQs\), wikis, articles, and step\-by\-step instructions for handling different customer issues\. You can type questions or phrases in a search box \(such as, "how long after purchase can handbags be exchanged?"\) without having to guess which keywords will work\.
 
-The following image shows how an article may appear in the agent application when you are on a call\. 
+The following image shows how an article may appear in the agent workspace when you are on a call\. 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro2.png)
 

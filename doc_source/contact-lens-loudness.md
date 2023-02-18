@@ -1,6 +1,6 @@
-# Investigate loudness scores in Contact Lens<a name="contact-lens-loudness"></a>
+# Investigate loudness scores during calls<a name="contact-lens-loudness"></a>
 
-A loudness score measures how loudly the customer or agent are speaking\. Contact Lens displays an analysis of the conversation that lets you identify where the customer or agent may be talking loudly and have a negative sentiment\.
+A loudness score measures how loudly the customer or agent are speaking during a call\. Contact Lens displays an analysis of the conversation that lets you identify where the customer or agent may be talking loudly and have a negative sentiment\.
 
 ## How to use loudness scores<a name="investigate-loudness-scores"></a>
 

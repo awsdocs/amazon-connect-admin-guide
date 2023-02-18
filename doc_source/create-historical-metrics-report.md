@@ -31,9 +31,9 @@ When you customize a report, you can add filters to control which data is includ
 
 ## How to create a historical metrics report<a name="historical-reports-howto-create"></a>
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
-1. Choose **Analytics**, **Historical metrics**\.
+1. Choose **Analytics and optimization**, **Historical metrics**\.
 
 1. Choose one of the following report types, which group and order the data in different ways, and include different metrics:
    + **Queues**

@@ -12,9 +12,9 @@ You can then use this scenario to generate a capacity plan that represents how m
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Capacity planning \- Edit**\. 
 
-   For more information, see [Required permissions](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, choose **Analytics**, **Capacity planning**\.
+1. On the Amazon Connect navigation menu, choose **Analytics and optimization**, **Capacity planning**\.
 
 1. On the **Planning Scenarios** tab, choose **Create a Scenario**\. 
 

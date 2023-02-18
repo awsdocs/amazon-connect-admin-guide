@@ -16,7 +16,7 @@ These are the steps that a manager does to review past recordings/transcripts of
 
 1. Log in to Amazon Connect with a user account that has [permissions to access recordings](assign-permssions-to-review-recordings.md)\.
 
-1. In Amazon Connect choose **Analytics**, **Contact search**\. 
+1. In Amazon Connect choose **Analytics and optimization**, **Contact search**\. 
 
 1. Filter the list of contacts by date, agent login, phone number, or other criteria\. Choose **Search**\.
 **Tip**  

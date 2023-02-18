@@ -1,6 +1,6 @@
 # Resume a flow after transfer<a name="contact-flow-resume"></a>
 
-Let's say you need to transfer a contact to an external department that's not using Amazon Connect\. For example, maybe you need to transfer the caller to a shipping provider to check the status of their delivery\. After the contact is disconnected from the external number, you want them to be returned to your agent, for example, when the delivery company couldn't resolve their issue\. 
+Let's say you need to transfer a contact to an external department that's not using Amazon Connect\. For example, maybe you need to transfer the caller to a shipping provider to check the status of their delivery\. After the contact is disconnected from the phone number, you want them to be returned to your agent, for example, when the delivery company couldn't resolve their issue\. 
 + For advanced creation, send tracking information as DTMF digits when the call is transferred, so that the shipment information is retrieved with the transferred call before the customer is connected\.
 
 **To set up a flow for this scenario**
@@ -26,7 +26,7 @@ Let's say you need to transfer a contact to an external department that's not us
 
 When the block executes: 
 
-1. The call is transferred to the external number\.
+1. The call is transferred to the phone number\.
 
 1. Optionally, when the conversation with the external party ends, the contact is returned to the flow\.
 

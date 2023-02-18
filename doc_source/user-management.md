@@ -14,9 +14,9 @@ For information about how add more permissions to an existing security profile, 
 
 ## Add a user individually<a name="add-a-user"></a>
 
-1. Log in to the Amazon Connect console with an **Admin** account, or an account assigned to a security profile that has permissions to create users\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\. Use an **Admin** account, or an account assigned to a security profile that has permissions to create users\.
 
-1. Choose **Users**, **User management**\.
+1. In Amazon Connect, on the left navigation menu, choose **Users**, **User management**\.
 
 1. Choose **Add new users**\.
 
@@ -25,8 +25,12 @@ For information about how add more permissions to an existing security profile, 
 1. Enter the name, email address, secondary email address, mobile number, and password for the user\.
 
    If you provide a secondary email, the user receives email notifications \- other than password reset notifications \- to this email address instead of to their primary email address\.
+**Tip**  
+Mobile number is not currently used by Amazon Connect\.
 
 1. Choose a routing profile and a security profile\.
+
+1. Optionally, add resource tags to identify, organize, search for, filter, and control who can access this user\.
 
 1. Choose **Save**\. If the Save button isn't active, it means you're logged in with an Amazon Connect account that doesn't have the required security profile permissions\. 
 
@@ -36,11 +40,15 @@ For information about how add more permissions to an existing security profile, 
 
 ## Add users in bulk from a \.csv file<a name="add-users-in-bulk"></a>
 
+**Note**  
+Avoid adding too many unique resources in the \.csv file\. For example, don't add more than 100 different routing profiles\. This may cause a timeout or failure during the validation process\.   
+Bulk upload is for adding new records, not for editing existing records\. To edit user records in bulk, see [Edit users in bulk](edit-users-in-bulk.md)\. 
+
 Use these steps to add several users from a \.csv file such as an Excel spreadsheet\.
 
-1. Log in to the Amazon Connect console with an **Admin** account, or an account assigned to a security profile that has permissions to create users\.
+1. Log in to Amazon Connect with an **Admin** account, or an account assigned to a security profile that has permissions to create users\.
 
-1. Choose **Users**, **User management**\.
+1. In Amazon Connect, on the left navigation menu, choose **Users**, **User management**\.
 
 1. Choose **Add new users**\.
 
@@ -51,15 +59,18 @@ Use these steps to add several users from a \.csv file such as an Excel spreadsh
    + last name
    + email address
    + secondary email address
-   + mobile
+   + mobile: This is not currently used by Amazon Connect\. 
    + password
    + user login
+   + agent hierarchy
    + routing profile name
    + security\_profile\_name\_1\|security\_profile\_name\_2
+   + user\_hierarchy\_1\|user\_hierarchy\_2
    + phone type \(soft/desk\)
    + phone number
    + soft phone auto accept yes/no\)
    + ACW timeout \(seconds\)
+   + tags
 
    The following image shows a sample of what the \.csv template looks like in an Excel spreadsheet:  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/add-bulk-users.png)
@@ -71,6 +82,7 @@ Use these steps to add several users from a \.csv file such as an Excel spreadsh
 If you get an error message, it usually indicates that one of the required columns is missing information, or there's a typo in one of the cells\. 
 + We recommend checking the format of the phone number as a starting point in your investigation\.
 + If you get an error message that **Security profile is not found**, check whether there's a typo in one of the cells in the **security\_profile\_name\_1** column\.
++ Check that passwords meet requirements: at least 8 characters with an uppercase letter, lowercase letter, and number\. For example, if there's an ellipsis \(\.\.\.\) in a password, this can cause an error\.
 + Update the \.csv file and try uploading it again\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/error-message-uploaded-csv-file.png)

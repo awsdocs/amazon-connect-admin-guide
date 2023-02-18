@@ -57,8 +57,6 @@ You can search and listen to call recordings in Amazon Connect\. To determine wh
 
 The capabilities of Amazon S3, AWS KMS, and IAM put you in full control of who has access to call recording data\.
 
-In addition, you can track who listens to or deletes recordings; see [Track who deleted or listened to recordings](track-who-deleted-recordings.md)\. 
-
 ## Contact metadata<a name="contact-metadata"></a>
 
 Amazon Connect stores metadata related to contacts that flow through the system and allows authorized users to access this information\. The Contact Search feature allows you to search and view contact data, such as origination phone numbers or other attributes set by the flow, that are associated with a contact for diagnostics or reporting purposes\. 
@@ -88,6 +86,8 @@ While enrolling a customer into Voice ID for authentication and fraud detection,
 ## Speaker and Fraudster Audio<a name="speaker-fraudster-audio-data-protection"></a>
 
 When you enable Amazon Connect Voice ID, it stores a compacted version of the audio \(called utterances\) that it aggregated while enrolling a speaker or registering a fraudster\. This audio is used in the future whenever the voiceprints for the speakers and fraudsters need to be regenerated\. The data is retained until the speaker/fraudster is deleted\. The original audio used for enrollment or evaluation is deleted after a 24 hour retention period\.
+
+The data is retained until the speaker/fraudster is deleted or opted out\.
 
 ## Outbound campaigns<a name="outbound-communications-data-protection"></a>
 

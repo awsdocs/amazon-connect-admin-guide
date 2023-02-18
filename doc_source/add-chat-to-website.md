@@ -21,7 +21,7 @@ The chat widget supports browser notifications for desktop devices\. For more in
 
 In this step, you customize the experience of the chat widget for your customers\.
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.\. Choose **Customize chat widget**\.  
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\. Choose **Customize chat widget**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-customize-chat-window-button.png)
 
 1. For **Typeface**, use the dropdown to choose the font for the text in the chat widget\.  
@@ -132,8 +132,13 @@ Saved changes update the customer experience in a few minutes\. Confirm your wid
 
 To make changes to widget icons on the website, you will receive a new code snippet to update your website directly\.
 
-### More customizations for your chat widget<a name="chat-widget-more-customizations"></a>
+## Getting error messages?<a name="chat-widget-more-customizations"></a>
+
+If you encounter error messages, see [Troubleshooting issues with your chat widget](troubleshoot-chatwidget.md)\.
+
+## More customizations for your chat widget<a name="chat-widget-more-customizations"></a>
 
 See the following topics for more you can do to customize the chat experience:
 + [Pass the customer display name when a chat initializes](pass-display-name-chat.md)
 + [Pass contact attributes when a chat initializes](pass-contact-attributes-chat.md)
++ [Enable message *Delivered* and *Read* receipts in your chat user interface](message-receipts.md)

@@ -8,7 +8,7 @@ Even though many call recordings for specific contact IDs may be named with the 
 
 1. Log in to Amazon Connect with a user account that has [permissions to access recordings](assign-permssions-to-review-recordings.md)\.
 
-1. In Amazon Connect choose **Analytics**, **Contact search**\. 
+1. In Amazon Connect choose **Analytics and optimization**, **Contact search**\. 
 
 1. In the **Contact ID**, enter the contact ID, and then choose **Search**\.
 

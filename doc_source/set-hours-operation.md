@@ -62,12 +62,13 @@ For more information, see these topics:
 
 ## What happens during daylight saving time<a name="daylight-savings-time"></a>
 
-Amazon Connect uses the timezone to determine whether daylight saving time is in effect for the queues, and adjusts automatically for all timezones that observe daylight saving time\. When a contact comes in, Amazon Connect looks at the hours and timezone to determine whether the contact can be routed to the given queue\. 
+Amazon Connect uses the timezone to determine whether daylight saving time is in effect for the queues, and **adjusts automatically** for all timezones that observe daylight saving time\. When a contact comes in, Amazon Connect looks at the hours and timezone to determine whether the contact can be routed to the given queue\. 
 
 **Important**  
+Amazon Connect provides options for EST5EDT, PST8PDT, CST6CDT, and more\. For example, EST5EDT is defined as:  
  [Eastern Standard Time \(EST\)](https://en.wikipedia.org/wiki/Eastern_Time_Zone) is used when observing standard time\. It is five hours behind Coordinated Universal Time \(UTC\)\.  
  [Eastern Daylight Time \(EDT\)](https://en.wikipedia.org/wiki/Eastern_Time_Zone) is used when observing daylight saving time\. It is four hours behind Coordinated Universal Time \(UTC\)\.  
-Unlike EST, [Central European Time \(CET\)](https://en.wikipedia.org/wiki/Central_European_Time) observes daylight savings time\.
+We recommend researching your choice of timezone to ensure you understand it\.
 
 ## Use the Check Hours of Operation block<a name="use-check-hours-of-operation-block"></a>
 

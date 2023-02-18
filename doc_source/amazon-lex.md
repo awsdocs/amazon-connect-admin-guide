@@ -229,7 +229,7 @@ In this step you create a new bot version to use in an alias\. It's how you crea
 
 1. In the **Alias name** box, enter a name, such as **Test**\. Later in this walkthrough you'll use this alias to specify this version of the bot in your flow\. 
 **Important**  
-In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime Service Quotas](https://docs.aws.amazon.com/lexv2/latest/dg/gl-limits.html#gl-limits-runtime)\.
+In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime quotas](https://docs.aws.amazon.com/lexv2/latest/dg/quotas.html#quotas-service)\.
 
 1. For **Associated version**, choose the version you just created, such as **Version 1**\. 
 
@@ -308,7 +308,7 @@ Next, create a new flow that uses your Amazon Lex bot\. When you create the cont
 
    1. Amazon Lex Classic bots have the suffix "\(Classic\)" appended to their names\. If you have selected a Classic bot, enter the alias you want to use in the **Alias** field\.
 
-   1. For Amazon Lex bots, you also have the option of manually setting a bot alias ARN\. Choose **Set manually**, then either type the ARN of the bot alias you want to use or set the ARN using a dynamic attribute\.
+   1. For Amazon Lex V2 bots, you also have the option of manually setting a bot alias ARN\. Choose **Set manually**, then either type the ARN of the bot alias you want to use or set the ARN using a dynamic attribute\.
 
 1. Under **Intents**, choose **Add an intent**\.
 

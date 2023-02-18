@@ -1,6 +1,6 @@
 # Make a call while on a chat<a name="call-and-chat"></a>
 
-Let's say you're chatting with a contact and you want to consult with someone else\. While you're on a chat, you can use the updated CCP to make outbound calls using the number pad and [external quick connects](quick-connects.md#external-quick-connect-type)\. 
+Let's say you're chatting with a contact and you want to consult with someone else\. While you're on a chat, you can use the updated CCP to make outbound calls using the number pad and [phone number quick connects](quick-connects.md#external-quick-connect-type)\. 
 
 Note the following limitations:
 + You can't access agent quick connects while you're on a chat\.
@@ -28,11 +28,11 @@ Note the following limitations:
 
 If you're on a chat and having trouble making an outbound call to another agent, that agent may be handling a chat conversation\. They can't receive a call while on a chat\. 
 
-## Can't see external quick connects in the CCP<a name="call-and-chat-troubleshooting2"></a>
+## Can't see phone number quick connects in the CCP<a name="call-and-chat-troubleshooting2"></a>
 
  [Agent quick connects](quick-connects.md#agent-quick-connect-type) are not visible in the CCP while you're on a chat\.
 
-If you can't see [external quick connects](quick-connects.md#external-quick-connect-type) in your CCP, however, check that the external quick connect has been added to your queue as described in [Step 2: Enable agents to see quick connects](quick-connects.md#step2-enable-agents-to-see-quick-connects)\.
+If you can't see [phone number quick connects](quick-connects.md#external-quick-connect-type) in your CCP, however, check that the phone number quick connect has been added to your queue as described in [Step 2: Enable agents to see quick connects](quick-connects.md#step2-enable-agents-to-see-quick-connects)\.
 
 ## Enable agent quick connects for calls during a chat<a name="call-and-chat-enable-agent-quick-connects"></a>
 

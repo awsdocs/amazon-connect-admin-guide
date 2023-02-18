@@ -4,7 +4,7 @@ When a user is deleted from Amazon Connect, you won't be able to configure their
 
 ## What happens to the user's metrics?<a name="delete-users-metrics"></a>
 
-The user's data in contact records and reports is retained\. The data is preserved for the consistency of the historical metrics\.
+The user's data in contact records and reports is retained\. The data is preserved for the consistency of the historical metrics\. For example, when you search for contact records, you'll still see the agent's username, any contact recordings involving the agent, etc\.
 
 In the historical metrics reports, the agent's data will be included in the **Agent performance** metrics report\. However, you won't be able to see an **Agent activity audit** of the deleted agent because their name won't appear in the drop\-down list\. 
 
@@ -20,9 +20,9 @@ By default, the Amazon Connect **Admin** security profile has these permissions\
 
 You can't undo a deletion\.
 
-1. Log in to the Amazon Connect console with an **Admin** account, or an account assigned to a security profile that has permissions to remove users\.
+1. Log in to Amazon Connect using an **Admin** account, or an account assigned to a security profile that has permissions to remove users\.
 
-1. Choose the user account you want to delete, and then choose **Delete**\.  
+1. In Amazon Connect, on the left navigation menu, choose **Users**, **User management**\. Choose the user account you want to delete, and then choose **Delete**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/delete-users-how-to.png)
 
 1. Confirm you want to delete that account\.  

@@ -34,7 +34,7 @@ Type: String
 **LanguageCode**  
 The language code associated to this contact\.  
 Type: String   
-Valid values: the language code for one of the [supported languages for Contact Lens real\-time analytics](supported-languages.md#supported-languages-contact-lens)\. 
+Valid values: the language code for one of the [supported languages for Contact Lens real\-time call analytics](supported-languages.md#supported-languages-contact-lens)\. 
 
 **EventType**  
 The type of event published\.  

@@ -1,8 +1,8 @@
 # Flow block definitions<a name="contact-block-definitions"></a>
 
-You create flows in the flow designer using flow blocks\. Drag and drop flow blocks onto a canvas to arrange a flow\. 
+Use flow blocks to create flows in the flow designer\. Drag flow blocks and drop them onto a canvas to arrange a flow\.
 
-The following table lists all available flow blocks that you can use\. Choose the links in the Block column for more information\. 
+The following table lists all available flow blocks that you can use\. Choose any block name in the Block column for more information\.
 
 
 | Block | Description | 
@@ -40,6 +40,7 @@ The following table lists all available flow blocks that you can use\. Choose th
 |  [Set voice](set-voice.md)   |  Sets the text\-to\-speech \(TTS\) language and voice to be used in the flow\.  | 
 |   [Set whisper flow](set-whisper-flow.md)  |  Overrides the default whisper by linking to a whisper flow\.  | 
 |   [Set working queue](set-working-queue.md)   |  Specifies the queue to be used when **Transfer to queue** is invoked\.  | 
+|  [Show view \(Preview\)](show-view-block.md)  | Configures UI based workflows that you can surface to users in front end applications\. | 
 |  [Start media streaming](start-media-streaming.md)  | Starts capturing customer audio for a contact\. | 
 |  [Stop media streaming](stop-media-streaming.md)  | Stops capturing customer audio after it is started with a **Start media streaming** block\. | 
 |   [Store customer input](store-customer-input.md)   |  Stores numerical input to a contact attribute\.  | 

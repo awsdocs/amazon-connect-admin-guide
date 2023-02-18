@@ -33,7 +33,7 @@ When configuring this block to [set up recording behavior](set-up-recordings.md)
 + To record chat conversations, you need to choose **Agent and Customer**\.
 + To enable monitoring of voice and/or chat conversations, you need to choose **Agent and Customer**\.
 
-For information about using this block to enable Contact Lens, see [Enable Contact Lens for Amazon Connect](enable-analytics.md)\.
+For information about using this block to enable Contact Lens, including features such as sensitive data redaction, see [Enable Contact Lens for Amazon Connect](enable-analytics.md)\.
 
 ## Configuration tips<a name="set-recording-behavior-tips"></a>
 + Let's say you have a flow that links to a flow that links to another flow\. Each flow might have it's own **Set recording behavior** block\. The last **Set recording behavior** block overrides the settings of the previous two **Set recording behavior** blocks\. 
@@ -41,6 +41,9 @@ For information about using this block to enable Contact Lens, see [Enable Conta
   For example, you might have a flow with **Set recording behavior to record Agent and Customer**\. But if the next **Set recording behavior** block is set to **Agent only**, that block overrides the behavior of the previous block\. 
 + If an agent puts a customer on hold, the agent is still recorded, but the customer is not\.
 + If you want to transfer a contact to another agent or queue, and you want to continue using Contact Lens to collect data, you need to add to the flow another **Set recording behavior** block with **Enable analytics** turn on\. This is because a transfer generates a second contact ID and contact record\. Contact Lens needs to run on that contact record as well\.
++ When you enable Contact Lens, the type of flow that the block is in, and where it is placed in the flow, determine **whether** agents receive the contact summarization transcript, and **when** they receive it\. 
+
+  For more information and example use cases that explain how the block affects the agents experience with contact summarization, see [Design a flow for call summarization](enable-analytics.md#call-summarization-agent)\.
 
 ## Configured block<a name="set-recording-behavior-configured"></a>
 
@@ -57,6 +60,6 @@ See these sample flows for scenarios that use this block:
 
 See these topics for scenarios that use this block:
 + [Set up recording behavior](set-up-recordings.md)
-+ [Monitor live conversations](monitor-conversations.md)
++ [Set up live monitoring for voice and/or chat](monitor-conversations.md)
 + [Review recorded conversations](review-recorded-conversations.md)
 + [Analyze conversations using Contact Lens for Amazon Connect](analyze-conversations.md)

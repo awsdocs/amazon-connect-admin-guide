@@ -1,5 +1,5 @@
 # Security profile permissions for Voice ID<a name="assign-security-profile-voiceid"></a>
-+ To enable users to search for contacts by their Voice ID status, assign the following **Analytics** permission to their security profile:
++ To enable users to search for contacts by their Voice ID status, assign the following **Analytics and Optimization** permission to their security profile:
   + **Voice ID \- attributes and search**: Enables users to search for and view Voice ID results on the **Contact detail** page\. 
 + To grant agents access to Voice ID in the Contact Control Panel, assign the following permission in the **Contact Control Panel** group:
   + **Voice ID \- Access**: Enables controls in the Contact Control Panel so agents can:

@@ -232,6 +232,8 @@ In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/A
 
 Average time that contacts waited in the queue before being answered by an agent\. In some businesses, this is also known as average speed of answer \(ASA\)\.
 
+Average queue answer time also includes the time during the agent whisper, because the contact remains in queue until the agent whisper is completed\. 
+
 This is the average of [Duration](ctr-data-model.md#Duration-CTR) \(from the contact record\)\.
 
 In the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, this metric is QUEUE\_ANSWER\_TIME\.
@@ -472,7 +474,8 @@ Total time that agents spent in a [custom status](agent-custom.md)\. That is, th
 This metric doesn't mean that the agent was spending their time unproductively\. 
 
 **Tip**  
-Agents can handle contacts while their CCP status is set to a custom status\. For example, agents can be **On contact** or doing **ACW** while their CCP is set to a custom status\. This means it's possible for agents to be counted as **On contact** and **NPT** at the same time\. 
+Agents can handle contacts while their CCP status is set to a custom status\. For example, agents can be **On contact** or doing **ACW** while their CCP is set to a custom status\. This means it's possible for agents to be counted as **On contact** and **NPT** at the same time\.   
+For example, if an agent changes their status to a custom status, and then makes an outbound call, it would be counted as non\-productive time\.
 
 This metric can't be grouped or filtered by queue\.
 + Type: String \(*hh:mm:ss*\)

@@ -46,11 +46,7 @@ During your security journey, your security teams may require a deeper understan
 
 ### Workload diagram<a name="workload-diagram"></a>
 
-Review you workload diagram and architect an optimum solution on AWS\. This includes analyzing and deciding which additional AWS services should be included in your solution and any third\-party and on\-premises applications that need to be integrated\. 
-
-For example, a workload for [automatically distributing scheduled reports for Amazon Connect](http://aws.amazon.com/blogs/contact-center/automatically-distribute-scheduled-reports-for-amazon-connect/) stores the scheduled reports in an S3 bucket\. A CloudWatch event initiates an AWS Lambda function when a new report is added to the S3 bucket\. It then sends an email with the report attached\. The following workload diagram shows Amazon Connect along with AWS Lambda, Amazon S3, Amazon CloudWatch, and Amazon Simple Email Service \(Amazon SES\)\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/workloaddiagram.png)
+Review your workload diagram and architect an optimum solution on AWS\. This includes analyzing and deciding which additional AWS services should be included in your solution and any third\-party and on\-premises applications that need to be integrated\. 
 
 ## AWS Identity and Access Management \(IAM\)<a name="iam-bp"></a>
 
@@ -60,7 +56,7 @@ There are four types of Amazon Connect personas, based on the activities being p
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/amazonconnectpersonas.png)
 
-1. IAM administrator – IAM administrators create or modify Amazon Connect resources and may also delegate administrative access to other principals\. The scope of this persona is focused on creating and administering your Amazon Connect instance\.
+1. AWS administrator – AWS administrators create or modify Amazon Connect resources and may also delegate administrative access to other principals by using the AWS Identity and Access Management \(IAM\) service\. The scope of this persona is focused on creating and administering your Amazon Connect instance\.
 
 1. Amazon Connect administrator – Service administrators determine which Amazon Connect features and resources employees should access within the Amazon Connect console\. The service administrator assigns security profiles to determine who can access the Amazon Connect console and what tasks they can perform\. The scope of this persona is focused on creating and administering your Amazon Connect contact center\.
 

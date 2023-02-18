@@ -15,15 +15,28 @@ You can use contact events to create analytics dashboards to monitor and track c
 
 Amazon Connect contact events are published using [Amazon EventBridge](http://aws.amazon.com/eventbridge/), and can be enabled in a couple of steps for your Amazon Connect instance in the Amazon EventBridge console by creating a new rule\. Although events are not ordered, they have a timestamp which enables you to consume the data\.
 
-Events are emitted on a best effort basis\.
+Events are emitted on a [best effort](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html) basis\.
 
-To subscribe to Amazon Connect contact events, go to Amazon EventBridge and create a new rule by selecting **Amazon Connect** as the service name, and **Amazon Connect contact event** as the event type\. For more information about configuring rules, see [Amazon EventBridge rules](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rules.html) in the *Amazon EventBridge User Guide*\. 
+To subscribe to Amazon Connect contact events:
 
-The following image shows what this looks like in EventBridge:
+1. In the Amazon EventBridge console, choose **Create rule**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-events-eventbridge-rule.png)
+1. On the **Default rule detail** page, assign a name to the rule, choose **Rule with an event pattern**, and then choose **Next**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/eventbridge-createrule.png)
 
-You can then select a target of your choice which includes a Lambda function, SQS queue, or SNS topic\. For information about configuring targets, [Amazon EventBridge targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html)\. 
+1. On the **Build event pattern** page, under **Event source**, verify that **AWS events or EventBridge partner events** is selected\.
+
+1. Under **Sample event type**, choose **AWS events**, and then choose ** Amazon Connect Contact Event** from the dropdown box\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/eventbridge-sampleevents.png)
+
+1. For Creation method choose Use pattern form\. In the **Event pattern** section, choose **AWS services**, **Amazon Connect**, **Amazon Connect Contact Event**, and then choose **Next**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/eventbridge-creationmethod.png)
+
+1. On the Select target\(s\) page, you can then select a target of your choice, which includes a Lambda function, SQS queue, or SNS topic\. For information about configuring targets, [Amazon EventBridge targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html)\.
+
+1. Optionally configure tags\. On the **Review and create** page, choose **Create rule**\.
+
+ For more information about configuring rules, see [Amazon EventBridge rules](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rules.html) in the *Amazon EventBridge User Guide*\. 
 
 ## Contact events data model<a name="contact-events-data-model"></a>
 
@@ -37,7 +50,8 @@ This event is generated for outbound calls \([Amazon Connect Campaign](https://d
 + DISCONNECTED \- A voice call, chat, or task is disconnected\. For outbound calls, the dial attempt is not successful, the attempt is connected but the call is not picked up, or the attempt results in a [SIT tone](https://en.wikipedia.org/wiki/Special_information_tone)\. 
 
   A disconnect event is when:
-  + A call, chat, or task is disconnected by an agent\.
+  + A call, chat, or task is disconnected\.
+  + A call is disconnected by a customer, agent, third party, supervisor, flow, telecom problem, API, or any other reason\.
   + A task is disconnected as a result of a flow action\.
   + A task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
 
@@ -62,7 +76,7 @@ Type: String
 Length: 1\-256
 
 **InitialContactId**  
-The original identifier of the contact that was transferred\.  
+The identifier of the initial contact\.  
 Type: String  
 Length: 1\-256
 
@@ -96,14 +110,21 @@ Valid values:
 + CALLBACK: The customer was contacted as part of a callback flow\. For more information about the InitiationMethod in this scenario, see [About queued callbacks in metrics](about-queued-callbacks.md)\. 
 + API: The contact was initiated with Amazon Connect by API\. This could be an outbound contact you created and queued to an agent, using the [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) API, or it could be a live chat that was initiated by the customer with your contact center, where you called the [StartChatContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html) API, or it could be a tasks initiated by the customer by calling the [StartTaskContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartTaskContact.html) API\. 
 + QUEUE\_TRANSFER: While the contact is one queue, and was then transferred into another queue using a flow block\.
++ MONITOR: A supervisor initiated monitor on an agent\. The supervisor can silently monitor the agent and customer, or barge the conversation\.
 + DISCONNECT: When a [Set disconnect flow](set-disconnect-flow.md) block is triggered, it specifies which flow to run after a disconnect event\. 
 
   A disconnect event is when:
-  + A call, chat, or task is disconnected by an agent\.
+  + A call, chat, or task is disconnected\.
+  + A call is disconnected by a customer, agent, third party, supervisor, flow, telecom problem, API, or any other reason\.
   + A task is disconnected as a result of a flow action\.
   + A task expires\. The task is automatically disconnected if it is not completed in 7 days\. 
 
   When the disconnect event occurs, the corresponding content flow runs\. If a new contact is created while running a disconnect flow, then the initiation method for that new contact is DISCONNECT\.
+
+**RelatedContactId**  
+The contactId that is [related](https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_Item.html) to this contact\.  
+Type: String  
+Length: Minimum of 1\. Maximum of 256\.
 
 ### QueueInfo<a name="QueueInfo"></a>
 

@@ -20,7 +20,7 @@ There's a lot you can do to optimize your contact center\. Here are a couple of 
 
 1. [Set up recording behavior](set-up-recordings.md)\. Monitor live conversations and review past conversations\. This is a way that managers can coach agents and help them improve\. For voice conversations, set up recording in your flows\. For chat conversations, set up recording at the instance level\. 
 
-   To learn how to monitor conversations, see [Monitor live conversations](monitor-conversations.md)\.
+   To learn how to monitor conversations, see [Set up live monitoring for voice and/or chat](monitor-conversations.md)\.
 
 1. [Add an Amazon Lex bot to Amazon Connect](amazon-lex.md)\. Use Amazon Lex in your contact center to reduce the load on your agents\. For example, a bot can handle the initial interaction before the chat is routed to an agent, and also answer common questions for the customer\. 
 
@@ -30,3 +30,5 @@ Check out the following free online classes:
 +  [Introduction to Amazon Connect and the Contact Control Panel \(CCP\)](https://explore.skillbuilder.aws/learn/course/external/view/elearning/12303/introduction-to-amazon-connect-and-the-connect-control-panel-ccp) 
 +  [Amazon Connect: Introduction to the Administrative Interface](https://explore.skillbuilder.aws/learn/course/external/view/elearning/12328/amazon-connect-introduction-to-the-administrative-interface) 
 +  [Amazon Connect: Creating and Managing Amazon Connect Instances](https://explore.skillbuilder.aws/learn/course/external/view/elearning/12304/amazon-connect-creating-and-managing-amazon-connect-instances) 
++  [Amazon Connect: Implementing Chat in Amazon Connect](https://explore.skillbuilder.aws/learn/course/external/view/elearning/14504/amazon-connect-implementing-chat-in-connect) 
++  [Amazon Connect: Implementing Tasks in Amazon Connect](ttps://explore.skillbuilder.aws/learn/course/external/view/elearning/14209/amazon-connect-implementing-task-on-connect) 

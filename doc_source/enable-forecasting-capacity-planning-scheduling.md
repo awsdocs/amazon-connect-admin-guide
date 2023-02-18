@@ -1,28 +1,23 @@
 # Enable forecasting, capacity planning, and scheduling<a name="enable-forecasting-capacity-planning-scheduling"></a>
 
-You enable forecasting, capacity planning, and scheduling at the Amazon Connect instance level\.
+You must enable Forecasting, capacity planning, and scheduling at the Amazon Connect instance level\. Once the check\-box has been selected to enable this feature, it may take up to 24 hours for the feature to be available for use in your AWS account\.
 
-**Requirements**
+1. Log in to the [AWS Management Console](https://console.aws.amazon.com/console/) using your AWS account\.
 
-The user must have the following permissions:
-+ `iam:CreateRole`
-+ `iam:CreatePolicy`
-+ `iam:AttachRolePolicy`
-+ `bayes-markov:*`
+1. In the AWS Management Console, at the top of the page in the search bar, type *Amazon Connect* and then choose **Amazon Connect**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-aws-console.png)
 
-**To enable forecasting, capacity planning, and scheduling**
+1. Choose the **Instance alias** that you would like to enable Forecasting, capacity planning, and scheduling on\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-select-instance.png)
 
-1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
+1. Choose Forecasting, capacity planning, and scheduling on the left\-hand navigation bar\. For information on the security profile permissions needed to enable Forecasting, capacity planning, and scheduling, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-left-nav-pane.png)
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.
+1. Select the check box to enable Forecasting, capacity planning, and scheduling\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-enable-check-box.png)
 
-1. In the navigation pane, choose **Forecasting, capacity planning, and scheduling**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-enable-console.png)
+1. The status will change to *In progress*\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-enable-in-progress.png)
 
-1. On the **Forecasting, capacity planning, and scheduling** page, choose **Enable Forecasting, capacity planning, and scheduling**\. 
-
-   Your users will have access to forecasting, capacity planning, and scheduling within 24 hours\. After forecasting, capacity planning, and scheduling capabilities are enabled, continue setup as follows: 
-
-   1. Assign users the appropriate security profile permissions to access the features\. For instructions, see [Required permissions](required-optimization-permissions.md)\.
-
-   1. [Set the forecast and scheduling interval](set-forecast-scheduling-interval.md)\. This is a one\-time activity typically done by forecasters\. After it's set, it cannot be undone\. 
+1. Within 24 hours the status will change to *Enabled* and Forecasting, capacity planning, and scheduling will be ready to use\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-enabled.png)

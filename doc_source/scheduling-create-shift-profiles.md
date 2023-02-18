@@ -4,9 +4,9 @@ Use shift profiles to create templates for weekly shifts\. The template includes
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Scheduling**, **Schedule manager \- Edit**\. 
 
-   For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
+   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
 
-1. On the Amazon Connect navigation menu, select **Users**, **Scheduling**\.
+1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Scheduling**\.
 
 1. Choose the **Shift Profiles** tab, and then choose **Add shift profiles**\. 
 

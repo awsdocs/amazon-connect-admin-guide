@@ -7,6 +7,7 @@ When using the default Amazon Connect CCPv1, closing the CCP window or logging o
 
 To change this behavior, you can do one of the following:
 + Use CCPv2\. When agents log out, their status is automatically switched to **Offline**\. However, note that CCPv2 doesn't automatically switch agents to **Offline** if they only close the window\. For instructions on upgrading to CCPv2, see [My CCP URL ends with /ccp\#](upgrade-browser-ccp.md)\.
++ Use the [CreateAgentStatus](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateAgentStatus.html) API: You can change the state of the agent to Offline\. 
 + Create a custom CCP\. See [Amazon Connect Streams API](https://github.com/amazon-connect/amazon-connect-streams) and the [Agent API](https://github.com/amazon-connect/amazon-connect-streams/blob/master/Documentation.md#agent-api)
 + Use the following steps in this topic to update your CCP so it switches agents to **Offline**  and logs out agents automatically when they close the CCP window\.
 

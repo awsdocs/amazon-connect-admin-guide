@@ -1,6 +1,6 @@
 # Track events as customers interact with flows<a name="about-contact-flow-logs"></a>
 
-Amazon Connect Flow logs provide you with real\-time details about events in your flows as customers interact with them\. You can also use flow logs to help debug your flows as you are creating them\. If needed, you can always [roll back ](flow-version-control.md#rollback)to a previous version of a flow\.
+Amazon Connect flow logs provide you with real\-time details about events in your flows as customers interact with them\. You can also use flow logs to help debug your flows as you are creating them\. If needed, you can always [roll back ](flow-version-control.md#rollback)to a previous version of a flow\.
 
 **Topics**
 + [Storage for flow logs](contact-flow-logs-stored-in-cloudwatch.md)

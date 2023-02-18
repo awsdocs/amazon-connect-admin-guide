@@ -29,6 +29,8 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 It has two properties: 
 + **Timeout**: Run this branch if the customer hasn't sent a message after a specified amount of time\. Maximum is 7 days\.
+  + Manually set timeout: You can provide the **Number** and **Units**\.
+  + Dynamically set timeout: The unit of measurement is in seconds\.
 + **Customer return**: Run this branch when the customer returns and sends a message\. With this branch you can route the customer to the previous \(same\) agent, previous \(same\) queue, or override and set a new working queue or agent\. 
 
 ## Configuration tips<a name="wait-tips"></a>

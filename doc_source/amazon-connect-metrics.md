@@ -25,5 +25,7 @@ For detailed information about the activity of agents in your contact center, us
 + [Share custom reports](share-reports.md)
 + [View a shared report](view-a-shared-report.md)
 + [Publish reports](publish-reports.md)
++ [Manage saved reports \(admin\)](manage-saved-reports-admin.md)
 + [Monitoring your instance using CloudWatch](monitoring-cloudwatch.md)
 + [Logging Amazon Connect API calls with AWS CloudTrail](logging-using-cloudtrail.md)
++ [EventBridge events emitted by Amazon Connect](connect-eventbridge-events.md)

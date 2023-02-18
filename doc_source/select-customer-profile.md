@@ -2,7 +2,7 @@
 
 When a call or chat is connected to your Contact Control Panel \(CCP\), Amazon Connect, in the same browser window, automatically displays customer profiles that may match the incoming phone number\. 
 
-Before agents can access customer profiles, the Amazon Connect administrator must enable the Customer Profiles feature, grant agents the appropriate permissions, and integrate Customer Profiles into your agent application\. For more information, see [Enable Customer Profiles for your instance](enable-customer-profiles.md)\.
+Before agents can access customer profiles, the Amazon Connect administrator must enable the Customer Profiles feature, grant agents the appropriate permissions, and integrate Customer Profiles into your agent workspace\. For more information, see [Enable Customer Profiles for your instance](enable-customer-profiles.md)\.
 
 ## Example 1: Auto\-populate the customer profile<a name="example1-select-customer-profile"></a>
 

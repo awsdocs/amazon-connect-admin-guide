@@ -8,9 +8,9 @@ For example, if there's something in the audit report you want to recreate, or i
 
 For a list of required permissions to perform this procedure, see [Permissions required to view historical metrics reports](htm-permissions.md)\. 
 
-1. Log in to your contact center at https://*instance name*\.my\.connect\.aws/\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
-1. Choose **Analytics**, **Historical metrics**, **Agents**, **Agent activity audit**\.
+1. Choose **Analytics and optimization**, **Historical metrics**, **Agents**, **Agent activity audit**\.
 
 1. Choose the agent login, date, and timezone, and then choose **Generate Report**\.
 
@@ -29,6 +29,7 @@ The following values may appear in the **Status** column on agent activity audit
 + **Agent Disconnected**: When the agent doesn't choose **Accept** on the inbound contact in 20 seconds, or they choose **Reject**\.
 + **Calling Customer**: The state before an outbound call is established\.
 + **Contact Missed**: When the agent misses a contact\. 
++ **Missed Call Agent**: When an agent accepts a callback, but they end the call before ringing the customer has finished\. 
 + **Telecom issue**: When an outbound call is ended before the call is established\. For example, there was an error with the agent's soft phone connection\.
 
 **Note**  
