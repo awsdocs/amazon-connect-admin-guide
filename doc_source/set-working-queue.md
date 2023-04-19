@@ -27,7 +27,7 @@ You can use this block in the following [contact flow types](create-contact-flow
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-working-queue-properties.png)
 
 Note the following properties:
-+ **By queue > Set dynamically**\. To set the queue dynamically, you must specify the Amazon Resource Name \(ARN\) or ID for the queue rather than the queue name\. To find the ID or ARN for a queue, open **Routing, Queues** in the navigation menu and choose the desired queue. The ARN can be found by expanding **Show additional queue information**. The queue ID is a subset of the ARN and consists of the characters following  `/queue`. For example, `.../queue/aaaaaaaa-bbbb-cccc-dddd-111111111111`\.
++ **By queue > Set dynamically**\. To set the queue dynamically, you must specify the Amazon Resource Name \(ARN\) or ID for the queue rather than the queue name\. To find the ID or ARN for a queue, open **Routing, Queues** in the navigation menu and choose the desired queue. The ARN can be found by expanding **Show additional queue information**. The queue ID is a subset of the ARN and consists of the characters following  `/queue/`. For example, `.../queue/aaaaaaaa-bbbb-cccc-dddd-111111111111`\.
 
 ## Configured block<a name="set-working-queue-configured"></a>
 
