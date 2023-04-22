@@ -31,4 +31,4 @@ Check out the following free online classes:
 +  [Amazon Connect: Introduction to the Administrative Interface](https://explore.skillbuilder.aws/learn/course/external/view/elearning/12328/amazon-connect-introduction-to-the-administrative-interface) 
 +  [Amazon Connect: Creating and Managing Amazon Connect Instances](https://explore.skillbuilder.aws/learn/course/external/view/elearning/12304/amazon-connect-creating-and-managing-amazon-connect-instances) 
 +  [Amazon Connect: Implementing Chat in Amazon Connect](https://explore.skillbuilder.aws/learn/course/external/view/elearning/14504/amazon-connect-implementing-chat-in-connect) 
-+  [Amazon Connect: Implementing Tasks in Amazon Connect](ttps://explore.skillbuilder.aws/learn/course/external/view/elearning/14209/amazon-connect-implementing-task-on-connect) 
++  [Amazon Connect: Implementing Tasks in Amazon Connect](https://explore.skillbuilder.aws/learn/course/external/view/elearning/14209/amazon-connect-implementing-task-on-connect) 
