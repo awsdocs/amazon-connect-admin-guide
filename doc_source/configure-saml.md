@@ -7,9 +7,9 @@ Amazon Connect supports identity federation by configuring Security Assertion Ma
 Before you begin, note the following:
 + Choosing SAML 2\.0\-based authentication as the identity management method for your Amazon Connect instance requires the configuration of [AWS Identity and Access Management federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-saml.html)\. 
 + The user name in Amazon Connect must match the RoleSessionName SAML attribute specified in the SAML response returned by the identity provider\.
-+ An Amazon Connect user can only be associated with a single AWS IAM Role\. Changing the AWS IAM Role used for federation will cause previously federated users to fail on login\. For more information about Identity and Access Management user and role management, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)\. 
 + Amazon Connect does not support reverse federation\. That is, you can't to login into Amazon Connect directly\. If you tried, you'd get a *Session Expired* message\. The authentication should be done from the Identity Provider \(IdP\) and not the Service Provider \(SP\) \(Amazon Connect\)\. 
 + All Amazon Connect usernames are case sensitive, even when using SAML\.
++ If you have old Amazon Connect instances that were set up with SAML and you need to update your Amazon Connect domain, see [Personal settings](update-your-connect-domain.md#new-domain-settings)\. 
 
 ## Overview of using SAML with Amazon Connect<a name="saml-overview"></a>
 
@@ -46,7 +46,7 @@ The following steps are required to enable and configure SAML authentication for
 Due to the association of an Amazon Connect user and an AWS IAM Role, the user name must match exactly the RoleSessionName as configured with your AWS IAM federation integration, which typically ends up being the user name in your directory\. 
 
     The format should match the intersection of the format conditions of the [RoleSessionName](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) and an [Amazon Connect user](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateUser.html#connect-CreateUser-request-DirectoryUserId), as shown in the following diagram:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-ven-diagram.png)
+![\[Ven diagram of rolesessionname and Amazon Connect user.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-ven-diagram.png)
 
    Format:
    + String: Upper\- and lower\-case alphanumeric characters with no spaces
@@ -72,8 +72,6 @@ The steps necessary to enable SAML federation with AWS include:
 1. Create a SAML provider in AWS\. For more information, see [Creating SAML Identity Providers](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_saml.html)\.
 
 1. Create an IAM role for SAML 2\.0 federation with the AWS Management Console\. Create only one role for federation \(only one role is needed and used for federation\)\. The IAM role determines which permissions the users that log in through your identity provider have in AWS\. In this case, the permissions are for accessing Amazon Connect\. You can control the permissions to features of Amazon Connect by using security profiles in Amazon Connect\. For more information, see [Creating a Role for SAML 2\.0 Federation \(Console\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-idp_saml.html)\.
-**Important**  
-Replacing this Role causes previously federated users to fail at login because it breaks existing user logins due to the immutable Amazon Connect user association with the previous Role\.
 
    In step 5, choose **Allow programmatic and AWS Management Console access**\. Create the trust policy described in the topic in the procedure *To prepare to create a role for SAML 2\.0 federation*\. Then create a policy to assign permissions to your Amazon Connect instance\. Permissions start on step 9 of the *To create a role for SAML\-based federation* procedure\.
 
@@ -202,10 +200,13 @@ Ensure no SCPs are preventing STS actions in your additional Regions\.
 ## Use a destination in your relay state URL<a name="destination-relay"></a>
 
 When you configure the relay state for your identity provider, you can use the destination argument in the URL to navigate users to a specific page in your Amazon Connect instance\. For example, use a link to open the CCP directly when an agent logs in\. The user must be assigned a security profile that grants access to that page in the instance\. For example, to send agents to the CCP, use a URL similar to the following for the relay state\. You must use [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding) for the destination value used in the URL:
-+ `https://us-east-1.console.aws.amazon.com/connect/federate/instance-id?destination=%2Fconnect%2Fccp-v2&new_domain=true`
++ `https://us-east-1.console.aws.amazon.com/connect/federate/instance-id?destination=%2Fccp-v2%2Fchat&new_domain=true`
+
+Another example of a valid URL is:
++ `https://us-east-1.console.aws.amazon.com/connect/federate/instance-id?destination=%2Fagent-app-v2`
 
 For a GovCloud instance, the URL is **https://console\.amazonaws\-us\-gov\.com/**\. So the address would be: 
-+ `https://console.amazonaws-us-gov.com/connect/federate/instance-id?destination=%2Fconnect%2Fccp-v2&new_domain=true`
++ `https://console.amazonaws-us-gov.com/connect/federate/instance-id?destination=%2Fccp-v2%2Fchat&new_domain=true`
 
 ## Add users to your Amazon Connect instance<a name="saml-add-users"></a>
 

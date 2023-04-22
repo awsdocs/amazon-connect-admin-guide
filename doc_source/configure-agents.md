@@ -29,8 +29,10 @@ Outbound telephony charges occur when using a desk phone to answer inbound calls
 
 1. In **After call work \(ACW\) timeout**, type how many seconds agents have for after contact work, such as entering notes about the contact\. 1 second is the minimum amount of time you can enter\.
 
-   Enter **0** if you don't want to allocate a specific amount of ACW time\. It essentially means an indefinite amount of time\. When the conversation ends, ACW starts; the agent must choose **Close contact** to end ACW\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/acw-timeout.png)
+   Enter **0** if you don't want to allocate a specific amount of ACW time\. It essentially means an indefinite amount of time\. When the conversation ends, ACW starts; the agent must choose **Close contact** to end ACW\.
+
+   The following image shows the **Settings** section of the **Edit routing profile** page\. **After call work \(ACW\) timeout** set to 0\.   
+![\[The Edit routing profile page, the settings section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/acw-timeout.png)
 
 1. Under **Agent Hierarchy** select any groups the agent should be part of\.
 

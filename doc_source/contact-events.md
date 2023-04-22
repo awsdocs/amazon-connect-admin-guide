@@ -21,16 +21,16 @@ To subscribe to Amazon Connect contact events:
 
 1. In the Amazon EventBridge console, choose **Create rule**\.
 
-1. On the **Default rule detail** page, assign a name to the rule, choose **Rule with an event pattern**, and then choose **Next**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/eventbridge-createrule.png)
+1. On the **Default rule detail** page, assign a name to the rule, choose **Rule with an event pattern**, and then choose **Next**, as shown in the following image\.  
+![\[The define rule detail page in the EventBridge console.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/eventbridge-createrule.png)
 
 1. On the **Build event pattern** page, under **Event source**, verify that **AWS events or EventBridge partner events** is selected\.
 
-1. Under **Sample event type**, choose **AWS events**, and then choose ** Amazon Connect Contact Event** from the dropdown box\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/eventbridge-sampleevents.png)
+1. Under **Sample event type**, choose **AWS events**, and then choose ** Amazon Connect Contact Event** from the dropdown box, as shown in the following image\.  
+![\[The sample event section, sample event type is AWS events.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/eventbridge-sampleevents.png)
 
-1. For Creation method choose Use pattern form\. In the **Event pattern** section, choose **AWS services**, **Amazon Connect**, **Amazon Connect Contact Event**, and then choose **Next**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/eventbridge-creationmethod.png)
+1. For Creation method choose Use pattern form\. In the **Event pattern** section, choose **AWS services**, **Amazon Connect**, **Amazon Connect Contact Event**, and then choose **Next**, as shown in the following image\.  
+![\[The Creation method and event pattern sections of the default rule detail page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/eventbridge-creationmethod.png)
 
 1. On the Select target\(s\) page, you can then select a target of your choice, which includes a Lambda function, SQS queue, or SNS topic\. For information about configuring targets, [Amazon EventBridge targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html)\.
 
@@ -42,7 +42,15 @@ To subscribe to Amazon Connect contact events:
 
 Contact events are generated in JSON\. For each event type, a JSON blob is sent to the target of your choice, as configured in the rule\. The following contact events are available: 
 + INITIATED \- A voice call, chat, or task is initiated or transferred\. 
-+ CONNECTED\_TO\_SYSTEM \- The contact has established media \(for example, was answered by a human or a machine\)\. This event uses the following status codes to identify the actual disposition if the contact was connected to Amazon Connect: `HUMAN_ANSWERED`, `SIT_TONE-DETECTED`, `FAX_MACHINE_DETECTED`, `VOICEMAIL_BEEP`, `VOICEMAIL_NO_BEEP`, `AMD_UNRESOLVED`, `AMD_ERROR`\. 
++ CONNECTED\_TO\_SYSTEM \- The contact has established media \(for example, was answered by a human or a machine\)\. This event uses the following status codes to identify the actual disposition if the contact was connected to Amazon Connect:
+  + `HUMAN_ANSWERED`: The dial request was answered by a person\.
+  + `SIT_TONE-DETECTED`: A special information tone \(SIT\) was detected\.
+  + `FAX_MACHINE_DETECTED`: A fax machine was detected\.
+  + `VOICEMAIL_BEEP`: The dial request was answered by voicemail with a beep\.
+  + `VOICEMAIL_NO_BEEP`: The dial request was answered by a voicemail with no beep\.
+  + `AMD_UNANSWERED`: The dial attempt was connected, but the call was not picked up\.
+  + `AMD_UNRESOLVED`: The dial attempt was connected, but AMD detection not able to determine whether it was a human voice or voicemail\.
+  + `AMD_ERROR`: The dial attempt was connected, but there was error in AMD\.
 **Note**  
 This event is generated for outbound calls \([Amazon Connect Campaign](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html) with answering machine detection enabled\), Tasks, and Chats\.
 + QUEUED \- A voice call, chat, or task is queued to be assigned to an agent\.

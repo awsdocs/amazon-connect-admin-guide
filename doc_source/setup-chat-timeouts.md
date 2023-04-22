@@ -42,9 +42,9 @@ These events are not persisted to the transcripts, nor billed\.
 
 The default messages \(in all supported languages\) are displayed to agents in the Contact Control Panel \(CCP\) for each of these events\. 
 
-The following image show examples of default idleness messages that the agent would see in the CCP\.
+The following image show examples of default idleness messages that the agent would see in the CCP\. For example, *Agent has become idle*\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chat-timeout-message.png)
+![\[The ccp, the default idleness messages.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chat-timeout-message.png)
 
 ## Recommended usage<a name="chat-timeouts-usage"></a>
 

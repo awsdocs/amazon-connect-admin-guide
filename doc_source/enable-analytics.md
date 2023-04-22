@@ -2,11 +2,22 @@
 
 You can enable Contact Lens for Amazon Connect in a few steps\. Add a [Set recording and analytics behavior](set-recording-behavior.md) block to a flow, and configure it to enable Contact Lens for voice, chat, or both\.
 
-The following image shows a block that's configured for call recording, and Contact Lens speech analytics and chat analytics\.
+The following image shows a block that's configured for call recording, and Contact Lens speech analytics and chat analytics\. The **Call recording** option is set to **Agent and customer**\. In the **Analytics** section, the options are selected for speech and chat\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior.png)
+![\[The properties page for a set recording and analytics behavior block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior.png)
 
 The procedures in this topic describe the steps to enable Contact Lens for call or chat analytics\.
+
+**Topics**
++ [Important things to know](#important-set-behaviorblock)
++ [Enable call recording and speech analytics](#enable-callrecording-speechanalytics)
++ [Enable chat analytics](#enable-chatanalytics)
++ [Enable redaction](#enable-redaction)
++ [Review redaction for accuracy](#review-sensitive-data-redaction)
++ [Use contact attributes](#dynamically-enable-analytics-contact-flow)
++ [Design a flow for call summarization](#call-summarization-agent)
++ [What if the flow block fails to enable Contact Lens?](#troubleshoot-contactlens-enablement)
++ [Multi\-party calls](#multiparty-calls-contactlens)
 
 ## Important things to know<a name="important-set-behaviorblock"></a>
 + **Collect data after transferring a contact**: If you want to continue using Contact Lens to collect data after transferring a contact to another agent or queue, you need to add another [Set recording and analytics behavior](set-recording-behavior.md) block with **Enable analytics** enabled for the flow\. This is because a transfer generates a second contact ID and contact record\. Contact Lens needs to run on that contact record as well\.
@@ -67,21 +78,21 @@ To enable redaction of sensitive data in a flow, choose **Redact sensitive data*
 + Redact all personally identifiable information \(PII\) data \(all PII entities supported\)\.
 + Choose which PII entities to redact from the list of supported entities\.
 
- If you accept the default settings, Contact Lens redacts all personally identifiable information \(PII\) it identifies, and replaces it with **\[PII\]** in the transcript\. This option is shown in the following image:
+If you accept the default settings, Contact Lens redacts all personally identifiable information \(PII\) it identifies, and replaces it with **\[PII\]** in the transcript\. The default settings are shown in the following image because the following options are selected: **Redact sensitive data**, **Redact All PII data**, and **Replace with placeholder PII**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-enable-redaction-default.png)
+![\[The default settings for sensitive data redaction.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-enable-redaction-default.png)
 
 ### Select PII entities to redact<a name="select-pii-entities-redact"></a>
 
-Under the **Data redaction** section, you can select specific PII entities to redact, as shown in the following image:
+Under the **Data redaction** section, you can select specific PII entities to redact\. The following image shows that **Credit/Debit Card Number** is going to be redacted\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-select-entities-to-redact.png)
+![\[The data redaction section, a list of entities you can redact.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-select-entities-to-redact.png)
 
 ### Choose data redaction replacement<a name="mask-pii"></a>
 
-Under the **Data redaction replacement** section, you can choose the mask to be used as data redaction replacement, as shown in the following image:
+Under the **Data redaction replacement** section, you can choose the mask to be used as data redaction replacement\. For example, in the following image, the **Replace with placeholder PII** option indicates that **PII** will replace the data\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-dataredactionreplacement.png)
+![\[The option to replace data with PII.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-dataredactionreplacement.png)
 
 For more information about using redaction, see [Use sensitive data redaction](sensitive-data-redaction.md)\.
 
@@ -106,11 +117,13 @@ You can dynamically enable Contact Lens and the redaction of the output files ba
 You can set these attributes in the following ways:
 + User defined: use a **Set contact attributes** block\. For general instructions about using this block, see [How to reference contact attributes](how-to-reference-attributes.md)\. Define the **Destination key** and **Value** for redaction and language as needed\. 
 
-  The following image shows how to use contact attributes for redaction\. Note that **Value** is case sensitive\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-contact-attributes-enable-redaction1.png)
+  The following image shows an example of how you can configure the **Set contact attributes** block to use contact attributes for redaction\. Choose the **Use text** option, set **Destination key** to **redaction\_option**, and set **Value** to **RedactedAndOriginal**\. 
+**Note**  
+ **Value** is case sensitive\.   
+![\[The set contact attributes block, the use text option, the value is case sensitive.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-contact-attributes-enable-redaction1.png)
 
-  The following image show how to use contact attributes for language:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-contact-attributes-enable-redaction2.png)
+  The following image show how to use contact attributes for language\. Choose the Use text option, set Destination key to language, set **Value** to **en\-US**\.  
+![\[The set contact attributes block, the use text option, the value is case sensitive.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-contact-attributes-enable-redaction2.png)
 + [Use a Lambda function](attribs-with-lambda.md)\. This is similar to how you set up user\-defined contact attributes\. An AWS Lambda function can return the result as a key\-value pair, depending on the language of the Lambda response\. The following example shows a Lambda response in JSON: 
 
   ```
@@ -130,38 +143,40 @@ This section provides three use cases for enabling Contact Lens analytics in the
 + A contact enters the inbound flow, and there are no call transfers\. Following is the agent experience:
 
   The agent receives the full transcript during After Contact Work \(ACW\)\. The transcript includes everything said by the agent and the customer, from the moment the agent accepts the initial call, until the call has ended, as shown in the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use1.png)
+![\[The contact control panel, the transcript of the conversation.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use1.png)
 + A contact enters the inbound flow, and there is a call transfer\. Following is the agent experience:
   + Agent 1 receives a call transcript after they leave the conference/warm transfer, during ACW\.
 
     The transcript includes everything said by agent 1 and the customer, from the moment the agent accepts the initial call, until the agent 1 leaves the conference/warm transfer portion of the call\. The transcript includes the flow \(transfer/queue flow\) prompt messages, as shown in the following image\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use2.png)
+![\[The flow transfer prompt in the transcript.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use2.png)
   + Agent 2 receives a call transcript at the time of accepting the conference/warm transfer call from agent 1\.
 
     The transcript includes everything said by agent 1 and the customer, from the moment agent 1 accepts the initial call until the agent 1 leaves the conference/warm transfer portion of the call\. The transcript includes the flow \(transfer/queue flow\) prompt messages, and the warm transfer conversation, as shown in the following image\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use2b.png)
+![\[The transcript, the flow transfer prompt and the warm transfer between two agents.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use2b.png)
 
-    Because Contact Lens is not enabled in the transfer flow, agent 2 doesn't see the remainder of the transcript when the call has ended and they enter ACW, as shown in the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use2c.png)
+    Because Contact Lens is not enabled in the transfer flow, agent 2 doesn't see the remainder of the transcript when the call has ended and they enter ACW\. The following image of ACW for agent 2 shows the transcript is empty\.   
+![\[An empty transcript.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use2c.png)
 
 ### Use case 2: Contact Lens analytics is enabled in an inbound flow and a transfer flow \(quick connect\)<a name="call-summarization-inbound-transfer2"></a>
 + A contact enters the inbound flow, and there are no call transfers\. Following is the agent experience:
   + Agent 1 receives a full call transcript \(unredacted\) during ACW\. 
 
-    The transcript includes everything said by agent 1 and the customer from the moment the agent accepts the call, until the call has ended\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use3.png)
+    The transcript includes everything said by agent 1 and the customer from the moment the agent accepts the call, until the call has ended\. This is shown in the following image of the CCP for agent 1\.  
+![\[The CCP for agent 1, a full call transcript.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use3.png)
 + A contact enters the inbound flow, and there is a call transfer\. Following is the agent experience:
   + Agent 1 receives a call transcript after they leave the conference/warm transfer, during ACW\.
 
-    The transcript includes everything said by agent 1 and the customer from the moment agent 1 accepts the call, until agent 1 leaves the conference/warm transfer portion of the call\. The transcript includes flow \(transfer/queue flow\) prompt messages\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use2b.png)
+    The transcript includes everything said by agent 1 and the customer from the moment agent 1 accepts the call, until agent 1 leaves the conference/warm transfer portion of the call\. The transcript includes flow \(transfer/queue flow\) prompt messages\.
+
+    The full call transcript until warm transfer is shown in the following image\.  
+![\[A full call transcript until agent 1 leaves the conference.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use2b.png)
   + Agent 2 receives a call transcript at the time of accepting the conference/warm transfer call from agent 1\.
 
     The transcript includes everything said by agent 1 and the customer, from the moment agent 1 accepts the call, until agent 1 leaves the conference/warm transfer portion of the call\. The transcript includes the flow \(transfer/queue flow\) prompt messages\. 
   + Because Contact Lens is enabled in the transfer flow, agent 2 receives a call transcript after the call is completed, during ACW\. 
 
-    The transcript includes only the remaining portion of the call between agent 2 and customer, after agent 1 has left the call\. The transcript includes everything said by agent 2 and the customer, from the moment they are conferenced/warm transferred in, until the call has ended\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use3b.png)
+    The transcript includes only the remaining portion of the call between agent 2 and customer, after agent 1 has left the call\. The transcript includes everything said by agent 2 and the customer, from the moment they are conferenced/warm transferred in, until the call has ended\. An example transcript is shown in the following image\.  
+![\[A transcript of the call between agent 2 and the customer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-summarization-use3b.png)
 
 ## What if the flow block fails to enable Contact Lens?<a name="troubleshoot-contactlens-enablement"></a>
 

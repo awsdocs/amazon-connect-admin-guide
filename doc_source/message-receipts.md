@@ -8,12 +8,12 @@ By default message receipts are already enabled in the [Test chat](chat-testing.
 **To enable message receipts in your chat user interface**
 
 1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\. Choose **Customize chat widget**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-customize-chat-window-button.png)
+![\[The configuration guide page, the customize chat widget option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-customize-chat-window-button.png)
 
 1. Choose **Edit**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-edit-messagereceipt.png)
+![\[The saved chat widget customization page, the edit button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-edit-messagereceipt.png)
 
 1. By default **Message receipts** is not enabled\. Set to **Enabled**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-enable-messagereceipt.png)
+![\[The message receipts option, enabled.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-enable-messagereceipt.png)
 
 Message receipts are now enabled\. Customers who are using the chat widget will start seeing *Delivered* and *Read* receipts immediately\. 

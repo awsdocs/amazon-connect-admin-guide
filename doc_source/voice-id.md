@@ -45,9 +45,26 @@ For more information, see [Batch enrollment using audio data from prior calls](v
 
 ## Known fraudster detection<a name="fraud-detection"></a>
 
-1. Create a watchlist of known fraudsters by using fraudster registration API on your stored audio recordings in your S3 bucket\. For more information, see [Create and edit a fraudster watchlist](voiceid-fraudster-watchlist.md)\. 
+There are a few steps to setting up the real\-time detection of fraudsters:
 
-1. When a fraudster from the watchlist calls in, Voice ID analyzes the call audio to return a risk score and outcome to indicate how closely the caller's voiceprint matches the fraudsters voiceprint that is created from audio recordings from your S3 bucket\.
+1. [Create a new watchlist](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_CreateWatchlist.html) for storing known fraudsters\. Or, use the default watchlist that is created when Voice ID is enabled\. 
+
+1.  [Register fraudsters](voiceid-fraudster-watchlist.md) to the new watchlist or the default watchlist\.
+
+1. In the [Set Voice ID](set-voice-id.md) block, specify which watchlist you want to use\. 
+
+When one of the fraudsters from the watchlist that is specified in the flow calls your contact center, Voice ID analyzes the call audio to return a risk score and outcome\. This score indicates how closely the caller's voiceprint matches that of the fraudster's in the watchlist\. 
+
+### Default watchlist<a name="default-watchlist"></a>
+
+When the Voice ID domain is created, Voice ID creates a default fraudster watchlist for that domain\. The name and description of the default fraudster watchlist is encrypted using the KMS key that is provided in the domain and saved in Voice ID\.
+
+ If you don't provide the fraudster watchlistId for fraud detection or fraudster registration, Voice ID uses the default fraudster watchlist\. 
+
+You cannot update the metadata of the default fraudster watchlist, but you can associate or disassociate fraudsters from it\.
+
+**Note**  
+If your Voice ID domain was created before March 2023, when fraudster watchlists was launched: a default watchlist was created and all existing fraudsters have been placed in it\. 
 
 ## Voice spoofing detection<a name="voice-spoofing-detection"></a>
 

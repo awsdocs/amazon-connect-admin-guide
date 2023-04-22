@@ -8,6 +8,23 @@ Using **connect:\*** in a custom IAM policy grants your users all of the Amazon 
 **Note**  
 Certain pages on the Amazon Connect console, such as [Tasks](#tasks-page) and [Customer Profiles](#customer-profiles-page), require that you add permissions to your inline policies\. 
 
+**Topics**
++ [AmazonConnect\_FullAccess policy](#amazonconnectfullaccesspolicy)
++ [AmazonConnectReadOnlyAccess policy](#amazonconnectreadonlyaccesspolicy)
++ [Home page](#console-home-page-permissions)
++ [Detail pages](#detail-pages)
++ [Overview page](#overview-page)
++ [Telephony page](#telephony-page)
++ [Data storage page](#data-storage-page)
++ [Data streaming page](#data-streaming-page)
++ [Application integration page](#application-integration-page)
++ [Customer Profiles page](#customer-profiles-page)
++ [Tasks page](#tasks-page)
++ [Cases page](#cases-page)
++ [Voice ID page](#voiceid-page)
++ [Flows page](#contact-flows-page)
++ [Federations](#federations)
+
 ## AmazonConnect\_FullAccess policy<a name="amazonconnectfullaccesspolicy"></a>
 
 To allow full read/write access to Amazon Connect, you must attach two policies to your users, groups, or roles\. Attach the **AmazonConnect\_FullAccess** policy and a custom policy with the following contents:
@@ -39,9 +56,9 @@ To allow read\-only access, you need to attach only the **AmazonConnectReadOnlyA
 
 ## Amazon Connect console home page<a name="console-home-page-permissions"></a>
 
-The following image shows a sample Amazon Connect console home page\. 
+The following image shows a sample Amazon Connect console home page, with an arrow pointing to the instance alias\. Choose the instance alias to navigate to the detailed instance pages\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/iam-custom-permissions-admin-console-home-page.png)
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 Use the permissions listed in the following table to manage access to this page\.
 
@@ -55,9 +72,9 @@ Use the permissions listed in the following table to manage access to this page\
 
 ## Detailed instance pages<a name="detail-pages"></a>
 
-The following image shows how you navigate to each of the detailed instance pages:
+The following image shows the navigation menu you use to access each of the detailed instance pages\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/iam-custom-permissions-admin-console-telephony-page.png)
+![\[The navigation menu on the Amazon Connect instances page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/iam-custom-permissions-admin-console-telephony-page.png)
 
 To access the detailed instance pages, you need permissions to the Amazon Connect console home page \(describe/list\)\. Or, use the **AmazonConnectReadOnlyAccess** policy\.
 
@@ -66,14 +83,14 @@ The following tables list the granular permissions for each detailed instance pa
 **Note**  
 To perform **Edit** actions, users also need **List** and **Describe** permissions\.
 
-### Overview page<a name="overview-page"></a>
+## Overview page<a name="overview-page"></a>
 
 
 | Action/Use case | Permissions needed | 
 | --- | --- | 
 | Create service\-linked role |  connect:DescribeInstance connect:ListInstances connect:DescribeInstanceAttribute connect:UpdateInstanceAttribute connect:ListIntegrationAssociations profile:ListAccountIntegrations ds:DescribeDirectories iam:CreateServiceLinkedRole iam:PutRolePolicy  | 
 
-### Telephony page<a name="telephony-page"></a>
+## Telephony page<a name="telephony-page"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -83,9 +100,9 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View outbound campaigns  |  connect\-campaigns:GetConnectInstanceConfig  connect\-campaigns:GetInstanceOnboardingJobStatus connect:DescribeInstance connect:DescribeInstanceAttribute kms:DescribeKey  | 
 | Enable/disable outbound campaigns  |  connect\-campaigns:GetConnectInstanceConfig  connect\-campaigns:GetInstanceOnboardingJobStatus connect\-campaigns:StartInstanceOnboardingJob connect\-campaigns:DeleteInstanceOnboardingJob connect\-campaigns:DeleteConnectInstanceConfig connect:DescribeInstance connect:DescribeInstanceAttribute connect:UpdateInstanceAttribute iam:CreateServiceLinkedRole  iam:DeleteServiceLinkedRole  iam:AttachRolePolicy  iam:PutRolePolicy  iam:DeleteRolePolicy  events:PutRule  events:PutTargets  events:DeleteRule  events:RemoveTargets events:DescribeRule events:ListTargetsByRule  ds:DescribeDirectories  kms:DescribeKey kms:ListKeys  kms:CreateGrant  kms:RetireGrant  | 
 
-### Data storage page<a name="data-storage-page"></a>
+## Data storage page<a name="data-storage-page"></a>
 
-#### Call recording section<a name="call-recording-section"></a>
+### Call recording section<a name="call-recording-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -93,7 +110,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View call recording | connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig | 
 | Edit call recording  |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:GetBucketAcl s3:CreateBucket kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant   | 
 
-#### Chat transcripts section<a name="chat-transcripts-section"></a>
+### Chat transcripts section<a name="chat-transcripts-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -101,7 +118,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View chat transcripts | connect:DescribeInstance connect:DescribeInstanceStorageConfig connect:ListInstanceStorageConfigs  | 
 | Edit chat transcripts |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:GetBucketAcl s3:CreateBucket kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant   | 
 
-#### Attachments section<a name="attachments-section"></a>
+### Attachments section<a name="attachments-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -109,7 +126,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View chat attachments | connect:DescribeInstance connect:DescribeInstanceStorageConfig connect:ListInstanceStorageConfigs  | 
 | Edit chat attachments |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:CreateBucket s3:GetBucketAcl kms:CreateGrant kms:DescribeKey kms:ListAliases kms:RetireGrant   | 
 
-#### Live media streaming section<a name="live-media-streaming-section"></a>
+### Live media streaming section<a name="live-media-streaming-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -117,7 +134,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View live media streaming | connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
 | Edit live media streaming |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig kms:CreateGrant kms:DescribeKey kms:RetireGrant   | 
 
-#### Exported reports section<a name="exported-reports-section"></a>
+### Exported reports section<a name="exported-reports-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -125,9 +142,9 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View exported reports | connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
 | Edit exported reports |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect: DisassociateInstanceStorageConfig s3:ListAllMyBuckets s3:GetBucketLocation s3:CreateBucket kms:DescribeKey kms:ListAliases kms:RetireGrant kms:CreateGrant   | 
 
-### Data streaming page<a name="data-streaming-page"></a>
+## Data streaming page<a name="data-streaming-page"></a>
 
-#### Contact records section<a name="ctr-section"></a>
+### Contact records section<a name="ctr-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -135,7 +152,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View data streaming \- Contact records |  connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
 | Edit contact record |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig firehose:ListDeliveryStreams firehose:DescribeDeliveryStream kinesis:ListStreams kinesis:DescribeStream   | 
 
-#### Agent events section<a name="agent-events-section"></a>
+### Agent events section<a name="agent-events-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -143,7 +160,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View data streaming \- Agent events |  connect:DescribeInstance connect:ListInstanceStorageConfigs connect:DescribeInstanceStorageConfig  | 
 | Edit agent events |  connect:AssociateInstanceStorageConfig connect:UpdateInstanceStorageConfig connect:DisassociateInstanceStorageConfig kinesis:ListStreams kinesis: DescribeStream   | 
 
-### Application integration page<a name="application-integration-page"></a>
+## Application integration page<a name="application-integration-page"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -151,7 +168,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View approved origins | connect:DescribeInstance connect:ListApprovedOrigins  | 
 | Edit approved origins |  connect: AssociateApprovedOrigin connect:ListApprovedOrigins connect:DisassociateApprovedOrigin  | 
 
-### Customer Profiles page<a name="customer-profiles-page"></a>
+## Customer Profiles page<a name="customer-profiles-page"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -159,7 +176,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View customer profiles | appflow:DescribeFlow appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:ListConnectorProfiles kms:ListKeys profile:ListDomains profile:ListAccountIntegrations sqs:ListQueues  | 
 | Edit customer profiles | appflow:CreateFlow appflow:CreateConnectorProfile appflow:DescribeFlow appflow:DeleteFlow appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:ListConnectorProfiles appflow:StartFlow appflow:StopFlow kms:ListKeys profile:CreateDomain profile:DeleteIntegration profile:DeleteDomain profile:ListDomains profile:ListAccountIntegrations profile:PutIntegration profile:UpdateDomain kms:ListGrants kms:DescribeKey kms:ListAliases kms:ListKeys sqs:ListQueues  | 
 
-### Tasks page<a name="tasks-page"></a>
+## Tasks page<a name="tasks-page"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -167,7 +184,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View Tasks integrations | app\-integrations:GetEventIntegration connect:ListIntegrationAssociations  | 
 | Edit Tasks integrations | app\-integrations:CreateEventIntegration app\-integrations:GetEventIntegration app\-integrations:ListEventIntegrations app\-integrations:DeleteEventIntegrationAssociation app\-integrations:CreateEventIntegrationAssociation appflow:CreateFlow appflow:CreateConnectorProfile appflow:DescribeFlow appflow:DeleteFlow appflow:DeleteConnectorProfile appflow:DescribeConnectorEntity appflow:ListFlows appflow:ListConnectorEntities appflow:StartFlow connect:ListIntegrationAssociations connect:DeleteIntegrationAssociation connect:ListUseCases connect:DeleteUseCase events:ActivateEventSource events:CreateEventBus events:DescribeEventBus events:DescribeEventSource events:ListEventSources events:ListTargetsByRule events:PutRule events:PutTargets events:DeleteRule events:RemoveTargets kms:CreateGrant kms:DescribeKey kms:ListAliases kms:ListKeys kms:ListGrants  | 
 
-### Cases page<a name="cases-page"></a>
+## Cases page<a name="cases-page"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -175,7 +192,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View Cases domain details | connect:ListInstances ds:DescribeDirectories connect:ListIntegrationAssociations cases:GetDomain  | 
 | Onboard to Cases | connect:ListInstances connect:ListIntegrationAssociations cases:GetDomain cases:CreateDomain connect:CreateIntegrationAssociation connect:DescribeInstance iam:PutRolePolicy  | 
 
-### Voice ID page<a name="voiceid-page"></a>
+## Voice ID page<a name="voiceid-page"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -183,9 +200,9 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View Voice ID integrations | voiceid:DescribeDomain voiceid:ListDomains voiceid:RegisterComplianceConsent voiceid:DescribeComplianceConsent connect:ListIntegrationAssociations  | 
 | Edit Voice ID integrations | voiceid:DescribeDomain voiceid:ListDomains voiceid:RegisterComplianceConsent voiceid:DescribeComplianceConsent voiceid:UpdateDomain voiceid:CreateDomain connect:ListIntegrationAssociations connect:CreateIntegrationAssociation connect:DeleteIntegrationAssociation events:PutRule events:DeleteRule events:PutTargets events:RemoveTargets  | 
 
-### Flows page<a name="contact-flows-page"></a>
+## Flows page<a name="contact-flows-page"></a>
 
-#### Flows security keys section<a name="security-keys-section"></a>
+### Flows security keys section<a name="security-keys-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -193,7 +210,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View flow security keys | connect:DescribeInstance connect:ListSecurityKeys  | 
 | Add/remove flow security keys |  connect:AssociateSecurityKey connect:DisassociateSecurityKey  | 
 
-#### Lex bots section<a name="lex-bots-section"></a>
+### Lex bots section<a name="lex-bots-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -201,7 +218,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View Lex bots | connect:ListLexBots connect:ListBots  | 
 | Add/remove Lex bots |  lex:GetBots lex:GetBot  lex:CreateResourcePolicy lex:DeleteResourcePolicy lex:UpdateResourcePolicy lex:DescribeBotAlias lex:ListBotAliases lex:ListBots connect:AssociateBot connect:DisassociateBot connect:ListBots connect:AssociateLexBot connect:DisassociateLexBot connect:ListLexBots   | 
 
-#### Lambda functions section<a name="lambda-functions-section"></a>
+### Lambda functions section<a name="lambda-functions-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -209,7 +226,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View Lambda functions | connect:ListLambdaFunctions  | 
 | Add/remove Lambda functions |  connect:ListLambdaFunctions connect:AssociateLambdaFunction connect:DisassociateLambdaFunction lambda:ListFunctions lambda:AddPermission lambda:RemovePermission  | 
 
-#### Flow logs section<a name="contact-flow-logs-section"></a>
+### Flow logs section<a name="contact-flow-logs-section"></a>
 
 
 | Action/Use case | Permissions needed | 
@@ -217,7 +234,7 @@ To perform **Edit** actions, users also need **List** and **Describe** permissio
 | View flow log config | connect:DescribeInstance connect:DescribeInstanceAttribute  | 
 | Enable/disable flow log |  logs:CreateLogGroup   | 
 
-#### Amazon Polly section<a name="amazon-polly-section"></a>
+### Amazon Polly section<a name="amazon-polly-section"></a>
 
 
 | Action/Use case | Permissions needed | 

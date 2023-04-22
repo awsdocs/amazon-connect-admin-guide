@@ -2,9 +2,9 @@
 
 ## Required permissions to assign security profiles<a name="assign-security-profiles-required-permissions"></a>
 
-Before you can assign a security profile to a user, you must be logged in with an Amazon Connect account that has the **Users \- Edit** permission\. Or, if you're creating the user's account for the first time, you need **Users \- Create** permission\. 
+Before you can assign a security profile to a user, you must be logged in with an Amazon Connect account that has the **Users \- Edit** permission, as shown in the following image\. Or, if you're creating the user's account for the first time, you need **Users \- Create** permission\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/security-profile-assign-security-profile.png)
+![\[The users and permissions section of the security profiles page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/security-profile-assign-security-profile.png)
 
 By default, the Amazon Connect **Admin** security profile has these permissions\.
 

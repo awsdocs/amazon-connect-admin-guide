@@ -25,7 +25,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="check-hours-of-operation-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-hours-of-operation-properties.png)
+The following image shows the **Properties** page of the **Check hours of operation** block\. The block is configured for specific hours of operation\.
+
+![\[The properties page of the Check hours of operation block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-hours-of-operation-properties.png)
 
 You can set up multiple hours of operation so you have one for various queues\. For instructions, see [Set the hours of operation and timezone for a queue](set-hours-operation.md)\. 
 
@@ -35,14 +37,16 @@ You can set up multiple hours of operation so you have one for various queues\. 
 
 ## Configured block<a name="check-hours-of-operation-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It is configured for **Basic Hours** of operation\. It has three branches: **In hours**, **Out of Hours**, and **Error**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-hours-of-operation-configured.png)
+![\[A configured Check hours of operation block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-hours-of-operation-configured.png)
 
 ## Related topics<a name="check-hours-of-operation-related"></a>
 + [Set the hours of operation and timezone for a queue](set-hours-operation.md)
 
 ## Sample flows<a name="check-hours-of-operation-samples"></a>
+
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 
 [Sample inbound flow \(first contact experience\)](sample-inbound-flow.md)
 

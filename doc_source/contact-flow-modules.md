@@ -67,8 +67,8 @@ The inbound flows in your instance can invoke this common module and get the fun
 
 Following is an image of the FunFact module:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/module-example1.png)
+![\[The funfact module in the flow designer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/module-example1.png)
 
 Following is an image of the FunFactSampleFlow that invokes the module:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/module-example2.png)
+![\[The funfactsampleflow in the flow designer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/module-example2.png)

@@ -36,7 +36,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="set-voice-id-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-properties.png)
+The following image shows the **Properties** page of the **Set Voice ID** block\. It shows the **Voice authentication** section\. In this example, the **Authentication Threshold** is set to 90\. This is the recommended threshold\.
+
+![\[The properties page of the Set Voice ID block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-properties.png)
 
 ### Start streaming audio for Voice ID<a name="set-voice-id-properties-streaming-audio"></a>
 
@@ -56,7 +58,9 @@ For example, if the person is sick and calling from a mobile device in their car
 
 You can set the authentication response time between 5 and 10 seconds, which determines how quickly you want Voice ID authentication analysis to complete\. Lowering it makes the response time faster at the tradeoff of lower accuracy\. When you're using self\-service IVR options where callers do not talk a lot, you may want to reduce this time\. You can then increase the time if the call needs to be transferred to an agent\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-properties2.png)
+The following image shows the Authentication Response time section of the block\. The response time is set manually to 10 seconds\.
+
+![\[The Authentication Response time section of the Set voice ID block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-properties2.png)
 
 Choose **Set dynamically** to set the authentication threshold based on certain criteria\. For example, you may want to raise the threshold based on the membership level of the customer, or the type of transaction or information they are calling about\.
 
@@ -64,9 +68,13 @@ Choose **Set dynamically** to set the authentication threshold based on certain 
 
 The threshold you set for fraud detection is used to measure risk\. Scores higher than the threshold are reported as higher risk\. Scores lower than the threshold are reported as lower risk\. Raising the threshold lowers false positive rates \(makes result more certain\), but raises false negative rates 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-properties3.png)
+Choose **Set dynamically** to set the fraud threshold based on certain criteria\. For example, you may want to lower the threshold for high wealth customers, or the type of transaction or information they are calling about\.
 
-Choose **Set dynamically**to set the fraud threshold based on certain criteria\. For example, you may want to lower the threshold for high wealth customers, or the type of transaction or information they are calling about\.
+![\[The Fraud detection section of the Set voice ID block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-properties3a.png)
+
+The watchlist you select is used when evaluating the voice session\. Choose **Use default watchlist** to use your domain's default watchlist\. For **Set manually**, the watchlist ID must be 22 alphanumeric characters\.
+
+Similarly for the watchlist, choose **Set dynamically** to set the watchlist based on criteria given\. For example, you may want to use a stricter watchlist given the type of transaction or information they are calling about\.
 
 ## Configuration tips<a name="set-voice-id-tips"></a>
 + For the **Authentication threshold**, we recommend that you start with the default of 90 and adjust until you find a good balance for your business\.
@@ -80,12 +88,15 @@ Choose **Set dynamically**to set the fraud threshold based on certain criteria\.
 + For the **Fraud threshold**, we recommend that you start with the default of 50 and adjust until you find a good balance for your business\.
 
   If the caller's score is above the threshold, it indicates there's a higher risk for fraud in that call\.
++ For the **Fraud watchlist**, the format is validated when the flow is published\. 
+  +  If a watchlist is dynamically set and the format is not valid, the contact is routed down the **Error** branch of the **Set Voice ID** block\.
+  + If a watchlist ID is set manually or dynamically with a valid format but the watchlist is not available in the Voice ID domain of the instance, the contact is routed down the **Error** branch of [Check Voice ID](check-voice-id.md) block when the **Check Voice ID** block is used later in the flow\.
 
 ## Configured block<a name="set-voice-id-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Success** and **Error**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-configured.png)
+![\[A configured set Voice ID block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-id-configured.png)
 
 ## More information<a name="set-voice-id-more-info"></a>
 

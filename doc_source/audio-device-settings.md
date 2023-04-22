@@ -1,12 +1,14 @@
-# Change your audio device settings in the CCP<a name="audio-device-settings"></a>
+# How to use the CCP to change your audio device settings<a name="audio-device-settings"></a>
+
+If your organization is using [Amazon Connect Streams](https://github.com/aws/amazon-connect-streams) to embed or customize the Contact Control Panel \(CCP\), you can use it to change your audio device settings\. 
 
 **Tip**  
-**Developers**: for more information about enabling this feature, see the [Amazon Connect Streams](https://github.com/amazon-connect/amazon-connect-streams/blob/master/Documentation.md#connectcoreinitccp) documentation on GitHub\.
+**Developers**: Follow the [Amazon Connect Streams](https://github.com/aws/amazon-connect-streams) documentation to set `enableAudioDeviceSettings`\.
 
-**To change your audio settings in the Contact Control Panel \(CCP\)**
+**To change your audio settings**
 
-1. In your CCP, choose **Settings**\. The **Settings** dialog box appears, similar to the following image\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-audio-settings.png)
+1. In your embedded CCP, choose **Settings**\. The **Settings** dialog box appears, similar to the following image\.   
+![\[The CCP, the settings icon in upper right corner, the settings page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-audio-settings.png)
 
 1. Under **Audio devices**, use the dropdown to select your **Speaker**, **Microphone**, and **Ringer**\.
 **Note**  

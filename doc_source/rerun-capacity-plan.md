@@ -2,7 +2,7 @@
 
 You can re\-run capacity plans when you make any changes on the plan start and/or end date, or the scenario\. When there are no changes to plan inputs or the scenario, the **Re\-run plan** option is not active, as shown in the following image\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-rerun-plan.png)
+![\[The capacity plans page, the Actions dropdown menu, the re-run plan option is disabled.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-rerun-plan.png)
 
 **To re\-run a plan**
 

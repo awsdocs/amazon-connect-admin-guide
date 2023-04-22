@@ -10,15 +10,15 @@ Assign the following permissions to their security profile:
 + **Contact search**: Controls basic access to the **Contact search** page\. 
 + **Contact attributes**: Allows users to view contact attributes\. Also controls access to the search filters based on contact attributes\.
 + **Configure searchable contact attributes** \- **All**: People who have this permission determine what custom data will be searchable \(by people who have the **Contact attributes** permission\)\. It allows them to access the following configuration page:   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-configuration-page.png)
+![\[The search customer contact attributes page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-configuration-page.png)
 
 ## Configure searchable custom contact attributes<a name="configure-search-custom-attributes"></a>
 
 1. On the **Contact search** page, choose **Add filter**, **Custom contact attribute**\. Only people with **Configure searchable contact attributes** permissions in their security profile see this option\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-specify1.png)
+![\[The contact search page, the filters dropdown menu, the Customer contact attribute option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-specify1.png)
 
 1. The first time you choose **Custom contact attribute**, the following box appears, indicating no attributes have been configured for this Amazon Connect instance\. Choose **Specify searchable attribute keys**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-specify2.png)
+![\[The add filter option, a message that no keys have been specified for search.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-specify2.png)
 
 1. In the **Attribute key** box, type the name of your custom attribute, and then choose **Add key**\.
 **Important**  
@@ -32,7 +32,7 @@ Your users will be able to search on these keys for any future contacts\.
 
 To edit, add, or remove keys, choose **Attribute**, **Settings**\. If you don't see the **Settings** option, you don't have the required permissions\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-settings.png)
+![\[The add filter tab, the settings gear in the upper right corner of the page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-settings.png)
 
 ## Search for custom contact attributes<a name="howto-search-for-custom-attributes"></a>
 
@@ -43,9 +43,9 @@ Users who have the **Contact attributes** permission in their security profile c
 1. In the **Attribute key** box, choose the dropdown to select the key to search\.
 
 1. In the **Attribute values** box, choose value you want to find\. Note that the **Settings** icon doesn't appear in the following image because this user doesn't have **Configure searchable contact attributes** permissions in their security profile\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-search.png)
+![\[The add filter tab, the attribute values box.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-search.png)
 
 1. To create a query with multiple custom attributes, choose **Add filter** and **Custom contact attribute** again, and add a different attribute name and specify the value to search for\.
 
    The following image shows a query that includes two custom attributes: one for **AgentLocation** and another for **InsurancePlanType**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-search2.png)
+![\[The contact search page, the filters section, two attributes filters.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-custom-attributes-search2.png)

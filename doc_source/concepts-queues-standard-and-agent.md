@@ -1,4 +1,4 @@
-# Queues: standard and agent<a name="concepts-queues-standard-and-agent"></a>
+# Concepts: Standard queues and agent queues<a name="concepts-queues-standard-and-agent"></a>
 
 There are two types of queues:
 + **Standard queues**: This is where contacts wait before they are routed to and accepted by agents\.
@@ -12,15 +12,18 @@ Contacts waiting in agent queues are higher priority than contacts waiting in st
 
 ## Queues in metrics reports<a name="concepts-queues-in-reports"></a>
 
-In a [real\-time metrics report](real-time-metrics-reports.md), you can monitor how many contacts are in standard queues and agent queues\. The following image shows a sample real\-time metrics Queues report where an Agents table and Agents queues table have been added\. 
+In a [real\-time metrics report](real-time-metrics-reports.md), you can monitor how many contacts are in standard queues and agent queues\. The following image shows a sample real\-time metrics Queues report where an Agents table and Agent queues table have been added\. It shows:
++ **BasicQueue**, which is a standard queue\. It shows one agent \(John\) is online\.
++ **Agents** table, which shows the agent John has set his CCP to **Available** and is ready to take contacts\. A supervisor can change an agent's status from here\. For example, set to **Offline**\.
++ **Agent queues** table, which shows John's agent queue\. It shows John is online and can take contact from this queue, too\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-standard-and-agent-queues.png)
+![\[A queues report with Agents table and Agent queues table.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-standard-and-agent-queues.png)
 
 When an agent gets a contact from a standard queue, the contact never appears in the agent queue\. It just goes directly to the agent\. 
 
 In a [historical metrics report](historical-metrics.md), by default agent queues don't appear in a Queues table\. To show them, choose the **Settings** icon, then choose **Show agent queues**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-queues-settings-agent-queues.png)
+![\[A table settings page, the filters tab, the show agent queues option, the agent queues dropdown menu.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-queues-settings-agent-queues.png)
 
 **Tip**  
 The metrics APIs don't support agent queues\.

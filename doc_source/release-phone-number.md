@@ -1,6 +1,6 @@
-# Release a phone number<a name="release-phone-number"></a>
+# Release a phone number from Amazon Connect back to inventory<a name="release-phone-number"></a>
 
-If you want a different phone number, or have extra numbers that you aren't using, you can release them back to inventory\. You can do this using the Amazon Connect console, or programmatically using the [ReleasePhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_ReleasePhoneNumber.html) API\.
+If you want a different phone number, or have extra numbers that you aren't using, you can release them back to inventory\. You can do this using the Amazon Connect console, or programmatically by using the [ReleasePhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_ReleasePhoneNumber.html) API\.
 
 When a phone number is released from your Amazon Connect instance:
 + You will no longer be charged for it\.
@@ -14,9 +14,9 @@ If you want to close your Amazon Connect account, do these steps for all of your
 
 1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\. To find the name of your instance, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.
 
-1. On the navigation menu, choose **Channels**, **Phone numbers**\.
+1. On the navigation menu, choose **Channels**, **Phone numbers**\. This option appears only if you have the **Phone numbers \- View** permission in your security profile\.
 
-1. Choose the phone number you want to release, and then choose **Release**\.
+1. Choose the phone number you want to release, and then choose **Release**\. This option appears only if you have the **Phone numbers \- Release** permission in your security profile\.
 
 If the phone number is associated with a flow, that flow will be deactivated until another number is associated with it\.
 

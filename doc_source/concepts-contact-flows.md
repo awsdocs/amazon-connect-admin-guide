@@ -1,4 +1,4 @@
-# Amazon Connect Flows<a name="concepts-contact-flows"></a>
+# Concepts: Amazon Connect Flows<a name="concepts-contact-flows"></a>
 
 A *flow* defines how a customer experiences your contact center from start to finish\. At the most basic level, flows enable you to customize your IVR \(interactive voice response\) system\. 
 
@@ -26,9 +26,9 @@ To customize your contact center, you use the flow designer\. It's a drag\-and\-
 
 Flow blocks are the building blocks of your flows\. Each block is designed for a specific function a business might want in a contact center\. 
 
-You configure a flow block by accessing its **Properties** page, as shown in the following GIF\. 
+You configure a flow block by accessing its **Properties** page, as shown in the following GIF\. After you drag the block onto the flow designer, click or tab the name of the block to access its properties page\.
 
-![\[\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/Sidepanel.gif)
+![\[A GIF showing how to click or tab a block to access its properties page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/Sidepanel.gif)
 
 For a list of the available flow blocks and descriptions about what they do, see [Flow block definitions](contact-block-definitions.md)\. 
 

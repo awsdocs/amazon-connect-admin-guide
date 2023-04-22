@@ -56,9 +56,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 This block doesn't have any properties that you set\. Rather, it creates branches for you to route contacts based on the result of the authentication threshold and voiceprint evaluation that [Set Voice ID](set-voice-id.md) returns\.
 
-The following image shows what this block looks like when it's configured to check for Enrollment status\. Different status results are returned when it's configured for **Voice authentication** or **Fraud detection**\.
+The following image shows the **Properties** page for the **Check voice ID** block when it's configured to check for Enrollment status\. Different status results are returned when it's configured for **Voice authentication** or **Fraud detection**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-voice-id-properties.png)
+![\[The properties page of the Check voice ID block, with the Enrollment status option selected.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-voice-id-properties.png)
 
 ## Configuration tips<a name="check-voice-id-tips"></a>
 
@@ -72,7 +72,7 @@ When you create a flow that uses this block, add these blocks in the following o
 
 ## Configured block<a name="check-voice-id-configured"></a>
 
-The following image shows what this block looks like when it's configured to check for: 
+The following three images show what this block looks like when it's configured to check for: 
 
 1. Enrollment status
 
@@ -80,10 +80,10 @@ The following image shows what this block looks like when it's configured to che
 
 1. Fraud detection
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-voice-id-configured.png)
+![\[Three configured Check voice ID blocks.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-voice-id-configured.png)
 
 ## More information<a name="check-voice-id-more-info"></a>
 
-See the following topic for more information about this block:
+See the following topics for more information about this block:
 + [Use real\-time caller authentication with Voice ID](voice-id.md)
 + [Use Voice ID](use-voiceid.md)

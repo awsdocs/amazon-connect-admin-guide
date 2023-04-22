@@ -66,7 +66,7 @@ To allow Amazon Connect to play prompts from an S3 bucket, when you set up your 
    }
    ```
 
-   For information on how to find the key ID, see [Finding the key ID and key ARN](https://docs.aws.amazon.com/Ikms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\. 
+   For information on how to find the key ID, see [Finding the key ID and key ARN](https://docs.aws.amazon.com/kms/latest/developerguide/find-cmk-id-arn.html) in the *AWS Key Management Service Developer Guide*\. 
 
 After you set up your S3 bucket with the required bucket policy, configure [Get customer input](get-customer-input.md), [Loop prompts](loop-prompts.md), [Play prompt](play.md), or [Store customer input](store-customer-input.md) to play a prompt from the bucket\.
 

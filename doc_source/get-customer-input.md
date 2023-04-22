@@ -28,7 +28,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="get-customer-input-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties.png)
+The following image shows the **Properties** page of the **Check call progress** block\. It is configured to play an audio prompt\. It branches on DTMF input, and times out after 5 seconds if the customer doesn't enter anything\.
+
+![\[The properties page of the Get customer input block, the DTMF tab.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties.png)
 
 **Note**  
 The **Get Customer Input** block does not currently support using a voice prompt from an S3 bucket with Amazon Lex V2\.  
@@ -47,18 +49,22 @@ You can configure this block to accept DTMF input or a chat response\. You can a
 
 **Note**  
 Your language attribute in Amazon Connect must match the language model used to build your Amazon Lex V2 bot\. Set the language attribute using the [Set voice](set-voice.md) block or the [Set contact attributes](set-contact-attributes.md) block\.
-+ **Lex bot properties**: After you create your Lex bot, enter the name and alias of the bot here\. Only built bots appear in the drop\-down list\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties2.png)
++ **Lex bot properties**: After you create your Lex bot, enter the name and alias of the bot here\. Only built bots appear in the drop\-down list\. 
+
+   The following image shows the Amazon Lex tab configured to use a Lex bot named **Help Desk \(US West: Oregon\)**\.  
+![\[The properties page of the Get customer input block, the Amazon Lex tab.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties2.png)
 **Important**  
 In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime quotas](https://docs.aws.amazon.com/lexv2/latest/dg/quotas.html#quotas-service) or [Runtime Service Quotas \(Amazon Lex Classic\)](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
-+ **Session attributes**: Specify attributes that apply to the current contact's session only\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties3.png)
++ **Session attributes**: Specify attributes that apply to the current contact's session only\. The following image shows the session attributes configured for a max speech duration of 8000 milliseconds \(8 seconds\)\.  
+![\[The properties page of the Get customer input block, the session attributes section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties3.png)
 + **Use sentiment override**: Branch based on sentiment score, before the Amazon Lex intent\. 
 
   The sentiment score is based on the last utterance of the customer\. It is not based on the entire conversation\.
 
-  For example, a customer calls and they have a negative sentiment because their preferred appointment time isn't available\. You can branch the flow based on their negative sentiment score, for example, if their negative sentiment is more than 80%\. Or, a customer calls and has a positive sentiment of more than 80%, you can branch to upsell them on services\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties5.png)
+  For example, a customer calls and they have a negative sentiment because their preferred appointment time isn't available\. You can branch the flow based on their negative sentiment score, for example, if their negative sentiment is more than 80%\. Or, a customer calls and has a positive sentiment of more than 80%, you can branch to upsell them on services\.
+
+  The following image shows the Intents section of the Amazon Lex tab\. It is configured to route the contact when their negative sentiment score is 80%\.  
+![\[The properties page of the Get customer input block, the Intents section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties5.png)
 
   If you add both negative and positive sentiment scores, the negative score is always evaluated first\. 
 
@@ -66,12 +72,16 @@ In a production environment, always use a different alias than **TestBotAlias** 
 
 ------
 #### [ Amazon Lex \(Classic\) ]
-+ **Lex bot properties**: After you create your Lex bot, enter the name and alias of the bot here\. Only published bots appear in the drop\-down list\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties2.png)
++ **Lex bot properties**: After you create your Lex bot, enter the name and alias of the bot here\. Only published bots appear in the drop\-down list\. 
+
+   The following image shows the Amazon Lex tab configured to use a Lex bot named **Help Desk \(US West: Oregon\)**\.  
+![\[The properties page of the Get customer input block, the Amazon Lex (Classic) tab.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties2.png)
 **Important**  
 In a production environment, always use a different alias than **TestBotAlias** for Amazon Lex and **$LATEST** for Amazon Lex classic\. **TestBotAlias** and **$LATEST** support a limited number of concurrent calls to an Amazon Lex bot\. For more information, see [Runtime quotas](https://docs.aws.amazon.com/lexv2/latest/dg/quotas.html#quotas-service) or [Runtime Service Quotas \(Amazon Lex Classic\)](https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html#gl-limits-runtime)\.
-+ **Session attributes**: Specify attributes that apply to the current contact's session only\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties3.png)
++ **Session attributes**: Specify attributes that apply to the current contact's session only\. 
+
+  The following image shows the session attributes configured for a max speech duration of 8000 milliseconds \(8 seconds\)\.  
+![\[The session attributes section of the Amazon Lex tab.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-properties3.png)
 
 ------
 
@@ -139,7 +149,9 @@ Use the **Chat timeout** field under **Intents** to configure timeouts for chat 
 + Minimum: 1 minute
 + Maximum: 7 days
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-chattimeout.png)
+The following image shows the **Get customer input** block configured to timeout chats when the customer is inactive for 2 minutes\.
+
+![\[The Intents section of the properties page, the Chat timeout option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-chattimeout.png)
 
 For information about setting up chat timeouts when all participants are human, see [Set up chat timeouts for chat participants](setup-chat-timeouts.md)\. 
 
@@ -151,7 +163,7 @@ You can allow customers to interrupt the Amazon Lex bot mid\-sentence using thei
 #### [ Amazon Lex ]
 + **Barge\-in**
 
-  Barge\-in is enabled globally by default\. You can disable it in the Amazon Lex console\. For more information, see [Enabling your bot to be interrupted by your user](https://docs.aws.amazon.com/lexv2/latest/dg/interrupt-bot.html)\. Additionally, you can modify barge\-in behavior, by using the `allow-interrupt` session attribute\. For more information, see [ Configuring timeouts for capturing user input](https://docs.aws.amazon.com/lexv2/latest/dg/session-attribs-speech.html)\.
+  Barge\-in is enabled globally by default\. You can disable it in the Amazon Lex console\. For more information, see [Enabling your bot to be interrupted by your user](https://docs.aws.amazon.com/lexv2/latest/dg/interrupt-bot.html)\. Additionally, you can modify barge\-in behavior, by using the `allow-interrupt` session attribute\. For example, `x-amz-lex:allow-interrupt:*:*` allows interrupt for all intents and all slots\. For more information, see [ Configuring timeouts for capturing user input](https://docs.aws.amazon.com/lexv2/latest/dg/session-attribs-speech.html) in the *Amazon Lex V2 Developer Guide*\.
 
 ------
 #### [ Amazon Lex \(Classic\) ]
@@ -159,8 +171,10 @@ You can allow customers to interrupt the Amazon Lex bot mid\-sentence using thei
 
   `x-amz-lex:barge-in-enabled:[intentName]:[slotToElicit]`
 
-  Barge\-in is disabled globally by default\. You must set the session attribute in the **Get customer input** block that calls your Lex bot to enable it at the global, bot, or slot levels\. This attribute only controls Amazon Lex barge\-in; it doesn't control DTMF barge\-in\. For more information, see [How to use Lex session attributes](how-to-use-session-attributes.md)\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/barge-in-session-attribute.png)
+  Barge\-in is disabled globally by default\. You must set the session attribute in the **Get customer input** block that calls your Lex bot to enable it at the global, bot, or slot levels\. This attribute only controls Amazon Lex barge\-in; it doesn't control DTMF barge\-in\. For more information, see [How to use Lex session attributes](how-to-use-session-attributes.md)\.
+
+  The following image shows the **Session attributes** section with barge\-in enabled\.  
+![\[The session attributes section of the properties page, Value set to true.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/barge-in-session-attribute.png)
 
 ------
 
@@ -199,8 +213,10 @@ Use the following session attributes to specify how your Lex bot responds to DTM
 For more information, see [How to use Lex session attributes](how-to-use-session-attributes.md)\.
 
 ## Intents<a name="get-customer-input-intents"></a>
-+ Enter the intents you created in Amazon Lex\. They are case sensitive\!  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-configure-get-customer-input3.png)
++ Enter the intents you created in Amazon Lex\. They are case sensitive\!
+
+  The following image shows two intents in the Intents section: PasswordReset and NetworkIssue\.  
+![\[The intents section of the properties page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-configure-get-customer-input3.png)
 
 ## Configuration tips<a name="get-customer-input-tips"></a>
 + This topic explains some of the session attributes available for the integration with Amazon Lex\. For a list of all the available Amazon Lex session attributes, see [Configuring timeouts for capturing user input](https://docs.aws.amazon.com/lexv2/latest/dg/session-attribs-speech)\. 
@@ -260,9 +276,9 @@ To guarantee the **Store customer input** block in second contact flow captures 
 
 ## Configured block<a name="get-customer-input-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It shows two branches for DTMF input: **Pressed 1** and **Pressed 2**\. It also shows branches for **Timeout**, **Default**, and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-configured.png)
+![\[A configured Get customer input block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-customer-input-configured.png)
 
 1. **Timeout**: What to do when the time in the **Set timeout** property has elapsed\.
 
@@ -270,7 +286,7 @@ When this block is configured, it looks similar to the following image:
 
 ## Sample flows<a name="get-customer-input-samples"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample inbound flow \(first contact experience\)](sample-inbound-flow.md)
 + [Sample interruptible queue flow with callback](sample-interruptible-queue.md) 
 + [Sample queue configurations](sample-queue-configurations.md) 

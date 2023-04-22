@@ -17,7 +17,7 @@ Following is the order of steps for creating a schedule and publishing it so sup
 
 1. Double\-check with your Amazon Connect admin that users have the required security profile permissions to access scheduling features\. The required permissions are described [here](required-optimization-permissions.md)\.
 
-1. [Create staff scheduling rules](scheduling-create-staff-rules.md)
+1. [Create staff rules for scheduling](scheduling-create-staff-rules.md)
 
 1. [Create shift activities](scheduling-create-shift-activities.md)
 

@@ -4,7 +4,10 @@ Contact centers send outbound campaigns to customers for a variety of reasons, s
 
 There are two ways you can create an outbound campaign:
 + Use Amazon Connect console and Amazon Pinpoint\. This topic provides instructions\.
-+ Use the Amazon Connect Outbound Campaigns API\. For more information, see [Amazon Connect Outbound Campaigns API Reference](https://docs.aws.amazon.com/connect-outbound/latest/APIReference/Welcome.html)\. Note that you can't update the name of the outbound queue using the API\.
++ Use the Amazon Connect Outbound Campaigns API\. For more information, see [Amazon Connect Outbound Campaigns API Reference](https://docs.aws.amazon.com/connect-outbound/latest/APIReference/Welcome.html)\. 
+**Note**  
+You can't update the name of the outbound queue by using the API\.
+When you create a campaign by using the API: For users to be able to view or edit a campaign at a later date by using the Amazon Connect user interface, you must add the instance ID as a tag\.
 
 ## How to create an outbound campaign<a name="create-campaigns"></a>
 
@@ -12,11 +15,11 @@ There are two ways you can create an outbound campaign:
 
 1. On the left navigation menu, choose **High\-volume outbound communication**, and then choose **Create campaign**\.
 
-1. In the **Campaign details** section, specify the name\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hvoc-create-campaign-name.png)
+1. In the **Campaign details** section, specify the name, as shown in the following image\.   
+![\[The Create campaign page, an arrow pointing to the Campaign details section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hvoc-create-campaign-name.png)
 
-1. In the **Outbound configuration** section, select the published flow you created for outbound campaigns \(a flow that includes a [Check call progress](check-call-progress.md) block\)\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hvoc-create-campaign-flow.png)
+1. In the **Outbound configuration** section, select the published flow you created for outbound campaigns \(a flow that includes a [Check call progress](check-call-progress.md) block\), as shown in the following image\.  
+![\[The outbound configuration section, the contact flow dropdown list and queue dropdown list.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hvoc-create-campaign-flow.png)
 
 1. Select a queue to associate with this campaign\.
 

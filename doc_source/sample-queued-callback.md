@@ -16,6 +16,6 @@ This flow provides callback queue logic\. Here's how it works:
 1. If the customer chooses to be placed into a callback queue, their number is stored in the **Store customer input** block\. Then their callback number is set, and they are transferred to the callback queue\.
 
 For information about queued callbacks, see the following topics:
-+ [Set up queued callback](setup-queued-callback.md) 
++ [](setup-queued-cb.md) 
 + [Flow block: Transfer to queue](transfer-to-queue.md) 
 + [About queued callbacks in metrics](about-queued-callbacks.md) 

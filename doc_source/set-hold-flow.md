@@ -28,12 +28,14 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="set-hold-flow-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-hold-flow-properties.png)
+The following image shows the **Properties** page of the **Set hold flow** block\. It shows the dropdown list of namespaces that you can use to set the hold flow dynamically\.
+
+![\[The properties page of the Set hold flow block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-hold-flow-properties.png)
 
 For information about using attributes, see [Use Amazon Connect contact attributes](connect-contact-attributes.md)\.
 
 ## Configured block<a name="set-hold-flow-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-hold-flow-configured.png)
+![\[A configured set hold flow block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-hold-flow-configured.png)

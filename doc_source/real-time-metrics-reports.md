@@ -9,7 +9,7 @@ You can also use the [Amazon Connect Service APIs](https://docs.aws.amazon.com/c
 **Topics**
 + [Real\-time metrics definitions](real-time-metrics-definitions.md)
 + [Permissions required to view real\-time metrics reports](rtm-permissions.md)
-+ [Tag\-based access control](rtm-tag-based-access-control.md)
++ [Real\-time metrics tag\-based access control](rtm-tag-based-access-control.md)
 + [How often real\-time metrics refresh](rtm-refresh.md)
 + [Use one\-click drill\-downs for Routing profiles and Queues tables](one-click-drill-downs.md)
 + [Visualize: Queue dashboard](visualize-queue-dashboard.md)

@@ -6,14 +6,14 @@ You can increase capacity planning accuracy by providing estimated future data \
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Capacity planning \- Edit**\. 
 
-   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
+   For more information, see [Assign permissions](required-optimization-permissions.md)\. 
 
 1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Capacity Planning**\.
 
 1. On the **Import Data** tab, choose **Upload data**\.
 
-   The \.csv file you upload must have the following headings:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-csv-template.png)
+   The \.csv file you upload must have the following headings: FORECAST\_GROUP, Date, AVAILABLE\_FTE, IN\_OFFICE\_SHRINKAGE\_OUT\_OFFICE\_SHRINKAGE\. These are shown in the following image of a CSV file opened with Excel\.  
+![\[A csv file with correct headings.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-csv-template.png)
 
 1. Update values in this template, and then choose `Upload CSV` to upload it\. Choose `Upload`\.
 

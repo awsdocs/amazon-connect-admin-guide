@@ -25,18 +25,20 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="hold-customer-agent-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hold-customer-or-agent-properties.png)
+The following image shows the **Properties** page of the **Hold customer or agent** block\. It shows that the dropdown list has three options: **Agent on hold**, **Customer on hold**, and **Conference all**\.
 
-The following settings are available:
+![\[The properties page of the Hold customer or agent block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hold-customer-or-agent-properties.png)
+
+These options are defined as follows:
 + **Agent on hold** = customer is on the call
 + **Conference all** = agent and customer are on the call
 + **Customer on hold** = agent is on the call
 
 ## Configured block<a name="hold-customer-agent-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It configured for **Agent on hold**, and it has two branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hold-customer-or-agent-configured.png)
+![\[A configured Hold customer or agent block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hold-customer-or-agent-configured.png)
 
 ## Samples flows<a name="hold-customer-agent-samples"></a>
 

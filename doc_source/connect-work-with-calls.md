@@ -1,4 +1,4 @@
-# Work with calls<a name="connect-work-with-calls"></a>
+# Work with calls in the CCP<a name="connect-work-with-calls"></a>
 
 The topics in this section explain how to use the Amazon Connect Contact Control Panel to manage customer calls\.
 

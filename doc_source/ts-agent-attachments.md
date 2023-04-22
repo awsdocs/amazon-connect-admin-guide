@@ -1,6 +1,8 @@
-# Attachments are not appearing in chats<a name="attachments-not-appearing"></a>
+# Internal firewall prevents access to chat attachments<a name="ts-agent-attachments"></a>
 
-The following issues may cause attachments to not display for your agents using chat\. 
+This topic is for developers who need to investigate issues that may occur when using the chat channel in Amazon Connect\.
+
+The following issues, setting as internal firewall settings, may cause attachments to not display for your agents using Amazon Connect chat\. 
 
 ## Internal firewall settings are preventing access<a name="update-firewall-settings"></a>
 

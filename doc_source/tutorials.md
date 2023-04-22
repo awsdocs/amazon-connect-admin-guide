@@ -11,7 +11,7 @@ These tutorials are suitable for both knowledge workers and developers\.
 
 If you want to print the tutorials, choose the PDF icon at the top of any page, as shown in the following image\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-print.png)
+![\[A page in the Amazon Connect documentation, the PDF link under the title of the page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-print.png)
 
 A PDF version of the documentation opens\. Press **Ctrl\+Home** to return to the beginning of the PDF, then scroll down to the table of contents\. Choose which pages to print\. 
 

@@ -13,7 +13,9 @@ To create agent hierarchies, you need the **View \- Agent hierarchy** permission
 **Note**  
 Since agent hierarchies may include location and skill set data, you also need this permission to view the agent hierarchy information in a real\-time metrics report\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permission-agent-hierarchy.png)
+The following image shows the **Users and permissions \- Agent hierarchy** permissions on the **Security profile permissions** page\.
+
+![\[the Users and permissions - Agent hierarchy permission on the Security profile permissions page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permission-agent-hierarchy.png)
 
 ## Create a new agent hierarchy<a name="new-agent-hierarchy"></a>
 

@@ -10,6 +10,8 @@ Additionally, AWS supports managed policies for job functions that span multiple
 
 To allow full read/write access to Amazon Connect, you must attach two policies to your IAM users, groups, or roles\. Attach the `AmazonConnect_FullAccess` policy and a custom policy with the following contents:
 
+**Custom Policy**
+
 ```
 { 
     "Version": "2012-10-17", 
@@ -21,6 +23,119 @@ To allow full read/write access to Amazon Connect, you must attach two policies 
             "Resource": "arn:aws:iam::*:role/aws-service-role/connect.amazonaws.com/AWSServiceRoleForAmazonConnect*" 
         } 
     ] 
+}
+```
+
+**AmazonConnect\_FullAccess Policy**
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "connect:*",
+                "ds:CreateAlias",
+                "ds:AuthorizeApplication",
+                "ds:CreateIdentityPoolDirectory",
+                "ds:DeleteDirectory",
+                "ds:DescribeDirectories",
+                "ds:UnauthorizeApplication",
+                "firehose:DescribeDeliveryStream",
+                "firehose:ListDeliveryStreams",
+                "kinesis:DescribeStream",
+                "kinesis:ListStreams",
+                "kms:DescribeKey",
+                "kms:ListAliases",
+                "lex:GetBots",
+                "lex:ListBots",
+                "lex:ListBotAliases",
+                "logs:CreateLogGroup",
+                "s3:GetBucketLocation",
+                "s3:ListAllMyBuckets",
+                "lambda:ListFunctions",
+                "ds:CheckAlias",
+                "profile:ListAccountIntegrations",
+                "profile:GetDomain",
+                "profile:ListDomains",
+                "profile:GetProfileObjectType",
+                "profile:ListProfileObjectTypeTemplates"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "profile:AddProfileKey",
+                "profile:CreateDomain",
+                "profile:CreateProfile",
+                "profile:DeleteDomain",
+                "profile:DeleteIntegration",
+                "profile:DeleteProfile",
+                "profile:DeleteProfileKey",
+                "profile:DeleteProfileObject",
+                "profile:DeleteProfileObjectType",
+                "profile:GetIntegration",
+                "profile:GetMatches",
+                "profile:GetProfileObjectType",
+                "profile:ListIntegrations",
+                "profile:ListProfileObjects",
+                "profile:ListProfileObjectTypes",
+                "profile:ListTagsForResource",
+                "profile:MergeProfiles",
+                "profile:PutIntegration",
+                "profile:PutProfileObject",
+                "profile:PutProfileObjectType",
+                "profile:SearchProfiles",
+                "profile:TagResource",
+                "profile:UntagResource",
+                "profile:UpdateDomain",
+                "profile:UpdateProfile"
+            ],
+            "Resource": "arn:aws:profile:*:*:domains/amazon-connect-*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:GetBucketAcl"
+            ],
+            "Resource": "arn:aws:s3:::amazon-connect-*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "servicequotas:GetServiceQuota"
+            ],
+            "Resource": "arn:aws:servicequotas:*:*:connect/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:CreateServiceLinkedRole",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:AWSServiceName": "connect.amazonaws.com"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:DeleteServiceLinkedRole",
+            "Resource": "arn:aws:iam::*:role/aws-service-role/connect.amazonaws.com/AWSServiceRoleForAmazonConnect*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:CreateServiceLinkedRole",
+            "Resource": "arn:aws:iam::*:role/aws-service-role/profile.amazonaws.com/*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:AWSServiceName": "profile.amazonaws.com"
+                }
+            }
+        }
+    ]
 }
 ```
 
@@ -91,6 +206,37 @@ Since there is no default encryption option, to use your customer managed key wi
 
 For more about creating domains and KMS keys, see [Enable Voice ID](enable-voiceid.md) and [Encryption at rest](encryption-at-rest.md)\. 
 
+## AWS managed policy: CustomerProfilesServiceLinkedRolePolicy<a name="customerprofilesservicelinkedrolepolicy"></a>
+
+To allow Amazon Connect Customer Profiles to publish CloudWatch metrics to your AWS account, you must attach the `CustomerProfilesServiceLinkedRolePolicy` managed policy:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:PutMetricData"
+            ],
+            "Resource": "",
+            "Condition": {
+                "StringEquals": {
+                    "cloudwatch:namespace": "AWS/CustomerProfiles"
+                }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:DeleteRole"
+            ],
+            "Resource": "arn:aws:iam:::role/aws-service-role/profile.amazonaws.com/AWSServiceRoleForProfile_*"
+        }
+    ]
+}
+```
+
 ## Amazon Connect updates to AWS managed policies<a name="security-iam-awsmanpol-updates"></a>
 
 View details about updates to AWS managed policies for Amazon Connect since this service began tracking these changes\. For automatic alerts about changes to this page, subscribe to the RSS feed on the [Amazon Connect Document history](doc-history.md) page\. 
@@ -100,6 +246,8 @@ View details about updates to AWS managed policies for Amazon Connect since this
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+|  [CustomerProfilesServiceLinkedRolePolicy](#customerprofilesservicelinkedrolepolicy) – Added CustomerProfilesServiceLinkedRolePolicy  |  New managed policy\.  | March 7, 2023 | 
+|  [AmazonConnect\_FullAccess](#AmazonConnect_FullAccess-policy) – Added permission for managing Amazon Connect Customer Profiles Service Linked Roles  |  Added the following action to manage Amazon Connect Customer Profiles Service Linked Roles\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security_iam_awsmanpol.html)  | January 26, 2023 | 
 |  [AmazonConnectServiceLinkedRolePolicy](connect-slr.md) – Added actions for Amazon CloudWatch  |  Added the following action to publish usage Amazon Connect metrics for an instance to your account\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security_iam_awsmanpol.html)  | Februrary 22, 2022 | 
 |  [AmazonConnect\_FullAccess](#AmazonConnect_FullAccess-policy) – Added permissions for managing Amazon Connect Customer Profiles domains  |  Added all permissions for managing Amazon Connect Customer Profiles domains that are created for new Amazon Connect instances\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security_iam_awsmanpol.html) The following permissions are allowed to be performed on domains with a name that is prefixed with `amazon-connect-`: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security_iam_awsmanpol.html)  | November 12, 2021 | 
 |  [AmazonConnectServiceLinkedRolePolicy](connect-slr.md) – Added actions for Amazon Connect Customer Profiles  |  Added the following actions so Amazon Connect flows and the agent experience can interact with the profiles in your default Customer Profiles domain: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security_iam_awsmanpol.html) Added the following action so Amazon Connect flows and the agent experience can interact with the profile objects in your default Customer Profiles domain:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security_iam_awsmanpol.html) Added the following action so Amazon Connect flows and the agent experience can determine whether Customer Profiles is enabled for your Amazon Connect instance:  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/security_iam_awsmanpol.html)  | November 12, 2021 | 

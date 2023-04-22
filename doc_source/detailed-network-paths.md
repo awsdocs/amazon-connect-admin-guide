@@ -10,7 +10,7 @@ The following diagram shows how voice calls flow through Amazon Connect
 
 1. Users establish voice connectivity to Amazon Connect from their browser using WebRTC\. Signaling communication is encrypted in transit using TLS\. Audio is encrypted in transit using SRTP\.
 
-1. Voice connectivity to traditional phones \(PSTN\) is established between Amazon Connect and AWS’s telecommunications carrier partners using private network connectivity\. In cases where shared network connectivity is used, signaling communication is encrypted in transit using TLS and audio is encrypted in transit using SRTP\.
+1. Voice connectivity to traditional phones \(PSTN\) is established between Amazon Connect and AWS telecommunications carrier partners using private network connectivity\. In cases where shared network connectivity is used, signaling communication is encrypted in transit using TLS and audio is encrypted in transit using SRTP\.
 
 1. Call recordings are stored in your Amazon S3 bucket that Amazon Connect has been given permissions to access\. This data is encrypted between Amazon Connect and Amazon S3 using TLS\.
 
@@ -22,7 +22,7 @@ The following diagram shows using the AD Connector with AWS Directory Service to
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/network-path-authentication.png)
 
-1. The user's web browser initiates authentication to an OAuth gateway over TLS via the public internet with user credentials \(Amazon Connect login page\)\.
+1. The user's web browser initiates authentication to an OAuth gateway over TLS using the public internet with user credentials \(Amazon Connect login page\)\.
 
 1. OAuth gateway sends the authentication request over TLS to AD Connector\.
 

@@ -22,7 +22,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="set-logging-behavior-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-logging-behavior-properties.png)
+The following image shows the **Properties** page of the **Set logging behavior** block\. It has two options: enable logging behavior, or disable it\.
+
+![\[The properties page of the Set logging behavior block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-logging-behavior-properties.png)
 
 ## Scenarios<a name="set-logging-behavior-scenarios"></a>
 

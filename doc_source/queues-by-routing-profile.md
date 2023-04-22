@@ -3,7 +3,7 @@
 1. Go to **Analytics and optimization**, **Real\-time metrics**, **Queues**\.
 
 1. Click **Settings**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-settings.png)
+![\[The settings icon for the queues table.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-settings.png)
 
 1. On the **Groupings** tab, choose **Queues grouped by routing profiles**\.
 

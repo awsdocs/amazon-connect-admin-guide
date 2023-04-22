@@ -20,9 +20,9 @@ You can't delete a status value but you can disable it so it doesn't appear on t
 
 1. Choose **Save**\.
 
-To change the order that the status values appear in the CCP, click the waffle next to the status value and drag it to the order you want\. 
+To change the order that the status values appear in the CCP, click the waffle next to the status value, as shown in the following image\. Drag it to the order you want\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/agent-status.png)
+![\[The Add new agent status page, the waffle next to the status value.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/agent-status.png)
 
 **To edit a status**
 

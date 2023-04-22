@@ -17,7 +17,7 @@ Type: String
 The type of channel for this contact\.  
 Type: String  
 Valid values: `VOICE`, `CHAT`, `TASK`  
-For more information about channels, see [Channels and concurrency](channels-and-concurrency.md)\.
+For more information about channels, see [Concepts: Channels and concurrency](channels-and-concurrency.md)\.
 
 **AccountId**  
 The identifier of the account where this contact takes place\.  

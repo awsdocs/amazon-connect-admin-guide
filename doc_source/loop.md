@@ -23,13 +23,15 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="loop-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-properties.png)
+The following image shows the **Properties** page of the **Loop** block\. It is configured to repeat three times, and then it branches\.
+
+![\[The properties page of the Loop block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-properties.png)
 
 ## Configuration tips<a name="loop-tips"></a>
 + If you enter 0 for the loop count, the **Complete** branch is followed the first time this block runs\.
 
 ## Configured block<a name="loop-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has two branches: **Looping** and **Complete**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-configured.png)
+![\[A configured Loop block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-configured.png)

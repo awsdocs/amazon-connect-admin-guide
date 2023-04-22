@@ -9,12 +9,12 @@ In real\-time or post\-call/chat, you can get events and use them to trigger sub
 **To create a rule that generates an EventBridge event**
 
 1. When you create your rule, choose **Generate EventBridge event** for the action\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-events-example1.png)
+![\[The new rule page, the take these actions section, the add action dropdown list, the Generate an EventBridge event action.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-events-example1.png)
 
 1. For **Action name**, enter the name for the event payload\.
 **Note**  
 The value you assign for **Action name** is visible in the EventBridge payload\. When you aggregate events, the action name provides an additional dimension that you can use to process them\. For example, you have 200 category names, but only 50 have a specific action name, such as NOTIFY\_CUSTOMER\_RETENTION\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-eb-action.png)
+![\[The take these actions section, the assign contact category section, the Generate an EventBridge event section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-eb-action.png)
 
 1. Choose **Next**\. Review and then **Save**\.
 
@@ -30,7 +30,9 @@ To subscribe to EventBridge event types, create a custom EventBridge rule that m
 + "source" = "aws\.connect"
 + "detail\-type" = "Contact Lens Analysis State Change" \(or **Contact Lens Post Call Rules Matched**, **Contact Lens Realtime Rules Matched**, or **Contact Lens Post Chat Rules Matched**\)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-eb-rules-events.png)
+The following image shows these settings in the Event pattern section of the new rule page\.
+
+![\[The Event pattern section of the new EventBridge rule page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-eb-rules-events.png)
 
 ### Example EventBridge payloads<a name="eb-payload"></a>
 

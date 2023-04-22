@@ -19,7 +19,7 @@ Amazon Connect Region selection is contingent upon data governance requirements,
 
   When porting phone numbers for critical workloads, include all requirements and use case information in your claim/port number several months before the go\-live date\. This includes requests for live cutover support, communication prior, during, and after cutover, monitoring, and anything else specific to your use case\. 
 
-  For detailed information about porting your numbers, see [Port your current phone number](port-phone-number.md)\.
+  For detailed information about porting your numbers, see [Port your current phone number to Amazon Connect](port-phone-number.md)\.
 + **Carrier diversity** In the US, you should use Amazon Connect telephony services for US toll\-free numbers, allowing you to route toll\-free traffic across multiple suppliers in an active\-active fashion at no additional charge\. In situations where you are forwarding inbound traffic to an Amazon Connect phone number, you should request redundant DID or Toll\-Free numbers across multiple telephony providers\. If you are claiming or porting multiple DID or Toll\-Free numbers outside of the US, you should request that those numbers be claimed or ported to a variety of telephony providers for increased resiliency\.
 + **International toll\-free and high\-concurrency DIDs** If you are using an existing toll\-free national service to redirect inbound traffic to DIDs, you should request DID phone numbers across multiple telephony providers\. A general recommendation for this configuration is 100 sessions per\-DID and your AWS Solutions Architect can help with capacity calculations and setup\.
 + **Testing** Thoroughly test all use case scenarios, preferably using the same or similar environment as your agents and customers\. Ensure that you test several inbound and outbound scenarios for quality of experience, Caller ID functionality, and measure latency to ensure it falls within acceptable range for your use case\. Any deviations from your target agent and customer environments need to be measured and accounted for\. For more information, including use case testing instructions and criteria, see [Troubleshooting Issues with the Contact Control Panel \(CCP\)](troubleshooting.md)\.
@@ -32,7 +32,7 @@ The Amazon Connect Call Control Panel \(CCP\) has specific network and hardware 
 + Calculate PSTN latency for use cases that require agents and contacts to be in geographically distant locations
 + Review the [Troubleshooting Issues with the Contact Control Panel \(CCP\)](troubleshooting.md) section to create runbooks and playbooks for your agents and supervisors to follow should they encounter issues\. 
 + Set up monitoring for your agent workstations and consider partner solutions for call quality monitoring\. Your goal with monitoring your agent workstations should be the ability to identify the source of any potential network and resource contention\. For example, consider a typical agent’s softphone network connection path to Amazon Connect:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/agentworkstation-oe.png)
+![\[Agent workstation monitoring.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/agentworkstation-oe.png)
 
   Without setting up monitoring at the local LAN/WAN, path to AWS, and agent workstation levels, it’s difficult and often impossible to determine if a voice quality issue is originating from your agent’s workstation, their private LAN/WAN, ISP, AWS, or the contact itself\. Setting up logging and alerting mechanisms proactively is critical in determining root cause and optimizing your environment for voice quality\.
 
@@ -88,11 +88,11 @@ Amazon Connect throttling quotas are by account, and not instance\. You should c
 
 To decrease API data query overhead and avoid throttling, you can use an intermediary database like Amazon DynamoDB to store API call results rather than calling the API from all endpoints interested in the API data\. For example, the following diagram represents the use of the Amazon Connect metric API from multiple sources that need to consume this information:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/amazonconnectapis-oe.png)
+![\[Implement a caching and queuing solution.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/amazonconnectapis-oe.png)
 
 Rather than having separate AWS Lambda functions, each with their own polling requirements, you can have a single AWS Lambda function write all interesting data to Amazon DynamoDB\. Rather than having each endpoint go to the API directly to retrieve the data, they point to DynamoDB, as illustrated in the following diagram:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/amazonconnectapis2-oe.png)
+![\[Point to DynamoDB.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/amazonconnectapis2-oe.png)
 
 This architecture allows you to change polling intervals and add endpoints, as needed, without worrying about exceeding service quotas, giving you the ability to scale to however many concurrent connections your database solution supports\. You can use this same concept with querying any real\-time data feeds from Amazon Connect\. For situations where you need to perform an API action, like an Outbound API call, you can use this same concept in combination with Amazon Simple Queue Service to queue API requests Using AWS Lambda with SQS\.
 
@@ -119,37 +119,37 @@ Contact routing in Amazon Connect is done through a collection of queues and rou
 
 Within your flow, you can prompt for additional information and, if they need to reach an agent, you can use the flow configuration to place them in the appropriate queue\. In the following example, Savings, Checking, and Loans are individual queues or skills and the three routing profiles are unique skillsets, or groups of skills:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile1.png)
+![\[Routing by groups of queues.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile1.png)
 
 Each agent is assigned to only one routing profile based on their skillset, and many agents with similar skillset can share the same routing profile:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile2.png)
+![\[Routing by skillset.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile2.png)
 
 Each phone number or chat endpoint will be associated with one flow\. The flow executes its logic, which may involve prompting the customer for information, to determine the contact’s needs, and eventually routes the contact into an appropriate queue\. The following diagram depicts how routing profile, queue, and flow work together to service a contact:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile3.png)
+![\[Routing diagram.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile3.png)
 
 To illustrate how you might determine various queues, routing profiles, and agent assignments to the routing profiles, consider the following table: 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile4.png)
+![\[Routing by groups of queues.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile4.png)
 
 On the top row, you’ve identified your skills or queues\. In the left column, you have your list of agents, and in the middle, you’ve checked the skills supported by each of the agents\. You can sort the matrix grouped by the common set of skill requirements across our agent population\. This helps identify the routing profiles as one marked in the green box \(which consists of two queues\), which you can assign agents to\. As a result of this exercise, you have identified four routing profiles, and assign your 13 agents to them accordingly\.
 
 Based on the previous table, an incoming call from a contact needing the Savings skill could be served by three groups of agents in the three routing profiles 1, 2, and 4 as depicted in the following diagram:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile5.png)
+![\[Routing by groups of queues.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/routingprofile5.png)
 
 ### Priority and delay<a name="prioritydelay-bp"></a>
 
 Using the combination of priority and delay in different Routing Profiles, you can create flexible routing strategies\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/priorityandelay.png)
+![\[Priority and delay.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/priorityandelay.png)
 
 The preceding routing profile example shows a set of queues, and their respective priority and delay\. The lower the number, the higher the priority\. All higher priority calls must be processed before a lower priority call will be processed\. This is a difference from systems that will eventually process lower priority of calls based upon a weighting factor\.
 
 You can also add a delay to each of the queues within each of the routing profiles\. Any call coming into the queue will be held for the specified period of delay assigned to the designated queue\. The call will be held for the delay period, even when agents are available\. You might use this in situations where you have a group of agents who are reserved to help you meet your Service Level Agreements \(SLAs\), but are otherwise assigned to other tasks or queues\. If a call doesn’t get answered within a specified period of time, these agents would become eligible to receive a call from the designated queue\. For example, consider the following diagram:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/priorityandelay2.png)
+![\[Priority and delay.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/priorityandelay2.png)
 
 This diagram shows an SLA of 30 seconds\. A call comes in for the Savings queue\. The Savings queue immediately looks for an agent in the "Savings" routing profile due to the configuration of 0 delay in the profile for the queue\. Because of the configuration of 15 delay for Senior Agents, they will not be eligible to receive the Savings contact for 15 seconds\. After 15 seconds elapses, the contact becomes available for a Senior Level agent and Amazon Connect looks for the Longest Available across both routing profiles\.
 
@@ -157,12 +157,12 @@ This diagram shows an SLA of 30 seconds\. A call comes in for the Savings queue\
 
 When you are designing customer experiences in Amazon Connect, plan to ensure a path to service\. There are many planned and unplanned events that can impact the customer experience as they traverse through Amazon Connect Flows\. The following sample customer experience shows some suggested checks to ensure a consistent quality experience for your contacts:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/pathtoservice.png)
+![\[Path to service.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/pathtoservice.png)
 
 This sample customer experience takes into account planned events such as Holidays and Business hours as well as unplanned events, like agents not staffed during business hours\. With this logic, you can also account for emergency situations, such as contact center closures because of inclement weather or service disruptions\. Consider the following concepts as illustrated in the diagram:
 + **Self\-service**: In a typical IVR, you can include any greetings and disclaimer messages such as call recording announcements upfront, which can be followed by self\-service options\. Self\-service brings cost and performance optimizations for your contact center and enables your organization to serve customers 24x7, regardless of holidays, business hours, or availability of agents\. Always include a path to service in case customers are unable to self\-serve and need human assistance\. For example, if you are using Amazon Lex bots for self\-service, you can make use of fallback intents to escalate conversations for human assistance\. 
 + **Holidays**: Many enterprise customers have a central repository that holds corporate holidays\. You can use an AWS Lambda function to data dip into that repository and offer holiday treatment to customers\. Additionally, you can also store corporate holidays in DynamoDB along with a custom message for each holiday\. For example, if your enterprise observes December 25 as Christmas, you could have a holiday prompt or Text to Speech, "We are currently closed for Christmas\. Please call back on December 26 when our normal business hours will resume\."  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/holidays.png)
+![\[Holidays.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/holidays.png)
 + **Business hours**: After holidays have been verified, you can check for business hours and, if outside of business hours, you can change the experience dynamically for your contacts\. If the contact occurs during business hours, you can identify customer intent for calls and map to certain queues in your contact center, increasing the likelihood of getting to the correct agent, and decreasing the amount of time it takes your contact to reach service\. It is highly recommended to map defaults as customers could be calling for a reason you haven’t accounted for yet or may respond in a way you don’t expect\.
 + **Emergency messages**: After you have identified customer intent for call, it is suggested to implement an emergency check treatment\. In the event of an emergency situation that impacts your contact center, you can store an emergency True/False flag in an intermediary database like DynamoDB\. To allow your supervisors and administrators to set this flag dynamically, with no code, you can build a separate IVR that authenticates your Amazon Connect administrators based upon ANI and PIN number verification for internal use only\. In the event of emergency, your supervisors can call into that dedicated line from their phones and after authentication set the Emergency flag to true for scenarios such as contact center closure due to inclement weather or ISP outage at the physical location of contact center\.
 + **Emergency message API**: You can also consider building an AWS API gateway with AWS Lambda function at the back end to set the Emergency flag to true/false securely in the database\. Your supervisors can securely access that API through web to toggle disaster mode or dynamically toggle it in response to an external event\. In your Amazon Connect instance, every contact that comes in through the flow will use AWS Lambda to check for that emergency flag and, in case of disaster mode, you can dynamically make announcements and provide a customer with a path to service\. This will further ensure business continuity and mitigate the impact of situations like these from affecting your customers\.
@@ -177,9 +177,6 @@ This sample customer experience takes into account planned events such as Holida
 
 **Blog**
 + [How to handle unexpected contact spikes with Amazon Connect](http://aws.amazon.com/blogs/contact-center/how-to-handle-unexpected-contact-spikes-with-amazon-connect/)
-
-**Whitepaper**
-+  [Operational Excellence Pillar](https://d0.awsstatic.com/whitepapers/architecture/AWS-Operational-Excellence-Pillar.pdf) 
 
 **Video**
 + [DevOps at Amazon](https://www.youtube.com/watch?v=esEFaY0FDKc.pdf) 

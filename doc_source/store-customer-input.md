@@ -30,9 +30,13 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="store-customer-input-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input-properties1.png)
+The following image shows the **Properties** page of the **Store customer input** block\. It shows the **Prompt** section configured to play the **Audio prompt**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input-properties1b.png)
+![\[The properties page of the Store customer input block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input-properties1.png)
+
+The following image shows the **Customer input** section of the page\. It is configured to allow up to 20 digits\. It is set to timeout after 5 seconds of no input\.
+
+![\[The customer input section of the properties page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input-properties1b.png)
 
 Note the following properties:
 + For information about choosing a prompt from the Amazon Connect library or an S3 bucket, see the [Play prompt](play.md) block\.
@@ -73,15 +77,15 @@ To guarantee the **Store customer input** block in second contact flow captures 
 
 ## Configured block<a name="store-customer-input-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Success**, **Error**, and **Invalid number**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input-configured.png)
+![\[A configured Store customer input block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/store-customer-input-configured.png)
 
 1. **Invalid number**: What to do if the customer enters an invalid number\.
 
 ## Sample flows<a name="store-customer-input-samples"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample secure input with agent](sample-secure-input-with-agent.md)
 + [Sample secure input with no agent](sample-secure-input-with-noagent.md) 
 + [Sample queue configurations](sample-queue-configurations.md) 

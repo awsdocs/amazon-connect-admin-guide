@@ -17,17 +17,17 @@ Amazon Connect helps you to assess, track, and improve how agents interact with 
 1. Access the contact that you want to evaluate\. There are a few ways you can do this\. For example, someone may have shared the contact URL with you, or assigned you a task that has the URL\. Or, you may have the contact ID, which lets you search for the contact record by doing the following: on the navigation pane, choose **Analytics and optimization**, **Contact search**, and then search for the contact that you want to evaluate\.
 
 1. On the **Contact details** page, choose **Evaluations** or the **<** icon\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-evaluatebutton.png)
+![\[The contact details page, the evaluations button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-evaluatebutton.png)
 
 1. The evaluations pane lists any evaluations that are in progress or completed for the contact\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-startevaluation.png)
+![\[The evaluations pane, the status of two evaluations.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-startevaluation.png)
 
 1. To start an evaluation, choose an evaluation from the dropdown menu, and then choose **Start evaluation**\.
 
 1. To navigate an especially long evaluation form, use the arrows next to each section to collapse or expand it\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-exampleevaluation.png)
+![\[The evaluations pane, the arrow to collapse or expand a section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-exampleevaluation.png)
 
 1. Choose **Save** to save a form in progress\. The status of the form becomes **Draft**\. You can return to it any time to continue, or you can delete it and start over\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-draft.png)
+![\[The evaluations pane, the status of an evaluation set to draft.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-draft.png)
 
 1. When you're done, choose **Submit**\. The status of the form is **Completed**\.

@@ -4,9 +4,7 @@ This topic explains how to set up and use case event streams\. Some of the onboa
 
 ## Step 1: Create an Amazon Connect instance and enable Customer Profiles<a name="step1-case-event-streams-enable"></a>
 
-1. Ensure you have an working Amazon Connect instance in the US East \(N\. Virginia\) or US West \(Oregon\) AWS Region\. Cases is available only in US East \(N\. Virginia\) and US West \(Oregon\)\.
-
-   For information about creating an instance, see [Create an Amazon Connect instance](amazon-connect-instances.md)\.
+1. Ensure you have an working Amazon Connect instance in one of the AWS Regions where Cases is available\. See [Cases availability by Region](regions.md#cases_region)\.
 
 1. Enable Amazon Connect Customer Profiles\. For instructions, see [Enable Customer Profiles for your instance](enable-customer-profiles.md)\.
 

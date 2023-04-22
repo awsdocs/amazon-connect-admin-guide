@@ -25,7 +25,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="check-staffing-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-staffing-properties.png)
+The following image shows the **Properties** page of the **Check staffing** block\. It is configured to check whether agents in the BasicQueue have slots available so they can be routed contacts\.
+
+![\[The properties page of the Check staffing block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-staffing-properties.png)
 
 In the **Status to check** dropdown box, choose one of the following options:
 + [Available](real-time-metrics-definitions.md#available-real-time) = Check whether the agent has **Available** slots to be routed a contact\.
@@ -39,9 +41,9 @@ In the **Status to check** dropdown box, choose one of the following options:
 
 ## Configured block<a name="check-staffing-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has three branches: **True**, **False**, and **Error**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-staffing-configured.png)
+![\[A configured Check staffing block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-staffing-configured.png)
 
 ## Scenarios<a name="check-staffing-scenarios"></a>
 

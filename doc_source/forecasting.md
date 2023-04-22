@@ -8,16 +8,16 @@ A *forecast* attempts to predict future contact volume and average handle time\.
 
 **Long term forecasts are automatically updated every week, based on the day you created the forecast**\. For example, if you created the forecast on a Monday, it is updated every Monday\. Use published long term forecasts for capacity planning\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-lastupdated-date.png)
+![\[The Forecasting page, the Forecasts tab, three short term forecasts.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-lastupdated-date.png)
 
 **Important**  
 Only the most current forecast is available\. Because the forecast is updated every day, if you want to keep the current day's forecast, you must download it before Amazon Connect overwrites it\.
 
 ## Getting started with forecasting<a name="getting-started-forecasting"></a>
 
-Use the following process to create a forecast and share it with others:
+Use the following steps to create a forecast and then share it with other people in your organization\.
 
-1. [Set the forecast and scheduling interval](set-forecast-scheduling-interval.md): \[This is a one\-time activity typically set up by forecasters\. It cannot be undone\.\]
+1. [Set the forecast and scheduling interval](set-forecast-scheduling-interval.md): This is a one\-time activity typically set up by forecasters\. It cannot be undone\.
 
 1. [Create forecast groups](create-forecast-groups.md)
 

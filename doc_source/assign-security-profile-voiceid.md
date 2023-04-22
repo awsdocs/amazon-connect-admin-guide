@@ -10,7 +10,7 @@
 
 The following image shows an example of these controls on the CCP:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-ccp-controls.png)
+![\[The CCP, the enroll and opt out controls.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-ccp-controls.png)
 
 For information about how add more permissions to an existing security profile, see [Update security profiles](update-security-profiles.md)\.
 

@@ -8,7 +8,7 @@ Currently, Amazon Connect Wisdom can be used in compliance with [GDPR](http://aw
 
 The following image shows how an article may appear in the agent application when the agent is on a call\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro2.png)
+![\[The agent application with an article displayed in it.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro2.png)
 
 1. The agent is on a call\.
 

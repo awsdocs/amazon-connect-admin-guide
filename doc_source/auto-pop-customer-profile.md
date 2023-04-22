@@ -16,9 +16,9 @@ For example, to search by email for chat contacts, you can set the `profileSearc
 
 If you have defined custom keys in your profile objects, you can search by those search keys as well\. To make sure your custom keys are searchable, see [Key definition details](object-type-mapping-definition-details.md#key-definition-details)\.
 
-The following image shows how you might use these attributes in the [Set contact attributes](set-contact-attributes.md) block\.
+The following image shows how you might use these attributes in the [Set contact attributes](set-contact-attributes.md) block\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-attributes1.png)
+![\[The properties page of the set contact attributes block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-attributes1.png)
 
 ## Automatically associate a customer profile with a contact<a name="cp-automatically-associate-contact"></a>
 

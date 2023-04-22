@@ -43,19 +43,21 @@ The properties provide you different ways to choose the prompt to be played\.
 
 **Select from the prompt library \(audio\)**: Choose from one of the pre\-recorded prompts included with Amazon Connect, or use the Amazon Connect admin console to [record and upload](prompts.md) your own prompt\. There's no way to upload prompts in bulk\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-library-manually.png)
+The following image shows the **Properties** page of the **Play prompt** block configured to play an Audio prompt from the prompt library\.
+
+![\[The properties page of the Play prompt block, prompt library.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-library-manually.png)
 
 ### Prompts stored in Amazon S3<a name="play-properties-s3"></a>
 
 **Specify an audio file from an S3 bucket**: Store as many prompts as you need in an S3 bucket and then refer to them by specifying the bucket path\. For best performance, we recommend creating the S3 bucket in the same Region as your Amazon Connect instance\.
 
-The following image shows an example of how to set the file path manually\.
+The following image shows the **Properties** page of the **Play prompt** block configured to set the S3 file path manually\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-s3-manually.png)
+![\[The properties page of the Play prompt block, S3 file path specified manually.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-s3-manually.png)
 
 The following image shows how to specify the S3 bucket path using attributes:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-s3-jsonpath.png)
+![\[The S3 file path specified manually using attributes.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-s3-jsonpath.png)
 
 You can provide the S3 path with concatenation, as shown in the following example\. This enables you to personalize the prompt, for example, by line of business and language\. 
 
@@ -63,17 +65,17 @@ Note that only the last part of path is shown in the image but you would enter t
 
 `https://example.s3.amazon.aws.com/$['Attributes']['Language']/$['Attributes']['LOB']/1.wav`
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-s3-concatentation.png)
+![\[The last part of the S3 file path.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-s3-concatentation.png)
 
-The following example shows how you can specify the S3 path dynamically using a user\-defined attribute\. 
+The following example shows how you can specify the S3 path dynamically using a user\-defined attribute named **S3filepath**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-s3-attributes.png)
+![\[The S3 file path set dynamically, the namespace set to User-defined.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/playprompt-properties-s3-attributes.png)
 
 ### Text\-to\-speech or chat text<a name="play-properties-text-to-speech"></a>
 
-You can enter plain text, or SSML, as shown in the following image:
+You can enter a prompt in plain text, or SSML, as shown in the following image:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-sample-ssml.png)
+![\[A text-to-speech prompt set manually.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-sample-ssml.png)
 
 SSML\-enhanced input text gives you more control over how Amazon Connect generates speech from the text you provide\. You can customize and control aspects of speech such as pronunciation, volume, and speed\.
 
@@ -96,13 +98,13 @@ For more information, see [Add text\-to\-speech to prompts](text-to-speech.md)\.
 
 ## Configured block<a name="play-configured"></a>
 
-The following image shows what this block looks like when it's configured for text\-to\-speech:
+The following image shows what a Play prompt block looks like when it's configured for text\-to\-speech\. It shows the text to be played, and it has two branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-configured.png)
+![\[A Play prompt block configured for text-to-speech.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-configured.png)
 
-The following image shows what this block looks like when it's configured for an S3 bucket:
+The following image shows what this block looks like when it's configured for an S3 bucket\. It shows the S3 path, and it has two branches:**Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-configured2.png)
+![\[A Play prompt block configured for an S3 path.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-configured2.png)
 
 ## Sample flows<a name="play-samples"></a>
 

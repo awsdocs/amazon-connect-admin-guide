@@ -10,11 +10,11 @@ To set up this feature, add rules that contain the words or phrases that you wan
 
 In a **Contact details** page for a chat, categories appear above the transcript, as shown in the following image\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-overview-chat2.png)
+![\[The contact details page, the categories section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-overview-chat2.png)
 
-The following image shows what a **Contact details** page looks like with a category for a call\.
+The following image shows what a **Contact details** page looks like with a category for a call\. The category is named **cancellation**\. It contains the words or phrases you want to highlight in the analysis\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-overview2.png)
+![\[The contact details page, a category for a call.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-overview2.png)
 
 ## Add rules to categorize contacts<a name="add-category-rules"></a>
 
@@ -29,7 +29,7 @@ The following image shows what a **Contact details** page looks like with a cate
 1. Assign a name to the rule\.
 
 1. Under **When**, use the dropdown list to choose **post\-call analysis**, **real\-time analysis**, or **post\-chat analysis**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rule-define-conditions.png)
+![\[The new rule page, the when dropdown list.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rule-define-conditions.png)
 
 1. Choose **Add condition**, and then choose the type of match: 
    + **Exact Match**: Finds only the exact words or phrases\. Enter the words or phrases, separated by a comma\.
@@ -43,15 +43,15 @@ The following image shows what a **Contact details** page looks like with a cate
    + **Pattern Match**: Finds matches that may be less than 100 percent exact\. You can also specify the distance between words\. For example, if you are looking for contacts where the word "credit" was mentioned but you do not want to see any mention of the words "credit card," you can define a pattern matching category to look for the word "credit" that is not within a one\-word distance of "card\." 
 
 1. Using **Exact Match** as an example, enter the words or phrases, separated by a comma, that you want to highlight\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script.png)
+![\[The new rules page, the Words or phrases - Exact match section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script.png)
 
 1. Choose **Add**\. Each word or phrase separated by a comma gets its own line in the card\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script2.png)
+![\[The new rules page, the Words or phrases - Exact match section, the Add button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script2.png)
 
    The logic that Contact Lens uses to read these phrases is: \(Hello OR thank OR you OR for OR calling OR Example OR Corp\) OR \(we OR value OR your OR business\) OR \(how OR may OR I OR assist OR you\)\.
 
 1. To add more words or phrases, choose **Add group of words or phrases**\. In the following image, the first group of words or phrases are what the agent might utter, and the second group is what the customer might utter\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script3.png)
+![\[A Words or phrases - Exact match for agent, the word AND, a Words or phrases section for the customer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script3.png)
 
    1. In this first card, Content Lens reads each line as an OR\. For example: \(Hello OR thank OR you OR for OR calling OR Example OR Corp\) OR \(we OR value OR your OR business\) OR \(how OR may OR I OR assist OR you\)\.
 
@@ -65,7 +65,7 @@ The following image shows what a **Contact details** page looks like with a cate
    + When sentiment scores have certain values
 
    For example, the following image shows a rule that applies when an agent is working the BasicQueue or Billing and Payments queues, the customer is for auto insurance, and the agent is located in Seattle\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-3.png)
+![\[A rule with multiple conditions.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-3.png)
 
 ### Step 2: Define actions<a name="add-category-rules-define-actions"></a>
 

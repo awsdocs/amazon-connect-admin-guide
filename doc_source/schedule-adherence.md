@@ -4,9 +4,15 @@ Contact center supervisors or managers track schedule adherence to understand wh
 
 Amazon Connect begins generating schedule adherence automatically as soon as a published schedule starts that has shift activities where `Adherence = yes`\. 
 
-You can view Schedule Adherence metrics on the **Historical metrics** and **Real\-Time metrics** pages\. The following image shows an example of choosing Schedule Adherence metrics to appear in a historical metrics report\.
+You can view Schedule Adherence metrics on the **Historical metrics** and **Real\-Time metrics** pages\. The Schedule Adherence metrics are: 
++ Adherent time
++ Adherence
++ Schedule time
++ Non\-adherent time\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-schedule-adherence-metrics.png)
+The following image shows an example of choosing Schedule Adherence metrics to appear in a historical metrics report\.
+
+![\[The historical metrics page for agents, the table settings box, the schedule adherence metrics.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-schedule-adherence-metrics.png)
 
 **Getting started:**
 

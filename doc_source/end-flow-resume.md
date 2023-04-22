@@ -26,10 +26,12 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="end-flow-resume-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/end-flow-properties.png)
+The following image shows the **Properties** page of the **End flow / Resume** block\.
+
+![\[The properties page of the End flow Resume block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/end-flow-properties.png)
 
 ## Configured block<a name="end-flow-resume-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It does not have any The End flow / Resume termination event branches\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/end-flow-configured.png)
+![\[The properties page of the End flow Resume block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/end-flow-configured.png)

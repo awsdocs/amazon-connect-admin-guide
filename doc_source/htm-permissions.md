@@ -1,9 +1,13 @@
 # Permissions required to view historical metrics reports<a name="htm-permissions"></a>
 
-To view historical metrics reports, you need to be assigned to a security profile that either has Access checked for **Access metrics** or **Historical metrics**\. When **Access metrics** is selected, the **Real\-time metrics, Historical metrics**, and **Agent activity audit** are automatically checked\. If you have **Access metrics** checked, you have access to all real\-time and historical reports\.
+To view historical metrics reports, you need to be assigned to a security profile that has either the **Access metrics \- Access** permission or the **Real\-time metrics \- Access** permission\. Note the following behavior when you assign these permissions:
++ When **Access metrics \- Access** is selected, the **Real\-time metrics**, **Historical metrics**, and **Agent activity audit** permissions are also automatically assigned\. 
++ When **Access metrics \- Access** is assigned, you have access to all real\-time and historical metrics reports\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports.png)
+The following image shows the **Analytics and Optimization** section of the **Security profile permissions** page\. The **Access** option is selected for **Access metrics**, **Real\-time metrics**, **Historical metrics**, and **Agent activity audit**\.
 
-If you have **Access metrics** checked, you have access to all real\-time and historical reports\. If you only have **Historical metrics** checked, you only have access to historical metrics reports and no other analytics pages or reports\.
+![\[The Analytics and Optimization section of the security profiles permissions page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports-4.png)
+If only **Historical metrics \- Access** is selected, you have access to only historical metrics and no other analytics pages or reports\. The following image shows the **Analytics and Optimization** section, with only **Historical metrics \- Access** selected\.
+
+![\[The historical metrics permission on the security profile permissions page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports-4.png)

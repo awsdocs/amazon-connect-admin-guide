@@ -28,25 +28,39 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="check-queue-status-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-queue-status-properties.png)
+The following image shows the **Properties** page of the **Check queue status** block\. In this example, it checks whether a contact has been in the BasicQueue longer than 2 minutes\.
+
+![\[The properties page of the Check queue status.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-queue-status-properties.png)
 
 ## Configuration tips<a name="check-queue-status-tips"></a>
 
 The order in which you add conditions matters at the runtime\. Results are evaluated against conditions in the same order in which you add them to the block\. Contacts are routed down the first condition to match\. 
 
 For example, in the following condition order, every value matches one of first two conditions\. None of the other conditions are ever matched\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-queue-status-example1.png)
++ Time in Queue <= 90
++ Time in Queue >= 90
++ Time in Queue >= 9
++ Time in Queue >= 12
++ Time in Queue >= 15
++ Time in Queue >= 18
++ Time in Queue > 20
++ Time in Queue > 21
 
 In this next example, all contacts with a wait time in queue of 90 or less \(<=90\) match first condition only\. This means less than or equal to 9 \(<=9\), <=12, <=15, <=18, <=20, <=21 are never run\. Any value greater than 90 is routed down the greater than or equal to 21 \(>=21\) condition branch\. 
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-queue-status-example2.png)
++ Time in Queue <= 90
++ Time in Queue <= 9
++ Time in Queue <= 12
++ Time in Queue <= 15
++ Time in Queue <= 18
++ Time in Queue < 20
++ Time in Queue < 21
++ Time in Queue > 21
 
 ## Configured block<a name="check-queue-status-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has three branches: the **Time in Queue** condition, **No Match**, and **Error**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-queue-status-configured.png)
+![\[A configured check queue status block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-queue-status-configured.png)
 
 ## Scenarios<a name="check-queue-status-scenarios"></a>
 

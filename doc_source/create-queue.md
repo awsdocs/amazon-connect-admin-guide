@@ -29,4 +29,4 @@ This topic explains how to create a queue using the Amazon Connect console\. To 
 
 1. Add Tags to identify, organize, search for, filter and control who can access this queue\. For more information, see [Tagging resources in Amazon Connect](tagging.md)\.
 
-To learn how queues work, see [Routing profiles](concepts-routing.md) and [Queue\-based routing](concepts-queue-based-routing.md)\.
+To learn how queues work, see [Concepts: Routing profiles](concepts-routing.md) and [Concepts: Queue\-based routing](concepts-queue-based-routing.md)\.

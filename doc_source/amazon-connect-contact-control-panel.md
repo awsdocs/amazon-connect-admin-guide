@@ -19,7 +19,7 @@ Agents use the Amazon Connect Contact Control Panel \(CCP\) to communicate with 
 
 Want your agents to manage contacts, and access customer profiles, cases, and knowledge all in one place? Use the [agent application](agent-user-guide.md)\! 
 
-The [agent application](agent-user-guide.md) is a single web browser interface that hosts the CCP, [Customer Profiles](use-customer-profiles.md), [Cases](use-cases.md), and [Wisdom](use-wisdom.md)\.
+The [agent application](agent-user-guide.md) is a single web browser interface that hosts the CCP, [Customer Profiles](ag-cp.md), [Cases](use-cases.md), and [Wisdom](use-wisdom.md)\.
 
 If you're using the CCP that is provided with Amazon Connect, after you enable Customer Profiles, Cases, or Wisdom, share the following URL with your agents so they can access it:
 + **https://*instance name*\.my\.connect\.aws/agent\-app\-v2/**

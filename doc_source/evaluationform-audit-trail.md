@@ -6,10 +6,10 @@
 | This feature is in preview release and subject to change\.  | 
 
 1. Select the evaluation form that you want to research\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-select.png)
+![\[The evaluation forms page, a box to the left of an evaluation form.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-select.png)
 
 1. At the bottom of the page, under **Example Evaluation**, use the dropdown menu to view previous versions, who accessed them, and when\. The following image shows an example audit trail\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-version.png)
+![\[An example audit trail for an evaluation.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/evaluationforms-version.png)
 
 1. Optionally, choose one of the forms to open it\.
 

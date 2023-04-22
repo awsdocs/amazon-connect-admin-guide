@@ -4,14 +4,14 @@ Before you can create a capacity plan, you must create a planning scenario and p
 
 ## How to create a capacity plan<a name="how-to-create-capacity-plan"></a>
 
-1. Go to the **Capacity Plans** tab, and choose **Generate Plan**\.
+1. Navigate to the **Capacity Plans** tab, and choose **Generate Plan**\.
 
-1. Provide the plan name, description, forecast group \(which has published long\-term forecasts\), start/end date, and plan scenario\. See the following image for an example:   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-create-plan.png)
+1. Provide the plan name, description, forecast group \(which has published long\-term forecasts\), start/end date, and plan scenario\. The following image shows example values for these fields\.   
+![\[The Generate Plan page, the Plan Inputs section, example values.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-create-plan.png)
 
 1. Choose **Generate Capacity Plan**\.
 
-1. To quickly identify the plan that is in processing, choose **Last Computed** to sort the table list\. In the following example, the status of the plan is **In Progress**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-in-progress.png)
+1. To quickly identify the plan that is in processing, choose **Last Computed** to sort the table list\. In the following image, the status of the plan is **In Progress**\.  
+![\[The capacity planning page, the Status column set to In progress.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-in-progress.png)
 
    It usually takes between 5\-10 minutes for the plan to be generated\. If the plan generation fails, try publishing the selected long\-term forecasts, and then generating the capacity plan again\.

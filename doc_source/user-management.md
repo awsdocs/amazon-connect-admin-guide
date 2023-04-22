@@ -2,11 +2,13 @@
 
 You can add users and configure them with permissions that are appropriate to their roles \(for example, agents or managers\)\. For more information, see [Security profiles](connect-security-profiles.md)\. Contacts can be routed based on the skills required of the agents\. For more information, see [Create a routing profile](routing-profiles.md)\.
 
+This topic explains how to add users using the Amazon Connect user interface\. To add users programmatically, see [CreateUser](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateUser.html) in the *Amazon Connect API Reference Guide*\. To use the CLI, see [create\-user](https://docs.aws.amazon.com/cli/latest/reference/connect/create-user.html)\.
+
 ## Required permissions for adding users<a name="required-permissions-add-user"></a>
 
-Before you can add users to Amazon Connect, you need the following permissions assigned to your security profile: **Users \- Create**\.
+Before you can add users to Amazon Connect, you need the following permissions assigned to your security profile: **Users \- Create**\. The following image shows that this security profile permission is in the **Users and permissions** section of the **Add/Edit security profile** page\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/security-profile-create-user-accounts.png)
+![\[The Users and permissions section of the security profile page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/security-profile-create-user-accounts.png)
 
 By default, the Amazon Connect **Admin** security profile has these permissions\.
 
@@ -72,8 +74,8 @@ Use these steps to add several users from a \.csv file such as an Excel spreadsh
    + ACW timeout \(seconds\)
    + tags
 
-   The following image shows a sample of what the \.csv template looks like in an Excel spreadsheet:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/add-bulk-users.png)
+   The following image shows a sample of what the \.csv template looks like in an Excel spreadsheet\. The first row in the spreadsheet contains the column headings, and the second row contains sample user data\.  
+![\[The csv template in an Excel spreadsheet.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/add-bulk-users.png)
 
 1. Choose **Download template**\. 
 
@@ -85,4 +87,6 @@ If you get an error message, it usually indicates that one of the required colum
 + Check that passwords meet requirements: at least 8 characters with an uppercase letter, lowercase letter, and number\. For example, if there's an ellipsis \(\.\.\.\) in a password, this can cause an error\.
 + Update the \.csv file and try uploading it again\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/error-message-uploaded-csv-file.png)
+The following image shows an example error message that you might get when uploading your csv file\. It indicates the routing profile is not valid\.
+
+![\[A sample error message when the csv file is not valid.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/error-message-uploaded-csv-file.png)

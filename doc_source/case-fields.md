@@ -70,7 +70,7 @@ You can add options to the single\-select **Status** field, such as **Investigat
 
 Single\-select case fields can be active or inactive\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-single-select-active-inactive.png)
+![\[The Active and Inactive statuses.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-single-select-active-inactive.png)
 + **Active**: If a field option is active, it means that the field can be given that option\. For example, based on the following image, the Status field can be set to **Closed**, **Open**, or **Pending**, as these are the only active options\.
 + **Inactive**: If you make the **Pending** option inactive, then the field can no longer be given that option\. Any existing cases remain unchanged and can still have the status as **Pending**\.
 
@@ -82,4 +82,4 @@ Single\-select options have two parts:
 
    Field options appear to the agent in alphabetical order\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-single-select-names.png)
+![\[The Active and Inactive statuses.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-single-select-names.png)

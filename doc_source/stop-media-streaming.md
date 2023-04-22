@@ -37,10 +37,12 @@ This block doesn't have any properties\.
 
 ## Configured block<a name="stop-media-streaming-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/stop-media-streaming-configured.png)
+![\[A configured Stop media streaming block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/stop-media-streaming-configured.png)
 
 ## Sample flows<a name="stop-media-streaming-samples"></a>
+
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 
 [Example flow for testing live media streaming](use-media-streams-blocks.md) 

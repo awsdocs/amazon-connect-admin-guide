@@ -7,7 +7,7 @@ When an agent logs in, the CCP attempts to connect to the Amazon EC2 signaling e
 
 **Inbound calls**
 + When an inbound call is received, the call is anchored to an Amazon Connect endpoint\. Any external transfers or conferences also use this anchor until the call is disconnected\.
-+ When an agent is available, the call is pushed through via a new Amazon EC2 connection to their browser and offered to the agent\.
++ When an agent is available, the call is pushed through using a new Amazon EC2 connection to their browser and offered to the agent\.
 + When the agent accepts the call and either the external device has been answered or the CCP determines it can receive a call, a connection to Amazon Connect is established for call media to the agent\.
 
 **Transferred calls**

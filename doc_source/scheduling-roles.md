@@ -12,4 +12,4 @@ There are a variety of roles for people who might create and manage schedules in
 
 1. **Agent** – Answers contacts, views the generated schedule, manages requests for time off, overtime \(OT\), and voluntary time off \(VTO\)\.
 
-Amazon Connect provides security profile permissions that you can assign to each role, so that you can manage access to specific features by role\. For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\.
+Amazon Connect provides security profile permissions that you can assign to each role, so that you can manage access to specific features by role\. For more information, see [Security profile permissions for forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\.

@@ -1,35 +1,36 @@
 # Set up outbound caller ID<a name="queues-callerid"></a>
 
-We recommend setting your outbound caller ID\. Not doing so may result in some PSTN carriers considering your outbound calls fraudulent activity, and they may drop them\. 
+This topic explains how to set up your outbound caller ID name and number\. 
 
-There are a few times when your outbound caller ID—your company name and number—will appear to contacts:
-+ During customer callbacks\.
-+ If an agent makes an outbound call\.
-+ If an agent transfers a call, for example, to an external number\.
+**Topics**
++ [Outbound parameters: Set in queue](#set-callerID-name)
++ [How to set the caller ID number dynamically](#using-dynamic-caller-id)
++ [Use E\.164 format for international phone numbers](#international-calls-ccp)
++ [How to specify a custom caller ID number using a [Call phone number](call-phone-number.md) block](#call-number-block-how-it-works)
++ [CNAM](#CNAM)
++ [Avoid labels like "spam"](#enroll-in-CNAM-services)
 
-## Caller ID name: Set in queue<a name="set-callerID-name"></a>
+## Outbound parameters: Set in queue<a name="set-callerID-name"></a>
 
-You set the caller ID name, such as the name of your company, in the queue settings\. To edit queue settings, on the navigation menu choose **Routing**, **Queues**, and then choose the queue you want to edit\.
+You set the outbound caller ID name \(such as the name of your company\) and caller ID number in the queue settings\. To edit queue settings, on the navigation menu choose **Routing**, **Queues**, and then choose the queue you want to edit\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callerID-callerName.png)
+The following image shows an **Edit queue** page with an arrow pointing to the **Outbound caller ID name** and **Outbound caller ID number**\.
 
-**If your DID/TFN phone number is in the US/CANADA:** The name you use should be the same one that's registered in the CNAM \(Caller Name\) database provided by Amazon Connect; this is a nationwide resource available in the US/CANADA to provide the name of the calling party on incoming calls if recipients subscribe to CNAM services from their telecom carrier\.
+![\[The Edit queue page, the Outbound caller ID name and number boxes.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callerID-callerName.png)
 
-Open an AWS Support ticket to register your US based phone number with your company name in the CNAM database of the Amazon Connect carrier\. We'll handle the registration process for you\. **It may take up to 30 days for the caller ID names to propagate through the database\.** 
+### Outbound caller ID name<a name="outbound-callerID"></a>
 
-**If you are using CNAM phoning into CANADA**, the end network may support Caller ID lookups, but this functionality is not guaranteed, as not all receiving networks support this feature\. We are currently unable to provide support for lookups in other locales\.
+The **Outbound caller ID name** is set to the value that is passed from the SIP header\. For example, `Alice<sip:alice@example.com>`\. 
 
 **Important**  
-CNAM is not supported for custom caller IDs, third\-party numbers, or with the use of whisper flow transfers\.
+Amazon Connect runs on a SIP\-only infrastructure through our carrier partners\. However, the caller ID name can be delivered to your customers only if the call path across the public telephony network is all on SIP\. Because your customers are on many different networks outside of what Amazon Connect controls, the caller ID name is not guaranteed to be delivered to your customers\. Depending on the country this will be up to 75% effective\.   
+To guarantee your caller ID name is delivered to customers, see [Optimize your reputation for outbound calling](optimize-outbound-calling.md) for information about achieving it by using partner solutions\.
 
-**Tip**  
-If you want each agent to have their own caller ID name while calling out \(such as *Example Corp Billing Dept*\), create a queue for each agent/caller ID name\.
+### Outbound caller ID number<a name="using-call-number-block"></a>
 
-## Caller ID number: Set in the queue or Call phone number block<a name="using-call-number-block"></a>
+Only phone numbers that you've [claimed](get-connect-number.md) or [ported to Amazon Connect](port-phone-number.md) can be used as your caller ID number\.
 
-Only phone numbers that you've [claimed](claim-phone-number.md) or [ported to Amazon Connect](port-phone-number.md) can be used as your caller ID number\.
-
-To use an external phone number as your outbound caller ID number, contact AWS Support to see if it's possible\. You'll need to provide [proof of ownership](phone-number-requirements.md)\.
+To use an external phone number as your outbound caller ID number, contact AWS Support to see if it's possible\. The phone number needs to be in a [ country we support](https://d1v2gagwb6hfe1.cloudfront.net/Amazon_Connect_Telecoms_Coverage.pdf) for custom caller ID and you'll need to provide [proof of ownership](phone-number-requirements.md)\.
 
 You can set the caller ID number as follows:
 + **[Call phone number](call-phone-number.md) block**: Use this block in an [Outbound whisper flow](create-contact-flow.md#contact-flow-types) to initiate an outbound call to a customer and, optionally, specify a custom caller ID number that is displayed to call recipients\.
@@ -40,9 +41,18 @@ You can set the caller ID number as follows:
 + **Queue:** If no caller ID number is specified in the [Call phone number](call-phone-number.md) block, then the caller ID in the queue settings is used\.
 
 **Important**  
-**In Australia**: The caller ID must be an Amazon Connect provided DID \(Direct Inward Dialing\) phone number\. If a toll free number or a number not provided by Amazon Connect is used in the caller ID, local telephony suppliers may reject outbound calls due to local anti\-fraud requirements\.
+Telecoms regulation limit the telephone numbers that can be used to make outbound calls in various countries\. If you have set up a new number and you are not able to make outbound calls, it may be because you have configured a number that is not permitted to make outbound calls\. Check our [Amazon Connect Telecoms Country Coverage Guide](https://d1v2gagwb6hfe1.cloudfront.net/Amazon_Connect_Telecoms_Coverage.pdf) and [Region requirements for ordering and porting phone numbers](phone-number-requirements.md)\.
 
-## Setting the caller ID dynamically<a name="using-dynamic-caller-id"></a>
+### Toll\-free numbers for caller ID<a name="tfn-callerid"></a>
+
+Using toll\-free numbers for outbound communications have a number of limitations\. For example, using a toll\-free number to dial other toll\-free numbers in the United States can result in the number being filtered, blocked, or not properly routed to the destination by carriers\. Toll\-free numbers may be terminated at a higher than expected rate\. If you know you need to call toll\-free numbers in the United States you must use DIDs to make the calls to be guaranteed call delivery\.
+
+If you're using toll\-free numbers outside of the US, refer to the [Amazon Connect Telecoms Country Coverage Guide](https://d1v2gagwb6hfe1.cloudfront.net/Amazon_Connect_Telecoms_Coverage.pdf) to see which countries support toll\-free numbers as outbound\. For example, for Australia the guide shows it's not permitted to use toll\-free numbers due to local regulations; the **National Outbound** column indicates that toll\-free numbers are not supported\. 
+
+**Important**  
+Toll\-free products are designed to be national products and phoned within the country\. We do not guarantee international reachability of any of these services as access to the numbers is controlled by the caller's network access\. 
+
+## How to set the caller ID number dynamically<a name="using-dynamic-caller-id"></a>
 
 Use an attribute in the [Call phone number](call-phone-number.md) block to set the caller ID number dynamically during the flow\. 
 
@@ -61,11 +71,10 @@ Amazon Connect requires phone numbers in [ E\.164](https://www.itu.int/rec/T-REC
 To express a US phone number in E\.164 format, add the '\+' prefix and the country code in front of the number\. For example, for a US number: 
 +  \+1\-800\-555\-1212
 
-In the UK and many other countries internationally, local dialing requires the addition of a 0 in front of the subscriber number\. However, to use E\.164 formatting, this 0 must be removed\. A number such as 020 718 xxxxx in the UK would be formatted as \+44 20 718 xxxxx\.
+In the UK and many other countries internationally, local dialing requires the addition of a 0 in front of the subscriber number\. However, to use E\.164 formatting, this 0 must be removed\. A number such as 020 718 xxxxx in the UK would be formatted as \+44 20 718 xxxxx\. When you place calls from the CCP using Amazon Connect the CCP provides the correct formatting for numbers automatically\.
 
-Phone numbers that are not formatted in E\.164 may work, but it depends on the phone or handset that is being used as well as the carrier from which the call is originated\.
-
-When you place calls from the CCP using Amazon Connect the CCP provides the correct formatting for numbers automatically\.
+**Important**  
+Phone numbers that are not formatted in E\.164 will not work\. They will also result in a breach of [ Amazon Connect Service Terms and conditions](http://aws.amazon.com/service-terms/) for acceptable use which may result in your service being suspended\.
 
 ## How to specify a custom caller ID number using a [Call phone number](call-phone-number.md) block<a name="call-number-block-how-it-works"></a>
 
@@ -90,24 +99,14 @@ It is your responsibility to ensure the numbers you are using are legally permis
 
    There is no error branch for the block\. If a call is not successfully initiated, the flow ends and the agent is placed in an **AfterContactWork** \(ACW\) state\.
 
-## Why your caller ID might not appear correctly to customers<a name="why-callerid-name-might-not-appear-correctly"></a>
+## CNAM<a name="CNAM"></a>
 
-Amazon Connect presents Outbound Caller ID Name correctly via the Calling Line/Party Presentation service on outbound calls\. In testing, with all of our telephony providers, the Outbound Caller ID Name value comes back to us intact on all the carriers we use\. This service is not consistent because downstream carriers \(including mobile carriers\) often ignore the value we set in the Outbound Caller ID Name and CNAM is not regulated or enforced\. 
+As part of changes within the US Public Telephone network and a move to alternative reputation mechanisms described in [Optimize your reputation for outbound calling](optimize-outbound-calling.md), as of March 31, 2023, Amazon Connect no longer sets CNAM configurations\. 
+
+We conducted research between January and March 2023, that showed CNAM was seen by fewer than 7% of users\. This is due to changes within support for mobile providers and due to the migration to app\-based reputation mechanisms\. 
+
+All existing CNAM configurations set up before March 2023, are still in place\. We will continue to focus on supporting modern replacement mechanisms added to our marketplace, for example, [First Orion](https://firstorion.com/amazon-connect-integration/) and [Neustar](https://www.discover.neustar/202208-CS-7654-CR-Partner-Marketing-BCD---Amazon-Connect_0001-LP.html)\. 
 
 ## How to avoid labels like "spam" and "telemarketer"<a name="enroll-in-CNAM-services"></a>
 
-Amazon Connect has contracted with a leading provider of CNAM services for US numbers to provide Calling Name to the extent possible\. This enables outbound calls that show the enrolled Calling Line Identity \(CLI\) to generally avoid reputation\-sensitive labels like "spam" or "telemarketer\."
-
-To enroll your numbers with this CNAM services provider, open an AWS Support ticket\. Our support team will gather the required information to enroll your numbers\. For instructions on how to access AWS Support, see [Get administrative support for Amazon Connect](get-admin-support.md)\.
-
-**Note**  
-Only numbers in the 50 US states, Puerto Rico, and Virgin Islands are eligible\.
-
-## Toll\-free numbers for caller ID<a name="tfn-callerid"></a>
-
-Using toll\-free numbers for outbound communications have a number of limitations\. For example, using a toll\-free number to dial other toll\-free numbers in the United States can result in the number being filtered, blocked, or not properly routed to the destination by carriers\. Toll\-free numbers may be terminated at a higher than expected rate\. If you know you need to call toll\-free numbers in the United States you must use DIDs to make the calls to be guaranteed call delivery\.
-
-If you're using toll\-free numbers outside of the US, refer to the [Amazon Connect Telecoms Country Coverage Guide](https://d1v2gagwb6hfe1.cloudfront.net/Amazon_Connect_Telecoms_Coverage.pdf) to see which countries support toll\-free numbers as outbound\. For example, for Australia the guide shows it's not permitted to use toll\-free numbers due to local regulations; the **National Outbound** column indicates that toll\-free numbers are not supported\. 
-
-**Important**  
-Toll\-free products are designed to be national products and phoned within the country\. We do not guarantee international reachability of any of these services as access to the numbers is controlled by the caller's network access\. 
+See the recommended steps in [Optimize your reputation for outbound calling](optimize-outbound-calling.md)\.

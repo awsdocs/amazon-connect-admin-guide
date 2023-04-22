@@ -6,6 +6,6 @@ A loudness score measures how loudly the customer or agent are speaking during a
 
 We recommend using loudness scores together with sentiments\. Look for areas of the conversation where the loudness score is high and the sentiment is low\. Then read that portion of the transcript or listen to that section of the call\. 
 
-For example, the following image shows where the customer is talking loudly and their sentiment is negative\.
+For example, the following is an image of a recording and transcript analysis\. Spiked vertical bars indicate where the customer is talking loudly\. The horizontal red bars indicate their sentiment is negative\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-amplitude.png)
+![\[The contact details page, loudness scores.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-amplitude.png)

@@ -1,4 +1,4 @@
-# Make outbound calls<a name="make-outbound-calls"></a>
+# How to use the CCP to make outbound calls<a name="make-outbound-calls"></a>
 
 Before you can make an outbound call, your contact center must be set up to allow agents to make calls\. For more information, see [Step 3: Set telephony](amazon-connect-instances.md#get-started-telephony) in [Create an Amazon Connect instance](amazon-connect-instances.md)\.
 
@@ -12,6 +12,6 @@ For information about the caller ID that's displayed when you make an outbound c
 1. In your Contact Control Panel, choose **Number pad**\.
 
 1. Use the dropdown menu to choose the country, then enter the number\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-make-outbound-call.png)
+![\[The ccp, the number pad, the call button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-make-outbound-call.png)
 
 1. Choose **Call**\.

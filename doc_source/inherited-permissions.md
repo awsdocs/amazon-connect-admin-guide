@@ -4,11 +4,11 @@ Some security profiles included inherited permissions: when you give a user expl
 
 For example, assume you explicitly grant someone permission to **Edit/View** queues, as shown in the following image: 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/inherited-permissions.png)
+![\[The security profile permissions section of the security profiles page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/inherited-permissions.png)
 
-By doing this you also implicitly grant them permissions to **View** a list of all phone numbers and hours of operation in your Amazon Connect instance, **when they add them to the queue**\. On the **Add new queue** page, the phone numbers and hours of operation appear in the drop\-down lists, as shown in the following image: 
+By doing this you also implicitly grant them permissions to **View** a list of all phone numbers and hours of operation in your Amazon Connect instance, **when they add them to the queue**\. On the **Add new queue** page, the available phone numbers and hours of operation appear in dropdown lists, as shown in the following image\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/drop-down-permissions.png)
+![\[The add new queue page, the hours of operation dropdown list, the outbound caller id number dropdown list.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/drop-down-permissions.png)
 
 However, the user doesn't have permissions to **Edit** the phone numbers and hours of operation\. 
 

@@ -1,4 +1,4 @@
-# Browsers supported by Amazon Connect<a name="browsers"></a>
+# Browsers supported by Amazon Connect<a name="connect-supported-browsers"></a>
 
 Before you work with Amazon Connect, verify that your browser is supported using the following table\. 
 

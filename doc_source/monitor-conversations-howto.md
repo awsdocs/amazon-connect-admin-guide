@@ -6,9 +6,11 @@ Before you can listen to live conversations or read live chats, the Amazon Conne
 
 1. Open the Contact Control Panel \(CCP\) by choosing the phone icon in the top\-right corner of your screen\. You'll need the CCP open to connect to the conversation\. 
 
-1. To choose the agent conversation you want to monitor, in Amazon Connect choose **Analytics and optimization**, **Real\-time metrics**, **Agents**\.
+1. To choose the agent conversation you want to monitor, in Amazon Connect choose **Analytics and optimization**, **Real\-time metrics**, **Agents**\. The following image shows the **Real\-time metrics** page, with an arrow pointing to the **Agents** option\.  
+![\[The real-time metrics page, the Agents option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/real-time-metrics-agents.png)
 
-1. To monitor voice conversations: Next to the names of agents in a live voice conversation, you'll see an eye icon\. Choose the icon to start monitoring the conversation\.
+1. To monitor voice conversations: Next to the names of agents in a live voice conversation, there is an eye icon\. Choose the icon to start monitoring the conversation\. The following image shows the eye icon next to the **Voice** channel\.  
+![\[The real-time metrics page, the Channels column, the voice channel.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/monitor-call-icon.png)
 
    When you're monitoring a conversation, the status in your CCP changes to **Monitoring**\.
 

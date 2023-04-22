@@ -1,7 +1,9 @@
 # Flow block: Get queue metrics<a name="get-queue-metrics"></a>
 
 ## Description<a name="get-queue-metrics-description"></a>
-+ Retrieves the following real\-time metrics from a queue so you can make routing decisions\. If there is no current activity in your contact center, nothing is returned for these metrics\. 
++ Retrieves near real\-time metrics, with a delay of 5\-10 seconds, from a queue so you can make routing decisions\. If there is no current activity in your contact center, nothing is returned for these metrics\. 
+
+  Following are the metrics that can be retrieved:
   + [Queue name](real-time-metrics-definitions.md#queue-real-time) 
   + Queue ARN\. 
   + [Contacts in queue](real-time-metrics-definitions.md#in-queue-real-time)
@@ -35,16 +37,18 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="get-queue-metrics-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-properties1.png)
+The following image shows the **Properties** page of the **Get queue metrics** block\. It is configured to retrieve metrics for the **Voice** channel\.
+
+![\[The properties page of the Get queue metrics block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-properties1.png)
 
 You can retrieve metrics by channel, and/or by queue or agent\.
 + If you don't specify a channel, it returns metrics for all channels\. 
 + If you don't specify a queue, it returns metrics for the current queue\.
 + Dynamic attributes can only return metrics for one channel\. 
 
-For example, if you choose the following settings, **Get queue metrics** would return metrics for only the BasicQueue, filtered to include only chat contacts\. 
+For example, the following image shows the **Properties** page configured for the **Chat** channel and **BasicQueue**\. If you choose these settings **Get queue metrics** would return metrics for only the BasicQueue, filtered to include only chat contacts\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-properties3.png)
+![\[The optional parameters section of the Properties page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-properties3.png)
 
 ## Configuration tips<a name="get-queue-metrics-tips"></a>
 
@@ -56,7 +60,7 @@ Before you use dynamic attributes in the **Get queue metrics** block, you need t
 
 When you set a channel dynamically using text, as shown in the following image, for the attribute value enter **Voice** or **Chat**\. This value is not case\-sensitive\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-properties2.png)
+![\[The properties page of the Set contact attributes block, Value set to chat.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-properties2.png)
 
 ### Using the Check contact attributes block after the Get queue metrics block<a name="get-queue-metrics-tips2"></a>
 
@@ -66,14 +70,14 @@ After a **Get queue metrics** block, add a [Check contact attributes](check-cont
 
 1. In the **Check contact attributes** block, set **Attribute to check** to **Queue metrics**\.
 
-1. In the **Attributes** dropdown box, you'll see that the following queue metrics are returned by the **Get queue metrics** block\. Choose the metric that you want to use for the routing decision\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-block-returned-metrics.png)
+1. In the **Value** dropdown box, you'll see a list of queue metrics that can be checked by the **Get queue metrics** block\. Choose the metric that you want to use for the routing decision\.   
+![\[Attribute to check section, dropdown list of available metrics.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-block-returned-metrics.png)
 
 ## Configured block<a name="get-queue-metrics-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has two branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-configured.png)
+![\[A configured Get queue metrics block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-configured.png)
 
 ## Scenarios<a name="get-queue-metrics-scenarios"></a>
 

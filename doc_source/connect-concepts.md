@@ -11,7 +11,7 @@ This section explains concepts that will help you set up your Amazon Connect con
 
 **Topics**
 + [Telephony](concepts-telephony.md)
-+ [Chat](chat.md)
++ [Web and mobile chat](web-and-mobile-chat.md)
 + [Tasks](tasks.md)
 + [Routing profiles](concepts-routing.md)
 + [Queues: standard and agent](concepts-queues-standard-and-agent.md)

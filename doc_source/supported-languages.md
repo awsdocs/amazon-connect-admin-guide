@@ -1,5 +1,18 @@
 # Languages supported by Amazon Connect<a name="supported-languages"></a>
 
+This topic lists Amazon Connect features and which languages they support\.
+
+**Topics**
++ [Contact Control Panel](#supported-languages-ccp)
++ [Chat message content](#supported-languages-chat)
++ [Amazon Connect Admin console](#supported-languages-admin-console)
++ [Contact Lens for Amazon Connect](#supported-languages-contact-lens)
++ [Pattern match languages](#supported-languages-contact-lens-pattern-matching)
++ [Amazon Connect forecasting, capacity planning, and scheduling](#supported-languages-forecasting)
++ [Amazon Connect Wisdom](#supported-languages-wisdom)
++ [Amazon Lex](#supported-languages-lex)
++ [Amazon Polly](#supported-languages-polly)
+
 ## Contact Control Panel<a name="supported-languages-ccp"></a>
 
 
@@ -68,7 +81,7 @@ In Contact Lens, the pattern match feature supports the following languages:
 + Portuguese
 + Spanish \(Spain\)
 
-## Amazon Connect Forecasting, capacity planning, and scheduling<a name="supported-languages-forecasting"></a>
+## Amazon Connect forecasting, capacity planning, and scheduling<a name="supported-languages-forecasting"></a>
 + English \(United States\)
 
 ## Amazon Connect Wisdom<a name="supported-languages-wisdom"></a>

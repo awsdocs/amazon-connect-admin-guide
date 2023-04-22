@@ -2,7 +2,7 @@
 
 To help provide a better contact center, you can use Amazon Connect with the following AWS services\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/connect-overview2.png)
+![\[Icons for all the services you can use with Amazon Connect.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/connect-overview2.png)
 
 ## Development<a name="development-services"></a>
 

@@ -5,30 +5,7 @@
 + Amazon Connect returns results for completed contacts\. If an agent is still doing After Contact Work \(ACW\) on a contact, for example, that contact is not considered closed and won't be returned in the search results\.
 + The search results for a given query are limited to the first 10K results returned\.
 + When you filter by Contact ID, only results for that specific contact will be returned and other criteria are ignored\. For example, say you search for Contact ID 12345 and agent login Jane Doe\. Results for Contact ID 12345 will be returned regardless of whether Jane Doe was the agent\.
-
-## What's new in contact search<a name="new-contact-search-experience"></a>
-
-Thanks to your feedback, we've made the following changes to contact search\.
-
-### Search contacts by agent's first or last name<a name="search-contacts-agent-name"></a>
-
-The following image shows the Agent filter, and the option to choose agents by name\.
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-agent-name.png)
-
-### Required permissions to "Agent" search filter<a name="users-view-permissions-contact-search"></a>
-
-To use the **Agent** filter on the **Contact search** page, in your Amazon Connect security profile you must have **Users \- View** permissions, as shown in the following image: 
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search.png)
-
-When you have **Users \- View** permissions, on the **Contact search** page the **Agent** filter appears, as shown in the following image:
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search3.png)
-
-Without **User \- View** permissions, the **Agent** filter is not visible, and searching contacts by Agent login is not supported, as shown in the following image:
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search2.png)
++ You cannot search for multiple contact IDs at the same time\.
 
 ## Key search features<a name="key-search-features"></a>
 + [Search by custom contact attributes](search-custom-attributes.md) \(user\-defined attributes\)\.
@@ -39,14 +16,16 @@ Without **User \- View** permissions, the **Agent** filter is not visible, and s
 + Filters for [Contact Lens for Amazon Connect](analyze-conversations.md)\. You can [search for Contact categories](search-conversations.md#contact-category-search) by specifying the full category name\. Choose to search using **Match any** or **Match all**\. For example, you can search contacts with both "category A" and "category B," or with either one of the two categories\.
 
   In the **Add filter** drop\-down box, the Contact Lens filters have **CL** next to them\. You can apply these filters only if your organization has enabled Contact Lens\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-contact-category-1.png)
+![\[The contact search page, the filters section, the filter dropdown menu.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-contact-category-1.png)
 
   If you want to remove the Contact Lens filters from a user's drop\-down list, remove the following permissions from their security profile: 
   + **Search contacts by conversation**: This controls access to the sentiment scores, non\-talk time, and category searches\.
   +  **Search contacts by keywords**: This controls access to the keywords search\.
   +  **Contact Lens \- speech analytics**: On the Contact Trace Record page, this displays graphs that summarize speech analytics\.
-+ Filters for [Voice ID](voice-id.md)\. You can search for the Voice ID authentication and fraud detection status of contacts, if your organization has enabled Voice ID\. To access this functionality, on your security profile, you need **Analytics and Optimization**, **Voice ID \- attributes and search** \- **View** permission\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-search-filters.png)
++ Filters for [Voice ID](voice-id.md)\. You can search for the Voice ID authentication and fraud detection status of contacts, if your organization has enabled Voice ID\. To access this functionality, on your security profile, you need **Analytics and Optimization**, **Voice ID \- attributes and search** \- **View** permission\.
+
+  The following image shows the filters available to search Voice ID: **Authentication result**, **Fraud detection result**, **Speaker actions**\.  
+![\[The filter dropdown menu, filters for Voice ID.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-search-filters.png)
 
 ## Manage who can search for contacts and access detailed information<a name="required-permissions-search-contacts"></a>
 

@@ -25,9 +25,11 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="change-routing-priority-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/change-routing-priority-properties.png)
+The following image shows the **Properties** page of the **Change routing priority / age** block\. It is configured to add 8 seconds to the routing age of the contact\.
 
-This block gives you two options for changing a customer's position in queue: 
+![\[The properties page of the Change routing priority / age block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/change-routing-priority-properties.png)
+
+This block gives you two options for changing a contact's position in queue: 
 + **Set priority**\. The default priority for new contacts is 5\. You can raise the priority of a contact \- compared to other contacts in the queue \- by assigning them a higher priority, such as 1 or 2\. 
 + **Adjust by time**\. You can add or subtract seconds or minutes from the amount of time the current contact spends in queue\. Contacts are routed to agents on a first\-come, first\-served basis\. So changing their amount of time in queue compared to others also changes their position in queue\.
 
@@ -45,18 +47,18 @@ Here's how this block works:
 
 ## Configured block<a name="change-routing-priority-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It shows the **Queue time** is set to \+8 seconds, and it has a **Success** branch\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/change-routing-priority-configured.png)
+![\[A configured Change routing priority age block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/change-routing-priority-configured.png)
 
 ## Sample flows<a name="change-routing-priority-samples"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample customer queue priority](sample-customer-queue-priority.md)
 +  [Sample queue configurations](sample-queue-configurations.md)
 
 ## Scenarios<a name="change-routing-priority-scenarios"></a>
 
 See these topics for more information about how routing priority works:
-+ [Routing profiles](concepts-routing.md)
++ [Concepts: Routing profiles](concepts-routing.md)
 + [How routing works](about-routing.md)

@@ -19,12 +19,12 @@ For managers to monitor live conversations, you assign them the **CallCenterMana
 1. Choose **Add new security profile**\. 
 
 1. Expand **Analytics and optimization**, then choose **Access metrics** and **Manager monitor**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/monitor-conversations-agent-permissions.png)
+![\[The Analytics and optimization section of the security profiles page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/monitor-conversations-agent-permissions.png)
 
    **Access metrics** is needed so they can access the real\-time metrics report, which is where they choose which conversations to monitor\.
 
 1. Expand **Contact Control Panel**, then choose **Access Contact Control Panel** and **Make outbound calls**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/monitor-conversations-agent-permissions2.png)
+![\[The contact control panel section of the security profiles page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/monitor-conversations-agent-permissions2.png)
 
    These permissions are needed so they can monitor the conversation through the Contact Control Panel\.
 

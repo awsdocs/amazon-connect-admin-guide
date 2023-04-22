@@ -21,9 +21,13 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="call-phone-number-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-phone-number1.png)
+The following image shows an example of what the **Call phone number** properties page looks like when you select a phone number manually\. The **Select a number from your instance** option is selected, and the dropdown menu displays a list of available phone numbers claimed for your instance\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-phone-number2.png)
+![\[The Call phone number properties page. The Select a number from your instance option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-phone-number1.png)
+
+The following image shows an example of what the **Call phone number** properties page looks like when you select a phone number dynamically\. The **Use Atttribute** option is selected\. The **Namespace** box is set to **User\-defined**\. The **Attribute** box is set to **MainPhoneNumber**\. 
+
+![\[The properties page of the Call phone number block. The Use Attribute option is selected, Namespace is set to User-defined.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-phone-number2.png)
 
 Outbound whisper flows run in Amazon Connect immediately after an agent accepts the call during direct dial and callback scenarios\. When the flow runs: 
 + The caller ID number is set if one is specified in the [Call phone number](#call-phone-number) block\.
@@ -37,15 +41,15 @@ To use a custom caller ID, you must open an AWS Support ticket to enable this fe
 
 ## Configured block<a name="call-phone-number-configured-block"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It shows the **Caller ID** phone number, and a **Success** branch\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-phone-number-configured.png)
+![\[A configured Call phone number block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/call-phone-number-configured.png)
 
 There is no error branch for the block\. If a call is not successfully initiated, the flow ends and the agent is placed in an **AfterContactWork** \(ACW\)\. 
 
 ## Sample flows<a name="call-phone-number-sample-flows"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample customer queue priority](sample-customer-queue-priority.md)
 +  [Sample queue configurations](sample-queue-configurations.md)
 

@@ -4,7 +4,7 @@ If your organization uses Contact Lens for Amazon Connect, you may get real\-tim
 
 The following image shows how an article may appear in the agent workspace when you're on a call\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro2.png)
+![\[An article displayed in the agent workspace.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro2.png)
 
 1. You're on a call\.
 
@@ -18,4 +18,4 @@ You can select the recommendation to view the entire article, or choose **Show l
 
 As more recommendations are sent, you can toggle through them and choose those you want to read\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-show-less.png)
+![\[The show less control to close article.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-show-less.png)

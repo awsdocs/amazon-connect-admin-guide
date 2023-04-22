@@ -10,19 +10,21 @@ The following steps show how to change the default message customers hear when t
 
 1. On the navigation menu, choose **Routing**, **Flows**\.
 
-1. Choose the default flow you want to customize\. For example, choose **Default customer queue** if you want to create your own message when a customer is put in queue instead of using the one we've provided\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow1.png)
+1. Choose the default flow you want to customize\. For example, choose **Default customer queue** if you want to create your own message when a customer is put in queue instead of using the one we've provided\. This is shown in the following image\.  
+![\[The contact flows page, the default customer queue.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow1.png)
 
 1. To customize the message, choose the **Loop prompts** block to open the properties page\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow2.png)
+![\[The Loop prompts block in the default customer queue flow.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow2.png)
 
-1. Use the dropdown box to either choose different music, or set to **Text to Speech** and then type a message to be played, as shown in the following image\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow3.png)
+1. On the *Properties* page of the *Loop prompts* block, use the dropdown box to either choose different music, or set to **Text to Speech**\. Type a message to be played\. 
+
+   For example, the following image shows the message "*Thank you for calling\. Did you know you can reset your own password at the login page? Choose Reset now, and following the prompts\.*"   
+![\[A text message on the Properties page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow3.png)
 
 1. Choose **Save** at the bottom of the properties page\. 
 
 1. Choose **Publish**\. Amazon Connect starts playing the new message almost immediately \(it may take a few moments for it to fully take effect\)\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow4.png)
+![\[The publish button on the flow designer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow4.png)
 
 ## Copy a default flow before customizing it<a name="create-new-default"></a>
 
@@ -32,10 +34,10 @@ Use the following steps to create a new flow based a current default\.
 
 1. Choose the default flow you want to customize\. 
 
-1. In the upper right corner of the page, choose the **Save** drop\-down arrow\. Choose **Save as**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow.png)
+1. In the upper right corner of the page, choose the **Save** drop\-down arrow\. Choose **Save as**, as shown in the following image\.  
+![\[The Save dropdown box, the Save as option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-contact-flow.png)
 
 1. Assign a new name for the flow, for example, **Customer hold message**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-customer-hold.png)
+![\[The Save as dialog box.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customize-default-customer-hold.png)
 
 1. Add the new flow \(in this case, **Customer hold message**\) to the flows you create so it's run instead of the default\. 

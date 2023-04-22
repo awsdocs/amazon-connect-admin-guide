@@ -30,7 +30,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="invoke-lambda-function-block-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-lambda-properties.png)
+The following image shows the **Properties** page of the **AWS Lambda function** block\.
+
+![\[The properties page of the Invoke AWS Lambda function block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-lambda-properties.png)
 
 Note the following properties: 
 + **Timeout**: Enter how long to wait for Lambda to time out\. 
@@ -38,6 +40,7 @@ Note the following properties:
   If your Lambda invocation gets throttled, the request is retried\. It is also retried if a general service failure \(500 error\) happens\. 
 
   When a synchronous invocation returns an error, Amazon Connect retries up to three times, for a maximum of 8 seconds\. At that point, the contact is routed down the **Error** branch\.
++ **Response validation**: The Lambda function response could be either a STRING\_MAP or JSON and has to be set while configuring the **Invoke AWS Lambda function** block in the flow\. If response validation is set to STRING\_MAP, then the lambda function should return a flat object of key/value pairs of the string type\. Otherwise, if response validation is set to JSON, the lambda function can return any valid JSON including nested JSON\.
 
 ## Configuration tips<a name="invoke-lambda-function-block-tips"></a>
 + To use an AWS Lambda function in a flow, first add the function to your instance\. For more information, see [Add a Lambda function to your Amazon Connect instance](connect-lambda-functions.md#add-lambda-function), 
@@ -45,11 +48,13 @@ Note the following properties:
 
 ## Configured block<a name="invoke-lambda-function-block-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has two branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-lambda-configured.png)
+![\[A configured Invoke AWS Lambda function block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-lambda-configured.png)
 
 ## Sample flows<a name="invoke-lambda-function-block-samples"></a>
+
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 
 [Sample Lambda integration](sample-lambda-integration.md)
 

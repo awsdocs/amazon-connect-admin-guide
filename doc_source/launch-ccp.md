@@ -5,7 +5,7 @@ The URL to launch the CCP is:
 
 Where *instance name* is provided by your IT department or whoever set up Amazon Connect for your business\. The following image shows an example URL for the CCP\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-login-url.png)
+![\[The contact control panel, the URL.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-login-url.png)
 
 With this updated CCP, your agents can manage voice, chat, and tasks from this single interface\.
 

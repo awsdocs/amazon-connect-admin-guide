@@ -1,9 +1,4 @@
-# Customize views \(Preview\)<a name="customize-views-jsx-sg"></a>
-
-
-|  | 
-| --- |
-| This is prerelease documentation for a service in preview release\. It is subject to change\. | 
+# Customize views<a name="customize-views-jsx-sg"></a>
 
 You can customize the look and feel of the layouts of View resources by leveraging HTML or JSX when you pass in input parameters to the show view block\.
 

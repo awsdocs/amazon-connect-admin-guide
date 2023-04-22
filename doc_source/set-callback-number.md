@@ -24,29 +24,31 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="set-callback-number-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callback-number.png)
+The following image shows the **Properties** page of the **Set callback number** block\.
+
+![\[The properties page of the Set callback number block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callback-number.png)
 
 ## Configuration tips<a name="set-callback-number-tips"></a>
 + The [Store customer input](store-customer-input.md) block often comes before this block\. It stores the customer's callback number\.
 
 ## Configured block<a name="set-callback-number-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Success**, **Invalid number**, and **Not dialable**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callback-number-configured.png)
+![\[A configured Set callback number block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-callback-number-configured.png)
 
-1. The customer entered phone number that is not valid\.
+1. **Invalid number**: The customer entered phone number that is not valid\.
 
-1. Amazon Connect is unable to dial that number\. For example, if your instance is not allowed to make calls to \+447 prefix phone numbers, and the customer requested callback to a \+447 prefix number\. Even though number is valid, Amazon Connect cannot call it\. 
+1. **Not dialable**: Amazon Connect is unable to dial that number\. For example, if your instance is not allowed to make calls to \+447 prefix phone numbers, and the customer requested callback to a \+447 prefix number\. Even though number is valid, Amazon Connect cannot call it\. 
 
 ## Sample flows<a name="set-callback-number-samples"></a>
 
- See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample queue configurations](sample-queue-configurations.md)
 + [Sample queued callback](sample-queued-callback.md): this sample only applies to previous instances of Amazon Connect\.
 
 ## Scenarios<a name="set-callback-number-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Set up queued callback](setup-queued-callback.md)
++ [](setup-queued-cb.md)
 + [About queued callbacks in metrics](about-queued-callbacks.md)

@@ -5,9 +5,9 @@ This article explains how each type of quick connect works: agent, queue, and ph
 **Tip**  
 For all three types of quick connects, when the quick connect is invoked, the contact that the agent is working on hears the [Default customer hold](default-customer-hold.md) flow unless you specify a different customer hold flow\. 
 
-## Agent quick connects<a name="agent-quick-connects"></a>
+## User quick connects<a name="agent-quick-connects"></a>
 
-Let's say an agent named John is talking to a customer\. During the conversation he needs to transfer the call to an agent named Maria\. This is an agent quick connect\.
+Let's say an agent named John is talking to a customer\. During the conversation he needs to transfer the call to an agent named Maria\. This is a user quick connect\.
 
 Here's what John and Maria do, and what flow blocks are triggered: 
 
@@ -15,8 +15,8 @@ Here's what John and Maria do, and what flow blocks are triggered:
 
    When John does this, his CCP banner changes to **Connected**\. However, the call isn't actually connected to Maria yet\. 
 
-1. In our example scenario, Amazon Connect triggers an agent transfer flow that looks like the following image:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-flow-transfer-agent-transfer-flow.png)
+1. In our example scenario, Amazon Connect triggers an agent transfer flow that looks like the following image\. It has the following blocks connected by **Success** branches: a **Play prompt**, a **Set whisper flow**, another **Set whisper flow**, and then a **Transfer to agent** block\.  
+![\[An agent transfer flow in the flow designer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-flow-transfer-agent-transfer-flow.png)
 
    The call is not yet connected to Maria\.
 
@@ -53,7 +53,7 @@ Here's what John and Maria do, and what flow blocks are triggered:
 1. John chooses the **Quick Connect** button on his CCP\. \(On the earlier CCP, the button is named **Transfer**\)\. He chooses to transfer the contact to the PasswordReset queue\. As soon as John chooses the PasswordReset quick connect, his CCP banner shows **Connecting**\. 
 **Important**  
 Even though the status of the transferred call \(internal\-transfer\) shows on John's CCP banner as **Connecting**, the contact is not yet transferred to the PasswordReset queue\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-flow-transfer-transfer-connecting.png)
+![\[The CCP, the status banner says Internal transfer Connecting.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-flow-transfer-transfer-connecting.png)
 
 1. Amazon Connect invokes the queue transfer flow that's associated with the PasswordReset quick connect\. In this flow, the [Transfer to queue](transfer-to-queue.md) block transfers the contact to the PasswordReset queue since it's specified in the block\. The contact is now in the PasswordReset queue\.
 

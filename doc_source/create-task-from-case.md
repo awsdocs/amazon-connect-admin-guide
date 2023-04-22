@@ -4,4 +4,4 @@ In the agent workspace, you can add a task from a case\. In the Contact Control 
 
 When you create a task from a case, the task is automatically associated with the case and it appears on the activity feed\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-agent-application-tasks.png)
+![\[The activity feed.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-agent-application-tasks.png)

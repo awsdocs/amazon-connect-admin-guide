@@ -35,22 +35,24 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="set-disconnect-flow-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-disconnect-flow-properties.png)
+The following image shows the **Properties** page of the **Set disconnect flow** block\.
+
+![\[The properties page of the set disconnect flow block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-disconnect-flow-properties.png)
 
 ## Configured block<a name="set-disconnect-flow-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-disconnect-flow-configured.png)
+![\[A configured set disconnect flow block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-disconnect-flow-configured.png)
 
 ## Sample flows<a name="set-disconnect-flow-samples"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample inbound flow \(first contact experience\)](sample-inbound-flow.md)
 
 ## Scenarios<a name="set-disconnect-flow-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Example chat scenario](chat.md#example-chat-scenario)
++ [Example chat scenario](web-and-mobile-chat.md#example-chat-scenario)
 + [Easily create and visualize post chat surveys with Amazon Connect and Amazon Lex](https://aws.amazon.com/blogs/contact-center/easily-create-and-visualize-post-chat-surveys-with-amazon-connect-and-amazon-lex/)
 + [Building a contact survey solution for Amazon Connect](https://catalog.workshops.aws/amazon-connect-contact-survey/en-US)

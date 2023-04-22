@@ -11,4 +11,4 @@ When you [create your flows](create-contact-flow.md), you'll add the queues to t
 
 For information about how routing works, and queue\-based routing, see these topics:
 + [How routing works with multiple channels](about-routing.md#routing-profile-channels-works)
-+ [Queue\-based routing](concepts-queue-based-routing.md)
++ [Concepts: Queue\-based routing](concepts-queue-based-routing.md)

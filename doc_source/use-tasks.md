@@ -1,4 +1,4 @@
-# Work with tasks<a name="use-tasks"></a>
+# How to use the CCP to work with tasks<a name="use-tasks"></a>
 
 The topics in this section explain how to use the Amazon Connect Contact Control Panel to manage tasks\.
 

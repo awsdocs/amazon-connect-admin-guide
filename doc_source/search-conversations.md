@@ -45,7 +45,7 @@ If you enter *"thank you for your business", two, "CANCELLED Flights"*, the sear
 When searching by date, you can search up to 8 weeks at a time\. 
 
 1. Choose **Click here to add filter**, and in the dropdown menu, choose **Words or phrases**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-words-phrases.png)
+![\[The contact search page, the filters section, the add filter dropdown menu, the Words or phrases option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-words-phrases.png)
 
 1. In the **Used by** section, choose whose part of the conversation you want to search\. Note the following:
    + **System** applies to chat, where the participant may be a Lex bot or prompt\.
@@ -56,11 +56,11 @@ When searching by date, you can search up to 8 weeks at a time\.
    + Choose **Match any** to return contacts that have any of the words present in the transcripts\.
 
      For example, the following query means match \(hello OR cancellation OR "example airline"\)\. And, because no **Used by** boxes are selected, it means "find contacts where any of these words were used by any of the participants\."  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/match-any.png)
+![\[The Words or phrases dialog box, the Match any option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/match-any.png)
    + Choose **Match all** to return contacts that have all of the words present in the transcripts\. 
 
      For example, the following query means match \("thank you for your business" AND cancellation AND "example airline"\)\. And, because all the participant boxes are selected, it means "find contacts where all of these words and phrases were used by all of the participants\."  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/match-all.png)
+![\[The Words or phrases dialog box, the Match all option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/match-all.png)
 
 1. In the **Words or phrases** section, enter the words to search, separated by commas\. If you enter a phrase, surround it with quotation marks\.
 
@@ -70,7 +70,7 @@ When searching by date, you can search up to 8 weeks at a time\.
 
 With Contact Lens, you can search conversations for sentiment scores or sentiment shifts on a scale of \-5 \(most negative\) to \+5 \(most positive\)\. This enables you to identify patterns and factors for why calls go well or poorly\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-sentiment-score-shift.png)
+![\[The contact search page, the sentiment score filter.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-sentiment-score-shift.png)
 
 For example, suppose you want to identify and investigate all the contacts where the customer sentiment ended negatively\. You might search for all contacts where the sentiment score is **<=** \(less than or equal to\) \-1\. 
 
@@ -88,11 +88,11 @@ For more information, see [Investigate sentiment scores during contacts](sentime
      In addition to searching for sentiment scores when the agent or customer are on the contact, you can filter the search by when the customer is: 
      + **With agent on the chat**
      + **Without agent on the chat**: This is the time the customer is chatting with a bot, prompts, and time in queue\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-sentiment-participant.png)
+![\[The sentiment score filter, the participant dropdown menu, the customer without agent on the chat option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-sentiment-participant.png)
    + **Sentiment shift**: Identify where the customer or agent's sentiment changed during the contact\.
 
-     For example, the following images shows an example of searching for contacts where where the customer's sentiment score begins at less than or equal to \-1 and ends at greater than or equal to \+1\. In addition, the customer is on a chat with the agent present\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-sentiment-score.png)
+     For example, the following images shows an example of searching for contacts where the customer's sentiment score begins at less than or equal to \-1 and ends at greater than or equal to \+1\. In addition, the customer is on a chat with the agent present\.  
+![\[The sentiment score filter, the sentiment shift option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-sentiment-score.png)
 
 ## Search for non\-talk time<a name="nontalk-time-search"></a>
 
@@ -100,11 +100,11 @@ To help you identify which calls to investigate, you can search for non\-talk ti
 
 Non\-talk time includes hold time and any silence where both participants aren't talking for longer than three seconds\. This duration can't be customized\.
 
-Use the drop\-down arrow to specify whether to search conversations for the duration or percentage of non\-talk time\. 
+Use the drop\-down arrow to specify whether to search conversations for the duration or percentage of non\-talk time\. These options are shown in the following image\. 
 
- For information about how to use this metric, see [Investigate non\-talk time during calls](non-talk-time.md)
+ For information about how to use this metric, see [Investigate non\-talk time during calls](non-talk-time.md)\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/non-talk-time.png)
+![\[The non-talk time filter, the duration and percentage options.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/non-talk-time.png)
 
 ## Search by response time for chat conversations<a name="response-time-search"></a>
 
@@ -118,7 +118,7 @@ For the supported minimum and maximum response times, see [Amazon Connect Rules 
 
 The following image shows a search for contacts where the agent's average response time was greater than or equal to 1 minute\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/response-time.png)
+![\[The response time filter.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/response-time.png)
 
 ## Search a contact category<a name="contact-category-search"></a>
 
@@ -129,4 +129,4 @@ The following image shows a search for contacts where the agent's average respon
    + **Match all**: Searches for contacts that match all of the selected categories\.
 
    The following image shows a dropdown menu with all the current categories listed\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-contact-category2.png)
+![\[The contact category filter, the match all option, the contact categories.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-search-contact-category2.png)

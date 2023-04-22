@@ -20,7 +20,7 @@ You will need to update your Apple Messages for Business integration if you want
 If you update your Amazon Connect Instance ARN, you must also update your contact flow ID\.
 
 1. Expand **Contact options**, and then choose your **Preferred contact language**, and then choose **Web** as the contact method, if it's not selected by default\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/abc-contact-support-options.png)
+![\[The contact options page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/abc-contact-support-options.png)
 
 1. Choose **Submit**\.
 

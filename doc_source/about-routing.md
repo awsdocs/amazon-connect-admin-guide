@@ -15,21 +15,19 @@ Here's the logic Amazon Connect uses to route contacts:
 
 ## How routing works with multiple channels<a name="routing-profile-channels-works"></a>
 
-When you set up a routing profile to handle multiple channels, agents must complete the interactions with inbound contacts on one channel before they can receive a contact or a task on the other\. 
+When you set up a routing profile to handle multiple channels, you must specify whether agents can handle contacts while already on another channel\. This is called cross\-channel concurrency\. 
 
-**Example**: Say a routing profile is configured for voice contacts and for up to 10 chats and up to 10 tasks\. Here's how it would work: 
-+ When agents sign on, they can be routed a chat, task, or voice contact\.
-+ After the agents begin interacting with a voice call, no chats, tasks, or additional voice contacts are routed to them until they finish the call\. 
-+ When agents accept a chat, up to 10 chats are routed to them, but no voice contacts or tasks\. After they're done with the chats, they're available for the next contact, which could be voice, chat, or task\. 
-+ When agents accept a task, up to 10 tasks are routed to them, but no voice contacts or chats\. After they're done with the tasks, they're available for the next contact, which could be voice, chat, or task\. 
+When using cross\-channel concurrency, Amazon Connect checks which contact to offer the agent as follows: 
 
-This routing model allows agents to handle both voice and chat channels\. It routes contacts to the agent based on the type of contact the agent is already on\. This way, if an agent is already chatting with a customer, it's more efficient for the agent to respond to more chats instead of multitasking on two different channels\.
+1. It checks what contacts/channels the agent is currently handling\.
 
-To learn how to set up multiple channels, see [Create a routing profile](routing-profiles.md)\.
+1. Based on what channels they are currently handling, and the cross\-channel configuration in the agent's routing profile, it determines whether the agent can be routed the next contact\.
+
+For a detailed example of how Amazon Connect routes contacts when cross\-channel concurrency is set up, see [Example of how a contact is routed with cross\-channel concurrency](routing-profiles.md#example-routing-concurrency)\. 
 
 ## Learn more about routing<a name="learn-more-about-routing"></a>
 
 See the following topics to learn more about routing:
-+ [Routing profiles](concepts-routing.md) 
-+ [Queue\-based routing](concepts-queue-based-routing.md)
++ [Concepts: Routing profiles](concepts-routing.md) 
++ [Concepts: Queue\-based routing](concepts-queue-based-routing.md)
 + [Set up queue\-based routing](set-up-queue-based-routing.md) 

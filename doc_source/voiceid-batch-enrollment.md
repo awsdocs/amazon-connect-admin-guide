@@ -27,6 +27,8 @@ To enroll customers programmatically, pass the following data to the API:
 
 1. Optionally, a fraud check skip flag in case you want to skip checks for fraud and voice spoofing on the enrollment audio\.
 
+1. Optionally, specify a fraudster watchlist that you want to perform fraud checks against\. If no watchlist is specified, Voice ID uses the default fraudster watchlist for the domain\.
+
 1. Optionally, the fraud threshold in case you want to raise or lower the risk\.
 
 1. Optionally, a flag to re\-enroll enrolled customers\. This is useful if you want to refresh the audio recording, since the default is to ignore previously enrolled customers\.

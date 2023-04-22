@@ -15,7 +15,7 @@ A *flow* defines the customer experience with your contact center from start to 
 + [Create prompts](prompts.md)
 + [Set up contact transfers](transfer.md)
 + [Set up recording behavior](set-up-recordings.md)
-+ [Set up queued callback](setup-queued-callback.md)
++ [Set up queued callback](setup-queued-cb.md)
 + [Import/export flows](contact-flow-import-export.md)
 + [Invoke Lambda functions](connect-lambda-functions.md)
 + [Encrypt customer input](encrypt-data.md)

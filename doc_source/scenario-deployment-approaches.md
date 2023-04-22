@@ -14,7 +14,7 @@ The traditional contact center requires a significant telephony, media, networki
 
 It is common to have separate vendors and infrastructure requirements for local and remote agent hardware and VPN connectivity, Text\-To\-Speech \(TTS\), Automatic Call Distribution \(ACD\), Interactive Voice Response \(IVR\), voice audio and data, physical desk phones, voice recording, voice transcriptions, chat, reporting, database, Computer Telephony Integration \(CTI\), Automatic Speech Recognition \(ASR\), and Natural Language Understanding \(NLP\)\. Your contact center architecture and infrastructure becomes more complicated when you consider multi\-stage development, quality assurance, and test environments\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/traditionalcontactcenter.png)
+![\[Traditional contact center.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/traditionalcontactcenter.png)
 
 A typical Amazon Connect deployment solves or reduces many of the challenges associated with versioning, compatibility, licensing, contact center telephony infrastructure, and maintenance\. It gives you the flexibility to create instances in new locations in minutes and migrate components individually, or in parallel, to best meet your individual business objectives\. You can use flows for your IVR/ACD, have voice and data delivered through a supported web browser to your agent’s softphone, port your existing phone numbers, redirect softphone audio to an existing desk phone, invoke an Amazon Lex bot natively within your flow for ASR and NLP, and use the same flow for chat and voice\. You can use Amazon Contact Lens to automatically generate voice transcriptions, perform key word identification and sentiment analysis, and categorize contacts\. For agent CTI data and real\-time voice streaming, you can use Amazon Connect Agent Event Streams and Kinesis Video Streams\. You can also create multi\-stage development, quality assurance, and test environments at no additional cost and only pay for what you use\.
 
@@ -22,13 +22,13 @@ A typical Amazon Connect deployment solves or reduces many of the challenges ass
 
 Inbound is a contact center term used to describe a communication request initiated by a contact to the center\. Contacts can reach your Amazon Connect instance for inbound self\-service or to speak with a live agent in a variety of ways, including voice and chat\. Voice contacts go through the PSTN and are routed to the Amazon Connect Instance telephony entry point through the phone number claimed in your instance\. You can reserve a phone number with Amazon Connect directly, port your existing phone number, or forward voice contacts to Amazon Connect\. Amazon Connect can provide local and toll\-free numbers in all Regions where the service is supported\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/inbound.png)
+![\[Inbound contacts.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/inbound.png)
 
 When a phone call is placed to a number claimed in or ported to your Amazon Connect instance, the flow associated with the called number will be invoked\. You can define the flow using flow blocks that can be configured with no coding knowledge required\. The flow determines how the contact should be processed and routed, optionally prompting the contact for additional information to assist in routing decisions, storing those attributes to the contact details, and, if necessary, routing that contact to an agent with all of the call details and transcripts gathered along the way\. Through the flow, you can invoke AWS Lambda functions to query customer information, call other AWS services like Amazon Pinpoint to send SMS text messages, and use native AWS service integrations including Amazon Lex for NLU/NLP and Kinesis Video Streams for real\-time streaming of voice calls\. 
 
 If an inbound contact needs to reach an agent, the contact is put into a queue and routed to an agent when they change their status to Available, according to your routing configuration\. When the available agent’s contact is accepted manually or through auto\-accept configuration, Amazon Connect connects the contact with the agent\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/inbound2.png)
+![\[Contact in a queue.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/inbound2.png)
 
  When an inbound contact comes from a browser or mobile app request for a chat session, the request is routed to a web service or Amazon API Gateway endpoint that calls the Amazon Connect chat API to invoke the flow configured in your request\. You can use the same flows for chat and voice, where the experience is managed and routed dynamically, based on the logic defined in the flow\.
 
@@ -36,7 +36,7 @@ If an inbound contact needs to reach an agent, the contact is put into a queue a
 
 Amazon Connect allows you the ability to programmatically make outbound contact attempts to local and international endpoints, reduce agent set\-up time between contacts, and improve agent productivity\. By using the [Amazon Connect Streams](https://github.com/aws/amazon-connect-streams) API and [StartOutboundVoiceContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartOutboundVoiceContact.html), you can develop your own outbound solution or take advantage of existing partner integrations that work with your CRM data to create dynamic, personalized experiences for your contacts and empowering your agents with the tools and resources they need to service those contacts\. 
 
-Outbound campaigns are typically driven by contact data exported from CRMs and separated into contact lists\. Those contacts are prioritized and either delivered to the agents to initiate after a period of preview or programmatically contacted via Amazon Connect Outbound API, driven by your flow logic, and connecting to agents as needed\. Typical outbound contact center use cases include fraud and service alerts, collections, and appointment confirmations\.
+Outbound campaigns are typically driven by contact data exported from CRMs and separated into contact lists\. Those contacts are prioritized and either delivered to the agents to initiate after a period of preview or programmatically contacted using the Amazon Connect Outbound API, driven by your flow logic, and connecting to agents as needed\. Typical outbound contact center use cases include fraud and service alerts, collections, and appointment confirmations\.
 
 ## Hybrid<a name="hybrid"></a>
 
@@ -48,7 +48,7 @@ Hybrid architectures require you to claim as many phone numbers as your expected
 
 You may choose to use Amazon Connect to drive the contact’s IVR experience while your agent population remains on your legacy contact center platform\. With this approach, you can use Amazon Connect flows to drive self\-service and routing logic, and, if necessary, transfer the contact to the target agent or agent queue on your legacy contact center platform\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/hybridivr.png)
+![\[IVR only.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/hybridivr.png)
 
 In this diagram, the contact dials a phone number claimed in your Amazon Connect instance for service\. If they need to be transferred to an agent on your legacy contact center platform, an AWS Lambda function is invoked to query an available unique phone number, flag it as in\-use, and write relevant contact details to an intermediary database\. The contact is then transferred to the legacy contact center platform with the phone number returned from the Lambda function\. The legacy contact center will then perform a query on the intermediary database for the contact details, route accordingly, and reset the contact data in the intermediary database, allowing the phone number to be used again\.
 
@@ -56,7 +56,7 @@ In this diagram, the contact dials a phone number claimed in your Amazon Connect
 
 With this approach, your legacy contact center IVR drives the contact’s IVR self\-serve and routing logic, and, if necessary, transfers the contact to Amazon Connect to route to your agent population\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/hybridagentonly.png)
+![\[Agent only.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/hybridagentonly.png)
 
 In this diagram, the contact dials a phone number claimed with your legacy contact center platform\. If they need to be transferred to an agent on Amazon Connect, the legacy contact center platform will query an available unique phone number, flag it as in\-use, and write relevant contact details to an intermediary database\. The contact will then be transferred to Amazon Connectwith the phone number returned by the legacy contact center’s query\. Amazon Connect will then query the contact details from the intermediary database using AWS Lambda, route accordingly, and reset the contact data in the intermediary database, allowing the phone number to be used again\.
 
@@ -64,7 +64,7 @@ In this diagram, the contact dials a phone number claimed with your legacy conta
 
 In this scenario, you may have your IVR and agents operating in parallel on Amazon Connect and your legacy contact center platform to allow for site, agent group, or line\-of\-business migrations\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/hybridmixed.png)
+![\[Mixed.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/hybridmixed.png)
 
 ## Legacy contact center migration<a name="legacy-contact-center-migration"></a>
 
@@ -98,10 +98,10 @@ While you can use the Amazon Connect Contact Control Panel \(CCP\) within Virtua
 
 You can build a custom CCP with the [Amazon Connect Streams](https://github.com/aws/amazon-connect-streams) API by creating a CCP with no media for call signaling\. This way, the media is handled on the local desktop using standard CCP, and the signaling and call controls are handled on the remote connection with the CCP with no media\. The following diagram describes that approach:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/vdi.png)
+![\[VDI client with local browser access.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/vdi.png)
 
 ### VDI client without local browser access<a name="vdi"></a>
 
 Sometimes the VDI client does not have access to a local browser\. In this scenario, you can create a single CCP instance with media run from the VDI server allowing access to enterprise resources\. For this deployment model UDP audio is usually enabled on the VDI OS\. This deployment model requires extensive testing to calibrate the different VDI server parameters to optimize quality of experience:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/vdinobrowser.png)
+![\[VDI client without local browser access.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/vdinobrowser.png)

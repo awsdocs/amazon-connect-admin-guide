@@ -22,15 +22,15 @@ The chat widget supports browser notifications for desktop devices\. For more in
 In this step, you customize the experience of the chat widget for your customers\.
 
 1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\. Choose **Customize chat widget**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-customize-chat-window-button.png)
+![\[The configuration guide page, the customize chat widget link.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-customize-chat-window-button.png)
 
 1. For **Typeface**, use the dropdown to choose the font for the text in the chat widget\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-choose-font.png)
+![\[The typeface dropdown menu.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-choose-font.png)
 
 1. For **Chat widget**, choose the colors for the widget header, chat message bubbles, and launch and minimize icons by entering hex values \([HTML color codes](https://htmlcolorcodes.com/)\) that align the chat widget with your website branding\. 
 
    As you choose colors, the chat preview updates automatically so that you can see what your widget will look like\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-choose-colors.png)
+![\[The chat widget preview.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-choose-colors.png)
 
 1. For **Minimize chat icon**, select the colors for the icon that customers will choose or tap to minimize the chat widget\. 
 
@@ -44,14 +44,14 @@ In this step, you customize the experience of the chat widget for your customers
 
 1. Enter the website domains where you want to place the chat widget\. Chat loads only on websites that you select in this step\. 
 
-   Choose **Add domain** to add up to five domains\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-add-domain.png)
+   Choose **Add domain** to add up to 50 domains\.  
+![\[The add domain option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-add-domain.png)
 **Important**  
 Double\-check that your website URLs are valid and does not contain errors\. Include the full URL starting with https://\.
 We recommend using https:// for your production websites and applications\.
 
 1. Under **Add security for your chat widget**, we recommend choosing **Yes**, and working with your website administrator to set up your web servers to issue JSON Web Tokens \(JWTs\) for new chat requests\. This provides you more control when initiating new chats, including the ability to verify that chat requests sent to Amazon Connect are from authenticated users\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-choose-security.png)
+![\[The Yes option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-choose-security.png)
 
    Choosing **Yes** results in the following:
    + Amazon Connect provides a 44\-character security key on the next page that you can use to create JWTs\.
@@ -81,7 +81,7 @@ In this step, you confirm your selections and copy the code for the chat widget 
 
 Use this 44\-character security key to generate JSON web tokens from your web server\. You can also update, or rotate, keys if you need to change them\. When you do this, Amazon Connect provides you with a new key and maintains the previous key until you have a chance to replace it\. After you have the new key deployed, you can come back to Amazon Connect and delete the previous key\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-security-key.png)
+![\[The security key.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-security-key.png)
 
 When your customers interact with the start chat icon on your website, the chat widget requests your web server for a JWT\. When this JWT is provided, the widget will then include it as part of the end customer’s chat request to Amazon Connect\. Amazon Connect then uses the secret key to decrypt the token\. If successful, this confirms that the JWT was issued by your web server and Amazon Connect routes the chat request to your contact center agents\.
 
@@ -117,7 +117,7 @@ encoded_token = jwt.encode((payload), CONNECT_SECRET, algorithm=JWT_ALGORITHM, h
 
 The following image shows an example of the JavaScript that you embed on the websites where you want customers to chat with agents\. This script displays the widget in the bottom\-right corner of your website\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-code.png)
+![\[The chat widget script.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-code.png)
 
 1. An example of where to find your widgetId\.
 
@@ -128,13 +128,13 @@ To make changes to the chat widget at any time, choose **Edit**\.
 **Note**  
 Saved changes update the customer experience in a few minutes\. Confirm your widget configuration before saving it\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-edit.png)
+![\[The edit link.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-edit.png)
 
 To make changes to widget icons on the website, you will receive a new code snippet to update your website directly\.
 
 ## Getting error messages?<a name="chat-widget-more-customizations"></a>
 
-If you encounter error messages, see [Troubleshooting issues with your chat widget](troubleshoot-chatwidget.md)\.
+If you encounter error messages, see [Investigate common issues with adding a chat user interface to your website](ts-cw.md)\.
 
 ## More customizations for your chat widget<a name="chat-widget-more-customizations"></a>
 

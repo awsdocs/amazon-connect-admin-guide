@@ -15,7 +15,7 @@ Perform the following steps to verify your headset and browser sample rates\.
 1. Scroll down the page to **Media**\.
 
 1. Verify that the sample rates for the input and output devices are **48000**, as shown in the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/firefox-sample-rate.png)
+![\[Media section, Headset Earphone and headset microphone.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/firefox-sample-rate.png)
 
 ## Verify Chrome sample rate<a name="verify-chrome-samplerate"></a>
 
@@ -28,4 +28,4 @@ Perform the following steps to verify your headset and browser sample rates\.
 1. Scroll down the page and choose **chrome://media\-internals**\.
 
 1. On the **Audio** tab, choose the **Input Controllers** and verify that the sample rate is **48000**\. Then verify the sample rate for the Output Controllers\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chrome-sample-rate.png)
+![\[Audio tab, input controllers section, output controllers section, sample rate.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chrome-sample-rate.png)

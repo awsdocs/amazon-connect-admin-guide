@@ -8,10 +8,13 @@ There is no limit to the number of conversations that can be monitored in an ins
 
 ## Add a Set recording and analytics behavior block to your flow<a name="monitor-conversations-set-up"></a>
 
+**Note**  
+The first step is only required if you do not have Enhanced Monitoring enabled\. If you have Enhanced Monitoring/Barge enabled for your instance, then you no longer need to add the **Set recording and analytics behavior** block to your voice/chat flow to set up monitoring\. You still need to assign managers and trainees the appropriate permissions, and then show them how to monitor the conversations\.
+
 1. Add the [Set recording and analytics behavior](set-recording-behavior.md) block to your flow\. Do this to monitor calls, chats, or both\. 
 
-   To enable monitoring of voice and/or chat conversations, in the block's properties choose **Agent and Customer**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior1.png)
+   To enable monitoring of voice and/or chat conversations, on the block's **Properties** page choose **Agent and Customer**\.  
+![\[The Properties page of the Set recording and analytics behavior block, the agent and customer option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-recording-and-analytics-behavior1.png)
 
    For more information, see [Set up recording behavior](set-up-recordings.md)\. 
 

@@ -1,10 +1,10 @@
-# What is a customer profile?<a name="customer-profiles-what-data"></a>
+# What is a customer profile in Amazon Connect?<a name="customer-profiles-what-data"></a>
 
-A customer profile stores contact history combined with information about customers, such as account number, additional information, birth date, email, multiple addresses, name, and party type\. 
+A *customer profile* is a record that stores contact history combined with information about customers, such as account number, additional information, birth date, email, multiple addresses, name, and party type\. 
 
 After you enable Amazon Connect Customer Profiles, a unique customer profile is created for every contact\. This allows you to create a customer profile that has all the information agents need during customer interactions in a single place at no charge\. 
 
-To access customer profiles in your flows, use the [Customer profiles](customer-profiles-block.md) block\. [Agents access customer profiles](customer-profile-access.md) in their agent application\. 
+To access customer profiles in your flows, use the [Customer profiles](customer-profiles-block.md) block\. [Agents access customer profiles](customer-profile-access.md) in their agent workspace\. 
 
  You can use the paid features of Customer Profiles to enrich your customer profiles by [ingesting data from external applications](integrate-external-apps-customer-profiles.md)\.  See [pricing](http://aws.amazon.com/connect/pricing/) for details\. 
 
@@ -18,4 +18,4 @@ Amazon Connect stores contact history in unique customer profiles\. It parses da
 
 For information about how customer profile data are secured, see [Data protection in Amazon Connect](data-protection.md)\.
 
-For more information about how to access the data that is stored in a customer profile, see [Access Customer Profiles in the agent application](https://docs.aws.amazon.com/connect/latest/adminguide/customer-profile-access.html) or [ Use the Customer Profiles API](https://docs.aws.amazon.com/connect/latest/adminguide/use-customerprofiles-api.html)\.
+For more information about how to access the data that is stored in a customer profile, see [Access Customer Profiles in the agent workspace](https://docs.aws.amazon.com/connect/latest/adminguide/customer-profile-access.html) or [ Use the Customer Profiles API](https://docs.aws.amazon.com/connect/latest/adminguide/use-customerprofiles-api.html)\.

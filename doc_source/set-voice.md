@@ -27,7 +27,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="set-voice-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-properties.png)
+The following image shows the **Properties** page of the **Set voice** block\. It is configured for English, the voice is Joanna, and the speech style is Conversational\.
+
+![\[The properties page of the Set voice block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-properties.png)
 
 **Tip**  
 For voices that support only neural speaking styles but not standard, the **Override speaking style** is automatically selected\. You do not have the option to clear it\.
@@ -37,18 +39,18 @@ For voices that support only neural speaking styles but not standard, the **Over
 If you're using an Amazon Lex V2 bot, your language attribute in Amazon Connect must match the language model used to build your Lex bot\. This is different than Amazon Lex \(Classic\)\. 
 + If you build an Amazon Lex V2 bot with a different language model—for example, en\_AU, fr\_FR, es\_ES, and more—under **Voice**, choose a voice that corresponds to that language, and then must choose **Set language attribute**, as shown in the following image\.
 + If you're not using an en\-US voice with an Amazon Lex V2 bot and don't choose **Set language attribute**, the [Get customer input](get-customer-input.md) block results in an error\.
-+ For bots with multiple languages \(for example, en\_AU and en\_GB\) choose **Set language attribute** for one of the languages\.
++ For bots with multiple languages \(for example, en\_AU and en\_GB\) choose **Set language attribute** for one of the languages, as shown in the following image\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-properties3.png)
+![\[The properties page of the Set voice block configured for English (Australia).\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-properties3.png)
 
 ## Configuration tips<a name="set-voice-tips"></a>
 + For the **Joanna** and **Matthew** neural voices, in American English \(en\-US\), you can also specify a [Conversational speaking style](https://docs.aws.amazon.com/polly/latest/dg/ntts-speakingstyles.html) or a [Newscaster speaking style](https://docs.aws.amazon.com/polly/latest/dg/ntts-speakingstyles.html)\.
 
 ## Configured block<a name="set-voice-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branch: **Success**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-configured.png)
+![\[A configured Set voice block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-voice-configured.png)
 
 ## Scenarios<a name="set-voice-scenarios"></a>
 

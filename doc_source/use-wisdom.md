@@ -4,7 +4,7 @@ With Amazon Connect Wisdom, you can search and find content across multiple repo
 
 The following image shows how an article may appear in the agent workspace when you are on a call\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro2.png)
+![\[An article displayed in the agent workspace.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-concepts-intro2.png)
 
 1. The agent is on a call\.
 

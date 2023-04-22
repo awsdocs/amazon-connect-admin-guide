@@ -1,11 +1,11 @@
-# Agent training guide<a name="agent-user-guide"></a>
+# Agent training guide for the CCP and agent workspace<a name="agent-user-guide"></a>
 
 ------
 #### [ Agent workspace ]
 
 With the agent workspace you can access all Amazon Connect features in a single application\. You can:
 + Use the Contact Control Panel \(CCP\) to interact with customer contacts\.
-+ [Use Customer Profiles](use-customer-profiles.md) to view customer information\.
++ [Use Customer Profiles](ag-cp.md) to view customer information\.
 + [Use Cases](use-cases.md) to create, edit, and resolve customer cases\.
 + [Use Amazon Connect Wisdom](use-wisdom.md) to obtain the information you need from your company knowledge base\.
 
@@ -16,7 +16,7 @@ Where *instance name* is provided by your IT department or the individuals that 
 
 The following image shows the agent workspace with the CCP, Customer Profiles, Cases, and Wisdom\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-intro-agent-app.png)
+![\[The agent workspace.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-intro-agent-app.png)
 
 1. Set your status\.
 
@@ -48,7 +48,7 @@ Large businesses often choose to customize their CCP\. For example, they might w
 
 The following image shows the CCP\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-intro.png)
+![\[The contact control panel.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-intro.png)
 
 1. Set your status\.
 

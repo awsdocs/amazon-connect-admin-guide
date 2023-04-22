@@ -4,11 +4,11 @@ The chat widget supports browser notifications for your customers through their 
 
 The following image shows an example of the notification banner that customers receive when they are not on the webpage that contains the chat window\. The banner tells your customers that they have a new message, and it displays the name of the website\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-notification-banner.png)
+![\[A Google Chrome banner that says you have received a new message.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-notification-banner.png)
 
 Customers also receive a notification icon—a red dot—on the chat widget when it is minimized\. The following image shows an image of the notification icon that customers receive when their chat window is minimized\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-browser-notification.png)
+![\[A notification icon.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-browser-notification.png)
 
 Both of these features are automatically included in the chat widget\. You don't need to perform any steps to make them available to your customers\.
 

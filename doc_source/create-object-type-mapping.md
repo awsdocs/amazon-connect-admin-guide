@@ -1,6 +1,6 @@
 # Create an object type mapping<a name="create-object-type-mapping"></a>
 
-An object type mapping tells Customer Profiles how to ingest a specific type of data from a source application—such as Salesforce, Zendesk, or S3—into a unified standard profile object\. You can then display data in that object \(for example, customer address and email\) to your agents using the [Connect Agent Application ](https://docs.aws.amazon.com/https://docs.aws.amazon.com/connect/latest/adminguide/customer-profile-access.html)\.
+An object type mapping tells Customer Profiles how to ingest a specific type of data from a source application—such as Salesforce, Zendesk, or S3—into a unified standard profile object\. You can then display data in that object \(for example, customer address and email\) to your agents using the [Amazon Connect agent application](customer-profile-access.md)\. 
 
 The object type mapping provides Customer Profiles with the following information: 
 + How data should be populated from the object and ingested into the standard profile object\.
@@ -22,8 +22,8 @@ To create a data mapping, you define an object type mapping that describes what 
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\. The following image shows the **Amazon Connect virtual contact center instances** page, with a box a box around the instance alias\.  
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Customer profiles**, **Data mappings**\.
 
@@ -57,7 +57,7 @@ On the **Map *type* attributes** page, you'll see the field mappings table fille
 
 The following image shows an example of the page filled with customer attributes from the template\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-data-mapping-2.png)
+![\[The Amazon Connect navigation menu.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-data-mapping-2.png)
 
 You can remove what you don’t want populated in the customer profile, change the source, and add custom attributes\.
 

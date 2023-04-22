@@ -12,19 +12,19 @@ The type of a quick connect specifies the destination\. You can specify one of t
 
 Contacts are transferred to a phone number \(such as an on\-call pager\)\. 
 
-### Agent quick connect<a name="agent-quick-connect-type"></a>
+### User quick connect<a name="agent-quick-connect-type"></a>
 
-Contacts are transferred to a specific agent as part of a flow\.
+Contacts are transferred to a specific user, such as an agent, as part of a flow\.
 
 **Important**  
-Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
+User and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
 
 ### Queue quick connect<a name="queue-quick-connect-type"></a>
 
 Contacts are transferred to a queue as part of a flow\.
 
 **Important**  
-Agent and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
+User and Queue quick connects only appear in the CCP when an agent goes to transfer a contact\. 
 
 ## Step 1: Create quick connects<a name="step1-create-quick-connects"></a>
 
@@ -71,14 +71,14 @@ In this example, you create a phone number quick connect to a person's mobile ph
 
 **Create a quick connect for a person's mobile phone number**
 
-1. On the navigation menu, choose **Routing**, **Quick connects**, **Add new**\.
+1. On the navigation menu, choose **Routing**, **Quick connects**, **Add quick connect**\.
 
-1. Enter a name for the quick connect, for example, **John Doe's cell phone**\.
+1. On the **Add quick connect** page, enter a name for the quick connect, for example, **John Doe's cell phone**\.
 
 1. For **Type**, select **Phone number**\.
 
-1. For **Destination**, enter the mobile phone number, starting with the country code\. In the US, the country code is 1, as shown in the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/quick-connect-johndoe.png)
+1. For **Phone number**, enter the mobile phone number, starting with the country code\. In the US, the country code is 1, as shown in the following image\.  
+![\[The phone number on the Add quick connect page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/quick-connect-johndoe.png)
 
 1. Choose **Save**\.
 
@@ -90,8 +90,10 @@ In this example, you create a phone number quick connect to a person's mobile ph
 
 1. At the bottom of the page, in the **Quick connect** box, search for the quick connect you created, for example, **John Doe's cell phone**\.
 
-1. Select the quick connect and then choose **Save**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/quick-connect-johndoe-queue.png)
+1. Select the quick connect\. In the following image of the **Edit queue** page, a phone number has been selected for the **Outbound caller ID number**, and **John Doe's cell phone** has been selected as the quick connect\.  
+![\[The Edit queue page, the quick connect for John Doe's cell phone number.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/quick-connect-johndoe-queue.png)
+
+1. Choose **Save**\.
 
 **Test the quick connect**
 
@@ -100,4 +102,4 @@ In this example, you create a phone number quick connect to a person's mobile ph
 1. Choose **Quick connects**\.
 
 1. Select the quick connect you created, and then choose **Call**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/quick-connect-johndoe-call.png)
+![\[The quick connects page in the CCP, an entry for John Doe's cell phone.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/quick-connect-johndoe-call.png)

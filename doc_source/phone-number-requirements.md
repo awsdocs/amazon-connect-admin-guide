@@ -19,9 +19,9 @@ After your numbers are ordered or ported, the exact number of requested phone nu
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers:  | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers:  | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="ai-porting"></a>
+### Number portability<a name="ai-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -36,7 +36,7 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 | --- | --- | --- | --- | 
 | US East US West | Local telephone numbers: \+1 268 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-### For porting numbers<a name="ai-porting"></a>
+### Number portability<a name="ai-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -48,12 +48,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ar-porting"></a>
+### Number portability<a name="ar-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West  | Monday\-Friday 2AM\-4AM or 10AM\-12PM or 3PM\-5PM UTC\-3 Buenos Aires time  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) | 
 
@@ -65,12 +65,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ar-porting"></a>
+### Number portability<a name="ar-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | Asia Pacific \(Sydney\) Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Tokyo\)  | Monday\-Friday 8 AM \-12 PM AEST  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -82,12 +82,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="at-porting"></a>
+### Number portability<a name="at-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -99,12 +99,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="be-porting"></a>
+### Number portability<a name="be-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -117,9 +117,9 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+1 242 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+1 242 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="bs-porting"></a>
+### Number portability<a name="bs-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -132,9 +132,9 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+1 246 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+1 246 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="bb-porting"></a>
+### Number portability<a name="bb-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -149,7 +149,7 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 | --- | --- | --- | --- | 
 | US East US West | National prefixes: \+591 50 | No |   | 
 
-### For porting numbers<a name="bo-porting"></a>
+### Number portability<a name="bo-porting"></a>
 
 Porting is not supported\.
 
@@ -162,9 +162,9 @@ Porting is not supported\.
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+599 7 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+599 7 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="bq-porting"></a>
+### Number portability<a name="bq-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -176,11 +176,11 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="br-porting"></a>
-+ Work with Embratel for your number porting\.
+### Number portability<a name="br-porting"></a>
++ Follow the same process as for ordering phone numbers through Embratel\.
 + At least 5 days before your scheduled porting date with Embratel, open an AWS Support ticket for your numbers to be added to your Amazon Connect instance\.
 
-## Brunei \(\)<a name="brunei-requirements"></a>
+## Brunei \(BN\)<a name="brunei-requirements"></a>
 
 ### For ordering phone numbers<a name="brunei-ordering"></a>
 
@@ -189,9 +189,9 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| EU \(Frankfurt\) EU \(London\) | Toll\-free prefixes: | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| EU \(Frankfurt\) EU \(London\) | Toll\-free prefixes: | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="brunei-porting"></a>
+### Number portability<a name="brunei-porting"></a>
 
 Porting is not supported\.
 
@@ -203,12 +203,12 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ca-porting"></a>
+### Number portability<a name="ca-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West Canada \(Central\)  EU \(Frankfurt\) EU \(London\) AWS GovCloud \(US\-West\)  | Monday\-Friday 7 AM to 5 PM CST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -220,12 +220,12 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="cl-porting"></a>
+### Number portability<a name="cl-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West  | Monday\-Friday 9 PM to 3 AM PST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -237,12 +237,12 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="co-porting"></a>
+### Number portability<a name="co-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 
 
@@ -254,12 +254,12 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="cr-porting"></a>
+### Number portability<a name="cr-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 
 
@@ -271,12 +271,12 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="hr-porting"></a>
+### Number portability<a name="hr-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -289,9 +289,9 @@ Porting is not supported\.
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+599 9 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+599 9 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="cw-porting"></a>
+### Number portability<a name="cw-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -303,12 +303,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="cy-porting"></a>
+### Number portability<a name="cy-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -320,12 +320,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="cz-porting"></a>
+### Number portability<a name="cz-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 3 PM to 4 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -337,12 +337,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="dk-porting"></a>
+### Number portability<a name="dk-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -354,14 +354,14 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="sv-porting"></a>
+### Number portability<a name="sv-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
-| Not supported  | N/A |  N/A  | 
+| US East US West  | Monday\-Friday 03:00AM to 05:00AM CST |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## Estonia \(EE\)<a name="estonia-requirements"></a>
 
@@ -371,12 +371,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ee-porting"></a>
+### Number portability<a name="ee-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -388,12 +388,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="fi-porting"></a>
+### Number portability<a name="fi-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -405,9 +405,23 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="fi-porting"></a>
 
-Porting is temporarily unavailable due to the industry impact of January 1, 2023, regulatory changes in France\. It will be re\-enabled when industry\-wide issues with number portability in France have been resolved\. 
+
+
+****  
+
+| Type of Number | Prefixes | Restriction | 
+| --- | --- | --- | 
+| NPV numbers:  | \+33 162, 163, 270, 271, 377, 378, 424,425, 568, 569, 948, 949 |  Amazon Connect does not support ordering or porting of numbers in these ranges\.  | 
+
+### Number portability<a name="fi-porting"></a>
+
+
+****  
+
+| Supported Regions | Portability windows | Required Documents | 
+| --- | --- | --- | 
+|  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## Georgia \(GE\)<a name="georgia-requirements"></a>
 
@@ -417,12 +431,12 @@ Porting is temporarily unavailable due to the industry impact of January 1, 2023
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ge-porting"></a>
+### Number portability<a name="ge-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  Not supported  | N/A | N/A  | 
 
@@ -434,12 +448,12 @@ Porting is temporarily unavailable due to the industry impact of January 1, 2023
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="de-porting"></a>
+### Number portability<a name="de-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -451,12 +465,12 @@ Porting is temporarily unavailable due to the industry impact of January 1, 2023
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="gr-porting"></a>
+### Number portability<a name="gr-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -468,7 +482,19 @@ Porting is temporarily unavailable due to the industry impact of January 1, 2023
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="guatemala-porting"></a>
+### Number portability<a name="guatemala-porting"></a>
+
+Porting is not supported\.
+
+## Honduras \(HN\)<a name="honduras-requirements"></a>
+
+### For ordering phone numbers<a name="honduras-ordering"></a>
+
+
+****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
+
+### Number portability<a name="honduras-porting"></a>
 
 Porting is not supported\.
 
@@ -480,14 +506,14 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="hk-porting"></a>
+### Number portability<a name="hk-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
-|  Not support  | N/A | N/A  | 
+|  Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\)  | N/A | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
 ## Hungary \(HU\)<a name="hungary-requirements"></a>
 
@@ -497,16 +523,16 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="hu-porting"></a>
+### Number portability<a name="hu-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
-## Iceland \(\)<a name="iceland-requirements"></a>
+## Iceland \(IS\)<a name="iceland-requirements"></a>
 
 ### For ordering phone numbers<a name="iceland-ordering"></a>
 
@@ -514,7 +540,7 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="iceland-porting"></a>
+### Number portability<a name="iceland-porting"></a>
 
 Porting is not supported\.
 
@@ -526,12 +552,12 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="id-porting"></a>
+### Number portability<a name="id-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | Not supported  | N/A  | N/A | 
 
@@ -543,12 +569,12 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ie-porting"></a>
+### Number portability<a name="ie-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -560,12 +586,12 @@ Porting is not supported\.
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="it-porting"></a>
+### Number portability<a name="it-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -578,9 +604,9 @@ Porting is not supported\.
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers:  | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers:  | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="jm-porting"></a>
+### Number portability<a name="jm-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -592,12 +618,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="jp-porting"></a>
+### Number portability<a name="jp-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  Asia Pacific \(Tokyo\)  |  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) Submit an AWS Support ticket to verify the portability of your number\(s\)\.  | 
 
@@ -609,12 +635,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="lv-porting"></a>
+### Number portability<a name="lv-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -626,12 +652,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="lt-porting"></a>
+### Number portability<a name="lt-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -643,12 +669,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="lu-porting"></a>
+### Number portability<a name="lu-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -668,12 +694,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="my-porting"></a>
+### Number portability<a name="my-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  Not supported  | N/A | N/A  | 
 
@@ -685,12 +711,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="mx-porting"></a>
+### Number portability<a name="mx-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West  | Monday\-Friday 10 AM to 12 PM CET or 2 PM to 4 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -702,12 +728,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="nz-porting"></a>
+### Number portability<a name="nz-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\)  | Monday\-Friday 7 AM to 11 AM NZST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -719,12 +745,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="nl-porting"></a>
+### Number portability<a name="nl-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -736,7 +762,7 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="nicaragua-porting"></a>
+### Number portability<a name="nicaragua-porting"></a>
 
 Porting is not supported\.
 
@@ -750,12 +776,12 @@ Porting is not supported\.
 
 Numbers are available to businesses only, not individuals\. The DID type is Landline, instead of Geographic\. This is because all formerly geographic numbers are now classified as landline, and do not have a geographic zone\.
 
-### For porting numbers<a name="no-porting"></a>
+### Number portability<a name="no-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -765,17 +791,14 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 
 
 ****  
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-| Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
-| --- | --- | --- | --- | 
-|  US East US West  | Toll\-free prefixes: \+507 800 | Yes | Your business address\. You can have a maximum of 5 Panama toll\-free numbers per business name\. | 
-
-### For porting numbers<a name="pa-porting"></a>
+### Number portability<a name="pa-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West  | Monday\-Friday 12 AM to 2 AM PST | **For porting local numbers**: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) **For porting toll\-free numbers**: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -787,12 +810,12 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="pe-porting"></a>
+### Number portability<a name="pe-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West  | Monday\-Friday 10 PM to 4 AM PST |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -804,12 +827,12 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="pl-porting"></a>
+### Number portability<a name="pl-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -821,12 +844,12 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="pt-porting"></a>
+### Number portability<a name="pt-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -838,12 +861,12 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="pr-porting"></a>
+### Number portability<a name="pr-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  US East US West  | Monday\-Friday 10 AM to 12 PM PST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -855,12 +878,12 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ro-porting"></a>
+### Number portability<a name="ro-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM PST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -873,9 +896,9 @@ Numbers are available to businesses only, not individuals\. The DID type is Land
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+599 4 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+599 4 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="bq-porting"></a>
+### Number portability<a name="bq-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -887,12 +910,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="rs-porting"></a>
+### Number portability<a name="rs-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 
 
@@ -905,9 +928,9 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers:  | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers:  | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="jm-porting"></a>
+### Number portability<a name="jm-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -920,9 +943,9 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+1 758 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+1 758 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="mf-porting"></a>
+### Number portability<a name="mf-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -934,14 +957,16 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="sg-porting"></a>
+### Number portability<a name="sg-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  Asia Pacific \(Singapore\)  | NA | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
+Porting\-out is only possible for contiguous number blocks of 10 numbers \(\.\.\.0 to \.\.\.9\) due to market practice\.
 
 ## Sint Eustatius \(BQ\)<a name="sinteustatius-requirements"></a>
 
@@ -952,9 +977,9 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+599 3 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+599 3 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="bq-porting"></a>
+### Number portability<a name="bq-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -967,9 +992,9 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+1 721 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+1 721 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="sx-porting"></a>
+### Number portability<a name="sx-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -981,12 +1006,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="sk-porting"></a>
+### Number portability<a name="sk-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -998,12 +1023,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="si-porting"></a>
+### Number portability<a name="si-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -1015,6 +1040,15 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
+### Number portability<a name="za-porting"></a>
+
+
+****  
+
+| Supported Regions | Portability windows | Required Documents | 
+| --- | --- | --- | 
+| Africa \(Cape Town\)  |  N/A  | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+
 ## South Korea \(KR\)<a name="southkorea-requirements"></a>
 
 ### For ordering phone numbers<a name="kr-ordering"></a>
@@ -1023,12 +1057,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="kr-porting"></a>
+### Number portability<a name="kr-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 
 
@@ -1040,12 +1074,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="es-porting"></a>
+### Number portability<a name="es-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -1057,12 +1091,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="se-porting"></a>
+### Number portability<a name="se-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -1074,12 +1108,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ch-porting"></a>
+### Number portability<a name="ch-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West EU \(Frankfurt\)  EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -1091,12 +1125,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="ge-porting"></a>
+### Number portability<a name="ge-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  Not supported  | N/A | N/A  | 
 
@@ -1109,9 +1143,9 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+1 868 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+1 868 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="tt-porting"></a>
+### Number portability<a name="tt-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -1124,9 +1158,9 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 
 | Supported Regions | Type of Number | Are there ID requirements? | Acceptable Identification | 
 | --- | --- | --- | --- | 
-| US East US West | Local telephone numbers: \+1 649 | Yes | File orders in writing\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
+| US East US West | Local telephone numbers: \+1 649 | Yes | An order form is required\. Use the form that is provided to you when you make the request\. Provide the following information: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html) A global address is acceptable\.  | 
 
-### For porting numbers<a name="tc-porting"></a>
+### Number portability<a name="tc-porting"></a>
 
 Porting of specific number ranges is supported\. Create an AWS Support ticket to verify the portability of your number\(s\)\. 
 
@@ -1141,12 +1175,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 | --- | --- | --- | --- | 
 |  Africa \(Cape Town\)  | Local telephone numbers:  | Yes | Businesses must provide a copy of business registration containing a proof of address\.  Valid proofs of address include: third\-party issued bank statements, utility bills \(all issued in the previous 6 months\); government documents \(issued in the previous year\)\.  The business address must be inside of Uganda\. | 
 
-### For porting numbers<a name="ug-porting"></a>
+### Number portability<a name="ug-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 |  Not supported  | N/A | N/A  | 
 
@@ -1158,12 +1192,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="gb-porting"></a>
+### Number portability<a name="gb-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\) EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 10 AM to 12 PM CET | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -1175,12 +1209,12 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 ****  
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)
 
-### For porting numbers<a name="us-porting"></a>
+### Number portability<a name="us-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | US East US West Asia Pacific \(Seoul\) Asia Pacific \(Singapore\) Asia Pacific \(Sydney\) Asia Pacific \(Tokyo\) EU \(Frankfurt\) EU \(London\)  | Monday\-Friday 7 AM to 5 PM CST | [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/phone-number-requirements.html)  | 
 
@@ -1196,11 +1230,11 @@ Porting of specific number ranges is supported\. Create an AWS Support ticket to
 +  Local : All major networks except minority three networks FPT, CMC and Gtel\.
 + TFN : National reachability only from: VNPT fixed network, Vinaphone Mobile, and SPT network\.
 
-### For porting numbers<a name="vn-porting"></a>
+### Number portability<a name="vn-porting"></a>
 
 
 ****  
 
-| Supported Regions | Porting Windows | Required Documents | 
+| Supported Regions | Portability windows | Required Documents | 
 | --- | --- | --- | 
 | Not supported  | N/A |  N/A  | 

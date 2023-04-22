@@ -4,7 +4,7 @@ To review capacity plan output, choose the hyperlink for the plan you generated\
 
 The plan output shows a week\-by\-week or month\-by\-month calculation\. To switch from weekly to monthly view, select **Monthly** from the dropdown, as shown in the following image\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-output3.png)
+![\[The Plan Outputs section of the capacity plan, the time frame dropdown menu.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-output3.png)
 
 Following is a description of the metrics in the plan output:
 + **Forecasting Inputs**

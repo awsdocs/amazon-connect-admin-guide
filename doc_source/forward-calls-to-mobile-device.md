@@ -7,6 +7,6 @@ You can take the audio portion of a call on your mobile device, and at the same 
 1. Under **Phone type**, choose **Desk phone**\.
 
 1. Enter the phone number for your mobile device, and choose **Save**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-forward-calls-mobile-device.png)
+![\[The settings page, the desk phone option, an example phone number.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-forward-calls-mobile-device.png)
 
    When a contact calls, the audio portion of the call goes to your mobile device\. At the same time, on your computer you can manage the call using the CCP\.

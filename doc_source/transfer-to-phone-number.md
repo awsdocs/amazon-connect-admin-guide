@@ -25,9 +25,13 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="transfer-to-phone-number-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-phone-number-properties.png)
+The following image shows the **Properties** page of the **Transfer to phone number** block\. It shows the **Transfer via** section\. The **Country code** is set to \+1 \(US\)\. **Set timeout** = 30 seconds\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-phone-number-properties2.png)
+![\[The properties page of the Transfer to phone number block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-phone-number-properties.png)
+
+The following image shows the **Resume contact flow after disconnect** section is set to **Yes**\. 
+
+![\[The Resume contact flow after disconnect section, the Optional parameters section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-phone-number-properties2.png)
 
 Note the following properties:
 + **Resume flow after disconnect**: This works only if the external party disconnects, and the customer doesn't disconnect\. \(If the customer disconnects, the whole call disconnects\.\)
@@ -36,7 +40,7 @@ Note the following properties:
 **Important**  
 If you are using Amazon Connect outside of the United States, we recommend choosing **Caller ID number** and then selecting an Amazon Connect number\. Otherwise, local regulations may cause telephony providers to block or redirect non\-Amazon Connect phone numbers\. This will result in service\-related events, such as rejected calls, poor audio quality, delay, latency, and displaying the incorrect caller ID\.   
 **In Australia**: The caller ID must be an Amazon Connect provided DID \(Direct Inward Dialing\) phone number\. If a toll free number or a number not provided by Amazon Connect is used in the caller ID, local telephony suppliers may reject outbound calls due to local anti\-fraud requirements\.
-+ **Caller ID name**: You can set a caller ID name, but there's no guarantee it will appear correctly to the customer\. For more information, see [Why your caller ID might not appear correctly to customers](queues-callerid.md#why-callerid-name-might-not-appear-correctly)\.
++ **Caller ID name**: You can set a caller ID name, but there's no guarantee it will appear correctly to the customer\. For more information, see [Outbound caller ID number](queues-callerid.md#using-call-number-block)\.
 
 **Note**  
 When [Transfer to phone number](#transfer-to-phone-number) block is used without specifying a custom caller ID, the caller ID of the caller is passed as the caller ID\. For example, if you transfer to an external number and no custom caller ID is used to specify that the call is coming from your organization, then the contact's caller ID is displayed to the external party\.
@@ -48,9 +52,9 @@ When [Transfer to phone number](#transfer-to-phone-number) block is used without
 
 ## Configured block<a name="transfer-to-phone-number-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It shows the number you are transferring to\. It has the following branches: **Success**, **Call Failed**, **Timeout**, **Error**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-phone-number-configured.png)
+![\[A configured Transfer to phone number block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-phone-number-configured.png)
 
 ## Scenarios<a name="transfer-to-phone-number-scenarios"></a>
 

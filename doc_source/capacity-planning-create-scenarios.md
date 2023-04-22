@@ -12,7 +12,7 @@ You can then use this scenario to generate a capacity plan that represents how m
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Capacity planning \- Edit**\. 
 
-   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
+   For more information, see [Assign permissions](required-optimization-permissions.md)\. 
 
 1. On the Amazon Connect navigation menu, choose **Analytics and optimization**, **Capacity planning**\.
 
@@ -47,7 +47,7 @@ You can then use this scenario to generate a capacity plan that represents how m
    1. **Service level**: The percentage of contacts answered within a defined target time threshold\.
 
       The following image shows service level targets where 80 percent of voice contacts and 70 percent of chat contacts will be answered within 30 seconds\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-servicelevel.png)
+![\[The optimization inputs section, the service level option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-servicelevel.png)
 
    1. **Average speed of answer** \(ASA\): The average amount of time it takes for contacts to be answered in a call center during a specific time period\.
 

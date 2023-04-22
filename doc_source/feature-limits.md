@@ -44,10 +44,10 @@ The following table lists Amazon Connect feature specifications\.
 | Capacity plan user data uploads per instance |  500  | 
 | Capacity plan override uploads per instance |  5000  | 
 | Concurrent uploads per instance |  20  | 
-| File size per upload of capacity plan user data |  1000  | 
-| File size per upload of capacity plan overrides |  250  | 
-| File size per upload of forecast overrides |  250  | 
-| File size per upload of historical actuals |  1000  | 
+| File size per upload of capacity plan user data |  1000MB  | 
+| File size per upload of capacity plan overrides |  250MB  | 
+| File size per upload of forecast overrides |  250MB  | 
+| File size per upload of historical actuals |  1000MB  | 
 | Forecast groups per instance |  500  | 
 | Forecast override uploads per instance |  500  | 
 | Historical actuals uploads per instance |  150  | 

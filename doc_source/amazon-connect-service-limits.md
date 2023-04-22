@@ -6,10 +6,25 @@ Your AWS account has default quotas, formerly referred to as limits, for each AW
 
 To request a quota increase, see [Requesting a quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html) in the *Service Quotas User Guide*\. If the quota is not yet available in Service Quotas, use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\. You must be signed in to your AWS account to access the form\.
 
-**Important things to know**
+**Topics**
++ [Important things to know](#important-quota-info)
++ [Amazon Connect quotas](#connect-quotas)
++ [AppIntegrations quotas](#app-integration-quotas)
++ [Cases quotas](#cases-quotas)
++ [Contact Lens quotas](#contactlens-quotas)
++ [Customer Profiles quotas](#customer-profiles-quotas)
++ [Outbound campaigns quotas](#outbound-communications-quotas)
++ [Voice ID quotas](#voiceid-quotas)
++ [Wisdom quotas](#wisdom-quotas)
++ [How contacts are counted](#contact-counting-criteria)
++ [Feature specifications](feature-limits.md)
++ [Countries you can call by default](country-code-allow-list.md)
++ [API throttling quotas](#api-throttling-quotas)
+
+## Important things to know<a name="important-quota-info"></a>
 + You must create your instance before you can request a service quota increase\.
-+ It can take up to a few weeks to increase your service quota\. If you're increasing your quotas as part of a larger project, be sure to add this time to your plan\.
-+ Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port your current phone number](port-phone-number.md)\.
++ We review each request for a quota increase\. For smaller increase requests, we can approve in hours\. Larger increase requests take time to review, process, approve, and deploy\. Depending on your specific implementation, your resource, and the size of quota that you want, a request can take up to 3 weeks\. An extra\-large worldwide increase can potentially take months\. If you're increasing your quotas as part of a larger project, keep this information in mind and plan accordingly\.
++ Use the same form to submit a request to port your US phone number from your current carrier to Amazon Connect\. For more information about porting phone numbers, see [Port your current phone number to Amazon Connect](port-phone-number.md)\.
 + The quotas apply per [AWS Region](https://docs.aws.amazon.com/servicequotas/latest/userguide/intro.html#intro_getting-started)\. You can have multiple Amazon Connect instances in each Region\.  It's possible to raise quotas for all instances in a Region\.
 + This documentation describes the default quotas for new accounts\. Because the quotas have been adjusted over time, the default values for your account might be different than the default values described here\.
 
@@ -18,7 +33,7 @@ To request a quota increase, see [Requesting a quota increase](https://docs.aws.
 
 | Name | Default | Adjustable | 
 | --- | --- | --- | 
-|  AWS Lambda functions per instance  |  35  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-E3D2F503) | 
+|  AWS Lambda functions per instance  |  50  | No | 
 |  Agent status per instance  |  50  | No | 
 |  Amazon Connect instances per account  |  2  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-AA17A6B9) | 
 |  Amazon Lex bots per instance  |  70  | No  | 
@@ -33,12 +48,12 @@ To request a quota increase, see [Requesting a quota increase](https://docs.aws.
 |  Phone numbers per instance  |  5 It's possible to get an error message that "You've reached the limit of Phone Numbers," even if it's the first time you've claimed a phone number\. All the issues that cause this error message require help from AWS Support to resolve\.  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-8F812903) | 
 |  Prompts per instance  |  500  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-0865B754) | 
 |  Queues per instance  |  50  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-19A87C94) | 
-|  Queues per routing profile per instance  |  50 This quota refers to number of queue/channel combinations per routing profile\. For example, in the following image there are two queues, but there are three queue\-channel combinations: Escalation queue Voice, Escalation queue Chat, and BasicQueue Voice\. This counts three towards the service limit of 50\. ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/routing-profile-queue-channel-combinations.png)  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-516BC0EB) | 
+|  Queues per routing profile per instance  |  50 This quota refers to number of queue/channel combinations per routing profile\. For example, in the following image there are two queues, but there are three queue\-channel combinations: Escalation queue Voice, Escalation queue Chat, and BasicQueue Voice\. This counts three towards the service limit of 50\. ![\[The Routing profiles page, the routing profiles queues section, voice and chat queues.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/routing-profile-queue-channel-combinations.png)  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-516BC0EB) | 
 |  Quick connects per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-68BBE2E8) | 
 |  Rate of API requests  |  See [Amazon Connect API throttling quotas](#connect-api-quotas)\.  | Yes | 
 |  Reports per instance  |  2000 Personal saved reports count towards the reports per instance\. For example, if one of your supervisors saves a report every day, it will count towards your overall number of saved reports per instance\. As a best practice, we recommend you implement policies so reports don't pile up\.   | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-79564E52) | 
 |  Routing profiles per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-D3E7BE26) | 
-|  Scheduled reports per instance  |  50  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-986AE5E3) | 
+|  Scheduled reports per instance  |  50  | No | 
 |  Security profiles per instance  |  100  | [Yes](https://console.aws.amazon.com/servicequotas/home/services/connect/quotas/L-F325A715) | 
 |  Task templates per instance  |  50  | No | 
 |  Task template customized fields per instance  |  50  | No | 
@@ -126,7 +141,8 @@ The following table shows some examples\.
 | --- | --- | 
 |  Domains  |  3 This quota applies per account\.  | 
 |  Concurrent active sessions per domain  |  50 See the following [table](#voiceid-concurrent-active-sessions) for information about how to derive your **Concurrent active sessions** quota based on your Amazon Connect call volume\.  | 
-|  Maximum number of fraudsters per domain  |  500  | 
+|  Maximum number of fraudsters per watchlist  |  500  | 
+|  Maximum number of watchlists per domain  |  3, including the default watchlist of a domain  | 
 |  Maximum number of speakers per domain  |  100,000  | 
 |  Active Batch Speaker Enrollment Jobs per domain  |  1  | 
 |  Active Batch Fraudster Registration Jobs per domain  |  1  | 
@@ -162,7 +178,7 @@ Use the information in the following table to derive your quota for Voice ID **C
 
 ## How contacts are counted<a name="contact-counting-criteria"></a>
 
-The following contacts are counted:
+The following contacts are counted in **Concurrent active calls per instance**:
 + Handled by a flow
 + Waiting in queue
 + Handled by an agent
@@ -172,13 +188,25 @@ The following contacts are not counted:
 + Callbacks waiting in a callback queue are not counted until the callback is offered to an available agent\.
 + External transfers
 
-If the quota for concurrent active calls per instance is exceeded, contacts get a reorder tone \(also known as a fast busy tone\), which indicates that there is no available transmission path to the called number\.
+If the quota for **Concurrent active calls per instance** is exceeded, contacts get a reorder tone \(also known as a fast busy tone\), which indicates that there is no available transmission path to the called number\.
 
 You can calculate your configured quota using CloudWatch metrics\. For instructions, see [Use CloudWatch metrics to calculate concurrent call quota](monitoring-cloudwatch.md#connect-cloudwatch-concurrent-call-quota)\. 
 
-If you're only taking calls you can also determine your concurrent calls quota by editing a queue and entering an exceptionally large number for the contact limit\. The resulting error message displays your quota for concurrent calls\. For example, in the following image, it shows the call quota for that instance is 9\.
+If you're only taking calls you can also determine your **Concurrent active calls per instance** quota by doing the following:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/concurrent-call-quota.png)
+1. Navigate to the **Edit a queue** page: choose **Routing**, **Queues**, and choose a queue\.
+
+1. Choose **Set a limit across all channels**\. 
+
+1. Enter an exceptionally large number in the **Maximum contacts in queue** box for the contact limit\.
+
+The resulting error message displays your quota as **Concurrent active calls per instance** \- 1\. 
+
+For example, in the following image from the **Edit queues** page, you add 1 to the error message, to get **Concurrent active calls per instance** quota = 10\.
+
+![\[The edit queue page, Maximum contacts in queue set to 1000, a message that max contacts is 9.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/concurrent-call-quota.png)
+
+The error message shows 9 because you must set always set **Maximum contacts in queue** to a number that is at least 1 *less than* your **Concurrent active calls per instance** quota \(which is the default limit\)\.
 
 ## API throttling quotas<a name="api-throttling-quotas"></a>
 

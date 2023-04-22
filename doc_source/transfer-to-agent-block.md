@@ -29,13 +29,15 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="transfer-to-agent-block-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-agent-properties.png)
+The following image shows the **Properties** page of the **Transfer to agent** block\. It does not have any options on it\.
+
+![\[The properties page of the Transfer to agent block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-agent-properties.png)
 
 ## Configured block<a name="transfer-to-agent-block-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It displays the status **Transferred**\. It does not have any branches\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-agent-configured.png)
+![\[A configured Transfer to agent block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-agent-configured.png)
 
 ## Scenarios<a name="transfer-to-agent-block-scenarios"></a>
 

@@ -8,10 +8,10 @@ An especially powerful use of Content Lens rules is to build rules that generate
 **To create a rule that creates a task**
 
 1. When you create your rule, choose **Create Task** for the action\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-task-example1.png)
+![\[The new rule page, the add action dropdown menu, the create task option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-task-example1.png)
 
 1. Complete the task fields as follows:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-tasks-example2.png)
+![\[The new rule page, the assign contact category section, the Create task section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-tasks-example2.png)
 
    1. **Category name**: The category name appears in the contact record\. Max length: 200 characters\.
 
@@ -19,9 +19,9 @@ An especially powerful use of Content Lens rules is to build rules that generate
 
    1. **Description**: The description appears in the agent's Contact Control Panel \(CCP\)\. Max length: 4096 characters\.
 **Tip**  
-In **Name** and **Description**, use \[ \] to choose from a menu of dynamic values\. For more information, see [Create a task when a contact is categorized in real\-time or post\-call/chat](#contact-lens-rules-create-task)\.   
+In **Name** and **Description**, use \[ \] to choose from a menu of dynamic values: **ContactId**, **AgentId**, **QueueId**, and **RuleName**\. For more information, see [Create a task when a contact is categorized in real\-time or post\-call/chat](#contact-lens-rules-create-task)\.   
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-tasks-brackets.png)
+![\[The Create task section, the Description field, a list of dynamic values.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-tasks-brackets.png)
 
    1. **Task reference name**: This is a default reference that automatically appears in the agent's CCP\.
       + For real\-time rules, the task reference links to the Real\-time details page\. 
@@ -31,8 +31,8 @@ In **Name** and **Description**, use \[ \] to choose from a menu of dynamic valu
 
    1. **Select a flow**: Choose the contact flow that is designed to route the task to the appropriate owner of the task\. The flow must be saved and published for it to appear in your list of options in the dropdown\.
 
-1. The following image shows an example of how this information appears in the agent's CCP:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-tasks-ccp.png)
+1. The following image shows an example of how this information appears in the agent's CCP\.  
+![\[A task in the agent's Contact Control Panel.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-add-tasks-ccp.png)
 
    In this example, the agent sees the following values for **Name**, **Description**, and **Task reference name**:
 
@@ -54,11 +54,11 @@ When a rule creates a task, a contact record is automatically generated for the 
 
 For example, a call comes into your contact center and generates CTR1:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-attributes-example1.png)
+![\[Information on the initial contact record when a call comes in.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-attributes-example1.png)
 
 The Rules engine generates a task\. In the contact record for the task, the voice contact record appears as the **Previous contact ID**\. In addition, the task contact record inherits contact attributes from the voice contact record, as illustrated in the following image:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-attributes-example2.png)
+![\[Contact record 2 for the task.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-attributes-example2.png)
 
 ## About dynamic values for ContactId, AgentId, QueueId, RuleName<a name="rules-task-attributes"></a>
 

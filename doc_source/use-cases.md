@@ -2,9 +2,9 @@
 
 A case represents a customer's issue\. A case is created to record the customer's issue, the steps and interactions taken to resolve the customer's issue, and the outcome\.
 
-If you have permission to view cases then you will see the **Cases** tab in the Amazon Connect agent workspace\. The following image shows an example **Cases** tab\.
+If you have permission to view cases then you will see the **Cases** tab in the Amazon Connect agent workspace\. The following image shows an example **Cases** tab in the agent workspace\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cm-cases-tab.png)
+![\[The Cases tab.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cm-cases-tab.png)
 
 **Topics**
 + [Search and view cases](search-cases.md)

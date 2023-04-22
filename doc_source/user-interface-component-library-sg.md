@@ -1,32 +1,23 @@
-# User interface component library \(Preview\)<a name="user-interface-component-library-sg"></a>
+# User interface component library<a name="user-interface-component-library-sg"></a>
 
-
-|  | 
-| --- |
-| This is prerelease documentation for a service in preview release\. It is subject to change\. | 
+The following are the supported UI components in view resources\. To learn more about how to configure these components, see our interactive [documentation](https://d2ote8qdyv1arb.cloudfront.net/)\.
 
 **Supported Components**
-+ Address
 + Alert
-+ Attributes Bar
++ AttributeBar
 + Button
 + Card
-+ Contact
-+ Checkbox
 + Checkbox Group
-+ Collapsible Container
 + Container
 + Date Picker
-+ Drop Down
++ Dropdown
 + Expandable Section
 + Form Input
-+ Form Sections
 + Header
++ Icon
 + Link
-+ List
-+ Nav Bar
++ Loader
 + Radio Group
-+ Section
-+ Text Area
-+ Time Input
++ TextArea
++ TimePicker
 + Toggle

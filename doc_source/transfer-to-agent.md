@@ -38,8 +38,8 @@ To determine the user ID for an agent so that you can use the value as an attrib
 
   1. In Amazon Connect, in the navigation menu, choose **Users**, **User management**, and then select an agent\. Monitor the content of the **Network** tab\. In the **Name** list, choose the GUID\. 
 
-  1. Choose the **Preview** tab\. The agent ID is displayed next to the `Id` field\. The following image shows an example\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/find-agent-id.png)
+  1. Choose the **Preview** tab\. The agent ID is displayed next to the `Id` field\. The following image shows the location of the agent ID in the **Preview** tab\.  
+![\[The preview tab, the agent ID.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/find-agent-id.png)
 + Use the [ListUsers](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListUsers.html) operation to retrieve the users from your instance\. The agent's user ID is returned with the results from the operation as the value of the `Id` in the [UserSummary](https://docs.aws.amazon.com/connect/latest/APIReference/API_UserSummary.html) object\.
 + Find the user ID for an agent by using [Amazon Connect agent event streams](agent-event-streams.md)\. The agent events, which are included in the agent event data stream, include the agent ARN\. The user ID is included in the agent ARN after **`agent/`**\. 
 

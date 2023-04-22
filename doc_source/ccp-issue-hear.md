@@ -1,4 +1,4 @@
-# Can't hear caller or caller can't hear agent?<a name="cant-hear-caller"></a>
+# Problem using the CCP: Can't hear caller or caller can't hear agent?<a name="ccp-issue-hear"></a>
 
 When the agent can't hear the caller or the caller can't hear them, it's usually because there are problems with one of the following: 
 + The connection between the agent's headset and computer\.

@@ -6,7 +6,7 @@ After you generate long term FTE estimations, you can share this information wit
 
 The capacity planning feature uses published long\-term forecasts as input, along with scenario information that you provide\. It then creates a long\-term capacity plan that you can share with stakeholders\. The following diagram illustrates this integration among published long\-term forecasts, capacity planning, and capacity planning output\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-diagram.png)
+![\[The input and output of forecasting and capacity planning.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-capacity-planning-diagram.png)
 
 ## Getting started<a name="getting-started-capacity-planning"></a>
 

@@ -41,7 +41,9 @@ Another way to think about types of contact attributes is to categorize them bas
 + An external process, such as Amazon Lex or AWS Lambda, provides the value\. 
 + [User\-defined](connect-attrib-list.md#user-defined-attributes)\. In the flow, you can specify the value for an attribute\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-attributes-types.png)
+The following illustration lists the types of available contact attributes, and maps them to the three sources for the values: Amazon Connect, external process such as Amazon Lex, and user\-defined\.
+
+![\[The types of available contact attributes, the sources for their values.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-attributes-types.png)
 
 ## Contact attributes in the contact record<a name="attributes-in-ctr"></a>
 

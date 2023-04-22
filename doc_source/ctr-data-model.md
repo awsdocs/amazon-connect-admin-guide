@@ -386,7 +386,13 @@ Type: String
 Valid values: `AUDIO`, `VIDEO`, `CHAT`
 
 **ParticipantType**  
-Information about the conversation participant: whether they are an agent or contact\.  
+Information about the conversation participant: whether they are an agent or contact\. Following are the participant types:   
++ All
++ Manager
++ Agent
++ Customer
++ Thirdparty
++ Supervisor
 Type: String
 
 **StartTimestamp**  
@@ -411,9 +417,9 @@ Valid values: Amazon S3 \| `KINESIS_VIDEO_STREAM`
 Contains links to other documents that are related to a contact\.
 
 **Reference Info**  
-ReferenceType  
-ContentType  
-Location
+Name  
+Type  
+Value
 
 ## RoutingProfile<a name="ctr-RoutingProfile"></a>
 
@@ -536,6 +542,11 @@ Length: 3
 The fraudster ID if the fraud type is Known Fraudster\.  
 Type: String  
 Length: 25 characters
+
+**WatchlistID**  
+The fraudster watchlist that was set in the flow for the contact\. Use for Known Fraudster Detection\.  
+Type: String  
+Length: 22 characters
 
 ## How to identify abandoned contacts<a name="abandoned-contact"></a>
 

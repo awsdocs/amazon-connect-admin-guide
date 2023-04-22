@@ -2,13 +2,15 @@
 
 This article explains how to troubleshoot and resolve some of the most common issues customers encounter when using SAML with Amazon Connect\.
 
+If you're troubleshooting your integration with other identity providers such as Okta, PingIdentify, Azure AD, and more, see [Amazon Connect SSO Setup Workshop](https://catalog.workshops.aws/workshops/33e6d0e7-f927-4531-abb1-f28a86ba0872/en-US)\. 
+
 ## Error Message: Access Denied\. Your account has been authenticated, but has not been onboarded to this application\.<a name="troubleshoot-saml-access-denied"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-access-denied.png)
+![\[The error message: access denied.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-access-denied.png)
 
 ### What does this mean?<a name="troubleshoot-saml-access-denied-what"></a>
 
-This error means that the user has successfully authenticated via SAML into the AWS SAML login endpoint\. However, the user could not be matched/found inside Amazon Connect\. This usually indicates one of the following: 
+This error means that the user has successfully authenticated using SAML into the AWS SAML login endpoint\. However, the user could not be matched/found inside Amazon Connect\. This usually indicates one of the following: 
 + The username in Amazon Connect doesn't match the `RoleSessionName` SAML attribute specified in the SAML response returned by the identity provider\.
 + The user doesn't exist in Amazon Connect\.
 + The user has two separate profiles assigned to them with SSO\.
@@ -34,7 +36,7 @@ Use the following steps to check the RoleSessionName SAML attribute specified in
    This script uses a simple python command to decode the SAMLResponse from its original URL encoded format\. Then it decodes the response from Base64 and outputs the SAML Response in plain text format\.
 
 1. Check the decoded response for the needed attribute\. For example, the following image shows how to check `RoleSessionName`:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-rolesessionname.png)
+![\[The grep command to check rolesessionname.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-rolesessionname.png)
 
 1. Check whether the username returned in from the previous step exists as a user in your Amazon Connect instance:
 
@@ -46,49 +48,15 @@ Use the following steps to check the RoleSessionName SAML attribute specified in
 
 Following is an image from a sample SAML Response\. In this case, the identity provider \(IdP\) is Azure Active Directory \(Azure AD\)\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-saml-response.png)
-
-## Error Message: Bad Request\. The request was not valid and could not be processed\.<a name="troubleshoot-saml-bad-request"></a>
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-bad-request.png)
-
-### What does this mean?<a name="troubleshoot-saml-bad-request-what"></a>
-
-One of the most common reasons for this error is an Amazon Connect user logged in previously using a different identity provider\. For example, first they logged in using this attribute name: 
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-old-attribute-name-login.png)
-
-Then the same user tried to login but with a different `Role` SAML Attribute, for example: 
-
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-new-attribute-name-login.png)
-
-### Resolution<a name="troubleshoot-saml-bad-request-resolution"></a>
-
-The recommended solution is to reuse the existing Role associated with the Amazon Connect user and [edit the trust relationship](https://docs.aws.amazon.com/IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy) to reference a new identity provider or service principal to meet your new authentication requirements\. If you do need to associate an Amazon Connect user with a new Role, you need to delete and recreate the user in the existing Amazon Connect instance which will result in the loss of data for that user\. 
-
- For instructions for doing this in the Amazon Connect console, see [Manage users in Amazon Connect](manage-users.md)\. Or, use these commands for doing this from the AWS CLI:
-
-1. Get the user ID:
-
-   `aws connect list-users --instance-id [INSTANCE_ID]`
-
-1. Delete the user account:
-
-   `aws connect delete-user --instance-id [INSTANCE_ID] --user-id [USER_ID]` 
-
-1. Create the user account:
-
-   `aws create-user --username [USER_ID] --phone-config [PHONE_CONFIG] --security-profile-ids [SECURITY_PROFILE_ID] --routing-profile-id [ROUTING_PROFILE_ID] --instance-id [INSTANCE_ID]` 
-
-You can also complete these actions using the [AWS SDKs](http://aws.amazon.com/tools/)\. 
+![\[a sample SAML Response.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-saml-response.png)
 
 ## Error Message: Access denied, Please contact your AWS account administrator for assistance\.<a name="troubleshoot-saml-contact-admin"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-access-denied-admin.png)
+![\[Error Message: Access denied.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/saml-troubleshooting-access-denied-admin.png)
 
 ### What does this mean?<a name="troubleshoot-saml-bad-request-what"></a>
 
-The role that the user has assumed has successfully authenticated via SAML\. However, the role doesn't have permission to call the GetFederationToken API for Amazon Connect\. This call is required so the user can log in to your Amazon Connect instance using SAML\.
+The role that the user has assumed has successfully authenticated using SAML\. However, the role doesn't have permission to call the GetFederationToken API for Amazon Connect\. This call is required so the user can log in to your Amazon Connect instance using SAML\.
 
 ### Resolution<a name="troubleshoot-saml-bad-request-resolution"></a>
 

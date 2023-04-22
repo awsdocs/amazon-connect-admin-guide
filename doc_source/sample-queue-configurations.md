@@ -23,8 +23,8 @@ This flow shows different ways you can put a customer in queue: you can change t
 
      The two **Change routing priority / age** blocks move the customer to the front or back of the queue\.
 
-     You can see this path in the following image:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-queue-configurations-priority.png)
+     The following image of the sample flow shows this page highlighted:  
+![\[The No match path in the sample queue configurations flow.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-queue-configurations-priority.png)
 
 1. Next we use a **Check queue status** block to check whether the time in queue is less than 300 seconds\. 
 
@@ -34,7 +34,7 @@ This flow shows different ways you can put a customer in queue: you can change t
 
 These next steps apply to customers who were routed down the voice/**No Match** branch, as shown in the following image:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-queue-configurations.png)
+![\[The No match path in the sample queue configurations flow.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-queue-configurations.png)
 
 1. In the **Get customer input** block, we prompt customers to *Press 1 to go into queue or 2 to enter a callback number\.* 
 
@@ -51,9 +51,9 @@ These next steps apply to customers who were routed down the voice/**No Match** 
    If the initial callback doesn't reach the customer, Amazon Connect will attempt 1 callback\. If it were configured for 2 attempted callbacks, it would wait 10 minutes between each one\. 
 
    Also, no special callback queue is specified\. Rather, customers are in the BasicQueue, which was set at the beginning of the flow\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-queue-configurations-transfer-to-queue-block.png)
+![\[The transfer to callback queue tab, minimum time between attempts is 10 minutes.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/sample-queue-configurations-transfer-to-queue-block.png)
 
 For information about queued callbacks, see the following topics:
-+ [Set up queued callback](setup-queued-callback.md) 
++ [](setup-queued-cb.md) 
 + [Flow block: Transfer to queue](transfer-to-queue.md) 
 + [About queued callbacks in metrics](about-queued-callbacks.md) 

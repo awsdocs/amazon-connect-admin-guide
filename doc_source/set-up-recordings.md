@@ -40,6 +40,12 @@ You can also access the recording from the customer's [contact record](sample-ct
 **Tip**  
 Amazon Connect uses the Amazon S3 [PutObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html) and [MultipartUpload](https://docs.aws.amazon.com/AmazonS3/latest/API/API_MultipartUpload.html) APIs to upload the call recording to your S3 bucket\. If you are using [S3 Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/userguide/NotificationHowTo.html) when call recordings are uploaded successfully to your bucket, make sure you enable the notification for **All object create events**, or for both *s3:ObjectCreated:Put* and *s3:ObjectCreated:CompleteMultipartUpload* event types\. 
 
+## Headset requirements for listening to recordings<a name="recording-headset-requirements"></a>
+
+You need to use an output device \(headset or other device\) that supports stereo output so you can hear both the agent and customer audio\.
+
+Agent and customer recordings are presented in two separate channels\. With a full headset, each side will play one channel\. But for a one\-ear headset, there isn't a mechanism to mix two channels into one\. 
+
 ## How to set up recording behavior<a name="how-to-set-up-recording-behavior"></a>
 
 To view a sample flow with the **Set recording behavior** block configured, see [Sample recording behavior](sample-recording-behavior.md)\.
@@ -49,7 +55,7 @@ To view a sample flow with the **Set recording behavior** block configured, see 
 1. Log in to your Amazon Connect instance using an account that has permissions to edit flows\.
 
 1. On the navigation menu, choose **Routing**, **Contact flows**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/menu-contact-flows.png)
+![\[Amazon Connect navigation menu, Routing, contact flows.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/menu-contact-flows.png)
 
 1. Open the flow that handles customer contacts you want to monitor\.
 
@@ -74,7 +80,7 @@ To view a sample flow with the **Set recording behavior** block configured, see 
 
 To learn what permissions managers need, and how they can monitor live conversations and review recordings of past conversations, see:
 + [Set up live monitoring for voice and/or chat](monitor-conversations.md) 
-+ [Review recorded conversations](review-recorded-conversations.md)
++ [Review recorded conversations between agents and customers using Amazon Connect](review-recorded-conversations.md)
 
 ## How to set up S3 Object Lock for immutable call recordings<a name="s3-object-lock-call-recordings"></a>
 
@@ -101,7 +107,7 @@ To enable Object Lock on an existing bucket, open an AWS Support ticket\.
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
 1. On the instances page, choose the instance alias\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Data storage**\.
 
@@ -120,11 +126,11 @@ To enable Object Lock on an existing bucket, open an AWS Support ticket\.
 1. Choose **Analytics and optimization**, **Contact search**\. Search for your call recording to find the contact ID\. Copy the contact ID\. You're going to use it in the next step to locate the call recording in your S3 bucket\.
 
 1. Open the Amazon S3 console, select the bucket you created in Step 1, and follow the path prefix\. The path to the call recording includes the year, month, and day the recording was made\. After you're in the correct path prefix, search for the contact ID of the call recording\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/s3-objectlock-pathprefix.png)
+![\[The Amazon S3 console, the search box, the path prefix.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/s3-objectlock-pathprefix.png)
 
 1. Select the **Show versions** toggle next to the **Search** box\. This option allows you to attempt to delete the object instead of only applying a delete marker\. Applying a delete marker is the standard behavior when you delete an object from an S3 bucket with versioning enabled\.
 
 1. Select the call recording \(the box to the left of the recording name\), and then choose **Delete**\. In the confirmation box, type **permanently delete** and select **Delete objects**\.
 
 1. Review the **Delete objects: status** notification to confirm that the delete operation has been blocked due to the Object Lock policy\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/s3-objectlock-failed.png)
+![\[The Amazon S3 console, Delete objects status notification.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/s3-objectlock-failed.png)

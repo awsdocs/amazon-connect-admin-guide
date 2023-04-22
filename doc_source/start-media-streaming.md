@@ -30,7 +30,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="start-media-streaming-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/start-media-streaming.png)
+The following image shows the **Properties** page of the **Start media streaming** block\. It has two options: start the stream from the customer or to the customer\. 
+
+![\[The properties page of the Start media streaming block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/start-media-streaming.png)
 
 ## Configuration tips<a name="start-media-streaming-tips"></a>
 + You must enable live media streaming in your instance to successfully capture customer audio\. For instructions, see [Capture customer audio: live media streaming](customer-voice-streams.md)\.
@@ -40,10 +42,12 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Configured block<a name="start-media-streaming-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/start-media-streaming-configured.png)
+![\[A configured Start media streaming block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/start-media-streaming-configured.png)
 
 ## Sample flows<a name="start-media-streaming-samples"></a>
+
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 
 [Example flow for testing live media streaming](use-media-streams-blocks.md) 

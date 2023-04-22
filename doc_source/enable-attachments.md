@@ -10,13 +10,13 @@ You will need to update your customer\-facing user interface to support attachme
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\. The following image shows the **Amazon Connect virtual contact center instances** page, with a box a box around the instance alias\.  
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. On the **Data storage** page, under the **Attachments**, choose **Edit**, select **Enable Attachments sharing**, and then choose **Save**\.
 
    Storage options appear, similar to the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/attachments-enable.png)
+![\[The attachment section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/attachments-enable.png)
 
 1. You can change the Amazon S3 bucket location where attachments are stored\. By default, your existing Amazon Connect bucket is used, with a new prefix for attachments\. 
 **Note**  
@@ -52,7 +52,7 @@ To allow customers and agents to upload and download files, update your cross\-o
 1. Add a CORS policy that has one of the following rules on your attachments bucket\. For example CORS policies, see [Cross\-origin resource sharing: Use\-case scenarios](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html#example-scenarios-cors) in the *Amazon S3 Developer Guide*\.
    + Option 1: List the endpoints from where attachments will be sent and received, such as the name of your business web site\. This rule allows cross\-origin PUT and GET requests from your website \(for example, http://www\.example1\.com\)\.
 
-     Your CORS policy might look like the following example:
+     Your CORS policy may look similar to the following example:
 
      ```
      [
@@ -63,34 +63,39 @@ To allow customers and agents to upload and download files, update your cross\-o
              ],
              "AllowedOrigins": [
                  "http://www.example1.com", 
-                 "http://www.example2.com"    
+                 "http://www.example2.com" 
+                 ],
             "AllowedHeaders": [
                  "*"
-            ]
+                 ]
          }    
      ]
      ```
    + Option 2: Add the `*` wildcard to `AllowedOrigin`\. This rule allows cross\-origin PUT and GET requests from all origins, so you don't have to list your endpoints\.
 
-     Your CORS policy might look like the following example:
+     Your CORS policy may look similar to the following example:
 
      ```
-     [    
+     [
          {                               
              "AllowedMethods": [
                  "PUT",
                  "GET"            
-             ],       
-             "AllowedOrigins": [
-                 "*"
              ],
-             "AllowedHeaders": [
+             "AllowedOrigins": [
+                 "*" 
+                 ],
+            "AllowedHeaders": [
                  "*"
-             ]
-         }
+                 ]
+         }    
      ]
      ```
 
 ## Step 3: Update your chat UI<a name="step3-update-chat-ui"></a>
 
 To help you update the chat user interface that your customers use, we've posted an updated version of chat interface JS\. It exposes an attachment icon on the UI and supports the backend calls for attachment sharing\. See [Amazon Connect Chat UI Examples](https://github.com/amazon-connect/amazon-connect-chat-ui-examples) on GitHub\.
+
+## Attachments not appearing?<a name="problems-enabling-attachments"></a>
+
+If your agents report problems receiving and sending attachments in chat messages, see [Internal firewall prevents access to chat attachments](ts-agent-attachments.md)\. 

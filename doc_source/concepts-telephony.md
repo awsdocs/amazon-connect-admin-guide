@@ -1,4 +1,7 @@
-# Telephony<a name="concepts-telephony"></a>
+# Concepts: Telephony capabilities in Amazon Connect<a name="concepts-telephony"></a>
+
+**Important**  
+Trying to contact Amazon for support? See [Amazon Customer Service](https://www.amazon.com/gp/help/customer/display.html) \(Amazon orders and deliveries\) or [AWS Support](http://aws.amazon.com/premiumsupport/) \(Amazon Web Services\)\.
 
 Amazon Connect provides a variety of choices to enable your company to make and receive telephone calls\. One of the great advantages of Amazon Connect is AWS manages the telephony infrastructure for you: carrier connections, redundancy, and routing\. And, it's designed to scale\. 
 
@@ -6,8 +9,8 @@ This topic explains the options that Amazon Connect provides for telephony, whic
 
 **Topics**
 + [Telephony architecture](#concepts-telephony-architecture)
-+ [Toll\-free numbers](#concepts-toll-free-numbers)
-+ [Direct\-in\-dial \(DID\) numbers](#concepts-did-numbers)
++ [About toll\-free numbers](#concepts-toll-free-numbers)
++ [About direct\-in\-dial \(DID\) numbers](#concepts-did-numbers)
 + [Claiming numbers in Amazon Connect](#concepts-claiming-numbers)
 + [Porting numbers](#concepts-porting-numbers)
 + [Use cases for different configurations](#concepts-use-cases)
@@ -20,15 +23,15 @@ AWS manages the connectivity to our network of carriers providing diverse connec
 
 In addition to the Amazon Connect service being spread across multiple Availability Zones, AWS also has multiple telephony providers\. These providers have multiple links into the data centers in those Availability Zones\. This ensures that if a single or even multiple links fail from a carrier, there are alternate routes available to ensure the service remains available\. 
 
-## Toll\-free numbers<a name="concepts-toll-free-numbers"></a>
+## About toll\-free numbers<a name="concepts-toll-free-numbers"></a>
 
-Toll\-free numbers are telephone numbers with distinct prefix codes that can be dialed with no charge to the person placing the call\. Such numbers allow callers to reach businesses and/or individuals out of the area without being charged a long\-distance fee for the call\. 
+Toll\-free numbers are phone numbers with distinct prefix codes that can be dialed with no charge to the person placing the call\. Such numbers allow callers to reach businesses and/or individuals out of the area without being charged a long\-distance fee for the call\. 
 
 In the United States, the [Federal Communications Commission](https://www.fcc.gov/consumers/guides/what-toll-free-number-and-how-does-it-work) provides rules for obtaining and using toll\-free numbers\. In other countries, similar governing bodies ensure that toll\-free numbers are managed and distributed in accordance with local laws\.
 
-AWS manages toll\-free numbers as a Responsible Organization, or "RespOrg\." When you claim or port a number into Amazon Connect, we register that number with [SOMOS](https://www.somos.com/)\. Once the number is registered, we are able to select multiple carriers to provide BOTH route and carrier redundancy\. This provides the highest level of availability, ensuring the number will remain available even in the event of a complete carrier outage\. This level of service does come at an additional cost, as toll\-free numbers are a higher price than direct dial, but the service reliability and customer experience make this the most attractive option\.
+AWS manages toll\-free numbers as a Responsible Organization, or "RespOrg\." When you claim or port a number into Amazon Connect, we register that number with [SOMOS](https://www.somos.com/)\. After the number is registered, we are able to select multiple carriers to provide BOTH route and carrier redundancy\. This provides the highest level of availability, ensuring the number will remain available even in the event of a complete carrier outage\. This level of service does come at an additional cost, as toll\-free numbers are a higher price than direct dial, but the service reliability and customer experience make this the most attractive option\.
 
-## Direct\-in\-dial \(DID\) numbers<a name="concepts-did-numbers"></a>
+## About direct\-in\-dial \(DID\) numbers<a name="concepts-did-numbers"></a>
 
 Direct inward dialing \(DID\), also called direct dial\-in \(DDI\) in Europe, is a telecommunication service offered by telephone companies to subscribers\. DID numbers provide a locally formatted telephone number that can match the dialing pattern of a local subscriber\. For example, in Seattle, Washington, USA, the local dialing pattern is \+1\(206\)\-NXX\-XXXX\. The provider of the DID number would provide numbers with the \+1\(206\) pattern to match local dialing\.
 
@@ -42,7 +45,7 @@ DID numbers are less expensive than toll\-free numbers, but don't have the redun
 
 ## Claiming numbers in Amazon Connect<a name="concepts-claiming-numbers"></a>
 
-Amazon Connect provides you the ability to claim both direct dial and toll\-free numbers in supported countries from inventories maintained by AWS\. To claim a number, log into your Amazon Connect instance and select **Phone numbers**\. For instructions, see [Claim a phone number in your country](claim-phone-number.md)\. 
+Amazon Connect provides you the ability to claim both direct dial and toll\-free numbers in supported countries from inventories maintained by AWS\. To claim a number, log into your Amazon Connect instance and select **Phone numbers**\. For instructions, see [How to get an Amazon Connect phone number in your current country](get-connect-number.md)\. 
 
 ## Porting numbers<a name="concepts-porting-numbers"></a>
 
@@ -52,19 +55,19 @@ If you are trying to port a number outside of the United States, follow the [por
 
 To begin the porting process, you need to gather some documentation to enable the process to run smoothly\. AWS support will need a copy of your bill showing the current carrier, number\(s\) to port, and the company name\. Feel free to redact any pricing or company information you feel is proprietary\. You will also need to provide your Amazon Connect instance ID\. 
 
-For detailed porting instructions, see [Port your current phone number](port-phone-number.md)\.
+For detailed porting instructions, see [Port your current phone number to Amazon Connect](port-phone-number.md)\.
 
 ## Use cases for different configurations<a name="concepts-use-cases"></a>
 
 ### Starting fresh with Amazon Connect<a name="concepts-new-config"></a>
 
-In this case, simply select new numbers using the claim a number process\. For instructions, see [Claim a phone number in your country](claim-phone-number.md)\.
+In this case, simply select new numbers using the claim a number process\. For instructions, see [How to get an Amazon Connect phone number in your current country](get-connect-number.md)\.
 
 ### Migrating to Amazon Connect from another provider/platform<a name="concepts-migrate-platforms"></a>
 
 If you're migrating to Amazon Connect from other platform, we recommend starting with a proof of concept, and migrating to Amazon Connect over time\.
 + A best practice is to forward your existing numbers to a new number \(or numbers\) claimed in Amazon Connect until you are fully converted\. 
-+ Once fully converted, use the [porting process](port-phone-number.md) to bring your numbers into Amazon Connect\. 
++ After fully converted, use the [porting process](port-phone-number.md) to bring your numbers into Amazon Connect\. 
 + This gives you a fallback in case you have migration issues\.
 
 ### Maintaining two separate platforms<a name="concepts-two-platforms"></a>

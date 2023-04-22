@@ -16,7 +16,7 @@ The following table lists all available flow blocks that you can use\. Choose an
 |   [Check queue status](check-queue-status.md)   |  Checks the status of the queue based on specified conditions\.  | 
 |   [Check Voice ID](check-voice-id.md)   |  Branches based on the enrollment status, voice authentication status, or status of detection of fraudsters in a watchlist of the caller returned by Voice ID\.  | 
 |   [Check staffing](check-staffing.md)   |  Checks the current working queue, or queue you specify in the block, for whether agents are available, staffed, or online\. Staffed availability could be on call, or after contact work status\.  | 
-|   [Create task](create-task-block.md)   |  Creates a new task, sets the tasks attributes, and initiates a contact flow to start the task\. To learn more about Amazon Connect Tasks, see [Tasks](tasks.md)\.   | 
+|   [Create task](create-task-block.md)   |  Creates a new task, sets the tasks attributes, and initiates a contact flow to start the task\. To learn more about Amazon Connect Tasks, see [Concepts: Tasks in Amazon Connect](tasks.md)\.   | 
 |   [Customer profiles](customer-profiles-block.md)   |  Enables you to retrieve, create, and update a customer profile\.  | 
 |  [Disconnect / hang up](disconnect-hang-up.md)  |  Disconnects a contact\.  | 
 |   [Distribute by percentage](distribute-by-percentage.md)   |  Routes customers randomly based on a percentage\.  | 
@@ -40,7 +40,7 @@ The following table lists all available flow blocks that you can use\. Choose an
 |  [Set voice](set-voice.md)   |  Sets the text\-to\-speech \(TTS\) language and voice to be used in the flow\.  | 
 |   [Set whisper flow](set-whisper-flow.md)  |  Overrides the default whisper by linking to a whisper flow\.  | 
 |   [Set working queue](set-working-queue.md)   |  Specifies the queue to be used when **Transfer to queue** is invoked\.  | 
-|  [Show view \(Preview\)](show-view-block.md)  | Configures UI based workflows that you can surface to users in front end applications\. | 
+|  [Show view](show-view-block.md)  | Configures UI based workflows that you can surface to users in front end applications\. | 
 |  [Start media streaming](start-media-streaming.md)  | Starts capturing customer audio for a contact\. | 
 |  [Stop media streaming](stop-media-streaming.md)  | Stops capturing customer audio after it is started with a **Start media streaming** block\. | 
 |   [Store customer input](store-customer-input.md)   |  Stores numerical input to a contact attribute\.  | 

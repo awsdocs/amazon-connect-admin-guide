@@ -1,8 +1,8 @@
 # Assign permissions to review recordings of past conversations<a name="assign-permssions-to-review-recordings"></a>
 
-Assign the **CallCenterManager** security profile so a user can listen to call recordings or review chat transcripts\. This security profile also includes a setting that makes the icon to download recordings appear in the results of the **Contact search** page\. 
+Assign the **CallCenterManager** security profile so a user can listen to call recordings or review chat transcripts\. This security profile also includes a setting that makes the icon to download recordings appear in the results of the **Contact search** page\. The following image shows the recording play, download, and delete icons that are displayed to a user who has these permissions\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recording-permissions-listen-download-delete.png)
+![\[The Contact Search page, a contact, the Recording play, download, and delete icons to manage the recording.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recording-permissions-listen-download-delete.png)
 
 Or, assign the following individual permissions\.
 
@@ -32,7 +32,7 @@ Be sure to assign managers to the **Agent** security profile so they can access 
 
    Note the following:
    + To restrict access to recordings, ensure users do not have **Analytics and Optimization** \- **Recorded conversations \(unredacted\) \- Access** permissions, as shown in the following image\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recording-permissions-access.png)
+![\[The Recorded conversations unredacted option on the security profiles page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/recording-permissions-access.png)
    + If users do not have **Recorded conversations** permission—or they're not logged in to Amazon Connect—they cannot listen to the call recording or view the chat transcript, or access the URL in S3, even if they know how the URL is formed\.
    + The **Enable download button** permission controls only whether the download button appears in the user interface\. It does not control access to the recording\. 
    + To enable a user to delete recordings, choose the **Delete** permission\. By default, the **Enable download button** permission is granted too so the user can delete recordings through the user interface\. 

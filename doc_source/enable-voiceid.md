@@ -40,11 +40,11 @@ Reading the Biometric Privacy Act \(BIPA\) Consent Acknowledgement is a requirem
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\. The following image shows the **Amazon Connect virtual contact center instances** page, with a box a box around the instance alias\.  
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Voice ID**\. Read the BIPA Consent Acknowledgement, and accept if you agree\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-bipa.png)
+![\[The Enable Voice ID page, the button that says Read the BIPA Consent Acknowledgement.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-bipa.png)
 
 ## Step 2: Create a new Voice ID domain and encryption key<a name="enable-voiceid-step2"></a>
 
@@ -89,16 +89,19 @@ You can perform this step using the Amazon Connect console or by using Amazon Co
 
 ------
 
-You've enabled Voice ID for your instance\. Next, in Step 3 you configure how you want Voice ID to work in your flow\.
+You've enabled Voice ID for your instance\. The following has been created: 
++ Your Voice ID domain and a default fraudster watchlist that will hold your fraudsters\.
++ A managed Amazon EventBridge rule in your account\. This rule is used to ingest Voice ID events for creating contact records related to Voice ID\. Additionally, Amazon Connect adds [Voice ID permissions](connect-slr.md) to the service\-linked role for Amazon Connect\.
 
-**Note**  
-When you enable Voice ID for an Amazon Connect instance \(by using either the Amazon Connect console or the [CreateIntegrationAssociation](https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateIntegrationAssociation.html) API\), Amazon Connect creates a managed Amazon EventBridge rule in your account\. This rule is used to ingest Voice ID events for creating contact records related to Voice ID\. Additionally, Amazon Connect adds [Voice ID permissions](connect-slr.md) to the service\-linked role for Amazon Connect\.
+Next, in Step 3 you configure how you want Voice ID to work in your flow\.
 
 ## Step 3: Configure Voice ID in your contact flow<a name="enable-voiceid-step3"></a>
 
 In this step you add the required blocks to your flow and configure how you want Voice ID to work\.
 + [Play prompt](play.md): Add this block before the [Set Voice ID](set-voice-id.md) block to stream audio properly\. You can edit it to include a simple message such as "Welcome\."
-+ [Set Voice ID](set-voice-id.md): After the [Play prompt](play.md) block, add the [Set Voice ID](set-voice-id.md) block\. It should be at the start of a call\. You use this block to start streaming audio to Amazon Connect Voice ID to verify the caller's identity, as soon as the call is connected to a flow\. In this block you configure the authentication threshold, response time, and fraud threshold\. 
++ [Set Voice ID](set-voice-id.md): After the [Play prompt](play.md) block, add the [Set Voice ID](set-voice-id.md) block\. It should be at the start of a call\. Use this block to start streaming audio to Amazon Connect Voice ID to verify the caller's identity, as soon as the call is connected to a flow\. 
+
+  In **Set Voice ID** block you configure the authentication threshold, response time, fraud threshold, and fraudster watchlist to be used for known fraudster detection\.
 + [Set contact attributes](set-contact-attributes.md): Use to pass the `CustomerId` attribute to Voice ID\. The `CustomerId` may be a customer number from your CRM, for example\. You can create a Lambda function to pull the unique customer ID of the caller from your CRM system\. Voice ID uses this attribute as the `CustomerSpeakerId` for the caller\.
 **Note**  
 `CustomerId` can be an alphanumeric value\. It supports only \_ and \- \(underscore and hyphen\) special characters\. It does not need to be UUID\. For more information, see `CustomerSpeakerId` in the [Speaker](https://docs.aws.amazon.com/voiceid/latest/APIReference/API_Speaker.html) data type\.

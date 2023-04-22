@@ -2,9 +2,9 @@
 
 A rule is an action that Amazon Connect automatically performs, based on conditions you specify\. Contact center managers, supervisors and QA analysts can quickly create rules from the Amazon Connect console\. No coding is required\.
 
-The following image shows the Rules user interface, and the actions available when you create a rule\.
+The following image shows the Rules user interface, and the actions available in a dropdown menu when you create a rule\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-action-no-wisdom.png)
+![\[The page to create rules, the Add action dropdown menu.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-action-no-wisdom.png)
 
 By creating rules, you can:
 + Automatically categorize contacts\.

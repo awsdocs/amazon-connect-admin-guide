@@ -32,10 +32,12 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="check-call-progress-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-call-progress-properties.png)
+The following image shows the **Properties** page of the **Check call progress** block\.
+
+![\[The properties page of the Check call progress block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-call-progress-properties.png)
 
 ## Configured block<a name="check-call-progress-configured-block"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has branches for **Call answered**, **Voicemail \(beep\)**, **Voicemail \(no beep\)**, **Not detected**, and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-call-progress-configured.png)
+![\[A configured Check call progress block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/check-call-progress-configured.png)

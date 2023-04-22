@@ -58,5 +58,5 @@ For example, you can customize your flow to say the name of the customer in your
   ```
 + Using a JWT to pass contact attributes ensures the integrity of the data\. If you safeguard the shared secret and follow appropriate security practices, you can help ensure that the data cannot be manipulated by a bad actor\.
 + Contact attributes are only encoded in the JWT, not encrypted, so it's possible to decode and read the attributes\. Sensitive data should not be passed in the token\. 
-+ If you want to test the chat experience with the [simulated chat experience](chat-testing.md#test-chat) and include contact attributes, be sure to enclose both the key and value in quotes, as shown in the following image:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-chat-contact-attributes.png)
++ If you want to test the chat experience with the [simulated chat experience](chat-testing.md#test-chat) and include contact attributes, be sure to enclose both the key and value in quotes, as shown in the following image\.  
+![\[The test settings page, a contact attribute key in quotes, a value in quotes.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/test-chat-contact-attributes.png)

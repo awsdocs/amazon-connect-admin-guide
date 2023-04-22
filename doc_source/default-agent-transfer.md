@@ -1,6 +1,8 @@
 # Default agent transfer: "Transferring now"<a name="default-agent-transfer"></a>
 
-This default transfer flow is what the agent experiences when transferring a contact to another agent by using [Create quick connects](quick-connects.md)\. A **Play prompt** plays the message "Transferring now\." Then the **Transfer to agent** block is used to transfer the contact to the agent\. 
+This default transfer flow is what the "from" agent experiences when they transfer a contact to another agent by using [Create quick connects](quick-connects.md)\. The "from" agent hears a **Play prompt** play the message "Transferring now\." Then the **Transfer to agent** block is used to transfer the contact to the agent\. 
+
+When the contact is transferred, the "to" agent hears the [Default agent whisper](default-agent-whisper.md)\. 
 
 **Tip**  
 The **Transfer to Agent** block is a beta feature and only works for voice interactions\. To transfer a chat contact to another agent, follow these instructions: [Use contact attributes to route contacts to a specific agent](transfer-to-agent.md#use-attribs-agent-queue)\.

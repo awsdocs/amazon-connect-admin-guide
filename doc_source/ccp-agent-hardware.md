@@ -19,7 +19,7 @@ For instructions on verifying the sample rate of the agent's headset and browser
 Under\-powered workstations can make it difficult for agents to access the tools and resources they need to service contacts\. Also, keep in mind the resource requirements when scoping workstations to ensure that they can perform under load while appropriately multitasking for the use case\. 
 
 Following are the minimum system requirements for the workstations using the CCP only\. You'll need to scope additional memory, bandwidth, and CPU for the operating system and anything else running on the workstation to avoid resource contention\.
-+ **Browser**—For a list of all supported browsers, see [Browsers supported by Amazon Connect](browsers.md)\. 
++ **Browser**—For a list of all supported browsers, see [Browsers supported by Amazon Connect](connect-supported-browsers.md)\. 
 + **Network**—100 Kbps bandwidth per connected workstation
 + **Memory**—2 GB RAM
 + **Processor \(CPU\)**—2 GHz

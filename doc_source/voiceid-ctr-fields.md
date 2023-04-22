@@ -18,8 +18,8 @@ Use the [Contact search](contact-search.md) page to search for and review the re
   + Known fraudster: the caller’s voice matches a fraudster from the fraudster watchlist you have created\.
   + Voice spoofing: the caller is modifying their voice or is using speech synthesis to spoof the agent\.
 
-## Voice ID results in a Contact Record<a name="voiceid-ctr"></a>
+## Voice ID results in a contact record<a name="voiceid-ctr"></a>
 
 After you search for a contact, you can choose an ID to view their contact record\. The following image shows an example of the fields in the Voice ID section of the contact record: 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-ctr-nospoofing.png)
+![\[A contact record, fraudster ID and watchlist ID fields.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/voiceid-ctr-nospoofing.png)

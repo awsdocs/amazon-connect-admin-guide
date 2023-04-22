@@ -2,6 +2,20 @@
 
 This topic lists the AWS Regions where Amazon Connect services are available\.
 
+**Topics**
++ [Amazon Connect](#amazonconnect_region)
++ [AppIntegrations](#appintegrations_region)
++ [Cases](#cases_region)
++ [Contact Lens](#contactlens_region)
++ [Customer Profiles](#customerprofiles_region)
++ [Voice ID](#voiceid_region)
++ [Agent workspace](#agentworkspace_region)
++ [Forecasting, capacity planning, and scheduling](#optimization_region)
++ [Live media streaming](#livemediastreaming_region)
++ [Outbound campaigns](#campaigns_region)
++ [Tasks](#tasks_region)
++ [Wisdom](#wisdom_region)
+
 ## Amazon Connect availability by Region<a name="amazonconnect_region"></a>
 
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/connect/latest/adminguide/regions.html)
@@ -45,7 +59,12 @@ This topic lists the AWS Regions where Amazon Connect services are available\.
 ## Agent workspace \(step\-by\-step guides\)<a name="agentworkspace_region"></a>
 + US East \(N\. Virginia\)
 + US West \(Oregon\)
++ Asia Pacific \(Seoul\)
++ Asia Pacific \(Singapore\)
 + Asia Pacific \(Sydney\)
++ Asia Pacific \(Tokyo\)
++ Canada \(Central\)
++ Europe \(Frankfurt\)
 + Europe \(London\)
 
 ## Forecasting, capacity planning, and scheduling<a name="optimization_region"></a>

@@ -4,7 +4,7 @@ Use these steps to set up your contact center\.
 
 1. [Create an Amazon Connect instance](amazon-connect-instances.md)\. Use an instance to contain all the resources and settings related to your contact center\. You specify how you plan to manage user accounts, whether your contact center will accept incoming calls and make outbound calls, and review the location where data will be stored in your Amazon S3 bucket\. 
 
-1. [Set up phone numbers for your contact center](contact-center-phone-number.md)\. If you're using voice, either claim a phone number that AWS provides, or port your current phone number to Amazon Connect\. If you choose to port your numbers, we suggest claiming a number so you can test Amazon Connect and build your contact center while waiting for your numbers to be ported over\. 
+1. [Set up phone numbers to use the Amazon Connect service](ag-overview-numbers.md)\. If you're using voice, either claim a phone number that AWS provides, or port your current phone number to Amazon Connect\. If you choose to port your numbers, we suggest claiming a number so you can test Amazon Connect and build your contact center while waiting for your numbers to be ported over\. 
 
 1. [Set up routing](connect-queues.md)\. Create your queues and routing profiles, and set your hours of operation\. In your routing profiles, specify the channels that agents should use: voice, chat, tasks, or all three\. You also specify how many chats and tasks an agent can manage at the same time\.
 

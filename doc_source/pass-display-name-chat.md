@@ -2,7 +2,9 @@
 
 To deliver a more personalized experience for both your customers and agents, you can customize the Amazon Connect chat widget to pass the customer display name during contact initialization\. The name is visible to both the customer and agent throughout the chat interaction\. This display name is recorded in the chat transcript\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-displayname.png)
+The following images show the customer's display name in their chat experience, and their name in the agent's CCP\.
+
+![\[The customer's name in their chat experience, the customer's name in the agent's CCP.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-displayname.png)
 
 1. How the customer display name may appear to the customer using the chat user interface\.
 

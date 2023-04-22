@@ -1,8 +1,11 @@
-# Tasks<a name="tasks"></a>
+# Concepts: Tasks in Amazon Connect<a name="tasks"></a>
+
+**Important**  
+If you found this page because you need to contact Amazon for support, see [Amazon Customer Service](https://www.amazon.com/gp/help/customer/display.html) \(Amazon orders and deliveries\) or [AWS Support](http://aws.amazon.com/premiumsupport/) \(Amazon Web Services\) instead\.
 
 Amazon Connect Tasks allows you to prioritize, assign, track, and even automate tasks across the disparate tools agents use to support customers\. For example, using Tasks you can:
 + Follow\-up on customer issues recorded in a customer relationship management \(CRM\) solution such as Salesforce\.
-+ Follow\-up with a customer via a call\.
++ Follow\-up with a customer through a call\.
 + Complete actions in a business\-specific system, such as processing a customer claim in an insurance application\.
 
 Currently, Amazon Connect Tasks can be used in compliance with [GDPR](http://aws.amazon.com/compliance/gdpr-center) and is approved for SOC, PIC, HITRUST, ISO, and HIPAA\.
@@ -13,7 +16,7 @@ A *task* is a unit of work that an agent must complete\. This includes work that
 
 Agents handle tasks in their Contact Control Panel \(CCP\), again just like any other contact\. When assigned a task, agents see a notification with the description of the task, information associated with the tasks, and links to any applications that they might need to complete the task\. The following image shows what an agent's CCP may look like when they manage tasks\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-introduction.png)
+![\[A task in the contact control panel.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-introduction.png)
 
 ## How to create tasks<a name="concepts-set-up-tasks"></a>
 
@@ -71,6 +74,52 @@ You can use tasks in the following flow blocks:
 + Transfer to queue
 + Wait
 
+## Linked tasks<a name="linked-tasks"></a>
+
+When using tasks with the [StartTaskContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartTaskContact.html) API, a new contact can be associated with an existing contact through `PreviousContactID` or `RelatedContactId`\. This new contact contains a copy of the [contact attributes](connect-attrib-list.md) from the linked contact\.
+
+The following code shows request syntax that includes `PreviousContactID` and `RelatedContactId`\.
+
+```
+PUT /contact/task HTTP/1.1
+Content-type: application/json
+
+{
+   "Attributes": { 
+      "string" : "string" 
+   },
+   "ClientToken": "string",
+   "ContactFlowId": "string",
+   "Description": "string",
+   "InstanceId": "string",
+   "Name": "string",
+   "PreviousContactId": "string",
+   "QuickConnectId": "string",
+   "References": { 
+      "string" : { 
+         "Type": "string",
+         "Value": "string"
+      }
+   },
+   "RelatedContactId": "string",
+   "ScheduledTime": number,
+   "TaskTemplateId": "string"
+}
+```
+
+When you use `PreviousContactID` or `RelatedContactID` to create tasks, note the following:
++ `PreviousContactID` \- When contacts are linked using the `PreviousContactID`, updates that are made to contact attributes at any time in the chain will percolate through the entire chain\.
+
+  There can be a maximum of 12 linked contacts in a chain\.
++ `RelatedContactID` \- When contacts are linked using the `RelatedContactID`, updates that are made to contact attributes will percolate only to the contactID that is referenced in the [UpdateContactAttributes](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactAttributes.html) API\. 
+
+  The limit of 12 contacts in a chain does not apply when you use `RelatedContactID` to create a task\.
+
+**Note**  
+You can specify only `PreviousContactID` or `RelatedContactID` in a request body, but not both\. If you do specify both, Amazon Connect returns an `InvalidRequestException` error with a 400 status code\.
+
+For information about how `PreviousContactID` and `RelatedContactId` are modeled in contact records, see [ContactTraceRecord](ctr-data-model.md#ctr-ContactTraceRecord) in the contact records data model\.
+
 ## Using IAM? Add Task permissions<a name="iam-tasks"></a>
 
 If your organization is using custom [IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) policies to manage access to the Amazon Connect console, make sure users have the appropriate permissions to set up applications for task creation\. For a list of required permissions, see [Tasks page](security-iam-amazon-connect-permissions.md#tasks-page)\.
@@ -114,7 +163,7 @@ Use the [Contact search](contact-search.md) page to search for and review comple
 
 The following image is an example of what the **Contact Summary** and **References** look like in a contact record for a task\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-sample-ctr.png)
+![\[A contact record page for a task.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-sample-ctr.png)
 
 The following data is appended to the contact record but not stored with it\. The data is included in an export\. 
 + Flow ID

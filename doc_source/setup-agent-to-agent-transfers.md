@@ -43,8 +43,8 @@ In this step, you create a flow that's type **Transfer to agent** and use a [Set
 
 1. In the left navigation menu, expand **Set**, and then drag the **Set working queue** block to the canvas\.
 
-1. Configure the **Set working queue** block as shown in the following image:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-working-queue-properties-agent-to-agent-transfer.png)
+1. Configure the **Set working queue** block as shown in the following image\. Choose **By agent**, **Set dynamically**, **Namespace** = **Agent**, **Value** = **User name**\.  
+![\[The properties page for the Set working queue block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-working-queue-properties-agent-to-agent-transfer.png)
 
    1. Choose **By agent**\.
 
@@ -54,8 +54,8 @@ In this step, you create a flow that's type **Transfer to agent** and use a [Set
 
    1. For **Value**, use the dropdown box to select **User name**\.
 
-1. Add a [Transfer to queue](transfer-to-queue.md) block\. You don't need to configure this block\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/agent-to-agent-transfer.png)
+1. Add a [Transfer to queue](transfer-to-queue.md) block\. You don't need to configure this block\. The following image shows the **Success** branch of the **Set working queue** block connecting to the **Transfer to queue** block\.   
+![\[The transfer to queue block on the flow designer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/agent-to-agent-transfer.png)
 
 1. Save and publish this flow\.
 

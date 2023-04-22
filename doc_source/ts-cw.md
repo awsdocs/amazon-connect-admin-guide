@@ -1,8 +1,10 @@
-# Troubleshooting issues with your chat widget<a name="troubleshoot-chatwidget"></a>
+# Investigate common issues with adding a chat user interface to your website<a name="ts-cw"></a>
+
+This topic is for developers who need to investigate issues that may occur when configuring a chat widget in the Amazon Connect console\. 
 
 If you see the following **Something went wrong** error message when loading your chat widget, open the browser tools to view the error logs\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-error-message.png)
+![\[An error message that says Something went wrong.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/chatwidget-error-message.png)
 
 Following are common issues that cause this error\.
 
@@ -14,7 +16,9 @@ If the logs mention a 400 invalid request, there are a few possible causes:
 
 ## 401 Unauthorized<a name="401-unauthorized"></a>
 
-If the logs mention a 401 unauthorized, this is a problem with the JSON Web Token \(JWT\) authentication\. If you [opt your chat widget into JWT authentication](add-chat-to-website.md#confirm-and-copy-chat-widget-script), you must implement the callback function in the embedded snippet, as shown in the following example\.
+If the logs mention a 401 unauthorized, this is a problem with the JSON Web Token \(JWT\) authentication\. 
+
+After you have the JWT, you need to implement it in the `authenticate` callback function\. The following example shows how to implement it if you're trying to fetch your token and then use it: 
 
 ```
 amazon_connect('authenticate', function(callback) {
@@ -25,6 +29,16 @@ amazon_connect('authenticate', function(callback) {
   });
 });
 ```
+
+Here is a more basic version of what needs to be implemented:
+
+```
+amazon_connect('authenticate', function(callback) {
+   callback(token);
+});
+```
+
+For instructions on implementing JWT, see [Step 3: Confirm and copy chat widget code and security keys](add-chat-to-website.md#confirm-and-copy-chat-widget-script)\.
 
 If you have implemented the callback already, the following scenarios may still cause a 401:
 + Invalid signature

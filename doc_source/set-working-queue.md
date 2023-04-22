@@ -24,20 +24,22 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="set-working-queue-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-working-queue-properties.png)
+The following image shows the **Properties** page of the **Set working queue** block\. It is set to the **BasicQueue**\.
+
+![\[The properties page of the Set working queue block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-working-queue-properties.png)
 
 Note the following properties:
-+ **By queue > Set dynamically**\. To set the queue dynamically, you must specify the Amazon Resource Name \(ARN\) for the queue rather than the queue name\. To find the ARN for a queue, open the queue in the queue editor\. The ARN is included as the last part of the URL displayed in the browser address bar after /queue\. For example, `.../queue/aaaaaaaa-bbbb-cccc-dddd-111111111111`\.
++ **By queue > Set dynamically**\. To set the queue dynamically, you must specify the Amazon Resource Name \(ARN\) for the queue rather than the queue name\. To find the ARN for a queue, open the queue in the queue editor\. The ARN is included as the last part of the URL displayed in the browser address bar after `/queue`\. For example, `aaaaaaaa-bbbb-cccc-dddd-111111111111`\.
 
 ## Configured block<a name="set-working-queue-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-working-queue-configured.png)
+![\[A configured Set working queue block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-working-queue-configured.png)
 
 ## Sample flows<a name="set-working-queue-samples"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample queue customer](sample-queue-customer.md)
 + [Sample queue configurations](sample-queue-configurations.md)
 

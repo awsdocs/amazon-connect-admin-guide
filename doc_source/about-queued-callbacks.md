@@ -5,17 +5,17 @@ This topic explains how queued callbacks appear in your real\-time metrics repor
 **Tip**  
 To see only the number of customers who are waiting for a call back, you need to create a queue that only takes callback contacts\. To learn how to do this, see [Set up routing](connect-queues.md)\. Currently there isn't a way to see the phone numbers of the contacts waiting for callbacks\.
 
-1. Callbacks are initiated when the [Transfer to queue](transfer-to-queue.md) block is triggered to create the callback in a callback queue\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/queued-callback-flow-callback-initiation.png)
+1. Callbacks are initiated when the [Transfer to queue](transfer-to-queue.md) block is triggered to create the callback in a callback queue\. The following image of a flow shows the **Transfer to queue** block at the end of the flow\.  
+![\[A flow with the Transfer to queue block at the end.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/queued-callback-flow-callback-initiation.png)
 
-1. After any initial delay is applied, the callback is put into the queue\. It remains there until an agent is available and can be offered the contact\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-callback-in-queue.png)
+1. After any initial delay is applied, the callback is put into the queue\. It remains there until an agent is available and can be offered the contact\. The following image shows the contact in the **In queue** column on the **Real\-time metrics** page\.  
+![\[A contact listed in the In queue column on the real-metrics page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-callback-in-queue.png)
 
-1. When the callback is connected to the agent, a new contact record is created for the contact\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ctr-diagram.png)
+1. When the callback is connected to the agent, a new contact record is created for the contact\. The following diagram shows three contact records\. The third record is for the callback, connected to Agent 3\.  
+![\[Three blocks, one for each contact record.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ctr-diagram.png)
 
-1. The **Initiation Timestamp** in the callback contact record corresponds to when the callback is initiated in the flow, shown in step 1\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ctr-callback-initiation-timestamp.png)
+1. The **Initiation Timestamp** in the callback contact record corresponds to when the callback is initiated in the flow, shown in step 1\. The following image shows the **Initiation Timestamp** field on the **Contact Record** page\.  
+![\[The contact record page, the Initiation Timestamp field.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ctr-callback-initiation-timestamp.png)
 
 ## How properties in the Transfer to Queue block affect this flow<a name="transfer-to-queue-properties"></a>
 

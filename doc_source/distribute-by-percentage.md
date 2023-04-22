@@ -26,7 +26,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="distribute-by-percentage-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/distribute-by-percentage-properties.png)
+The following image shows the **Properties** page of the **Distribute by percentage** block\. It is configured to route 50% of contacts to the test branch\.
+
+![\[The properties page of the Distribute by percentage block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/distribute-by-percentage-properties.png)
 
 ## How it works<a name="distribute-by-percentage-works"></a>
 
@@ -44,11 +46,11 @@ When contact a is being routed through a flow, Amazon Connect generates the rand
 
 ## Configured block<a name="distribute-by-percentage-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It shows two branches: **50% test** and **50% default**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/distribute-by-percentage-configured.png)
+![\[A configured distribute by percentage block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/distribute-by-percentage-configured.png)
 
 ## Sample flows<a name="distribute-by-percentage-samples"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample AB test](sample-ab-test.md)

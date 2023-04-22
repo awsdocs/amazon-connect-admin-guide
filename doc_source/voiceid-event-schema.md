@@ -44,7 +44,8 @@ Emits events on stream start \(after setup\), stream end, and on failures\.
                 "acceptanceThreshold":Integer
             },
             "fraudDetectionConfiguration": {
-                "riskThreshold":Integer
+                "riskThreshold":Integer,
+                "watchlistId": String
             },
             "streamingConfiguration": {
                 "authenticationMinimumSpeechInSeconds": Integer
@@ -92,7 +93,8 @@ Emits events on stream start \(after setup\), stream end, and on failures\.
             "acceptanceThreshold": Integer
         },
         "fraudDetectionConfiguration": {
-            "riskThreshold": Integer
+            "riskThreshold": Integer,
+            "watchlistId": String
         },
         "streamingConfiguration": {
             "authenticationMinimumSpeechInSeconds": Integer
@@ -141,18 +143,22 @@ Emits events when the session evaluation succeeds or fails\. Reasons can be KNOW
             "reasons": [String],
             "audioAggregationStartedAt": "Timestamp",
             "audioAggregationEndedAt": "Timestamp",
-            "configuration": 
-                {"riskThreshold": Integer},
-            "riskDetails": 
-                {"knownFraudsterRisk": 
-                    {"generatedFraudsterId": String,
-                    "riskScore": Integer},  
-                  "voiceSpoofingRisk": 
-                    {"riskScore": Integer} 
-                 }
+            "configuration": {
+                   "riskThreshold": Integer
+            },
+            "riskDetails": {
+                 "knownFraudsterRisk": {
+                         "generatedFraudsterId": String,
+                         "riskScore": Integer,
+                         "watchlistId": String
+                  },
+                  "voiceSpoofingRisk": {
+                        "riskScore": Integer
+                  } 
+            }
          }
      },
-     "errorInfo": : {
+     "errorInfo": {
         "errorMessage": String,
         "errorType": String,
         "errorCode": Integer
@@ -177,7 +183,8 @@ Emits events on the success or failure to opt out a speaker, delete a speaker, o
     "data": {
         "enrollmentSource": String,
         "enrollmentSourceId": String,
-        "enrollmentStatus": String},
+        "enrollmentStatus": String
+        },
     "errorInfo": {
         "errorMessage": String,
         "errorType": String,
@@ -189,7 +196,9 @@ Emits events on the success or failure to opt out a speaker, delete a speaker, o
 
 ## Fraudster Action<a name="fraudster"></a>
 
-Emits events on the success or failure to delete a fraudster or registering a fraudster\.
+Emits events when a fraudster is successfully registered or deleted\.
+
+Events are not sent when a fraudster is associated or disassociated with a watchlist\.
 
 ```
 {...commonfields
@@ -200,6 +209,7 @@ Emits events on the success or failure to delete a fraudster or registering a fr
     "action": String,
     "status": String,
     "generatedFraudsterId": String,
+    "watchlistIds": [String],
     "data": {
         "registrationSource": String,
         "registrationSourceId": String,
@@ -256,7 +266,8 @@ Emits this event when a batch enrollment request is submitted, succeeds, or fail
             "existingEnrollmentAction": String,
             "fraudDetectionConfig": {
             "fraudDetectionAction": String,
-            "riskThreshold": Integer
+            "riskThreshold": Integer,
+            "watchlistIds": [String],
             }
         },
         "inputDataConfig": {
@@ -293,7 +304,8 @@ Emits this event when a batch registration request is submitted, succeeds, or fa
         "dataAccessRoleArn": String,
         "registrationConfig": {
             "duplicateRegistrationAction": String,
-            "fraudsterSimilarityThreshold": Integer
+            "fraudsterSimilarityThreshold": Integer,
+            "watchlistIds": [String],
         }
         "inputDataConfig": {
             "s3Uri": String

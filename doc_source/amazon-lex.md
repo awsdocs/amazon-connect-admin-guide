@@ -70,8 +70,10 @@ For this example, you'll configure the bot with two intents: one to look up acco
 
 1. Scroll down the page to **Sample utterances**\. In this step you enter utterances that allow the customer to elicit the AccountLookup intent\. Enter the following utterances, and choose **Add utterance** after each one\. 
    + **Check my account balance**
-   + **One**: This assigns the utterance of "one" or key press of "1" to the **AccountLookup** intent\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-enter-utterances.png)
+   + **One**: This assigns the utterance of "one" or key press of "1" to the **AccountLookup** intent\.
+
+   The following image shows where to add the utterance in the **Sample utterances** section\.  
+![\[The sample utterances section of the Intents page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-enter-utterances.png)
 
 1. Scroll to the **Slots** section, and choose **Add slot**\. Complete the box as follows:
 
@@ -81,11 +83,15 @@ For this example, you'll configure the bot with two intents: one to look up acco
 
    1. **Slot type** = **AMAZON\.Number**\. 
 
-   1. **Prompts** = the text to be spoken when the call is answered\. For example, ask callers to enter their account number using their keypad: **Using your touch\-tone keypad, please enter your account number**\. Choose **Add**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-add-slots.png)
+   1. **Prompts** = the text to be spoken when the call is answered\. For example, ask callers to enter their account number using their keypad: **Using your touch\-tone keypad, please enter your account number**\. Choose **Add**\.
 
-1. Scroll to the **Closing responses** section\. Add a message for the bot to say to customers\. For example, **Your account balance is $1,234\.56**\. \(For this walkthrough, we aren't going to actually get the data, which is what you would do in reality\.\)  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-response1.png)
+   The following image shows a completed **Add slot** section\.  
+![\[The add slot section of the Intents page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-add-slots.png)
+
+1. Scroll to the **Closing responses** section\. Add a message for the bot to say to customers\. For example, **Your account balance is $1,234\.56**\. \(For this walkthrough, we aren't going to actually get the data, which is what you would do in reality\.\)
+
+   The following image shows a completed **Closing responses** section\.  
+![\[The closing responses section of the Intents page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-response1.png)
 
 1. Choose **Save intent**\.
 
@@ -102,8 +108,10 @@ For this example, you'll configure the bot with two intents: one to look up acco
 **Tip**  
 You must add an utterance of "one" in the bot, and not the number "1"\. This is because Amazon Lex doesn't support numeric input directly\. To get around this, later in this walkthrough you'll use numeric input to interact with a Lex bot invoked from a flow\. 
 
-1. Under **Slots**, add a slot named **AccountNumber**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-slots.png)
+1. Under **Slots**, add a slot named **AccountNumber**\.
+
+   The following image shows the location of the **Slots** section on the page\.  
+![\[The slot section on the Intents page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-slots.png)
 
 1. For **Slot type**, use the drop\-down to choose **AMAZON\.NUMBER**\.
 
@@ -164,20 +172,20 @@ After you create your bot, make sure it works as intended\.
 ------
 #### [ Amazon Lex ]
 
-1. At the bottom of the page, choose **Build**\. It may take a minute or two\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-build-test-intent.png)
+1. At the bottom of the page, choose **Build**\. It may take a minute or two\. The following image shows where the **Build** button is located\.  
+![\[The location of the Build button on the page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-build-test-intent.png)
 
 1. When it's finished building, choose **Test**\.
 
-1. Let's test the **AccountLookup** intent: In the **Test Draft version** pane, in the **Type a message** box, type **1** and press Enter\. Then type a fictitious account number and press Enter\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-test1.png)
+1. Let's test the **AccountLookup** intent: In the **Test Draft version** pane, in the **Type a message** box, type **1** and press Enter\. Then type a fictitious account number and press Enter\. The following image shows where you enter intent\.  
+![\[The box where you type the intent to test.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-test1.png)
 
    1. Clear the test box\.
 
    1. Type the intents you want to test\.
 
-1. To confirm that the **SpeakToAgent** intent is working, clear the test box, and then type **2** and press Enter\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-test2.png)
+1. To confirm that the **SpeakToAgent** intent is working, clear the test box, and then type **2** and press Enter\. The following image shows what the test looks like after you clear it and then enter 2\.  
+![\[The test box.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-test2.png)
 
 1. Close the **Test Draft version** pane\.
 
@@ -186,11 +194,11 @@ After you create your bot, make sure it works as intended\.
 
 1. Choose **Build**\. It may take a minute or two\.
 
-1. When it's finished building, choose **Test Chatbot**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-test-chatbot.png)
+1. When it's finished building, choose **Test Chatbot**, as shown in the following image\.  
+![\[The test chatbot button, on the right side of the page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-test-chatbot.png)
 
-1. Let's test the **AccountLookup** intent: In the **Test Chatbot** pane, in the **Chat with your bot** box, type **1**\. Then type a fictitious account number\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-test-run.png)
+1. Let's test the **AccountLookup** intent: In the **Test Chatbot** pane, in the **Chat with your bot** box, type **1**\. Then type a fictitious account number\. In the following image, the arrow points to the box where you type 1\.  
+![\[The test bot, the box for typing your message.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-test-run.png)
 
 1. Choose **Clear chat history**\. 
 
@@ -213,8 +221,8 @@ In this step you create a new bot version to use in an alias\. It's how you crea
 
 1. Review the details of the **AccountBalance** bot, and then choose **Create**\.
 
-   This creates a version of your bot \(Version 1\)\. to associate a version directly with an alias\. You can switch versions on an non\-test alias without having to track which version is getting published\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-version1.png)
+   This creates a version of your bot \(Version 1\)\. You can switch versions on an non\-test alias without having to track which version is getting published\.  
+![\[The Versions page with Version 1 listed.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-version1.png)
 
 ------
 
@@ -256,14 +264,14 @@ In a production environment, always use a different alias than **TestBotAlias** 
 1. Open the [Amazon Connect console\.](https://console.aws.amazon.com/connect/)
 
 1. Select the Amazon Connect instance that you want to integrate with your Amazon Lex bot\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance-alias2.png)
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. On the navigation menu, choose **Contact flows**\.
 
 1. Under **Amazon Lex**, use the dropdown to select the Region of your Amazon Lex bot, and then select your Amazon Lex bot, **AccountBalance**\. 
 
-1. Select the Amazon Lex bot alias name from the dropdown \(**Test**\), and then choose **\+ Add Lex Bot**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-region-bot.png)
+1. Select the Amazon Lex bot alias name from the dropdown \(**Test**\), and then choose **\+ Add Lex Bot**\. The following image shows Amazon Lex section after it has been configured\.  
+![\[The Amazon Lex section of the Contact flows page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-region-bot.png)
 
 **Note**  
 Amazon Connect uses Amazon Lex resource\-based policies to make calls to your Amazon Lex bot\. When you associate an Amazon Lex bot with your Amazon Connect instance, the resource\-based policy on the bot is updated to give Amazon Connect permission to invoke the bot\. For more information on Amazon Lex resource\-based policies, see [How Amazon Lex works with IAM](https://docs.aws.amazon.com/lexv2/latest/dg/security_iam_service-with-iam.html#security_iam_service-with-iam-resource-based-policies)\.
@@ -294,13 +302,13 @@ Next, create a new flow that uses your Amazon Lex bot\. When you create the cont
 
 1. Under **Interact**, drag a [Get customer input](get-customer-input.md) block onto the designer, and connect it to the **Entry point block**\.
 
-1. Click the **Get customer input** block to open it\. Choose **Text to speech or chat text, Enter text**\.
+1. Choose the **Get customer input** block to open it\. Choose **Text to speech or chat text, Enter text**\.
 
-1. Type a message that provides callers with information about what they can do\. For example, use a message that matches the intents used in the bot, such as "To check your account balance, press or say 1\. To speak to an agent, press or say 2\."  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-get-customer-input.png)
+1. Type a message that provides callers with information about what they can do\. For example, use a message that matches the intents used in the bot, such as "To check your account balance, press or say 1\. To speak to an agent, press or say 2\." The following image shows this message on the Properties page of the **Get customer input** block\.  
+![\[The Properties page of the Get customer input block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-get-customer-input.png)
 
-1. Select the **Amazon Lex** tab\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-get-customer-input2.png)
+1. Select the **Amazon Lex** tab, as shown in the following image\.  
+![\[The Amazon Lex tab on the Properties page of the Get customer input block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lexv2-get-customer-input2.png)
 
 1. In the **Name** dropdown, select the **AccountBalance** bot you created earlier\. 
 
@@ -312,8 +320,8 @@ Next, create a new flow that uses your Amazon Lex bot\. When you create the cont
 
 1. Under **Intents**, choose **Add an intent**\.
 
-1. Type **AccountLookup** and choose **Add another intent**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-get-customer-input3.png)
+1. Type **AccountLookup** and choose **Add another intent**\. The following image shows the **Intents** section configured with this information\.  
+![\[The Intents section of Amazon Lex tab.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-get-customer-input3.png)
 
 1. Type **SpeakToAgent** and choose **Save**\.
 
@@ -341,9 +349,9 @@ To complete the **SpeakToAgent** intent:
 
 1. Choose **Save**, then **Publish**\.
 
-Your finished flow will look something like the following one:
+Your finished flow will look something like the following image\. The flow starts with the **Get customer input** block\. That block branches to **Play prompt** or **Set customer queue**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-contactflow-designer.png)
+![\[The finished flow in the flow designer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lex-contactflow-designer.png)
 
 **Tip**  
 If your business uses multiple locales in a single bot, add a [Set contact attributes](set-contact-attributes.md) block to the beginning of your flow\. Configure this block to use the [$\.LanguageCode](connect-attrib-list.md#attribs-system-table) system attribute\. 

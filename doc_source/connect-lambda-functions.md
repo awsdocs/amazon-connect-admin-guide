@@ -28,7 +28,7 @@ Before you can use an Lambda function in a flow, you need to add it to your Amaz
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
 1. On the instances page, choose your instance name in the **Instance Alias** column\. This instance name appears in the URL you use to access Amazon Connect\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Flows**\.
 
@@ -128,9 +128,9 @@ The request is divided into two parts:
   This section may include attributes that have been previously associated with a contact, such as when using a **Set contact attributes** block in a flow\. This map may be empty if there aren't any saved attributes\.
 
   The following image shows where these attributes would appear in the properties page of a **Set contact attributes**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-setAttribute.png)
+![\[The properties page of the Set contact attributes block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-setAttribute.png)
 + Parameters—These are parameters specific to this call that were defined when you created the Lambda function\. The following image shows where these parameters would appear in the properties page of the **Invoke AWS Lambda function** block\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-setParameter.png)
+![\[The function input parameters in the Invoke AWS Lambda function block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-setParameter.png)
 
 ### Invocation retry policy<a name="retry"></a>
 
@@ -168,7 +168,11 @@ let phone = event['Details']['ContactData']['CustomerEndpoint']['Address'];
 
 ## Verify the function response<a name="verify-function"></a>
 
-The Lambda function response should be a simple string map\. This map can be up to 32k\. If you fail to reach Lambda, the function throws an exception, the response is not understood, or the Lambda function takes more time than the limit, the flow jumps to the `Error` label\.
+The Lambda function response could be either a STRING\_MAP or JSON and has to be set while configuring the **Invoke AWS Lambda function** block in the flow\. If response validation is set to STRING\_MAP, then the lambda function should return a flat object of key/value pairs of the string type\. Otherwise, if response validation is set to JSON, the lambda function can return any valid JSON including nested JSON\.
+
+![\[The invoke AWS Lambda function flow block that highlights the use of either string map or json.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/verify-function-lambda-response-validation.png)
+
+The lambda response can be up to 32kb\. If you fail to reach Lambda, the function throws an exception, the response is not understood, or the Lambda function takes more time than the limit, the flow jumps to the `Error` label\.
 
 Test the output returned from your Lambda function to confirm that it will be correctly consumed when returned to Amazon Connect\. The following example shows a sample response in Node\.JS:
 
@@ -221,6 +225,19 @@ The following example shows the JSON output from these Lambda functions:
 }
 ```
 
+If response validation is set to JSON, then lambda function can return even a nested JSON, for example:
+
+```
+{
+  "Name": {
+      "First": "John",
+      "Last": "Doe"
+  },
+  "AccountId": "a12345689",
+  "OrderIds": ["x123", "y123"]
+}
+```
+
 You may return any result as long as they are simple key\-value pairs\.
 
 ## Consume the Lambda function response<a name="process-function-response"></a>
@@ -237,7 +254,9 @@ Address - $.External.Address
 CallerType - $.External.CallerType
 ```
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-useExternal.png)
+The following image shows the properties page of the **Play prompt** block\. The variables are specified in the text\-to\-speech block\.
+
+![\[The properties page of the Play prompt block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-useExternal.png)
 
 Make sure that the name specified for the source attribute matches the key name returned from Lambda\.
 
@@ -245,13 +264,13 @@ Make sure that the name specified for the source attribute matches the key name 
 
 If you store the variables as contact attributes, you can use them throughout your flow, and they are included in contact records\.
 
-To store the values returned as contact attributes and then reference them, use a **Set contact attributes** block in your flow after the **Invoke AWS Lambda function** block\. Choose **Use attribute**, **External** for the **Type**\. Following the example we're using, set **Destination Attribute** to `MyAccountId`, and set the **attribute** to `AccountId`, and do the same for `MyBalance` and **Balance**\.
+To store the values returned as contact attributes and then reference them, use a **Set contact attributes** block in your flow after the **Invoke AWS Lambda function** block\. Choose **Use attribute**, **External** for the **Type**\. Following the example we're using, set **Destination Attribute** to `MyAccountId`, and set the **attribute** to `AccountId`, and do the same for `MyBalance` and **Balance**\. This configuration is shown in the following image\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-useInSetAttributes.png)
+![\[The properties page of the Set contact attributes block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-useInSetAttributes.png)
 
-Add Address as a **Source attribute** and use `returnedContactAddress` as the **Destination key**\. Then add `CallerType` as a **Source attribute** and use `returnedContactType` for the **Destination key**\.
+Add Address as a **Source attribute** and use `returnedContactAddress` as the **Destination key**\. Then add `CallerType` as a **Source attribute** and use `returnedContactType` for the **Destination key**, as shown in the following image\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-useAttributeInPlayPrompt.png)
+![\[The properties page of the Play prompt block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-useAttributeInPlayPrompt.png)
 
 Make sure that the name specified for the source external attribute matches the key name returned from Lambda\.
 
@@ -263,15 +282,15 @@ Make sure that the name specified for the source external attribute matches the 
 
 1. In AWS Lambda, choose **Create function**\.
 
-1. Choose **Author from scratch**, if it's not selected already\. Under **Basic information**, for **Function name**, enter **MyFirstConnectLambda**\. For all other options, accept the defaults\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambdafunctions-tutorial-create-function-name.png)
+1. Choose **Author from scratch**, if it's not selected already\. Under **Basic information**, for **Function name**, enter **MyFirstConnectLambda**\. For all other options, accept the defaults\. These options are shown in the following image of the AWS Lambda console\.  
+![\[The AWS Lambda console.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambdafunctions-tutorial-create-function-name.png)
 
 1. Choose **Create function**\.
 
 1. In the **Code source** box, in the **index\.js** tab, delete the template code from the code editor\.
 
 1. Copy and paste the following code into the code editor as shown in the following image:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambdafunctions-tutorial-code-source.png)
+![\[The Code source section, the deploy button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambdafunctions-tutorial-code-source.png)
 
    ```
    exports.handler = async (event, context, callback) => {
@@ -345,7 +364,7 @@ Make sure that the name specified for the source external attribute matches the 
 1. Choose **Save**\.
 
 1. Choose **Test**\. You should see the following something similar to the following image:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambdafunctions-tutorial-code-source-response.png)
+![\[The Code source section, the test button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambdafunctions-tutorial-code-source-response.png)
 
    Your balance will be different\. The code generates a random number\.
 
@@ -354,27 +373,27 @@ Make sure that the name specified for the source external attribute matches the 
 1. Go to the Amazon Connect console, at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\. 
 
 1. Choose your Amazon Connect instance alias\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. On the navigation menu, choose **Flows**\.
 
 1. In the AWS Lambda section, use the **Lambda Functions** dropdown box to select **MyFirstConnectLambda**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-add-myfirstconnectlambda.png)
+![\[The Contact flows page, the AWS Lambda section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-add-myfirstconnectlambda.png)
 
 1. Choose **Add Lambda Function**\.
 
 ### Step 3: Create the contact flow<a name="tutorial-invokelambda-step3"></a>
 
-The following image is an example of the flow you are going to build using the steps in this procedure\.
+The following image is an example of the flow you are going to build using the steps in this procedure\. It contains the following blocks: **Set contact attributes**, **Play prompt**, **Invoke AWS Lambda function**, another **Set contact attributes** block, another **Play prompt** block, and finally a **Disconnect** block\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow.png)
+![\[A flow that calls the Invoke AWS Lambda function block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow.png)
 
 1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\.
 
 1. On the navigation menu, go to **Routing**, **Flows**, **Create a contact flow**\.
 
 1. Drag a [Set contact attributes](set-contact-attributes.md) block onto the grid, and configure its properties page shown in the following image:   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-set-contact-attribute-1.png)
+![\[A Set contact attributes block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-set-contact-attribute-1.png)
 
    1. **Namespace** = **User defined**\.
 
@@ -385,7 +404,7 @@ The following image is an example of the flow you are going to build using the s
    1. Choose **Save**\.
 
 1. Drag a [Play prompt](play.md) block onto the grid, and configure its properties page as shown in the following image:   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-play-prompt-1.png)
+![\[A play prompt block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-play-prompt-1.png)
 
    1. Choose **Text\-to\-speech or chat text**, **Set manually**, and set **Interpret as** to **SSML**\. Enter the following text in the box for the text to be spoken:
 
@@ -394,7 +413,7 @@ The following image is an example of the flow you are going to build using the s
    1. Choose **Save**\.
 
 1. Drag another [Play prompt](play.md) block onto the grid, and configure its properties page as shown in the following image:   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-play-prompt-2.png)
+![\[A play prompt block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-play-prompt-2.png)
 
    1. Choose **Text\-to\-speech or chat text**, **Set manually**, and set **Interpret as** to **Text**\. Enter the following text in the box for the text to be spoken:
 
@@ -403,7 +422,7 @@ The following image is an example of the flow you are going to build using the s
    1. Choose **Save**\.
 
 1. Drag a [Invoke AWS Lambda function](invoke-lambda-function-block.md) block onto the grid, and configure its properties page as shown in the following image:   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-invoke-lambda.png)
+![\[An Invoke AWS Lambda function block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-invoke-lambda.png)
 
    1. Choose **Select manually**, and then choose **MyFirstConnectLambda** from the dropdown\.
 
@@ -418,7 +437,7 @@ The following image is an example of the flow you are going to build using the s
    1. Choose **Save**\.
 
 1. Drag a [Set contact attributes](set-contact-attributes.md) block onto the grid, choose **Add another attribute**, and configure its properties page as shown in the following image:   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-set-contact-attribute-2.png)
+![\[A set contact attributes block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-set-contact-attribute-2.png)
 
    1. **Namespace** = **User Defined**\. **Attribute** = **MyBalance**\.
 
@@ -441,7 +460,7 @@ The following image is an example of the flow you are going to build using the s
    1. Choose **Save**\.
 
 1. Drag a [Play prompt](play.md) block onto the grid, and configure its properties page as shown in the following image:   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-play-prompt-3.png)
+![\[A play prompt block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/lambda-exampleFlow-play-prompt-3.png)
 
    1. Choose **Text\-to\-speech or chat text**, and set **Interpret as** to **SSML**\. Enter the following text in the box:
 

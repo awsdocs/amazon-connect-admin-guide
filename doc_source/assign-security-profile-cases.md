@@ -2,11 +2,11 @@
 
 The following image shows the security permissions used to manage access to [Amazon Connect Cases](cases.md) functionality:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-security-profile-permissions.png)
+![\[Cases security profile permissions.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-security-profile-permissions.png)
 
 Also, to use Amazon Connect Cases, your users also need permissions to Customer Profiles permissions\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-customer-profiles-permissions.png)
+![\[Customer Profiles security profile permissions.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-customer-profiles-permissions.png)
 
 Assign the following permissions to manage who can create, view, and edit cases, case fields, and case templates:
 + **Cases**: Manage who can access cases by using the agent application\.
@@ -24,4 +24,4 @@ Assign the following permissions to manage who can create, view, and edit cases,
 
 When users have permissions to **View Case Fields** and **View Case Templates**, they will see the **Case fields** and **Case templates** options in their left navigation menu, as shown in the following image: 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-agent-application-case-fields-menu.png)
+![\[The navigation menu, the agent applications option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-agent-application-case-fields-menu.png)

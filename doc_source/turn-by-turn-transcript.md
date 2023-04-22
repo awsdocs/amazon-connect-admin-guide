@@ -2,9 +2,9 @@
 
 Supervisors are often required to review the contacts for many agents, for quality assurance purposes\. The turn\-by\-turn transcript and sentiment data helps you quickly identify and navigate to the portion of the recording that is of interest to you\. 
 
-The following image shows features that enable you to quickly navigate transcripts and audio to find areas that need your attention\. While the image shows a voice contact, the same features apply to chat contacts\.
+The following image of a contact record shows features that enable you to quickly navigate transcripts and audio to find areas that need your attention\. While the image shows a voice contact, the same features apply to chat contacts\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-navigate-transcripts2.png)
+![\[An analysis of a voice contact.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-navigate-transcripts2.png)
 
 1. Use [Show transcript summary](#contact-lens-contact-summarization) to review only the issue, outcome, and/or action item\.
 
@@ -12,7 +12,7 @@ The following image shows features that enable you to quickly navigate transcrip
 
 1. Scan for [sentiment emojis](#sentiment-emojis) to quickly identify a part for the transcript you want to read or listen to\.
 
-1. Choose the timestamp to jump to that part of the audio recording or transcript\.
+1. Choose the timestamp to jump to that part of the audio recording or transcript\. The timestamp is calculated from the start of the customer interaction within the contact\.
 
 ## Show transcript summary<a name="contact-lens-contact-summarization"></a>
 
@@ -48,6 +48,6 @@ For example, where you see red emojis for customer turns and then a green emoji,
 
 When you tap or click on the category tags, Contact Lens auto\-navigates to the corresponding point\-of\-interests in the transcript\. There are also category markers in the visualization of the interaction to indicate which part of the recording file has utterances related to the category\. 
 
-The following image shows part of a **Contact details** page for a chat\.
+The following image shows part of a **Contact details** page for a chat\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-tag-navigation.png)
+![\[A transcript of chat, a category, the relevant section of the transcript.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-category-tag-navigation.png)

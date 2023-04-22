@@ -38,3 +38,13 @@ For information about default service quotas and how to request an increase, see
 ## What happens to calls when a queue is full<a name="when-queue-full"></a>
 + Incoming calls: The next incoming call gets a reorder tone \(also known as a fast busy tone\), which indicates no transmission path to the called number is available\.
 + Queued callbacks: The next queued callback is routed down the error branch\.
+
+## Queue maximum limit exceptions<a name="max-queue-additional-details"></a>
+
+There are times when you can add more contacts to a queue than the set **Maximum contacts in queue** limit\.
++ There may be a slight delay between the time that a queue reaches its capacity limit and when this limit is enforced in the flow\. This delay could cause incoming contacts to be queued during that time, particularly during bursts of traffic\.
+
+Additionally, Amazon Connect includes a 20 percent buffer to the queue capacity for the following exceptional scenarios:
++ A contact was transformed into a Queued Callback, scheduled to be added to the queue at X time using the **Initial delay** setting in the flow\. However, when the scheduled time arrived, the target queue had reached its **Maximum capacity in queue** limit\. In this scenario, Amazon Connect allows the Queued Callback to be enqueued up to a 20 percent buffer of the **Maximum capacity in queue** limit for the queue\.
++ A contact, previously queued in queue one, is now being transferred to queue two through the flow\. However, when the transfer is attempted, queue two has already reached its **Maximum capacity in queue** limit\. In this scenario, Amazon Connect will allow the transfer to proceed, up to a 20 percent buffer of the **Maximum capacity in queue** limit for queue two\.
++ An agent initiates a manual transfer of a contact into a queue through Quick Connects\. However, when the transfer is attempted, the queue has already reached its **Maximum capacity in queue** limit\. In this scenario, Amazon Connect will allow the transfer to proceed, up to a 20 percent buffer of the **Maximum capacity in queue** limit\.

@@ -8,7 +8,7 @@ Without doing any integration work, you can enable Cases for your contact center
 
 The following image shows an example case as it appears in the agent application\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-agent-application-intro.png)
+![\[The cases tab in the agent workspace.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-agent-application-intro.png)
 
 ## Getting started with Cases<a name="getting-started-cases"></a>
 

@@ -11,9 +11,9 @@ When a phone number is released from your Amazon Connect instance:
 
 1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\. To find the name of your instance, see [Find your Amazon Connect instance ID/ARN](find-instance-arn.md)\.
 
-1. On the navigation menu, choose **Channels**, **Phone numbers**\.
+1. On the navigation menu, choose **Channels**, **Phone numbers**\. This option appears only if you have the **Phone numbers \- View** permission in your security profile\.
 
-1. Choose the phone number you want to release, and then choose **Release**\.
+1. Choose the phone number you want to release, and then choose **Release**\. This option appears only if you have the **Phone numbers \- Release** permission in your security profile\.
 
 If the phone number is associated with a flow, that flow will be deactivated until another number is associated with it\.
 

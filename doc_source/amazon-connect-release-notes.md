@@ -2,7 +2,85 @@
 
 To help you keep track of the ongoing updates and improvements to Amazon Connect, we publish release notices that describe recent changes\.
 
+## April 2023 Updates<a name="apr23-release-notes"></a>
+
+### Customer Profiles displays case information in the agent workspace<a name="agent-workspace-case-info-apr23"></a>
+
+Using Amazon Connect Customer Profiles inside the agent workspace, agents can see cases from third\-party case management solutions and Amazon Connect Cases inside a particular customer profile\. For more information, see [Use Customer Profiles](customer-profiles.md) and [Access Customer Profiles in the agent workspace](customer-profile-access.md)\.
+
+### Added Cross\-channel concurrency<a name="routing-profiles-apr23"></a>
+
+You can configure an agent's routing profile to receive contacts from multiple channels at the same time\. For example, while an agent is on a voice contact, they can be offered contacts from any other channels enabled in the routing profile, such as chats and tasks\.
+
+For more information, see [Create a routing profile](routing-profiles.md)\. Also see the [CrossChannelBehavior](https://docs.aws.amazon.com/connect/latest/APIReference/API_CrossChannelBehavior.html) API\. 
+
+### Set Voice ID block supports fraud watchlist ID<a name="set-voiceid-apr23"></a>
+
+Updated the [Set Voice ID block](https://docs.aws.amazon.com/connect/latest/adminguide/set-voice-id.html) so it supports fraud watchlist ID for fraud detection\. 
+
+### Search, sort, and filter published agent schedules<a name="search-sort-filter-agent-schedules-apr23"></a>
+
+Schedulers can quickly search, sort, and filter agent schedules from within the published schedule calendar\. For more information, see [How supervisors view published schedules](scheduling-view-schedule-supervisors.md)\.
+
+## March 2023 Updates<a name="mar23-release-notes"></a>
+
+### Added Wisdom support for Microsoft SharePoint Online<a name="wisdom-mar23"></a>
+
+You can choose Microsoft SharePoint Online as knowledge base for Wisdom articles\. For more information, see [Enable Amazon Connect Wisdom for your instance](enable-wisdom.md)\. Also see the [AppIntegrationsConfiguration](https://docs.aws.amazon.com/wisdom/latest/APIReference/API_AppIntegrationsConfiguration.html) API in the *Amazon Connect Wisdom API Reference*\. 
+
+### Create step\-by\-step guides for your agents<a name="step-by-step-guides-mar23"></a>
+
+Inside the out\-of\-the\-box Amazon Connect agent workspace, you can create workflows that walk agents through custom UI pages that suggest what to do at a given moment during a customer interaction\. You can create guides that help agents identify customer issues and recommend subsequent actions, as well as surface screen\-pops and forms for submitting transactions and disposition codes\. For more information, see [Agent Workspace guided experience](step-by-step-guided-experiences.md)\.
+
+### Added support for nested JSON in Invoke AWS Lambda function flow block<a name="nest-json-labmda-flow-block-mar23"></a>
+
+The Invoke AWS Lambda function flow block supports JSON responses\. For more information, see [Flow block: Invoke AWS Lambda function](invoke-lambda-function-block.md)\.
+
+### Added Show View flow block<a name="show-view-block-mar23"></a>
+
+This block is used to configure UI based workflows that you can surface to users in front end applications\. For more information, see [Flow block: Show view](show-view-block.md)\.
+
+### Added staff level shift profile<a name="wfm-mar23"></a>
+
+You can assign a shift profile to individual agents\. This is useful to do when, for example, you have part\-time agents who are in the same staffing group as your full\-time agents, but they require their own shift profile\. For more information, see the **Associate to shift profile** option described in [Create staff rules for scheduling](scheduling-create-staff-rules.md)\.
+
+### Added support for multiple fraudster watchlists<a name="fraudster-mar23"></a>
+
+Every domain has a default watchlist where all existing fraudsters are placed by default\. You can create and manage custom watchlists to be evaluated against for known fraudster detection\. For more information, see [Known fraudster detection](https://docs.aws.amazon.com/connect/latest/adminguide/voice-id.html#fraud-detection), and see new actions in the [Amazon Connect Voice ID API Reference](https://docs.aws.amazon.com/voiceid/latest/APIReference/Welcome.html)\.
+
+### Search and sort schedules in the Schedule Manager<a name="scheduling-manager-search-sort-mar23"></a>
+
+Schedulers can quickly search for schedule names using partial keywords or sort the schedule list based on start date, end date, creation date, or updated date\. For more information, see [Search and sort a schedule](scheduling-publish-schedule.md#scheduling-manager-search-sort)\.
+
+### Added the ability to configure multiple IAM roles that can be assigned to a single user when using SAML 2\.0<a name="multi-role-saml-mar23"></a>
+
+You can configure multiple IAM roles that can be assigned to a single user when using SAML 2\.0 which enables you to support user access from multiple identity providers simultaneously\. For example, if you are migrating identity providers, you can configure multiple IAM roles associated to a single user and that user will be able to access Amazon Connect from either provider\. To learn more about configuring IAM roles for SAML 2\.0 in Amazon Connect, see the [Configure SAML with IAM for Amazon Connect](configure-saml.md) documentation\.
+
+### Added panel template for interactive chat messages<a name="interactive-messages-mar23"></a>
+
+With a panel template, you can present customers with up to 10 choices under one question in a chat message\. For more information, see [Add interactive messages to chat](interactive-messages.md)\.
+
+### Added `GetMetricDataV2` API<a name="getmetricdatav2-mar23"></a>
+
+Added the [GetMetricDataV2](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricDataV2.html) API to the *Amazon Connect API Reference Guide*\. This API enables you to programmatically access trailing 14 days of historical agent and contact metrics data\. It extends the capabilities of the [GetMetricData](https://docs.aws.amazon.com/connect/latest/APIReference/API_GetMetricData.html) API, provides new [historical metrics](https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html) \(for example, the number of [contacts disconnected](https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#contact-disconnected-historical), and the number of [callback attempts](https://docs.aws.amazon.com/connect/latest/adminguide/historical-metrics-definitions.html#callback-attempts-historical)\), and provides the ability to filter metrics with more granularity\. 
+
 ## February 2023 Updates<a name="feb23-release-notes"></a>
+
+### Added new attribute type `ENHANCED_CONTACT_MONITORING` to Describe, List and Update Instance Attribute APIs<a name="enhanced-monitoring-feb23"></a>
+
+This release updates the APIs: DescribeInstanceAttribute, ListInstanceAttributes, and UpdateInstanceAttribute\. You can use it to programmatically enable/disable enhanced contact monitoring using attribute type `ENHANCED_CONTACT_MONITORING` on the specified Amazon Connect instance\. For more information, see [DescribeInstanceAttribute](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeInstanceAttribute.html), [ListInstanceAttributes](https://docs.aws.amazon.com/connect/latest/APIReference/API_ListInstanceAttributes.html), and [UpdateInstanceAttribute](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateInstanceAttribute.html)\. 
+
+### Added the `DeleteDomain` API for Cases<a name="cases-feb23"></a>
+
+For more information, see the [DeleteDomain](https://docs.aws.amazon.com/cases/latest/APIReference/API_DeleteDomain.html) API in the *Amazon Connect Cases API Reference Guide*\.
+
+### Added `RelatedContactId` to `StartTaskContact` API<a name="tasks-feb23"></a>
+
+You can link together an unlimited number of task contacts using the `RelatedContactID` parameter supported in the `StartTaskContact` API\. For more information, see [Linked tasks](https://docs.aws.amazon.com/connect/latest/adminguide/tasks.html#linked-tasks) and the [StartTaskContact](https://docs.aws.amazon.com/connect/latest/APIReference/API_StartTaskContact.html) API in the *Amazon Connect API Reference Guide*\.
+
+### Amazon Connect Cases integrates with AWS PrivateLink<a name="cases-privatelink-feb23"></a>
+
+For more information, see [Creating an interface VPC endpoint for Amazon Connect](vpc-interface-endpoints.md#vpc-endpoint-create)\.
 
 ### Added support for more granular access controls \(using resource tags\) to view real\-time metrics for agents, queues, and routing profiles<a name="tag-based-access-control-real-time-metrics-feb23"></a>
 
@@ -14,7 +92,7 @@ You can configure more granular permissions to metrics and reports from within s
 
 ### Added support to provide visibility into an agent’s next activity<a name="agent-activity-visability-feb23"></a>
 
-You can view an agent’s next activity in the real\-time metrics agent table in the Amazon Connect real\-time metrics UI and by using the public API\. For more information, see the [NextStatus API reference](http://amazonaws.com/connect/latest/APIReference/API_UserData.html#connect-Type-UserData-NextStatus)\.
+You can view an agent’s next activity in the real\-time metrics agent table in the Amazon Connect real\-time metrics UI and by using the public API\. For more information, see the [NextStatus API reference](https://docs.aws.amazon.com/connect/latest/APIReference/API_UserData.html#connect-Type-UserData-NextStatus)\.
 
 ### Apply S3 Object Lock for the call recordings bucket<a name="objectlock-feb23"></a>
 
@@ -48,7 +126,7 @@ When a chat conversation between an agent and a customer has been inactive \(no 
 
 ### Microsoft Edge Chromium support<a name="edge-dec-2022"></a>
 
-Amazon Connect now supports Microsoft Edge Chromium\. For more information about supported browsers, see [Browsers supported by Amazon Connect\.](https://docs.aws.amazon.com/connect/latest/adminguide/browsers.html) 
+Amazon Connect now supports Microsoft Edge Chromium\. For more information about supported browsers, see [Browsers supported by Amazon Connect\.](https://docs.aws.amazon.com/connect/latest/adminguide/connect-supported-browsers.html) 
 
 ### Amazon Connect supports JSON as a content type for chat messages<a name="jsoncontenttype-dec-2022"></a>
 
@@ -91,8 +169,6 @@ The Rules Function language is a JSON\-based representation of a series of rule 
 Released a set of Rules APIs that enable you to programmatically create and manage rules\. For more information, see [Rules actions](https://docs.aws.amazon.com/connect/latest/APIReference/rules-api.html) in the *Amazon Connect API Reference*\.
 
 ### Search contacts by agent's first or last name is available in AWS GovCloud<a name="search-contacts-dec-2022"></a>
-
-For more information, see [Search contacts by agent's first or last name](https://docs.aws.amazon.com/connect/latest/adminguide/search-contacts-agent-name.html)\.
 
 ## November 2022 Updates<a name="nov22-release-notes"></a>
 
@@ -213,7 +289,7 @@ You can search for Amazon Connect users by first name, last name, user login, ag
 
 ### Queue dashboard<a name="queue-dashboard-sept-2022"></a>
 
-You can visualize historical queue data via time series graphs to help identify patterns, trends, and outliers specifically for **Service Level**, **Contacts Queued**, and **Average Handle Time**\. For more information, see [ Visualize: Queue dashboard](https://docs.aws.amazon.com/connect/latest/adminguide/visualize-queue-dashboard.html)\.
+You can visualize historical queue data by using time series graphs to help identify patterns, trends, and outliers specifically for **Service Level**, **Contacts Queued**, and **Average Handle Time**\. For more information, see [ Visualize: Queue dashboard](https://docs.aws.amazon.com/connect/latest/adminguide/visualize-queue-dashboard.html)\.
 
 ## August 2022 Updates<a name="aug22-release-notes"></a>
 
@@ -237,7 +313,27 @@ Contact center supervisors or managers track schedule adherence to understand wh
 
 ### Search for contacts by using the agent's first or last name<a name="contact-search-july22"></a>
 
-You can search for contacts using the agent's first or last name\. The filter name is **Agent**\. To view an image of this experience, see [Search contacts by agent's first or last name](contact-search.md#search-contacts-agent-name)\.
+You can search for contacts using the agent's first or last name\. The filter name is **Agent**\. 
+
+#### Search contacts by agent's first or last name<a name="search-contacts-agent-name"></a>
+
+The following image shows the Agent filter, and the option to choose agents by name\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-search-agent-name.png)
+
+#### Required permissions to "Agent" search filter<a name="users-view-permissions-contact-search"></a>
+
+To use the **Agent** filter on the **Contact search** page, in your Amazon Connect security profile you must have **Users \- View** permissions, as shown in the following image: 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search.png)
+
+When you have **Users \- View** permissions, on the **Contact search** page the **Agent** filter appears, as shown in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search3.png)
+
+Without **User \- View** permissions, the **Agent** filter is not visible, and searching contacts by Agent login is not supported, as shown in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/release-notes-contact-search2.png)
 
 ### Released updates for rich text format rendering<a name="rich-text-formatting-july22"></a>
 
@@ -252,6 +348,38 @@ Agents can view call unredacted transcripts in the CCP and agent application\. F
 ### Support for Lex intent confidence scores and sentiment analysis<a name="lex-sentiment-scores-june-2022"></a>
 
 You can further personalize the automated self\-service customer experience using Amazon Lex intent confidence scores and sentiment analysis as a branch within your flows\. For more information, see the [Get customer input](https://docs.aws.amazon.com/connect/latest/adminguide/get-customer-input.html) block\. For a list of new contact attributes, see [Amazon Lex contact attributes](https://docs.aws.amazon.com/connect/latest/adminguide/connect-attrib-list.html#attribs-lex-table)\.
+
+### Metrics Updates<a name="metrics-june-2022"></a>
+
+The following updates were released in June 2022\.
+
+**15 minute scheduled reports**
+
+You can now schedule historical metrics to refresh every 15 minutes\. To select 15\-minute schedules, select generate this report **Hourly** every \.25 hours \(this is the top most option in the second dropdown\), for the previous \.25 hours\. The following image shows the values that you need to select\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-15-minute-scheduled-reports.png)
+
+### <a name="new-real-time-metrics-agent-table-by-agent-june2022"></a>
+
+**Filter Real\-Time Metrics Agent Table by Agent**
+
+You can now filter the agent table on the Real\-Time Metrics page by agent\. This filter functions the same as the existing queues, routing profiles, and agent hierarchy filters\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-rtm-agent-filtering.png)
+
+### New contact transferred related metrics<a name="contact-transferred-whats-new"></a>
+
+We are upgrading the existing [Contacts transferred in](historical-metrics-definitions.md#contacts-transferred-in-historical) and [Contacts transferred out](historical-metrics-definitions.md#contacts-transferred-out-historical) historical metrics to have consistent definitions\. We are adding [Contacts transferred in by agent](historical-metrics-definitions.md#contacts-transferred-in-by-agent-historical) and [Contacts transferred out by agent](historical-metrics-definitions.md#contacts-transferred-out-by-agent-historical) for more granular contact transferred related metrics\. 
+
+### Changes to real\-time metrics agent tables<a name="agent-tables-rtm-page"></a>
+
+We are rolling out a new service to maintain the high availability from metrics that you expect from Amazon Connect\. Due to this change, the agent tables are sorted by [agent status](metrics-agent-status.md) instead of by agent login\.
+
+Additionally, the queues and routing profiles table are sorted by agents online instead of by queue or routing profile name\.
+
+### Faster reload times for the Real\-time metrics page<a name="upgrading-rtm-page"></a>
+
+We are upgrading the performance of the **Real\-time metrics** page so reload times are faster\. The page will have the same functionality and user experience as the existing **Real\-time metrics** page\.
 
 ### Released Amazon Connect Cases \(Preview\)<a name="cases-preview-june-2022"></a>
 
@@ -465,7 +593,7 @@ For more information, see [Deliver information to agents using Amazon Connect Wi
 
 #### Amazon Connect Voice ID \- General Availability<a name="voiceid-sept21"></a>
 
-For more information, see [Use real\-time caller authentication with Voice ID](https://docs.aws.amazon.com/connect/latest/adminguide/connect/latest/adminguide/voice-id.html) and the [Amazon Connect Voice ID API Reference](https://docs.aws.amazon.com/voiceid/latest/APIReference/Welcome.html)\. 
+For more information, see [Use real\-time caller authentication with Voice ID](https://docs.aws.amazon.com/connect/latest/adminguide/voice-id.html) and the [Amazon Connect Voice ID API Reference](https://docs.aws.amazon.com/voiceid/latest/APIReference/Welcome.html)\. 
 
 #### Preview release of Amazon Connect outbound campaigns<a name="outbound-sept21"></a>
 
@@ -513,7 +641,7 @@ When using SAML Sign\-In to your Amazon Connect instance, you now need to add th
 
 In busy contact centers, it can be difficult for agents to take a break or go offline when contacts are being quickly routed to them\. To help agents manage their time, we have released a feature that lets agents pause new contacts being routed to them while they finish their current contacts\. When all their slots are cleared, Amazon Connect automatically sets agents to the next status, such as **Lunch**\.
 
-For details about how agents use this feature, see [Set your "Next status"](set-next-status.md)\.
+For details about how agents use this feature, see [Set your "Next status" in the CCP](set-next-status.md)\.
 
 ##### Metrics: No changes due to "Next status"<a name="next-status-metrics"></a>
 
@@ -687,6 +815,16 @@ For more information, see [Set up your network](ccp-networking.md)\.
 
 The change has been rolled out to all Regions\.
 
+#### March 2021<a name="metrics-changes-new-intervals-hmr-march2021"></a>
+
+The following updates were released in March 2021\.
+
+When customizing a historical metrics report, you have the option to select a 15 minutes interval, in addition to the current option of a 30 minutes interval\. 
+
+The 15 minutes interval works the same as the 30 minutes interval\. For example, you can query up to three days of data at a time, for the past 35 days\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-15-minute-interval.png)
+
 #### Chat: Add a chat user interface your website<a name="march21-chat"></a>
 
 Added a chat widget that you can customize and secure so it can only be launched from your widget\. For more information, see [Set up your customer's chat experience](enable-chat-in-app.md)\.
@@ -713,13 +851,88 @@ The Amazon Connect contact records stream now includes **DisconnectReason** for 
 
 #### Custom service levels<a name="february21-metrics"></a>
 
-Added the ability to create custom service levels\. For details, see [New metric groupings and categories](upcoming-changes.md#metrics-changes-custom-service-levels)\.
+Added the ability to create custom service levels\. For details, see [New metric groupings and categories](#metrics-changes-custom-service-levels)\.
+
+#### Metrics updates<a name="metrics-changes-february-2021"></a>
+
+The following updates were released in February 2021\. 
+
+##### New metric groupings and categories<a name="metrics-changes-custom-service-levels"></a>
+
+With the release of [custom service level metrics](#custom-service-levels), we also made the following changes:
++ On the **Table settings** pages, pre\-set and [custom service level metrics](#custom-service-levels) are in a new group called **Contact Service Levels**\.
++ Historical metrics on the **Table settings** page are grouped into categories\. 
++ The order of metric columns on historical metrics reports changed to match the order of the metrics on the **Table settings** page\.
+
+Following is more information about these changes\.
+
+##### Real\-time metrics: New Contact Service Level category<a name="custom-service-levels-rtm"></a>
+
+A new category of metrics appears on the **Table settings** page: **Contact Service Level**\.
+
+The following image shows this new category on the **Table settings** page, in an expandable group\. Choose the arrow next to the group to view and select the metrics you want to add to your report\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-csl-groups.png)
+
+Use the **Contact Service Level** category to choose pre\-set service level metrics, and to create custom service level metrics\.
+
+The following image shows the user interface for creating custom service level metrics\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-create-csl.png)
+
+##### Historical metrics: New categories for metrics<a name="hmr-new-categories"></a>
+
+To make it easier to find the historical metrics you want to add to a report, metrics on the **Table settings** page are grouped into the following categories:
++ Agents
++ Contacts Abandoned
++ Contact Service Level: This group contains preset and custom service levels\.
++ Contacts Answered
++ Performance
+
+Choose **Add Custom SL** to add custom service levels to your historical metrics report\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-csl-group.png)
+
+##### The order of the metric columns on the historical metrics reports has changed<a name="upcoming-changes-static-columns"></a>
+
+The order of the metric columns on the historical metrics reports matches the updated grouping scheme and order of the metrics on the **Table settings** page\.
+
+This change supports the addition of [custom service level metrics](#custom-service-levels)\. It also allows us to make future improvements for where, for example, control of how a report looks resides on the **Real\-time metrics** page and the **Historical metrics** page, not the **Table settings** page\.
+
+Note how metric columns now appear on reports:
++ When you open the **Real\-time metrics** page, custom service levels appear at the end of the **Performance** group\. 
++ Metrics on existing **Scheduled reports** \(the processed documents that arrive in your Amazon S3 buckets\) are not re\-ordered automatically\. However, if you update an existing report, the metrics are re\-ordered to match the order on the **Table settings** page\.
++ **Service level metrics**:
+  + Real\-time metrics reports: Service level metrics are always added to the end of the **Performance** group, in ascending order\. 
+  + Historical metrics reports: When you add custom service level metrics, they are added to the end of the report in the order they were created\.
+
+##### Custom service level metrics<a name="custom-service-levels"></a>
+
+You have the ability to add custom service level metrics\. You can also choose from additional durations, such as minutes, hours, or days\.
+
+The maximum duration for a custom service level is 7 days\. That's because in Amazon Connect you can't have a contact that goes longer than 7 days\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-custom-servicelevels.png)
+
+##### Group by channel in a historical metrics report<a name="metrics-changes-group-by-channel-hmr"></a>
+
+**To group by channel on historical metrics reports**
+
+1. On the navigation menu, choose **Analytics and optimization**, **Historical metrics**, and then choose a report\. 
+
+1. Choose **Settings**\. 
+
+1. On the **Table Settings** page, choose the **Groupings** tab\. Add **Channel**, and choose **Apply**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-grouping-channel.png)
+
+1. The table shows a column for **Channel**, as shown in the following image\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-channel-label.png)
 
 ### January 2021 Updates<a name="january21-release-notes"></a>
 
 #### CCP: Change your audio settings<a name="january21-audio-settings"></a>
 
-Added the ability to change audio settings from the Contact Control Panel \(CCP\)\. This applies to organizations using a customized CCP\. For more information, see [Change your audio device settings in the CCP](audio-device-settings.md)\.
+Added the ability to change audio settings from the Contact Control Panel \(CCP\)\. This applies to organizations using a customized CCP\. For more information, see [How to use the CCP to change your audio device settings](audio-device-settings.md)\.
 
 #### Queue APIs \(Preview\)<a name="january21-queue-apis"></a>
 
@@ -750,7 +963,7 @@ For more information, see [Configurable fields for DTMF input](get-customer-inpu
 
 #### Tasks<a name="december20-tasks"></a>
 
-Added support for tasks, allowing you to prioritize, assign, track, and even automate tasks across the disparate tools agents use to support customers\. For more information, see [Tasks](tasks.md)\. 
+Added support for tasks, allowing you to prioritize, assign, track, and even automate tasks across the disparate tools agents use to support customers\. For more information, see [Concepts: Tasks in Amazon Connect](tasks.md)\. 
 
 #### Amazon Connect APIs<a name="december20-connectapis"></a>
 
@@ -789,9 +1002,6 @@ Added Amazon Connect Wisdom \(Preview\), which enables agents to search and find
 Added support for using Amazon Connect with Apple Messages for Business\. For more information, see [Enable Apple Messages for Business](apple-business-chat.md)\. 
 
 ### November 2020 Updates<a name="november20-release-notes"></a>
-
-#### Contact search<a name="november20-contact-search"></a>
-+ Made several improvements to contact search\. For more information, see [What's new in contact search](contact-search.md#new-contact-search-experience)\.
 
 #### Telephony call metadata attributes<a name="november20-telephony"></a>
 + Added call attributes to improve fraud detection and routing\. For more information, see [Telephony call metadata attributes \(call attributes\)](connect-attrib-list.md#telephony-call-metadata-attributes)\.
@@ -914,12 +1124,64 @@ The following updates were released in July 2020:
 
 The following updates were released in June 2020:
 
-#### Metrics<a name="june20-metrics"></a>
-+ The following historical metrics no longer appear in queue groupings:
-  + Agent idle time
-  + Agent on contact time
-  + Occupancy
-+ Added upcoming metric changes: new real\-time and historical metrics for inbound and outbound contact time\. For more information, see [What's new in metrics](upcoming-changes.md)\.
+#### June 2020: Changes for omnichannel support<a name="metrics-changes-june-2020"></a>
+
+##### Group by channel<a name="metrics-changes-june-2020-channel"></a>
+
+**To group queues or routing profiles by channel on real\-time metrics reports**
+
+1. On the navigation menu, choose **Analytics and optimization**, **Real\-time metrics**, and then select either **Queues** or **Routing profiles**\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-queues-or-routing-profiles.png)
+
+1. Choose **Settings**\.   
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-settings.png)
+
+1. On the **Table Settings** page, choose the **Groupings** tab and then select **Queues grouped by channels**\. Or, if you're setting up a **Routing profiles** report, choose **Routing profiles grouped by channels**\.  
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/rtm-group-by-channel.png)
+
+1. Choose **Apply**\.
+
+1. The table shows a column for **Channel**\.
+
+##### Group by queue in historical metrics reports<a name="metrics-changes-june-2020-queue-grouping"></a>
+
+In the historical metrics report, when you group or filter metrics by **Queue**, the results for the following metrics aren't accurate: 
++ Agent idle time \(not supported in queue grouping as of June, 2020\)
++ Agent on contact time \(not supported in queue grouping as of June, 2020\)
++ Occupancy \(not supported in queue grouping as of June, 2020\)
+
+Because of this, on the **Table Settings** page, **Metrics** tab, these metrics are inactive, as shown in the following image:
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-inactive-metrics.png)
+
+In addition, in the historical metrics report, Amazon Connect displays a hyphen \(\-\) in place of results for these metrics, and the cells are inactive \(gray\)\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-null-metrics.png)
+
+##### Effect of queue grouping on saved and scheduled reports<a name="metrics-changes-june-2020-saved-scheduled-reports"></a>
+
+If the **Queue** grouping or filter is used on the following reports, note these effects: 
++ **Saved reports**\. The columns for these metrics don't appear in the saved reports when *grouped* by Queue\. When the saved report is *filtered* by Queue, however, it shows "\-"\.
++ **Scheduled reports**\. These reports continue to run successfully, but no results are returned for these metrics\. 
+
+##### Agent on contact time \(not supported in queue grouping as of June, 2020\)<a name="metrics-changes-june-2020-agent-on-contact-time"></a>
+
+On historical metrics reports when an agent handles multiple chats concurrently, **Agent on contact time** shows wall clock time: the amount of time spent chatting\. However, there isn't a metric that shows the time an agent spends chatting with each contact\.
+
+In addition, no results are returned when you use the **Queue** grouping or filter with **Agent on contact time**\.
+
+##### Agent idle time \(not supported in queue grouping as of June, 2020<a name="metrics-changes-june-2020-agent-idle-time"></a>
+
+The **Agent idle time** metric divides the idle time into each queue associated with the agent\. When contacts are grouped or filtered by **Queue**, however, Amazon Connect doesn't provide an accurate view into the how the agent is working\. Because of this, Amazon Connect doesn't show **Agent idle time** when you apply the **Queue** grouping or filter to your report\. 
+
+##### Occupancy \(not supported in queue grouping as of June, 2020\)<a name="metrics-changes-june-2020-occupancy"></a>
+
+With the addition of chat, the **Occupancy** metric is now defined as the percentage of time that an agent was active on contacts\. This percentage is calculated as follows:
++ \(Agent on contact \(wall clock time\) / \(Agent on contact \(wall clock time\) \+ Agent idle time\)\) 
+
+Because **Agent idle time** is now inaccurate when contacts are grouped or filtered by **Queues**, the **Occupancy** metric is also inaccurate\. As a result, when contacts are grouped or filtered by Queues, **Occupancy** doesn't appear on the report\.
+
+Occupancy no longer appears on the **Dashboard** page\.
 
 #### Contact Control Panel \(CCP\)<a name="june20-ccp"></a>
 + Released the following improvements:
@@ -958,7 +1220,7 @@ The following updates were released in March 2020:
 + Updated the [Store customer input](store-customer-input.md) block to allow you to specify a custom terminating keypress\.
 
 #### Metrics<a name="mar20-metrics"></a>
-+ Announced [June 2020: Changes for omnichannel support](upcoming-changes.md#metrics-changes-june-2020)\.
++ Announced [June 2020: Changes for omnichannel support](#metrics-changes-june-2020)\.
 
 #### Networking<a name="mar20-networking"></a>
 + Updated softphone requirements in [Set up your network](ccp-networking.md)\.
@@ -1008,8 +1270,74 @@ The following updates were released in November 2019:
 #### Omnichannel Support<a name="nov19-channel"></a>
 + Added support for chat communications\. For more information, see [Concepts](connect-concepts.md)\. 
 
-#### Metrics<a name="nov19-metrics"></a>
-+ For a description of changes, see [What's new in metrics](upcoming-changes.md)\.
+#### November 2019<a name="metrics-changes-november-2019"></a>
+
+##### Name changes for "Missed" and "Agent status" and "On call"<a name="metrics-changes-november-2019-names"></a>
+
+The following real\-time metrics were renamed:
+
+
+| Old name | New name | 
+| --- | --- | 
+|  Missed  | Agent non\-response  | 
+|  Agent status  | Agent activity  | 
+|  On call  | On contact  | 
+
+For each metric, existing saved reports automatically start displaying the new name; you don't need to do anything for the new name to appear in your reports\. 
+
+The column order for a saved report containing one of these metrics stays the same\. For example, if you previously saved a report where **Agent status** was the third metric, now when you open that saved report, **Agent activity** is the name for the third metric\.
+
+For **Missed**, only the name of the metric changed; the underlying calculation stayed the same\. We've changing the name of this metric to **Agent non\-response** so it better reflects its definition: 
++ **Agent non\-response** increments whenever a contact is offered to an agent, and the agent doesn't respond to the contact for whatever reason\. 
+
+  For example, the agent could have intentionally let the timer run out, or the agent could have forgotten to grant microphone access in the Contact Control Panel and never heard the ring\. In these situations, Amazon Connect doesn't drop the contact\. Instead, the routing engine will offer it to another available agent, while the customer continues to wait in queue\. This means a single contact could result in multiple **Agent non\-responses** before an agent responds and handles the contact\.
+
+For **On call**, the name change to **On Contact** applies to the Real\-time metrics UI only\. You can continue using `AGENTS_ON_CALL` with the `GetCurrentMetricData` API to retrieve data for this metric\.
+
+##### Label updates for "Agent activity" and "Contact state"<a name="metrics-changes-november-2019-labels"></a>
+
+Labels are the values returned in a report\. For example, in the following image **Available** and **Basic Routing Profile** are labels\. 
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/labels.png)
+
+For **Agent Activity** and **Contact State**, we renamed some of the labels that describe what the agent's current activity is and what's happening with the contact they are currently working on\. This way, the labels in the Real\-Time Metrics report are more consistent with the labels the agent sees in the Contact Control Panel\. They also align with the data returned about these different states in other parts of Amazon Connect\.
+
+When the name of **Agent Status** changed to **Agent Activity**, the following labels changed, too:
+
+
+| Scenario | Before: Agent Status Labels | After: Agent Activity Labels | Notes | 
+| --- | --- | --- | --- | 
+|  Agent is logged in but offline  |  Not shown  |  Not shown  |    | 
+|  Agent switches to **Available** in the CCP  |  Available  |  Available  |    | 
+|  Agent has an incoming call  |  CallIncoming  |  Incoming  |  ContactState = Incoming contact  | 
+|  Agent has an incoming callback  |  CallbackIncoming  |  Incoming  |  ContactState = Inbound callback  | 
+|  Agent accepted a callback, which is now making an outbound call to the customer  |  Calling  |  On Contact  |  ContactState = Outbound callback  | 
+|  Agent makes outbound call \(regardless of what status the agent chose in their CCP\)  |  Calling  |  On Contact  |  ContactState = Outbound contact  | 
+|  Agent missed a phone call due to timer expired  |  MissedCallAgent  |  Missed  |    | 
+|  Agent is interacting with customer on phone call \(regardless of what status the agent chose in their CCP\)  |  On call  |  On Contact  |    | 
+|  Agent puts customer on hold while on phone call \(regardless of what status the agent chose in their CCP\)  |  On call  |  On Contact  |    | 
+|  After agent hangs up call  |  After call work  |  After contact work  |    | 
+|  Agent is on Lunch \(a custom status\)  |  Lunch  |  Lunch  |    | 
+|  Supervisor's activity state if they are monitoring some agent  |  Monitoring  |  Monitoring  |    | 
+|  Agent's activity state if they are connected to customer while being monitored by a supervisor  |  On call  |  On Contact  |    | 
+
+The following table shows the how the labels changed for **Contact State**\.
+
+
+| Scenario | Label Name Before | Label Name After | 
+| --- | --- | --- | 
+|  Agent is logged in but offline  |    |    | 
+|  Agent switches to **Available** in the CCP  | \-  | \-  | 
+|  Agent has an incoming call  |  \-  |  Incoming contact  | 
+|  Agent has an incoming callback  |  \-  |  Inbound callback  | 
+|  Agent accepted a callback, which is now making an outbound call to the customer  |  Initial  |  Outbound callback  | 
+|  Agent makes outbound call \(regardless of what status the agent chose in their CCP\)  |  Initial  |  Outbound contact  | 
+|  Agent missed a phone call due to timer expired  |  Missed call  |  Missed contact  | 
+|  Agent is interacting with customer on phone call \(regardless of what status the agent chose in their CCP\)  |  Busy  |  Connected  | 
+|  Agent puts customer on hold while on phone call \(regardless of what status the agent chose in their CCP\)  |  OnHold  |  On hold  | 
+|  After agent hangs up call  |  After call work  |  After contact work  | 
+|  Agent is on Lunch \(a custom status\)  |  \-  |  \-  | 
+|  Supervisor's contact state if they are monitoring an agent  |  Monitoring  |  Monitoring  | 
 
 #### Contact Flows<a name="nov19-contact-flows"></a>
 
@@ -1034,7 +1362,7 @@ Updated the following contact flow blocks for chat:
 + Added the [Amazon Connect Participant Service](https://docs.aws.amazon.com/connect-participant/latest/APIReference/Welcome.html) API\. These APIs are used chat participants, such as agents and customers\.
 
 #### Contact Control Panel \(CCP\)<a name="nov19-CCP"></a>
-+ Updated the CCP so it supports chat\. For more information, see [Agent training guide](agent-user-guide.md)\. 
++ Updated the CCP so it supports chat\. For more information, see [Agent training guide for the CCP and agent workspace](agent-user-guide.md)\. 
 
 ### October 2019 Update<a name="oct19-release-notes"></a>
 
@@ -1240,7 +1568,7 @@ The following updates were released in July 2018:
 + [Contact Flows](#july18-contact-flows)
 
 #### New Features<a name="july18-features"></a>
-+ [Caller ID number: Set in the queue or Call phone number block](queues-callerid.md#using-call-number-block)
++ [Outbound caller ID number](queues-callerid.md#using-call-number-block)
 + [Add an Amazon Lex bot to Amazon Connect](amazon-lex.md)
 + [User Management APIs](https://docs.aws.amazon.com/connect/latest/APIReference/)
 + [Manage contacts in a queue](queue-to-queue-transfer.md)
@@ -1278,7 +1606,7 @@ The following updates were released in June 2018:
 #### Contact Flows<a name="june18-contact-flows"></a>
 + Renamed the **Set queue** block to **Set working queue**\.
 + Added a **Copy to clipboard** button next to the ARN of a flow so you can easily copy the ARN\. Choose **Show additional flow information** under the name of the flow in the designer to display the ARN\.
-+ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Caller ID number: Set in the queue or Call phone number block](queues-callerid.md#using-call-number-block)\.
++ Added a new **Call phone number** block, which lets you choose the phone number from your instance to display as the caller ID in an outbound whisper flow\. For more information, see [Outbound caller ID number](queues-callerid.md#using-call-number-block)\.
 + Released contact attributes for system metrics, including a new **Get metrics** block in contact flows\. For more information, see [Route based on number of contacts in a queue](attrib-system-metrics.md)\.
 
 #### Metrics and Reporting<a name="june18-metrics"></a>

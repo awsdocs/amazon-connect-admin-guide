@@ -27,7 +27,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="customer-profiles-block-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-block-properties.png)
+The following image shows the **Properties** page of the **Customer profiles** block\. It is configured to return a customer profile, using the customer phone number to find it\.
+
+![\[The properties page of the Customer profiles block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-block-properties.png)
 
 Under **Action**, choose from the following options: 
 + **Get profile**
@@ -48,6 +50,6 @@ The **Action** and **Response fields** correspond to the request and response fi
 
 ## Configured block<a name="customer-profiles-block-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It shows four branches: **Success**, **Error**, **Multiple found**, and **None found**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-block-configured.png)
+![\[A configured Customer profiles block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-block-configured.png)

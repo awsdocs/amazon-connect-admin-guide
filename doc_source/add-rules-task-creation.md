@@ -8,11 +8,11 @@ After you set up an external application to generate tasks automatically, you ne
 
 1. On the **Rules** page, use the **Create a rule** dropdown list to choose **External application**\.
 
-1. At the **Trigger and conditions** page, assign a name to the rule\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules.png)
+1. At the **Trigger and conditions** page, assign a name to the rule\. Spaces are not allowed in the name of a rule\.  
+![\[The New rule page, spaces are not allowed in the name of a rule.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules.png)
 
-1. Choose the event that will generate a task, and the instance of the external application where the event must occur\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-add-rule-for-zendesk.png)
+1. Choose the event that will generate a task, and the instance of the external application where the event must occur\. For example, the following image shows the trigger is when a new ticket is created in Zendesk\. The condition that must be met is when the type equals a question\. Then a task is generated\.  
+![\[The When and Type dropdown menus.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-add-rule-for-zendesk.png)
 
    1. Select the instance for the external application\.
 
@@ -20,8 +20,8 @@ After you set up an external application to generate tasks automatically, you ne
 
 1. Choose **Next**\.
 
-1. On the **Action** page, specify the task to be generated when the rule is met\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/task-rule-action-to-take.png)
+1. On the **Action** page, specify the task to be generated when the rule is met, as shown in the following image  
+![\[The Action page, the task to be generated when the rule is met.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/task-rule-action-to-take.png)
 
    1. The description of the task appears to the agent in their Contact Control Panel \(CCP\)\.
 

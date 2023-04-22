@@ -25,7 +25,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="wait-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wait-properties.png)
+The following image shows the **Properties** page of the **Wait** block\. It is configured pause the flow for 5 hours\.
+
+![\[The properties page of the Wait block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wait-properties.png)
 
 It has two properties: 
 + **Timeout**: Run this branch if the customer hasn't sent a message after a specified amount of time\. Maximum is 7 days\.
@@ -42,16 +44,16 @@ You can add multiple **Wait** blocks to your contact flows\. For example:
 
 ## Configured block<a name="wait-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Customer returned**, **Time Expired**, and **Error**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wait-configured.png)
+![\[A configured Wait block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wait-configured.png)
 
 ## Sample flows<a name="wait-samples"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample disconnect flow](sample-disconnect.md)
 
 ## Scenarios<a name="wait-scenarios"></a>
 
 See these topics for scenarios that use this block:
-+ [Example chat scenario](chat.md#example-chat-scenario)
++ [Example chat scenario](web-and-mobile-chat.md#example-chat-scenario)

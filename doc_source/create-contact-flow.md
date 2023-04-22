@@ -36,7 +36,7 @@ The following flow types are available\.
 Use these steps to create an inbound flow\. 
 
 1. In the left navigation menu, choose **Routing**, **Contact flows**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/menu-contact-flows.png)
+![\[The Amazon Connect navigation menu.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/menu-contact-flows.png)
 
 1. Choose **Create flow**\. This opens the flow designer and creates an inbound flow \(Type = Flow\)\. 
 

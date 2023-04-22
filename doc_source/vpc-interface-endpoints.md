@@ -19,6 +19,7 @@ You can create an interface endpoint using either the Amazon VPC console or the 
 
 Amazon Connect supports the following service names:
 + com\.amazonaws\.*region*\.app\-integrations
++ com\.amazonaws\.*region*\.cases
 + com\.amazonaws\.*region*\.profile
 + com\.amazonaws\.*region*\.connect\-campaigns
 + com\.amazonaws\.*region*\.voiceid

@@ -102,4 +102,4 @@ This bucket and key are used for both recordings of conversations and exported r
 
 ## Next steps<a name="get-started-next-steps"></a>
 
-After you create an instance, you can assign your contact center a phone number or import your own phone number\. For more information, see [Set up phone numbers for your contact center](contact-center-phone-number.md)\.
+After you create an instance, you can assign your contact center a phone number or import your own phone number\. For more information, see [Set up phone numbers to use the Amazon Connect service](ag-overview-numbers.md)\.

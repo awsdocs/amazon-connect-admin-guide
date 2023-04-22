@@ -6,17 +6,17 @@ Security includes the ability to protect information, systems, and assets while 
 
 After you’ve made the decision to move your workload to Amazon Connect, in addition to reviewing [Security in Amazon Connect](security.md) and [Security Best Practices for Amazon Connect](security-best-practices.md), follow these guidelines and steps to understand and implement your security requirements relative to the following core security areas:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/securityjourney.png)
+![\[Security journey.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/securityjourney.png)
 
 ### Understanding the AWS Security Model<a name="understanding-security-model"></a>
 
 When you move computer systems and data to the cloud, security responsibilities become shared between you and AWS\. AWS is responsible for securing the underlying infrastructure that supports the cloud, and you’re responsible for anything you put on the cloud or connect to the cloud\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/shareresponsibilitymodel.png)
+![\[Understanding the AWS Security Model.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/shareresponsibilitymodel.png)
 
 Which AWS services you use will determine how much configuration work you have to perform as part of your security responsibilities\. When you use Amazon Connect, the shared model reflects AWS and customer responsibilities at a high\-level, as shown in the following diagram\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/shareresponsibilitymodelforamazonconnect.png)
+![\[AWS shared responsibility model for Amazon Connect.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/shareresponsibilitymodelforamazonconnect.png)
 
 ### Compliance Foundations<a name="compliance-foundations"></a>
 
@@ -54,7 +54,7 @@ Review your workload diagram and architect an optimum solution on AWS\. This inc
 
 There are four types of Amazon Connect personas, based on the activities being performed\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/amazonconnectpersonas.png)
+![\[Types of Amazon Connect personas.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/amazonconnectpersonas.png)
 
 1. AWS administrator – AWS administrators create or modify Amazon Connect resources and may also delegate administrative access to other principals by using the AWS Identity and Access Management \(IAM\) service\. The scope of this persona is focused on creating and administering your Amazon Connect instance\.
 
@@ -130,7 +130,7 @@ Perform input validation to ensure that only properly formed data is entering th
 
 Amazon Connect security can be divided into three logical layers as illustrated in the following diagram:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/securityvectors.png)
+![\[Amazon Connect security vectors.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/architecture/securityvectors.png)
 
 1. **Agent workstation**\. The agent workstation layer is not managed by AWS and consists of any physical equipment and third\-party technologies, services, and endpoints that facilitate your agent’s voice, data, and access the Amazon Connect interface layer\.
 

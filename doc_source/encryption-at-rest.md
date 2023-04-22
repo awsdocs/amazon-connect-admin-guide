@@ -38,7 +38,7 @@ AWS KMS charges apply for a customer managed key\. For more information about pr
 
 ## Amazon Connect Wisdom encryption at rest<a name="encryption-at-rest-wisdom"></a>
 
-All user data stored in Amazon Connect Wisdom is encrypted at rest using encryption keys stored in AWS Key Management Service\. If you optionally provide a customer managed key, Wisdom uses it to encrypt knowledge content stored at rest outside of Wisdom search indices\. Wisdom uses dedicated search indices per customer and they are encrypted at rest by using AWS owned keys stored in AWS Key Management Service\. Additionally, you can use CloudTrail to audit any data access via the Wisdom APIs\.
+All user data stored in Amazon Connect Wisdom is encrypted at rest using encryption keys stored in AWS Key Management Service\. If you optionally provide a customer managed key, Wisdom uses it to encrypt knowledge content stored at rest outside of Wisdom search indices\. Wisdom uses dedicated search indices per customer and they are encrypted at rest by using AWS owned keys stored in AWS Key Management Service\. Additionally, you can use CloudTrail to audit any data access using the Wisdom APIs\.
 
 AWS KMS charges apply when using a key that you provide\. For more information about pricing, see [AWS KMS pricing](http://aws.amazon.com/kms/pricing/)\.
 

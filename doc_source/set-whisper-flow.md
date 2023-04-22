@@ -49,7 +49,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="set-whisper-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-whisper-flow-properties2.png)
+The following image shows the **Properties** page of the **Set whisper flow** block\. It shows the whisper to the agent is set manually to **Default agent whisper**\. Use the dropdown box to choose a different whisper flow\.
+
+![\[The properties page of the Set whisper flow block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-whisper-flow-properties2.png)
 
 If you choose to **Select a flow**, you can only select from flows that are type **Agent Whisper** or **Customer Whisper**\.
 
@@ -63,6 +65,6 @@ For information about using attributes, see [Use Amazon Connect contact attribut
 
 ## Configured block<a name="set-whisper-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has the following branches: **Success** and **Error**\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-whisper-flow-configured.png)
+![\[A configured Set whisper flow block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/set-whisper-flow-configured.png)

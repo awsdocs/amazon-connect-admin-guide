@@ -69,9 +69,9 @@ You can also use the IAM console to create a service\-linked role with the **Ama
 
 ## For instances created before October 2018<a name="migrate-slr"></a>
 
-If your Amazon Connect instance was created before October 2018, you don't have service\-linked roles set up\. To create a service\-linked role, on the **Account overview** page, choose **Create service\-linked role**\.
+If your Amazon Connect instance was created before October 2018, you don't have service\-linked roles set up\. To create a service\-linked role, on the **Account overview** page, choose **Create service\-linked role**, as shown in the following image\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/slr-create-slr.png)
+![\[The account overview page, the create service-linked role button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/slr-create-slr.png)
 
 For a list of the IAM permissions required to create the service\-linked role, see [Overview page](security-iam-amazon-connect-permissions.md#overview-page) in the [Required permissions for using custom IAM policies to manage access to the Amazon Connect console](security-iam-amazon-connect-permissions.md) topic\.
 

@@ -1,5 +1,7 @@
 # Edit users in bulk<a name="edit-users-in-bulk"></a>
 
+This topic explains how to edit user records using the Amazon Connect user interface\. To edit user records programmatically, see [UpdateUserIdentityInfo](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateUserIdentityInfo.html) in the *Amazon Connect API Reference Guide*\. To use the CLI, see [update\-user\-identity\-info](https://docs.aws.amazon.com/cli/latest/reference/connect/update-user-identity-info.html)\.
+
 1. Log in to Amazon Connect with an Admin account, or an account assigned to a security profile that has permissions to edit user accounts\.
 
 1. In Amazon Connect, on the left navigation menu, choose **Users**, **User management**\. 

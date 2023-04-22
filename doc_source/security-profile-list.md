@@ -30,7 +30,7 @@ The following tables list:
 | Task templates \- Create  |  TaskTemplates\.Create  | [Create task templates](task-templates.md)\.  | 
 | Task templates \- Delete  |  TaskTemplates\.Delete  | Delete task templates\.  | 
 | Task templates \- Edit  |  TaskTemplates\.Edit  | Edit task templates\.  | 
-| Task templates \- View  |  Task templates\.View  | View task templates\.  | 
+| Task templates \- View  |  TaskTemplates\.View  | View task templates\.  | 
 
 ## Numbers and flows<a name="numbers-flows-permissions-list"></a>
 
@@ -51,11 +51,12 @@ The following tables list:
 | Contact flow modules \- Edit |  ContactFlowModules\.Edit  | Edit flow modules\.  | 
 | Contact flow modules \- Publish |  ContactFlowModules\.Publish  | Publish flow modules\.  | 
 | Contact flow modules \- View |  ContactFlowModules\.View  | View flow modules\.  | 
-| Phone numbers \- Claim |  PhoneNumbers\.Claim  | [Claim phone numbers](claim-phone-number.md)\.  | 
+| Phone numbers \- Claim |  PhoneNumbers\.Claim  | [Claim phone numbers](get-connect-number.md)\.  | 
 | Phone numbers \- Edit |  PhoneNumbers\.Edit  | Edit phone numbers\. [Attach a claimed or ported phone number to a flow](associate-claimed-ported-phone-number-to-flow.md)\.   | 
 | Phone numbers \- Release |  PhoneNumbers\.Release  | [Release phone numbers back to inventory](release-phone-number.md)\.  | 
 | Phone numbers \- View |  PhoneNumbers\.View  | View a list of phone numbers that have been claimed or ported to your Amazon Connect instance\.  | 
 | Chat test mode \- Enable/Disable |  ChatTestMode  | Access a simulated web page so users can [test the chat experience](chat-testing.md#test-chat)\. Also grants them the permission to view a list of flows, which is exposed through the **Test settings** option\.  | 
+| Views |  Views\.View  | Allow access to [Views](view-resources-sg.md)  | 
 
 ## Users and permissions<a name="users-permissions-list"></a>
 
@@ -97,6 +98,9 @@ The following tables list:
 | UI name | API name | Use | 
 | --- | --- | --- | 
 | Access metrics |  AccessMetrics  | [Manage access to real\-time and historical metrics reports](rtm-permissions.md)\.  | 
+| Real\-time metrics |  RealTimeMetrics\.Access  | Manage access to the real\-time metrics page\.  | 
+| Historical metrics |  HistoricalMetrics\.Access  | Manage access to the historical metrics page\.  | 
+| Agent activity audit |  AgentActivityAudit\.Access  | Manage access to the agent activity audit within the historical metrics page\.  | 
 | Contact Search |  ContactSearch\.View  | Access the **Contact search** page, which is where users can [search for contacts](contact-search.md) and see results on the **Contact details** page\.  | 
 | Search contacts by conversation characteristics |  ContactSearchWithCharacteristics\.Access  | Access to the Contact Lens filters that enable users to search by sentiment scores, non\-talk time, and category\.  | 
 | Search contacts by conversation characteristics \- View |  ContactSearchWithCharacteristics\.View  | View the Contact Lens filters that enable users to search by sentiment scores, non\-talk time, and category\.   | 
@@ -129,6 +133,14 @@ The following tables list:
 | Evaluation forms \- perform evaluations |   Evaluation\.Create Evaluation\.View  Evaluation\.Edit Evaluation\.Delete  | [Evaluate performance](evaluations.md)\.   | 
 | Evaluation forms \- manage form definitions |  EvaluationForms\.Create EvaluationForms\.View  EvaluationForms\.Edit EvaluationForms\.Delete  | [Create and manage evaluation forms](create-evaluation-forms.md)\.   | 
 | Voice ID \- attributes and search |  VoiceIdAttributesAndSearch\.View  | Search for and view Voice ID results on the **Contact detail** page\.  | 
+| Voice ID \- attributes and search |  VoiceIdAttributesAndSearch\.View  | Search for and view Voice ID results on the **Contact detail** page\.  | 
+| Forecasting \- View |  Forecasting\.View  | [Review contact volume and average handle time forecasts](inspect-forecast.md)\.  | 
+| Forecasting \- Edit |  Forecasting\.Edit  |  [Create and edit contact volume and average handle time forecasts](create-forecasts.md)\.   | 
+| Forecasting \- Publish |  Forecasting\.Publish  | [Publish a forecast](publish-forecast.md)\.  | 
+| Capacity planning \- View |  Capacity\.View  | [Review capacity plan output](capacity-planning-review-output.md)\.  | 
+| Capacity planning \- Edit |  Capacity\.Edit  | [Create capacity planning scenarios](capacity-planning-create-scenarios.md)\.  | 
+| Capacity planning \- Publish |  Capacity\.Publish  | [Publish a capacity plan](publish-capacity-plan.md)\.  | 
+| Forecast and schedule interval |  Forecasting\.Edit  | [Set the forecast and schedule interval](set-forecast-scheduling-interval.md)\.  | 
 
 ## Historical changes<a name="historical-changes-list"></a>
 
@@ -142,15 +154,29 @@ The following tables list:
 
 | UI name | API name | Use | 
 | --- | --- | --- | 
-| Customer profiles \- Create |  CustomerProfiles\.Create  | [Create customer profiles in the agent application](create-new-customer-profile.md)\.  | 
+| Customer profiles \- Create |  CustomerProfiles\.Create  | [Create customer profiles in the agent application](ag-cp-create.md)\.  | 
 | Customer profiles \- Edit |  CustomerProfiles\.Edit  | Edit customer profiles in the agent application\.  | 
 | Customer profiles \- View |  CustomerProfiles\.View  | Edit customer profiles in the agent application\.  | 
+
+## Scheduling<a name="scheduling-permissions-list"></a>
+
+
+| UI name | API name | Use | 
+| --- | --- | --- | 
+| Schedule manager \- View |  Scheduling\.View  |  [View generated staff schedules in the Schedule manager user experience](scheduling-publish-schedule.md)\.   | 
+| Schedule manager \- Edit |  Scheduling\.Edit  | [Create, edit schedule configuration and publish generated staff schedules](scheduling-publish-schedule.md)\.   | 
+| Schedule manager \- Publish |  Scheduling\.Publish  | [Publish a schedule](scheduling-publish-schedule.md) by using Schedule Manager\.  | 
+| Published schedule calendar |  Scheduling\.View  | [View](scheduling-view-schedule-staff.md) a schedule\.   | 
+| Team calendar |  TeamCalendar\.View  | [View published staff schedules in the Published Calendar user experience](scheduling-view-schedule-supervisors.md)\.   | 
+| Team calendar |  TeamCalendar\.Edit  | [Edit published staff schedules in the Published Calendar user experience](scheduling-view-schedule-supervisors.md)\.  | 
 
 ## Agent Applications<a name="agentapplications-permissions-list"></a>
 
 
 | UI name | API name | Use | 
 | --- | --- | --- | 
+| Agent application schedule calendar |  StaffCalendar\.View StaffCalendar\.Edit  | [Ability for agents to view their schedules](scheduling-view-schedule-agents.md)\.  | 
+| Custom views |  CustomViews\.Access  | Use the [Agent Workspace guided experience](step-by-step-guided-experiences.md) guide\.  | 
 | Wisdom \- View |  Wisdom\.View  | [View real\-time recommendations in the agent application](use-realtime-recommendations.md)\.  | 
 
 ## Cases<a name="cases-permissions-list"></a>

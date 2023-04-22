@@ -20,7 +20,7 @@ Inbound \(US toll\-free\) and outbound calls in Amazon Connect are processed thr
 
 The following diagram illustrates this process: 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/disaster-recovery-resiliency.png)
+![\[Single-region telephony and softphone architecture.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/disaster-recovery-resiliency.png)
 
 1. Callers reach your contact center using carriers that operate across multiple AZs at all times\.
 

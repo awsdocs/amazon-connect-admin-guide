@@ -28,17 +28,17 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 This block has two tabs on its properties page\. 
 
-**Tab 1: Transfer to queue**
+**Tab 1: Transfer to queue**: This tab is shown in the following image\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-properties.png)
+![\[The properties page of the Transfer to queue block, the Transfer to queue tab.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-properties.png)
 
 When the **Transfer to queue** block runs, it checks the queue capacity to determine whether the queue is at capacity \(full\)\. This check for queue capacity compares the current number of contacts in the queue to the [Maximum contacts in queue](set-maximum-queue-limit.md) limit, if one is set for the queue\. 
 
 If no limit is set, the queue is limited to the number of concurrent contacts set in the service quota for the instance\.
 
-**Tab 2: Transfer to callback queue**
+**Tab 2: Transfer to callback queue**: This tab is shown in the following image\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-properties1.png)
+![\[The properties page of the Transfer to queue block, the Transfer to callback queue tab.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-properties1.png)
 
 The following properties are available under the **Transfer to callback queue** tab:
 + **Initial delay**: Specify how much time has to pass between a callback contact being initiated in the flow, and the customer is put in queue for the next available agent\. 
@@ -61,24 +61,24 @@ If you want to specify the **Set working queue** property, you need to add a **S
 
 ## Configured block<a name="transfer-to-queue-configured"></a>
 
-When this block is configured to **transfer to queue**, it looks similar to the following image\. If a contact is routed down the **At capacity** branch, it remains in the current working queue\.
+ When this block is configured to **transfer to queue**, it looks similar to the following image\. It has two branches: **At capacity** and **Error**\. If a contact is routed down the **At capacity** branch, it remains in the current working queue\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-configured.png)
+![\[A configured transfer to queue block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-configured.png)
 
-When this block is configured to **transfer to callback queue**, it looks similar to the following image\. If a contact is routed down the **Success** branch, it's transferred to the specified queue\.
+When this block is configured to **transfer to callback queue**, it looks similar to the following image\. It has two branches: **Success** and **Error**\. If a contact is routed down the **Success** branch, it's transferred to the specified queue\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-configured1.png)
+![\[A configured transfer to callback block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/transfer-to-queue-configured1.png)
 
 ## Scenarios<a name="transfer-to-queue-scenarios"></a>
 
 See these topics for scenarios that use this block:
 + [Manage contacts in a queue](queue-to-queue-transfer.md)
-+ [Set up queued callback](setup-queued-callback.md)
++ [](setup-queued-cb.md)
 + [About queued callbacks in metrics](about-queued-callbacks.md)
 
 ## Sample flows<a name="transfer-to-queue-samples"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample queue configurations](sample-queue-configurations.md)
 + [Sample customer queue priority](sample-customer-queue-priority.md)
 + [Sample queued callback](sample-queued-callback.md)

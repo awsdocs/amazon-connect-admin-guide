@@ -34,14 +34,14 @@ When configuring properties to get a case:
 + You must provide at least one search criteria\. Otherwise this block will take the **Error** branch\.
 
   You can either use attribute in the Cases namespace or set manually\. If you set manually, see to the syntax in [How to persist fields throughout the flow](#cases-persist-fields)\.
-+ To get cases for a given customer, add a [Customer profiles](customer-profiles-block.md) block to the flow before creating the case\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties5.png)
++ To get cases for a given customer, add a [Customer profiles](customer-profiles-block.md) block to the flow before creating the case\. The following image shows the flow designer with a **Customer profiles** block linked from the Success branch to a **Cases** block\.  
+![\[The flow designer with a Customer profiles block on it, linked from the Success branch to a Cases block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties5.png)
 
-  Configure the [Customer profiles](customer-profiles-block.md) block to get the customer profile\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties4.png)
+  Configure the [Customer profiles](customer-profiles-block.md) block to get the customer profile\. The following image shows an example of the **Customer profiles** properties page when it is configured\. The **Action** box is set to **Get profile**\. The **Select a search key** box is set to **Email address**\. The **Use attribute** option is selected\. The **Type** box is set to **Customer**\. The **Attribute** box is set to **Email address**\. The **Response fields** are set to **First name**, **Last name**\.  
+![\[The Customer profiles properties page configured for the Get profile action.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties4.png)
 
-  In the **Cases** block, on the **Properties** page configure the **Customer ID** section as shown in the following image:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties3.png)
+  In the **Cases** block, on the **Properties** page configure the **Customer ID** section as shown in the following image\. The **Link contact to case** option is set to **Yes**\. The **Request fields** box is set to **Customer Id**\. In the **Customer Id** section, the **Use attribute** option is selected\. The **Type** box is set to **Customer**\. The **Attribute** box is set to **Profile ARN**\.  
+![\[The Cases block configured to search for a case by customer ID.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties3.png)
 + You can specify to get only the last updated case for any search criteria\. This can be achieved by selecting **Get last updated case**\.
 + You can persist case fields in the case namespace to make use of them in blocks that are in your flow after the **Cases** block that is configured to **Get case**\. This can be achieved by making use of the **Response fields** section and selecting fields that you want to use in the other blocks\.
 
@@ -57,19 +57,21 @@ When configuring properties to get a case:
   + **None found**: No cases are found with the search criteria\.
   + **Error**: An error was encountered while trying to find the case\. This may be due to a system error or how **Get case** is configured\.
 
-The following images show an example of a **Get case** configuration\. The first image shows how to configure the block to search for a case by Customer ID and Title\. The Customer Id is being pulled in from the Profile ARN of the customer: 
+The following images show an example of a Cases **Properties** page that is configured for the **Get case** action\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties1.png)
+The first image shows the **Properties** page configured to search for a case by **Customer Id** and **Title**\. The **Customer Id** is being pulled in from the **Profile ARN** of the customer\. In this image, the **Link contact to case** option is set to **Yes**\. The **Request field** is set to **Customer Id, Title**\. In the **Customer Id** section, the **Use attribute** option is selected\. The **Type** box is set to **Customer**\. The **Attribute** box is set to **Profile ARN**\. 
 
-This next image shows the block configured to search by **Late Arrival**\. Three fields will be shown to the agent: **Status**, **Summary**, **Title**\.
+![\[The Cases block properties page configured to search for a case by customer ID and title.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties1.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties2.png)
+This next image shows the block configured to search by **Late Arrival**\. Under **Title**, the **Set manually** option is set to **Late Arrival**\. The **Get last updated cases** option is selected\. The **Response field** option shows the three fields that will be shown to the agent: **Status**, **Summary**, and **Title**\.
+
+![\[The Cases block properties page configured to search cases by late arrival.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-properties2.png)
 
 ## Properties: Update case<a name="update-case-properties1"></a>
 
 When configuring properties to update a case:
-+ Add a **Get case** block before an **Update case**\. Use it to find the case you want to update\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-update-case.png)
++ Add a **Get case** block before an **Update case**, as shown in the following image\. Use the **Get case** block to find the case you want to update\.  
+![\[The flow designer with a Get case block on it, linked from the Success branch to an Update case block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-get-case-update-case.png)
 + You must provide an update to at least one **Request** field\. Otherwise, this block takes the **Error** branch\.
 
   You can either use an attribute in the Cases namespace, or set the **Request** field manually\. If you set manually, see the syntax in [How to persist fields throughout the flow](#cases-persist-fields)\.
@@ -80,9 +82,11 @@ When configuring properties to update a case:
 
 The following images show an example of an **Update case** configuration\. The first image shows that as part of the update the contact is going to be linked to the case\. To identify which case to update, the **Case Id** is specified\. \(Case Id is the unique identifier of the case and the only field you can provide here\. Other fields will not work and produce errors\.\)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-update-case-properties1.png)
+![\[The Update case block, with the Link contact to case option set to Yes, Type set to Case, Attribute set to Case Id.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-update-case-properties1.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-update-case-properties2.png)
+The following image shows the **Request** field, where you specify the fields to update the case\.
+
+![\[The Update case block with Request field set to Title, the Set manually option set to Case updated through flows.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-update-case-properties2.png)
 
 ## Properties: Create case<a name="create-case-properties1"></a>
 
@@ -91,8 +95,8 @@ When configuring properties to create a case:
 + Fields that are required appear in the **Required** fields section\. You must assign values to them to create a case\.
 + You must specify the customer to create a case\.
   + We recommend adding a [Customer profiles](customer-profiles-block.md) block to the flow before the **Cases** block\. Use the [Customer profiles](customer-profiles-block.md) block to get a customer profile with some prefetched data, or create a new customer profile and then use that to create a case\.
-  + To provide a value for **Customer Id** in the **Cases** block, configure the fields as shown in the following image:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/create-case-block-properties2.png)
+  + To provide a value for **Customer Id** in the **Cases** block, configure the fields as shown in the following image, where **Use attribute** is selected, **Type** is set to **Customer**, and **Attribute** is set to **Profile ARN**\.  
+![\[The Create case block configured to provide the Use attribute value for Customer Id.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/create-case-block-properties2.png)
 
     If you are setting the value manually, you must provide the full customer profile ARN in this format:
 
@@ -109,11 +113,11 @@ When configuring properties to create a case:
 
 The following images show an example of a **Create case** configuration\. The first image shows the new case will be created using the General inquiry template: 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-create-case-properties1.png)
+![\[The Create case block with the Template option set to General Inquiry.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-create-case-properties1.png)
 
 The next image shows the reason for the case will be set to **Shipment delayed**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-create-case-properties.png)
+![\[The Create case block with the Case Reason box set to Set manually or Shipment delayed.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-create-case-properties.png)
 
 ## How to persist fields throughout the flow<a name="cases-persist-fields"></a>
 
@@ -122,23 +126,23 @@ Let's say you want customers to be able to call into your contact center and get
 Here's how to configure your flow to get and read the status to the customer: 
 
 1. Add a **Cases** block to your flow\. Configure it to **Get case** to find the case\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-1.png)
+![\[The Cases block properties page with Action set to Get case.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-1.png)
 
 1. In the **Request fields** section, search for the case by the customer **Profile ARN**:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-2.png )
+![\[The Request fields dropdown set to Customer Id, Type set to Customer, Attribute set to Profile ARN.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-2.png )
 
 1. In the **Response fields** section, add the field that you want passed throughout the flow\. For our example, choose **Status**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-3.png )
+![\[The Response fields dropdown set to Status.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-3.png )
 
 1. Add a [Play prompt](play.md) block to your flow\. 
 
 1. Configure [Play prompt](play.md) to set the attribute manually:   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-4.png)
+![\[The Play prompt properties page configured to manually play a text-to-speech or chat text message.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-4.png)
 
    Use the following syntax for reading the status of the case to the customer:
    + For system fields, you can read the syntax and understand which field it refers to\. For example: `$.Case.status` refers to the case status\. For a list of system field IDs, see the *Field ID* column in the [System case fields](case-fields.md#system-case-fields) topic\.
    + For custom fields, the syntax uses a UUID \(unique ID\) to represent the field\. For example, in the following image, the ID for the custom field named *Detailed status* is `12345678-aaaa-bbbb-cccc-123456789012`\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-5.png)
+![\[A text-to-speech message that contains the status ID for a custom field.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-example-ivr-5.png)
 
 ## Find the custom field ID<a name="get-case-properties-find-uuid"></a>
 
@@ -152,15 +156,15 @@ To find the UUID of a custom field:
 
    The UUID is `12345678-aaaa-bbbb-cccc-123456789012`\.
 
-The following image shows where you find the custom field ID in the URL:
+The following image shows where you find the custom field ID at the end of a URL:
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-custom-field-uuid.png)
+![\[An Account ID page with a URL in the browser, with the custom field ID highlighted at the end of the URL.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/cases-block-custom-field-uuid.png)
 
 ## Configuration tips<a name="create-case-tips"></a>
 + Be sure to check the [Cases service quotas](amazon-connect-service-limits.md#cases-quotas), and request increases\. The quotas apply when this block creates cases\.
 
 ## Configured block<a name="create-case-configured"></a>
 
-When this block is configured to create a cases, it looks similar to the following: 
+The following image shows an example of what this block looks like when it is configured\. It shows this block is configured to create cases, and it has **Success** and **Error** branches\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/create-case-block-configured.png)
+![\[A configured Cases block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/create-case-block-configured.png)

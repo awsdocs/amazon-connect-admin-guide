@@ -6,7 +6,7 @@ Supervisors or managers with permissions will have the ability to view agent tim
 
 **Topics**
 + [Enable time off](enable-to.md)
-+ [Configure group allowance](config-group-allowance-to.md)
++ [Set group allowance](config-group-allowance-to.md)
 + [Create time off](create-time-off-to.md)
-+ [Manager view / Agent view via request drawer](manager-agent-view-request-drawer-to.md)
++ [Manager and Agent view request drawer](manager-agent-view-request-drawer-to.md)
 + [Update / Cancel](update-cancel-to.md)

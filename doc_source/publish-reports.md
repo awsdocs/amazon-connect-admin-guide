@@ -13,8 +13,8 @@ Only people who have permissions in their security profile to **Create** and/or 
 
 1. On the real\-time metrics, historical metrics, login/logout report, or Saved reports page, choose **Share report**\.
 
-1. Toggle **Publish report** to **On**, and then choose **Save**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/publish-a-report.png)
+1. In the **Share report** dialog box, toggle **Publish report** to **On**, and then choose **Save**\. This toggle is shown in the following image of the dialog box\.  
+![\[The share report dialog box, the Publish report to organization toggle.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/publish-a-report.png)
 
    The report appears in the list of Saved reports for everyone who has appropriate permissions in their security profile\.
 
@@ -27,10 +27,16 @@ Only people who have permissions in their security profile to **Create** and/or 
 To view published reports, at minimum you need the following permissions in your security profile:
 +  **Access metrics**, if the report is a real\-time or historical metrics report
 +  **View** Login/Logout report, if the report is a login/logout report
-+  **View** Saved reports  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-view-saved-metrics-reports.png)
++  **View** Saved reports
+
+These permissions are shown in the following image of the **Analytics and Optimization** section of the security profiles page\.
+
+![\[The Analytics and optimization section of the security profiles page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-view-saved-metrics-reports.png)
 
 **To view published reports**
-+ Go to **Analytics and optimization**, **Saved reports**\. 
 
-  Published reports appear in your list automatically\.
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\. Use an account that has the appropriate permissions\.
+
+1. On the navigation menu, choose **Analytics and optimization**, **Saved reports**\. 
+
+   Published reports appear in your list automatically\.

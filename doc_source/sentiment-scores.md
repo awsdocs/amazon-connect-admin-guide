@@ -16,14 +16,16 @@ When working to improve your contact center, you may want to focus on the follow
 
   Analyzing these contacts will help you identify what experiences you can recreate in your contact center\. You can share successful techniques with other agents\.
 
-An additional way of looking at sentiment progression is to check the sentiment trendline\. You can see the variation in the customer's sentiment as the contact progresses\. For example, the following images show a conversation with a very low sentiment score in the beginning of the conversation, and very positive one at the end\.
+An additional way of looking at sentiment progression is to check the sentiment trendline\. You can see the variation in the customer's sentiment as the contact progresses\. For example, the following image shows a conversation with a very low sentiment score in the beginning of the conversation, and very positive one at the end\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-sentiment-trend.png)
+![\[Customer sentiment trend.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-sentiment-trend.png)
 
 For more information, see [Search for sentiment score or evaluate sentiment shift](search-conversations.md#sentiment-search)\.
 
 ## How sentiment scores are determined<a name="how-sentiment-scores-are-determined"></a>
 
-To determine the sentiment score, Contact Lens for Amazon Connect analyzes the sentiment for every part of the conversation of each of the participants\. It uses the frequency and proximity of the resulting sentiment for each participant turn to assign a score that ranges from \-5 to \+5 for each portion of the contact\.
+Contact Lens for Amazon Connect analyzes the sentiment of each speaker turn in a conversation as positive, negative, or neutral\. It then considers two factors for each participant turn to assign a score that ranges from \-5 to \+5 for each period of the call: 
++ Frequency\. The number of times the sentiment is positive, negative or neutral\.
++ Sentiment streaks\. The consecutive turns with same sentiment\.
 
-The final sentiment score for the entire conversation is an average of the scores assigned during the contact\.
+The overall sentiment score is the average of the scores assigned during each portion of the call\.

@@ -7,7 +7,7 @@ Amazon Connect retains only the last published forecast\. We strongly advise you
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Forecasting \- View**\. 
 
-   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
+   For more information, see [Assign permissions](required-optimization-permissions.md)\. 
 
 1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Forecasting**\.
 
@@ -23,7 +23,7 @@ Amazon Connect retains only the last published forecast\. We strongly advise you
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Forecasting \- View**\. 
 
-   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
+   For more information, see [Assign permissions](required-optimization-permissions.md)\. 
 
 1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Forecasting**\.
 
@@ -31,5 +31,5 @@ Amazon Connect retains only the last published forecast\. We strongly advise you
 
 1. Choose **Actions**, **Download last published forecast**\.
 
-1. We recommend choosing **click here** so you can specify the name of the downloaded file and the location\. Otherwise, the file is saved to your **Downloads** folder and its name is a generated number\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-download-last-published-click-here.png)
+1. We recommend choosing **click here** as shown in the following image\. This enables you to specify the name of the downloaded file and the location\. Otherwise, the file is saved to your **Downloads** folder and its name is a generated number\.  
+![\[The forecast page, the click here link to start the download.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-download-last-published-click-here.png)

@@ -15,7 +15,7 @@ By default, when an agent closes their CCP window, they are not logged out\. Unl
 
 Before you can generate a Login/Logout report, you need the following permissions assigned to your security profile: **Login/Logout report \- View**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/login-logout-report-permissions.png)
+![\[The metrics and quality section of the security profile permissions page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/login-logout-report-permissions.png)
 
 By default, the Amazon Connect **Admin** security profile has these permissions\.
 
@@ -33,8 +33,8 @@ A Login/Logout report includes only login or logout actions by your users that o
 
 1. Choose **Analytics and optimization**, **Login/Logout report**\.
 
-1. On the **Login/Logout report** page, choose the **Time range** for the records to include in the report\. Choose **Custom time range** to specify a range up to 7 days\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/login-logout-report.png)
+1. On the **Login/Logout report** page, choose the **Time range** for the records to include in the report\. Choose **Custom time range** to specify a range up to 7 days\. This configuration is shown in the following image\.  
+![\[The Login/Logout report page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/login-logout-report.png)
 
 1. Choose the **Time zone** to use for your report\.
 

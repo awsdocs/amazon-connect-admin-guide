@@ -23,10 +23,10 @@ For more information, see [Required permissions for using custom IAM policies to
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\. The following image shows the **Amazon Connect virtual contact center instances** page, with a box a box around the instance alias\.  
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
-1. On the left navigation menu, choose **Cases**\. This option is currently available in the US East \(N\. Virginia\) and US West \(Oregon\) Regions\.
+1. On the left navigation menu, choose **Cases**\. If you don't see this option, it may not be available in your Region\. For information about where Cases is available, see [Cases availability by Region](regions.md#cases_region)\. 
 
 1. Choose **Enable cases** to get started\.
 

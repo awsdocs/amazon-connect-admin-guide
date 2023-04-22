@@ -1,24 +1,24 @@
-# Make a call while on a chat<a name="call-and-chat"></a>
+# How to use the CCP to make a call while on a chat<a name="call-and-chat"></a>
 
 Let's say you're chatting with a contact and you want to consult with someone else\. While you're on a chat, you can use the updated CCP to make outbound calls using the number pad and [phone number quick connects](quick-connects.md#external-quick-connect-type)\. 
 
-Note the following limitations:
+Note the following limitation:
 + You can't access agent quick connects while you're on a chat\.
-+ Agents can't receive calls while on a chat\.
++ Agents can receive calls while on a chat only if they are assigned to a routing profile that allows [cross\-channel concurrency](routing-profiles.md)\.
 
 **To make an external call while you're on a chat**
 
 1. In the CCP, choose the phone tab\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/training-guide-choose-phone-while-on-chat.png)
+![\[The phone tab at top of ccp.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/training-guide-choose-phone-while-on-chat.png)
 
 1. Choose **Number pad**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/training-guide-choose-numberpad-while-on-chat.png)
+![\[The number pad button at bottom of quick connects page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/training-guide-choose-numberpad-while-on-chat.png)
 
 1. Enter the external number you want to call, and then choose **Call**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/training-guide-dial-call-while-on-chat.png)
+![\[The number pad page, the call button on bottom right of page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/training-guide-dial-call-while-on-chat.png)
 
 1. You'll be connected to the call at the same time the chat is still ongoing, as shown in the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/training-guide-connected-call-while-on-chat.png)
+![\[The CCP, a connected call, chat icon with red dot.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/training-guide-connected-call-while-on-chat.png)
 
 1. To go to the chat conversation while you're on the phone, choose the chat tab\. 
 
@@ -26,7 +26,7 @@ Note the following limitations:
 
 ## Can't make outbound call to another agent<a name="call-and-chat-troubleshooting1"></a>
 
-If you're on a chat and having trouble making an outbound call to another agent, that agent may be handling a chat conversation\. They can't receive a call while on a chat\. 
+If you're on a chat and having trouble making an outbound call to another agent, it could be because that agent's routing profile is not set up to allow them to take calls while on a chat or task contact\. They need to be assigned to a routing profile that allows [cross\-channel concurrency](routing-profiles.md)\. 
 
 ## Can't see phone number quick connects in the CCP<a name="call-and-chat-troubleshooting2"></a>
 

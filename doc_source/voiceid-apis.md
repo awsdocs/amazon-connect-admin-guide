@@ -7,7 +7,7 @@ This section explains how to perform common scenarios using the Voice ID APIs\.
 **Topics**
 + [Voice ID domain operations](voiceid-domain-operations.md)
 + [Amazon Connect Integration Association APIs](voiceid-integration-association-apis.md)
-+ [Speaker and fraudster management APIs](voiceid-speaker-fraudster-management-apis.md)
++ [Speaker, watchlist, and fraudster management APIs](voiceid-speaker-fraudster-management-apis.md)
 + [Batch enrollment using audio data from prior calls](voiceid-batch-enrollment.md)
 + [File schema for Speaker Enrollment Job](speaker-enrollment-job-schema.md)
 + [Create and edit a fraudster watchlist](voiceid-fraudster-watchlist.md)

@@ -15,14 +15,14 @@ After creating a forecast, you will not need to generate it manually\.
 
 1. Log in to the Amazon Connect console with an account that has security profile permissions for **Analytics**, **Forecasting \- Edit**\. 
 
-   For more information, see [Security profile permissions for Forecasting, capacity planning, and scheduling](required-optimization-permissions.md)\. 
+   For more information, see [Assign permissions](required-optimization-permissions.md)\. 
 
 1. On the Amazon Connect navigation menu, select **Analytics and optimization**, **Forecasting**\.
 
 1. Select the **Forecast** tab, and then choose **Create Forecast**\.
 
 1. On the **Create Forecast** page, choose the forecast groups\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-create-forecast.png)
+![\[The Create forecast page, the forecast groups dropdown menu.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-create-forecast.png)
 
 1. Choose the forecast type\. Amazon Connect creates a forecast for each type you select\.
    + **Long term** forecasts are used for capacity planning\. For example, how many Full Time Equivalent \(FTE\) agents you need to hire in the next few months, quarter, and year\.
@@ -34,5 +34,5 @@ After creating a forecast, you will not need to generate it manually\.
 
     The status is **Complete** when the computation finishes\. You can use **Search** to find forecasts by forecast group name\.
 
-1. Amazon Connect creates a forecast for each forecast type, as shown in the following image:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-types.png)
+1. Amazon Connect creates a forecast for each forecast type, as shown in the following image\.  
+![\[A list of forecasts, short term and long term.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-types.png)

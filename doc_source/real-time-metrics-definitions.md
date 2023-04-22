@@ -124,13 +124,13 @@ To learn more about agent status and contact states, see [About agent status](me
 
 ## Avg callback connecting time<a name="rtm-avg-callback-connecting-time"></a>
 
-Then average time between when callback contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
+The average time between when callback contacts are initiated by Amazon Connect reserving the agent for the contact, and the agent is connected\. 
 
 No equivalent to this metric is available in the GetCurrentMetricData API\. 
 
-The following image shows the five parts that go into calculating **Avg callback connecting time**\. It also shows what is in the agent event stream\.
+The following image shows the five parts that go into calculating **Avg callback connecting time**: Amazon Connect assign work item to agent, agent accepts work item, connection build time, network connection time, rings for customer\. It also shows what is in the agent event stream: Connecting, Connected or no answer\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-callback-connection-time.png)
+![\[The five parts used to calculate average callback connecting time.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-callback-connection-time.png)
 
 ## Avg hold time<a name="average-hold-time-real-time"></a>
 
@@ -146,9 +146,9 @@ In the agent event stream, this time is calculated by averaging the duration bet
 
 No equivalent to this metric is available in the GetCurrentMetricData API\. 
 
-The following image shows the three parts that go into calculating **Avg incoming connecting time**\. It also shows what is in the agent event stream\.
+The following image shows the three parts that go into calculating **Avg incoming connecting time**: connection build time, network connection time, and requesting agent to accept\. It also shows what is in the agent event stream: Connecting, Connected, Missed, or Rejected\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-inbound-connection-time.png)
+![\[The three parts used to calculate average incoming connecting time.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-inbound-connection-time.png)
 
 ## Avg interaction time<a name="average-interaction-time-real-time"></a>
 
@@ -170,9 +170,9 @@ The average time between when outbound contacts are initiated by Amazon Connect 
 
 No equivalent to this metric is available in the GetCurrentMetricData API\. 
 
-The following image shows the four parts that go into calculating **Avg outbound connecting time**\. It also shows what is in the agent event stream\.
+The following image shows the four parts that go into calculating **Avg outbound connecting time**: agent call customer, connection build time, network connection time, rings for customer\. It also shows what is in the agent event stream: Connecting, Connected or No answer\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-outbound-connection-time.png)
+![\[The four parts used to calculate average outbound connecting time.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/metrics-agent-outbound-connection-time.png)
 
 ## Callback contacts handled<a name="callback-contacts-handled-real-time"></a>
 
@@ -342,10 +342,6 @@ In the [GetCurrentMetricData ](https://docs.aws.amazon.com/connect/latest/APIRef
 ## Transferred in<a name="transferred-in-real-time"></a>
 
 Count of contacts transferred into the queue during the specified time range\.
-
-## Transferred in from queue<a name="transferred-in-from-queue-real-time"></a>
-
-Count of contacts transferred into the queue from another queue during a **Customer queue flow**\.
 
 ## Transferred in by agent<a name="transferred-in-by-agent-real-time"></a>
 

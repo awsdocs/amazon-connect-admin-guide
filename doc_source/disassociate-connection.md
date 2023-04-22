@@ -5,12 +5,12 @@ At any time you can disassociate a connection, and stop the automatic generation
 **To stop the automatic generation of tasks**
 
 1. Choose the application, and then choose **Remove connection**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-disconnect-connection.png)
+![\[The disconnect from Salesforce page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-disconnect-connection.png)
 
 1. Type **Remove**, and then choose **Remove**\. 
 
    If you need to debug, you are still able to go to Amazon AppFlow \(Salesforce\) or EventBridge\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-disconnect-2.png)
+![\[The disconnect from Salesforce option in Amazon AppFlow.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tasks-disconnect-2.png)
 
 **To remove the connection altogether from Zendesk**
 

@@ -43,11 +43,14 @@ A contact record captures events associated with the contact in your contact cen
 
 A contact record is opened for a customer when they are connected to your contact center\. The contact record is completed when the interaction with the flow or agent ends \(that is, the agent has completed the ACW and cleared the contact\)\. This means it's possible for a customer to have multiple contact records\.
 
-The following diagram shows when a contact record is created for a contact\. 
+The following diagram shows when a contact record is created for a contact\. It shows three contact records for a contact: 
++ The first record is created when the contact is connected to Agent 1\.
++ The second record is created when the contact is transferred to Agent 2\.
++ The third record is created when the contact is connected to Agent 3 during a callback\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ctr-diagram.png)
+![\[Three boxes, one for each contact record that is created.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ctr-diagram.png)
 
-Each time a contact is connected to an agent, a new contact record is created\. The contact records for a contact are linked together through the contactId fields: original, next, and previous\. 
+Each time a contact is connected to an agent, a new contact record is created\. The contact records for a contact are linked together through the contactId fields: initial, next, and previous\. 
 
 **Tip**  
 A contact is considered connected when a contact record is created\. It's possible a contact record can be created before a call is finished ringing for the caller, due to network conditions and PSTN event propagation\.

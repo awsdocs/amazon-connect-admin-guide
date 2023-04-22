@@ -1,9 +1,13 @@
 # Permissions required to view real\-time metrics reports<a name="rtm-permissions"></a>
 
-To view real\-time metrics reports, you need to be assigned to a security profile that either has Access checked for **Access metrics** or **Real\-time metrics**\. When **Access metrics** is selected, the **Real\-time metrics, Historical metrics**, and **Agent activity audit** are automatically checked\. If you have **Access metrics** checked, you have access to all real\-time and historical reports\.
+To view real\-time metrics reports, you need to be assigned to a security profile that has either the **Access metrics \- Access** permission or the **Real\-time metrics \- Access** permission\. Note the following behavior when you assign these permissions:
++ When **Access metrics \- Access** is selected, the **Real\-time metrics**, **Historical metrics**, and **Agent activity audit** permissions are also automatically assigned\. 
++ When **Access metrics \- Access** is assigned, you have access to all real\-time and historical metrics reports\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports.png)
+The following image shows the **Analytics and Optimization** section of the **Security profile permissions** page\. The **Access** option is selected for **Access metrics**, **Real\-time metrics**, **Historical metrics**, and **Agent activity audit**\.
 
-If you only have **Real\-time metrics** checked, you only have access to real\-time metrics and no other analytics pages or reports\.
+![\[The Analytics and Optimization section of the security profiles permissions page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports.png)
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports-2.png)
+If only **Real\-time metrics** is selected, you have access only to real\-time metrics and no other analytics pages or reports\. The following image shows the **Analytics and Optimization** section, with only **Real\-time metrics \- Access** selected\.
+
+![\[The real-time metrics permission on the security profile permissions page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports-2.png)

@@ -14,7 +14,7 @@ For detailed information about available porting dates and times, see [Region re
 
 As long as you continue to pay for the phone number, and do not release it from your Amazon Connect instance, it stays assigned to your account, and you are billed accordingly\. 
 
-To release a phone number, follow the steps in [Release a phone number](release-phone-number.md)\.
+To release a phone number, follow the steps in [Release a phone number from Amazon Connect back to inventory](release-phone-number.md)\.
 
 When a phone number is released from your Amazon Connect instance:
 + You will no longer be charged for it\.

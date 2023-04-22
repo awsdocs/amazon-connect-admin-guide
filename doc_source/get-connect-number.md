@@ -1,6 +1,6 @@
-# Claim a phone number in your country<a name="claim-phone-number"></a>
+# How to get an Amazon Connect phone number in your current country<a name="get-connect-number"></a>
 
-To place or receive calls in your instance, you need to claim a phone number\. If you did not claim a number when you created the instance, follow these steps to claim one now\.
+To place or receive calls in your Amazon Connect instance, you need to claim a DID or toll\-free phone number\. If you did not claim a phone number when you created your Amazon Connect instance, follow these steps to claim one now\.
 
 **To claim a number for your contact center**
 
@@ -8,7 +8,8 @@ To place or receive calls in your instance, you need to claim a phone number\. I
 
 1. On the navigation menu, choose **Channels**, **Phone numbers**\.
 
-1. Choose **Claim a number**\. You can choose a toll free number or a Direct Inward Dialing \(DID\) number\.
+1. Choose **Claim a number**\. You can choose a toll\-free number or a Direct Inward Dialing \(DID\) number\. If you're in the US, you can specify the area code you want for your number, and only available numbers with that area code will be displayed\. When numbers are returned, choose one\.   
+![\[The Claim phone number page, DID (Direct Inward Dialing) tab.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-claim-number.png)
 **Note**  
 Use the [Amazon Connect service quotas increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect) for these situations:   
 If you select a country or region, but no numbers display, you can request additional numbers for the country or region\. 
@@ -24,7 +25,7 @@ There is a service quota for how many phone numbers you can have in each instanc
 
 If you need more phone numbers, you can request a service quota increase using the [Amazon Connect service quota increase form](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-connect)\.
 
-## API instructions<a name="claim-phone-number-programmatically"></a>
+## API instructions<a name="get-connect-number-programmatically"></a>
 
 To claim a phone number programmatically: 
 

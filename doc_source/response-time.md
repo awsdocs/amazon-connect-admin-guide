@@ -11,8 +11,10 @@ Contact Lens calculates the following metrics:
 
 We recommend examining the response time metrics in conjunction with the interactions graph that shows gaps in conversation and participant sentiment\.
 
-You can choose \(or click\) or tap the longest response time value on the graph to be directed to the associated message in the transcript\. 
+You can click or tap the longest response time value on the graph to be directed to the associated message in the transcript\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contactlens-contactdetails-chat1b.png)
+The following image of the **Contact details page** shows metrics for chat conversations\. Note that **Agent greeting time** = after the agent joined the chat, how long until they sent the first response\. 
+
+![\[The contact details page, chat metrics.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contactlens-contactdetails-chat1b.png)
 
 For more information, see [Search by response time for chat conversations](search-conversations.md#response-time-search)\.

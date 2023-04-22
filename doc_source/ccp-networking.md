@@ -19,20 +19,22 @@ To allow traffic for Amazon EC2 endpoints, allow access for the URL and port, as
 
 | Domain/URL allow list | AWS Region | Ports | Direction | Traffic | 
 | --- | --- | --- | --- | --- | 
-| rtc\*\.connect\-telecom\.\{*region*\}\.amazonaws\.com This is used by ccp\# \(v1\)\. Please see the note following this table\.  | Replace \{region\} with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-|  **\*\.my\.connect\.aws** \{*myInstanceName*\}\.my\.connect\.aws/ccp\-v2 \{*myInstanceName*\}\.my\.connect\.aws/api \*\.static\.connect\.aws \*\.cloudfront\.net **\*\.awsapps\.com** \{*myInstanceName*\}\.awsapps\.com/connect/ccp\-v2 \{*myInstanceName*\}\.awsapps\.com/connect/api \*\.cloudfront\.net  | Replace \{*myInstanceName*\} with the alias of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \*\.telemetry\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| participant\.connect\.\{*region*\}\.amazonaws\.com  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \*\.transport\.connect\.\{*region*\}\.amazonaws\.com This is used by ccp\-v2\.  | Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| \{*Amazon S3 bucket name*\}\.s3\.\{*region*\}\.amazonaws\.com  | Replace *Amazon S3 bucket name* with the name of the location where you store attachments\. Replace \{*region*\} with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
-| TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com To instead add specific endpoints to your allow list based on Region, see [NLB endpoints](#nlb-endpoints)\.   | Replace \{*region*\} with the location of your Amazon Connect instance | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
+| rtc\*\.connect\-telecom\.*region*\.amazonaws\.com This is used by ccp\# \(v1\)\. Please see the note following this table\.  | Replace region with the Region where your Amazon Connect instance is located | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+|  **\*\.my\.connect\.aws** *myInstanceName*\.my\.connect\.aws/ccp\-v2 *myInstanceName*\.my\.connect\.aws/api *myInstanceName*\.my\.connect\.aws/auth/authorize \*\.static\.connect\.aws \*\.cloudfront\.net **\*\.awsapps\.com** *myInstanceName*\.awsapps\.com/connect/ccp\-v2 *myInstanceName*\.awsapps\.com/connect/api *myInstanceName*\.awsapps\.com/connect/auth/authorize \*\.cloudfront\.net  | Replace *myInstanceName* with the alias of your Amazon Connect instance  | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \*\.telemetry\.connect\.*region*\.amazonaws\.com  | Replace *region* with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| participant\.connect\.*region*\.amazonaws\.com  | Replace *region* with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| \*\.transport\.connect\.*region*\.amazonaws\.com This is used by ccp\-v2\.  | Replace *region* with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| *Amazon S3 bucket name*\.s3\.*region*\.amazonaws\.com  | Replace *Amazon S3 bucket name* with the name of the location where you store attachments\. Replace *region* with the location of your Amazon Connect instance | 443 \(TCP\) | OUTBOUND | SEND/RECEIVE | 
+| TurnNlb\-\*\.elb\.*region*\.amazonaws\.com To instead add specific endpoints to your allow list based on Region, see [NLB endpoints](#nlb-endpoints)\.   | Replace *region* with the location of your Amazon Connect instance | 3478 \(UDP\) | OUTBOUND | SEND/RECEIVE | 
 | GLOBALACCELERATOR | GLOBAL and Region where your Amazon Connect instance is located \(add GLOBAL AND any region\-specific entry to your allow list\) | 443 \(HTTPS\) and 80 \(HTTP\) | OUTBOUND | SEND/RECEIVE | 
+
+Fully qualified domain names \(FQDNs\) cannot be changed or customized on a per\-customer basis\. Instead, use [Option 2 \- allow IP address ranges](#option2)\.
 
 **Note**  
 If you're using SAML Sign\-In to your Amazon Connect instance, add the Global Accelerator domain to your allow list: **\*\.awsglobalaccelerator\.com**\.
 
 **Tip**  
-When using `rtc*.connect-telecom.{region}.amazonaws.com`, ` *.transport.connect.{region}.amazonaws.com`, and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
+When using `rtc*.connect-telecom.region.amazonaws.com`, ` *.transport.connect.region.amazonaws.com`, and `https://myInstanceName.awsapps.com`, in certain proxy applications, web socket handling may impact functionality\. Be sure to test and validate before deploying to a production environment\.
 
 The following table lists the CloudFront domains used for static assets if you want to add domains to your allow list instead of IP ranges:
 
@@ -70,7 +72,7 @@ If your business does not use SAML, and you have firewall restrictions, you can 
 
 ### NLB endpoints<a name="nlb-endpoints"></a>
 
-The following table lists the specific endpoints for the Region the Amazon Connect instance is in\. If you don't want to use the TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com wildcard, you can add these endpoints to your allow list instead\.
+The following table lists the specific endpoints for the Region the Amazon Connect instance is in\. If you don't want to use the TurnNlb\-\*\.elb\.*region*\.amazonaws\.com wildcard, you can add these endpoints to your allow list instead\.
 
 
 | Region | Turn Domain/URL | 
@@ -90,6 +92,8 @@ The following table lists the specific endpoints for the Region the Amazon Conne
 ## Option 2 \(not recommended\): Allow IP address ranges<a name="option2"></a>
 
 The second option relies on using an allow list, also known as whitelisting, the IP addresses used by Amazon Connect\. You create this allow list using the IP addresses in the [AWS ip\-ranges\.json](https://ip-ranges.amazonaws.com/ip-ranges.json) file\. 
+
+If the Region you are using Amazon Connect in does not appear in the AWS ip\-ranges\.json file, use just the Global values\.
 
 For more information about this file, see [About Amazon Connect IP address ranges](#about-connect-ip-address-range)\.
 
@@ -144,15 +148,15 @@ If you're using a stateless firewall for both options, use the requirements desc
 
 ## Allow DNS resolution for softphones<a name="allow-dns-resolution"></a>
 
-If you already added Amazon Connect IP ranges to your allow list, and you don’t have any restriction on DNS name resolution, then you don't need to add **TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com** to your allow list\.
+If you already added Amazon Connect IP ranges to your allow list, and you don’t have any restriction on DNS name resolution, then you don't need to add **TurnNlb\-\*\.elb\.*region*\.amazonaws\.com** to your allow list\.
 + To check whether there are restrictions on DNS name resolution, while on your network, use the `nslookup` command\. For example: 
 
    `nslookup TurnNlb-d76454ac48d20c1e.elb.us-east-1.amazonaws.com`
 
-If you can't resolve the DNS, you must add the TurnNLB endpoints [listed above](#nlb-endpoints) or **TurnNlb\-\*\.elb\.\{*region*\}\.amazonaws\.com** to your allow list\.
+If you can't resolve the DNS, you must add the TurnNLB endpoints [listed above](#nlb-endpoints) or **TurnNlb\-\*\.elb\.*region*\.amazonaws\.com** to your allow list\.
 
 If you don't allow this domain, your agents will get the following error in their Contact Control Panel \(CCP\) when they try to answer a call: 
-+ Failed to establish softphone connection\. Try again or contact your administrator with the following: Browser unable to establish media channel with turn:TurnNlb\-xxxxxxxxxxxxx\.elb\.\{*region*\}\.amazonaws\.com:3478?transport=udp
++ Failed to establish softphone connection\. Try again or contact your administrator with the following: Browser unable to establish media channel with turn:TurnNlb\-xxxxxxxxxxxxx\.elb\.*region*\.amazonaws\.com:3478?transport=udp
 
 ## Port and protocol considerations<a name="port-considerations"></a>
 
@@ -184,4 +188,4 @@ When rerouting audio to an existing device, consider the location of the device 
 
 ## Using AWS Direct Connect<a name="using-directconnect"></a>
 
-Contact Control Panel \(CCP\) network connectivity issues are most often rooted in your route to AWS via private WAN/LAN, ISP, or both\. While AWS Direct Connect does not solve issues specific to private LAN/WAN traversal to your edge router, it can help solve for latency and connectivity issues between your edge router and AWS resources\. AWS Direct Connect provides a durable, consistent connection rather than relying on your ISP to dynamically route requests to AWS resources\. It also allows you to configure your edge router to redirect AWS traffic across dedicated fiber rather than traversing the public WAN\.
+Contact Control Panel \(CCP\) network connectivity issues are most often rooted in your route to AWS using private WAN/LAN, ISP, or both\. While AWS Direct Connect does not solve issues specific to private LAN/WAN traversal to your edge router, it can help solve for latency and connectivity issues between your edge router and AWS resources\. AWS Direct Connect provides a durable, consistent connection rather than relying on your ISP to dynamically route requests to AWS resources\. It also allows you to configure your edge router to redirect AWS traffic across dedicated fiber rather than traversing the public WAN\.

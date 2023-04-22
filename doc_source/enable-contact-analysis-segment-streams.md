@@ -7,7 +7,7 @@ Real\-time contact analysis segment streams are not enabled by default\. This to
 Create the data stream on the same account and Region where your Amazon Connect instance resides\. For instructions, see [Step 1: Create a Data Stream](https://docs.aws.amazon.com/streams/latest/dev/tutorial-stock-data-kplkcl-create-stream.html) in the *Amazon Kinesis Data Streams Developer Guide*\.
 
 **Tip**  
-We recommend creating a separate stream for each type of data\. While it's possible to use the same stream for real\-time contact analysis segment streams, agent events, and contact records, it is much easier to manage and get data from the stream when you use a separate stream for each one\. For more information, see the [Amazon Kinesis Data Streams Developer Guide](https://docs.aws.amazon.com/url-aks-dev;)\. 
+We recommend creating a separate stream for each type of data\. While it's possible to use the same stream for real\-time contact analysis segment streams, agent events, and contact records, it is much easier to manage and get data from the stream when you use a separate stream for each one\. For more information, see the [Amazon Kinesis Data Streams Developer Guide](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)\. 
 
 ## Step 2: Set up server\-side encryption for the Kinesis stream \(optional but recommended\)<a name="enable-segment-streams-step2"></a>
 

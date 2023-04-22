@@ -48,14 +48,14 @@ You can now add additional blocks to the flow to route the contact as desired\. 
 
 ## Route contacts based on queue metrics<a name="route-based-on-queue-metrics"></a>
 
-Many contact centers route customers based on the number of contacts waiting in a queue\. This topic explains how to configure a flow that looks similar to the following image\.
+Many contact centers route customers based on the number of contacts waiting in a queue\. This topic explains how to configure a flow that looks similar to the following image\. It shows the following three flow blocks connected by Success branches: **Set contact attributes**, **Get queue metrics**, and **Check contact attributes**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-specify-set-contact-attributes.png)
+![\[The flow designer with three flow blocks on it.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-specify-set-contact-attributes.png)
 
 1. Add a [Set contact attributes](set-contact-attributes.md) block to your flow\.
 
 1. In the [Set contact attributes](set-contact-attributes.md), specify the channel\. If you set a channel dynamically using text, for the attribute value enter **Voice** or **Chat**, as shown in the following image\. This value is not case\-sensitive\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-properties2.png)
+![\[The properties page of the Set contact attributes block. Namespace is set to User defined, Value set to chat.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-properties2.png)
 
 1. Add a [Get queue metrics](get-queue-metrics.md) block to your flow\. 
 
@@ -69,8 +69,8 @@ After a **Get queue metrics** block, add a [Check contact attributes](check-cont
 
 1. In the **Check contact attributes** block, set **Attribute to check** to **Queue metrics**\.
 
-1. In the **Attributes** dropdown box, you'll see that the following queue metrics are returned by the **Get queue metrics** block\. Choose the metric that you want to use for the routing decision\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-block-returned-metrics.png)
+1. In the **Attributes to check** dropdown box, you'll see that the following queue metrics are returned by the **Get queue metrics** block\. Choose the metric that you want to use for the routing decision\.   
+![\[The properties page of the Check contact attributes block, Namespace is set to Queue metrics.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-block-returned-metrics.png)
 
-1. Choose **Add a condition** to enter the comparison for your routing decision\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-check-attributes-block.png)
+1. Choose **Add a condition** to enter the comparison for your routing decision\. The following image shows the block configured to check whether contacts in queue is greater than 5\.  
+![\[The Attribute to check section, the Conditions to check section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/get-queue-metrics-check-attributes-block.png)

@@ -2,6 +2,9 @@
 
 Historical metrics reports have the following limits:
 
+**Service quotas**
++ Historical metrics reports have service quotas, such as **Reports per instance** and **Scheduled reports per instance**\. When service quotas are breached, the following error message is displayed: *Report cannot be saved*\. For more information about these quotas, see [Amazon Connect service quotas](amazon-connect-service-limits.md)
+
 **Data only for active queues**
 + You can get data only for active queues\. A queue is inactive if there are no contacts in the queue and no agents available\.
 

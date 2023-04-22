@@ -24,10 +24,12 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="invoke-module-block-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-module-properties.png)
+The following image shows the **Properties** page of the **Invoke module** block\.
+
+![\[The properties page of the Invoke module block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-module-properties.png)
 
 ## Configured block<a name="invoke-module-block-configured"></a>
 
-When this block is configured, it looks similar to the following image:
+The following image shows an example of what this block looks like when it is configured\. It has two branches: **Success** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-module-configured.png)
+![\[A configured Invoke module block.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/invoke-module-configured.png)

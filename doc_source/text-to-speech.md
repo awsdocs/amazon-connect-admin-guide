@@ -26,7 +26,7 @@ If no Neural version is available, Amazon Connect defaults to the standard voice
 1. If prompted to login, enter your AWS account credentials\.
 
 1. Choose the name of the instance from the **Instance alias** column\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Flows**\.
 
@@ -38,11 +38,11 @@ If no Neural version is available, Amazon Connect defaults to the standard voice
 
 1. In the **Properties**, choose **Text\-to\-speech**\. 
 
-1. Enter plain text, as shown in the following image\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-sample-tts.png)
+1. Enter plain text\. For example, the following image shows *Thank you for calling*\.   
+![\[A message in the text-to-speech box.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-sample-tts.png)
 
-   Or enter SSML:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-sample-ssml.png)
+   Or enter SSML, as shown in the following image:  
+![\[A message formatted with SSML in the text-to-speech box.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/play-prompt-sample-ssml.png)
 
 SSML\-enhanced input text gives you more control over how Amazon Connect generates speech from the text you provide\. You can customize and control aspects of speech such as pronunciation, volume, and speed\.
 

@@ -12,17 +12,17 @@ You can download the data included in a report as a comma\-separated value \(CSV
 
 1. When prompted, confirm whether to open or save the file\.
 
-Although the times in the online report are in hh:mm:ss, all times in the downloaded report are in seconds\.
+The following image shows metrics in a Queue table\. All times in the online report are in hours:minutes:seconds \(hh:mm:ss\)\. Below the image of the Queue table, there is an image of the same data in a downloaded CSV file opened with Excel\. All times in the downloaded report are in seconds\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/example-downloaded-metrics-report.png)
+![\[Data in a queue table and the same data in a CSV file.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/example-downloaded-metrics-report.png)
 
 You can convert the seconds to minutes using an Excel formula\. Alternatively, if you have a short report, you can copy and paste the data from Amazon Connect to Excel and it will preserve the format\.
 
 ## Interval downloaded in ISO date format<a name="interval"></a>
 
-The interval is downloaded in ISO date format, as shown in the following image\. 
+The interval is downloaded in ISO date format, as shown in the following image\. When you download a historical metrics report, the interval will be in ISO data format and won't match the UI\. If needed, use Excel to convert it to the desired format\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/downloaded-hmr-interval-format.png)
+![\[Downloaded interval data in excel, next to image of the same data in a historical metrics report.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/downloaded-hmr-interval-format.png)
 
 ## Download all historical metric results<a name="download-all-historical-metrics"></a>
 

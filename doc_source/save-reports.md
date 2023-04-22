@@ -29,14 +29,16 @@ If your organization needs to delete reports because you've reached the service 
 **Tip**  
 We recommend establishing a naming convention for reports in your organization, especially published reports\. This will help everyone identify who the owner is\. For example, use the team name or owner alias as the report suffix: Agent Performance \- *team name*\.
 
-1. To view to the report at a later time, go to **Analytics and optimization**, **Saved reports**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/view-saved-reports.png)
+1. To view to the report at a later time, on the navigation menu, choose **Analytics and optimization**, **Saved reports**\.  
+![\[The navigation menu in Amazon Connect.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/view-saved-reports.png)
 
 ## How to delete saved reports<a name="how-to-delete-saved-reports"></a>
+
+1. Log in to Amazon Connect at https://*instance name*\.my\.connect\.aws/\. Use an Admin account or an account that has **Saved reports \- Delete** permissions in its security profile\.
 
 1. On the navigation menu, choose **Analytics and optimization**, **Saved reports**\.
 
 1. Choose the **Historical metrics** tab\. 
 
-1. Go to the row that has the report you want to delete, and choose the **Delete** icon\. If you don't have permissions in your security profile to delete reports, this option won't be available\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-delete-saved-report.png)
+1. Go to the row that has the report you want to delete, and choose the **Delete** icon, as shown in the following image\. If you don't have permissions in your security profile to delete reports, this option won't be available\.  
+![\[The Delete icon next to a report.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/hmr-delete-saved-report.png)

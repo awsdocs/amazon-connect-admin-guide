@@ -17,10 +17,10 @@ After you have that information, here's how to log in and get started\.
 1. Using Chrome or Firefox, open the CCP by using the URL that you received from your administrator\.
 
 1. Enter your agent ID and password, and then choose **Sign In**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-login.png)
+![\[The login page for Amazon Connect.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-login.png)
 
 1. If you are prompted to allow access to your microphone and speaker, choose **Allow**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-allow-microphone.png)
+![\[The browser prompt to allow Amazon Connect access to your microphone.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-allow-microphone.png)
 
 You're all set to go\!
 
@@ -36,4 +36,4 @@ Closing the CCP doesn't automatically sign out an agent\. Amazon Connect still t
 1. At the top of the CCP, choose **Settings**\. 
 
 1. Choose **Log out**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-logout.png)
+![\[The CCP, the settings icon in upper right corner.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/ccp-logout.png)

@@ -2,11 +2,14 @@
 
 It can be time\-consuming to review contact transcripts that are hundreds of lines long\. To make this process faster and more efficient, Contact Lens provides the option for managers to view a transcript summary on the **Contact details** page, and for agents to view a transcript summary in the Contact Control Panel \(CCP\)\. 
 
+**Tip**  
+For a list of supported languages, see the **Contact summarization** column in [Contact Lens for Amazon Connect](supported-languages.md#supported-languages-contact-lens)\.
+
 After you [enable Contact Lens](enable-analytics.md), it identifies key parts of the customer conversation, assigns a label \(for example, issue, outcome, or action item\), and displays a summary that you can expand to view the full transcript of the contact\. The summary shows only those lines where Contact Lens has identified an issue, outcome, or action item in the transcript\. 
 
 Following is an example of contact summarization on the **Contact details** page\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-call-summarization.png)
+![\[The contact detail page, the contact summarization.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-call-summarization.png)
 
 1. Toggle **Show transcript summary** on and off as needed\.
 

@@ -57,7 +57,7 @@ Agent attributes are available only in the following types of flows:
 + Agent whisper
 + Customer whisper
 + Agent hold
-+ Customer whisper
++ Customer hold
 + Outbound whisper
 + Transfer to agent\. In this case, the agent attributes reflect the target agent, not the one who initiated the transfer\.
 
@@ -172,7 +172,7 @@ Note the inclusion of `.External` in the JSONPath reference when the attribute i
 
 For more information about using attributes in Lambda functions, see [Invoke AWS Lambda functions](connect-lambda-functions.md)\.
 
-These attributes are not included in contact records, not passed to the next Lambda invocation, and not passed to the CCP for screenpop information\. However, they can be passed as Lambda function inputs on an **Invoke AWS Lambda function** block, or copied to user\-defined attributes via the **Set contact attributes** block\. When used in **Set contact attributes** blocks, the attributes that are copied are included in contact records, and can be used in the CCP\.
+These attributes are not included in contact records, not passed to the next Lambda invocation, and not passed to the CCP for screenpop information\. However, they can be passed as Lambda function inputs on an **Invoke AWS Lambda function** block, or copied to user\-defined attributes using the **Set contact attributes** block\. When used in **Set contact attributes** blocks, the attributes that are copied are included in contact records, and can be used in the CCP\.
 
 ## User\-defined attributes<a name="user-defined-attributes"></a>
 

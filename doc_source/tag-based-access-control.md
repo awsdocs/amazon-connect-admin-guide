@@ -1,14 +1,14 @@
-# Tag based access control<a name="tag-based-access-control"></a>
+# Tag\-based access control<a name="tag-based-access-control"></a>
 
-Tag based access controls enable you to configure granular access to specific resources based on assigned resource tags\. You can configure tag based access controls via the API/SDK or within the Amazon Connect console \(for supported resources\)\.
+Tag\-based access controls enable you to configure granular access to specific resources based on assigned resource tags\. You can configure tag based access controls by using the API/SDK or within the Amazon Connect console \(for supported resources\)\.
 
-## Tag\-based access control via API/SDK<a name="tag-based-access-control-api-sdk"></a>
+## Tag\-based access control using the API/SDK<a name="tag-based-access-control-api-sdk"></a>
 
 To use tags to control access to resources within your AWS accounts, you need to provide tag information in the condition element of an IAM policy\. For example, to control access to your Voice ID domain based on the tags you've assigned to it, use the `aws:ResourceTag/key-name` condition key, along with a specific operator like `StringEquals` to specify which tag *key:value* pair must be attached to the domain, in order to allow given actions for it\.
 
 For more detailed information on tag\-based access control, see [Controlling access to AWS resources using tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html) in the IAM User Guide\.
 
-## Tag\-based access control via the Amazon Connect console<a name="tag-based-access-control-connect-ui"></a>
+## Tag\-based access control using the Amazon Connect console<a name="tag-based-access-control-connect-ui"></a>
 
 A *resource* tag is a custom metadata label that you can add to a resource in order to make it easier to identify, organize, and find in a search\. You can apply tags programmatically using the Amazon Connect SDK/APIs, and for certain resources you can apply tags from within the Amazon Connect console\. To learn more about resource tags, see [Tagging resources in Amazon Connect](tagging.md)\.
 
@@ -26,7 +26,7 @@ Service linked roles are required in order to configure [resource tags](https://
 
 ## Amazon Connect tagging best practices<a name="tag-based-access-control-best-practices"></a>
 
-Applying tag based access controls is an advanced configuration feature that is supported by Amazon Connect and that follows the AWS shared responsibility model\. It is important to ensure that you are correctly configuring your instance to comply with your desired authorization needs\. For more information, please review the [AWS shared responsibilities model](https://docs.aws.amazon.com/compliance/shared-responsibility-model/)\.
+Applying tag based access controls is an advanced configuration feature that is supported by Amazon Connect and that follows the AWS shared responsibility model\. It is important to ensure that you are correctly configuring your instance to comply with your desired authorization needs\. For more information, please review the [AWS shared responsibilities model](http://aws.amazon.com/compliance/shared-responsibility-model/)\.
 
 Ensure that you have enabled at least *view* permissions for the resources that you enable tag based access control for\. This will ensure that you avoid permission inconsistencies that result in denied access requests\.
 
@@ -39,16 +39,16 @@ As a best practice, you should disable access to the following resources/modules
 
 | Modules | Permission to disable access | 
 | --- | --- | 
-| Quick connect | Quick connects \- View | 
-| Historical changes/Audit portal | Access metrics | 
-| Flow/Flow module | Contact flow modules \- View | 
-| Real time metrics | Access Metrics | 
-| Login/Login out report | Login/Logout report \- View | 
-| Dashboard | Access metrics | 
-| Saved reports | Saved reports \- View | 
-| Historical metrics | Access metrics | 
+| Agent activity audit | Agent activity audit | 
 | Contact search | Contact Search | 
-| Rules | Rules \- View | 
-| Outbound Campaign | Campaigns \- View | 
-| Scheduling | Schedule manager | 
+| Dashboard | Access metrics | 
+| Flow/Flow module | Contact flow modules \- View | 
 | Forecasting | Forecasting | 
+| Historical changes/Audit portal | Access metrics | 
+| Historical metrics | Historical metrics | 
+| Login/Login out report | Login/Logout report \- View | 
+| Outbound Campaign | Campaigns \- View | 
+| Quick connect | Quick connects \- View | 
+| Rules | Rules \- View | 
+| Saved reports | Saved reports \- View | 
+| Scheduling | Schedule manager | 

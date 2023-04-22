@@ -6,11 +6,13 @@ For example, Contact Lens can automatically send an alert when certain keywords 
 
 The following image shows an example of what a supervisor would see on the real\-time metrics report when they get an alert\. In this case, Contact Lens has detected an angry customer situation\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-real-time-metrics-alert.png)
+![\[The real-time metrics page, an alert for an angry customer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-real-time-metrics-alert.png)
 
-When the supervisor listens in to a live call, Contact Lens provides them with a real\-time transcript and customer sentiment trend that helps them understand the situation and assess the appropriate action\. The transcript also eliminates the need for customers to repeat themselves if the call is transferred to another agent\. Following is a sample real\-time transcript\.
+When the supervisor listens in to a live call, Contact Lens provides them with a real\-time transcript and customer sentiment trend that helps them understand the situation and assess the appropriate action\. The transcript also eliminates the need for customers to repeat themselves if the call is transferred to another agent\. 
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-real-time-transcript.png)
+The following image shows a sample real\-time transcript\.
+
+![\[A sample real-time transcript.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-real-time-transcript.png)
 
 ## Add rules for real\-time alerts<a name="add-category-rules-real-time"></a>
 
@@ -31,15 +33,15 @@ When the supervisor listens in to a live call, Contact Lens provides them with a
 Semantic Match isn't available for real\-time analysis\.
 
 1. Enter the words or phrases, separated by a comma, that you want to highlight\. Real\-time rules only support any keywords or phrases that **were mentioned**\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-alert-rules-1.png)
+![\[A words and phrases rule.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-alert-rules-1.png)
 
 1. Choose **Add**\. Each word or phrase separated by a comma gets its own line\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-alert-rules-2.png)
+![\[A words and phrases rule with multiple phrases, each on it's own line.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-alert-rules-2.png)
 
    The logic that Contact Lens uses to read these words or phrases is: \(Talk OR to OR your OR manager\) OR \(this OR is OR not OR helpful\) OR \(speak OR to OR your OR supervisor\), etc\.
 
 1. To add more words or phrases, choose **Add group of words or phrases**\. In the following image, the first group of words or phrases are what the agent might utter\. The second group is what the customer might utter\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script3.png)
+![\[A words and phrases rule with multiple phrases for customer and agent.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-script3.png)
 
    1. In this first card, Content Lens reads each line as an OR\. For example: \(Hello\) OR \(thank OR you OR for OR calling OR Example OR Corp\) OR \(we OR value OR your OR business\)\.
 
@@ -53,7 +55,7 @@ Semantic Match isn't available for real\-time analysis\.
    + When sentiment scores have certain values
 
    For example, the following image shows a rule that applies when an agent is working the BasicQueue or Billing and Payments queues, the customer is for auto insurance, and the agent is located in Seattle\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-3.png)
+![\[A words and phrases rule with multiple conditions.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-3.png)
 
 1. When done, choose **Next**\. 
 

@@ -1,6 +1,6 @@
-# Troubleshooting Forecasting, capacity planning, and scheduling<a name="troubleshooting-forecasting-capacity-planning-scheduling"></a>
+# Troubleshooting forecasting, capacity planning, and scheduling<a name="troubleshooting-forecasting-capacity-planning-scheduling"></a>
 
-These sections outline various troubleshooting scenarios and address frequently asked questions for Forecasting, capacity planning, and scheduling\.
+These sections outline troubleshooting scenarios and address frequently asked questions for forecasting, capacity planning, and scheduling\.
 + [Forecasting](#troubleshooting-forecasting)
 + [Capacity planning](#troubleshooting-cap-planning)
 + [Scheduling](#troubleshooting-scheduling)
@@ -13,18 +13,18 @@ These sections outline various troubleshooting scenarios and address frequently 
   To see the most recent forecasts, check the **Last computed** column\.
 
   New forecasts will be generated when a user uploads or deletes historical data using the **Import data** tab or adds/removes queues from a forecast group\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/faq-adhoc-forecast.png)
+![\[Data on the Forecasts tab, the Last computed column.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/faq-adhoc-forecast.png)
 + **When I import historical data it returns errors\.**
 
   Select **download details** to ensure that the imported data is in the correct format: If there are any errors, check the error details\. It will provide additional details for the specific error\. You must ensure that your file is in `.csv` format, contains no decimals, no extra rows, or column fields\. For more information on the required format, see [Import historical data for forecasting](https://docs.aws.amazon.com/connect/latest/adminguide/import-data-for-forecasting.html)\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/faq-import-historical-data.png)
+![\[Failed status message, download details link.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/faq-import-historical-data.png)
 + **Forecast failed due to error: Insufficient data in Amazon Connect\.**
 
   When you receive this error, it could be due to three different reasons:
 
   1. *You have less than 6 month of historical data\.* To address this problem, upload more historical data\. While Amazon Connect can generate forecasts with six months of data, we recommend at least 12 months of recent contact data to ensure that contact patterns \(for example, seasonality\) are properly captured\. If you don’t have 6 months of data, you can give Connect synthetic \(artificial\) data that will be used to generate the forecast\. Alternately, you can upload your own forecast using the **Override** function\.
 
-  1. *You need at least 2,000 contacts per month across all of your forecast groups\.* Amazon Connect generates forecasts using historical data for all queues that are included across all forecast groups\. At least 2,000 monthly contacts in the past 6 months for the Connect instance are required to successfully generate a forecast\. Amazon Connect does not require 2,000 monthly contacts for every queue\. All queues in all forecast groups must total more than 2,000 monthly contacts\.
+  1. *You need at least 2,000 contacts per month across all of your forecast groups\.* Amazon Connect generates forecasts using historical data for all queues that are included across all forecast groups\. At least 2,000 monthly contacts in the past 6 months for the Amazon Connect instance are required to successfully generate a forecast\. Amazon Connect does not require 2,000 monthly contacts for every queue\. All queues in all forecast groups must total more than 2,000 monthly contacts\.
 
   1. *You need recent data\.* Amazon Connect performs a data recency check \(is the data recent enough\) based on the aggregation of all queues included across all forecast groups\. At least one data point in the past four weeks is required to successfully generate a forecast\.
 + **Cannot import data, cannot download forecast, cannot create forecast group, or cannot create forecast\.**
@@ -47,7 +47,7 @@ download the computed or published forecast `.csv` file\. Take the time period f
 + **How can I see data from a previous period?**
 
   You are able to view forecasts in a specified period that occurred in the past\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/faq-past-forecast.png)
+![\[Short term tab, calendar to choose the duration.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/faq-past-forecast.png)
 + **Can I see past forecast data?**
 
   You can see the last published and the last computed forecast\. The last computed forecast will be overwritten once the next forecast is computed\. If you wish to retain this data, you can download the `.csv` file that contains the last computed and published forecasts\.
@@ -62,7 +62,7 @@ It’s important to remember to use UTC time when uploading historical data or o
 + **Why am I unable to delete a forecast?**
 
   Forecasts can only be deleted if they are not being used for a capacity plan \(long\-term forecast\) or schedule \(short\-term forecast\)\. Check if the forecast has been published and that it is used for scheduling or capacity planning\. You must delete the schedule or capacity plans in order to delete the forecast\.
-+ ** Why do the long\-term and short\-term forecasts show different values for the same time period?**
++ **Why do the long\-term and short\-term forecasts show different values for the same time period?**
 
   These two forecasts have different training frequencies and different models, as they are optimized for different purposes\. Short\-term is designed for interval level granularity over a period of weeks and long\-term is designed for daily granularity over a period of months\.
 + **Why is long\-term average handle time flat but short\-term average handle time isn't?**
@@ -123,7 +123,7 @@ It’s important to remember to use UTC time when uploading historical data or o
 + **Why is my agent's scheduled time different than the shift profile time? For example, my shift profile has 10 hours every weekday, but my agent only gets scheduled for 6 hours?**
 
   The shift profile operation hours apply to staffing groups\. If you don’t set the staffing groups rule for **shift start time**, the service will optimize your agent start time based on the forecasted workload\. For example, the shift profile has 8 AM \- 6 PM Monday \- Friday, and the workload is light in the morning, and heavier in the afternoon\. Each agent has a minimum of 6 hours and a maximum of 8 hours per day\. To save agent cost, the service will schedule less agents in the morning and more agents in the afternoon\. Some agents could start at 8 AM, some could start at 8:30 AM, and some could start in the afternoon\. Some agents could have 6 hour schedules and some could have 8 hour schedules\. In this way, you can maximize your agent resources to meet the service goal\. If you want every agent to start at the same time and work an exact number of hours, you can set the rule in the staffing group **shift start time** to **start at the same time** and set the **working hour** to 10 hours every day\. In this case, savings on agent cost will be less due to less flexibility to optimize based on forecasts\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/faq-different-schedule-rules.png)
+![\[Rules for working time, minimum staff required, and shift start time.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/faq-different-schedule-rules.png)
 + **My agents are all full\-time employees and they work 8 hours per day\. How can I set this up in my schedule?**
 
   Set your staffing group's and staff's maximum and minimum working hours to 8 hours a day\.

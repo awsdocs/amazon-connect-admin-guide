@@ -9,14 +9,14 @@ This procedure is especially useful if you want to research how a flow has been 
 1. Choose the **Latest: Published** dropdown to view a list of previously published versions of the flow\.
 
    For default flows that are provided with your Amazon Connect instance, the oldest flow in the list is the original version\. The date matches when your Amazon Connect instance was created\. For example, in the following image, the original default flow is dated 07/21/22\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/default-agent-hold-versioning.png)
+![\[The Latest published dropdown box listing the dates the default agent hold was published.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/default-agent-hold-versioning.png)
 
 1. Choose the version of the flow to open and view it\. You can view all the blocks and how they are configured\.
 
 1. Next, you can do one of the following: 
    + To return to the most recently published version, choose it from the **Latest: Published** dropdown list\. 
    + Make changes to the previous version and choose **Save as** from the dropdown to save it with a new name\. Or choose **Save** from the dropdown to assign the same name\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/default-agent-hold-saveas.png)
+![\[The Save dropdown box, the Save as option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/default-agent-hold-saveas.png)
    + Or, choose **Publish** to return the previous version to production\. 
 
 ## Roll back a contact flow<a name="rollback"></a>

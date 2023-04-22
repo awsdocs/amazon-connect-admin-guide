@@ -34,3 +34,15 @@ The following values may appear in the **Status** column on agent activity audit
 
 **Note**  
 If a status appears in your report but is not listed on this page, it is a custom status created by your organization\. Contact your Amazon Connect admin to learn the definition\.
+
+## Permissions required to view agent activity audit reports<a name="agent-activity-audit-permissions"></a>
+
+To view real\-time metrics reports, you need to be assigned to a security profile that has either the **Access metrics \- Access** permission or the **Real\-time metrics \- Access** permission\. Note the following behavior when you assign these permissions:
++ When **Access metrics \- Access** is selected, the **Real\-time metrics**, **Historical metrics**, and **Agent activity audit** permissions are also automatically assigned\. 
++ When **Access metrics \- Access** is assigned, you have access to all real\-time and historical metrics reports\.
+
+![\[The Analytics and Optimization section of the security profiles permissions page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports.png)
+
+If only **Agent activity audit \- Access** is selected, you have access to only agent activity audit report and no other analytics pages or reports\. The following image shows the **Analytics and Optimization** section, with only **Agent activity audit \- Access** selected\.
+
+![\[The agent activity audit permission on the security profile permissions page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/permissions-create-and-share-reports-3.png)

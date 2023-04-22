@@ -8,4 +8,4 @@ To enter a script in a rule, enter phrases\. For example, if you want to highlig
 
 To apply the rule to certain lines of businesses, add a condition for which queues it applies to, or contact attributes\. For example, the following image shows a rule that applies when an agent is working the BasicQueue or Billing and Payments queues, the customer is for auto insurance, and the agent is located in Seattle\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-3.png)
+![\[The new rule page, the Words or phrases - Exact match section, multiple conditions.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-category-rules-3.png)

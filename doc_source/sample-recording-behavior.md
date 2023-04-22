@@ -17,4 +17,4 @@ It ends with the customer being transferred by to the [Sample inbound flow](samp
 For more information, see the following topics:
 + [Set up recording behavior](set-up-recordings.md)
 + [Set up live monitoring for voice and/or chat](monitor-conversations.md)
-+ [Review recorded conversations](review-recorded-conversations.md)
++ [Review recorded conversations between agents and customers using Amazon Connect](review-recorded-conversations.md)

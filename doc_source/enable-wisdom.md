@@ -22,7 +22,7 @@ Following is an overview of the steps to enable Wisdom:
 1. Create an encryption key to encrypt the excerpt that is provided in the recommendations to the agent\.
 
 1. Create a knowledge base using external data:
-   + Add data integrations from [ Salesforce](https://developer.salesforce.com/docs/atlas.en-us.knowledge_dev.meta/knowledge_dev/sforce_api_objects_knowledge__kav.htm), [ ServiceNow](https://developer.servicenow.com/dev.do#!/reference/api/rome/rest/knowledge-management-api), and ZenDesk using prebuilt connectors in the Amazon Connect console\.
+   + Add data integrations from Microsoft SharePoint Online, [ Salesforce](https://developer.salesforce.com/docs/atlas.en-us.knowledge_dev.meta/knowledge_dev/sforce_api_objects_knowledge__kav.htm), [ ServiceNow](https://developer.servicenow.com/dev.do#!/reference/api/rome/rest/knowledge-management-api), and ZenDesk using prebuilt connectors in the Amazon Connect console\.
    + Encrypt the content importing from these applications using a KMS key\.
    + Specify the sync frequency\.
 
@@ -48,7 +48,7 @@ When you enable Wisdom, you are prompted to provide a friendly domain name that'
 
 1. One for the Wisdom domain, used to encrypt the excerpt provided in the recommendations\. 
 
-1. Another to encrypt the content imported from Salesforce, ServiceNow, and ZenDesk\. Note that Wisdom search indices are always encrypted at rest using an AWS owned key\.
+1. Another to encrypt the content imported from Microsoft SharePoint Online, Salesforce, ServiceNow, and ZenDesk\. Note that Wisdom search indices are always encrypted at rest using an AWS owned key\.
 
 Step\-by\-step instructions for creating these KMS keys are provided in [Step 1: Add integration](#enable-wisdom-step1)\.
 
@@ -62,26 +62,26 @@ Following are instructions for how to create a new domain and add an integration
 
 1. Open the Amazon Connect console at [https://console\.aws\.amazon\.com/connect/](https://console.aws.amazon.com/connect/)\.
 
-1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
+1. On the instances page, choose the instance alias\. The instance alias is also your **instance name**, which appears in your Amazon Connect URL\. The following image shows the **Amazon Connect virtual contact center instances** page, with a box a box around the instance alias\.  
+![\[The Amazon Connect virtual contact center instances page, the instance alias.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/instance.png)
 
 1. In the navigation pane, choose **Wisdom**, and then choose **Add domain**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-page.png)
+![\[The left pane navigation, Wisdom option, add domain button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-page.png)
 
 1. On the **Add domain** page, choose **Create a domain**\.
 
 1. In the **Domain name** box, enter a friendly name that's meaningful to you, such as your organization name, for example, *Wisdom\-ExampleCorp*\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-enable-domain.png)
+![\[Add domain page, create a new domain option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-enable-domain.png)
 
 1. Under **Encryption**, create or enter your own AWS KMS key for encrypting your Wisdom domain\. Following are the steps to create your KMS key:
 
    1. On the **Add domain** page, choose **Create an AWS KMS key**\.
 
    1. A new tab in your browser opens for the Key Management Service \(KMS\) console\. On the **Configure key** page, choose **Symmetric**, and then choose **Next**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-configure-key.png)
+![\[Configure key page, symmetric option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-configure-key.png)
 
-   1. On the **Add labels** page, add a name and description for the KMS key, and then choose **Next**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-add-labels.png)
+   1. On the **Add labels** page, add a name and description for the KMS key, and then choose **Next**\.   
+![\[Add labels page, alias name and a description.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-create-kms-key-add-labels.png)
 
    1. On the **Define key administrative permissions** page, choose **Next**\.
 
@@ -90,17 +90,17 @@ Following are instructions for how to create a new domain and add an integration
    1. On the **Review and edit key policy** page, choose **Finish**\.
 
       In the following example, the name of the KMS key starts with **bcb6fdd**:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-note-key.png)
+![\[Customer managed keys page, the wisdom key.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-note-key.png)
 
    1. Return to the tab in your browser for the Amazon Connect console, **Wisdom** page\. Click or tap in the **AWS KMS key** for the key you created to appear in a dropdown list\. Choose the key you created\.
 
 1. Choose **Add domain**\. 
 
 1. On the **Wisdom** page, choose **Add integration**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-add-integration.png)
+![\[The Amazon Connect console, the Wisdom page, the add integration button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-add-integration.png)
 
 1. On the **Add integration** page, choose **Create a new integration**, and then select the source\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-select-integration.png)
+![\[The Add integration page, the create a new integration option, the source dropdown list.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-select-integration.png)
 
 1. In the **Integration name** box, assign a friendly name to the integration, one that is meaningful to you\. 
 **Tip**  
@@ -109,17 +109,17 @@ If you are going to have multiple integrations from the same source, we recommen
 1. Under **Connection with \[Source\]**, choose **Create a new connection**, and then enter a friendly name for the connection that is meaningful to you\.
 
 1. Enter the instance URL of the source you want to connect to, and then choose **Log in to \[Source\]**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-connection-url.png)
+![\[The Connection with source page, the instance URL, the log in to source button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-connection-url.png)
 
 1. Under **Encryption**, choose **Create an AWS KMS key**\. This key encrypts the connection to the external application that stores content\. Following are the steps to create your KMS key:
 
    1. On the **Add domain** page, choose **Create an AWS KMS key**\.
 
    1. A new tab in your browser opens for the Key Management Service \(KMS\) console\. On the **Configure key** page, choose **Symmetric**, and then choose **Next**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-configure-key.png)
+![\[The configure key page, the symmetric option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-configure-key.png)
 
    1. On the **Add labels** page, add a name and description for the KMS key, and then choose **Next**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-add-labels.png)
+![\[The add labels page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-create-kms-key-add-labels.png)
 
    1. On the **Define key administrative permissions** page, choose **Next**\.
 
@@ -128,15 +128,15 @@ If you are going to have multiple integrations from the same source, we recommen
    1. On the **Review and edit key policy** page, choose **Finish**\.
 
       In the following example, the name of the KMS key starts with **bcb6fdd**:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-note-key.png)
+![\[The customer managed keys page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-create-kms-key-note-key.png)
 
    1. Return to the tab in your browser for the Amazon Connect console, **Wisdom** page\. Click or tap in the **AWS KMS key** for the key you created to appear in a dropdown list\. Choose the key you created\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-encrypt-connection.png)
+![\[The Wisdom page, the encryption section, the AWS KMS key.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-encrypt-connection.png)
 
 1. Under **Ingestion start date**, choose when you want Wisdom to import records from your application, and how often\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-ingestion-start-date.png)
+![\[The Wisdom page, the Ingestion start date section, the Ingest all records option.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-ingestion-start-date.png)
 
-   1. Defaults to the earliest date possible\.
+   1. **Ingest all records** defaults to the earliest date possible\.
 
 1. Under **Sync frequency**, the default is hourly\. You can use the dropdown to choose **Every 3 hours** or **Daily**\. On\-demand syncing is not available\.
 
@@ -144,31 +144,32 @@ If you are going to have multiple integrations from the same source, we recommen
 
 **Note**  
 Currently Wisdom does not process hard deletes of objects that are completed in SaaS applications\. To remove content from your knowledge base that's also been removed from your SaaS application, you must archive objects in Salesforce and retire articles in ServiceNow\.   
-For Zendesk, Wisdom does not process hard deletes or archives of articles\. You need to unpublish articles in Zendesk to remove them from your knowledge base\.
+For Zendesk, Wisdom does not process hard deletes or archives of articles\. You need to unpublish articles in Zendesk to remove them from your knowledge base\.  
+For Microsoft SharePoint Online, you can select a maximum of 10 folders\. 
 
 ## Step 2: Select object and fields<a name="enable-wisdom-step2"></a>
 
 In this step you choose the object and fields from the source that you want to make available to your agents in Wisdom\.
 
 1. In the **Available objects** dropdown menu, choose the object you want\. Only knowledge objects appear in the menu\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-select-objects.png)
+![\[The available objects dropdown list.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-select-objects.png)
 
 1. Under **Select Fields for \[object name\]**, choose the fields you want to include\. You'll notice that some fields, such as **AccountID** and **ID**, are already selected by default\. These fields are required\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-select-fields.png)
+![\[The select fields for object section.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-select-fields.png)
 
 1. Choose **Next**\.
 
 ## Step 3: Review and integrate<a name="enable-wisdom-step3"></a>
 
 1. Review all the integration details\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-review-uri-template.png)
+![\[The integration details.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-review-uri-template.png)
 **Note**  
 The URI template is based on your version of Salesforce \(such as Lightning\), and the object you chose\. You may want to change it if, for example, you're on a different version of Salesforce, or you have a connector that has a different desktop client\.
 
 1. Choose **Add integration**\.
 
 1. The integration is added to your list, as shown in the following example\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-integration-added.png)
+![\[The integration listed on the Wisdom page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wisdom-integration-added.png)
 
 1. After an integration is created, you can edit the URI, but no other information\.
 

@@ -6,8 +6,8 @@ To help make it easier to inspect a forecast in the user interface, the forecast
 + Use the calendar to change the horizon\. You can zoom into specific dates\.
 + Choose 15 minute intervals if your date range is less than a week\. This enables you to see the exact contact pattern of the day\.
 + Compare **Last computed forecast** and **Last published forecast** as shown in the following image\.
-+ Compare **Actuals** and forecasts to identify any abnormalities in either the line chart or the "Variance" chart\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-inspect.png)
++ Compare **Actuals** and forecasts to identify any abnormalities in either the line chart or the "Variance" chart\. The following image shows the forecast data is displayed as graphs\.   
+![\[Forecasts in a graph.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/wfm-forecasting-inspect.png)
 
   Choose the **Override** setting to inspect the effect of any override you uploaded\. The **Override** option is active only after an override has been uploaded\. For more information, see [Override a forecast](override-forecast.md)\.
 + Filter by queues or channels to limit your forecast to one or more type\.

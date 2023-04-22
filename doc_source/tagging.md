@@ -34,6 +34,7 @@ The following table describes the Amazon Connect resources that can be tagged us
 |  Flow module  |  No  | Yes |  Yes  | 
 |  Instance  | No | No |  Yes  | 
 |  Integration association  |  No  | Yes |  Yes  | 
+|  Outbound campaign  |  No  | Yes |  Yes  | 
 |  Operating hours  |  No  | Yes |  Yes  | 
 | Phone number | No | Yes |  Yes  | 
 |  Prompt  |  No  | No |  Yes  | 
@@ -51,6 +52,6 @@ To learn more about tagging, including best practices, see [Tagging AWS resource
 
 To use tags to control access to resources within your AWS accounts, you need to provide tag information in the condition element of an IAM policy\. For example, to control access to your Voice ID domain based on the tags you've assigned to it, use the `aws:ResourceTag/key-name` condition key to specify which tag key:value pair must be attached to the domain, in order to allow given actions for it\.
 
-For more detailed information on tag\-based access control in the Amazon Connect console, see [Tag based access control](tag-based-access-control.md)\.
+For more detailed information on tag\-based access control in the Amazon Connect console, see [Tag\-based access control](tag-based-access-control.md)\.
 
 For more detailed information on tag\-based access control in IAM, see [Controlling access to AWS resources using tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_tags.html) in the *IAM User Guide* 

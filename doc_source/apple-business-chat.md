@@ -4,7 +4,7 @@ Your customers can engage directly with your contact center from within their Me
 
 When you enable Apple Messages for Business, your customers can find answers to their questions and request help from agents to resolve issues — all while using the familiar Messages application they use every day to chat with friends and family\. Any time customers use Search, Safari, Spotlight, Siri, or Maps to call your registered phone number, they will be provided with the option to chat with your contact center\. 
 
-Apple Messages for Business integration with Amazon Connect enables you to use the same configuration, analytics, routing, and agent UI that you already use for [Amazon Connect Chat](chat.md)\.
+Apple Messages for Business integration with Amazon Connect enables you to use the same configuration, analytics, routing, and agent UI that you already use for [Amazon Connect Chat](web-and-mobile-chat.md)\.
 
 ## Step 1: Register with Apple<a name="register-with-apple"></a>
 
@@ -71,12 +71,12 @@ Looking for technical support? [Open an AWS Support ticket here](https://console
    ```
 
    The following image shows an example of a completed ticket:  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/abc-sample-use-case-description.png)
+![\[An example completed ticket.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/abc-sample-use-case-description.png)
 
 1. Choose **Next step**\.
 
 1. Choose **Contact us**, choose your **Preferred contact language**, and then choose **Web** as the contact method, if it's not selected by default\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/abc-contact-support-options.png)
+![\[The contact methods.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/abc-contact-support-options.png)
 
 1. Choose **Submit**\.
 

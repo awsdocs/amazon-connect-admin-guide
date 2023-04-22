@@ -1,15 +1,17 @@
-# Step 2: Handle a chat contact<a name="tutorial1-test-chat"></a>
+# Step 2: Use the CCP to handle a chat contact<a name="tutorial1-test-2"></a>
 
 In Step 1, you used the Contact Control Panel \(CCP\) to manage a voice contact\. In this step, you experience how to use the CCP to manage a chat contact\. 
 
-1. Choose the chat bubble to start a chat\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-chat-bubble.png)
+1. This procedure assumes you've completed [Step 1: Handle a voice contact](tutorial1-explore-voice.md)\. If you haven't, please do so now\.
+
+1. On the **Test chat** page, choose the chat bubble to start a chat\.  
+![\[The test chat page, the chat bubble.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-chat-bubble.png)
 
 1. The Sample inbound flow automatically transfers to you a queue\. However, you can type a message as the customer and the agent receives it\. For example, *I need help resetting my password*\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-start-chat.png)
+![\[A chat conversation in the CCP, showing messages from the flow, and customer.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-start-chat.png)
 
 1. In the CCP, accept the incoming chat\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-accept-chat.png)
+![\[The CCP, an incoming chat, the button to accept the chat.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/tutorial1-accept-chat.png)
 
 1. Use the CCP to send chat messages to the customer\. 
 

@@ -1,6 +1,6 @@
 # Attach a claimed or ported phone number to a flow<a name="associate-claimed-ported-phone-number-to-flow"></a>
 
-After you publish a flow, you can attach a [claimed](claim-phone-number.md) or [ported](port-phone-number.md) phone number to it\. When a contact calls the phone number that you associate with a flow, they are connected to that flow\.
+After you publish a flow, you can attach a [claimed](get-connect-number.md) or [ported](port-phone-number.md) phone number to it\. When a contact calls the phone number that you associate with a flow, they are connected to that flow\.
 
 **To associate a claimed or ported phone number with a published flow**
 
@@ -8,8 +8,8 @@ After you publish a flow, you can attach a [claimed](claim-phone-number.md) or [
 
 1. On the navigation menu, choose **Channels**, **Phone numbers**\.
 
-1. Locate the phone number to associate with the flow in the list\. Click the phone number to open the **Edit Phone number** page\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/click-on-phone-number.png)
+1. Locate the phone number to associate with the flow in the list\. Click the phone number to open the **Edit Phone number** page\. The following image shows a sample phone number that you would click\.  
+![\[A sample phone number on the Phone number page.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/click-on-phone-number.png)
 
 1. On the **Edit Phone number** page, do the following:
 

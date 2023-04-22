@@ -1,4 +1,4 @@
-# Set your "Next status"<a name="set-next-status"></a>
+# Set your "Next status" in the CCP<a name="set-next-status"></a>
 
 **Note**  
 "Next status" is available only to customers who are using the latest Contact Control Panel \(CCP\)\. The URL for the latest CCP ends with **ccp\-v2**\.  
@@ -8,9 +8,9 @@ Use the **Next status** feature to pause new contacts being routed to you, while
 
 The following images of the Contact Control Panel \(CCP\) show how to use this feature\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/next-status-example-new.png)
+![\[\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/next-status-example-new.png)
 
-1. The agent is on a contact\.
+1. Available: The agent is on a contact\.
 
 1. The agent chooses their next status, such as **Lunch**\. They can choose only a custom \([NPT](real-time-metrics-definitions.md#non-productive-time-real-time)\) status, or **Offline**\. 
 
@@ -24,7 +24,7 @@ You can easily switch from **Next status** back to **Available**\. The ability t
 
 The following images show this workflow\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/next-status-example-cancel.png)
+![\[The CCP set to next status, the CCP set to available.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/next-status-example-cancel.png)
 
 1. While working on the same contact, the agent cancels **Next status: Lunch** and goes back to **Available**\.
 

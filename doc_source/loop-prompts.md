@@ -23,7 +23,9 @@ You can use this block in the following [contact flow types](create-contact-flow
 
 ## Properties<a name="loop-prompts-properties"></a>
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-prompts-properties.png)
+The following image shows the **Properties** page of the **Loop prompts** block\. It shows there are three types of prompts you can choose from the dropdown list: **Audio recording**, **Text to Speech**, **S3 file path**\.
+
+![\[The properties page of the Loop prompts block, the dropdown list of prompt types.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-prompts-properties.png)
 
 ### How the Interrupt option works<a name="loop-prompts-properties-interrupt"></a>
 
@@ -53,17 +55,17 @@ This scenario is especially possible when using the default audio prompts that A
 
 ## Configured block<a name="loop-prompts-configured"></a>
 
-When this block is configured to play a prompt from the Amazon Connect library, it looks similar to the following image:
+The following image shows what this block looks like when it is configured to play a prompt from the Amazon Connect library\. Choose \+ next to **Audio Recording** to view the full name of the file\. The configured block has two branches: **Timeout** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-prompts-configured.png)
+![\[A Loop prompts block configured to play a prompt from the Amazon Connect library.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-prompts-configured.png)
 
-When this block is configured to play a prompt from Amazon S3, it looks similar to the following image:
+The following image shows what this block looks like when it is configured to play a prompt from Amazon S3\. Choose \+ next to **S3 path** to view the full path\. The configured block has two branches: **Timeout** and **Error**\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-prompts-configured2.png)
+![\[A Loop prompts block configured to play a prompt from Amazon S3.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/loop-prompts-configured2.png)
 
 ## Sample flows<a name="loop-prompts-samples"></a>
 
-See these sample flows for scenarios that use this block:
+Amazon Connect includes a set of sample flows\. For instructions that explain how to access the sample flows in the flow designer, see [Sample flows](contact-flow-samples.md)\. Following are topics that describe the sample flows which include this block\.
 + [Sample interruptible queue flow with callback](sample-interruptible-queue.md)
 
 ## Scenarios<a name="loop-prompts-scenarios"></a>

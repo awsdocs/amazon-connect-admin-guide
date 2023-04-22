@@ -6,7 +6,7 @@ Assign the following **Customer profiles** permissions as needed to the agent's 
   + Search for profiles\.
   + View details stored in customer profiles \(for example, Name, Address\)\.
   + Associate contact records to profiles, as shown in the following image\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-associate.png)
+![\[The customer profiles tab in the agent workspace, the Associate button.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/customer-profiles-associate.png)
 + **Edit**: Enables agents to edit details in the customer profile \(for example, change address\)\. They inherit **View** permissions by default\.
 + **Create**: Enables agents to create and save a new profile\. They inherit **View** permissions by default, but don't inherit **Edit** permissions\.
 

@@ -23,10 +23,8 @@ To embed Apple Messages for Business buttons on your website or mobile app, do t
 1. Customize the banner, fallback support, and button color to meet your brand’s needs\.
 
 The Messages for Business button must contain the following, at minimum:
-+ A class attribute to specify the type of container: banner, phone, or message\. For more information, see [Messages for Business Button Class and Data](https://developer.apple.com/documentation/businesschat/adding_a_business_chat_button_to_your_website#3021382)\. 
++ A class attribute to specify the type of container: banner, phone, or message\. 
 + A data\-apple\-business\-id attribute with the business ID you received when you registered your company with Messages for Business\.
-
-For information about how you can enable these buttons, see Apple’s documentation for [Adding a Messages for Business Button to Your Website](https://developer.apple.com/documentation/businesschat/adding_a_business_chat_button_to_your_website#overview)\. 
 
 ## Start a chat from a URL<a name="start-chat-from-url"></a>
 
@@ -42,8 +40,6 @@ Following are optional query string parameters you can include in the URL:
 + `biz-intent-id`: Use to specify the intention, or purpose, of the chat\.
 + `biz-group-id`: Use to indicate the group, department, or individuals best qualified to handle the customer's specific question or problem\.
 + `body`: Use to prepopulate the message so the customer only presses **Send** to start the conversation\.
-
-For more information, see [About Intent, Group, and Body Values](https://developer.apple.com/documentation/businesschat/bcchataction/about_intent_group_and_body_values) on the Apple Documentation website\. 
 
 Following is an example of what the URL might look like for a customer with a credit card question question for the billing department: 
 + https://bcrw\.apple\.com/urn:biz:22222222\-dddd\-4444\-bbbb\-777777777777?biz\-intent\-id=account\_question&biz\-group\-id=billing\_department&body=Order%20additional%20credit%20card\.
@@ -68,9 +64,9 @@ To use rich links in Amazon Connect chat messages, your URL and images must meet
 + The website must be HTML\.
 
 **Note**  
-When you first use the rich link feature, we recommend that you send the URL in a message separate from your chat text, as shown in the following example\.  
+When you first use the rich link feature, we recommend that you send the URL in a message separate from your chat text, as shown in the following example\. The first message introduces the URL\. The next message includes the URL\.  
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/abc-rich-link.png)
+![\[A URL sent in a chat message.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/abc-rich-link.png)
 
 ## Use Apple Messages for Business contact attributes in contact flows<a name="apple-business-chat-flows"></a>
 

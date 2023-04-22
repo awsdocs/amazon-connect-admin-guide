@@ -14,7 +14,7 @@ For a list of rules feature specifications \(for example, how many rules you can
 1. Select **Create a rule**, **Contact Lens**\.
 
 1. Under **When**, use the dropdown list to choose **post\-call analysis**, **real\-time analysis**, or **post\-chat analysis**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rule-define-conditions.png)
+![\[The new rule page, the when dropdown menu.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rule-define-conditions.png)
 
 1. Choose **Add condition**\. 
 
@@ -40,12 +40,12 @@ For a list of rules feature specifications \(for example, how many rules you can
      For example, you can set a rule on the **Agent greeting time**, also known as **First response time**: after the agent joined the chat, how long until they sent the first greeting message\. This will help you to identify when an agent took too long to engage with the customer\.
 
    The following image shows a sample rule with multiple conditions for a voice contact\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-conditions.png)
+![\[A sample rule with multiple conditions for a voice contact.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-conditions.png)
 
    The following image shows a sample rule with multiple conditions for a chat contact\. The rule is triggered when the **First** response time is greater than or equal to 1 minute, and the agent did not mention any of the listed greeting words or phrases in their first response\.
 
    **First response time** = after the agent has joined the chat, how long until they sent the first message to the customer\.   
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-conditions-chat.png)
+![\[A sample rule with multiple conditions for a chat contact.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-rules-conditions-chat.png)
 
 1. Choose **Next**\.
 
@@ -55,11 +55,11 @@ For a list of rules feature specifications \(for example, how many rules you can
 **Note**  
 In this step, you are naming a required rule action: **Assign Contact Category**\. The action is to categorize all contacts based on the category name you create\. The category name is reflected in the Contact Lens output\. And, you can use it for [contact search](search-conversations.md#contact-category-search)\. 
 
-1. Choose **Add action**\. Since you already named **Assign Contact Category**, it's not available\. You can choose the following:
+1. Choose **Add action**\. Since you already named **Assign Contact Category**, it's not available\. You can choose the following actions:
    + [Generate an EventBridge event](contact-lens-rules-eventbridge-event.md)
    + [Create Task](contact-lens-rules-create-task.md)
    + [Send email notifications](contact-lens-rules-email.md)  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-action-no-wisdom.png)
+![\[The add action dropdown menu, a list of actions.\]](http://docs.aws.amazon.com/connect/latest/adminguide/images/contact-lens-add-action-no-wisdom.png)
 
 1. Choose **Next**\.
 

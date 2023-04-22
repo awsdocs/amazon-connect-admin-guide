@@ -14,4 +14,4 @@ This tutorial is part of a series\. If you performed Tutorial 1, you're ready to
 
 **Topics**
 + [Step 1: Handle a voice contact](tutorial1-explore-voice.md)
-+ [Step 2: Handle a chat contact](tutorial1-test-chat.md)
++ [Step 2: Use the CCP to handle a chat contact](tutorial1-test-2.md)
