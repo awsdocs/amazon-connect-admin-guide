@@ -1,8 +1,0 @@
-# Move a phone number across instances<a name="move-phone-number-across-instances"></a>
-
-You can move your claimed phone number from one instance or traffic distribution group to another instance or traffic distribution group in the same AWS Region\.
-
-Moving a number by using the [UpdatePhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdatePhoneNumber.html) API puts the number in one of the following three states\. You can run the [DescribePhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html) API to determine the status of your number moving process\. 
-+ `IN_PROGRESS` means a [UpdatePhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdatePhoneNumber.html) operation is still in progress and has not yet completed\. You can call [DescribePhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribePhoneNumber.html) to verify if the previous operation has completed\.
-+ `CLAIMED` means the previous [UpdatePhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdatePhoneNumber.html) operation succeeded and the phone number is not available to be claimed by other customers\.
-+ `FAILED` indicates that the previous [UpdatePhoneNumber](https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdatePhoneNumber.html) operation has failed\. It also includes a message that indicates the reason for the failure\. 
